@@ -1,0 +1,84 @@
+<?php
+
+declare (strict_types = 1);
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use {{ rootNamespace }}Http\Controllers\Controller;
+use {{ namespacedRequests }}
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
+use Illuminate\Support\Facades\Gate;
+use Symfony\Component\HttpFoundation\Response;
+
+class {{ class }} extends Controller
+{
+    public function index(): View
+    {
+        abort_if(Gate::denies('{{ modelVariable }}_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        ${{ modelVariable }}s = {{ model }}::all();
+
+        return view('admin.{{ modelVariable }}s.index', compact('{{ modelVariable }}s'));
+    }
+
+    public function create(): View
+    {
+        abort_if(Gate::denies('{{ modelVariable }}_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        return view('admin.{{ modelVariable }}s.create');
+    }
+
+    public function store({{ storeRequest }} $request): RedirectResponse
+    {
+        abort_if(Gate::denies('{{ modelVariable }}_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        ${{ modelVariable }} = {{ model }}::create($request->validated());
+
+        return redirect()->route(route:'admin.{{ modelVariable }}.index')
+            ->with('message', '{{ model }} created successfully.');
+    }
+
+    public function show({{ model }} ${{ modelVariable }}): View
+    {
+        abort_if(Gate::denies('{{ modelVariable }}_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        return view('admin.{{ modelVariable }}s.show', compact('{{ modelVariable }}'));
+    }
+
+    public function edit({{ model }} ${{ modelVariable }}): View
+    {
+        abort_if(Gate::denies('{{ modelVariable }}_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        return view('admin.{{ modelVariable }}s.edit', compact('{{ modelVariable }}'));
+    }
+
+    public function update({{ updateRequest }} $request, {{ model }} ${{ modelVariable }}): RedirectResponse
+    {
+        abort_if(Gate::denies('{{ modelVariable }}_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        ${{ modelVariable }}->update($request->validated());
+
+        return redirect()->route(route:'admin.{{ modelVariable }}.index')
+            ->with('message', '{{ model }} updated successfully.');
+    }
+
+    public function destroy({{ model }} ${{ modelVariable }}): RedirectResponse
+    {
+        abort_if(Gate::denies('{{ modelVariable }}_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        ${{ modelVariable }}->delete();
+
+        return back();
+    }
+
+    public function massDestroy({{ storeRequest }} $request): Response
+    {
+        abort_if(Gate::denies('{{ modelVariable }}_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        {{ model }}::whereIn('id', request('ids'))->delete();
+
+        return response(null, Response::HTTP_NO_CONTENT);
+    }
+}

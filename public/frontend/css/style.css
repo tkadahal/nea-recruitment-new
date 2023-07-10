@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	position: relative;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 400;
+	font-size: .85rem;
+	color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Nunito', sans-serif;
+}
+h1 {
+	font-size: 2.3rem;
+	font-weight: 800;
+}
+h2 {
+	font-size: 3.25rem;
+	padding-bottom: 0.63rem;
+	font-weight: 300;
+	color: #222222;
+	text-align: center;
+}
+
+
+/*Header*/
+header {
+	background: #fff;
+	padding: 1rem 0;
+	text-align: center;
+}
+.head-title {
+	background: #4455B6;
+	padding: 1rem;
+}
+.head-title h1 {
+	font-size: 1.1rem;
+	color: #fff;
+	margin: 0;
+}
+.top-title p{
+	font-size: 1rem;
+}
+.top-title strong {
+	font-size: 1.1rem;
+}
+
+
+input:focus,
+button:focus,
+.form-control:focus{
+	outline: none;
+	box-shadow: none;
+}
+.form-control:disabled, .form-control[readonly]{
+	background-color: #fff;
+}
+
+/*Step Wizard*/
+.wizard-box {
+	padding: 2rem 2.3rem;
+	border: 1px solid #eee;
+	box-shadow: 0 3px 7px #ddd;
+	border-radius: .5rem;
+	background-color: aliceblue;
+}
+.wizard-box h2{
+	font-size: 1.1rem;
+	font-weight: bolder;
+	text-align: left;
+	padding-bottom: .3rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid #eee;
+}
+
+.step-container{
+	padding: 80px 0px;
+	padding-bottom: 60px;
+}
+
+.wizard .nav-tabs {
+	position: relative;
+	margin-bottom: 0;
+	border-bottom-color: transparent;
+	display: flex;
+	justify-content: center;
+}
+
+.wizard > div.wizard-inner {
+	position: relative;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.wizard .nav-tabs > li.active > a,
+.wizard .nav-tabs > li.active > a:hover,
+.wizard .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
+}
+span.round-tab {
+    width: 1.875rem;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    color: #0e214b;
+    font-weight: 500;
+    border: 1px solid #ddd;
+}
+span.round-tab i{
+    color:#555555;
+    font-size: .80rem;
+    font-weight: bold;
+}
+.wizard li.active span.round-tab {
+    background: #4455B6;
+    color: #fff;
+    border-color: #4455B6;
+}
+.wizard li.active span.round-tab i{
+    color: #5bc0de;
+}
+.wizard .nav-tabs > li.active > a i{
+	color: #4455B6;
+}
+
+.wizard .nav-tabs > li {
+    width: 12%;
+}
+.connecting-line {
+    height: 2px;
+    background: #e0e0e0;
+    position: absolute;
+    width: 72%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 15px;
+    z-index: 1;
+}
+.wizard li:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-bottom-color: red;
+    transition: 0.1s ease-in-out;
+}
+.wizard .nav-tabs > li a {
+    width: 30px;
+    height: 30px;
+    margin: 1.25rem auto;
+    border-radius: 100%;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    top: 0;
+}
+.wizard .nav-tabs > li a i{
+	position: absolute;
+    top: -15px;
+    font-style: normal;
+    font-weight: 400;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-35%, -50%);
+    font-size: 0.90rem;
+    font-weight: 700;
+    color: #000;
+}
+.wizard .nav-tabs > li a:hover {
+	background: transparent;
+}
+
+.wizard .tab-pane {
+	position: relative;
+	padding-top: .25rem;
+}
+.wizard h3 {
+    margin-top: 0;
+}
+
+.next-step{
+	background-color: #4455B6;
+}
+.skip-btn{
+	background-color: #cec12d;
+}
+.step-head{
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+.term-check{
+	font-size: 14px;
+	font-weight: 400;
+}
+.wizard label {
+	padding-top: 6px;
+}
+.list-inline {
+	border-top: 1px solid #eee;
+	margin-top: 2rem;
+}
+.list-inline button{
+	color: #fff;
+    font-size: .95rem;
+    padding: 0.4rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    margin-top: .75rem;
+}
+.list-inline i {
+	font-size: 0.75rem;
+}
+.inner-box {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 1.25rem 1rem .5rem 1rem;
+}
+.inner-box .table {
+	border: 1px solid #ddd;
+}
+.inner-box .table thead th {
+	white-space: pre;
+}
+.inner-box small {
+	font-size: 12px;
+	font-weight: 500;
+}
+/*Mobile devices*/
+@media only screen and (max-width: 767px){
+	.sign-content h3{
+		font-size: 2.5rem;
+	}
+	.wizard .nav-tabs > li a i{
+		display: none;
+	}
+	.signup-logo-header .navbar-toggle{
+		margin: 0;
+		margin-top: 8px;
+	}
+	.signup-logo-header .logo_area{
+		margin-top: 0;
+	}
+	.signup-logo-header .header-flex{
+		display: block;
+	}
+}

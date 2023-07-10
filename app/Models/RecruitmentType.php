@@ -1,0 +1,37 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Models;
+
+use App\Models\Builders\ModelBuilder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class RecruitmentType extends Model
+{
+    use HasFactory;
+    use SoftDeletes;
+
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
+
+    protected $fillable = [
+        'title_en',
+        'title_np',
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
+
+    public function newEloquentBuilder($query): ModelBuilder
+    {
+        return new ModelBuilder(
+            $query,
+        );
+    }
+}

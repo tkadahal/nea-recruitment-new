@@ -1,0 +1,26 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Foundation\Http\FormRequest;
+use Symfony\Component\HttpFoundation\Response;
+
+class {{ class }} extends FormRequest
+{
+    public function authorize(): bool
+    {
+        abort_if(Gate::denies('{{ modelVariable }}_'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        return true;
+    }
+
+    public function rules(): array
+    {
+        return [
+            //
+        ];
+    }
+}
