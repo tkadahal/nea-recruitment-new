@@ -1,33 +1,22 @@
 <?php
 
-declare(strict_types=1);
-
 namespace App\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 
 trait Multitenantable
 {
-    public static function bootMultitenantable(): void
+    public static function bootMultitenantable()
     {
-        if (! app()->runningInConsole() && auth()->check()) {
-            $isAdmin = auth('admin')->user()->roles->contains(1);
+        if (auth()->check()) {
+
             static::creating(function ($model) {
-                $model->user_id = auth('admin')->id();
+                $model->user_id = auth()->id();
             });
-            static::addGlobalScope('user_id', function (Builder $builder) use ($isAdmin) {
-                if (! $isAdmin) {
-                    return $builder->where(function ($query) {
-                        $query->where('user_id', auth('admin')->id())
-                            ->orWhereHas('tippaniApprovals', function ($subquery) {
-                                $subquery->where('approver_office_id', auth('admin')->user()->office_id);
-                            });
-                    });
-                }
-                // else {
-                //     $builder->withoutGlobalScope('user_id');
-                //     return $builder;
-                // }
+
+            static::addGlobalScope('user_id', function (Builder $builder) {
+
+                return $builder->where('user_id', auth()->id());
             });
         }
     }

@@ -30,7 +30,7 @@ class ApplicationController extends Controller
         $userId = auth()->id();
 
         $query = Advertisement::query()
-            ->with(['category', 'group', 'subGroup', 'qualification', 'applications.payment'])
+            ->with(['category', 'group', 'subGroup', 'qualification', 'applications.payments'])
             ->whereDate('start_date_en', '<=', $currentDate)
             ->whereDate('penalty_end_date_en', '>=', $currentDate);
 

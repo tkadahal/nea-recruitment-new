@@ -6,7 +6,7 @@ namespace App\Models;
 
 use App\Models\Builders\ModelBuilder;
 use App\Traits\BelongsToUser;
-use App\Traits\MultitenantableForUser;
+use App\Traits\Multitenantable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -16,8 +16,8 @@ class Contact extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    use Multitenantable;
     use BelongsToUser;
-    use MultitenantableForUser;
 
     protected $dates = [
         'created_at',

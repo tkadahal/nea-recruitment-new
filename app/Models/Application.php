@@ -6,20 +6,20 @@ namespace App\Models;
 
 use App\Models\Builders\ModelBuilder;
 use App\Traits\BelongsToUser;
-use App\Traits\MultitenantableForUser;
+use App\Traits\Multitenantable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Application extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    use Multitenantable;
     use BelongsToUser;
-    use MultitenantableForUser;
 
     protected $dates = [
         'created_at',
@@ -51,9 +51,9 @@ class Application extends Model
         return $this->belongsTo(Advertisement::class);
     }
 
-    public function payment(): HasOne
+    public function payments(): HasMany
     {
-        return $this->hasOne(Payment::class);
+        return $this->hasMany(Payment::class);
     }
 
     public function newEloquentBuilder($query): ModelBuilder

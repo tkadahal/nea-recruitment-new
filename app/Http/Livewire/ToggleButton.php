@@ -10,6 +10,7 @@ use Livewire\Component;
 class ToggleButton extends Component
 {
     public Model $model;
+
     public string $field;
 
     public bool $isActive;
