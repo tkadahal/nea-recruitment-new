@@ -38,6 +38,16 @@ Route::middleware(['auth:admin'])->group(function () {
             Route::get('/get-advertisements/{examCenterId}', 'AdminController@getAdvertisements');
             Route::resource(name: 'admin', controller: AdminController::class);
 
+            // Payment Vendors
+            Route::delete(
+                uri: 'paymentVendors/destroy',
+                action: 'PaymentVendorController@massDestroy'
+            )->name(name: 'paymentVendors.massDestroy');
+            Route::resource(
+                name: 'paymentVendor',
+                controller: PaymentVendorController::class
+            );
+
             // Provinces
             Route::delete(
                 uri: 'provinces/destroy',
