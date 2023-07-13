@@ -7,6 +7,7 @@ return [
     'create' => 'Create',
     'list' => 'List',
     'show' => 'Show',
+    'published' => 'Status',
     'entries' => 'Entries',
     'search' => 'Search',
     'view' => 'View',

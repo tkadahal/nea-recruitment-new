@@ -29,6 +29,9 @@
                                 {{ trans('global.country.fields.title') }}
                             </th>
                             <th>
+                                {{ trans('global.published') }}
+                            </th>
+                            <th>
                                 &nbsp;
                             </th>
                         </tr>
@@ -44,6 +47,16 @@
                                 </td>
                                 <td>
                                     {{ $country->title ?? '' }}
+                                </td>
+                                <td>
+                                    @livewire(
+                                        'toggle-button',
+                                        [
+                                            'model' => $country,
+                                            'field' => 'published',
+                                        ],
+                                        key($country->id)
+                                    )
                                 </td>
                                 <td>
                                     <div class="btn-group" role="group" aria-label="country Functions">

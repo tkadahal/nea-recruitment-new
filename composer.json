@@ -14,7 +14,7 @@
         "laravel/tinker": "^2.8.1",
         "laravel/ui": "^4.2",
         "laraveldaily/laravel-charts": "^0.1.29",
-        "livewire/livewire": "^2.10",
+        "livewire/livewire": "^2.12",
         "opcodesio/log-viewer": "^2.1.0",
         "orangehill/iseed": "^3.0",
         "outhebox/blade-flags": "^1.2.0",
