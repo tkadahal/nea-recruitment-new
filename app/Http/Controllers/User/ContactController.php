@@ -29,7 +29,7 @@ class ContactController extends Controller
 
         $countries = Country::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $contact = Contact::with(['province', 'district', 'municipality', 'fatherCountry', 'motherCountry', 'grandfatherCountry', 'spouseCountry'])->first();
+        $contact = Contact::with(['permaProvince', 'tempProvince', 'permaDistrict', 'tempDistrict',  'permaMunicipality', 'tempMunicipality', 'fatherCountry', 'motherCountry', 'grandfatherCountry', 'spouseCountry'])->first();
 
         return view('user.contact', compact('contact', 'provinces', 'districts', 'municipalities', 'countries'));
     }

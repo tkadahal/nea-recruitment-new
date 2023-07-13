@@ -27,13 +27,17 @@ class Contact extends Model
 
     protected $fillable = [
         'user_id',
-        'province_id',
-        'district_id',
-        'municipality_id',
-        'ward_number',
-        'tol',
+        'perma_province',
+        'perma_district',
+        'perma_municipality',
+        'perma_ward_number',
+        'perma_tol',
+        'temp_province',
+        'temp_district',
+        'temp_municipality',
+        'temp_ward_number',
+        'temp_tol',
         'phone_number',
-        'house_number',
         'father_name',
         'father_country_id',
         'mother_name',
@@ -47,17 +51,32 @@ class Contact extends Model
         'deleted_at',
     ];
 
-    public function province(): BelongsTo
+    public function permaProvince(): BelongsTo
     {
         return $this->belongsTo(Province::class);
     }
 
-    public function district(): BelongsTo
+    public function tempProvince(): BelongsTo
+    {
+        return $this->belongsTo(Province::class);
+    }
+
+    public function permaDistrict(): BelongsTo
     {
         return $this->belongsTo(District::class);
     }
 
-    public function municipality(): BelongsTo
+    public function tempDistrict(): BelongsTo
+    {
+        return $this->belongsTo(District::class);
+    }
+
+    public function permaMunicipality(): BelongsTo
+    {
+        return $this->belongsTo(Municipality::class);
+    }
+
+    public function tempMunicipality(): BelongsTo
     {
         return $this->belongsTo(Municipality::class);
     }

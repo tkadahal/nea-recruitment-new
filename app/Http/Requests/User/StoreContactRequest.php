@@ -16,27 +16,51 @@ class StoreContactRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'province_id' => [
+            'perma_province' => [
                 'required',
                 'integer',
                 'not_in: 0',
             ],
-            'district_id' => [
+            'perma_district' => [
                 'required',
                 'integer',
                 'not_in: 0',
             ],
-            'municipality_id' => [
+            'perma_municipality' => [
                 'required',
                 'integer',
                 'not_in: 0',
             ],
-            'tol' => [
+            'perma_tol' => [
                 'required',
                 'string',
                 'max:255',
             ],
-            'ward_number' => [
+            'perma_ward_number' => [
+                'required',
+                'integer',
+            ],
+            'temp_province' => [
+                'required',
+                'integer',
+                'not_in: 0',
+            ],
+            'temp_district' => [
+                'required',
+                'integer',
+                'not_in: 0',
+            ],
+            'temp_municipality' => [
+                'required',
+                'integer',
+                'not_in: 0',
+            ],
+            'temp_tol' => [
+                'required',
+                'string',
+                'max:255',
+            ],
+            'temp_ward_number' => [
                 'required',
                 'integer',
             ],
