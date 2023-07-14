@@ -53,32 +53,32 @@ class Contact extends Model
 
     public function permaProvince(): BelongsTo
     {
-        return $this->belongsTo(Province::class);
+        return $this->belongsTo(Province::class, 'perma_province');
     }
 
     public function tempProvince(): BelongsTo
     {
-        return $this->belongsTo(Province::class);
+        return $this->belongsTo(Province::class, 'temp_province');
     }
 
     public function permaDistrict(): BelongsTo
     {
-        return $this->belongsTo(District::class);
+        return $this->belongsTo(District::class, 'perma_district');
     }
 
     public function tempDistrict(): BelongsTo
     {
-        return $this->belongsTo(District::class);
+        return $this->belongsTo(District::class, 'temp_district');
     }
 
     public function permaMunicipality(): BelongsTo
     {
-        return $this->belongsTo(Municipality::class);
+        return $this->belongsTo(Municipality::class, 'perma_municipality');
     }
 
     public function tempMunicipality(): BelongsTo
     {
-        return $this->belongsTo(Municipality::class);
+        return $this->belongsTo(Municipality::class, 'temp_municipality');
     }
 
     public function fatherCountry(): BelongsTo

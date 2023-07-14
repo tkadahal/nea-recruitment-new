@@ -237,7 +237,8 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6" id="equivalence-field" style="display: none;">
+                                <div class="col-md-6" id="equivalence-field"
+                                    @if ($errors->has('equivalence')) style="display: block;" @else style="display: none;" @endif>
                                     <div class="form-group {{ $errors->has('equivalence') ? 'has-error' : '' }}">
                                         <label class="required" for="equivalence">
                                             {{ trans('global.education.fields.equivalence') }}
@@ -339,10 +340,17 @@
                 }
             });
 
+            var selectedUniversityId = $('#university_id').val();
+            var equivalenceField = $('#equivalence-field');
+
+            if (selectedUniversityId == 15) {
+                equivalenceField.show();
+            } else {
+                equivalenceField.hide();
+            }
+
             $('#university_id').on('change', function() {
                 var selectedUniversityId = $(this).val();
-                var equivalenceField = $('#equivalence-field');
-
                 if (selectedUniversityId == 15) {
                     equivalenceField.show();
                 } else {

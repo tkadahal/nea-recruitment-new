@@ -160,6 +160,11 @@
                         </h3>
                         <div class="p3">
                             <div class="row g-3 p-3">
+                                <div class="row mt-3">
+                                    <div class="col">
+                                        <input type="checkbox" id="sameAsPermanent"> Same as Permanent
+                                    </div>
+                                </div>
                                 <div class="col-md-4">
                                     <div class="form-group {{ $errors->has('temp_province') ? 'has-error' : '' }}">
                                         <label class="required" for="temp_province">
@@ -517,53 +522,135 @@
 @section('scripts')
     <script>
         $(document).ready(function() {
-            $('#province_id').on('change', function() {
-                var provinceId = $(this).val();
-                if (provinceId) {
+            $('#perma_province').on('change', function() {
+                var permaProvinceId = $(this).val();
+                if (permaProvinceId) {
                     $.ajax({
-                        url: '/get-districts/' + provinceId,
+                        url: '/get-districts/' + permaProvinceId,
                         type: 'GET',
                         dataType: 'json',
                         success: function(data) {
-                            $('#district_id').empty().append('<option value="">' +
+                            $('#perma_district').empty().append('<option value="">' +
                                 "{{ trans('global.pleaseSelect') }}" + '</option>');
-                            $('#municipality_id').empty().append('<option value="">' +
+                            $('#perma_municipality').empty().append('<option value="">' +
                                 "{{ trans('global.pleaseSelect') }}" + '</option>');
                             $.each(data, function(key, value) {
-                                $('#district_id').append('<option value="' + key +
+                                $('#perma_district').append('<option value="' + key +
                                     '">' + value + '</option>');
                             });
                         }
                     });
                 } else {
-                    $('#district_id').empty().append('<option value="">' +
+                    $('#perma_district').empty().append('<option value="">' +
                         "{{ trans('global.pleaseSelect') }}" + '</option>');
-                    $('#municipality_id').empty().append('<option value="">' +
+                    $('#perma_municipality').empty().append('<option value="">' +
                         "{{ trans('global.pleaseSelect') }}" + '</option>');
                 }
             });
 
-            $('#district_id').on('change', function() {
-                var districtId = $(this).val();
-                if (districtId) {
+            $('#perma_district').on('change', function() {
+                var permaDistrictId = $(this).val();
+                if (permaDistrictId) {
                     $.ajax({
-                        url: '/get-municipalities/' + districtId,
+                        url: '/get-municipalities/' + permaDistrictId,
                         type: 'GET',
                         dataType: 'json',
                         success: function(data) {
-                            $('#municipality_id').empty().append('<option value="">' +
+                            $('#perma_municipality').empty().append('<option value="">' +
                                 "{{ trans('global.pleaseSelect') }}" + '</option>');
                             $.each(data, function(key, value) {
-                                $('#municipality_id').append('<option value="' + key +
+                                $('#perma_municipality').append('<option value="' +
+                                    key +
                                     '">' + value + '</option>');
                             });
                         }
                     });
                 } else {
-                    $('#municipality_id').empty().append('<option value="">' +
+                    $('#perma_municipality').empty().append('<option value="">' +
                         "{{ trans('global.pleaseSelect') }}" + '</option>');
                 }
             });
+
+            function populateDistricts(tempProvinceId) {
+                console.log('Received tempProvinceId:', tempProvinceId);
+                if (tempProvinceId) {
+                    $.ajax({
+                        url: '/get-districts/' + tempProvinceId,
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function(data) {
+                            console.log('Populating districts:', data);
+                            $('#temp_district').empty().append('<option value="">' +
+                                "{{ trans('global.pleaseSelect') }}" + '</option>');
+                            $('#temp_municipality').empty().append('<option value="">' +
+                                "{{ trans('global.pleaseSelect') }}" + '</option>');
+                            $.each(data, function(key, value) {
+                                $('#temp_district').append('<option value="' + key + '">' +
+                                    value + '</option>');
+                            });
+
+                            var tempDistrictId = $('#temp_district').val();
+                            console.log('Received tempDistrictId:', tempDistrictId);
+                            populateMunicipalities(tempDistrictId);
+                        }
+                    });
+                } else {
+                    $('#temp_district').empty().append('<option value="">' +
+                        "{{ trans('global.pleaseSelect') }}" + '</option>');
+                    $('#temp_municipality').empty().append('<option value="">' +
+                        "{{ trans('global.pleaseSelect') }}" + '</option>');
+                }
+            }
+
+            function populateMunicipalities(tempDistrictId) {
+                console.log('Received tempDistrictId:', tempDistrictId);
+                if (tempDistrictId) {
+                    $.ajax({
+                        url: '/get-municipalities/' + tempDistrictId,
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function(data) {
+                            console.log('Populating municipalities:', data);
+                            $('#temp_municipality').empty().append('<option value="">' +
+                                "{{ trans('global.pleaseSelect') }}" + '</option>');
+                            $.each(data, function(key, value) {
+                                $('#temp_municipality').append('<option value="' + key + '">' +
+                                    value + '</option>');
+                            });
+                        }
+                    });
+                } else {
+                    $('#temp_municipality').empty().append('<option value="">' +
+                        "{{ trans('global.pleaseSelect') }}" + '</option>');
+                }
+            }
+
+            $('#sameAsPermanent').on('click', function() {
+                if ($(this).is(':checked')) {
+                    var permaProvinceValue = $('#perma_province').val();
+                    var permaDistrictValue = $('#perma_district').val();
+
+                    $('#temp_province').val(permaProvinceValue);
+                    $('#temp_district').val(permaDistrictValue);
+
+                    populateDistricts(permaProvinceValue);
+                    populateMunicipalities(permaDistrictValue);
+
+                    $('#temp_ward_number').val($('#perma_ward_number').val());
+                    $('#temp_tol').val($('#perma_tol').val());
+                } else {
+                    $('#temp_province').val('');
+                    $('#temp_district').val('');
+                    $('#temp_municipality').val('');
+                    $('#temp_ward_number').val('');
+                    $('#temp_tol').val('');
+                }
+            });
+
+            // Initialize district and municipality options when the page loads
+            var tempProvinceId = $('#temp_province').val();
+            console.log('Received tempProvinceId:', tempProvinceId);
+            populateDistricts(tempProvinceId);
         });
     </script>
 @endsection

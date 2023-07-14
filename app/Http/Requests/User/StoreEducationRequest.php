@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\User;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreEducationRequest extends FormRequest
@@ -61,6 +62,25 @@ class StoreEducationRequest extends FormRequest
                 'mimetypes:application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
+            'equivalence' => [
+                function ($attribute, $value, $fail) {
+                    $universityId = $this->input('university_id');
+                    $oldEquivalence = $this->input('old_equivalence');
+
+                    if ($universityId == 15 && empty($oldEquivalence) && empty($value)) {
+                        $fail('The equivalence field is required when university_id is 15.');
+                    }
+                },
+                'file',
+                'mimetypes:application/pdf',
+                'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
+            ],
+            // 'character' => [
+            //     'required_without:old_character',
+            //     'file',
+            //     'mimetypes:application/pdf',
+            //     'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
+            // ],
         ];
     }
 }
