@@ -1,4 +1,4 @@
-@extends('user.home')
+@extends('layouts.app')
 
 @section('content')
     <div role="tabpanel" class="tab-pane {{ request()->routeIs('contact') ? 'active' : '' }}" id="contact">

@@ -15,7 +15,6 @@ trait Multitenantable
             });
 
             static::addGlobalScope('user_id', function (Builder $builder) {
-
                 return $builder->where('user_id', auth()->id());
             });
         }
