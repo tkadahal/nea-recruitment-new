@@ -191,6 +191,53 @@
                                 </div>
                             </div>
 
+                            <div class="row">
+
+                                <div class="col-6">
+                                    <div class="form-group {{ $errors->has('transcript') ? 'has-error' : '' }}">
+                                        <label class="required" for="transcript">
+                                            {{ trans('global.education.fields.transcript') }}
+                                        </label>
+                                        <span class="text-primary">
+                                            <em class="text-decoration-italic">
+                                                (Update or Replace)
+                                            </em>
+                                        </span>
+                                        <input type="file" class="form-control" id="transcript" name="transcript"
+                                            value="{{ old('transcript', isset($education) ? $education->transcript : '') }}"
+                                            style="display: block; border-color:#ccc">
+                                        @if ($errors->has('transcript'))
+                                        <p class="help-block">
+                                            {{ $errors->first('transcript') }}
+                                        </p>
+                                        @endif
+                                        <p class="helper-block">
+                                            {{ trans('global.education.fields.transcript_helper') }}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 d-flex justify-content-end">
+                                    @if (isset($education) && $education->media->where('media_type_id',
+                                    7)->isNotEmpty())
+                                    <div class="media-item">
+                                        <p class="required" for="transcript">
+                                            {{ $education->media->where('media_type_id',
+                                            7)->first()->mediaType->title }}
+                                        </p>
+                                        <a target="_blank"
+                                            href="{{ $education->media->where('media_type_id', 7)->first()->short_url }}">
+                                            <i class="fas fa-file-pdf fa-2x text-primary" aria-hidden="true"></i>
+                                        </a>
+                                        {{-- <p>{{ $education->media->where('media_type_id',
+                                            7)->first()->mediaType->title }}
+                                        </p> --}}
+                                    </div>
+                                    @endif
+                                </div>
+
+                            </div>
+
                             <div class="col-md-6">
                                 <div class="form-group {{ $errors->has('transcript') ? 'has-error' : '' }}">
                                     <label class="required" for="transcript">

@@ -190,106 +190,148 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="form-group {{ $errors->has('transcript') ? 'has-error' : '' }}">
-                                    <label class="required" for="transcript">
-                                        {{ trans('global.education.fields.transcript') }}
-                                    </label>
-                                    <span class="text-primary">
-                                        <em class="text-decoration-italic">
-                                            (Update or Replace)
-                                        </em>
-                                    </span>
-                                    <input type="file" class="form-control" id="transcript" name="transcript"
-                                        value="{{ old('transcript', isset($education) ? $education->transcript : '') }}"
-                                        style="display: block; border-color:#ccc">
-                                    @if ($errors->has('transcript'))
-                                    <p class="help-block">
-                                        {{ $errors->first('transcript') }}
-                                    </p>
-                                    @endif
-                                    <p class="helper-block">
-                                        {{ trans('global.education.fields.transcript_helper') }}
-                                    </p>
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group {{ $errors->has('transcript') ? 'has-error' : '' }}">
+                                        <label class="required" for="transcript">
+                                            {{ trans('global.education.fields.transcript') }}
+                                        </label>
+                                        <span class="text-primary">
+                                            <em class="text-decoration-italic">
+                                                (Update or Replace)
+                                            </em>
+                                        </span>
+                                        <input type="file" class="form-control" id="transcript" name="transcript"
+                                            value="{{ old('transcript', isset($education) ? $education->transcript : '') }}"
+                                            style="display: block; border-color:#ccc">
+                                        @if ($errors->has('transcript'))
+                                        <p class="help-block">
+                                            {{ $errors->first('transcript') }}
+                                        </p>
+                                        @endif
+                                        <p class="helper-block">
+                                            {{ trans('global.education.fields.transcript_helper') }}
+                                        </p>
+                                    </div>
                                 </div>
+
+                                <div class="col-md-6">
+                                    @if (isset($education) && $education->media->where('media_type_id',
+                                    7)->isNotEmpty())
+                                    <div class="media-item">
+                                        <a target="_blank" href="{{ $mediaItem->short_url }}">
+                                            <i class="fas fa-file-pdf fa-3x text-primary" aria-hidden="true"></i>
+                                        </a>
+                                        <p>{{ $mediaItem->mediaType->title }}</p>
+                                    </div>
+                                    @endif
+                                </div>
+
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="form-group {{ $errors->has('character') ? 'has-error' : '' }}">
-                                    <label class="required" for="character">
-                                        {{ trans('global.education.fields.character') }}
-                                    </label>
-                                    <span class="text-primary">
-                                        <em class="text-decoration-italic">
-                                            (Update or Replace)
-                                        </em>
-                                    </span>
-                                    <input type="file" class="form-control" id="character" name="character"
-                                        value="{{ old('character', isset($education) ? $education->character : '') }}"
-                                        style="display: block; border-color:#ccc">
-                                    @if ($errors->has('character'))
-                                    <p class="help-block">
-                                        {{ $errors->first('character') }}
-                                    </p>
-                                    @endif
-                                    <p class="helper-block">
-                                        {{ trans('global.education.fields.character_helper') }}
-                                    </p>
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group {{ $errors->has('character') ? 'has-error' : '' }}">
+                                        <label class="required" for="character">
+                                            {{ trans('global.education.fields.character') }}
+                                        </label>
+                                        <span class="text-primary">
+                                            <em class="text-decoration-italic">
+                                                (Update or Replace)
+                                            </em>
+                                        </span>
+                                        <input type="file" class="form-control" id="character" name="character"
+                                            value="{{ old('character', isset($education) ? $education->character : '') }}"
+                                            style="display: block; border-color:#ccc">
+                                        @if ($errors->has('character'))
+                                        <p class="help-block">
+                                            {{ $errors->first('character') }}
+                                        </p>
+                                        @endif
+                                        <p class="helper-block">
+                                            {{ trans('global.education.fields.character_helper') }}
+                                        </p>
+                                    </div>
                                 </div>
+
+                                <div class="col-md-6">
+
+                                </div>
+
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="form-group {{ $errors->has('council') ? 'has-error' : '' }}">
-                                    <label class="" for="council">
-                                        {{ trans('global.education.fields.council') }}
-                                    </label>
-                                    <span class="text-primary">
-                                        <em class="text-decoration-italic">
-                                            (Update or Replace)
-                                        </em>
-                                    </span>
-                                    <input type="file" class="form-control" id="council" name="council"
-                                        value="{{ old('council', isset($education) ? $education->council : '') }}"
-                                        style="display: block; border-color:#ccc">
-                                    <i class="text-success">{{ trans('global.education.category.info.councilInfo')
-                                        }}</i>
-                                    @if ($errors->has('council'))
-                                    <p class="help-block">
-                                        {{ $errors->first('council') }}
-                                    </p>
-                                    @endif
-                                    <p class="helper-block">
-                                        {{ trans('global.education.fields.council_helper') }}
-                                    </p>
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group {{ $errors->has('council') ? 'has-error' : '' }}">
+                                        <label class="" for="council">
+                                            {{ trans('global.education.fields.council') }}
+                                        </label>
+                                        <span class="text-primary">
+                                            <em class="text-decoration-italic">
+                                                (Update or Replace)
+                                            </em>
+                                        </span>
+                                        <input type="file" class="form-control" id="council" name="council"
+                                            value="{{ old('council', isset($education) ? $education->council : '') }}"
+                                            style="display: block; border-color:#ccc">
+                                        <i class="text-success">{{ trans('global.education.category.info.councilInfo')
+                                            }}</i>
+                                        @if ($errors->has('council'))
+                                        <p class="help-block">
+                                            {{ $errors->first('council') }}
+                                        </p>
+                                        @endif
+                                        <p class="helper-block">
+                                            {{ trans('global.education.fields.council_helper') }}
+                                        </p>
+                                    </div>
                                 </div>
+
+                                <div class="col-md-6">
+
+                                </div>
+
                             </div>
 
-                            <div class="col-md-6" id="equivalence-field" @if ($errors->has('equivalence'))
-                                style="display: block;" @else style="display: none;" @endif>
-                                <div class="form-group {{ $errors->has('equivalence') ? 'has-error' : '' }}">
-                                    <label class="required" for="equivalence">
-                                        {{ trans('global.education.fields.equivalence') }}
-                                    </label>
-                                    <span class="text-primary">
-                                        <em class="text-decoration-italic">
-                                            (Update or Replace)
-                                        </em>
-                                    </span>
-                                    <input type="file" class="form-control" id="equivalence" name="equivalence"
-                                        value="{{ old('equivalence', isset($education) ? $education->equivalence : '') }}"
-                                        style="display: block; border-color:#ccc">
-                                    <i class="text-success">{{ trans('global.education.category.info.equivalenceInfo')
-                                        }}</i>
-                                    @if ($errors->has('equivalence'))
-                                    <p class="help-block">
-                                        {{ $errors->first('equivalence') }}
-                                    </p>
-                                    @endif
-                                    <p class="helper-block">
-                                        {{ trans('global.education.fields.equivalence_helper') }}
-                                    </p>
+                            <div class="row">
+
+                                <div class="col-md-6" id="equivalence-field" @if ($errors->has('equivalence'))
+                                    style="display: block;" @else style="display: none;" @endif>
+                                    <div class="form-group {{ $errors->has('equivalence') ? 'has-error' : '' }}">
+                                        <label class="required" for="equivalence">
+                                            {{ trans('global.education.fields.equivalence') }}
+                                        </label>
+                                        <span class="text-primary">
+                                            <em class="text-decoration-italic">
+                                                (Update or Replace)
+                                            </em>
+                                        </span>
+                                        <input type="file" class="form-control" id="equivalence" name="equivalence"
+                                            value="{{ old('equivalence', isset($education) ? $education->equivalence : '') }}"
+                                            style="display: block; border-color:#ccc">
+                                        <i class="text-success">{{
+                                            trans('global.education.category.info.equivalenceInfo')
+                                            }}</i>
+                                        @if ($errors->has('equivalence'))
+                                        <p class="help-block">
+                                            {{ $errors->first('equivalence') }}
+                                        </p>
+                                        @endif
+                                        <p class="helper-block">
+                                            {{ trans('global.education.fields.equivalence_helper') }}
+                                        </p>
+                                    </div>
                                 </div>
+
+                                <div class="col-md-6">
+
+                                </div>
+
                             </div>
+
                         </div>
                     </div>
                 </div>
