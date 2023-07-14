@@ -797,6 +797,10 @@ return [
                 'permaAddressDetails' => 'Permanent Address',
                 'familyDetails' => 'Family Details',
             ],
+            'info' => [
+                'equivalenceInfo' => '(Required For Foreign Universities)',
+                'councilInfo' => '(Required For Engineering)',
+            ],
         ],
         'fields' => [
             'id' => 'ID',
@@ -821,6 +825,8 @@ return [
             'character_helper' => '',
             'equivalence' => 'Equivalence Certificate',
             'equivalence_helper' => '',
+            'council' => 'Council Document',
+            'council_helper' => '',
             'created_at' => 'Created at',
             'created_at_helper' => '',
             'updated_at' => 'Updated at',

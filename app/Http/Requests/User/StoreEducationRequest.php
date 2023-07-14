@@ -62,10 +62,16 @@ class StoreEducationRequest extends FormRequest
                 'mimetypes:application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
+            'council' => [
+                'nullable',
+                'file',
+                'mimetypes:application/pdf',
+                'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
+            ],
             'equivalence' => [
-                ($this->input('university_id') == 15 && $this->input('old_equivalence'))
-                    ? 'nullable'
-                    : 'required',
+                ($this->input('university_id') == 15 && !$this->input('old_equivalence'))
+                    ? 'required'
+                    : 'nullable',
                 'file',
                 'mimetypes:application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)

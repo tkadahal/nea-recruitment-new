@@ -261,6 +261,43 @@
                                 </div>
                             </div>
 
+                            @if ($education->media->where('media_type_id', 11)->isNotEmpty())
+                            <div class="col-md-6">
+                                <div class="form-group {{ $errors->has('council') ? 'has-error' : '' }}">
+                                    <label class="" for="council">
+                                        {{ trans('global.education.fields.council') }}
+                                    </label>
+                                    <span class="text-primary">
+                                        <em class="text-decoration-italic">
+                                            (Update or Replace)
+                                        </em>
+                                    </span>
+                                    <input type="file" class="form-control" id="council" name="council"
+                                        value="{{ old('council', isset($education) ? $education->council : '') }}"
+                                        style="display: block; border-color:#ccc">
+                                    <i class="text-success">{{ trans('global.education.category.info.councilInfo')
+                                        }}</i>
+                                    <input type="hidden" id="old_council" name="old_council"
+                                        value="{{ $education->media->where('media_type_id', 11)->first()->file_name }}"
+                                        readonly>
+                                    @if ($errors->has('council'))
+                                    <p class="help-block">
+                                        {{ $errors->first('council') }}
+                                    </p>
+                                    @endif
+                                    <p class="helper-block">
+                                        {{ trans('global.education.fields.council_helper') }}
+                                    </p>
+                                    @if (count($education->media))
+                                    {{ trans('global.existing_document.title_singular') }} :
+                                    @foreach ($education->media->where('media_type_id', 11) as $mediaItem)
+                                    {!! $mediaItem !!}
+                                    @endforeach
+                                    @endif
+                                </div>
+                            </div>
+                            @endif
+
                             @if ($education->media->where('media_type_id', 10)->isNotEmpty())
                             <div class="col-md-6" id="equivalence-field">
                                 <div class="form-group {{ $errors->has('equivalence') ? 'has-error' : '' }}">
@@ -275,6 +312,8 @@
                                     <input type="file" class="form-control" id="equivalence" name="equivalence"
                                         value="{{ old('equivalence', isset($education) ? $education->equivalence : '') }}"
                                         style="display: block; border-color:#ccc">
+                                    <i class="text-success">{{ trans('global.education.category.info.equivalenceInfo')
+                                        }}</i>
                                     <input type="hidden" id="old_equivalence" name="old_equivalence"
                                         value="{{ $education->media->where('media_type_id', 10)->first()->file_name }}"
                                         readonly>

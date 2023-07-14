@@ -742,6 +742,10 @@ return [
                 'permaAddressDetails' => 'स्थायी ठेगाना',
                 'familyDetails' => 'पारिवारिक विवरण',
             ],
+            'info' => [
+                'equivalenceInfo' => '(नेपाल बाहिर अध्ययन गरेकाहरुलाई अनिवार्य)',
+                'councilInfo' => '(इन्जिनियरिङ्गको लागि अनिवार्य)',
+            ],
         ],
         'fields' => [
             'id' => 'क्र.स.',
@@ -766,6 +770,8 @@ return [
             'character_helper' => '',
             'equivalence' => 'समकक्षता प्रमाणपत्र',
             'equivalence_helper' => '',
+            'council' => 'काउन्सिल प्रमाणपत्र',
+            'council_helper' => '',
             'created_at' => 'सिर्जना गरियो',
             'created_at_helper' => '',
             'updated_at' => 'अद्यावधिक गरियो',

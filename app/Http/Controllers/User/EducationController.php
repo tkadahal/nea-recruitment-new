@@ -42,6 +42,8 @@ class EducationController extends Controller
 
         $characterPath = $this->mediaService->handleMediaFromRequest($request->character, auth()->id(), MediaType::character);
 
+        $councilPath = $this->mediaService->handleMediaFromRequest($request->council, auth()->id(), MediaType::council);
+
         $equivalencePath = $this->mediaService->handleMediaFromRequest($request->equivalence, auth()->id(), MediaType::equivalence);
 
         $education = Education::create($request->validated());
@@ -52,6 +54,10 @@ class EducationController extends Controller
 
         if ($characterPath) {
             $education->media()->create($characterPath);
+        }
+
+        if ($councilPath) {
+            $education->media()->create($councilPath);
         }
 
         if ($equivalencePath) {
@@ -86,9 +92,13 @@ class EducationController extends Controller
     {
         $existingTranscript = $education->media()->where('media_type_id', MediaType::transcript)->first();
         $existingCharacter = $education->media()->where('media_type_id', MediaType::character)->first();
+        $existingCouncil = $education->media()->where('media_type_id', MediaType::council)->first();
+        $existingEquivalence = $education->media()->where('media_type_id', MediaType::equivalence)->first();
 
         $transcriptPath = $this->mediaService->handleMediaFromRequest($request->transcript, auth()->id(), MediaType::transcript, $existingTranscript);
         $characterPath = $this->mediaService->handleMediaFromRequest($request->character, auth()->id(), MediaType::character, $existingCharacter);
+        $councilPath = $this->mediaService->handleMediaFromRequest($request->council, auth()->id(), MediaType::council, $existingCouncil);
+        $equivalencePath = $this->mediaService->handleMediaFromRequest($request->equivalence, auth()->id(), MediaType::equivalence, $existingEquivalence);
 
         $education->update($request->validated());
 
@@ -97,6 +107,12 @@ class EducationController extends Controller
         }
         if ($characterPath) {
             $education->media()->updateOrCreate(['id' => optional($existingCharacter)->id], $characterPath);
+        }
+        if ($councilPath) {
+            $education->media()->updateOrCreate(['id' => optional($existingCouncil)->id], $councilPath);
+        }
+        if ($equivalencePath) {
+            $education->media()->updateOrCreate(['id' => optional($existingEquivalence)->id], $equivalencePath);
         }
 
         return redirect()->route(route: 'education.index')
