@@ -63,24 +63,13 @@ class StoreEducationRequest extends FormRequest
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
             'equivalence' => [
-                function ($attribute, $value, $fail) {
-                    $universityId = $this->input('university_id');
-                    $oldEquivalence = $this->input('old_equivalence');
-
-                    if ($universityId == 15 && empty($oldEquivalence) && empty($value)) {
-                        $fail('The equivalence field is required when university_id is 15.');
-                    }
-                },
+                ($this->input('university_id') == 15 && $this->input('old_equivalence'))
+                    ? 'nullable'
+                    : 'required',
                 'file',
                 'mimetypes:application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
-            // 'character' => [
-            //     'required_without:old_character',
-            //     'file',
-            //     'mimetypes:application/pdf',
-            //     'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
-            // ],
         ];
     }
 }

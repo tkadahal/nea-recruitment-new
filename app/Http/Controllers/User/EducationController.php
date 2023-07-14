@@ -42,6 +42,8 @@ class EducationController extends Controller
 
         $characterPath = $this->mediaService->handleMediaFromRequest($request->character, auth()->id(), MediaType::character);
 
+        $equivalencePath = $this->mediaService->handleMediaFromRequest($request->equivalence, auth()->id(), MediaType::equivalence);
+
         $education = Education::create($request->validated());
 
         if ($transcriptPath) {
@@ -50,6 +52,10 @@ class EducationController extends Controller
 
         if ($characterPath) {
             $education->media()->create($characterPath);
+        }
+
+        if ($equivalencePath) {
+            $education->media()->create($equivalencePath);
         }
 
         return redirect()->route(route: 'education.index')

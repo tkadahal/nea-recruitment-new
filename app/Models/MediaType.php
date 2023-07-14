@@ -33,6 +33,10 @@ class MediaType extends Model
 
     const experience = '9';
 
+    const equivalence = '10';
+
+    const council = '11';
+
     protected $dates = [
         'created_at',
         'updated_at',
