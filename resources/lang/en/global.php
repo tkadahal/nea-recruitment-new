@@ -677,6 +677,7 @@ return [
             'fields' => [
                 'personalDetails' => 'Personal Details',
                 'citizenshipDetails' => 'Citizenship Details',
+                'uploads' => 'Uploads',
             ],
         ],
         'fields' => [

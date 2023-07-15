@@ -622,6 +622,7 @@ return [
             'fields' => [
                 'personalDetails' => 'व्यक्तिगत विवरण',
                 'citizenshipDetails' => 'नागरिकता विवरण',
+                'uploads' => 'अपलोडहरू',
             ],
         ],
         'fields' => [
@@ -651,7 +652,7 @@ return [
             'citizenship_district_id_helper' => '',
             'citizenship_issued_date' => 'नागरिकता जारी मिति',
             'citizenship_issued_date_helper' => '',
-            'photo' => 'तस्बिर',
+            'photo' => 'फोटो',
             'photo_helper' => '',
             'sign' => 'हस्ताक्षर',
             'sign_helper' => '',

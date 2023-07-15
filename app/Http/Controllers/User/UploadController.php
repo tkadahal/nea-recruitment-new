@@ -29,7 +29,7 @@ class UploadController extends Controller
 
         $citBackPath = $this->mediaService->handleMediaFromRequest($request->citizenship_back, auth()->id(), MediaType::citizenshipBack);
 
-        $samabeshiPath = $this->mediaService->handleMediaFromRequest($request->citizenship_back, auth()->id(), MediaType::samabeshi);
+        $samabeshiPath = $this->mediaService->handleMediaFromRequest($request->samabeshi, auth()->id(), MediaType::samabeshi);
 
         if ($photoPath) {
             auth()->user()->media()->create($photoPath);

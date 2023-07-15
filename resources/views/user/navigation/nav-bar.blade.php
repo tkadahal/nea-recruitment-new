@@ -52,7 +52,7 @@
                     aria-expanded="{{ request()->routeIs('upload') ? 'true' : 'false' }}">
                     <span class="round-tab">6</span>
                     <i>
-                        अपलोडहरू
+                        {{ trans('global.personal.category.fields.uploads') }}
                     </i>
                 </a>
             </li>

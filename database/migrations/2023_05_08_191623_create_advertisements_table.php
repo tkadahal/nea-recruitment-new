@@ -30,11 +30,11 @@ return new class extends Migration
             $table->integer('training_period')->nullable();
             $table->integer('experience_period')->nullable();
 
-            $table->date('start_date_np');
+            $table->string('start_date_np');
             $table->date('start_date_en');
-            $table->date('end_date_np');
+            $table->string('end_date_np');
             $table->date('end_date_en');
-            $table->date('penalty_end_date_np');
+            $table->string('penalty_end_date_np');
             $table->date('penalty_end_date_en');
 
             $table->boolean('active')->default(0);

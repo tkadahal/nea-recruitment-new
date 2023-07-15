@@ -15,7 +15,7 @@ class StoreEducationRequest extends FormRequest
 
     public function rules(): array
     {
-        dd($this->request->all());
+        // dd($this->request->all());
         return [
             'institution' => [
                 'required',

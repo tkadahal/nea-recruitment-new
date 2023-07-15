@@ -83,7 +83,8 @@ class UpdateAdvertisementRequest extends FormRequest
             ],
             'start_date_np' => [
                 'required',
-                'date',
+                'string',
+                'max: 255',
             ],
             'start_date_en' => [
                 'required',
@@ -95,11 +96,13 @@ class UpdateAdvertisementRequest extends FormRequest
             ],
             'end_date_en' => [
                 'required',
-                'date',
+                'string',
+                'max: 255',
             ],
             'penalty_end_date_np' => [
                 'required',
-                'date',
+                'string',
+                'max: 255',
             ],
             'penalty_end_date_en' => [
                 'required',
