@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div role="tabpanel" class="tab-pane {{ request()->routeIs('education') ? 'active' : '' }}" id="education">
 
         <div class="card">
@@ -312,50 +311,50 @@
                                     </div>
                                 @endif
 
-                                @if ($education->media->where('media_type_id', 10)->isNotEmpty())
-                                    <div class="row">
-                                        <hr>
-                                        <div class="col-md-6" id="equivalence-field"
-                                            @if ($errors->has('equivalence')) style="display: block;" @else style="display: none;" @endif>
-                                            <div class="form-group {{ $errors->has('equivalence') ? 'has-error' : '' }}">
-                                                <label class="required" for="equivalence">
-                                                    {{ trans('global.education.fields.equivalence') }}
-                                                </label>
-                                                <span class="text-primary">
-                                                    <em class="text-decoration-italic">
-                                                        (Update or Replace)
-                                                    </em>
-                                                </span>
-                                                <input type="file" class="form-control" id="equivalence"
-                                                    name="equivalence"
-                                                    value="{{ old('equivalence', isset($education) ? $education->equivalence : '') }}"
-                                                    style="display: block; border-color:#ccc">
-                                                <i
-                                                    class="text-success">{{ trans('global.education.category.info.equivalenceInfo') }}</i>
-                                                @if ($errors->has('equivalence'))
-                                                    <p class="help-block">
-                                                        {{ $errors->first('equivalence') }}
-                                                    </p>
-                                                @endif
-                                                <p class="helper-block">
-                                                    {{ trans('global.education.fields.equivalence_helper') }}
+                                {{-- @if ($education->media->where('media_type_id', 10)->isNotEmpty() || $errors->has('equivalence')) --}}
+                                <div class="row">
+                                    <hr>
+                                    <div class="col-md-6" id="equivalence-field"
+                                        @if ($errors->has('equivalence') || !$education->media->where('media_type_id', 10)->isEmpty()) style="display: block;" @else style="display: none;" @endif>
+                                        <div class="form-group {{ $errors->has('equivalence') ? 'has-error' : '' }}">
+                                            <label class="required" for="equivalence">
+                                                {{ trans('global.education.fields.equivalence') }}
+                                            </label>
+                                            <span class="text-primary">
+                                                <em class="text-decoration-italic">
+                                                    (Update or Replace)
+                                                </em>
+                                            </span>
+                                            <input type="file" class="form-control" id="equivalence"
+                                                name="equivalence"
+                                                value="{{ old('equivalence', isset($education) ? $education->equivalence : '') }}"
+                                                style="display: block; border-color:#ccc">
+                                            <i
+                                                class="text-success">{{ trans('global.education.category.info.equivalenceInfo') }}</i>
+                                            @if ($errors->has('equivalence'))
+                                                <p class="help-block">
+                                                    {{ $errors->first('equivalence') }}
                                                 </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6 d-flex justify-content-end">
-                                            @if (isset($education) && $education->media->where('media_type_id', 10)->isNotEmpty())
-                                                <a target="_blank"
-                                                    href="{{ $education->media->where('media_type_id', 10)->first()->short_url }}"
-                                                    style="display: flex; align-items: center;">
-                                                    <i class="fas fa-file-pdf fa-3x text-primary" aria-hidden="true"></i>
-                                                    <input type="hidden" name="old_equivalence"
-                                                        value="{{ $education->media->where('media_type_id', 10)->first()->short_url }}">
-                                                </a>
                                             @endif
+                                            <p class="helper-block">
+                                                {{ trans('global.education.fields.equivalence_helper') }}
+                                            </p>
                                         </div>
                                     </div>
-                                @endif
+
+                                    <div class="col-6 d-flex justify-content-end">
+                                        @if (isset($education) && $education->media->where('media_type_id', 10)->isNotEmpty())
+                                            <a target="_blank"
+                                                href="{{ $education->media->where('media_type_id', 10)->first()->short_url }}"
+                                                style="display: flex; align-items: center;">
+                                                <i class="fas fa-file-pdf fa-3x text-primary" aria-hidden="true"></i>
+                                                <input type="hidden" name="old_equivalence"
+                                                    value="{{ $education->media->where('media_type_id', 10)->first()->short_url }}">
+                                            </a>
+                                        @endif
+                                    </div>
+                                </div>
+                                {{-- @endif --}}
                             </div>
                         </div>
                     </div>
@@ -431,6 +430,24 @@
                         maxDate: 'today',
                         yearRange: '-100:+0',
                     });
+                }
+            });
+
+            var selectedUniversityId = $('#university_id').val();
+            var equivalenceField = $('#equivalence-field');
+
+            if (selectedUniversityId == 15) {
+                equivalenceField.show();
+            } else {
+                equivalenceField.hide();
+            }
+
+            $('#university_id').on('change', function() {
+                var selectedUniversityId = $(this).val();
+                if (selectedUniversityId == 15) {
+                    equivalenceField.show();
+                } else {
+                    equivalenceField.hide();
                 }
             });
         });

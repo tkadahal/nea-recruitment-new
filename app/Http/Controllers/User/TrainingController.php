@@ -4,43 +4,72 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\User\StoreTrainingRequest;
-use App\Models\MediaType;
-use App\Models\Training;
 use Carbon\Carbon;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Gate;
+use App\Models\Training;
+use App\Models\MediaType;
 use Illuminate\View\View;
+use Carbon\CarbonInterval;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Http\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
+use App\Http\Requests\User\StoreTrainingRequest;
 
 class TrainingController extends Controller
 {
     public function index(): View
     {
         $trainings = Training::latest()->get();
+        $totalDuration = CarbonInterval::create();
+        $totalYears = 0;
+        $totalMonths = 0;
+        $totalDays = 0;
 
         foreach ($trainings as $training) {
-            $from = Carbon::parse($training->training_from);
-            $to = Carbon::parse($training->training_to);
-            $duration = $to->diff($from);
+            $trainingPeriod = CarbonInterval::months($training->training_period);
 
-            $format = '';
+            $formattedTrainingPeriod = $trainingPeriod->cascade()->forHumans(['parts' => 3]);
 
-            if ($duration->y > 0) {
-                $format .= '%y year, ';
-            }
+            $training->formattedTrainingPeriod = $formattedTrainingPeriod;
 
-            if ($duration->m > 0) {
-                $format .= '%m month, ';
-            }
+            $totalDuration = $totalDuration->add($trainingPeriod);
 
-            $format .= '%d days';
-
-            $training->duration = $duration->format($format);
+            $totalYears += $trainingPeriod->years;
+            $totalMonths += $trainingPeriod->months;
+            $totalDays += $trainingPeriod->days;
         }
 
-        return view('user.training.index', compact('trainings'));
+        // Adjust the total duration based on the accumulated years and months
+        $totalDuration = $totalDuration->addYears($totalYears)->addMonths($totalMonths);
+
+        $totalDurationFormatted = '';
+
+        if ($totalYears > 0) {
+            $totalDurationFormatted .= "{$totalYears} year";
+            if ($totalYears > 1) {
+                $totalDurationFormatted .= 's';
+            }
+            $totalDurationFormatted .= ', ';
+        }
+
+        if ($totalMonths > 0) {
+            $totalDurationFormatted .= "{$totalMonths} month";
+            if ($totalMonths > 1) {
+                $totalDurationFormatted .= 's';
+            }
+            $totalDurationFormatted .= ', ';
+        }
+
+        if ($totalDays > 0) {
+            $totalDurationFormatted .= "{$totalDays} day";
+            if ($totalDays > 1) {
+                $totalDurationFormatted .= 's';
+            }
+        }
+
+        $totalDurationFormatted = rtrim($totalDurationFormatted, ', ');
+
+        return view('user.training.index', compact('trainings', 'totalDurationFormatted'));
     }
 
     public function create(): View
@@ -52,7 +81,13 @@ class TrainingController extends Controller
     {
         $path = $this->mediaService->handleMediaFromRequest($request->certificate, auth()->id(), MediaType::training);
 
-        $training = Training::create($request->validated());
+        $validated_input = $request->validated();
+
+        $validated_input['training_period'] = ($validated_input['date_format'] == 'BS')
+            ? Carbon::parse($validated_input['ad_training_from'])->diffInMonths(Carbon::parse($validated_input['ad_training_to']))
+            : Carbon::parse($validated_input['training_from'])->diffInMonths(Carbon::parse($validated_input['training_to']));
+
+        $training = Training::create($validated_input);
 
         if ($path) {
             $training->media()->create($path);
@@ -74,7 +109,12 @@ class TrainingController extends Controller
 
         $certificatePath = $this->mediaService->handleMediaFromRequest($request->certificate, auth()->id(), MediaType::training, $existingCertificate);
 
-        $training->update($request->validated());
+        $validated_input = $request->validated();
+
+        $validated_input['training_period'] = Carbon::parse($validated_input['training_from'])
+            ->diffInMonths(Carbon::parse($validated_input['training_to']));
+
+        $training->update($validated_input);
 
         if ($certificatePath) {
             $training->media()->updateOrCreate(['id' => optional($existingCertificate)->id], $certificatePath);

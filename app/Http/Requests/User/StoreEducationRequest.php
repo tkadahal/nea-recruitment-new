@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\User;
 
-use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreEducationRequest extends FormRequest
@@ -16,7 +15,7 @@ class StoreEducationRequest extends FormRequest
 
     public function rules(): array
     {
-        // dd($this->request->all());
+        dd($this->request->all());
         return [
             'institution' => [
                 'required',

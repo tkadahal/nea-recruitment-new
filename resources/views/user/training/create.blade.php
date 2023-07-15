@@ -61,11 +61,11 @@
                                     <div class="radio-buttons">
                                         <label>
                                             <input type="radio" name="date_format" value="BS" checked>
-                                            BS
+                                            {{ trans('global.education.fields.bs') }}
                                         </label>
                                         <label>
                                             <input type="radio" name="date_format" value="AD">
-                                            AD
+                                            {{ trans('global.education.fields.ad') }}
                                         </label>
                                     </div>
                                 </div>
@@ -80,10 +80,9 @@
                                                 class="form-control"
                                                 value="{{ old('training_from', isset($training) ? $training->training_from : '') }}">
                                             <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                                            <input type="text" id="ad_training_from" name="ad_training_from"
+                                                value="">
                                         </div>
-                                        {{-- <input type="text" id="training_from" name="training_from" class="form-control"
-                                        value="{{ old('training_from', isset($training) ? $training->training_from : '') }}">
-                                    --}}
                                         @if ($errors->has('training_from'))
                                             <p class="help-block">
                                                 {{ $errors->first('training_from') }}
@@ -104,10 +103,8 @@
                                             <input type="text" id="training_to" name="training_to" class="form-control"
                                                 value="{{ old('training_to', isset($training) ? $training->training_to : '') }}">
                                             <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                                            <input type="text" id="ad_training_to" name="ad_training_to" value="">
                                         </div>
-                                        {{-- <input type="text" id="training_to" name="training_to" class="form-control"
-                                        value="{{ old('training_to', isset($training) ? $training->training_to : '') }}">
-                                    --}}
                                         @if ($errors->has('training_to'))
                                             <p class="help-block">
                                                 {{ $errors->first('training_to') }}
@@ -119,9 +116,9 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="form-group {{ $errors->has('percentage') ? 'has-error' : '' }}">
-                                        <label class="required" for="percentage">
+                                        <label class="" for="percentage">
                                             {{ trans('global.training.fields.percentage') }}
                                         </label>
                                         <input type="number" step="0.01" min="0.00" max="99.99" id="percentage"
@@ -138,24 +135,63 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
-                                    <div class="form-group {{ $errors->has('certificate') ? 'has-error' : '' }}">
-                                        <label class="required" for="certificate">
-                                            {{ trans('global.training.fields.certificate') }}
-                                        </label>
-                                        <input type="file" class="form-control" id="certificate" name="certificate"
-                                            value="{{ old('certificate', isset($training) ? $training->certificate : '') }}"
-                                            style="display: block; border-color:#ccc">
-                                        @if ($errors->has('certificate'))
-                                            <p class="help-block">
-                                                {{ $errors->first('certificate') }}
+                                <div class="row">
+                                    <hr>
+                                    <div class="col-6">
+                                        <div class="form-group {{ $errors->has('certificate') ? 'has-error' : '' }}">
+                                            <label class="required" for="certificate">
+                                                {{ trans('global.training.fields.certificate') }}
+                                            </label>
+                                            <span class="text-primary">
+                                                <em class="text-decoration-italic">
+                                                    (Update or Replace)
+                                                </em>
+                                            </span>
+                                            <input type="file" class="form-control" id="certificate"
+                                                name="certificate"
+                                                value="{{ old('certificate', isset($training) ? $training->certificate : '') }}"
+                                                style="display: block; border-color:#ccc">
+                                            @if ($errors->has('certificate'))
+                                                <p class="help-block">
+                                                    {{ $errors->first('certificate') }}
+                                                </p>
+                                            @endif
+                                            <p class="helper-block">
+                                                {{ trans('global.training.fields.certificate_helper') }}
                                             </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 d-flex justify-content-end">
+                                        @if (isset($training) && count($training->media))
+                                            <a target="_blank" href="{{ $training->media->short_url }}"
+                                                style="display: flex; align-items: center;">
+                                                <i class="fas fa-file-pdf fa-3x text-primary" aria-hidden="true"></i>
+                                                <input type="hidden" name="old_certificate"
+                                                    value="{{ $training->media->short_url }}">
+                                            </a>
                                         @endif
-                                        <p class="helper-block">
-                                            {{ trans('global.training.fields.certificate_helper') }}
-                                        </p>
                                     </div>
                                 </div>
+                                {{-- <div class="col-md-6">
+                                        <div class="form-group {{ $errors->has('certificate') ? 'has-error' : '' }}">
+                                            <label class="" for="certificate">
+                                                {{ trans('global.training.fields.certificate') }}
+                                            </label>
+                                            <input type="file" class="form-control" id="certificate"
+                                                name="certificate"
+                                                value="{{ old('certificate', isset($training) ? $training->certificate : '') }}"
+                                                style="display: block; border-color:#ccc">
+                                            @if ($errors->has('certificate'))
+                                                <p class="help-block">
+                                                    {{ $errors->first('certificate') }}
+                                                </p>
+                                            @endif
+                                            <p class="helper-block">
+                                                {{ trans('global.training.fields.certificate_helper') }}
+                                            </p>
+                                        </div>
+                                    </div> --}}
                             </div>
                         </div>
                     </div>
@@ -181,6 +217,7 @@
                     ndpYear: true,
                     ndpMonth: true,
                     ndpYearCount: 100,
+                    onChange: updateEquivalentAD,
                     disableAfter: current_nepali_date
                 });
             } else if (selectedDateFormat === 'AD') {
@@ -192,6 +229,18 @@
                     maxDate: 'today',
                     yearRange: '-100:+0',
                 });
+            }
+
+            $('#training_to, #training_from').on('input', updateEquivalentAD);
+
+            function updateEquivalentAD() {
+                var selectedDate = $('#training_from').val();
+                var equivalentAD = NepaliFunctions.BS2AD(selectedDate);
+                $('#ad_training_from').val(equivalentAD);
+
+                var selectedDate = $('#training_to').val();
+                var equivalentAD = NepaliFunctions.BS2AD(selectedDate);
+                $('#ad_training_to').val(equivalentAD);
             }
 
             $('input[name="date_format"]').on('change', function() {

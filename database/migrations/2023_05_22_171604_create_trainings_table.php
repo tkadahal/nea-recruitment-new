@@ -17,10 +17,14 @@ return new class extends Migration
             $table->string('subject');
             $table->string('training_institute');
 
-            $table->string('percentage');
+            $table->string('percentage')->nullable();
 
-            $table->date('training_from');
-            $table->date('training_to')->default(now());
+            $table->enum('date_format', ['BS', 'AD']);
+
+            $table->string('training_from');
+            $table->string('training_to');
+
+            $table->string('training_period');
 
             $table->timestamps();
             $table->softDeletes();

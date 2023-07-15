@@ -27,22 +27,31 @@ class StoreTrainingRequest extends FormRequest
                 'max: 255',
             ],
             'percentage' => [
-                'required',
+                'nullable',
                 'string',
                 'max: 255',
+            ],
+            'date_format' => [
+                'required',
             ],
             'training_from' => [
                 'required',
                 'string',
                 'max: 255',
             ],
+            'ad_training_from' => [
+                'nullable',
+            ],
             'training_to' => [
                 'required',
                 'string',
                 'max: 255',
             ],
+            'ad_training_to' => [
+                'nullable',
+            ],
             'certificate' => [
-                'required_without:old_certificate',
+                'nullable',
                 'file',
                 'mimetypes:application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)

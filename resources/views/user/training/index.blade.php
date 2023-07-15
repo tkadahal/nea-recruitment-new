@@ -18,6 +18,12 @@
 
                 <div class="card-body">
                     @if (count($trainings))
+                        <div class="col d-flex justify-content-end">
+                            <span class="text-primary">
+                                {{ trans('global.training.fields.total_duration') }} :
+                            </span>
+                            {{ $totalDurationFormatted }}
+                        </div>
                         <div class="card-section">
                             <h3>
                                 {{ trans('global.training.title_singular') }}
@@ -29,12 +35,12 @@
                                     <div class="col">
                                         @foreach ($trainings as $training)
                                             <div class="training-block">
-                                                @if ($training->duration)
+                                                @if ($training->formattedTrainingPeriod)
                                                     <div class="row">
                                                         <div class="col d-flex justify-content-end">
                                                             <span class="text-success font-weight-bold">
                                                                 Duration: <span
-                                                                    class="text-lg">{{ $training->duration }}</span>
+                                                                    class="text-lg">{{ $training->formattedTrainingPeriod }}</span>
                                                             </span>
                                                         </div>
                                                     </div>
