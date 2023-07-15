@@ -35,6 +35,7 @@ class Education extends Model
         'division_id',
         'percentage',
         'pass_year',
+        'date_format',
         'transcript_issue_date',
         'created_at',
         'updated_at',

@@ -18,14 +18,13 @@ return new class extends Migration
             $table->foreignId('division_id')->index()->constrained();
 
             $table->string('institution');
-
             $table->string('percentage');
 
-            $table->enum('transcript_issue_date_format', ['BS', 'AD']);
+            $table->enum('date_format', ['BS', 'AD']);
 
             $table->date('transcript_issue_date')->nullable();
 
-            $table->year('pass_year');
+            $table->string('pass_year');
 
             $table->timestamps();
             $table->softDeletes();

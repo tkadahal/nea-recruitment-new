@@ -16,6 +16,7 @@ class StoreEducationRequest extends FormRequest
 
     public function rules(): array
     {
+        // dd($this->request->all());
         return [
             'institution' => [
                 'required',
@@ -46,6 +47,9 @@ class StoreEducationRequest extends FormRequest
                 'required',
                 'string',
                 'max: 255',
+            ],
+            'date_format' => [
+                'required',
             ],
             'transcript_issue_date' => [
                 'nullable',
