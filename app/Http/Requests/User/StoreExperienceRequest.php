@@ -36,18 +36,27 @@ class StoreExperienceRequest extends FormRequest
                 'integer',
                 'not_in: 0',
             ],
+            'date_format' => [
+                'required',
+            ],
             'start_date' => [
                 'required',
                 'string',
                 'max: 255',
+            ],
+            'ad_experience_from' => [
+                'nullable',
             ],
             'end_date' => [
                 'required',
                 'string',
                 'max: 255',
             ],
+            'ad_experience_to' => [
+                'nullable',
+            ],
             'experience_certificate' => [
-                'required_without:old_experience',
+                'required_without:old_experience_certificate',
                 'file',
                 'mimetypes:application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)

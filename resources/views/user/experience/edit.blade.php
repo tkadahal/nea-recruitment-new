@@ -109,12 +109,16 @@
                             <div class="row">
                                 <div class="radio-buttons">
                                     <label>
-                                        <input type="radio" name="date_format" value="BS" checked>
-                                        BS
+                                        <input type="radio" name="date_format" value="BS" {{ isset($experience) &&
+                                            $experience->date_format == 'BS' ?
+                                        'checked' : '' }}>
+                                        {{ trans('global.experience.fields.bs') }}
                                     </label>
                                     <label>
-                                        <input type="radio" name="date_format" value="AD">
-                                        AD
+                                        <input type="radio" name="date_format" value="AD" {{ isset($experience) &&
+                                            $experience->date_format == 'AD' ?
+                                        'checked' : '' }}>
+                                        {{ trans('global.experience.fields.ad') }}
                                     </label>
                                 </div>
                             </div>
@@ -128,8 +132,9 @@
                                         <input type="text" id="start_date" name="start_date" class="form-control"
                                             value="{{ old('start_date', isset($experience) ? $experience->start_date : '') }}">
                                         <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                                        <input type="hidden" id="ad_experience_from" name="ad_experience_from" value="">
                                     </div>
-                                    @if($errors->has('start_date'))
+                                    @if ($errors->has('start_date'))
                                     <p class="help-block">
                                         {{ $errors->first('start_date') }}
                                     </p>
@@ -149,8 +154,9 @@
                                         <input type="text" id="end_date" name="end_date" class="form-control"
                                             value="{{ old('end_date', isset($experience) ? $experience->end_date : '') }}">
                                         <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                                        <input type="hidden" id="ad_experience_to" name="ad_experience_to" value="">
                                     </div>
-                                    @if($errors->has('end_date'))
+                                    @if ($errors->has('end_date'))
                                     <p class="help-block">
                                         {{ $errors->first('end_date') }}
                                     </p>
@@ -161,43 +167,55 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="form-group {{ $errors->has('experience_certificate') ? 'has-error' : '' }}">
-                                    <label class="" for="experience_certificate">
-                                        {{ trans('global.experience.fields.experience_certificate') }}
-                                    </label>
-                                    <input type="file" class="form-control" id="experience_certificate"
-                                        name="experience_certificate"
-                                        value="{{ old('experience_certificate', isset($experience) ? $experience->experience_certificate : '') }}"
-                                        style="display: block; border-color:#ccc">
-                                    @if(count($experience->media))
-                                    <input type="hidden" id="old_experience" name="old_experience"
-                                        value="{{ $experience->media->first()->file_name }}" readonly>
-                                    @endif
-                                    @if ($errors->has('experience_certificate'))
-                                    <p class="help-block">
-                                        {{ $errors->first('experience_certificate') }}
-                                    </p>
-                                    @endif
-                                    <p class="helper-block">
-                                        {{ trans('global.experience.fields.experience_certificate_helper') }}
-                                    </p>
-                                    @if(count($experience->media))
-                                    {{ trans('global.existing_document.title_singular') }} :
-                                    @foreach($experience->media as $mediaItem)
-                                    {!! $mediaItem !!}
-                                    @endforeach
+                            <div class="row">
+                                <hr>
+                                <div class="col-6">
+                                    <div
+                                        class="form-group {{ $errors->has('experience_certificate') ? 'has-error' : '' }}">
+                                        <label class="required" for="experience_certificate">
+                                            {{ trans('global.experience.fields.experience_certificate') }}
+                                        </label>
+                                        <span class="text-primary">
+                                            <em class="text-decoration-italic">
+                                                (Update or Replace)
+                                            </em>
+                                        </span>
+                                        <input type="file" class="form-control" id="experience_certificate"
+                                            name="experience_certificate"
+                                            value="{{ old('experience_certificate', isset($experience) ? $experience->experience_certificate : '') }}"
+                                            style="display: block; border-color:#ccc">
+                                        @if ($errors->has('experience_certificate'))
+                                        <p class="help-block">
+                                            {{ $errors->first('experience_certificate') }}
+                                        </p>
+                                        @endif
+                                        <p class="helper-block">
+                                            {{ trans('global.experience.fields.experience_certificate_helper') }}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 d-flex justify-content-end" style="align-items: center;">
+                                    @if (isset($experience) && $experience->media->where('media_type_id',
+                                    9)->isNotEmpty())
+                                    <a target="_blank"
+                                        href="{{ $experience->media->where('media_type_id', 9)->first()->short_url }}"
+                                        style="display: flex; align-items: center;">
+                                        <i class="fas fa-file-pdf fa-3x text-primary" aria-hidden="true"></i>
+                                        <input type="hidden" name="old_experience_certificate"
+                                            value="{{ $experience->media->where('media_type_id', 9)->first()->short_url }}">
+                                    </a>
                                     @endif
                                 </div>
                             </div>
 
-                            <div class="form-group {{ $errors->has('job_description') ? 'has-error' : '' }}">
+                            {{-- <div class="form-group {{ $errors->has('job_description') ? 'has-error' : '' }}">
                                 <label class="label" for="job_description">
                                     {{ trans('global.experience.fields.job_description') }}
                                 </label>
                                 <textarea class="form-control" id="job_description" name="job_description" rows="3">
                                 {{ old('job_description', isset($experience) ? $experience->job_description : '') }}
-                            </textarea>
+                                </textarea>
                                 @if ($errors->has('job_description'))
                                 <p class="help-block">
                                     {{ $errors->first('job_description') }}
@@ -206,7 +224,7 @@
                                 <p class="helper-block">
                                     {{ trans('global.experience.fields.job_description_helper') }}
                                 </p>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -233,6 +251,7 @@
                 ndpYear: true,
                 ndpMonth: true,
                 ndpYearCount: 100,
+                onChange: updateEquivalentAD,
                 disableAfter: current_nepali_date
             });
         } else if (selectedDateFormat === 'AD') {
@@ -244,6 +263,18 @@
                 maxDate: 'today',
                 yearRange: '-100:+0',
             });
+        }
+
+        $('#start_date, #end_date').on('input', updateEquivalentAD);
+
+        function updateEquivalentAD() {
+            var selectedDate = $('#start_date').val();
+            var equivalentAD = NepaliFunctions.BS2AD(selectedDate);
+            $('#ad_experience_from').val(equivalentAD);
+
+            var selectedDate = $('#end_date').val();
+            var equivalentAD = NepaliFunctions.BS2AD(selectedDate);
+            $('#ad_experience_to').val(equivalentAD);
         }
 
         $('input[name="date_format"]').on('change', function() {

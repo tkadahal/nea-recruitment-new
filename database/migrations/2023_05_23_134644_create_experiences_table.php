@@ -19,8 +19,12 @@ return new class extends Migration
             $table->string('post');
             $table->string('level');
 
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->enum('date_format', ['BS', 'AD']);
+
+            $table->string('start_date');
+            $table->string('end_date');
+
+            $table->bigInteger('experience_period');
 
             $table->text('job_description')->nullable();
 

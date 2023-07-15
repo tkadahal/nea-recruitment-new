@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('training_from');
             $table->string('training_to');
 
-            $table->string('training_period');
+            $table->bigInteger('training_period');
 
             $table->timestamps();
             $table->softDeletes();

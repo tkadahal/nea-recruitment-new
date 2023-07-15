@@ -22,7 +22,7 @@ return new class extends Migration
 
             $table->enum('date_format', ['BS', 'AD']);
 
-            $table->date('transcript_issue_date')->nullable();
+            $table->string('transcript_issue_date')->nullable();
 
             $table->string('pass_year');
 

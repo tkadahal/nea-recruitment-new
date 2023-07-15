@@ -39,7 +39,6 @@ class TrainingController extends Controller
             $totalDays += $trainingPeriod->days;
         }
 
-        // Adjust the total duration based on the accumulated years and months
         $totalDuration = $totalDuration->addYears($totalYears)->addMonths($totalMonths);
 
         $totalDurationFormatted = '';
@@ -111,8 +110,9 @@ class TrainingController extends Controller
 
         $validated_input = $request->validated();
 
-        $validated_input['training_period'] = Carbon::parse($validated_input['training_from'])
-            ->diffInMonths(Carbon::parse($validated_input['training_to']));
+        $validated_input['training_period'] = ($validated_input['date_format'] == 'BS')
+            ? Carbon::parse($validated_input['ad_training_from'])->diffInMonths(Carbon::parse($validated_input['ad_training_to']))
+            : Carbon::parse($validated_input['training_from'])->diffInMonths(Carbon::parse($validated_input['training_to']));
 
         $training->update($validated_input);
 
