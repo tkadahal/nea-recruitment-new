@@ -175,7 +175,7 @@
                                         <div class="input-group">
                                             <input type="text" id="transcript_issue_date" name="transcript_issue_date"
                                                 class="form-control"
-                                                value="{{ old('transcript_issue_date', isset($personalInfo) ? $personalInfo->transcript_issue_date : '') }}">
+                                                value="{{ old('transcript_issue_date', isset($education) ? $education->transcript_issue_date : '') }}">
                                             <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
                                         </div>
                                         @if ($errors->has('transcript_issue_date'))
@@ -191,7 +191,7 @@
                             </div>
 
                             <div class="row">
-
+                                <hr>
                                 <div class="col-md-6">
                                     <div class="form-group {{ $errors->has('transcript') ? 'has-error' : '' }}">
                                         <label class="required" for="transcript">
@@ -216,22 +216,28 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 d-flex justify-content-end">
                                     @if (isset($education) && $education->media->where('media_type_id',
                                     7)->isNotEmpty())
                                     <div class="media-item">
-                                        <a target="_blank" href="{{ $mediaItem->short_url }}">
-                                            <i class="fas fa-file-pdf fa-3x text-primary" aria-hidden="true"></i>
+                                        {{-- <p class="required" for="transcript">
+                                            {{ $education->media->where('media_type_id',
+                                            7)->first()->mediaType->title }}
+                                        </p> --}}
+                                        <a target="_blank"
+                                            href="{{ $education->media->where('media_type_id', 7)->first()->short_url }}">
+                                            <i class="fas fa-file-pdf fa-2x text-primary" aria-hidden="true"></i>
                                         </a>
-                                        <p>{{ $mediaItem->mediaType->title }}</p>
+                                        {{-- <p>{{ $education->media->where('media_type_id',
+                                            7)->first()->mediaType->title }}
+                                        </p> --}}
                                     </div>
                                     @endif
                                 </div>
-
                             </div>
 
                             <div class="row">
-
+                                <hr>
                                 <div class="col-md-6">
                                     <div class="form-group {{ $errors->has('character') ? 'has-error' : '' }}">
                                         <label class="required" for="character">
@@ -256,14 +262,28 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
-
+                                <div class="col-md-6 d-flex justify-content-end">
+                                    @if (isset($education) && $education->media->where('media_type_id',
+                                    6)->isNotEmpty())
+                                    <div class="media-item">
+                                        {{-- <p class="required" for="transcript">
+                                            {{ $education->media->where('media_type_id',
+                                            6)->first()->mediaType->title }}
+                                        </p> --}}
+                                        <a target="_blank"
+                                            href="{{ $education->media->where('media_type_id', 6)->first()->short_url }}">
+                                            <i class="fas fa-file-pdf fa-2x text-primary" aria-hidden="true"></i>
+                                        </a>
+                                        {{-- <p>{{ $education->media->where('media_type_id',
+                                            7)->first()->mediaType->title }}
+                                        </p> --}}
+                                    </div>
+                                    @endif
                                 </div>
-
                             </div>
 
                             <div class="row">
-
+                                <hr>
                                 <div class="col-md-6">
                                     <div class="form-group {{ $errors->has('council') ? 'has-error' : '' }}">
                                         <label class="" for="council">
@@ -290,14 +310,29 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
-
+                                <div class="col-md-6 d-flex justify-content-end">
+                                    @if (isset($education) && $education->media->where('media_type_id',
+                                    11)->isNotEmpty())
+                                    <div class="media-item">
+                                        <p class="required" for="transcript">
+                                            {{ $education->media->where('media_type_id',
+                                            11)->first()->mediaType->title }}
+                                        </p>
+                                        <a target="_blank"
+                                            href="{{ $education->media->where('media_type_id', 11)->first()->short_url }}">
+                                            <i class="fas fa-file-pdf fa-2x text-primary" aria-hidden="true"></i>
+                                        </a>
+                                        {{-- <p>{{ $education->media->where('media_type_id',
+                                            7)->first()->mediaType->title }}
+                                        </p> --}}
+                                    </div>
+                                    @endif
                                 </div>
 
                             </div>
 
                             <div class="row">
-
+                                <hr>
                                 <div class="col-md-6" id="equivalence-field" @if ($errors->has('equivalence'))
                                     style="display: block;" @else style="display: none;" @endif>
                                     <div class="form-group {{ $errors->has('equivalence') ? 'has-error' : '' }}">
@@ -326,8 +361,23 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
-
+                                <div class="col-md-6 d-flex justify-content-end">
+                                    @if (isset($education) && $education->media->where('media_type_id',
+                                    10)->isNotEmpty())
+                                    <div class="media-item">
+                                        <p class="required" for="transcript">
+                                            {{ $education->media->where('media_type_id',
+                                            10)->first()->mediaType->title }}
+                                        </p>
+                                        <a target="_blank"
+                                            href="{{ $education->media->where('media_type_id', 10)->first()->short_url }}">
+                                            <i class="fas fa-file-pdf fa-2x text-primary" aria-hidden="true"></i>
+                                        </a>
+                                        {{-- <p>{{ $education->media->where('media_type_id',
+                                            7)->first()->mediaType->title }}
+                                        </p> --}}
+                                    </div>
+                                    @endif
                                 </div>
 
                             </div>

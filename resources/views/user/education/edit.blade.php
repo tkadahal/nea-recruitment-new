@@ -176,7 +176,7 @@
                                         <div class="input-group">
                                             <input type="text" id="transcript_issue_date" name="transcript_issue_date"
                                                 class="form-control"
-                                                value="{{ old('transcript_issue_date', isset($personalInfo) ? $personalInfo->transcript_issue_date : '') }}">
+                                                value="{{ old('transcript_issue_date', isset($education) ? $education->transcript_issue_date : '') }}">
                                             <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
                                         </div>
                                         @if ($errors->has('transcript_issue_date'))
@@ -192,7 +192,7 @@
                             </div>
 
                             <div class="row">
-
+                                <hr>
                                 <div class="col-6">
                                     <div class="form-group {{ $errors->has('transcript') ? 'has-error' : '' }}">
                                         <label class="required" for="transcript">
@@ -217,28 +217,59 @@
                                     </div>
                                 </div>
 
-                                <div class="col-6 d-flex justify-content-end">
+                                <div class="col-6 d-flex justify-content-end" style="align-items: center;">
                                     @if (isset($education) && $education->media->where('media_type_id',
                                     7)->isNotEmpty())
-                                    <div class="media-item">
-                                        <p class="required" for="transcript">
-                                            {{ $education->media->where('media_type_id',
-                                            7)->first()->mediaType->title }}
-                                        </p>
-                                        <a target="_blank"
-                                            href="{{ $education->media->where('media_type_id', 7)->first()->short_url }}">
-                                            <i class="fas fa-file-pdf fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                        {{-- <p>{{ $education->media->where('media_type_id',
-                                            7)->first()->mediaType->title }}
-                                        </p> --}}
-                                    </div>
+                                    <a target="_blank"
+                                        href="{{ $education->media->where('media_type_id', 7)->first()->short_url }}"
+                                        style="display: flex; align-items: center;">
+                                        <i class="fas fa-file-pdf fa-3x text-primary" aria-hidden="true"
+                                            id="old_transcript" name="old_transcript"></i>
+                                    </a>
                                     @endif
                                 </div>
-
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="row">
+                                <hr>
+                                <div class="col-6">
+                                    <div class="form-group {{ $errors->has('character') ? 'has-error' : '' }}">
+                                        <label class="required" for="character">
+                                            {{ trans('global.education.fields.character') }}
+                                        </label>
+                                        <span class="text-primary">
+                                            <em class="text-decoration-italic">
+                                                (Update or Replace)
+                                            </em>
+                                        </span>
+                                        <input type="file" class="form-control" id="character" name="character"
+                                            value="{{ old('character', isset($education) ? $education->character : '') }}"
+                                            style="display: block; border-color:#ccc">
+                                        @if ($errors->has('character'))
+                                        <p class="help-block">
+                                            {{ $errors->first('character') }}
+                                        </p>
+                                        @endif
+                                        <p class="helper-block">
+                                            {{ trans('global.education.fields.character_helper') }}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 d-flex justify-content-end" style="align-items: center;">
+                                    @if (isset($education) && $education->media->where('media_type_id',
+                                    6)->isNotEmpty())
+                                    <a target="_blank"
+                                        href="{{ $education->media->where('media_type_id', 6)->first()->short_url }}"
+                                        style="display: flex; align-items: center;">
+                                        <i class="fas fa-file-pdf fa-3x text-primary" aria-hidden="true"
+                                            id="old_transcript" name="old_transcript"></i>
+                                    </a>
+                                    @endif
+                                </div>
+                            </div>
+
+                            {{-- <div class="col-md-6">
                                 <div class="form-group {{ $errors->has('transcript') ? 'has-error' : '' }}">
                                     <label class="required" for="transcript">
                                         {{ trans('global.education.fields.transcript') }}
@@ -306,41 +337,43 @@
                                     @endforeach
                                     @endif
                                 </div>
-                            </div>
+                            </div> --}}
 
                             @if ($education->media->where('media_type_id', 11)->isNotEmpty())
-                            <div class="col-md-6">
-                                <div class="form-group {{ $errors->has('council') ? 'has-error' : '' }}">
-                                    <label class="" for="council">
-                                        {{ trans('global.education.fields.council') }}
-                                    </label>
-                                    <span class="text-primary">
-                                        <em class="text-decoration-italic">
-                                            (Update or Replace)
-                                        </em>
-                                    </span>
-                                    <input type="file" class="form-control" id="council" name="council"
-                                        value="{{ old('council', isset($education) ? $education->council : '') }}"
-                                        style="display: block; border-color:#ccc">
-                                    <i class="text-success">{{ trans('global.education.category.info.councilInfo')
-                                        }}</i>
-                                    <input type="hidden" id="old_council" name="old_council"
-                                        value="{{ $education->media->where('media_type_id', 11)->first()->file_name }}"
-                                        readonly>
-                                    @if ($errors->has('council'))
-                                    <p class="help-block">
-                                        {{ $errors->first('council') }}
-                                    </p>
-                                    @endif
-                                    <p class="helper-block">
-                                        {{ trans('global.education.fields.council_helper') }}
-                                    </p>
-                                    @if (count($education->media))
-                                    {{ trans('global.existing_document.title_singular') }} :
-                                    @foreach ($education->media->where('media_type_id', 11) as $mediaItem)
-                                    {!! $mediaItem !!}
-                                    @endforeach
-                                    @endif
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group {{ $errors->has('council') ? 'has-error' : '' }}">
+                                        <label class="" for="council">
+                                            {{ trans('global.education.fields.council') }}
+                                        </label>
+                                        <span class="text-primary">
+                                            <em class="text-decoration-italic">
+                                                (Update or Replace)
+                                            </em>
+                                        </span>
+                                        <input type="file" class="form-control" id="council" name="council"
+                                            value="{{ old('council', isset($education) ? $education->council : '') }}"
+                                            style="display: block; border-color:#ccc">
+                                        <i class="text-success">{{ trans('global.education.category.info.councilInfo')
+                                            }}</i>
+                                        <input type="hidden" id="old_council" name="old_council"
+                                            value="{{ $education->media->where('media_type_id', 11)->first()->file_name }}"
+                                            readonly>
+                                        @if ($errors->has('council'))
+                                        <p class="help-block">
+                                            {{ $errors->first('council') }}
+                                        </p>
+                                        @endif
+                                        <p class="helper-block">
+                                            {{ trans('global.education.fields.council_helper') }}
+                                        </p>
+                                        @if (count($education->media))
+                                        {{ trans('global.existing_document.title_singular') }} :
+                                        @foreach ($education->media->where('media_type_id', 11) as $mediaItem)
+                                        {!! $mediaItem !!}
+                                        @endforeach
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
                             @endif
