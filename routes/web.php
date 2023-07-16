@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth']], function () {
 
             Route::get('application/payment/{id}', 'ApplicationController@payment')->name('application.payment');
             Route::post('/update_advAmount', 'ApplicationController@updateAdvAmount');
+            Route::get('application/applied', 'ApplicationController@applied')->name('application.applied');
             Route::resource('application', ApplicationController::class);
 
             // Payment
@@ -84,4 +85,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-require __DIR__.'/admin.php';
+require __DIR__ . '/admin.php';

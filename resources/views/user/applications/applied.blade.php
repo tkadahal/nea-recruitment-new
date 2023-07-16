@@ -3,23 +3,21 @@
 
 @section('content')
 
-<div role="tabpanel" class="tab-pane {{ request()->routeIs('application.*') ? 'active' : '' }}" id="educationDetail">
+<div role="tabpanel" class="tab-pane {{ request()->routeIs('application.*') ? 'active' : '' }}" id="application">
 
     <div class="card">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb my-0 ms-2" style="border-bottom: none;">
                 <li class="breadcrumb-item">
                     <span>
-                        <a href="{{ route('application.index') }}"
-                            style="{{ request('show_applied') == 1 ? '' : 'font-weight: 700' }}">
+                        <a href="{{ route('application.index') }}">
                             All Applications
                         </a>
                     </span>
                 </li>
                 <li class="breadcrumb-item">
                     <span>
-                        <a class="text-danger" href="{{ route('application.index', ['show_applied' => 1]) }}"
-                            style="{{ request('show_applied') == 1 ? 'font-weight: 700' : '' }}">
+                        <a class="text-danger" href="{{ route('application.applied') }}">
                             Applied Applications
                         </a>
                     </span>
@@ -59,38 +57,18 @@
                                         </div>
 
                                         <div class="col-md-3">
-                                            @if (request('show_applied') == 1)
-                                            @php
-                                            $successfulPayment = $advertisement->applications->first(function
-                                            ($application) {
-                                            return $application->payments->contains('payment_status', 1);
-                                            });
-                                            @endphp
-                                            @if ($successfulPayment)
-                                            <button class="btn btn-block btn-outline-success" disabled>
+                                            @if($advertisement->applications->payments->payment_status == 1)
+                                            <a href="{{ route('application.show', $advertisement->id) }}"
+                                                class="btn btn-block btn-outline-success">
                                                 Payment Successful
-                                            </button>
+                                            </a>
                                             @else
-                                            @php
-                                            $payment = $advertisement->applications->first(function ($application) {
-                                            return $application->payments->isNotEmpty();
-                                            });
-                                            @endphp
-                                            @if ($payment)
-                                            <a href="{{ route('application.payment', $payment->id) }}"
+                                            <a href="{{ route('application.show', $advertisement->id) }}"
                                                 class="btn btn-block btn-outline-success">
                                                 Make Payment
                                             </a>
                                             @endif
-                                            @endif
-                                            @else
-                                            <a href="{{ route('application.show', $advertisement->id) }}"
-                                                class="btn btn-block btn-outline-success">
-                                                Apply For Application
-                                            </a>
-                                            @endif
                                         </div>
-
                                     </div>
                                 </div>
                                 @endforeach
