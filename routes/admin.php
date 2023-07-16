@@ -263,7 +263,7 @@ Route::middleware(['auth:admin'])->group(function () {
             // Applications
             Route::get('application', 'ApplicationController@index')->name('application.index');
             Route::get('application/show/{id}', 'ApplicationController@show')->name('application.show');
-            Route::get('application/viewApplication/{id}', 'ApplicationController@viewApplications')->name('application.viewApplication');
+            Route::get('application/viewApplication/{id}/{action}', 'ApplicationController@viewApplications')->name('application.viewApplication');
             Route::get('application/viewUserDetail/{id}', 'ApplicationController@viewUserDetail')->name('application.viewUserDetail');
 
             // Application Verification

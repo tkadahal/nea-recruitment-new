@@ -1,42 +1,43 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="card">
+    <div class="card">
 
-    <div class="card-header"><i class="fa fa-align-justify"></i>
-        <strong> </strong> मा परेका आबेदनका सूचीहरु
+        <div class="card-header"><i class="fa fa-align-justify"></i>
+            <strong> </strong> मा परेका आबेदनका सूचीहरु
 
-    </div>
+        </div>
 
-    <div class="card-body">
-        <div class="row">
-            @foreach($applications as $application)
-            <div class="col-sm-6 col-lg-3">
-                <div class="card mb-4 text-white" style="background-color: {{ $application->color ?? '#7CB9E8' }}">
-                    <div class="card-body pb-0 d-flex justify-content-between align-items-start">
-                        <div>
-                            <div class="fs-4 fw-semibold">
-                                <a href="{{ route('admin.application.show', $application->id) }}" style="color: white;">
-                                    {{ $application->title ?? '' }}
-                                </a>
-                            </div>
-                            <hr>
-                            <div class="pt-4 fs-4">
-                                Total Advertisements: {{ $application->advertisements_count ?? '0' }}
-                            </div>
-                            <div class="pt-4 fs-4">
+        <div class="card-body">
+            <div class="row">
+                @foreach ($applications as $application)
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card mb-4 text-white" style="background-color: {{ $application->color ?? '#7CB9E8' }}">
+                            <div class="card-body pb-0 d-flex justify-content-between align-items-start">
+                                <div>
+                                    <div class="fs-4 fw-semibold">
+                                        <a href="{{ route('admin.application.show', $application->id) }}"
+                                            style="color: white;">
+                                            {{ $application->title ?? '' }}
+                                        </a>
+                                    </div>
+                                    <hr>
+                                    <div class="pt-4 fs-4">
+                                        Total Advertisements: {{ $application->advertisements_count ?? '0' }}
+                                    </div>
+                                    {{-- <div class="pt-4 fs-4">
                                 Total Checked: {{ $application->payment_verifications_checked_count ?? '0' }}
                             </div>
                             <div class="pt-4 fs-4">
                                 Total Approved: {{ $application->advertisements_count ?? '0' }}
+                            </div> --}}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
-            @endforeach
-        </div>
-        {{-- <div class=" table-responsive">
+            {{-- <div class=" table-responsive">
             <table class="table table-bordered table-striped table-hover datatable datatable-applications">
                 <thead>
                     <tr>
@@ -89,8 +90,8 @@
                 </tbody>
             </table>
         </div> --}}
+        </div>
     </div>
-</div>
 @endsection
 
 {{-- @section('scripts')

@@ -4,56 +4,105 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Models\Advertisement;
-use App\Models\Application;
-use App\Models\FiscalYear;
 use App\Models\Payment;
 use Illuminate\View\View;
+use App\Models\FiscalYear;
+use App\Models\Application;
+use Illuminate\Http\Request;
+use App\Models\Advertisement;
+use App\Http\Controllers\Controller;
 
 class ApplicationController extends Controller
 {
     public function index(): View
     {
-        // $applications = FiscalYear::has('advertisements')->withCount('advertisements')->get();
-        $applications = FiscalYear::has('advertisements.applications.payment.paymentVerification')
-            ->with(['advertisements' => function ($query) {
-                $query->withCount(['applications', 'applications.payment.paymentVerification as is_checked_count' => function ($query) {
-                    $query->where('is_checked', 1);
-                }]);
-            }])
-            ->withCount('advertisements')
-            ->get();
-
-        dd($applications);
+        $applications = FiscalYear::has('advertisements')->withCount('advertisements')->get();
+        // $applications = FiscalYear::has('advertisements.applications.payments.paymentVerification')
+        //     ->with(['advertisements' => function ($query) {
+        //         $query->withCount(['applications', 'applications.payments.paymentVerification as is_checked_count' => function ($query) {
+        //             $query->where('is_checked', 1);
+        //         }]);
+        //     }])
+        //     ->withCount('advertisements')
+        //     ->get();
 
         return view('admin.applications.index', compact('applications'));
     }
 
     public function show($id): View
     {
-        $advertisements = Advertisement::query()->withCount('applications')
+        $advertisements = Advertisement::query()
+            ->withCount(['applications as total_payments' => function ($query) {
+                $query->whereHas('payments', function ($query) {
+                    $query->where('payment_status', 1);
+                });
+            }])
+            ->withCount(['applications as total_checked' => function ($query) {
+                $query->whereHas('payments.paymentVerification', function ($query) {
+                    $query->where('is_checked', 1);
+                });
+            }])
+            ->withCount(['applications as total_approved' => function ($query) {
+                $query->whereHas('payments.paymentVerification', function ($query) {
+                    $query->where('is_approved', 1);
+                });
+            }])
+            ->withCount(['applications as total_rejected' => function ($query) {
+                $query->whereHas('payments.paymentVerification', function ($query) {
+                    $query->where('is_rejected', 1);
+                });
+            }])
             ->where('fiscal_year_id', $id)
             ->get();
+
+        // dd($advertisements);
 
         return view('admin.applications.show', compact('advertisements'));
     }
 
-    public function viewApplications($advertisementId): View
+    public function viewApplications($advertisementId, $action): View
     {
         $advertisementNum = Advertisement::query()->where('id', $advertisementId)->value('advertisement_num');
 
-        $paymentDetails = Payment::query()->with(['application.user'])
+        $paymentQuery = Payment::query()->with(['application.user'])
             ->whereHas('application', function ($query) use ($advertisementId) {
                 $query->where('advertisement_id', $advertisementId);
-            })
-            ->where('payment_status', '1')
-            ->get();
+            });
+
+        switch ($action) {
+            case '_total':
+                $paymentQuery->where('payment_status', '1')
+                    ->whereDoesntHave('paymentVerification')
+                    ->orwhereHas('paymentVerification', function ($query) {
+                        $query->where('is_checked', 0);
+                    });
+                break;
+            case '_checked':
+                $paymentQuery->whereHas('paymentVerification', function ($query) {
+                    $query->where('is_checked', 1);
+                });
+                break;
+            case '_approved':
+                $paymentQuery->whereHas('paymentVerification', function ($query) {
+                    $query->where('is_approved', 1);
+                });
+                break;
+            case '_rejected':
+                $paymentQuery->whereHas('paymentVerification', function ($query) {
+                    $query->where('is_rejected', 1);
+                });
+                break;
+            default:
+                // Handle unknown action or error
+                break;
+        }
+
+        $paymentDetails = $paymentQuery->get();
 
         $applications = [];
 
         foreach ($paymentDetails as $paymentDetail) {
-            $id = $paymentDetail->application->id;
+            $id = $paymentDetail->id;
             $name = $paymentDetail->application->user->name;
             $payment_gateway = $paymentDetail->payment_gateway;
             $payable_amount = $paymentDetail->amount;
@@ -73,25 +122,26 @@ class ApplicationController extends Controller
 
     public function viewUserDetail($id): View
     {
-        $application = Application::query()
+        $payment = Payment::query()
             ->with([
-                'user',
-                'user.educations',
-                'user.contact',
-                'user.contact.province',
-                'user.contact.district',
-                'user.contact.municipality',
-                'user.contact.fatherCountry',
-                'user.trainings',
-                'user.experiences',
-                'user.media',
-                'samabeshiGroups',
-                'payment',
+                'application',
+                'application.user',
+                'application.user.educations',
+                'application.user.contact',
+                'application.user.contact.province',
+                'application.user.contact.district',
+                'application.user.contact.municipality',
+                'application.user.contact.fatherCountry',
+                'application.user.trainings',
+                'application.user.experiences',
+                'application.user.media',
+                'application.samabeshiGroups',
             ])
             ->findOrFail($id);
 
-        $user = $application->user;
+        $user = $payment->application->user;
+        $application = $payment->application;
 
-        return view('admin.applications.viewUserDetail', compact('user', 'application'));
+        return view('admin.applications.viewUserDetail', compact('user', 'application', 'payment'));
     }
 }

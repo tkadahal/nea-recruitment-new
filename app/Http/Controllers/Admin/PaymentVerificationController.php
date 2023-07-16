@@ -46,10 +46,21 @@ class PaymentVerificationController extends Controller
                 $paymentVerifications['checker'] = auth('admin')->id();
                 $paymentVerifications['checked_at'] = Carbon::now();
                 break;
+            case 'approve':
+                $paymentVerifications['is_approved'] = 1;
+                $paymentVerifications['approver'] = auth('admin')->id();
+                $paymentVerifications['approved_at'] = Carbon::now();
+                break;
             case 'reject':
                 $paymentVerifications['is_rejected'] = 1;
                 $paymentVerifications['rejector'] = auth('admin')->id();
                 $paymentVerifications['rejected_at'] = Carbon::now();
+                break;
+            case 'back':
+                $paymentVerifications['is_approved'] = 0;
+                $paymentVerifications['is_checked'] = 0;
+                $paymentVerifications['approver'] = null;
+                $paymentVerifications['checker'] = null;
                 break;
             default:
                 // Handle unknown action
