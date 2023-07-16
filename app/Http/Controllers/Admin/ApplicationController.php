@@ -74,22 +74,22 @@ class ApplicationController extends Controller
                 $paymentQuery->where('payment_status', '1')
                     ->whereDoesntHave('paymentVerification')
                     ->orwhereHas('paymentVerification', function ($query) {
-                        $query->where('is_checked', 0);
+                        $query->where('is_checked', false);
                     });
                 break;
             case '_checked':
                 $paymentQuery->whereHas('paymentVerification', function ($query) {
-                    $query->where('is_checked', 1);
+                    $query->where('is_checked', true);
                 });
                 break;
             case '_approved':
                 $paymentQuery->whereHas('paymentVerification', function ($query) {
-                    $query->where('is_approved', 1);
+                    $query->where('is_approved', true);
                 });
                 break;
             case '_rejected':
                 $paymentQuery->whereHas('paymentVerification', function ($query) {
-                    $query->where('is_rejected', 1);
+                    $query->where('is_rejected', true);
                 });
                 break;
             default:
