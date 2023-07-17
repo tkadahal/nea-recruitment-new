@@ -68,32 +68,8 @@ class StorePersonalRequest extends FormRequest
             ],
             'is_handicapped' => [
                 'nullable',
-                'integer',
+                'boolean',
             ],
-            // 'photo' => [
-            //     'required',
-            //     'image',
-            //     File::types(['png', 'jpg', 'jpeg', 'gif', 'tif', 'pdf'])
-            //         ->max(5 * 1024),
-            // ],
-            // 'sign' => [
-            //     'required',
-            //     'image',
-            //     File::types(['png', 'jpg', 'jpeg', 'gif', 'tif', 'pdf'])
-            //         ->max(5 * 1024),
-            // ],
-            // 'citizenship_front' => [
-            //     'required',
-            //     'image',
-            //     File::types(['png', 'jpg', 'jpeg', 'gif', 'tif', 'pdf'])
-            //         ->max(5 * 1024),
-            // ],
-            // 'citizenship_back' => [
-            //     'required',
-            //     'image',
-            //     File::types(['png', 'jpg', 'jpeg', 'gif', 'tif', 'pdf'])
-            //         ->max(5 * 1024),
-            // ],
         ];
     }
 
