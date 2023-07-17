@@ -152,6 +152,7 @@
                                         </h6>
                                         <div class="row mt-2">
                                             <div class="col">
+                                                <input type="hidden" name="sameAsPermanent" value="0">
                                                 <input type="checkbox" id="sameAsPermanent" name="sameAsPermanent"
                                                     value="1"
                                                     {{ isset($contact) && $contact->sameAsPermanent ? 'checked' : '' }}>
@@ -943,9 +944,24 @@
                     $('#temp_ward_number').val($('#perma_ward_number').val());
                     $('#temp_tol').val($('#perma_tol').val());
                 } else {
-                    $('#temp_province').val();
-                    $('#temp_district').val();
-                    $('#temp_municipality').val();
+                    var provinces = {!! json_encode($provinces) !!};
+                    $('#temp_province').empty().append('<option value="">Select Province</option>');
+                    $.each(provinces, function(key, value) {
+                        $('#temp_province').append('<option value="' + key + '">' + value +
+                            '</option>');
+                    });
+                    var districts = {!! json_encode($districts) !!};
+                    $('#temp_district').empty().append('<option value="">Select District</option>');
+                    $.each(districts, function(key, value) {
+                        $('#temp_district').append('<option value="' + key + '">' + value +
+                            '</option>');
+                    });
+                    var municipalities = {!! json_encode($municipalities) !!};
+                    $('#temp_municipality').empty().append('<option value="">Select Municipality</option>');
+                    $.each(municipalities, function(key, value) {
+                        $('#temp_municipality').append('<option value="' + key + '">' + value +
+                            '</option>');
+                    });
                     $('#temp_ward_number').val('');
                     $('#temp_tol').val('');
                 }
