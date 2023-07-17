@@ -282,8 +282,9 @@
                                             <input type="file" class="form-control" id="council" name="council"
                                                 value="{{ old('council', isset($education) ? $education->council : '') }}"
                                                 style="display: block; border-color:#ccc">
-                                            <i
-                                                class="text-success">{{ trans('global.education.category.info.councilInfo') }}</i>
+                                            <i style="color: #be0af0">
+                                                {{ trans('global.education.category.info.councilInfo') }}
+                                            </i>
                                             @if ($errors->has('council'))
                                                 <p class="help-block">
                                                     {{ $errors->first('council') }}
@@ -325,8 +326,9 @@
                                                 name="equivalence"
                                                 value="{{ old('equivalence', isset($education) ? $education->equivalence : '') }}"
                                                 style="display: block; border-color:#ccc">
-                                            <i
-                                                class="text-success">{{ trans('global.education.category.info.equivalenceInfo') }}</i>
+                                            <i style="color: #be0af0">
+                                                {{ trans('global.education.category.info.equivalenceInfo') }}
+                                            </i>
                                             @if ($errors->has('equivalence'))
                                                 <p class="help-block">
                                                     {{ $errors->first('equivalence') }}
