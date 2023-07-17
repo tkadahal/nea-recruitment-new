@@ -28,7 +28,11 @@ class TrainingController extends Controller
         foreach ($trainings as $training) {
             $trainingPeriod = CarbonInterval::months($training->training_period);
 
-            $formattedTrainingPeriod = $trainingPeriod->cascade()->forHumans(['parts' => 3]);
+            if ($trainingPeriod->totalMonths === 0) {
+                $formattedTrainingPeriod = '0 months';
+            } else {
+                $formattedTrainingPeriod = $trainingPeriod->cascade()->forHumans(['parts' => 3]);
+            }
 
             $training->formattedTrainingPeriod = $formattedTrainingPeriod;
 

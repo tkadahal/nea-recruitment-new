@@ -46,7 +46,7 @@
                                     <div class="form-group {{ $errors->has('sanket_num') ? 'has-error' : '' }}">
                                         <label class="" for="sanket_num">
                                             {{ trans('global.personal.fields.sanket_num') }}
-                                            <i class="text-success">
+                                            <i style="color: #cb0af6">
                                                 {{ trans('global.personal.info.sanketInfo') }}
                                             </i>
                                         </label>

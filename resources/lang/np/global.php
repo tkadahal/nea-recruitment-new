@@ -626,7 +626,9 @@ return [
             ],
         ],
         'info' => [
-            'sanketInfo' => '(ने. वि. प्रा. मा  कार्यरत कर्मचारीलाई मात्र)'
+            'sanketInfo' => '(ने. वि. प्रा. मा  कार्यरत कर्मचारीलाई मात्र)',
+            'photoInfo' => '***स्पष्ट देखिने पासपोर्ट फोटो राख्नुहोला',
+            'samabeshiInfo' => '***महिला बाहेक अन्य समाबेशी समूहलाई अनिवार्य',
         ],
         'fields' => [
             'id' => 'क्र.स.',
@@ -659,9 +661,9 @@ return [
             'photo_helper' => '',
             'sign' => 'हस्ताक्षर',
             'sign_helper' => '',
-            'citizenship_front' => 'नागरिकता फ्रन्ट',
+            'citizenship_front' => 'नागरिकता (अगाडीको भाग)',
             'citizenship_front_helper' => '',
-            'citizenship_back' => 'नागरिकता ब्याक',
+            'citizenship_back' => 'नागरिकता (पछाडीको भाग)',
             'citizenship_back_helper' => '',
             'samabeshi' => 'समाबेशीताको प्रमाणपत्र',
             'samabeshi_helper' => '',
@@ -749,11 +751,6 @@ return [
         'title' => 'शैक्षिक विवरण',
         'title_singular' => 'शैक्षिक विवरण',
         'category' => [
-            'fields' => [
-                'tempAddressDetails' => 'अस्थायी ठेगाना',
-                'permaAddressDetails' => 'स्थायी ठेगाना',
-                'familyDetails' => 'पारिवारिक विवरण',
-            ],
             'info' => [
                 'equivalenceInfo' => '(नेपाल बाहिर अध्ययन गरेकाहरुलाई अनिवार्य)',
                 'councilInfo' => '(इन्जिनियरिङ्गको लागि अनिवार्य)',
@@ -799,13 +796,6 @@ return [
     'training' => [
         'title' => 'तालिम विवरण',
         'title_singular' => 'तालिम विवरण',
-        'category' => [
-            'fields' => [
-                'tempAddressDetails' => 'अस्थायी ठेगाना',
-                'permaAddressDetails' => 'स्थायी ठेगाना',
-                'familyDetails' => 'पारिवारिक विवरण',
-            ],
-        ],
         'fields' => [
             'id' => 'क्र.स.',
             'id_helper' => '',
@@ -842,13 +832,6 @@ return [
     'experience' => [
         'title' => 'कार्यानुभव विवरण',
         'title_singular' => 'कार्यानुभव विवरण',
-        'category' => [
-            'fields' => [
-                'tempAddressDetails' => 'अस्थायी ठेगाना',
-                'permaAddressDetails' => 'स्थायी ठेगाना',
-                'familyDetails' => 'पारिवारिक विवरण',
-            ],
-        ],
         'fields' => [
             'id' => 'क्र.स.',
             'id_helper' => '',

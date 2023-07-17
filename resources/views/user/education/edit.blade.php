@@ -315,11 +315,10 @@
                                     </div>
                                 @endif
 
-                                {{-- @if ($education->media->where('media_type_id', 10)->isNotEmpty() || $errors->has('equivalence')) --}}
                                 <div class="row">
                                     <hr>
                                     <div class="col-md-6" id="equivalence-field"
-                                        @if ($errors->has('equivalence')) style="display: block;" @else style="display: none;" @endif>
+                                        @if ($errors->has('equivalence') || old('university_id') == 15) style="display: block;" @else style="display: none;" @endif>
                                         <div class="form-group {{ $errors->has('equivalence') ? 'has-error' : '' }}">
                                             <label class="required" for="equivalence">
                                                 {{ trans('global.education.fields.equivalence') }}
@@ -358,7 +357,7 @@
                                         @endif
                                     </div>
                                 </div>
-                                {{-- @endif --}}
+
                             </div>
                         </div>
                     </div>

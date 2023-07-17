@@ -750,7 +750,9 @@
                                     <div class="form-group {{ $errors->has('spouse_name') ? 'has-error' : '' }}">
                                         <label class="" for="spouse_name">
                                             {{ trans('global.contact.fields.spouse_name') }}
-                                            <i class="text-success">{{ trans('global.contact.info.spouseInfo') }}</i>
+                                            <i style="color: #a307eb">
+                                                {{ trans('global.contact.info.spouseInfo') }}
+                                            </i>
                                         </label>
 
                                         <input type="text" id="spouse_name" name="spouse_name" class="form-control"

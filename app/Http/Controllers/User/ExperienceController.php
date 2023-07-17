@@ -27,7 +27,11 @@ class ExperienceController extends Controller
         foreach ($experiences as $experience) {
             $experiencePeriod = CarbonInterval::months($experience->experience_period);
 
-            $formattedExperiencePeriod = $experiencePeriod->cascade()->forHumans(['parts' => 3]);
+            if ($experiencePeriod->totalMonths === 0) {
+                $formattedExperiencePeriod = '0 months';
+            } else {
+                $formattedExperiencePeriod = $experiencePeriod->cascade()->forHumans(['parts' => 3]);
+            }
 
             $experience->formattedExperiencePeriod = $formattedExperiencePeriod;
 

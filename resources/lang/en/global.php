@@ -680,7 +680,9 @@ return [
                 'uploads' => 'Uploads',
             ],
             'info' => [
-                'sanketInfo' => '(Only For NEA Staffs)'
+                'sanketInfo' => '(Only For NEA Staffs)',
+                'photoInfo' => '***Please Upload Clear Passport size photo',
+                'samabeshiInfo' => '***Except Ladies it is required for other Samabeshi Groups',
             ],
         ],
         'fields' => [
@@ -804,11 +806,6 @@ return [
         'title' => 'Education Information',
         'title_singular' => 'Education Information',
         'category' => [
-            'fields' => [
-                'tempAddressDetails' => 'Temporary Address',
-                'permaAddressDetails' => 'Permanent Address',
-                'familyDetails' => 'Family Details',
-            ],
             'info' => [
                 'equivalenceInfo' => '(Required For Foreign Universities)',
                 'councilInfo' => '(Required For Engineering)',
@@ -854,13 +851,6 @@ return [
     'training' => [
         'title' => 'Training Information',
         'title_singular' => 'Training Information',
-        'category' => [
-            'fields' => [
-                'tempAddressDetails' => 'Temporary Address',
-                'permaAddressDetails' => 'Permanent Address',
-                'familyDetails' => 'Family Details',
-            ],
-        ],
         'fields' => [
             'id' => 'ID',
             'id_helper' => '',
@@ -897,13 +887,6 @@ return [
     'experience' => [
         'title' => 'Experience Information',
         'title_singular' => 'Experience Information',
-        'category' => [
-            'fields' => [
-                'tempAddressDetails' => 'Temporary Address',
-                'permaAddressDetails' => 'Permanent Address',
-                'familyDetails' => 'Family Details',
-            ],
-        ],
         'fields' => [
             'id' => 'ID',
             'id_helper' => '',
