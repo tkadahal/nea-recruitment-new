@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\User;
 
+use App\Rules\NotMatchingMobileNumber;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreContactRequest extends FormRequest
@@ -76,7 +77,8 @@ class StoreContactRequest extends FormRequest
             'contact_person_number' => [
                 'required',
                 'string',
-                'max: 255',
+                'regex:/^[0-9]{10}$/',
+                new NotMatchingMobileNumber(),
             ],
             'father_name' => [
                 'required',

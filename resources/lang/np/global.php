@@ -721,7 +721,7 @@ return [
             'country_id_helper' => '',
             'contact_person_name' => 'नाम',
             'contact_person_name_helper' => '',
-            'contact_person_number' => 'सम्पर्क नं',
+            'contact_person_number' => 'मोबाइल नं',
             'contact_person_number_helper' => '',
             'father_name' => 'बाबुको नाम',
             'father_name_helper' => '',

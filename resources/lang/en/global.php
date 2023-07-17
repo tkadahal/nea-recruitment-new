@@ -776,7 +776,7 @@ return [
             'country_id_helper' => '',
             'contact_person_name' => 'Name',
             'contact_person_name_helper' => '',
-            'contact_person_contact' => 'Contact Number',
+            'contact_person_contact' => 'Mobile Number',
             'contact_person_contact_helper' => '',
             'father_name' => 'Father\'s Name',
             'father_name_helper' => '',
