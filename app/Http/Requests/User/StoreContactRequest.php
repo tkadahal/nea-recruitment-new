@@ -120,4 +120,28 @@ class StoreContactRequest extends FormRequest
             ],
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'perma_province.required' => trans('uservalidation.permaProvince'),
+            'perma_district.required' => trans('uservalidation.permaDistrict'),
+            'perma_municipality.required' => trans('uservalidation.permaMunicipality'),
+            'perma_ward_number.required' => trans('uservalidation.permaWardNumber'),
+            'perma_tol.required' => trans('uservalidation.permaTol'),
+            'temp_province.required' => trans('uservalidation.tempProvince'),
+            'temp_district.required' => trans('uservalidation.tempDistrict'),
+            'temp_municipality.required' => trans('uservalidation.tempMunicipality'),
+            'temp_ward_number.required' => trans('uservalidation.tempWardNumber'),
+            'temp_tol.required' => trans('uservalidation.tempTol'),
+            'contact_person_name.required' => trans('uservalidation.contactPersonName'),
+            'contact_person_number.required' => trans('uservalidation.contactPersonNumber'),
+            'father_name.required' => trans('uservalidation.fatherName'),
+            'father_country_id.required' => trans('uservalidation.fatherCountry'),
+            'mother_name.required' => trans('uservalidation.motherName'),
+            'mother_country_id.required' => trans('uservalidation.motherCountry'),
+            'grandfather_name.required' => trans('uservalidation.grandfatherName'),
+            'grandfather_country_id.required' => trans('uservalidation.grandfatherCountry'),
+        ];
+    }
 }
