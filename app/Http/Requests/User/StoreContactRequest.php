@@ -40,6 +40,10 @@ class StoreContactRequest extends FormRequest
                 'required',
                 'integer',
             ],
+            'sameAsPermanent' => [
+                'nullable',
+                'boolean',
+            ],
             'temp_province' => [
                 'required',
                 'integer',
@@ -64,8 +68,15 @@ class StoreContactRequest extends FormRequest
                 'required',
                 'integer',
             ],
-            'phone_number' => [
-                'nullable',
+            'contact_person_name' => [
+                'required',
+                'string',
+                'max: 255',
+            ],
+            'contact_person_number' => [
+                'required',
+                'string',
+                'max: 255',
             ],
             'father_name' => [
                 'required',

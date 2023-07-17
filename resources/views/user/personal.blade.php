@@ -47,7 +47,7 @@
                                         <label class="" for="sanket_num">
                                             {{ trans('global.personal.fields.sanket_num') }}
                                             <i class="text-success">
-                                                (प्राधिकरणमा कार्यरत कर्मचारीलाई मात्र)
+                                                {{ trans('global.personal.info.sanketInfo') }}
                                             </i>
                                         </label>
                                         <input type="text" id="sanket_num" name="sanket_num" class="form-control"

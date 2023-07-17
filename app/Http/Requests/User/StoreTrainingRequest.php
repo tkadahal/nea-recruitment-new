@@ -51,7 +51,7 @@ class StoreTrainingRequest extends FormRequest
                 'nullable',
             ],
             'certificate' => [
-                'nullable',
+                'required_without: old_certificate',
                 'file',
                 'mimetypes:application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)

@@ -15,8 +15,8 @@ return new class extends Migration
             $table->foreignId('payment_id')->index()->constrained();
 
             $table->boolean('is_checked')->default(false);
-            $table->boolean('is_approved')->nullable();
-            $table->boolean('is_rejected')->nullable();
+            $table->boolean('is_approved')->default(false);
+            $table->boolean('is_rejected')->default(false);
 
             $table->foreignId('checker')->nullable()->constrained('admins');
             $table->foreignId('approver')->nullable()->constrained('admins');

@@ -7,8 +7,6 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Payment;
 use Illuminate\View\View;
 use App\Models\FiscalYear;
-use App\Models\Application;
-use Illuminate\Http\Request;
 use App\Models\Advertisement;
 use App\Http\Controllers\Controller;
 
@@ -34,28 +32,26 @@ class ApplicationController extends Controller
         $advertisements = Advertisement::query()
             ->withCount(['applications as total_payments' => function ($query) {
                 $query->whereHas('payments', function ($query) {
-                    $query->where('payment_status', 1);
+                    $query->where('payment_status', '1');
                 });
             }])
             ->withCount(['applications as total_checked' => function ($query) {
                 $query->whereHas('payments.paymentVerification', function ($query) {
-                    $query->where('is_checked', 1);
+                    $query->where('is_checked', true);
                 });
             }])
             ->withCount(['applications as total_approved' => function ($query) {
                 $query->whereHas('payments.paymentVerification', function ($query) {
-                    $query->where('is_approved', 1);
+                    $query->where('is_approved', true);
                 });
             }])
             ->withCount(['applications as total_rejected' => function ($query) {
                 $query->whereHas('payments.paymentVerification', function ($query) {
-                    $query->where('is_rejected', 1);
+                    $query->where('is_rejected', true);
                 });
             }])
             ->where('fiscal_year_id', $id)
             ->get();
-
-        // dd($advertisements);
 
         return view('admin.applications.show', compact('advertisements'));
     }
@@ -79,7 +75,9 @@ class ApplicationController extends Controller
                 break;
             case '_checked':
                 $paymentQuery->whereHas('paymentVerification', function ($query) {
-                    $query->where('is_checked', true);
+                    $query->where('is_checked', true)
+                        ->where('is_approved', false)
+                        ->where('is_rejected', false);
                 });
                 break;
             case '_approved':

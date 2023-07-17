@@ -81,7 +81,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $advertisement,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($advertisement->id)
                                     )

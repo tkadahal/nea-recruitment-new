@@ -19,18 +19,22 @@ return new class extends Migration
             $table->string('perma_tol');
             $table->integer('perma_ward_number');
 
+            $table->boolean('sameAsPermanent')->default(0);
+
             $table->foreignId('temp_province')->index()->constrained('provinces');
             $table->foreignId('temp_district')->index()->constrained('districts');
             $table->foreignId('temp_municipality')->index()->constrained('municipalities');
             $table->string('temp_tol');
             $table->integer('temp_ward_number');
 
+            $table->string('contact_person_name');
+            $table->string('contact_person_number');
+
             $table->foreignId('father_country_id')->index()->constrained('countries');
             $table->foreignId('mother_country_id')->index()->constrained('countries');
             $table->foreignId('grandfather_country_id')->index()->constrained('countries');
             $table->foreignId('spouse_country_id')->nullable()->constrained('countries');
 
-            $table->string('phone_number')->nullable();
             $table->string('father_name');
             $table->string('mother_name');
             $table->string('grandfather_name');
