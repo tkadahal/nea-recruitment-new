@@ -29,7 +29,18 @@ class AdvertisementController extends Controller
     {
         abort_if(Gate::denies('advertisement_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $advertisements = Advertisement::with(['category', 'group', 'subGroup'])->get();
+        $advertisements = Advertisement::with(
+            [
+                'category',
+                'group',
+                'subGroup',
+                'level',
+                'examCenter',
+                'designation',
+                'qualification',
+                'fiscalYear'
+            ]
+        )->get();
 
         return view('admin.advertisements.index', compact('advertisements'));
     }
@@ -102,7 +113,19 @@ class AdvertisementController extends Controller
 
         $samabeshiGroups = SamabeshiGroup::all();
 
-        $advertisement->load(['examCenter', 'group', 'subGroup', 'category', 'designation', 'qualification', 'samabeshiGroups', 'level', 'fiscalYear']);
+        $advertisement->load(
+            [
+                'examCenter',
+                'group',
+                'subGroup',
+                'category',
+                'designation',
+                'qualification',
+                'samabeshiGroups',
+                'level',
+                'fiscalYear'
+            ]
+        );
 
         $selectedSamabeshiGroups = $advertisement->samabeshiGroups;
 

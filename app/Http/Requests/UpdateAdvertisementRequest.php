@@ -26,9 +26,8 @@ class UpdateAdvertisementRequest extends FormRequest
                 'not_in:0',
             ],
             'exam_center_id' => [
-                'required',
+                'nullable',
                 'integer',
-                'not_in:0',
             ],
             'group_id' => [
                 'required',

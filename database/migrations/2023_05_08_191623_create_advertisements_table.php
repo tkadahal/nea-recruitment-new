@@ -20,7 +20,7 @@ return new class extends Migration
 
             $table->foreignId('designation_id')->constrained();
             $table->foreignId('qualification_id')->constrained();
-            $table->foreignId('exam_center_id')->constrained();
+            $table->foreignId('exam_center_id')->nullable()->constrained();
             $table->foreignId('fiscal_year_id')->constrained();
 
             $table->string('advertisement_num');
