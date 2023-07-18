@@ -7,6 +7,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\Advertisement;
 use App\Models\Application;
+use App\Models\ExamCenter;
 use App\Services\ApplicationService;
 use Carbon\Carbon;
 use Illuminate\Http\RedirectResponse;
@@ -26,27 +27,41 @@ class ApplicationController extends Controller
     public function index(): View
     {
         $currentDate = Carbon::now()->toDateString();
-        $showApplied = request()->query('show_applied');
         $userId = auth()->id();
 
-        $query = Advertisement::query()
-            ->with(['category', 'group', 'subGroup', 'qualification', 'applications.payments'])
+        $examCenters = ExamCenter::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        $advertisements = Advertisement::query()
+            ->with(['category', 'group', 'subGroup', 'qualification', 'applications'])
             ->whereDate('start_date_en', '<=', $currentDate)
-            ->whereDate('penalty_end_date_en', '>=', $currentDate);
+            ->whereDate('penalty_end_date_en', '>=', $currentDate)
+            ->get();
 
-        if ($showApplied) {
-            $query->whereHas('applications', function ($query) use ($userId) {
-                $query->where('user_id', $userId);
-            });
-        } else {
-            $query->whereDoesntHave('applications', function ($query) use ($userId) {
-                $query->where('user_id', $userId);
-            });
-        }
+        return view('user.applications.index', compact('advertisements', 'examCenters', 'userId'));
 
-        $advertisements = $query->get();
 
-        return view('user.applications.index', compact('advertisements'));
+        // $currentDate = Carbon::now()->toDateString();
+        // $showApplied = request()->query('show_applied');
+        // $userId = auth()->id();
+
+        // $query = Advertisement::query()
+        //     ->with(['category', 'group', 'subGroup', 'qualification', 'applications.payments'])
+        //     ->whereDate('start_date_en', '<=', $currentDate)
+        //     ->whereDate('penalty_end_date_en', '>=', $currentDate);
+
+        // if ($showApplied) {
+        //     $query->whereHas('applications', function ($query) use ($userId) {
+        //         $query->where('user_id', $userId);
+        //     });
+        // } else {
+        //     $query->whereDoesntHave('applications', function ($query) use ($userId) {
+        //         $query->where('user_id', $userId);
+        //     });
+        // }
+
+        // $advertisements = $query->get();
+
+        // return view('user.applications.index', compact('advertisements'));
 
         // $currentDate = now()->toDateString();
 
@@ -198,5 +213,31 @@ class ApplicationController extends Controller
         $fee = $this->applicationService->calculateFee($selectedGroups, $advertisementId);
 
         return response()->json($fee);
+    }
+
+    public function loadApplications(Request $request)
+    {
+        $currentDate = Carbon::now()->toDateString();
+        $userId = auth()->id();
+
+        $category = $request->input('category');
+        $examCenter = $request->input('examCenter');
+
+        $query = Advertisement::query()
+            ->with(['category', 'group', 'subGroup', 'qualification', 'applications'])
+            ->whereDate('start_date_en', '<=', $currentDate)
+            ->whereDate('penalty_end_date_en', '>=', $currentDate);
+
+        if ($category == 0) {
+            $query->where('designation_id', '>=', 6);
+        } else {
+            $query->where('designation_id', '<', 6);
+        }
+
+        if ($examCenter) $query->where('exam_center_id', $examCenter);
+
+        $advertisements = $query->get();
+
+        return view('user.applications.nav.application', compact('advertisements', 'userId'))->render();
     }
 }

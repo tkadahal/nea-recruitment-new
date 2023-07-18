@@ -40,6 +40,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('application/payment/{id}', 'ApplicationController@payment')->name('application.payment');
             Route::post('/update_advAmount', 'ApplicationController@updateAdvAmount');
             Route::get('application/applied', 'ApplicationController@applied')->name('application.applied');
+            Route::get('/load-applications', 'ApplicationController@loadApplications')->name('load.applications');
             Route::resource('application', ApplicationController::class);
 
             // Payment

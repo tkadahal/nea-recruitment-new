@@ -16,7 +16,7 @@ class ApplicationService
     {
         $birthdate = $user->dob_en;
 
-        if (! $birthdate) {
+        if (!$birthdate) {
             throw new \Exception('Birthdate is missing or invalid.');
         }
 
@@ -24,7 +24,7 @@ class ApplicationService
         $designation = $this->getDesignationForUserGender($advertisement, $user->gender_id);
 
         if ($this->isAgeValid($applicantAge, $designation)) {
-            throw new \Exception('Applicant does not meet the age requirements for this designation.');
+            throw new \Exception('Oops !!! Looks like your age doesnot meet the age requirement for this application.');
         }
     }
 
@@ -60,7 +60,7 @@ class ApplicationService
 
     public function calculateAge($birthdate): int
     {
-        if (! $birthdate) {
+        if (!$birthdate) {
             throw new \Exception('Birthdate is missing or invalid.');
         }
 
@@ -85,7 +85,7 @@ class ApplicationService
             return $designation->gender_id == $genderId;
         });
 
-        if (! $designation) {
+        if (!$designation) {
             throw new \Exception('Designation not found for the user\'s gender.');
         }
 
