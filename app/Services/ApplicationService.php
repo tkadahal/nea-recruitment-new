@@ -20,7 +20,7 @@ class ApplicationService
             throw new \Exception('Birthdate is missing or invalid.');
         }
 
-        $applicantAge = $this->calculateAge($birthdate);
+        $applicantAge = $this->calculateAge($birthdate, $advertisement);
         $designation = $this->getDesignationForUserGender($advertisement, $user->gender_id);
 
         if ($this->isAgeValid($applicantAge, $designation)) {
@@ -43,7 +43,9 @@ class ApplicationService
         $numSelectedGroups = count($selectedGroups);
 
         if ($numSelectedGroups === 0) {
-            throw new \Exception('Payable amount cannot be zero. Select Samabeshi Groups.');
+            $selectedGroups = [];
+            abort(422, trans('global.application.info.zeroAmountError'));
+            // throw new \Exception('Payable amount cannot be zero. Select Samabeshi Groups.', 422);
         }
 
         $advertisement = Advertisement::find($advertisementId);
@@ -58,16 +60,16 @@ class ApplicationService
         return $advertisement->open_fee + (($numSelectedGroups - 1) * $advertisement->samabeshi_fee);
     }
 
-    public function calculateAge($birthdate): int
+    public function calculateAge($birthdate, Advertisement $advertisement): int
     {
         if (!$birthdate) {
             throw new \Exception('Birthdate is missing or invalid.');
         }
 
         $birthdate = Carbon::parse($birthdate);
-        $currentDate = Carbon::now();
+        $advertisementDate = Carbon::parse($advertisement->end_date_en);
 
-        return $birthdate->diffInYears($currentDate);
+        return $birthdate->diffInYears($advertisementDate);
     }
 
     public function isAgeValid($age, $designation): bool

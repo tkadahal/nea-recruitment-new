@@ -123,11 +123,15 @@ class ApplicationController extends Controller
 
     public function show(string $id): View
     {
-        $application = Advertisement::findorFail($id);
+        $application = Advertisement::with('category', 'group', 'subGroup', 'qualification')->findorFail($id);
 
         $samabeshiGroups = $application->samabeshiGroups;
 
-        return view('user.applications.show', compact('application', 'samabeshiGroups'));
+        $user = auth()->user();
+
+        $userSamabeshiMedia = $user->media()->where('media_type_id', 5)->get();
+
+        return view('user.applications.show', compact('application', 'samabeshiGroups', 'user', 'userSamabeshiMedia'));
     }
 
     public function update(Request $request, string $id): RedirectResponse
@@ -135,8 +139,15 @@ class ApplicationController extends Controller
         $advertisement = Advertisement::find($id);
         $user = auth()->user();
 
+        // dd($request->all());
+
         if ($user->applications()->where('advertisement_id', $advertisement->id)->exists()) {
             return redirect()->back()->withErrors(['error' => 'You have already applied for this advertisement.']);
+        }
+
+
+        if ($user->gender_id === 1 && $request->samabeshiGroups->contains('id', 2)) {
+            return redirect()->back()->withErrors(['error' => 'Male users are not allowed to apply for the "Ladies" group.']);
         }
 
         try {
