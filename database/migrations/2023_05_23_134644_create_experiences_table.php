@@ -24,6 +24,9 @@ return new class extends Migration
             $table->string('start_date');
             $table->string('end_date');
 
+            $table->date('ad_experience_from')->nullable();
+            $table->date('ad_experience_to')->nullable();
+
             $table->bigInteger('experience_period');
 
             $table->text('job_description')->nullable();

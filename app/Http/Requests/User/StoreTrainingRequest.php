@@ -15,6 +15,7 @@ class StoreTrainingRequest extends FormRequest
 
     public function rules(): array
     {
+        // dd($this->request->all());
         return [
             'training_institute' => [
                 'required',
@@ -41,6 +42,7 @@ class StoreTrainingRequest extends FormRequest
             ],
             'ad_training_from' => [
                 'nullable',
+                'date',
             ],
             'training_to' => [
                 'required',
@@ -49,9 +51,10 @@ class StoreTrainingRequest extends FormRequest
             ],
             'ad_training_to' => [
                 'nullable',
+                'date',
             ],
             'certificate' => [
-                'required_without: old_certificate',
+                'required_without:old_certificate',
                 'file',
                 'mimetypes:application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)

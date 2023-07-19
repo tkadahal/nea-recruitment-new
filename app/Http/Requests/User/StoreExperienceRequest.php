@@ -15,6 +15,7 @@ class StoreExperienceRequest extends FormRequest
 
     public function rules(): array
     {
+        dd($this->request->all());
         return [
             'office' => [
                 'required',
@@ -46,6 +47,7 @@ class StoreExperienceRequest extends FormRequest
             ],
             'ad_experience_from' => [
                 'nullable',
+                'date',
             ],
             'end_date' => [
                 'required',
@@ -54,6 +56,7 @@ class StoreExperienceRequest extends FormRequest
             ],
             'ad_experience_to' => [
                 'nullable',
+                'date',
             ],
             'experience_certificate' => [
                 'required_without:old_experience_certificate',
