@@ -139,15 +139,14 @@ class ApplicationController extends Controller
         $advertisement = Advertisement::find($id);
         $user = auth()->user();
 
-        // dd($request->all());
-
+        // Already Applied Check
         if ($user->applications()->where('advertisement_id', $advertisement->id)->exists()) {
-            return redirect()->back()->withErrors(['error' => 'You have already applied for this advertisement.']);
+            return redirect()->back()->withErrors(['error' => trans('global.application.info.alreadAppliedInfo')]);
         }
 
-
-        if ($user->gender_id === 1 && $request->samabeshiGroups->contains('id', 2)) {
-            return redirect()->back()->withErrors(['error' => 'Male users are not allowed to apply for the "Ladies" group.']);
+        // Male User Check for Ladies Samabeshi Group
+        if ($user->gender_id === 1 && collect($request->samabeshi_groups)->contains(2)) {
+            return redirect()->back()->withErrors(['error' => trans('global.application.info.ladiesErrorInfo')]);
         }
 
         try {

@@ -874,10 +874,15 @@ return [
         'title' => 'Application Lists',
         'title_singular' => 'Application List',
         'info' => [
+            'alreadyAppliedInfo' => 'Sorry! You have already applied for this advertisement.',
             'samabeshiGroupSelectionInfo' => 'When submitting an application in the advertisement, please make sure to select only the appropriate samabeshi group that you have filled in correctly',
             'ladiesErrorInfo' => 'Male users are not allowed to apply for the "Ladies" group.',
             'samabeshiErrorInfo' => 'Please Upload Samabeshi Document First',
             'zeroAmountError' => 'Payable amount cannot be zero. Select Samabeshi Groups.',
+            'missingbirthDateInfo' => 'Birthdate is missing or invalid.',
+            'invalidAgeInfo' => 'Oops !!! Looks like your age doesnot meet the age requirement for this application.',
+            'qualificationInfo' => 'Qualification required for this advertisement doesnot match your qualification.',
+            'desinationNotFoundInfo' => 'Designation not found for the user\'s gender.',
         ],
         'fields' => [
             'id' => 'ID',

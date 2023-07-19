@@ -6,7 +6,6 @@ namespace App\Services;
 
 use App\Models\Advertisement;
 use App\Models\Designation;
-use App\Models\Qualification;
 use App\Models\User;
 use Carbon\Carbon;
 
@@ -14,17 +13,26 @@ class ApplicationService
 {
     public function validateUserAgeAndGender(User $user, Advertisement $advertisement)
     {
+        if (!empty($user->sanket_num)) {
+            return;
+        }
+
+        $designation = $this->getDesignationForUserGender($advertisement, $user->gender_id);
+
+        if ($user->is_handicapped) {
+            $designation->maximum_age = 40;
+        }
+
         $birthdate = $user->dob_en;
 
         if (!$birthdate) {
-            throw new \Exception('Birthdate is missing or invalid.');
+            throw new \Exception(trans('global.application.info.missingbirthDateInfo'));
         }
 
         $applicantAge = $this->calculateAge($birthdate, $advertisement);
-        $designation = $this->getDesignationForUserGender($advertisement, $user->gender_id);
 
         if ($this->isAgeValid($applicantAge, $designation)) {
-            throw new \Exception('Oops !!! Looks like your age doesnot meet the age requirement for this application.');
+            throw new \Exception(trans('global.application.info.invalidAgeInfo'));
         }
     }
 
@@ -36,7 +44,7 @@ class ApplicationService
                 ->count();
 
             if ($mediaCount === 0) {
-                throw new \Exception('Please upload samabeshi document first.');
+                throw new \Exception(trans('global.application.info.samabeshiErrorInfo'));
             }
         }
 
@@ -45,7 +53,6 @@ class ApplicationService
         if ($numSelectedGroups === 0) {
             $selectedGroups = [];
             abort(422, trans('global.application.info.zeroAmountError'));
-            // throw new \Exception('Payable amount cannot be zero. Select Samabeshi Groups.', 422);
         }
 
         $advertisement = Advertisement::find($advertisementId);
@@ -63,7 +70,7 @@ class ApplicationService
     public function calculateAge($birthdate, Advertisement $advertisement): int
     {
         if (!$birthdate) {
-            throw new \Exception('Birthdate is missing or invalid.');
+            throw new \Exception(trans('global.application.info.missingbirthDateInfo'));
         }
 
         $birthdate = Carbon::parse($birthdate);
@@ -74,7 +81,8 @@ class ApplicationService
 
     public function isAgeValid($age, $designation): bool
     {
-        return $age <= $designation->minimum_age || $age > $designation->maximum_age;
+        dd($age, $designation->minimum_age, $designation->maximum_age);
+        return $age < $designation->minimum_age || $age > $designation->maximum_age;
     }
 
     public function getDesignationForUserGender(Advertisement $advertisement, $genderId): ?Designation
@@ -88,7 +96,7 @@ class ApplicationService
         });
 
         if (!$designation) {
-            throw new \Exception('Designation not found for the user\'s gender.');
+            throw new \Exception(trans('global.application.info.desinationNotFoundInfo'));
         }
 
         return $designation;
@@ -96,22 +104,22 @@ class ApplicationService
 
     public function validateQualificationForUser(User $user, Advertisement $advertisement)
     {
-        $userQualifications = $user->educations()->pluck('qualification_id')->toArray();
-        $requiredQualificationId = $advertisement->qualification_id;
-        $requiredQualificationOrder = Qualification::find($requiredQualificationId)->order;
-
-        $userHighestQualificationOrder = Qualification::whereIn('id', $userQualifications)
-            ->max('order');
-
-        if ($userHighestQualificationOrder < $requiredQualificationOrder) {
-            throw new \Exception('Qualification required for this advertisement does not match your qualification.');
-        }
         // $userQualifications = $user->educations()->pluck('qualification_id')->toArray();
-
         // $requiredQualificationId = $advertisement->qualification_id;
+        // $requiredQualificationOrder = Qualification::find($requiredQualificationId)->order;
 
-        // if (!in_array($requiredQualificationId, $userQualifications)) {
-        //     throw new \Exception('Qualification required for this advertisement doesnot match your qualification.');
+        // $userHighestQualificationOrder = Qualification::whereIn('id', $userQualifications)
+        //     ->max('order');
+
+        // if ($userHighestQualificationOrder < $requiredQualificationOrder) {
+        //     throw new \Exception('Qualification required for this advertisement does not match your qualification.');
         // }
+        $userQualifications = $user->educations()->pluck('qualification_id')->toArray();
+
+        $requiredQualificationId = $advertisement->qualification_id;
+
+        if (!in_array($requiredQualificationId, $userQualifications)) {
+            throw new \Exception(trans('global.application.info.qualificationInfo'));
+        }
     }
 }
