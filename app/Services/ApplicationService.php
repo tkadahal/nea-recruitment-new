@@ -67,7 +67,7 @@ class ApplicationService
         return $advertisement->open_fee + (($numSelectedGroups - 1) * $advertisement->samabeshi_fee);
     }
 
-    public function calculateAge($birthdate, Advertisement $advertisement): int
+    public function calculateAge($birthdate, Advertisement $advertisement): float
     {
         if (!$birthdate) {
             throw new \Exception(trans('global.application.info.missingbirthDateInfo'));
@@ -76,13 +76,17 @@ class ApplicationService
         $birthdate = Carbon::parse($birthdate);
         $advertisementDate = Carbon::parse($advertisement->end_date_en);
 
-        return $birthdate->diffInYears($advertisementDate);
+        // return $birthdate->diffInYears($advertisementDate);
+        $age = $birthdate->diffInYears($advertisementDate) +
+            ($birthdate->diff($advertisementDate)->days / 365);
+
+        return $age;
     }
 
     public function isAgeValid($age, $designation): bool
     {
-        dd($age, $designation->minimum_age, $designation->maximum_age);
-        return $age < $designation->minimum_age || $age > $designation->maximum_age;
+        // dd($age, $designation->minimum_age, $designation->maximum_age);
+        return $age < $designation->minimum_age || $age < $designation->maximum_age;
     }
 
     public function getDesignationForUserGender(Advertisement $advertisement, $genderId): ?Designation
