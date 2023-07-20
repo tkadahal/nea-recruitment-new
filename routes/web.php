@@ -44,6 +44,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::resource('application', ApplicationController::class);
 
             // Payment
+            Route::get('payment', 'PaymentController@index')->name('payment');
 
             // FOR ESEWA
             Route::get('esewa/payments/{applicationRefID}', [App\Http\Controllers\User\Payments\EsewaController::class, 'initializeEsewa'])->name('esewa.payments');

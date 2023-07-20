@@ -63,6 +63,13 @@
                     <i>बिज्ञापन</i>
                 </a>
             </li>
+            <li role="presentation" class="{{ request()->routeIs('payment') ? 'active' : 'disabled' }}">
+                <a href="{{ route('payment') }}" data-toggle="tab" aria-controls="step8" role="tab"
+                    aria-expanded="{{ request()->routeIs('payment') ? 'true' : 'false' }}">
+                    <span class="round-tab">8</span>
+                    <i>शुल्क भुक्तानी</i>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
