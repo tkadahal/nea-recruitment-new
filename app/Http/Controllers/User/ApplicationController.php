@@ -134,15 +134,46 @@ class ApplicationController extends Controller
         return view('user.applications.show', compact('application', 'samabeshiGroups', 'user', 'userSamabeshiMedia'));
     }
 
+    public function edit(string $id): View
+    {
+        $user = auth()->user();
+
+        $application = Application::with('advertisement')->findorFail($id);
+        $advertisement = $application->advertisement;
+
+        $advertisementSamabeshiGroups = $advertisement->samabeshiGroups;
+
+        $userAppliedSamabeshiGroups = $application->samabeshiGroups;
+
+        $samabeshiGroups = $advertisementSamabeshiGroups->map(function ($samabeshiGroup) use ($userAppliedSamabeshiGroups) {
+            $samabeshiGroup['applied'] = $userAppliedSamabeshiGroups->contains('id', $samabeshiGroup['id']);
+
+            return $samabeshiGroup;
+        });
+
+        $userSamabeshiMedia = $user->media()->where('media_type_id', 5)->get();
+
+        $currentDate = Carbon::now()->toDateString();
+
+        $amount = $currentDate >= $advertisement->start_date_en && $currentDate <= $advertisement->end_date_en
+            ? $application->payable_amount
+            : ($currentDate > $advertisement->end_date_en ? $application->payable_amount * 2 : 0);
+
+        return view('user.applications.edit', compact('application', 'samabeshiGroups', 'userSamabeshiMedia', 'amount'));
+    }
+
     public function update(Request $request, string $id): RedirectResponse
     {
         $advertisement = Advertisement::find($id);
         $user = auth()->user();
 
+
+        // dd($advertisement);
+
         // Already Applied Check
-        if ($user->applications()->where('advertisement_id', $advertisement->id)->exists()) {
-            return redirect()->back()->withErrors(['error' => trans('global.application.info.alreadAppliedInfo')]);
-        }
+        // if ($user->applications()->where('advertisement_id', $advertisement->id)->exists()) {
+        //     return redirect()->back()->withErrors(['error' => trans('global.application.info.alreadAppliedInfo')]);
+        // }
 
         // Male User Check for Ladies Samabeshi Group
         if ($user->gender_id === 1 && collect($request->samabeshi_groups)->contains(2)) {
@@ -177,16 +208,17 @@ class ApplicationController extends Controller
         //     return redirect()->back()->withErrors(['error' => 'Payable amount cannot be zero.']);
         // }
 
-        $applicationData = $request->all();
+        $applicationData = $request->except('_token', '_method');
         $applicationData['uuid'] = Str::uuid();
         $applicationData['payable_amount'] = $payableAmount;
         $applicationData['advertisement_id'] = $id;
+        $applicationId = $request->input('application_id');
 
-        $application = Application::create($applicationData);
+        $application = Application::updateOrCreate(['id' => $applicationId], $applicationData);
 
-        $application->samabeshiGroups()->attach($selectedGroups);
+        $application->samabeshiGroups()->sync($selectedGroups);
 
-        return redirect('/application?show_applied=1');
+        return redirect()->route('application.index');
     }
 
     public function payment($id): View
@@ -234,14 +266,18 @@ class ApplicationController extends Controller
         $examCenter = $request->input('examCenter');
 
         $query = Advertisement::query()
-            ->with(['category', 'group', 'subGroup', 'qualification', 'applications'])
+            ->with(['category', 'group', 'subGroup', 'qualification', 'applications', 'level'])
             ->whereDate('start_date_en', '<=', $currentDate)
             ->whereDate('penalty_end_date_en', '>=', $currentDate);
 
         if ($category == 0) {
-            $query->where('designation_id', '>=', 6);
+            $query->whereHas('level', function ($query) {
+                $query->where('title', '>=', 6);
+            });
         } else {
-            $query->where('designation_id', '<', 6);
+            $query->whereHas('level', function ($query) {
+                $query->where('title', '<', 6);
+            });
         }
 
         if ($examCenter) $query->where('exam_center_id', $examCenter);

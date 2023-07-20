@@ -37,14 +37,13 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get(uri: 'upload', action: 'UploadController@index')->name(name: 'upload');
             Route::post(uri: '/upload/store', action: 'UploadController@store')->name(name: 'upload.store');
 
-            Route::get('application/payment/{id}', 'ApplicationController@payment')->name('application.payment');
             Route::post('/update_advAmount', 'ApplicationController@updateAdvAmount');
             Route::get('application/applied', 'ApplicationController@applied')->name('application.applied');
             Route::get('/load-applications', 'ApplicationController@loadApplications')->name('load.applications');
             Route::resource('application', ApplicationController::class);
 
             // Payment
-            Route::get('payment', 'PaymentController@index')->name('payment');
+            Route::resource('payment', PaymentController::class)->only(['index', 'show']);
 
             // FOR ESEWA
             Route::get('esewa/payments/{applicationRefID}', [App\Http\Controllers\User\Payments\EsewaController::class, 'initializeEsewa'])->name('esewa.payments');

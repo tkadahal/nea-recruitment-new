@@ -66,7 +66,7 @@ class PaymentService
         if ($paymentGateway === 'esewa') {
             $prefix = 'ES.';
         } elseif ($paymentGateway === 'connectips') {
-            $prefix = 'CT.';
+            $prefix = 'CI.';
         } elseif ($paymentGateway === 'imepay') {
             $prefix = 'IM.';
         } elseif ($paymentGateway === 'khalti') {
@@ -75,6 +75,6 @@ class PaymentService
 
         $nanoClient = new NanoClient();
 
-        return $prefix.$nanoClient->formattedId('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', 12);
+        return $prefix . $nanoClient->formattedId('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', 12);
     }
 }
