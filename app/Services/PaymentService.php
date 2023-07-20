@@ -75,6 +75,6 @@ class PaymentService
 
         $nanoClient = new NanoClient();
 
-        return $prefix . $nanoClient->formattedId('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', 12);
+        return $prefix.$nanoClient->formattedId('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', 12);
     }
 }

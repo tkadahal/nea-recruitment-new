@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Models\Advertisement;
+use App\Models\FiscalYear;
 use App\Models\Payment;
 use Illuminate\View\View;
-use App\Models\FiscalYear;
-use App\Models\Advertisement;
-use App\Http\Controllers\Controller;
 
 class ApplicationController extends Controller
 {
@@ -126,9 +126,12 @@ class ApplicationController extends Controller
                 'application.user',
                 'application.user.educations',
                 'application.user.contact',
-                'application.user.contact.province',
-                'application.user.contact.district',
-                'application.user.contact.municipality',
+                'application.user.contact.permaProvince',
+                'application.user.contact.tempProvince',
+                'application.user.contact.permaDistrict',
+                'application.user.contact.tempDistrict',
+                'application.user.contact.permaMunicipality',
+                'application.user.contact.tempMunicipality',
                 'application.user.contact.fatherCountry',
                 'application.user.trainings',
                 'application.user.experiences',

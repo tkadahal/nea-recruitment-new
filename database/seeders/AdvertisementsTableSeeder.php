@@ -12,12 +12,10 @@ class AdvertisementsTableSeeder extends Seeder
     public function run(): void
     {
 
-
         DB::table('advertisements')->delete();
 
-        DB::table('advertisements')->insert(array(
-            0 =>
-            array(
+        DB::table('advertisements')->insert([
+            0 => [
                 'id' => 1,
                 'category_id' => 2,
                 'group_id' => 6,
@@ -25,7 +23,7 @@ class AdvertisementsTableSeeder extends Seeder
                 'level_id' => 3,
                 'designation_id' => 1,
                 'qualification_id' => 4,
-                'exam_center_id' => NULL,
+                'exam_center_id' => null,
                 'fiscal_year_id' => 21,
                 'advertisement_num' => '1111',
                 'open_fee' => 10,
@@ -41,10 +39,9 @@ class AdvertisementsTableSeeder extends Seeder
                 'active' => 1,
                 'created_at' => '2023-07-19 20:02:07',
                 'updated_at' => '2023-07-19 20:04:47',
-                'deleted_at' => NULL,
-            ),
-            1 =>
-            array(
+                'deleted_at' => null,
+            ],
+            1 => [
                 'id' => 2,
                 'category_id' => 1,
                 'group_id' => 2,
@@ -52,7 +49,7 @@ class AdvertisementsTableSeeder extends Seeder
                 'level_id' => 2,
                 'designation_id' => 1,
                 'qualification_id' => 4,
-                'exam_center_id' => NULL,
+                'exam_center_id' => null,
                 'fiscal_year_id' => 21,
                 'advertisement_num' => '2222',
                 'open_fee' => 12,
@@ -68,10 +65,9 @@ class AdvertisementsTableSeeder extends Seeder
                 'active' => 1,
                 'created_at' => '2023-07-19 20:03:06',
                 'updated_at' => '2023-07-19 20:04:46',
-                'deleted_at' => NULL,
-            ),
-            2 =>
-            array(
+                'deleted_at' => null,
+            ],
+            2 => [
                 'id' => 3,
                 'category_id' => 1,
                 'group_id' => 3,
@@ -95,8 +91,8 @@ class AdvertisementsTableSeeder extends Seeder
                 'active' => 1,
                 'created_at' => '2023-07-19 20:04:28',
                 'updated_at' => '2023-07-19 20:04:45',
-                'deleted_at' => NULL,
-            ),
-        ));
+                'deleted_at' => null,
+            ],
+        ]);
     }
 }

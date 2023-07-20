@@ -4,22 +4,22 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\User;
 
-use Carbon\Carbon;
-use App\Models\Training;
-use App\Models\MediaType;
-use Illuminate\View\View;
-use Carbon\CarbonInterval;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Gate;
-use Illuminate\Http\RedirectResponse;
-use Symfony\Component\HttpFoundation\Response;
 use App\Http\Requests\User\StoreTrainingRequest;
+use App\Models\MediaType;
+use App\Models\Training;
+use Carbon\Carbon;
+use Carbon\CarbonInterval;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\View\View;
+use Symfony\Component\HttpFoundation\Response;
 
 class TrainingController extends Controller
 {
     public function index(): View
     {
-        $trainings = Training::latest()->get();
+        $trainings = Training::latest()->where('user_id', auth()->id())->get();
         $totalDuration = CarbonInterval::create();
         $totalYears = 0;
         $totalMonths = 0;

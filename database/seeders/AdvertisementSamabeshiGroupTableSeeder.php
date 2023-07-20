@@ -12,60 +12,49 @@ class AdvertisementSamabeshiGroupTableSeeder extends Seeder
     public function run(): void
     {
 
-
         DB::table('advertisement_samabeshi_group')->delete();
 
-        DB::table('advertisement_samabeshi_group')->insert(array(
-            0 =>
-            array(
+        DB::table('advertisement_samabeshi_group')->insert([
+            0 => [
                 'advertisement_id' => 1,
                 'samabeshi_group_id' => 1,
-            ),
-            1 =>
-            array(
+            ],
+            1 => [
                 'advertisement_id' => 1,
                 'samabeshi_group_id' => 2,
-            ),
-            2 =>
-            array(
+            ],
+            2 => [
                 'advertisement_id' => 1,
                 'samabeshi_group_id' => 4,
-            ),
-            3 =>
-            array(
+            ],
+            3 => [
                 'advertisement_id' => 1,
                 'samabeshi_group_id' => 5,
-            ),
-            4 =>
-            array(
+            ],
+            4 => [
                 'advertisement_id' => 2,
                 'samabeshi_group_id' => 2,
-            ),
-            5 =>
-            array(
+            ],
+            5 => [
                 'advertisement_id' => 3,
                 'samabeshi_group_id' => 1,
-            ),
-            6 =>
-            array(
+            ],
+            6 => [
                 'advertisement_id' => 3,
                 'samabeshi_group_id' => 2,
-            ),
-            7 =>
-            array(
+            ],
+            7 => [
                 'advertisement_id' => 3,
                 'samabeshi_group_id' => 5,
-            ),
-            8 =>
-            array(
+            ],
+            8 => [
                 'advertisement_id' => 3,
                 'samabeshi_group_id' => 6,
-            ),
-            9 =>
-            array(
+            ],
+            9 => [
                 'advertisement_id' => 3,
                 'samabeshi_group_id' => 7,
-            ),
-        ));
+            ],
+        ]);
     }
 }

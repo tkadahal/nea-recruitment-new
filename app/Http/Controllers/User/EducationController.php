@@ -20,7 +20,17 @@ class EducationController extends Controller
 {
     public function index(): View
     {
-        $educations = Education::with(['university', 'qualification', 'division', 'media'])->latest()->get();
+        $educations = Education::with(
+            [
+                'university',
+                'qualification',
+                'division',
+                'media.mediaType'
+            ]
+        )
+            ->latest()
+            ->where('user_id', auth()->id())
+            ->get();
 
         return view('user.education.index', compact('educations'));
     }

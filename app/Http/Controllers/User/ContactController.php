@@ -19,8 +19,6 @@ class ContactController extends Controller
 {
     public function index(): View
     {
-        $user = auth()->user();
-
         $provinces = Province::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $districts = District::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
@@ -29,7 +27,22 @@ class ContactController extends Controller
 
         $countries = Country::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $contact = Contact::with(['permaProvince', 'tempProvince', 'permaDistrict', 'tempDistrict',  'permaMunicipality', 'tempMunicipality', 'fatherCountry', 'motherCountry', 'grandfatherCountry', 'spouseCountry'])->first();
+        $contact = Contact::with(
+            [
+                'permaProvince',
+                'tempProvince',
+                'permaDistrict',
+                'tempDistrict',
+                'permaMunicipality',
+                'tempMunicipality',
+                'fatherCountry',
+                'motherCountry',
+                'grandfatherCountry',
+                'spouseCountry'
+            ]
+        )
+            ->where('user_id', auth()->id())
+            ->first();
 
         return view('user.contact', compact('contact', 'provinces', 'districts', 'municipalities', 'countries'));
     }

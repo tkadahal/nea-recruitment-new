@@ -39,7 +39,6 @@ class ApplicationController extends Controller
 
         return view('user.applications.index', compact('advertisements', 'examCenters', 'userId'));
 
-
         // $currentDate = Carbon::now()->toDateString();
         // $showApplied = request()->query('show_applied');
         // $userId = auth()->id();
@@ -123,7 +122,7 @@ class ApplicationController extends Controller
 
     public function show(string $id): View
     {
-        $application = Advertisement::with('category', 'group', 'subGroup', 'qualification')->findorFail($id);
+        $application = Advertisement::with('level', 'category', 'group', 'subGroup', 'qualification')->findorFail($id);
 
         $samabeshiGroups = $application->samabeshiGroups;
 
@@ -138,7 +137,7 @@ class ApplicationController extends Controller
     {
         $user = auth()->user();
 
-        $application = Application::with('advertisement')->findorFail($id);
+        $application = Application::with('advertisement', 'advertisement.level', 'advertisement.category', 'advertisement.group', 'advertisement.subGroup', 'advertisement.qualification')->findorFail($id);
         $advertisement = $application->advertisement;
 
         $advertisementSamabeshiGroups = $advertisement->samabeshiGroups;
@@ -166,7 +165,6 @@ class ApplicationController extends Controller
     {
         $advertisement = Advertisement::find($id);
         $user = auth()->user();
-
 
         // dd($advertisement);
 
@@ -280,7 +278,9 @@ class ApplicationController extends Controller
             });
         }
 
-        if ($examCenter) $query->where('exam_center_id', $examCenter);
+        if ($examCenter) {
+            $query->where('exam_center_id', $examCenter);
+        }
 
         $advertisements = $query->get();
 

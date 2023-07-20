@@ -4,18 +4,20 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
+use App\Models\Advertisement;
+use App\Models\Application;
+use App\Models\PaymentVendor;
 use Carbon\Carbon;
 use Illuminate\View\View;
-use App\Models\Application;
-use App\Models\Advertisement;
-use App\Http\Controllers\Controller;
-use App\Models\PaymentVendor;
 
 class PaymentController extends Controller
 {
     public function index(): View
     {
-        $applications = Application::with('advertisement', 'payments')->get();
+        $applications = Application::with('advertisement', 'payments', 'payments.paymentVerification')
+            ->where('user_id', auth()->id())
+            ->get();
 
         foreach ($applications as $application) {
             $selectedGroups = collect($application->samabeshiGroups)->toArray();

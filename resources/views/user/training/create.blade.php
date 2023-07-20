@@ -121,8 +121,7 @@
                                         <label class="" for="percentage">
                                             {{ trans('global.training.fields.percentage') }}
                                         </label>
-                                        <input type="number" step="0.01" min="0.00" max="99.99" id="percentage"
-                                            name="percentage" class="form-control"
+                                        <input type="text" id="percentage" name="percentage" class="form-control"
                                             value="{{ old('percentage', isset($training) ? $training->percentage : '') }}">
                                         @if ($errors->has('percentage'))
                                             <p class="help-block">
@@ -147,8 +146,7 @@
                                                     (Update or Replace)
                                                 </em>
                                             </span>
-                                            <input type="file" class="form-control" id="certificate"
-                                                name="certificate"
+                                            <input type="file" class="form-control" id="certificate" name="certificate"
                                                 value="{{ old('certificate', isset($training) ? $training->certificate : '') }}"
                                                 style="display: block; border-color:#ccc">
                                             @if ($errors->has('certificate'))

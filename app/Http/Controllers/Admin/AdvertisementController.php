@@ -38,7 +38,7 @@ class AdvertisementController extends Controller
                 'examCenter',
                 'designation',
                 'qualification',
-                'fiscalYear'
+                'fiscalYear',
             ]
         )->get();
 
@@ -123,7 +123,7 @@ class AdvertisementController extends Controller
                 'qualification',
                 'samabeshiGroups',
                 'level',
-                'fiscalYear'
+                'fiscalYear',
             ]
         );
 

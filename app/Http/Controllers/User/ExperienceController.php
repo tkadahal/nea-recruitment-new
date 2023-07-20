@@ -4,21 +4,21 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\User;
 
-use Carbon\Carbon;
-use App\Models\MediaType;
-use Illuminate\View\View;
-use App\Models\Experience;
-use Carbon\CarbonInterval;
-use App\Models\RecruitmentType;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\User\StoreExperienceRequest;
+use App\Models\Experience;
+use App\Models\MediaType;
+use App\Models\RecruitmentType;
+use Carbon\Carbon;
+use Carbon\CarbonInterval;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 class ExperienceController extends Controller
 {
     public function index(): View
     {
-        $experiences = Experience::latest()->get();
+        $experiences = Experience::latest()->where('user_id', auth()->id())->get();
         $totalDuration = CarbonInterval::create();
         $totalYears = 0;
         $totalMonths = 0;

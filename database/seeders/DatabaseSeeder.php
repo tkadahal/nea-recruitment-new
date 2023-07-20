@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             AdvertisementsTableSeeder::class,
             AdvertisementSamabeshiGroupTableSeeder::class,
-            PaymentVendorsTableSeeder::class
+            PaymentVendorsTableSeeder::class,
         ]);
     }
 }

@@ -16,11 +16,13 @@ class PersonalController extends Controller
 {
     public function index(): View
     {
+        $user = auth()->user();
+
         $genders = Gender::all()->pluck('title', 'id');
 
         $citizenshipDistricts = District::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $personal = auth()->user()->load(['gender', 'citizenshipDistrict']);
+        $personal = $user->load(['gender', 'citizenshipDistrict']);
 
         return view('user.personal', compact('personal', 'genders', 'citizenshipDistricts'));
     }
