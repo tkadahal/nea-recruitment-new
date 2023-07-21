@@ -61,59 +61,113 @@
                                                             </div>
 
                                                             <div class="col-md-3 col-12 text-center">
-                                                                @if (isset($application->payments) && count($application->payments) > 0)
-                                                                    @foreach ($application->payments as $payment)
-                                                                        @if (isset($payment->payment_status) && $payment->payment_status == 1)
-                                                                            @if ($payment->paymentVerification && $payment->paymentVerification->is_approved)
-                                                                                <h5>
-                                                                                    <span class="badge bg-success">
-                                                                                        Application Verified
-                                                                                    </span>
-                                                                                </h5>
-                                                                            @else
-                                                                                <h5>
-                                                                                    <span class="badge bg-warning">
-                                                                                        Verification Pending
-                                                                                    </span>
-                                                                                </h5>
-                                                                            @endif
+                                                                @if ($application->latestPayment)
+                                                                    @if ($application->latestPayment->payment_status == 1)
+                                                                        @if ($application->latestPayment->paymentVerification && $application->latestPayment->paymentVerification->is_approved)
+                                                                            <h5>
+                                                                                <span class="badge bg-success">
+                                                                                    <i class="fas fa-check"></i>
+                                                                                    Application Verified
+                                                                                </span>
+                                                                            </h5>
                                                                         @else
+                                                                            <h5>
+                                                                                <span class="badge bg-warning">
+                                                                                    <i class="fas fa-exclamation"></i>
+                                                                                    Verification Pending
+                                                                                </span>
+                                                                            </h5>
+                                                                        @endif
+                                                                    @else
+                                                                        @if ($application->advertisement->penalty_end_date_en < now())
+                                                                            <h5>
+                                                                                <span class="badge bg-danger">
+                                                                                    <i class="fas fa-exclamation"></i>
+                                                                                    Application Expired
+                                                                                </span>
+                                                                            </h5>
+                                                                        @else
+                                                                            <!-- Display the "Make Payment" button if the latest payment is not successful -->
                                                                             <a href="{{ route('payment.show', $application->id) }}"
                                                                                 class="btn btn-block btn-outline-success">
                                                                                 Make Payment
                                                                             </a>
                                                                         @endif
-                                                                    @endforeach
+                                                                    @endif
                                                                 @else
-                                                                    <a href="{{ route('payment.show', $application->id) }}"
-                                                                        class="btn btn-block btn-outline-success">
-                                                                        Make Payment
-                                                                    </a>
+                                                                    @if ($application->advertisement->penalty_end_date_en < now())
+                                                                        <h5>
+                                                                            <span class="badge bg-danger">
+                                                                                <i class="fas fa-exclamation"></i>
+                                                                                Application Expired
+                                                                            </span>
+                                                                        </h5>
+                                                                    @else
+                                                                        <!-- Display the "Make Payment" button if there are no payments -->
+                                                                        <a href="{{ route('payment.show', $application->id) }}"
+                                                                            class="btn btn-block btn-outline-success">
+                                                                            Make Payment
+                                                                        </a>
+                                                                    @endif
                                                                 @endif
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <hr>
                                                     <div>
-                                                        @if (isset($application->payments) && count($application->payments) > 0)
-                                                            <div class="flex-container">
-                                                                @foreach ($application->payments as $payment)
-                                                                    @if (isset($payment->payment_status) && $payment->payment_status == 1)
+                                                        <div class="flex-container">
+                                                            @if ($application->latestPayment)
+                                                                @if ($application->latestPayment->payment_status == 1)
+                                                                    @if ($application->latestPayment->paymentVerification && $application->latestPayment->paymentVerification->is_approved)
                                                                         <span class="badge bg-success">
                                                                             <i class="fas fa-check"></i>
                                                                             Payment Successful
                                                                         </span>
-                                                                    @endif
-                                                                    @if ($payment->paymentVerification && $payment->paymentVerification->is_approved)
                                                                         <span class="badge bg-success">
                                                                             <i class="fas fa-check"></i>
                                                                             Application Verified
                                                                         </span>
+                                                                    @else
+                                                                        <span class="badge bg-success">
+                                                                            <i class="fas fa-check"></i>
+                                                                            Payment Successful
+                                                                        </span>
+                                                                        <span class="badge bg-warning">
+                                                                            <i class="fas fa-exclamation"></i>
+                                                                            Verification Pending
+                                                                        </span>
                                                                     @endif
-                                                                    <span style="margin-left: 10px;">Payment Status</span>
-                                                                @endforeach
-                                                            </div>
-                                                        @endif
+                                                                @else
+                                                                    @if ($application->advertisement->penalty_end_date_en < now())
+                                                                        <h5>
+                                                                            <span class="badge bg-danger">
+                                                                                <i class="fas fa-exclamation"></i>
+                                                                                Application Expired
+                                                                            </span>
+                                                                        </h5>
+                                                                    @else
+                                                                        <span class="badge bg-warning">
+                                                                            <i class="fas fa-exclamation"></i>
+                                                                            Payment Pending
+                                                                        </span>
+                                                                    @endif
+                                                                @endif
+                                                            @else
+                                                                @if ($application->advertisement->penalty_end_date_en < now())
+                                                                    <h5>
+                                                                        <span class="badge bg-danger">
+                                                                            <i class="fas fa-exclamation"></i>
+                                                                            Application Expired
+                                                                        </span>
+                                                                    </h5>
+                                                                @else
+                                                                    <span class="badge bg-warning">
+                                                                        <i class="fas fa-exclamation"></i>
+                                                                        Payment Pending
+                                                                    </span>
+                                                                @endif
+                                                            @endif
+                                                        </div>
                                                     </div>
                                                 </div>
                                             @endforeach
@@ -165,18 +219,13 @@
         @media (max-width: 576px) {
             .badge {
                 padding: 8px 16px;
-                /* Adjust padding for smaller screens */
                 margin-right: 5px;
-                /* Adjust gap for smaller screens */
                 font-size: 10px;
-                /* Adjust font size for smaller screens */
             }
 
             .flex-container {
                 flex-direction: column;
-                /* Stack elements vertically on smaller screens */
                 align-items: flex-start;
-                /* Align items to the left in vertical layout */
             }
         }
     </style>
