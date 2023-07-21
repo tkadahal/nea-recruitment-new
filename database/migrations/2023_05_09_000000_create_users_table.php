@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->bigInteger('mobile_number')->index();
 
             $table->string('dob_np')->nullable();
-            $table->date('dob_en')->nullable();
+            $table->date('dob_en')->index()->nullable();
 
             $table->string('citizenship_number')->nullable();
             $table->foreignId('citizenship_district_id')->nullable()->constrained('districts');

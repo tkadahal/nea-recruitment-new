@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('training_from');
             $table->string('training_to');
 
-            $table->date('ad_training_from')->nullable();
-            $table->date('ad_training_to')->nullable();
+            $table->date('ad_training_from')->index()->nullable();
+            $table->date('ad_training_to')->index()->nullable();
 
             $table->bigInteger('training_period');
 

@@ -18,9 +18,9 @@ return new class extends Migration
             $table->boolean('is_approved')->default(false);
             $table->boolean('is_rejected')->default(false);
 
-            $table->foreignId('checker')->nullable()->constrained('admins');
-            $table->foreignId('approver')->nullable()->constrained('admins');
-            $table->foreignId('rejector')->nullable()->constrained('admins');
+            $table->foreignId('checker')->nullable()->index()->constrained('admins');
+            $table->foreignId('approver')->nullable()->index()->constrained('admins');
+            $table->foreignId('rejector')->nullable()->index()->constrained('admins');
 
             $table->timestamp('checked_at')->nullable();
             $table->timestamp('approved_at')->nullable();
