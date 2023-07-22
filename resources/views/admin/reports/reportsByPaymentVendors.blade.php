@@ -50,10 +50,8 @@
             </div>
 
             <div class="col text-right">
-                <div class="{{ $report_by_payment_vendors->options['column_class'] }}">
-                    <h3>{!! $report_by_payment_vendors->options['chart_title'] !!}</h3>
-                    {!! $report_by_payment_vendors->renderHtml() !!}
-                </div>
+                <h3>{!! $list_blocks[0]['title'] !!}</h3>
+                <canvas id="paymentVendorsChart" width="400" height="200"></canvas>
             </div>
         </div>
     </div>
@@ -62,6 +60,62 @@
 
 @section('scripts')
 @parent
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-{!! $report_by_payment_vendors->renderJs() !!}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let myChart; // Variable to hold the chart object
+
+        function loadReportByAdvertisement() {
+            // Get the chart data from the PHP array
+            const chartData = @json($list_blocks[0]['entries']);
+
+            // Extract data for Chart.js
+            const labels = chartData.map(entry => entry.payment_gateway);
+            const datasetData = chartData.map(entry => entry.total);
+            const backgroundColors = chartData.map(() => getRandomColor());
+
+            // Chart.js configuration
+            const chartConfig = {
+                type: 'pie',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: datasetData,
+                        backgroundColor: backgroundColors,
+                    }],
+                },
+                options: {
+                    // Add any specific chart options here
+                },
+            };
+
+            // Destroy previous chart if exists
+            if (myChart) {
+                myChart.destroy();
+            }
+
+            // Create new chart
+            const ctx = document.getElementById('paymentVendorsChart').getContext('2d');
+            myChart = new Chart(ctx, chartConfig);
+        }
+
+        // Call the function initially to render the default chart
+        loadReportByAdvertisement();
+
+        // Function to generate random colors for chart segments
+        function getRandomColor() {
+            return 'rgba(' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',1)';
+        }
+    });
+</script>
+
+<script>
+    function loadReportByAdvertisement() {
+    const advertisementNumber = document.getElementById('advertisement_number').value;
+    const baseUrl = "{{ route('admin.getReportByPaymentVendors') }}";
+    const url = new URL(baseUrl);
+    url.searchParams.set('advertisement', advertisementNumber);
+    window.location.href = url.toString();
+    }
+</script>
 @endsection

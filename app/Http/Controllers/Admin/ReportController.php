@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Payment;
 use App\Models\Tippani;
+use Illuminate\Http\Request;
 use App\Models\Advertisement;
 use App\Models\TippaniApproval;
 use Illuminate\Support\Facades\DB;
@@ -14,9 +15,11 @@ use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
 class ReportController extends Controller
 {
-    public function getReportByPaymentVendors($advertisementNumber = null)
+    public function getReportByPaymentVendors(Request $request)
     {
+        $advertisementNumber = $request->query('advertisement'); // Retrieve the advertisement parameter from the query string.
         $advertisements = Advertisement::all();
+
         $query = Payment::select('payment_gateway', DB::raw('COUNT(id) as total'))
             ->where('payment_status', '1');
 
