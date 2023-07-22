@@ -63,14 +63,15 @@ class ApplicationController extends Controller
         $paymentQuery = Payment::query()->with(['application.user'])
             ->whereHas('application', function ($query) use ($advertisementId) {
                 $query->where('advertisement_id', $advertisementId);
-            });
+            })->where('payment_status', '1');
 
         switch ($action) {
             case '_total':
-                $paymentQuery->where('payment_status', '1')
-                    ->whereDoesntHave('paymentVerification')
+                $paymentQuery->whereDoesntHave('paymentVerification')
                     ->orwhereHas('paymentVerification', function ($query) {
                         $query->where('is_checked', false);
+                        $query->where('is_approved', false);
+                        $query->where('is_rejected', false);
                     });
                 break;
             case '_checked':
@@ -92,6 +93,7 @@ class ApplicationController extends Controller
                 break;
             default:
                 // Handle unknown action or error
+                abort(404, 'Invalid action');
                 break;
         }
 
@@ -115,7 +117,7 @@ class ApplicationController extends Controller
             ];
         }
 
-        return view('admin.applications.viewApplications', compact('applications', 'advertisementNum'));
+        return view('admin.applications.viewApplications', compact('applications', 'advertisementNum', 'advertisementId'));
     }
 
     public function viewUserDetail($id): View

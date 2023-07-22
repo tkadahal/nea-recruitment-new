@@ -30,19 +30,19 @@
                                             style="color: white;">
                                             {{ $advertisement->total_payments ?? '0' }}
                                         </a>
-                                        <hr>
+                                        <hr style="border-color: white; border-style: dashed;">
                                         Total Checked:
                                         <a href="{{ route('admin.application.viewApplication', ['id' => $advertisement->id, 'action' => '_checked']) }}"
                                             style="color: white;">
                                             {{ $advertisement->total_checked ?? '0' }}
                                         </a>
-                                        <hr>
+                                        <hr style="border-color: white; border-style: dashed;">
                                         Total Approved:
                                         <a href="{{ route('admin.application.viewApplication', ['id' => $advertisement->id, 'action' => '_approved']) }}"
                                             style="color: white;">
                                             {{ $advertisement->total_approved ?? '0' }}
                                         </a>
-                                        <hr>
+                                        <hr style="border-color: white; border-style: dashed;">
                                         Total Rejected:
                                         <a href="{{ route('admin.application.viewApplication', ['id' => $advertisement->id, 'action' => '_rejected']) }}"
                                             style="color: white;">

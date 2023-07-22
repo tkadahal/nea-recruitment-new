@@ -4,15 +4,16 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\StorePaymentVerificationRequest;
-use App\Models\PaymentVerification;
 use Carbon\Carbon;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
+use App\Models\Payment;
 use Illuminate\View\View;
+use Illuminate\Http\Request;
+use App\Models\PaymentVerification;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Http\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
+use App\Http\Requests\StorePaymentVerificationRequest;
 
 class PaymentVerificationController extends Controller
 {
@@ -116,5 +117,21 @@ class PaymentVerificationController extends Controller
         PaymentVerification::whereIn('id', request('ids'))->delete();
 
         return response(null, Response::HTTP_NO_CONTENT);
+    }
+
+    public function generateCardForExamCenter(Request $request, $advertisementId)
+    {
+        $payments = Payment::query()
+            ->with(['application.user'])
+            ->whereHas('application', function ($query) use ($advertisementId) {
+                $query->where('advertisement_id', $advertisementId);
+            })
+            ->where('payment_status', '1')
+            ->whereHas('paymentVerification', function ($query) {
+                $query->where('is_approved', true);
+            })
+            ->paginate(1);
+
+        return view('admin.applications.examCenterCards', compact('payments', 'advertisementId'));
     }
 }

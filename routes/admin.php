@@ -267,6 +267,8 @@ Route::middleware(['auth:admin'])->group(function () {
             Route::get('application/viewUserDetail/{id}', 'ApplicationController@viewUserDetail')->name('application.viewUserDetail');
 
             // Application Verification
+            Route::get('/printExamCards/{advertisementId}', 'PrintFunctionController@printExamCards')->name('printExamCards');
+            Route::get('generateCardForExamCenter/{advertisementId}', 'PaymentVerificationController@generateCardForExamCenter')->name('generateCardForExamCenter');
             Route::post('/payment-verification', 'PaymentVerificationController@store')->name('paymentVerification.store');
         });
     });
