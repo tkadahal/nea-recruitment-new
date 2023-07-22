@@ -4,39 +4,49 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Payment;
 use App\Models\Tippani;
+use App\Models\Advertisement;
 use App\Models\TippaniApproval;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
 class ReportController extends Controller
 {
-    public function getReportByOffice()
+    public function getReportByPaymentVendors($advertisementNumber = null)
     {
-        $title = trans('global.reportByOffice.title');
+        $advertisements = Advertisement::all();
+        $query = Payment::select('payment_gateway', DB::raw('COUNT(id) as total'))
+            ->where('payment_status', '1');
+
+        if ($advertisementNumber !== null) {
+            $query->whereHas('application', function ($q) use ($advertisementNumber) {
+                $q->where('advertisement_id', $advertisementNumber);
+            });
+        }
+
         $list_blocks = [
             [
-                'title' => $title,
-                'entries' => Tippani::with('user')->groupBy('user_id')
-                    ->select('user_id', DB::raw('count(*) as total'))->get(),
+                'title' => 'Reports By Payment Vendors',
+                'entries' => $query->groupBy('payment_gateway')->get(),
             ],
         ];
 
         $officeReport_chart_settings = [
-            'chart_title' => $title,
+            'chart_title' => 'Reports By Payment Vendors',
             'chart_type' => 'pie',
-            'report_type' => 'group_by_relationship',
-            'model' => 'App\Models\Tippani',
-            'relationship_name' => 'user',
-            'group_by_field' => 'name',
+            'report_type' => 'group_by_string',
+            'model' => 'App\Models\Payment',
+            // 'relationship_name' => 'application',
+            'group_by_field' => 'payment_gateway',
             'aggregate_function' => 'count',
             'column_class' => 'col-md-12',
             'chart_color' => 'rgba({{ rand(0,255) }}, {{ rand(0,255) }}, {{ rand(0,255) }}, 1)',
         ];
-        $tippani_by_office = new LaravelChart($officeReport_chart_settings);
+        $report_by_payment_vendors = new LaravelChart($officeReport_chart_settings);
 
-        return view('admin.reports.reportsByOffices', compact('list_blocks', 'tippani_by_office'));
+        return view('admin.reports.reportsByPaymentVendors', compact('list_blocks', 'report_by_payment_vendors', 'advertisements'));
     }
 
     public function getReportByFiscalYear()

@@ -5,12 +5,21 @@
 <div class="card">
     <div class="card-header"><i class="fa fa-align-justify"></i>
         <strong>
-            {{ trans('global.reportByOffice.title_singular') }}
+            Reports By Payment Vendors
         </strong>
         {{ trans('global.list') }}
     </div>
 
     <div class="card-body">
+        <div class="col-md-3">
+            <label for="advertisement_number">Select Advertisement Number:</label>
+            <select class="form-control" id="advertisement_number" onchange="loadReportByAdvertisement()">
+                <option value="">All Advertisements</option>
+                @foreach ($advertisements as $advertisement)
+                <option value="{{ $advertisement->id }}">{{ $advertisement->advertisement_num }}</option>
+                @endforeach
+            </select>
+        </div>
         <div class="row">
             <div class="col">
                 @foreach ($list_blocks as $block)
@@ -19,14 +28,14 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>{{ trans('global.reportByOffice.fields.office') }}</th>
-                                <th>{{ trans('global.reportByOffice.fields.count') }}</th>
+                                <th>Payment Vendor</th>
+                                <th>Count</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse($block['entries'] as $entry)
                             <tr>
-                                <td>{{ $entry->user->name }}</td>
+                                <td>{{ $entry->payment_gateway }}</td>
                                 <td>{{ $entry->total }}</td>
                             </tr>
                             @empty
@@ -41,9 +50,9 @@
             </div>
 
             <div class="col text-right">
-                <div class="{{ $tippani_by_office->options['column_class'] }}">
-                    <h3>{!! $tippani_by_office->options['chart_title'] !!}</h3>
-                    {!! $tippani_by_office->renderHtml() !!}
+                <div class="{{ $report_by_payment_vendors->options['column_class'] }}">
+                    <h3>{!! $report_by_payment_vendors->options['chart_title'] !!}</h3>
+                    {!! $report_by_payment_vendors->renderHtml() !!}
                 </div>
             </div>
         </div>
@@ -54,5 +63,5 @@
 @section('scripts')
 @parent
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-{!! $tippani_by_office->renderJs() !!}
+{!! $report_by_payment_vendors->renderJs() !!}
 @endsection

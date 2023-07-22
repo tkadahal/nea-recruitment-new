@@ -270,6 +270,9 @@ Route::middleware(['auth:admin'])->group(function () {
             Route::get('/printExamCards/{advertisementId}', 'PrintFunctionController@printExamCards')->name('printExamCards');
             Route::get('generateCardForExamCenter/{advertisementId}', 'PaymentVerificationController@generateCardForExamCenter')->name('generateCardForExamCenter');
             Route::post('/payment-verification', 'PaymentVerificationController@store')->name('paymentVerification.store');
+
+            //Reports
+            Route::get('getReportByPaymentVendors', 'ReportController@getReportByPaymentVendors')->name('getReportByPaymentVendors');
         });
     });
 });
