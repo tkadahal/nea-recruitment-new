@@ -350,68 +350,69 @@
 
         @endcan --}}
 
-        {{-- @can('report_menu_access')
+        @can('report_menu_access')
 
-        <li class="c-sidebar-nav-title">{{ trans('global.reportMenu.title') }}</li>
+            <li class="c-sidebar-nav-title">{{ trans('global.reportMenu.title') }}</li>
 
-        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
-            <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
-                <svg class="c-sidebar-nav-icon">
-                    <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-chart') }}" style="color: yellow">
-                    </use>
-                </svg>
-                {{ trans('global.report.title') }}
-            </a>
-            <ul class="c-sidebar-nav-dropdown-items">
+            <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
+                <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-chart') }}"
+                            style="color: yellow">
+                        </use>
+                    </svg>
+                    {{ trans('global.report.title') }}
+                </a>
+                <ul class="c-sidebar-nav-dropdown-items">
 
-                @can('reportByOffice_access')
-                <li class="c-sidebar-nav-item">
-                    <a class="c-sidebar-nav-link" href="{{ route('admin.reportByOffice') }}">
-                        <span class="c-sidebar-nav-icon"></span>
-                        {{ trans('global.reportByOffice.title') }}
-                    </a>
-                </li>
-                @endcan
+                    @can('reportByPaymentVendor_access')
+                        <li class="c-sidebar-nav-item">
+                            <a class="c-sidebar-nav-link" href="{{ route('admin.getReportByPaymentVendors') }}">
+                                <span class="c-sidebar-nav-icon"></span>
+                                Payment Vendor
+                            </a>
+                        </li>
+                    @endcan
 
-                @can('reportByFiscalYear_access')
-                <li class="c-sidebar-nav-item">
-                    <a class="c-sidebar-nav-link" href="{{ route('admin.reportByFiscalYear') }}">
-                        <span class="c-sidebar-nav-icon"></span>
-                        {{ trans('global.reportByFiscalYear.title') }}
-                    </a>
-                </li>
-                @endcan
+                    @can('reportByApplicationCount_access')
+                        <li class="c-sidebar-nav-item">
+                            <a class="c-sidebar-nav-link" href="{{ route('admin.getReportByApplicationCount') }}">
+                                <span class="c-sidebar-nav-icon"></span>
+                                Application Count
+                            </a>
+                        </li>
+                    @endcan
 
-                @can('reportByCategory_access')
-                <li class="c-sidebar-nav-item">
-                    <a class="c-sidebar-nav-link" href="{{ route('admin.reportByCategory') }}">
-                        <span class="c-sidebar-nav-icon"></span>
-                        {{ trans('global.reportByCategory.title') }}
-                    </a>
-                </li>
-                @endcan
+                    {{-- @can('reportByCategory_access')
+                        <li class="c-sidebar-nav-item">
+                            <a class="c-sidebar-nav-link" href="{{ route('admin.reportByCategory') }}">
+                                <span class="c-sidebar-nav-icon"></span>
+                                {{ trans('global.reportByCategory.title') }}
+                            </a>
+                        </li>
+                    @endcan
 
-                @can('reportByStatus_access')
-                <li class="c-sidebar-nav-item">
-                    <a class="c-sidebar-nav-link" href="{{ route('admin.reportByStatus') }}">
-                        <span class="c-sidebar-nav-icon"></span>
-                        {{ trans('global.reportByStatus.title') }}
-                    </a>
-                </li>
-                @endcan
+                    @can('reportByStatus_access')
+                        <li class="c-sidebar-nav-item">
+                            <a class="c-sidebar-nav-link" href="{{ route('admin.reportByStatus') }}">
+                                <span class="c-sidebar-nav-icon"></span>
+                                {{ trans('global.reportByStatus.title') }}
+                            </a>
+                        </li>
+                    @endcan
 
-                @can('reportByUserType_access')
-                <li class="c-sidebar-nav-item">
-                    <a class="c-sidebar-nav-link" href="{{ route('admin.reportByUserType') }}">
-                        <span class="c-sidebar-nav-icon"></span>
-                        {{ trans('global.reportByUserType.title') }}
-                    </a>
-                </li>
-                @endcan
-            </ul>
-        </li>
+                    @can('reportByUserType_access')
+                        <li class="c-sidebar-nav-item">
+                            <a class="c-sidebar-nav-link" href="{{ route('admin.reportByUserType') }}">
+                                <span class="c-sidebar-nav-icon"></span>
+                                {{ trans('global.reportByUserType.title') }}
+                            </a>
+                        </li>
+                    @endcan --}}
+                </ul>
+            </li>
 
-        @endcan --}}
+        @endcan
 
     </ul>
     <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"

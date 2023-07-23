@@ -5,7 +5,40 @@
     <div role="tabpanel" class="tab-pane {{ request()->routeIs('payment.*') ? 'active' : '' }}" id="paymentDetail">
 
         <div class="card">
+            @if (\Session::get('message'))
+                <div class="alert alert-success alert-dismissible fade show" id="msg">
+                    <p>
+                        {{ \Session::get('message') }}
+                    </p>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
 
+            @if (\Session::get('error_message'))
+                <div class="alert alert-danger alert-dismissible fade show" id="msg">
+                    <p>
+                        {{ \Session::get('error_message') }}
+                    </p>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+
+            @if (request()->has('payment_status'))
+                @if (request()->get('payment_status') == 'success')
+                    <div class="alert alert-success" id="msg">
+                        <p>Payment successfull. Please find below the application details.</p>
+                    </div>
+                @else
+                    <div class="alert alert-danger" id="msg">
+                        <p>Sorry something went wrong processing your payment. Please verify the payment or select other
+                            payment options.</p>
+                    </div>
+                @endif
+            @endif
             <div class="card-body">
                 <div class="wizard-box">
                     @if (count($applications))

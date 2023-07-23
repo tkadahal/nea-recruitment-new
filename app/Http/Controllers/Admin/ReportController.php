@@ -52,31 +52,28 @@ class ReportController extends Controller
         return view('admin.reports.reportsByPaymentVendors', compact('list_blocks', 'report_by_payment_vendors', 'advertisements'));
     }
 
-    public function getReportByFiscalYear()
+    public function getReportByApplicationCount()
     {
-        $title = trans('global.reportByFiscalYear.title');
         $list_blocks = [
             [
-                'title' => $title,
-                'entries' => Tippani::with('fiscalYear')->groupBy('fiscal_year_id')
-                    ->select('fiscal_year_id', DB::raw('count(*) as total'))->get(),
+                'title' => 'Reports By Application Count',
+                'entries' => Payment::with('application.advertisement')
+                    ->where('payment_status', '1')
+                    ->get()
+                    ->groupBy(function ($item) {
+                        return $item->application->advertisement->advertisement_num;
+                    })
+                    ->map(function ($groupedItems) {
+                        return [
+                            'advertisementNumber' => $groupedItems->first()->application->advertisement->advertisement_num,
+                            'total' => $groupedItems->count(),
+                        ];
+                    })
+                    ->values(),
             ],
         ];
 
-        $fiscalYearReport_chart_settings = [
-            'chart_title' => $title,
-            'chart_type' => 'pie',
-            'report_type' => 'group_by_relationship',
-            'model' => 'App\Models\Tippani',
-            'relationship_name' => 'fiscalYear',
-            'group_by_field' => 'title',
-            'aggregate_function' => 'count',
-            'column_class' => 'col-md-12',
-            'chart_color' => 'rgba({{ rand(0,255) }}, {{ rand(0,255) }}, {{ rand(0,255) }}, 1)',
-        ];
-        $tippani_by_fiscalYear = new LaravelChart($fiscalYearReport_chart_settings);
-
-        return view('admin.reports.reportsByFiscalYears', compact('list_blocks', 'tippani_by_fiscalYear'));
+        return view('admin.reports.reportsByApplicationCount', compact('list_blocks'));
     }
 
     public function getReportByCategory()

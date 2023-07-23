@@ -155,9 +155,10 @@
                                                 <input type="hidden" name="sameAsPermanent" value="0">
                                                 <input type="checkbox" id="sameAsPermanent" name="sameAsPermanent"
                                                     value="1"
-                                                    {{ isset($contact) && $contact->sameAsPermanent ? 'checked' : '' }}>
+                                                    {{ old('sameAsPermanent', isset($contact) ? $contact->sameAsPermanent : null) ? 'checked' : '' }}>
                                                 {{ trans('global.contact.fields.sameAsPermanent') }}
                                             </div>
+
                                         </div>
                                         <div class="row g-1 m-0">
                                             <div

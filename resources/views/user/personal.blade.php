@@ -185,7 +185,7 @@
                                     <input type="hidden" name="is_handicapped" value="0">
                                     <input class="form-check-input" type="checkbox" value="1" id="is_handicapped"
                                         name="is_handicapped" style="border: var(--bs-border-width) solid #0d0d0d;"
-                                        {{ old('is_handicapped', isset($personal) && $personal->is_handicapped) ? 'checked' : '' }}>
+                                        {{ old('is_handicapped', isset($personal) ? $personal->is_handicapped : null) ? 'checked' : '' }}>
                                     <label class="form-check-label" for="is_handicapped">
                                         {{ trans('global.personal.fields.is_handicapped') }}
                                     </label>

@@ -29,8 +29,8 @@ class KhaltiController extends Controller
     {
         $this->paymentService = $paymentService;
 
-        $log_path = storage_path().'/logs/khalti/'.date('Y-m-d').'.log';
-        $this->_logger = new Logger('KHALTI LOG :'.date('Y-d-m H:i:s'));
+        $log_path = storage_path() . '/logs/khalti/' . date('Y-m-d') . '.log';
+        $this->_logger = new Logger('KHALTI LOG :' . date('Y-d-m H:i:s'));
         $this->_logger->pushHandler(new StreamHandler($log_path, Logger::INFO));
 
         $this->_api_context_khalti['payment_gateway'] = 'khalti';
@@ -48,13 +48,13 @@ class KhaltiController extends Controller
                 ->where('uuid', $applicationRefID)
                 ->first() ?? null;
 
-            if (! $application) {
+            if (!$application) {
                 return redirect()->back()->withErrors(['error' => 'Invalid application. Please try again.']);
             }
 
             $paymentRecord = $this->paymentService->initiatePayment($application, $this->_api_context_khalti['payment_gateway']);
 
-            if (! $paymentRecord) {
+            if (!$paymentRecord) {
                 return redirect()->back()->withErrors(['error' => 'Sorry we cannot process your request at this moment. Please try again.']);
             }
 
@@ -84,7 +84,7 @@ class KhaltiController extends Controller
     {
         try {
             /** Logger : CHECKOUT RESPONSE */
-            $this->_logger->info('KHALTI CHECKOUT RESPONSE: '.json_encode($request->all()));
+            $this->_logger->info('KHALTI CHECKOUT RESPONSE: ' . json_encode($request->all()));
 
             // dd($request->all());
 
@@ -98,12 +98,12 @@ class KhaltiController extends Controller
             $purchase_order_name = $request->get('purchase_order_name') ?? false;
             $transaction_id = $request->get('transaction_id') ?? false;
 
-            if (! $pidx || ! $txnId || ! $purchase_order_id) {
+            if (!$pidx || !$txnId || !$purchase_order_id) {
                 return response()->json(['status' => 'error', 'message' => 'Verification Failed.']);
             }
 
             $paymentDetails = Payment::with('application')->where('reference_id', $purchase_order_id)->first();
-            if (! $paymentDetails) {
+            if (!$paymentDetails) {
                 return response()->json(['status' => 'error', 'message' => 'Verification Failed.']);
             }
 
@@ -114,39 +114,39 @@ class KhaltiController extends Controller
 
             $payment_verification_status = $this->KhaltiTransactionVerifyAPICall($khalti_post_params);
 
-            dd($payment_verification_status);
-            if (! $payment_verification_status) {
 
+            // dd($payment_verification_status);
+            // dd($payment_verification_status[0]['status']);
+
+            if ($payment_verification_status['status'] === 'Completed') {
+
+                dd('completed');
+                // SUCCESSFUL PAYMENT
                 PaymentHelper::updatePayment([
-                    'reference_id' => $product_identity,
+                    'reference_id' => $payment_verification_status['pidx'],
+                    'application_id' => $paymentDetails->applicationDetails->id ?? null,
+                    'payment_status' => '1',
+                    'paid_amount' => $paymentDetails->amount,
+                    'transaction_id' => $payment_verification_status['transaction_id'],
+                ]);
+
+                /** SEND SMS TO THE USER FOR PAYMENT VERIFICATION **/
+                // ...
+                // (Your SMS sending logic here)
+
+                return response()->json(['status' => 'success', 'message' => 'Verification successfully.']);
+            } else {
+                // Verification Failed
+                PaymentHelper::updatePayment([
+                    'reference_id' => $payment_verification_status['pidx'],
                     'application_id' => $paymentDetails->applicationDetails->id ?? null,
                     'payment_status' => '3',
                     'paid_amount' => $paymentDetails->amount,
-                    'transaction_id' => $idx,
+                    'transaction_id' => $payment_verification_status['transaction_id'],
                 ]);
 
                 return response()->json(['status' => 'error', 'message' => 'Verification Failed.']);
             }
-
-            // SUCCESSFUL PAYMENT
-            PaymentHelper::updatePayment([
-                'reference_id' => $product_identity,
-                'application_id' => $paymentDetails->applicationDetails->id ?? null,
-                'payment_status' => '1',
-                'paid_amount' => $paymentDetails->amount,
-                'transaction_id' => $idx,
-            ]);
-
-            /** SEND SMS TO THE USER FOR PAYMENT VERIFICATION **/
-            // $mobile = $paymentDetails->userDetails->mobile_no;
-            // $applicant_name = $paymentDetails->userDetails->name;
-            // $vacancy_name = $paymentDetails->vacancyDetails->bigyapan_number;
-
-            // $message = 'Dear '.$applicant_name.' , Your application fee '.$paymentDetails->paid_amount.' the post '.$vacancy_name.' has been sucessfully received';
-
-            // Auth::user()->sendSms($message, $mobile);
-
-            return response()->json(['status' => 'success', 'message' => 'Verification successfully.']);
         } catch (\Exception $e) {
             return response()->json(['status' => 'error', 'message' => 'Verification Failed.']);
         }
@@ -163,10 +163,10 @@ class KhaltiController extends Controller
         $client = new Client();
 
         /** Logger : CHECKOUT RESPONSE */
-        $this->_logger->info('KHALTI VERIFY REQUEST: '.json_encode($khalti_post_params));
+        $this->_logger->info('KHALTI VERIFY REQUEST: ' . json_encode($khalti_post_params));
 
         $headers = [
-            'Authorization' => 'Key '.$this->_api_context_khalti['secret_key'],
+            'Authorization' => 'Key ' . $this->_api_context_khalti['secret_key'],
             'Content-Type' => 'application/json',
         ];
 
@@ -190,7 +190,7 @@ class KhaltiController extends Controller
             $responseData = json_decode($response->getBody()->getContents(), true);
 
             /** Logger: VERIFY RESPONSE */
-            $this->_logger->info('KHALTI VERIFY RESPONSE: '.json_encode($responseData));
+            $this->_logger->info('KHALTI VERIFY RESPONSE: ' . json_encode($responseData));
 
             // return redirect::($responseData['payment_url']);
             return ['response' => $responseData];

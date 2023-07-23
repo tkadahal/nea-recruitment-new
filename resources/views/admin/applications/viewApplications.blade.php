@@ -5,31 +5,35 @@
         <a class="btn btn-warning" href="{{ url()->previous() }}">
             {{ trans('global.back_to_list') }}
         </a>
+        @php
+            $action = \Illuminate\Support\Str::afterLast(request()->url(), '/');
+        @endphp
+        @if ($action === '_approved')
+            <div class="d-flex align-items-center">
+                <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
+                    @csrf
+                    <input type="hidden" name="action" value="reject">
+                    <button type="submit" class="btn btn-danger ml-2">
+                        Generate Roll No
+                    </button>
+                </form>
 
-        <div class="d-flex align-items-center">
-            <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
-                @csrf
-                <input type="hidden" name="action" value="reject">
-                <button type="submit" class="btn btn-danger ml-2">
-                    Generate Roll No
-                </button>
-            </form>
+                <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
+                    @csrf
+                    <input type="hidden" name="action" value="verify">
+                    <button type="submit" class="btn btn-success ml-2">
+                        Generate CV
+                    </button>
+                </form>
 
-            <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
-                @csrf
-                <input type="hidden" name="action" value="verify">
-                <button type="submit" class="btn btn-success ml-2">
-                    Generate CV
-                </button>
-            </form>
-
-            <form method="get" action="{{ route('admin.generateCardForExamCenter', $advertisementId) }}"
-                class="d-inline-block">
-                <button type="submit" class="btn btn-success ml-2">
-                    Generate Card For Exam Center
-                </button>
-            </form>
-        </div>
+                <form method="get" action="{{ route('admin.generateCardForExamCenter', $advertisementId) }}"
+                    class="d-inline-block">
+                    <button type="submit" class="btn btn-success ml-2">
+                        Generate Card For Exam Center
+                    </button>
+                </form>
+            </div>
+        @endif
     </div>
 
     <div class="card">

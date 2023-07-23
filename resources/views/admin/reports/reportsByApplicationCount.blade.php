@@ -4,25 +4,13 @@
     <div class="card">
         <div class="card-header"><i class="fa fa-align-justify"></i>
             <strong>
-                Reports By Payment Vendors
+                Reports By Application Count
             </strong>
             {{ trans('global.list') }}
         </div>
 
         <div class="card-body">
             <div class="row">
-                <div class="col-md-3">
-                    <label for="advertisement_number">Select Advertisement Number:</label>
-                    <select class="form-control" id="advertisement_number" onchange="loadReportByAdvertisement()">
-                        <option value="">All Advertisements</option>
-                        @foreach ($advertisements as $advertisement)
-                            <option value="{{ $advertisement->id }}">{{ $advertisement->advertisement_num }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-            <hr style="border-color: black; border-style: solid;">
-            <div class="row mt-3">
                 <div class="col">
                     @foreach ($list_blocks as $block)
                         <h3>{{ $block['title'] }}</h3>
@@ -30,15 +18,15 @@
                             <table class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Payment Vendor</th>
-                                        <th>Count</th>
+                                        <th>Advertisement Number</th>
+                                        <th>Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @forelse($block['entries'] as $entry)
                                         <tr>
-                                            <td>{{ $entry->payment_gateway }}</td>
-                                            <td>{{ $entry->total }}</td>
+                                            <td>{{ $entry['advertisementNumber'] }}</td>
+                                            <td>{{ $entry['total'] }}</td>
                                         </tr>
                                     @empty
                                         <tr>
@@ -53,7 +41,7 @@
 
                 <div class="col text-right">
                     <h3>{!! $list_blocks[0]['title'] !!}</h3>
-                    <canvas id="paymentVendorsChart" width="400" height="200"></canvas>
+                    <canvas id="applicationCountChart" width="400" height="200"></canvas>
                 </div>
             </div>
         </div>
@@ -72,7 +60,7 @@
                 const chartData = @json($list_blocks[0]['entries']);
 
                 // Extract data for Chart.js
-                const labels = chartData.map(entry => entry.payment_gateway);
+                const labels = chartData.map(entry => entry.advertisementNumber);
                 const datasetData = chartData.map(entry => entry.total);
                 const backgroundColors = chartData.map(() => getRandomColor());
 
@@ -97,7 +85,7 @@
                 }
 
                 // Create new chart
-                const ctx = document.getElementById('paymentVendorsChart').getContext('2d');
+                const ctx = document.getElementById('applicationCountChart').getContext('2d');
                 myChart = new Chart(ctx, chartConfig);
             }
 
@@ -112,7 +100,7 @@
         });
     </script>
 
-    <script>
+    {{-- <script>
         function loadReportByAdvertisement() {
             const advertisementNumber = document.getElementById('advertisement_number').value;
             const baseUrl = "{{ route('admin.getReportByPaymentVendors') }}";
@@ -120,5 +108,5 @@
             url.searchParams.set('advertisement', advertisementNumber);
             window.location.href = url.toString();
         }
-    </script>
+    </script> --}}
 @endsection

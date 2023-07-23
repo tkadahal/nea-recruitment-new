@@ -273,6 +273,7 @@ Route::middleware(['auth:admin'])->group(function () {
 
             //Reports
             Route::get('getReportByPaymentVendors', 'ReportController@getReportByPaymentVendors')->name('getReportByPaymentVendors');
+            Route::get('getReportByApplicationCount', 'ReportController@getReportByApplicationCount')->name('getReportByApplicationCount');
         });
     });
 });
