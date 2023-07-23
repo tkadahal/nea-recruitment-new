@@ -15,6 +15,7 @@ return new class extends Migration
             $table->foreignId('application_id')->index()->constrained();
 
             $table->string('reference_id')->index();
+            $table->string('pidx')->nullable();
             $table->string('transaction_id')->index()->nullable();
 
             $table->float('amount');

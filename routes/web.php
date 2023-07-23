@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::view('test', 'test')->name('test');
+Route::view('test', 'welcome')->name('test');
 
 Route::redirect('/', '/login');
 

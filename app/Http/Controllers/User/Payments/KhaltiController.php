@@ -86,17 +86,15 @@ class KhaltiController extends Controller
             /** Logger : CHECKOUT RESPONSE */
             $this->_logger->info('KHALTI CHECKOUT RESPONSE: ' . json_encode($request->all()));
 
-            // dd($request->all());
-
             $pidx = $request->get('pidx') ?? false;
 
-            // dd($pidx);
             $txnId = $request->get('txnId') ?? false;
             $amount = $request->get('amount') ?? false;
             $mobile = $request->get('mobile') ?? false;
             $purchase_order_id = $request->get('purchase_order_id') ?? false;
             $purchase_order_name = $request->get('purchase_order_name') ?? false;
             $transaction_id = $request->get('transaction_id') ?? false;
+
 
             if (!$pidx || !$txnId || !$purchase_order_id) {
                 return response()->json(['status' => 'error', 'message' => 'Verification Failed.']);
@@ -114,41 +112,61 @@ class KhaltiController extends Controller
 
             $payment_verification_status = $this->KhaltiTransactionVerifyAPICall($khalti_post_params);
 
-
             // dd($payment_verification_status);
-            // dd($payment_verification_status[0]['status']);
 
-            if ($payment_verification_status['status'] === 'Completed') {
+            if (!$payment_verification_status || $payment_verification_status['response']['status'] != 'Completed') {
 
-                dd('completed');
-                // SUCCESSFUL PAYMENT
-                PaymentHelper::updatePayment([
-                    'reference_id' => $payment_verification_status['pidx'],
-                    'application_id' => $paymentDetails->applicationDetails->id ?? null,
-                    'payment_status' => '1',
-                    'paid_amount' => $paymentDetails->amount,
-                    'transaction_id' => $payment_verification_status['transaction_id'],
-                ]);
+                /** DOUBLE VERIFICATION */
+                $this->_logger->info('DOUBLE VERIFICATION, REFERENCE ID : ' . $purchase_order_id);
 
-                /** SEND SMS TO THE USER FOR PAYMENT VERIFICATION **/
-                // ...
-                // (Your SMS sending logic here)
+                // CALLING VERIFICATION ONE MORE TIME AFTER WAITING 3 Secs
+                sleep(3);
+                $payment_verification_status = $this->KhaltiTransactionVerifyAPICall($khalti_post_params);
 
-                return response()->json(['status' => 'success', 'message' => 'Verification successfully.']);
-            } else {
-                // Verification Failed
-                PaymentHelper::updatePayment([
-                    'reference_id' => $payment_verification_status['pidx'],
-                    'application_id' => $paymentDetails->applicationDetails->id ?? null,
-                    'payment_status' => '3',
-                    'paid_amount' => $paymentDetails->amount,
-                    'transaction_id' => $payment_verification_status['transaction_id'],
-                ]);
+                // verification status not received or returned failure
+                if (!$payment_verification_status || $payment_verification_status['response']['status'] != 'Completed') {
+                    PaymentHelper::updatePayment([
+                        'reference_id' => $purchase_order_id,
+                        // 'pidx' => $payment_verification_status['response']['pidx'],
+                        'application_id' => $paymentDetails->application->id ?? null,
+                        'payment_status' => '3',
+                        'paid_amount' => $payment_verification_status['response']['total_amount'],
+                        'transaction_id' => $payment_verification_status['response']['transaction_id'],
+                    ]);
 
-                return response()->json(['status' => 'error', 'message' => 'Verification Failed.']);
+                    Session::flash('error_message', 'Sorry something went wrong processing your payment. Please verify the payment or select other payment options.');
+
+                    return redirect()->back();
+                }
             }
+
+            // SUCCESSFUL PAYMENT
+            PaymentHelper::updatePayment([
+                'reference_id' => $purchase_order_id,
+                // 'pidx' => $payment_verification_status['response']['pidx'],
+                'application_id' => $paymentDetails->application->id ?? null,
+                'payment_status' => '1',
+                'paid_amount' => $paymentDetails->amount,
+                'transaction_id' => $payment_verification_status['response']['transaction_id'],
+            ]);
+
+            /** SEND SMS TO THE USER FOR PAYMENT VERIFICATION **/
+            // $mobile = $paymentDetails->userDetails->mobile_no;
+            // $applicant_name = $paymentDetails->userDetails->name;
+            // $vacancy_name = $paymentDetails->vacancyDetails->bigyapan_number;
+
+            // $message = 'Dear '.$applicant_name.' , Your application fee '.$paymentDetails->paid_amount.' the post '.$vacancy_name.' has been sucessfully received';
+
+
+            // Auth::user()->sendSms($message, $mobile);
+
+            Session::flash('message', 'Payment successfull. Please find below the application details.');
+
+            return redirect()->route('payment.index');
         } catch (\Exception $e) {
-            return response()->json(['status' => 'error', 'message' => 'Verification Failed.']);
+            Session::flash('error_message', 'Sorry something went wrong processing your payment. Please verify the payment or select other payment options.');
+
+            return redirect()->route('payment.index');
         }
     }
 

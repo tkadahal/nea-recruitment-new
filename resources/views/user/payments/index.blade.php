@@ -6,34 +6,28 @@
 
         <div class="card">
             @if (\Session::get('message'))
-                <div class="alert alert-success alert-dismissible fade show" id="msg">
-                    <p>
-                        {{ \Session::get('message') }}
-                    </p>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    {{ \Session::get('message') }}
                 </div>
             @endif
 
             @if (\Session::get('error_message'))
-                <div class="alert alert-danger alert-dismissible fade show" id="msg">
-                    <p>
-                        {{ \Session::get('error_message') }}
-                    </p>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    {{ \Session::get('error_message') }}
                 </div>
             @endif
 
             @if (request()->has('payment_status'))
                 @if (request()->get('payment_status') == 'success')
-                    <div class="alert alert-success" id="msg">
-                        <p>Payment successfull. Please find below the application details.</p>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <p>Payment successful. Please find below the application details.</p>
                     </div>
                 @else
-                    <div class="alert alert-danger" id="msg">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         <p>Sorry something went wrong processing your payment. Please verify the payment or select other
                             payment options.</p>
                     </div>

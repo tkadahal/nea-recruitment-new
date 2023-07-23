@@ -20,7 +20,7 @@ class PaymentHelper
         $amount = $paymentData['amount'] ?? null;
         $reference_id = $paymentData['reference_id'] ?? null;
 
-        if (! $application_id || ! $payment_gateway || ! $amount || ! $reference_id) {
+        if (!$application_id || !$payment_gateway || !$amount || !$reference_id) {
             throw new \InvalidArgumentException('Required payment data is missing.');
         }
 
@@ -52,7 +52,7 @@ class PaymentHelper
         $paid_amount = $paymentData['paid_amount'] ?? null;
         $transaction_id = $paymentData['transaction_id'] ?? null;
 
-        if (! $reference_id || ! $application_id || ! $payment_status) {
+        if (!$reference_id || !$application_id || !$payment_status) {
             throw new \InvalidArgumentException('Required payment data is missing.');
         }
 
@@ -74,6 +74,6 @@ class PaymentHelper
     {
         $nanoClient = new NanoClient();
 
-        return 'KH.'.$nanoClient->formattedId($alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', $size = 12);
+        return 'KH.' . $nanoClient->formattedId($alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', $size = 12);
     }
 }
