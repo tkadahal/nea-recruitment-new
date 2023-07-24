@@ -95,9 +95,17 @@ class StoreEducationRequest extends FormRequest
             'date_format.required' => trans('uservalidation.date_format'),
             'transcript_issue_date.required' => trans('uservalidation.transcript_issue_date'),
             'transcript.required_without' => trans('uservalidation.transcript'),
+            'transcript.mimetypes' => trans('uservalidation.transcript_mime'),
+            'transcript.max' => trans('uservalidation.transcript_max'),
             'character.required_without' => trans('uservalidation.character'),
+            'character.mimetypes' => trans('uservalidation.character_mime'),
+            'character.max' => trans('uservalidation.character_max'),
             'council.required_without' => trans('uservalidation.council'),
+            'council.mimetypes' => trans('uservalidation.council_mime'),
+            'council.max' => trans('uservalidation.council_max'),
             'equivalence.required' => trans('uservalidation.equivalence'),
+            'equivalence.mimetypes' => trans('uservalidation.equivalence_mime'),
+            'equivalence.max' => trans('uservalidation.equivalence_max'),
         ];
     }
 }
