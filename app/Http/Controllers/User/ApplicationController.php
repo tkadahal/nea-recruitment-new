@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
-use App\Models\Advertisement;
-use App\Models\Application;
-use App\Models\ExamCenter;
-use App\Services\ApplicationService;
 use Carbon\Carbon;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use App\Models\MediaType;
 use Illuminate\View\View;
+use App\Models\ExamCenter;
+use App\Models\Application;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Models\Advertisement;
+use App\Http\Controllers\Controller;
+use App\Services\ApplicationService;
+use Illuminate\Http\RedirectResponse;
 
 class ApplicationController extends Controller
 {
@@ -32,7 +33,7 @@ class ApplicationController extends Controller
         $examCenters = ExamCenter::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $advertisements = Advertisement::query()
-            ->with(['category', 'group', 'subGroup', 'qualification', 'applications'])
+            ->with(['category', 'group', 'subGroup', 'qualification', 'level', 'applications'])
             ->whereDate('start_date_en', '<=', $currentDate)
             ->whereDate('penalty_end_date_en', '>=', $currentDate)
             ->get();
@@ -122,13 +123,13 @@ class ApplicationController extends Controller
 
     public function show(string $id): View
     {
+        $user = auth()->user();
+
         $application = Advertisement::with('level', 'category', 'group', 'subGroup', 'qualification')->findorFail($id);
 
         $samabeshiGroups = $application->samabeshiGroups;
 
-        $user = auth()->user();
-
-        $userSamabeshiMedia = $user->media()->where('media_type_id', 5)->get();
+        $userSamabeshiMedia = $user->media()->where('media_type_id', MediaType::samabeshi)->get();
 
         return view('user.applications.show', compact('application', 'samabeshiGroups', 'user', 'userSamabeshiMedia'));
     }

@@ -50,7 +50,9 @@ class StoreEducationRequest extends FormRequest
                 'required',
             ],
             'transcript_issue_date' => [
-                'nullable',
+                'required',
+                'string',
+                'max: 255',
             ],
             'transcript' => [
                 'required_without:old_transcript',
@@ -78,6 +80,24 @@ class StoreEducationRequest extends FormRequest
                 'mimetypes:application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'institution.required' => trans('uservalidation.institution'),
+            'university_id.required' => trans('uservalidation.university'),
+            'qualification_id.required' => trans('uservalidation.qualification'),
+            'division_id.required' => trans('uservalidation.division'),
+            'percentage.required' => trans('uservalidation.percentage'),
+            'pass_year.required' => trans('uservalidation.pass_year'),
+            'date_format.required' => trans('uservalidation.date_format'),
+            'transcript_issue_date.required' => trans('uservalidation.transcript_issue_date'),
+            'transcript.required_without' => trans('uservalidation.transcript'),
+            'character.required_without' => trans('uservalidation.character'),
+            'council.required_without' => trans('uservalidation.council'),
+            'equivalence.required' => trans('uservalidation.equivalence'),
         ];
     }
 }
