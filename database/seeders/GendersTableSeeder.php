@@ -13,25 +13,25 @@ class GendersTableSeeder extends Seeder
     {
         $genders = [
             [
-                'ID' => 1,
-                'TITLE' => 'Male',
-                'CREATED_AT' => '2022-01-24 18:00:13',
-                'UPDATED_AT' => '2022-01-24 18:00:13',
-                'DELETED_AT' => null,
+                'id' => 1,
+                'title' => 'Male',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
             ],
             [
-                'ID' => 2,
-                'TITLE' => 'Female',
-                'CREATED_AT' => '2022-01-24 18:00:13',
-                'UPDATED_AT' => '2022-01-24 18:00:13',
-                'DELETED_AT' => null,
+                'id' => 2,
+                'title' => 'Female',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
             ],
             [
-                'ID' => 3,
-                'TITLE' => 'Others',
-                'CREATED_AT' => '2022-01-24 18:00:13',
-                'UPDATED_AT' => '2022-01-24 18:00:13',
-                'DELETED_AT' => null,
+                'id' => 3,
+                'title' => 'Others',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
             ],
         ];
 

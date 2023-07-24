@@ -19,30 +19,25 @@ class ContactController extends Controller
 {
     public function index(): View
     {
-        $provinces = Province::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $user_id = auth()->id();
 
-        $districts = District::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $contact = Contact::with([
+            'permaProvince',
+            'tempProvince',
+            'permaDistrict',
+            'tempDistrict',
+            'permaMunicipality',
+            'tempMunicipality',
+            'fatherCountry',
+            'motherCountry',
+            'grandfatherCountry',
+            'spouseCountry',
+        ])->where('user_id', $user_id)->first();
 
-        $municipalities = Municipality::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $countries = Country::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $contact = Contact::with(
-            [
-                'permaProvince',
-                'tempProvince',
-                'permaDistrict',
-                'tempDistrict',
-                'permaMunicipality',
-                'tempMunicipality',
-                'fatherCountry',
-                'motherCountry',
-                'grandfatherCountry',
-                'spouseCountry'
-            ]
-        )
-            ->where('user_id', auth()->id())
-            ->first();
+        $provinces = Province::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $districts = District::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $municipalities = Municipality::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $countries = Country::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         return view('user.contact', compact('contact', 'provinces', 'districts', 'municipalities', 'countries'));
     }

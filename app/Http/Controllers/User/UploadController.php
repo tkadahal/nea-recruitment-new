@@ -21,32 +21,41 @@ class UploadController extends Controller
 
     public function store(StoreUploadRequest $request): RedirectResponse
     {
-        $photoPath = $this->mediaService->handleMediaFromRequest($request->photo, auth()->id(), MediaType::photo);
+        $mediaTypes = [
+            MediaType::photo,
+            MediaType::sign,
+            MediaType::citizenshipFront,
+            MediaType::citizenshipBack,
+            MediaType::samabeshi,
+        ];
 
-        $signPath = $this->mediaService->handleMediaFromRequest($request->sign, auth()->id(), MediaType::sign);
+        $existingMedia = auth()->user()->media()->whereIn('media_type_id', $mediaTypes)->get()->keyBy('media_type_id');
 
-        $citFrontPath = $this->mediaService->handleMediaFromRequest($request->citizenship_front, auth()->id(), MediaType::citizenshipFront);
+        foreach ($mediaTypes as $mediaTypeId) {
+            $mediaPath = $this->mediaService->handleMediaFromRequest(
+                $request->file($this->getInputNameByMediaType($mediaTypeId)),
+                auth()->user()->applicant_id,
+                $mediaTypeId,
+                $existingMedia->get($mediaTypeId)
+            );
 
-        $citBackPath = $this->mediaService->handleMediaFromRequest($request->citizenship_back, auth()->id(), MediaType::citizenshipBack);
-
-        $samabeshiPath = $this->mediaService->handleMediaFromRequest($request->samabeshi, auth()->id(), MediaType::samabeshi);
-
-        if ($photoPath) {
-            auth()->user()->media()->create($photoPath);
-        }
-        if ($signPath) {
-            auth()->user()->media()->create($signPath);
-        }
-        if ($citFrontPath) {
-            auth()->user()->media()->create($citFrontPath);
-        }
-        if ($citBackPath) {
-            auth()->user()->media()->create($citBackPath);
-        }
-        if ($samabeshiPath) {
-            auth()->user()->media()->create($samabeshiPath);
+            if ($mediaPath) {
+                auth()->user()->media()->updateOrCreate(['id' => optional($existingMedia->get($mediaTypeId))->id], $mediaPath);
+            }
         }
 
         return redirect()->route('application.index');
+    }
+
+    private function getInputNameByMediaType(int $mediaTypeId): string
+    {
+        return match ($mediaTypeId) {
+            MediaType::photo => 'photo',
+            MediaType::sign => 'sign',
+            MediaType::citizenshipFront => 'citizenship_front',
+            MediaType::citizenshipBack => 'citizenship_back',
+            MediaType::samabeshi => 'samabeshi',
+            default => throw new \InvalidArgumentException("Invalid media type ID: {$mediaTypeId}"),
+        };
     }
 }

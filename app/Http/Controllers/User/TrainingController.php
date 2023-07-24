@@ -11,9 +11,7 @@ use App\Models\Training;
 use Carbon\Carbon;
 use Carbon\CarbonInterval;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\View\View;
-use Symfony\Component\HttpFoundation\Response;
 
 class TrainingController extends Controller
 {
@@ -82,7 +80,11 @@ class TrainingController extends Controller
 
     public function store(StoreTrainingRequest $request): RedirectResponse
     {
-        $path = $this->mediaService->handleMediaFromRequest($request->certificate, auth()->id(), MediaType::training);
+        $path = $this->mediaService->handleMediaFromRequest(
+            $request->certificate,
+            auth()->user()->applicant_id,
+            MediaType::training
+        );
 
         $validated_input = $request->validated();
 
@@ -108,9 +110,17 @@ class TrainingController extends Controller
 
     public function update(StoreTrainingRequest $request, Training $training): RedirectResponse
     {
-        $existingCertificate = $training->media()->where('media_type_id', MediaType::training)->first();
+        $existingCertificate = $training->media()->where(
+            'media_type_id',
+            MediaType::training
+        )->first();
 
-        $certificatePath = $this->mediaService->handleMediaFromRequest($request->certificate, auth()->id(), MediaType::training, $existingCertificate);
+        $certificatePath = $this->mediaService->handleMediaFromRequest(
+            $request->certificate,
+            auth()->user()->applicant_id,
+            MediaType::training,
+            $existingCertificate
+        );
 
         $validated_input = $request->validated();
 
@@ -130,8 +140,6 @@ class TrainingController extends Controller
 
     public function destroy(Training $training): RedirectResponse
     {
-        abort_if(Gate::denies('training_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $training->delete();
 
         return back();

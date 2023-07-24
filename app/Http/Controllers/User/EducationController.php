@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\User\StoreEducationRequest;
 use App\Models\Division;
 use App\Models\Education;
 use App\Models\MediaType;
-use App\Models\Qualification;
-use App\Models\University;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\View\View;
+use App\Models\University;
+use App\Models\Qualification;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Http\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
+use App\Http\Requests\User\StoreEducationRequest;
 
 class EducationController extends Controller
 {
@@ -48,33 +48,28 @@ class EducationController extends Controller
 
     public function store(StoreEducationRequest $request): RedirectResponse
     {
-        $transcriptPath = $this->mediaService->handleMediaFromRequest($request->transcript, auth()->id(), MediaType::transcript);
-
-        $characterPath = $this->mediaService->handleMediaFromRequest($request->character, auth()->id(), MediaType::character);
-
-        $councilPath = $this->mediaService->handleMediaFromRequest($request->council, auth()->id(), MediaType::council);
-
-        $equivalencePath = $this->mediaService->handleMediaFromRequest($request->equivalence, auth()->id(), MediaType::equivalence);
+        $mediaTypes = [
+            MediaType::transcript,
+            MediaType::character,
+            MediaType::council,
+            MediaType::equivalence,
+        ];
 
         $education = Education::create($request->validated());
 
-        if ($transcriptPath) {
-            $education->media()->create($transcriptPath);
+        foreach ($mediaTypes as $mediaTypeId) {
+            $mediaPath = $this->mediaService->handleMediaFromRequest(
+                $request->file($this->getInputNameByMediaType($mediaTypeId)),
+                auth()->user()->applicant_id,
+                $mediaTypeId
+            );
+
+            if ($mediaPath) {
+                $education->media()->create($mediaPath);
+            }
         }
 
-        if ($characterPath) {
-            $education->media()->create($characterPath);
-        }
-
-        if ($councilPath) {
-            $education->media()->create($councilPath);
-        }
-
-        if ($equivalencePath) {
-            $education->media()->create($equivalencePath);
-        }
-
-        return redirect()->route(route: 'education.index')
+        return redirect()->route('education.index')
             ->with('message', 'Education created successfully.');
     }
 
@@ -100,32 +95,31 @@ class EducationController extends Controller
 
     public function update(StoreEducationRequest $request, Education $education): RedirectResponse
     {
-        $existingTranscript = $education->media()->where('media_type_id', MediaType::transcript)->first();
-        $existingCharacter = $education->media()->where('media_type_id', MediaType::character)->first();
-        $existingCouncil = $education->media()->where('media_type_id', MediaType::council)->first();
-        $existingEquivalence = $education->media()->where('media_type_id', MediaType::equivalence)->first();
+        $mediaTypes = [
+            MediaType::transcript,
+            MediaType::character,
+            MediaType::council,
+            MediaType::equivalence,
+        ];
 
-        $transcriptPath = $this->mediaService->handleMediaFromRequest($request->transcript, auth()->id(), MediaType::transcript, $existingTranscript);
-        $characterPath = $this->mediaService->handleMediaFromRequest($request->character, auth()->id(), MediaType::character, $existingCharacter);
-        $councilPath = $this->mediaService->handleMediaFromRequest($request->council, auth()->id(), MediaType::council, $existingCouncil);
-        $equivalencePath = $this->mediaService->handleMediaFromRequest($request->equivalence, auth()->id(), MediaType::equivalence, $existingEquivalence);
+        $existingMedia = $education->media()->whereIn('media_type_id', $mediaTypes)->get()->keyBy('media_type_id');
+
+        foreach ($mediaTypes as $mediaTypeId) {
+            $mediaPath = $this->mediaService->handleMediaFromRequest(
+                $request->file($this->getInputNameByMediaType($mediaTypeId)),
+                auth()->user()->applicant_id,
+                $mediaTypeId,
+                $existingMedia->get($mediaTypeId)
+            );
+
+            if ($mediaPath) {
+                $education->media()->updateOrCreate(['id' => optional($existingMedia->get($mediaTypeId))->id], $mediaPath);
+            }
+        }
 
         $education->update($request->validated());
 
-        if ($transcriptPath) {
-            $education->media()->updateOrCreate(['id' => optional($existingTranscript)->id], $transcriptPath);
-        }
-        if ($characterPath) {
-            $education->media()->updateOrCreate(['id' => optional($existingCharacter)->id], $characterPath);
-        }
-        if ($councilPath) {
-            $education->media()->updateOrCreate(['id' => optional($existingCouncil)->id], $councilPath);
-        }
-        if ($equivalencePath) {
-            $education->media()->updateOrCreate(['id' => optional($existingEquivalence)->id], $equivalencePath);
-        }
-
-        return redirect()->route(route: 'education.index')
+        return redirect()->route('education.index')
             ->with('message', 'Education updated successfully.');
     }
 
@@ -134,5 +128,16 @@ class EducationController extends Controller
         $education->delete();
 
         return back();
+    }
+
+    private function getInputNameByMediaType(int $mediaTypeId): string
+    {
+        return match ($mediaTypeId) {
+            MediaType::transcript => 'transcript',
+            MediaType::character => 'character',
+            MediaType::council => 'council',
+            MediaType::equivalence => 'equivalence',
+            default => throw new \InvalidArgumentException("Invalid media type ID: {$mediaTypeId}"),
+        };
     }
 }

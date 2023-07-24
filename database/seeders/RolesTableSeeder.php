@@ -13,18 +13,18 @@ class RolesTableSeeder extends Seeder
     {
         $roles = [
             [
-                'ID' => 1,
-                'TITLE' => 'Super_Admin',
-                'CREATED_AT' => '2022-01-24 18:00:13',
-                'UPDATED_AT' => '2022-01-24 18:00:13',
-                'DELETED_AT' => null,
+                'id' => 1,
+                'title' => 'Super_Admin',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
             ],
             [
-                'ID' => 2,
-                'TITLE' => 'Admin',
-                'CREATED_AT' => '2022-01-24 18:00:13',
-                'UPDATED_AT' => '2022-01-24 18:00:13',
-                'DELETED_AT' => null,
+                'id' => 2,
+                'title' => 'Admin',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
             ],
         ];
 

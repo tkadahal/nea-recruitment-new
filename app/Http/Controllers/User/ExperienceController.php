@@ -83,7 +83,11 @@ class ExperienceController extends Controller
 
     public function store(StoreExperienceRequest $request): RedirectResponse
     {
-        $path = $this->mediaService->handleMediaFromRequest($request->experience_certificate, auth()->id(), MediaType::experience);
+        $path = $this->mediaService->handleMediaFromRequest(
+            $request->experience_certificate,
+            auth()->user()->applicant_id,
+            MediaType::experience
+        );
 
         $validated_input = $request->validated();
 
@@ -111,9 +115,17 @@ class ExperienceController extends Controller
 
     public function update(StoreExperienceRequest $request, Experience $experience): RedirectResponse
     {
-        $existingCertificate = $experience->media()->where('media_type_id', MediaType::transcript)->first();
+        $existingCertificate = $experience->media()->where(
+            'media_type_id',
+            MediaType::experience
+        )->first();
 
-        $certificatePath = $this->mediaService->handleMediaFromRequest($request->experience_certificate, auth()->id(), MediaType::experience, $existingCertificate);
+        $certificatePath = $this->mediaService->handleMediaFromRequest(
+            $request->experience_certificate,
+            auth()->user()->applicant_id,
+            MediaType::experience,
+            $existingCertificate
+        );
 
         $validated_input = $request->validated();
 

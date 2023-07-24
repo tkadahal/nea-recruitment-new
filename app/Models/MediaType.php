@@ -15,27 +15,17 @@ class MediaType extends Model
     use HasFactory;
     use SoftDeletes;
 
-    const photo = '1';
-
-    const sign = '2';
-
-    const citizenshipFront = '3';
-
-    const citizenshipBack = '4';
-
-    const samabeshi = '5';
-
-    const character = '6';
-
-    const transcript = '7';
-
-    const training = '8';
-
-    const experience = '9';
-
-    const equivalence = '10';
-
-    const council = '11';
+    const photo = 1;
+    const sign = 2;
+    const citizenshipFront = 3;
+    const citizenshipBack = 4;
+    const samabeshi = 5;
+    const character = 6;
+    const transcript = 7;
+    const training = 8;
+    const experience = 9;
+    const equivalence = 10;
+    const council = 11;
 
     protected $dates = [
         'created_at',

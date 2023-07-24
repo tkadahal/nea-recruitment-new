@@ -13,18 +13,18 @@ class CategoriesTableSeeder extends Seeder
     {
         $categories = [
             [
-                'ID' => 1,
-                'TITLE' => 'प्राविधिक',
-                'CREATED_AT' => '2022-01-24 18:00:13',
-                'UPDATED_AT' => '2022-01-24 18:00:13',
-                'DELETED_AT' => null,
+                'id' => 1,
+                'title' => 'प्राविधिक',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
             ],
             [
-                'ID' => 2,
-                'TITLE' => 'प्रशासन',
-                'CREATED_AT' => '2022-01-24 18:00:13',
-                'UPDATED_AT' => '2022-01-24 18:00:13',
-                'DELETED_AT' => null,
+                'id' => 2,
+                'title' => 'प्रशासन',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
             ],
         ];
 
