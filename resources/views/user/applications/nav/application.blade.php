@@ -3,19 +3,19 @@
         <div class="row">
             <div class="col-md-3">
                 <b>
-                    {{ trans('global.advertisement.fields.advertisement_num') }}
+                    {{ trans('global.application.fields.advertisement_num') }}
                 </b>
             </div>
             <div class="col-md-3">
-                {{ trans('global.advertisement.fields.category_id') }}
-                / {{ trans('global.advertisement.fields.group_id') }}
-                / {{ trans('global.advertisement.fields.sub_group_id') }}
+                {{ trans('global.application.fields.category_id') }}
+                / {{ trans('global.application.fields.group_id') }}
+                / {{ trans('global.application.fields.sub_group_id') }}
             </div>
             <div class="col-md-3">
-                {{ trans('global.advertisement.fields.level_id') }}
+                {{ trans('global.application.fields.level_id') }}
             </div>
             <div class="col-md-3">
-                {{ trans('global.advertisement.fields.qualification_id') }}
+                {{ trans('global.application.fields.qualification_id') }}
             </div>
             <div class="col-md-3 text-center">
                 &nbsp;
