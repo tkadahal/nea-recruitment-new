@@ -48,4 +48,24 @@ class StoreUploadRequest extends FormRequest
             ],
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'photo.required_without' => trans('uservalidation.photo'),
+            'photo.mimetypes' => trans('uservalidation.photo_mime'),
+            'photo.max' => trans('uservalidation.photo_max'),
+            'sign.required_without' => trans('uservalidation.sign'),
+            'sign.mimetypes' => trans('uservalidation.sign_mime'),
+            'sign.max' => trans('uservalidation.sign_max'),
+            'citizenship_front.required_without' => trans('uservalidation.citizenship_front'),
+            'citizenship_front.mimetypes' => trans('uservalidation.citizenship_front_mime'),
+            'citizenship_front.max' => trans('uservalidation.citizenship_front_max'),
+            'citizenship_back.required_without' => trans('uservalidation.citizenship_back'),
+            'citizenship_back.mimetypes' => trans('uservalidation.citizenship_back_mime'),
+            'citizenship_back.max' => trans('uservalidation.citizenship_back_max'),
+            'samabeshi.mimetypes' => trans('uservalidation.samabeshi_mime'),
+            'samabeshi.max' => trans('uservalidation.samabeshi_max'),
+        ];
+    }
 }

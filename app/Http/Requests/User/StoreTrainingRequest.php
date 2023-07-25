@@ -15,7 +15,6 @@ class StoreTrainingRequest extends FormRequest
 
     public function rules(): array
     {
-        // dd($this->request->all());
         return [
             'training_institute' => [
                 'required',
@@ -59,6 +58,21 @@ class StoreTrainingRequest extends FormRequest
                 'mimetypes:application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'training_institute.required' => trans('uservalidation.training_institute'),
+            'subject.required' => trans('uservalidation.subject'),
+            'percentage.required' => trans('uservalidation.percentage'),
+            'date_format.required' => trans('uservalidation.date_format'),
+            'training_from.required' => trans('uservalidation.training_from'),
+            'training_to.required' => trans('uservalidation.training_to'),
+            'certificate.required_without' => trans('uservalidation.certificate'),
+            'certificate.mimetypes' => trans('uservalidation.certificate_mime'),
+            'certificate.max' => trans('uservalidation.certificate_max'),
         ];
     }
 }

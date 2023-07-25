@@ -15,7 +15,6 @@ class StoreExperienceRequest extends FormRequest
 
     public function rules(): array
     {
-        // dd($this->request->all());
         return [
             'office' => [
                 'required',
@@ -67,6 +66,22 @@ class StoreExperienceRequest extends FormRequest
             'job_description' => [
                 'nullable',
             ],
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'office.required' => trans('uservalidation.office'),
+            'post.required' => trans('uservalidation.post'),
+            'level.required' => trans('uservalidation.level'),
+            'recruitment_type_id.required' => trans('uservalidation.recruitment_type_id'),
+            'date_format.required' => trans('uservalidation.date_format'),
+            'start_date.required' => trans('uservalidation.start_date'),
+            'end_date.required' => trans('uservalidation.end_date'),
+            'experience_certificate.required_without' => trans('uservalidation.experience_certificate'),
+            'experience_certificate.mimetypes' => trans('uservalidation.experience_certificate_mime'),
+            'experience_certificate.max' => trans('uservalidation.experience_certificate_max'),
         ];
     }
 }

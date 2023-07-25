@@ -59,7 +59,7 @@ class Application extends Model
 
     public function latestPayment(): HasOne
     {
-        return $this->hasOne(Payment::class)->latest();
+        return $this->hasOne(Payment::class)->latestOfMany();
     }
 
     public function newEloquentBuilder($query): ModelBuilder
