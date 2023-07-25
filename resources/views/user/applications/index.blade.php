@@ -9,9 +9,15 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <select name="category" id="category" class="form-control select2">
-                            <option value="" selected="selected">बिज्ञापन प्रकार छान्नुहोस् ...</option>
-                            <option value="0">अधिकृत स्तर</option>
-                            <option value="1">सहायक स्तर</option>
+                            <option value="" selected="selected">
+                                {{ trans('global.pleaseSelect') }}
+                            </option>
+                            <option value="0">
+                                {{ trans('global.application.dropdowns.officer') }}
+                            </option>
+                            <option value="1">
+                                {{ trans('global.application.dropdowns.assistant') }}
+                            </option>
                         </select>
                     </div>
                 </div>

@@ -882,6 +882,10 @@ return [
             'qualificationInfo' => 'यस विज्ञापनको लागि आवश्यक योग्यता तपाईंको योग्यतासँग मेल खाँदैन ।',
             'desinationNotFoundInfo' => 'लिङ्गको लागि नामांकन फेला परेन ।',
         ],
+        'dropdowns' => [
+            'officer' => 'अधिकृत स्तर',
+            'assistant' => 'सहायक स्तर',
+        ],
         'fields' => [
             'id' => 'आईडी',
             'id_helper' => '',

@@ -125,7 +125,7 @@
         }
 
         .card-section h3 {
-            background: #ffffff;
+            background: #f8faff;
             color: #2680eb;
             font-size: 18px;
             /* font-size: .938rem; */
@@ -218,6 +218,38 @@
 
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ms-auto">
+
+                            @if (count(config('panel.available_languages', [])) > 1)
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" v-pre>
+                                        @if (app()->getLocale() == 'np')
+                                            <x-flag-country-np style="width: 25px" />
+                                        @else
+                                            <x-flag-country-us style="width: 25px" />
+                                        @endif
+                                        &nbsp;
+                                        {{ strtoupper(app()->getLocale()) }}
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        @foreach (config('panel.available_languages') as $langLocale => $langName)
+                                            <a class="dropdown-item"
+                                                href="{{ url()->current() }}?change_language={{ $langLocale }}">
+                                                @if ($langLocale == 'np')
+                                                    <x-flag-country-np style="width: 25px" />
+                                                @else
+                                                    <x-flag-country-us style="width: 25px" />
+                                                @endif
+                                                &nbsp;
+                                                {{ strtoupper($langLocale) }} ({{ $langName }})
+                                            </a>
+                                        @endforeach
+                                    </div>
+                                </li>
+                            @endif
+
                             <!-- Authentication Links -->
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"

@@ -619,19 +619,19 @@ return [
         'fields' => [],
     ],
     'personal' => [
-        'title' => 'Personal Information',
-        'title_singular' => 'Personal Information',
+        'title' => 'Personal',
+        'title_singular' => 'Personal',
         'category' => [
             'fields' => [
                 'personalDetails' => 'Personal Details',
                 'citizenshipDetails' => 'Citizenship Details',
                 'uploads' => 'Uploads',
             ],
-            'info' => [
-                'sanketInfo' => '(Only For NEA Staffs)',
-                'photoInfo' => '***Please Upload Clear Passport size photo',
-                'samabeshiInfo' => '***Except Ladies it is required for other Samabeshi Groups',
-            ],
+        ],
+        'info' => [
+            'sanketInfo' => '(Only for NEA Staffs)',
+            'photoInfo' => '***Please Upload Clear Passport size photo',
+            'samabeshiInfo' => '***Except Ladies it is required for other Samabeshi Groups',
         ],
         'fields' => [
             'id' => 'ID',
@@ -679,8 +679,8 @@ return [
         ],
     ],
     'contact' => [
-        'title' => 'Contact Information',
-        'title_singular' => 'Contact Information',
+        'title' => 'Contact',
+        'title_singular' => 'Contact',
         'category' => [
             'fields' => [
                 'permanent' => 'Permanent Address',
@@ -724,8 +724,8 @@ return [
             'country_id_helper' => '',
             'contact_person_name' => 'Name',
             'contact_person_name_helper' => '',
-            'contact_person_contact' => 'Mobile Number',
-            'contact_person_contact_helper' => '',
+            'contact_person_number' => 'Mobile Number',
+            'contact_person_number_helper' => '',
             'father_name' => 'Father\'s Name',
             'father_name_helper' => '',
             'father_country_id' => 'Citizenship',
@@ -751,8 +751,8 @@ return [
         ],
     ],
     'education' => [
-        'title' => 'Education Information',
-        'title_singular' => 'Education Information',
+        'title' => 'Education',
+        'title_singular' => 'Education',
         'category' => [
             'info' => [
                 'equivalenceInfo' => '(Required For Foreign Universities)',
@@ -779,7 +779,7 @@ return [
             'ad' => 'AD',
             'ad_helper' => '',
             'transcript_issue_date' => 'Transcript/Marksheet Issue Date',
-            'transcript_issue_date' => '',
+            'transcript_issue_date_helper' => '',
             'transcript' => 'Transcript/Marksheet',
             'transcript_helper' => '',
             'character' => 'Character Certificate',
@@ -797,8 +797,8 @@ return [
         ],
     ],
     'training' => [
-        'title' => 'Training Information',
-        'title_singular' => 'Training Information',
+        'title' => 'Training',
+        'title_singular' => 'Training',
         'fields' => [
             'id' => 'ID',
             'id_helper' => '',
@@ -806,7 +806,7 @@ return [
             'subject_helper' => '',
             'percentage' => 'Percentage',
             'percentage_helper' => '',
-            'training_institute' => 'Institute',
+            'training_institute' => 'Training Institute',
             'training_institute_helper' => '',
             'grade' => 'Grade',
             'grade_helper' => '',
@@ -833,8 +833,8 @@ return [
         ],
     ],
     'experience' => [
-        'title' => 'Experience Information',
-        'title_singular' => 'Experience Information',
+        'title' => 'Experience',
+        'title_singular' => 'Experience',
         'fields' => [
             'id' => 'ID',
             'id_helper' => '',
@@ -871,11 +871,11 @@ return [
         ],
     ],
     'application' => [
-        'title' => 'Application Lists',
-        'title_singular' => 'Application List',
+        'title' => 'Vacancies',
+        'title_singular' => 'Vacancy',
         'info' => [
             'alreadyAppliedInfo' => 'Sorry! You have already applied for this advertisement.',
-            'samabeshiGroupSelectionInfo' => 'When submitting an application in the advertisement, please make sure to select only the appropriate samabeshi group that you have filled in correctly',
+            'samabeshiGroupSelectionInfo' => 'When submitting an application in the advertisement, please make sure to select only the appropriate samabeshi groups.',
             'ladiesErrorInfo' => 'Male users are not allowed to apply for the "Ladies" group.',
             'samabeshiErrorInfo' => 'Please Upload Samabeshi Document First',
             'zeroAmountError' => 'Payable amount cannot be zero. Select Samabeshi Groups.',
@@ -883,6 +883,10 @@ return [
             'invalidAgeInfo' => 'Oops !!! Looks like your age doesnot meet the age requirement for this application.',
             'qualificationInfo' => 'Qualification required for this advertisement doesnot match your qualification.',
             'desinationNotFoundInfo' => 'Designation not found for the user\'s gender.',
+        ],
+        'dropdowns' => [
+            'officer' => 'Office Level',
+            'assistant' => 'Assistant Level',
         ],
         'fields' => [
             'id' => 'ID',

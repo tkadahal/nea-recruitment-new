@@ -60,7 +60,9 @@
                 <a href="{{ route('application.index') }}" data-toggle="tab" aria-controls="step7" role="tab"
                     aria-expanded="{{ request()->routeIs('application.*') ? 'true' : 'false' }}">
                     <span class="round-tab">7</span>
-                    <i>बिज्ञापन</i>
+                    <i>
+                        {{ trans('global.application.title_singular') }}
+                    </i>
                 </a>
             </li>
             <li role="presentation" class="{{ request()->routeIs('payment.*') ? 'active' : 'disabled' }}">

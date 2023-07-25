@@ -21,7 +21,8 @@
 
             @if (request()->has('payment_status'))
                 @if (request()->get('payment_status') == 'success')
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert"
+                        style="background-color: #47eb07;">
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         <p>Payment successful. Please find below the application details.</p>
                     </div>
