@@ -2,53 +2,49 @@
 @extends('layouts.app')
 
 @section('content')
-    <div role="tabpanel" class="tab-pane {{ request()->routeIs('application.*') ? 'active' : '' }}" id="educationDetail">
-
-        <div class="card pt-2">
-            <div class="row g-3 m-1 pb-2 justify-content-end">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <select name="category" id="category" class="form-control select2">
-                            <option value="" selected="selected">
-                                {{ trans('global.pleaseSelect') }}
-                            </option>
-                            <option value="0">
-                                {{ trans('global.application.dropdowns.officer') }}
-                            </option>
-                            <option value="1">
-                                {{ trans('global.application.dropdowns.assistant') }}
-                            </option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-4" id="examCenterContainer">
-                    <div class="form-group">
-                        <select name="examCenter" id="examCenter" class="form-control select2">
-                            @foreach ($examCenters as $id => $examCenter)
-                                <option value="{{ $id }}">
-                                    {{ $examCenter }}
-                                </option>
-                            @endforeach
-                        </select>
-                    </div>
+    <div class="card-body {{ request()->routeIs('application.*') ? 'active' : '' }}" id="application">
+        <div class="row g-3 m-1 pb-2 justify-content-end">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <select name="category" id="category" class="form-control select2">
+                        <option value="" selected="selected">
+                            {{ trans('global.pleaseSelect') }}
+                        </option>
+                        <option value="0">
+                            {{ trans('global.application.dropdowns.officer') }}
+                        </option>
+                        <option value="1">
+                            {{ trans('global.application.dropdowns.assistant') }}
+                        </option>
+                    </select>
                 </div>
             </div>
-
-            <div class="card-body">
-                <div class="wizard-box">
-                    @if (count($advertisements))
-                        <div class="card-section">
-                            <div class="p-3">
-                                <div class="row">
-                                    <div class="col">
-                                        @include('user.applications.nav.application')
-                                    </div>
-                                </div>
+            <div class="col-md-4" id="examCenterContainer">
+                <div class="form-group">
+                    <select name="examCenter" id="examCenter" class="form-control select2">
+                        @foreach ($examCenters as $id => $examCenter)
+                            <option value="{{ $id }}">
+                                {{ $examCenter }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="wizard-box">
+            @if (count($advertisements))
+                <div class="card-section">
+                    <div class="p-3">
+                        <div class="row">
+                            <div class="col">
+                                @include('user.applications.nav.application')
                             </div>
                         </div>
-                    @endif
+                    </div>
                 </div>
-            </div>
+            @endif
         </div>
     </div>
 @endsection

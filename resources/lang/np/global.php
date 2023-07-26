@@ -899,7 +899,7 @@ return [
             'group_id_helper' => '',
             'sub_group_id' => 'उप समूह',
             'sub_group_id_helper' => '',
-            'category_id' => 'श्रेणी',
+            'category_id' => 'सेवा',
             'category_id_helper' => '',
             'level_id' => 'स्तर',
             'level_id_helper' => '',

@@ -1,86 +1,84 @@
 @extends('layouts.app')
 
 @section('content')
-<div role="tabpanel" class="tab-pane {{ request()->routeIs('educationDetail') ? 'active' : '' }}" id="educationDetail">
+    <div class="card-body {{ request()->routeIs('application.*') ? 'active' : '' }}" id="application">
 
-    <div class="card">
-
-        <div class="card-body">
-
-            @if ($errors->has('error'))
+        @if ($errors->has('error'))
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 {{ $errors->first('error') }}
             </div>
-            @endif
+        @endif
 
-            <form class="wizard-box" action="{{ route('application.update', $application->advertisement->id) }}"
-                method="POST">
-                @csrf
-                @method('put')
-                <div class="card-section">
-                    <h3>विज्ञापन विवरण</h3>
-                    <div class="p-3">
-                        <div class="row g-3 m-2">
-                            <input type="hidden" name="application_id" id="application_id"
-                                value="{{ $application->id }}">
-                            <div class="col-md-4">
-                                <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
-                                    विज्ञापन नं :
-                                </h6>
-                                <p class="mt-0">
-                                    {{ $application->advertisement->advertisement_num ?? '' }}
-                                </p>
+        <form class="wizard-box" action="{{ route('application.update', $application->advertisement->id) }}" method="POST">
+            @csrf
+            @method('put')
+            <div class="card-section">
+                <h3>
+                    {{ trans('global.application.fields.advertisement_detail') }}
+                </h3>
+                <div class="p-3">
+                    <div class="row g-3 m-2">
+                        <input type="hidden" name="application_id" id="application_id" value="{{ $application->id }}">
+                        <div class="col-md-4">
+                            <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
+                                {{ trans('global.application.fields.advertisement_num') }} :
+                            </h6>
+                            <p class="mt-0">
+                                {{ $application->advertisement->advertisement_num ?? '' }}
+                            </p>
 
-                                <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
-                                    सेवा / समूह / उपसमूह :
-                                </h6>
-                                <p class="mt-0">
-                                    {{ $application->advertisement->category->title ?? '' }} / {{
-                                    $application->advertisement->group->title ?? '' }} /
-                                    {{ $application->advertisement->subGroup->title ?? '' }}
-                                </p>
+                            <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
+                                {{ trans('global.application.fields.category_id') }}
+                                / {{ trans('global.application.fields.group_id') }}
+                                / {{ trans('global.application.fields.sub_group_id') }} :
+                            </h6>
+                            <p class="mt-0">
+                                {{ $application->advertisement->category->title ?? '' }} /
+                                {{ $application->advertisement->group->title ?? '' }} /
+                                {{ $application->advertisement->subGroup->title ?? '' }}
+                            </p>
 
-                                <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
-                                    तह :
-                                </h6>
-                                <p class="mt-0">
-                                    {{ $application->advertisement->level->title ?? '' }}
-                                </p>
+                            <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
+                                {{ trans('global.application.fields.level_id') }} :
+                            </h6>
+                            <p class="mt-0">
+                                {{ $application->advertisement->level->title ?? '' }}
+                            </p>
 
-                                <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
-                                    योग्यता :
-                                </h6>
-                                <p class="mt-0">
-                                    {{ $application->advertisement->qualification->title ?? '' }}
-                                </p>
+                            <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
+                                {{ trans('global.application.fields.qualification_id') }} :
+                            </h6>
+                            <p class="mt-0">
+                                {{ $application->advertisement->qualification->title ?? '' }}
+                            </p>
 
-                                <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
-                                    विज्ञापन नं :
-                                </h6>
-                                <p class="mt-0">
-                                    {{ $application->advertisement_num ?? '' }}
-                                </p>
-                            </div>
-                            <div class="col-md-8">
-                                <p class="text-danger" style="font-size: 1.2em;">
-                                    {{ trans('global.application.info.samabeshiGroupSelectionInfo') }}
-                                </p>
+                            <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
+                                विज्ञापन नं :
+                            </h6>
+                            <p class="mt-0">
+                                {{ $application->advertisement_num ?? '' }}
+                            </p>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="text-danger" style="font-size: 1.2em;">
+                                {{ trans('global.application.info.samabeshiGroupSelectionInfo') }}
+                            </p>
 
-                                <div id="samabeshiGroupsContainer"
-                                    data-advertisement-id="{{ $application->advertisement->id }}">
-                                    <div class="row">
-                                        <p style="color:#990000" style="font-size: 1.2em;"><i>
-                                                <label class="form-check-label" for="">
-                                                    परिक्षा दस्तुर
-                                                </label>
-                                                <input type="text" name="advAmount" id="advAmount" readonly
-                                                    value="{{ $amount ?? '0' }}"
-                                                    style="background:rgba(0,0,0,0); border: none; " />
-                                            </i>
-                                        </p>
-                                        <div class="col">
-                                            @foreach ($samabeshiGroups as $id => $samabeshiGroup)
+                            <div id="samabeshiGroupsContainer"
+                                data-advertisement-id="{{ $application->advertisement->id }}">
+                                <div class="row">
+                                    <p style="color:#990000" style="font-size: 1.2em;"><i>
+                                            <label class="form-check-label" for="">
+                                                {{ trans('global.application.fields.exam_fee') }} :
+                                            </label>
+                                            <input type="text" name="advAmount" id="advAmount" readonly
+                                                value="{{ $amount ?? '0' }}"
+                                                style="background:rgba(0,0,0,0); border: none; " />
+                                        </i>
+                                    </p>
+                                    <div class="col">
+                                        @foreach ($samabeshiGroups as $id => $samabeshiGroup)
                                             <div class="alert alert-primary d-none" id="custom-error" role="alert">
                                                 {{ trans('global.application.info.ladiesErrorInfo') }}
                                             </div>
@@ -96,29 +94,27 @@
                                                     <span>{{ $samabeshiGroup['title'] }}</span>
                                                 </label>
                                             </div>
-                                            @endforeach
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary" id="save-next-btn">Save & Next</button>
-                </div>
-            </form>
-        </div>
+            </div>
+            <div class="col-12 d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary" id="save-next-btn">Save & Next</button>
+            </div>
+        </form>
     </div>
-</div>
 @endsection
 
 @section('styles')
 @endsection
 
 @section('scripts')
-<script>
-    $(document).ready(function() {
+    <script>
+        $(document).ready(function() {
             var csrfToken = $('meta[name="csrf-token"]').attr('content');
             var userSamabeshiMedia = {!! $userSamabeshiMedia->toJson() !!};
 
@@ -180,5 +176,5 @@
                 handleErrors(selectedGroups);
             });
         });
-</script>
+    </script>
 @endsection

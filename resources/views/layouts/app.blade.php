@@ -341,7 +341,19 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12">
                     @include('user.navigation.nav-bar')
-                    @yield('content')
+                    <div role="tabpanel">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col d-flex justify-content-end mb-1">
+                                    नेपालीमा लेख्नु परेमा सहायताको लागि &nbsp;
+                                    <a href="https://www.google.com/inputtools/try/" target="_blank">
+                                        यहाँ थिच्नुहोस्
+                                    </a>
+                                </div>
+                            </div>
+                            @yield('content')
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
