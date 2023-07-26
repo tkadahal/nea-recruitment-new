@@ -59,7 +59,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $qualification,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($qualification->id)
                                     )

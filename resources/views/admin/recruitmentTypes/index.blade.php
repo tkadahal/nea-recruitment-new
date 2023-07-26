@@ -53,7 +53,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $recruitmentType,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($recruitmentType->id)
                                     )

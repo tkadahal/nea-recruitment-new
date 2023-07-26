@@ -53,7 +53,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $sewa,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($sewa->id)
                                     )

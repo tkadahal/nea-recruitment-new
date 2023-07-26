@@ -53,7 +53,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $examCenter,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($examCenter->id)
                                     )

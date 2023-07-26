@@ -59,7 +59,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $district,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($district->id)
                                     )

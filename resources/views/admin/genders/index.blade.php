@@ -53,7 +53,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $gender,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($gender->id)
                                     )

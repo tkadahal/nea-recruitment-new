@@ -59,7 +59,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $subGroup,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($subGroup->id)
                                     )

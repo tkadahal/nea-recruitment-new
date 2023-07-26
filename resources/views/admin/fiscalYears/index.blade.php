@@ -56,7 +56,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $fiscalYear,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($fiscalYear->id)
                                     )

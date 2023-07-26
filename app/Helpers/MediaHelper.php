@@ -14,9 +14,9 @@ class MediaHelper
         $uuid = (string) Str::uuid();
         $filename = $file->getClientOriginalName();
 
-        $path = 'public/'.$modelName.'/'.$uuid;
+        $path = 'public/' . $modelName . '/' . $uuid;
 
-        if (! File::exists(storage_path("app/{$path}"))) {
+        if (!File::exists(storage_path("app/{$path}"))) {
             File::makeDirectory(storage_path("app/{$path}"), 0777, true);
         }
 
@@ -38,9 +38,9 @@ class MediaHelper
 
     public static function deleteFile($queryFile): bool
     {
-        $directory = storage_path('app/public/').$queryFile->collection.'/'.$queryFile->file_hash;
+        $directory = storage_path('app/public/') . $queryFile->collection . '/' . $queryFile->file_hash;
 
-        self::deleteIfExists($directory.'/'.$queryFile->file_name);
+        self::deleteIfExists($directory . '/' . $queryFile->file_name);
 
         if (is_dir($directory) && count(scandir($directory)) == 2) {
             rmdir($directory);

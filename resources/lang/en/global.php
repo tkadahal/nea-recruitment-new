@@ -873,8 +873,8 @@ return [
         ],
     ],
     'application' => [
-        'title' => 'Vacancies',
-        'title_singular' => 'Vacancy',
+        'title' => 'Applications',
+        'title_singular' => 'Application',
         'info' => [
             'alreadyAppliedInfo' => 'Sorry! You have already applied for this advertisement.',
             'samabeshiGroupSelectionInfo' => 'When submitting an application in the advertisement, please make sure to select only the appropriate samabeshi groups.',
@@ -950,10 +950,10 @@ return [
             'paymentSuccess' => 'Payment successful. Please find below the application details.',
             'paymentFailure' => 'Sorry !!! something went wrong processing your payment. Please verify the payment or select other
                         payment options.',
-        ],
-        'dropdowns' => [
-            'officer' => 'Office Level',
-            'assistant' => 'Assistant Level',
+            'samabeshiInfo' => 'Samabeshi Groups that you have applied to.',
+            'samabeshiChangeInfo' => 'Want to change Samabeshi Groups ???',
+            'payableAmountInfo' => 'Total Payable Amt',
+            'paymentVendorSelectionInfo' => 'To make payment please select one',
         ],
         'fields' => [
             'id' => 'ID',

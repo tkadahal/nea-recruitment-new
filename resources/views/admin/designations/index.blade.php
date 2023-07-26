@@ -71,7 +71,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $designation,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($designation->id)
                                     )

@@ -53,7 +53,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $mediaType,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($mediaType->id)
                                     )

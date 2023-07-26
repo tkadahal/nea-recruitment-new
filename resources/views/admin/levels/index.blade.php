@@ -65,7 +65,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $level,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($level->id)
                                     )

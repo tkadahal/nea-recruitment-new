@@ -32,19 +32,23 @@
         @endif
         <div class="wizard-box">
             <div class="card-section">
-                <h3>शुल्क भुक्तानी</h3>
+                <h3>
+                    {{ trans('global.payment.title_singular') }}
+                </h3>
                 <div class="p-3">
                     <div class="row g-3 m-2">
                         <div class="col-md-4">
                             <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
-                                विज्ञापन नं :
+                                {{ trans('global.payment.fields.advertisement_num') }} :
                             </h6>
                             <p class="mt-0">
                                 {{ $application->advertisement->advertisement_num }}
                             </p>
 
                             <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
-                                सेवा / समूह / उपसमूह :
+                                {{ trans('global.payment.fields.category_id') }}
+                                / {{ trans('global.payment.fields.group_id') }}
+                                / {{ trans('global.payment.fields.sub_group_id') }} :
                             </h6>
                             <p class="mt-0">
                                 {{ $application->advertisement->category->title }} /
@@ -53,25 +57,25 @@
                             </p>
 
                             <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
-                                योग्यता :
+                                {{ trans('global.application.fields.level_id') }} :
+                            </h6>
+                            <p class="mt-0">
+                                {{ $application->advertisement->level->title }}
+                            </p>
+
+                            <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
+                                {{ trans('global.application.fields.qualification_id') }} :
                             </h6>
                             <p class="mt-0">
                                 {{ $application->advertisement->qualification->title }}
                             </p>
-
-                            <h6 class="mb-1" style="font-weight: bold; text-decoration: underline;">
-                                विज्ञापन नं :
-                            </h6>
-                            <p class="mt-0">
-                                {{ $application->advertisement->advertisement_num }}
-                            </p>
                         </div>
                         <div class="col-md-8">
                             <p class="text-primary" style="font-size: 1.2em;">
-                                सम्मिलित हुन छनोट गर्नु भएको समुह
+                                {{ trans('global.payment.info.samabeshiInfo') }}
                             </p>
                             <a href="{{ route('application.edit', $application->id) }}" style="color: #c014f9">
-                                समूह परिवर्तन गर्न चाहनुहुन्छ ???
+                                {{ trans('global.payment.info.samabeshiChangeInfo') }}
                             </a>
                             <div class="row">
                                 <div class="col-md-6">
@@ -101,7 +105,7 @@
                                         style="font-size: 2em; text-align: justify; text-align-last: end; margin-left: 10px;">
                                         <i>
                                             <label class="form-check-label" for="">
-                                                जम्मा आवेदन शुल्क:
+                                                {{ trans('global.payment.info.payableAmountInfo') }} :
                                             </label>
                                             {{ $application->applicationFee }}
                                         </i>
@@ -111,7 +115,7 @@
                             <div class="container">
                                 <div class="row mt-3">
                                     <p class="text-danger" style="font-size: 1.2em;">
-                                        शुल्क भुक्तानी गर्न कुनै एक माध्यम छान्नुहोस्
+                                        {{ trans('global.payment.info.paymentVendorSelectionInfo') }}
                                     </p>
                                     <div class="bill-medium">
                                         @foreach ($paymentVendors as $paymentVendor)

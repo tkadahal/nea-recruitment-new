@@ -53,7 +53,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $samabeshiGroup,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($samabeshiGroup->id)
                                     )

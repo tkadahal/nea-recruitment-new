@@ -53,7 +53,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $category,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($category->id)
                                     )

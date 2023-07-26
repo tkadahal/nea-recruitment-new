@@ -53,7 +53,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $province,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($province->id)
                                     )

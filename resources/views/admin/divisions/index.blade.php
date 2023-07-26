@@ -53,7 +53,7 @@
                                         'toggle-button',
                                         [
                                             'model' => $division,
-                                            'field' => 'published',
+                                            'field' => 'active',
                                         ],
                                         key($division->id)
                                     )
