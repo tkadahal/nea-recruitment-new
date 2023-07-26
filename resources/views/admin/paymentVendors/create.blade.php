@@ -250,6 +250,81 @@
                         {{ trans('global.paymentVendor.fields.secret_key_helper') }}
                     </p>
                 </div>
+
+                <div class="row">
+                    <hr>
+                    <div class="col-6">
+                        <div class="form-group {{ $errors->has('image') ? 'has-error' : '' }}">
+                            <label class="required" for="image">
+                                {{ trans('global.paymentVendor.fields.image') }}
+                            </label>
+                            <span class="text-primary">
+                                <em class="text-decoration-italic">
+                                    (Update or Replace)
+                                </em>
+                            </span>
+                            <input type="file" class="form-control" id="image" name="image"
+                                value="{{ old('image', isset($paymentVendor) ? $paymentVendor->image : '') }}"
+                                style="display: block; border-color:#ccc">
+                            @if ($errors->has('image'))
+                                <p class="help-block">
+                                    {{ $errors->first('image') }}
+                                </p>
+                            @endif
+                            <p class="helper-block">
+                                {{ trans('global.paymentVendor.fields.image_helper') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 d-flex justify-content-end">
+                        @if (isset($paymentVendor) && count($paymentVendor->media))
+                            <a target="_blank" href="{{ $paymentVendor->media->short_url }}"
+                                style="display: flex; align-items: center;">
+                                <i class="fas fa-file-pdf fa-3x text-primary" aria-hidden="true"></i>
+                                <input type="hidden" name="old_image" value="{{ $paymentVendor->media->short_url }}">
+                            </a>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="row">
+                    <hr>
+                    <div class="col-6">
+                        <div class="form-group {{ $errors->has('certificate') ? 'has-error' : '' }}">
+                            <label class="required" for="certificate">
+                                {{ trans('global.paymentVendor.fields.certificate') }}
+                            </label>
+                            <span class="text-primary">
+                                <em class="text-decoration-italic">
+                                    (Update or Replace)
+                                </em>
+                            </span>
+                            <input type="file" class="form-control" id="certificate" name="certificate"
+                                value="{{ old('certificate', isset($paymentVendor) ? $paymentVendor->certificate : '') }}"
+                                style="display: block; border-color:#ccc">
+                            @if ($errors->has('certificate'))
+                                <p class="help-block">
+                                    {{ $errors->first('certificate') }}
+                                </p>
+                            @endif
+                            <p class="helper-block">
+                                {{ trans('global.paymentVendor.fields.certificate_helper') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 d-flex justify-content-end">
+                        @if (isset($paymentVendor) && count($paymentVendor->media))
+                            <a target="_blank" href="{{ $paymentVendor->media->short_url }}"
+                                style="display: flex; align-items: center;">
+                                <i class="fas fa-file-pdf fa-3x text-primary" aria-hidden="true"></i>
+                                <input type="hidden" name="old_certificate"
+                                    value="{{ $paymentVendor->media->short_url }}">
+                            </a>
+                        @endif
+                    </div>
+                </div>
             </div>
 
             <div class="card-footer">

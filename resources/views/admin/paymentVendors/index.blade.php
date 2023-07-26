@@ -21,6 +21,19 @@
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped table-hover datatable datatable-paymentVendor">
                                 <tbody>
+                                    <tr>
+                                        <td>
+                                            {{ trans('global.edit') }}
+                                        </td>
+                                        <td>
+                                            @can('paymentVendor_edit')
+                                                <a href="{{ route('admin.paymentVendor.edit', $paymentVendor) }}"
+                                                    class="btn btn-info btn-sm">
+                                                    {{ trans('global.edit') }}
+                                                </a>
+                                            @endcan
+                                        </td>
+                                    </tr>
 
                                     <tr>
                                         <td>

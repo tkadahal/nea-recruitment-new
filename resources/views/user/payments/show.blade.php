@@ -122,10 +122,11 @@
                                             @if ($paymentVendor->payment_gateway === 'imepay')
                                                 <div class="bill-item">
                                                     <a href="{{ route('imepay.payments', $application->uuid) }}">
-                                                        <img src="{{ asset('storage/logos/paymentVendors/imePay.svg') }}"
-                                                            style="width: 100px; height: 100px;">
+                                                        @foreach ($paymentVendor->media as $mediaItem)
+                                                            {!! $mediaItem !!}
+                                                        @endforeach
                                                     </a>
-                                                    <p>IME Pay</p>
+                                                    <p>{{ $paymentVendor->name }}</p>
                                                     {{-- <img src="{{ asset('storage/logos/paymentVendors/imePay.svg') }}"
                                                     style="width: 100px">
                                                 <p>Ime Pay</p> --}}
@@ -136,20 +137,22 @@
                                             @if ($paymentVendor->payment_gateway === 'connectips')
                                                 <div class="bill-item">
                                                     <a href="{{ route('connectips.payments', [$application->uuid]) }}">
-                                                        <img src="{{ asset('storage/logos/paymentVendors/connectIps.svg') }}"
-                                                            style="width: 100px">
+                                                        @foreach ($paymentVendor->media as $mediaItem)
+                                                            {!! $mediaItem !!}
+                                                        @endforeach
                                                     </a>
-                                                    <p>Connect Ips</p>
+                                                    <p>{{ $paymentVendor->name }}</p>
                                                 </div>
                                             @endif
                                             {{-- @foreach ($paymentVendors as $paymentVendor) --}}
                                             @if ($paymentVendor->payment_gateway === 'esewa')
                                                 <div class="bill-item">
                                                     <a href="{{ route('esewa.payments', $application->uuid) }}">
-                                                        <img src="{{ asset('storage/logos/paymentVendors/esewa.svg') }}"
-                                                            style="width: 100px">
+                                                        @foreach ($paymentVendor->media as $mediaItem)
+                                                            {!! $mediaItem !!}
+                                                        @endforeach
                                                     </a>
-                                                    <p>Esewa</p>
+                                                    <p>{{ $paymentVendor->name }}</p>
                                                 </div>
                                             @endif
                                             {{-- @foreach ($paymentVendors as $paymentVendor) --}}
@@ -159,11 +162,12 @@
                                                         method="POST" class="d-inline">
                                                         @csrf
                                                         <button type="submit" class="btn btn-link">
-                                                            <img src="{{ asset('storage/logos/paymentVendors/khalti.svg') }}"
-                                                                style="width: 100px">
+                                                            @foreach ($paymentVendor->media as $mediaItem)
+                                                                {!! $mediaItem !!}
+                                                            @endforeach
                                                         </button>
                                                     </form>
-                                                    <p>Khalti</p>
+                                                    <p>{{ $paymentVendor->name }}</p>
                                                 </div>
                                             @endif
                                         @endforeach
@@ -201,7 +205,8 @@
             padding: 22px;
             border: 1px solid #E6E6E6;
             border-radius: 100%;
-            max-width: 100px;
+            width: 100px;
+            height: 100px;
             transition: 0.3s ease-in-out;
         }
 

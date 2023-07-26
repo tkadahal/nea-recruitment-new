@@ -4,17 +4,18 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\User\Payments;
 
-use App\Helpers\PaymentHelper;
-use App\Http\Controllers\Controller;
-use App\Models\Application;
-use App\Models\Payment;
-use App\Services\PaymentService;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
-use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use GuzzleHttp\Client;
+use App\Models\Payment;
+use App\Models\Application;
+use Illuminate\Http\Request;
+use App\Models\PaymentVendor;
+use App\Helpers\PaymentHelper;
+use App\Services\PaymentService;
+use Monolog\Handler\StreamHandler;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use GuzzleHttp\Exception\GuzzleException;
 
 class EsewaController extends Controller
 {
@@ -28,15 +29,17 @@ class EsewaController extends Controller
     {
         $this->paymentService = $paymentService;
 
+        $paymentVendor = PaymentVendor::where('payment_gateway', 'esewa')->first();
+
         $log_path = storage_path() . '/logs/esewa/' . date('Y-m-d') . '.log';
 
         $this->_logger = new Logger('ESEWA LOG :' . date('Y-d-m H:i:s'));
         $this->_logger->pushHandler(new StreamHandler($log_path, Logger::INFO));
 
-        $this->_api_context_esewa['payment_gateway'] = 'esewa';
-        $this->_api_context_esewa['merchant_code'] = 'EPAYTEST';
-        $this->_api_context_esewa['payment_url'] = 'https://uat.esewa.com.np/epay/main';
-        $this->_api_context_esewa['verify_url'] = 'https://uat.esewa.com.np/epay/transrec';
+        $this->_api_context_esewa['payment_gateway'] = $paymentVendor->payment_gateway;
+        $this->_api_context_esewa['merchant_code'] = $paymentVendor->merchant_code;
+        $this->_api_context_esewa['payment_url'] = $paymentVendor->token_url;
+        $this->_api_context_esewa['verify_url'] = $paymentVendor->verify_url;
     }
 
     public function initializeEsewa($applicationRefID)

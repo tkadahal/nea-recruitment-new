@@ -12,244 +12,361 @@
                 {{ trans('global.create') }} {{ trans('global.paymentVendor.title_singular') }}
             </div>
             <div class="card-body">
-                <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
-                    <label class="required" for="name">
-                        {{ trans('global.paymentVendor.fields.name') }}
-                    </label>
-                    <input type="text" id="name" name="name" class="form-control"
-                        value="{{ old('name', isset($paymentVendor) ? $paymentVendor->name : '') }}">
-                    @if ($errors->has('name'))
-                        <p class="help-block">
-                            {{ $errors->first('name') }}
+                @if ($paymentVendor->name)
+                    <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                        <label class="required" for="name">
+                            {{ trans('global.paymentVendor.fields.name') }}
+                        </label>
+                        <input type="text" id="name" name="name" class="form-control"
+                            value="{{ old('name', isset($paymentVendor) ? $paymentVendor->name : '') }}">
+                        @if ($errors->has('name'))
+                            <p class="help-block">
+                                {{ $errors->first('name') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.name_helper') }}
                         </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.name_helper') }}
-                    </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->payment_gateway)
+                    <div class="form-group {{ $errors->has('payment_gateway') ? 'has-error' : '' }}">
+                        <label class="required" for="payment_gateway">
+                            {{ trans('global.paymentVendor.fields.payment_gateway') }}
+                        </label>
+                        <input type="text" id="payment_gateway" name="payment_gateway" class="form-control"
+                            value="{{ old('payment_gateway', isset($paymentVendor) ? $paymentVendor->payment_gateway : '') }}">
+                        @if ($errors->has('payment_gateway'))
+                            <p class="help-block">
+                                {{ $errors->first('payment_gateway') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.payment_gateway_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->merchant_id)
+                    <div class="form-group {{ $errors->has('merchant_id') ? 'has-error' : '' }}">
+                        <label class="required" for="merchant_id">
+                            {{ trans('global.paymentVendor.fields.merchant_id') }}
+                        </label>
+                        <input type="text" id="merchant_id" name="merchant_id" class="form-control"
+                            value="{{ old('merchant_id', isset($paymentVendor) ? $paymentVendor->merchant_id : '') }}">
+                        @if ($errors->has('merchant_id'))
+                            <p class="help-block">
+                                {{ $errors->first('merchant_id') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.merchant_id_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->merchant_code)
+                    <div class="form-group {{ $errors->has('merchant_code') ? 'has-error' : '' }}">
+                        <label class="required" for="merchant_code">
+                            {{ trans('global.paymentVendor.fields.merchant_code') }}
+                        </label>
+                        <input type="text" id="merchant_code" name="merchant_code" class="form-control"
+                            value="{{ old('merchant_code', isset($paymentVendor) ? $paymentVendor->merchant_code : '') }}">
+                        @if ($errors->has('merchant_code'))
+                            <p class="help-block">
+                                {{ $errors->first('merchant_code') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.merchant_code_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->app_id)
+                    <div class="form-group {{ $errors->has('app_id') ? 'has-error' : '' }}">
+                        <label class="required" for="app_id">
+                            {{ trans('global.paymentVendor.fields.app_id') }}
+                        </label>
+                        <input type="text" id="app_id" name="app_id" class="form-control"
+                            value="{{ old('app_id', isset($paymentVendor) ? $paymentVendor->app_id : '') }}">
+                        @if ($errors->has('app_id'))
+                            <p class="help-block">
+                                {{ $errors->first('app_id') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.app_id_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->app_name)
+                    <div class="form-group {{ $errors->has('app_name') ? 'has-error' : '' }}">
+                        <label class="required" for="app_name">
+                            {{ trans('global.paymentVendor.fields.app_name') }}
+                        </label>
+                        <input type="text" id="app_name" name="app_name" class="form-control"
+                            value="{{ old('app_name', isset($paymentVendor) ? $paymentVendor->app_name : '') }}">
+                        @if ($errors->has('app_name'))
+                            <p class="help-block">
+                                {{ $errors->first('app_name') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.app_name_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->token_url)
+                    <div class="form-group {{ $errors->has('token_url') ? 'has-error' : '' }}">
+                        <label class="required" for="token_url">
+                            {{ trans('global.paymentVendor.fields.token_url') }}
+                        </label>
+                        <input type="text" id="token_url" name="token_url" class="form-control"
+                            value="{{ old('token_url', isset($paymentVendor) ? $paymentVendor->token_url : '') }}">
+                        @if ($errors->has('token_url'))
+                            <p class="help-block">
+                                {{ $errors->first('token_url') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.token_url_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->checkout_url)
+                    <div class="form-group {{ $errors->has('checkout_url') ? 'has-error' : '' }}">
+                        <label class="required" for="checkout_url">
+                            {{ trans('global.paymentVendor.fields.checkout_url') }}
+                        </label>
+                        <input type="text" id="checkout_url" name="checkout_url" class="form-control"
+                            value="{{ old('checkout_url', isset($paymentVendor) ? $paymentVendor->checkout_url : '') }}">
+                        @if ($errors->has('checkout_url'))
+                            <p class="help-block">
+                                {{ $errors->first('checkout_url') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.checkout_url_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->verify_url)
+                    <div class="form-group {{ $errors->has('verify_url') ? 'has-error' : '' }}">
+                        <label class="required" for="verify_url">
+                            {{ trans('global.paymentVendor.fields.verify_url') }}
+                        </label>
+                        <input type="text" id="verify_url" name="verify_url" class="form-control"
+                            value="{{ old('verify_url', isset($paymentVendor) ? $paymentVendor->verify_url : '') }}">
+                        @if ($errors->has('verify_url'))
+                            <p class="help-block">
+                                {{ $errors->first('verify_url') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.verify_url_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->recheck_url)
+                    <div class="form-group {{ $errors->has('recheck_url') ? 'has-error' : '' }}">
+                        <label class="required" for="recheck_url">
+                            {{ trans('global.paymentVendor.fields.recheck_url') }}
+                        </label>
+                        <input type="text" id="recheck_url" name="recheck_url" class="form-control"
+                            value="{{ old('recheck_url', isset($paymentVendor) ? $paymentVendor->recheck_url : '') }}">
+                        @if ($errors->has('recheck_url'))
+                            <p class="help-block">
+                                {{ $errors->first('recheck_url') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.recheck_url_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->username)
+                    <div class="form-group {{ $errors->has('username') ? 'has-error' : '' }}">
+                        <label class="required" for="username">
+                            {{ trans('global.paymentVendor.fields.username') }}
+                        </label>
+                        <input type="text" id="username" name="username" class="form-control"
+                            value="{{ old('username', isset($paymentVendor) ? $paymentVendor->username : '') }}">
+                        @if ($errors->has('username'))
+                            <p class="help-block">
+                                {{ $errors->first('username') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.username_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->verify_password)
+                    <div class="form-group {{ $errors->has('verify_password') ? 'has-error' : '' }}">
+                        <label class="required" for="verify_password">
+                            {{ trans('global.paymentVendor.fields.verify_password') }}
+                        </label>
+                        <input type="text" id="verify_password" name="verify_password" class="form-control"
+                            value="{{ old('verify_password', isset($paymentVendor) ? $paymentVendor->verify_password : '') }}">
+                        @if ($errors->has('verify_password'))
+                            <p class="help-block">
+                                {{ $errors->first('verify_password') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.verify_password_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->cert_password)
+                    <div class="form-group {{ $errors->has('cert_password') ? 'has-error' : '' }}">
+                        <label class="required" for="cert_password">
+                            {{ trans('global.paymentVendor.fields.cert_password') }}
+                        </label>
+                        <input type="text" id="cert_password" name="cert_password" class="form-control"
+                            value="{{ old('cert_password', isset($paymentVendor) ? $paymentVendor->cert_password : '') }}">
+                        @if ($errors->has('cert_password'))
+                            <p class="help-block">
+                                {{ $errors->first('cert_password') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.cert_password_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->public_key)
+                    <div class="form-group {{ $errors->has('public_key') ? 'has-error' : '' }}">
+                        <label class="required" for="public_key">
+                            {{ trans('global.paymentVendor.fields.public_key') }}
+                        </label>
+                        <input type="text" id="public_key" name="public_key" class="form-control"
+                            value="{{ old('public_key', isset($paymentVendor) ? $paymentVendor->public_key : '') }}">
+                        @if ($errors->has('public_key'))
+                            <p class="help-block">
+                                {{ $errors->first('public_key') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.public_key_helper') }}
+                        </p>
+                    </div>
+                @endif
+                @if ($paymentVendor->secret_key)
+                    <div class="form-group {{ $errors->has('secret_key') ? 'has-error' : '' }}">
+                        <label class="required" for="secret_key">
+                            {{ trans('global.paymentVendor.fields.secret_key') }}
+                        </label>
+                        <input type="text" id="secret_key" name="secret_key" class="form-control"
+                            value="{{ old('secret_key', isset($paymentVendor) ? $paymentVendor->secret_key : '') }}">
+                        @if ($errors->has('secret_key'))
+                            <p class="help-block">
+                                {{ $errors->first('secret_key') }}
+                            </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.paymentVendor.fields.secret_key_helper') }}
+                        </p>
+                    </div>
+                @endif
+
+                <div class="row">
+                    <hr>
+                    <div class="col-6">
+                        <div class="form-group {{ $errors->has('image') ? 'has-error' : '' }}">
+                            <label class="required" for="image">
+                                {{ trans('global.paymentVendor.fields.image') }}
+                            </label>
+                            <span class="text-primary">
+                                <em class="text-decoration-italic">
+                                    (Update or Replace)
+                                </em>
+                            </span>
+                            <input type="file" class="form-control" id="image" name="image"
+                                value="{{ old('image', isset($paymentVendor) ? $paymentVendor->image : '') }}"
+                                style="display: block; border-color:#ccc">
+                            @if ($errors->has('image'))
+                                <p class="help-block">
+                                    {{ $errors->first('image') }}
+                                </p>
+                            @endif
+                            <p class="helper-block">
+                                {{ trans('global.paymentVendor.fields.image_helper') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <div class="input-preview-container">
+                            @if ($paymentVendor->media->where('media_type_id', 14)->isNotEmpty())
+                                <input type="hidden"
+                                    value="{{ $paymentVendor->media->where('media_type_id', 14)->first()->file_name }}"
+                                    name="old_photo" id="old_photo" class="form-control" readonly>
+                                {!! $paymentVendor->media->where('media_type_id', 14)->first() !!}
+                            @else
+                                <img id="img-upload" style="max-width:100%; max-height:150px; margin-top:10px;">
+                            @endif
+                        </div>
+                    </div>
+
+                    {{-- <div class="col-6 d-flex justify-content-end">
+                        @if (isset($paymentVendor) && count($paymentVendor->media))
+                            <a target="_blank" href="{{ $paymentVendor->media->short_url }}"
+                                style="display: flex; align-items: center;">
+                                <i class="fas fa-file-pdf fa-3x text-primary" aria-hidden="true"></i>
+                                <input type="hidden" name="old_image" value="{{ $paymentVendor->media->short_url }}">
+                            </a>
+                        @endif
+                    </div> --}}
                 </div>
 
-                <div class="form-group {{ $errors->has('payment_gateway') ? 'has-error' : '' }}">
-                    <label class="required" for="payment_gateway">
-                        {{ trans('global.paymentVendor.fields.payment_gateway') }}
-                    </label>
-                    <input type="text" id="payment_gateway" name="payment_gateway" class="form-control"
-                        value="{{ old('payment_gateway', isset($paymentVendor) ? $paymentVendor->payment_gateway : '') }}">
-                    @if ($errors->has('payment_gateway'))
-                        <p class="help-block">
-                            {{ $errors->first('payment_gateway') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.payment_gateway_helper') }}
-                    </p>
-                </div>
+                <div class="row">
+                    <hr>
+                    <div class="col-6">
+                        <div class="form-group {{ $errors->has('certificate') ? 'has-error' : '' }}">
+                            <label class="required" for="certificate">
+                                {{ trans('global.paymentVendor.fields.certificate') }}
+                            </label>
+                            <span class="text-primary">
+                                <em class="text-decoration-italic">
+                                    (Update or Replace)
+                                </em>
+                            </span>
+                            <input type="file" class="form-control" id="certificate" name="certificate"
+                                value="{{ old('certificate', isset($paymentVendor) ? $paymentVendor->certificate : '') }}"
+                                style="display: block; border-color:#ccc">
+                            @if ($errors->has('certificate'))
+                                <p class="help-block">
+                                    {{ $errors->first('certificate') }}
+                                </p>
+                            @endif
+                            <p class="helper-block">
+                                {{ trans('global.paymentVendor.fields.certificate_helper') }}
+                            </p>
+                        </div>
+                    </div>
 
-                <div class="form-group {{ $errors->has('merchant_id') ? 'has-error' : '' }}">
-                    <label class="required" for="merchant_id">
-                        {{ trans('global.paymentVendor.fields.merchant_id') }}
-                    </label>
-                    <input type="text" id="merchant_id" name="merchant_id" class="form-control"
-                        value="{{ old('merchant_id', isset($paymentVendor) ? $paymentVendor->merchant_id : '') }}">
-                    @if ($errors->has('merchant_id'))
-                        <p class="help-block">
-                            {{ $errors->first('merchant_id') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.merchant_id_helper') }}
-                    </p>
-                </div>
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <div class="input-preview-container">
+                            @if ($paymentVendor->media->where('media_type_id', 15)->isNotEmpty())
+                                <input type="hidden"
+                                    value="{{ $paymentVendor->media->where('media_type_id', 15)->first()->file_name }}"
+                                    name="old_photo" id="old_photo" class="form-control" readonly>
+                                {!! $paymentVendor->media->where('media_type_id', 15)->first() !!}
+                            @else
+                                <img id="img-upload" style="max-width:100%; max-height:150px; margin-top:10px;">
+                            @endif
+                        </div>
+                    </div>
 
-                <div class="form-group {{ $errors->has('merchant_code') ? 'has-error' : '' }}">
-                    <label class="required" for="merchant_code">
-                        {{ trans('global.paymentVendor.fields.merchant_code') }}
-                    </label>
-                    <input type="text" id="merchant_code" name="merchant_code" class="form-control"
-                        value="{{ old('merchant_code', isset($paymentVendor) ? $paymentVendor->merchant_code : '') }}">
-                    @if ($errors->has('merchant_code'))
-                        <p class="help-block">
-                            {{ $errors->first('merchant_code') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.merchant_code_helper') }}
-                    </p>
-                </div>
-
-                <div class="form-group {{ $errors->has('app_id') ? 'has-error' : '' }}">
-                    <label class="required" for="app_id">
-                        {{ trans('global.paymentVendor.fields.app_id') }}
-                    </label>
-                    <input type="text" id="app_id" name="app_id" class="form-control"
-                        value="{{ old('app_id', isset($paymentVendor) ? $paymentVendor->app_id : '') }}">
-                    @if ($errors->has('app_id'))
-                        <p class="help-block">
-                            {{ $errors->first('app_id') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.app_id_helper') }}
-                    </p>
-                </div>
-
-                <div class="form-group {{ $errors->has('app_name') ? 'has-error' : '' }}">
-                    <label class="required" for="app_name">
-                        {{ trans('global.paymentVendor.fields.app_name') }}
-                    </label>
-                    <input type="text" id="app_name" name="app_name" class="form-control"
-                        value="{{ old('app_name', isset($paymentVendor) ? $paymentVendor->app_name : '') }}">
-                    @if ($errors->has('app_name'))
-                        <p class="help-block">
-                            {{ $errors->first('app_name') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.app_name_helper') }}
-                    </p>
-                </div>
-
-                <div class="form-group {{ $errors->has('token_url') ? 'has-error' : '' }}">
-                    <label class="required" for="token_url">
-                        {{ trans('global.paymentVendor.fields.token_url') }}
-                    </label>
-                    <input type="text" id="token_url" name="token_url" class="form-control"
-                        value="{{ old('token_url', isset($paymentVendor) ? $paymentVendor->token_url : '') }}">
-                    @if ($errors->has('token_url'))
-                        <p class="help-block">
-                            {{ $errors->first('token_url') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.token_url_helper') }}
-                    </p>
-                </div>
-
-                <div class="form-group {{ $errors->has('checkout_url') ? 'has-error' : '' }}">
-                    <label class="required" for="checkout_url">
-                        {{ trans('global.paymentVendor.fields.checkout_url') }}
-                    </label>
-                    <input type="text" id="checkout_url" name="checkout_url" class="form-control"
-                        value="{{ old('checkout_url', isset($paymentVendor) ? $paymentVendor->checkout_url : '') }}">
-                    @if ($errors->has('checkout_url'))
-                        <p class="help-block">
-                            {{ $errors->first('checkout_url') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.checkout_url_helper') }}
-                    </p>
-                </div>
-
-                <div class="form-group {{ $errors->has('verify_url') ? 'has-error' : '' }}">
-                    <label class="required" for="verify_url">
-                        {{ trans('global.paymentVendor.fields.verify_url') }}
-                    </label>
-                    <input type="text" id="verify_url" name="verify_url" class="form-control"
-                        value="{{ old('verify_url', isset($paymentVendor) ? $paymentVendor->verify_url : '') }}">
-                    @if ($errors->has('verify_url'))
-                        <p class="help-block">
-                            {{ $errors->first('verify_url') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.verify_url_helper') }}
-                    </p>
-                </div>
-
-                <div class="form-group {{ $errors->has('recheck_url') ? 'has-error' : '' }}">
-                    <label class="required" for="recheck_url">
-                        {{ trans('global.paymentVendor.fields.recheck_url') }}
-                    </label>
-                    <input type="text" id="recheck_url" name="recheck_url" class="form-control"
-                        value="{{ old('recheck_url', isset($paymentVendor) ? $paymentVendor->recheck_url : '') }}">
-                    @if ($errors->has('recheck_url'))
-                        <p class="help-block">
-                            {{ $errors->first('recheck_url') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.recheck_url_helper') }}
-                    </p>
-                </div>
-
-                <div class="form-group {{ $errors->has('username') ? 'has-error' : '' }}">
-                    <label class="required" for="username">
-                        {{ trans('global.paymentVendor.fields.username') }}
-                    </label>
-                    <input type="text" id="username" name="username" class="form-control"
-                        value="{{ old('username', isset($paymentVendor) ? $paymentVendor->username : '') }}">
-                    @if ($errors->has('username'))
-                        <p class="help-block">
-                            {{ $errors->first('username') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.username_helper') }}
-                    </p>
-                </div>
-
-                <div class="form-group {{ $errors->has('verify_password') ? 'has-error' : '' }}">
-                    <label class="required" for="verify_password">
-                        {{ trans('global.paymentVendor.fields.verify_password') }}
-                    </label>
-                    <input type="text" id="verify_password" name="verify_password" class="form-control"
-                        value="{{ old('verify_password', isset($paymentVendor) ? $paymentVendor->verify_password : '') }}">
-                    @if ($errors->has('verify_password'))
-                        <p class="help-block">
-                            {{ $errors->first('verify_password') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.verify_password_helper') }}
-                    </p>
-                </div>
-
-                <div class="form-group {{ $errors->has('cert_password') ? 'has-error' : '' }}">
-                    <label class="required" for="cert_password">
-                        {{ trans('global.paymentVendor.fields.cert_password') }}
-                    </label>
-                    <input type="text" id="cert_password" name="cert_password" class="form-control"
-                        value="{{ old('cert_password', isset($paymentVendor) ? $paymentVendor->cert_password : '') }}">
-                    @if ($errors->has('cert_password'))
-                        <p class="help-block">
-                            {{ $errors->first('cert_password') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.cert_password_helper') }}
-                    </p>
-                </div>
-
-                <div class="form-group {{ $errors->has('public_key') ? 'has-error' : '' }}">
-                    <label class="required" for="public_key">
-                        {{ trans('global.paymentVendor.fields.public_key') }}
-                    </label>
-                    <input type="text" id="public_key" name="public_key" class="form-control"
-                        value="{{ old('public_key', isset($paymentVendor) ? $paymentVendor->public_key : '') }}">
-                    @if ($errors->has('public_key'))
-                        <p class="help-block">
-                            {{ $errors->first('public_key') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.public_key_helper') }}
-                    </p>
-                </div>
-
-                <div class="form-group {{ $errors->has('secret_key') ? 'has-error' : '' }}">
-                    <label class="required" for="secret_key">
-                        {{ trans('global.paymentVendor.fields.secret_key') }}
-                    </label>
-                    <input type="text" id="secret_key" name="secret_key" class="form-control"
-                        value="{{ old('secret_key', isset($paymentVendor) ? $paymentVendor->secret_key : '') }}">
-                    @if ($errors->has('secret_key'))
-                        <p class="help-block">
-                            {{ $errors->first('secret_key') }}
-                        </p>
-                    @endif
-                    <p class="helper-block">
-                        {{ trans('global.paymentVendor.fields.secret_key_helper') }}
-                    </p>
+                    {{-- <div class="col-6 d-flex justify-content-end">
+                        @if (isset($paymentVendor) && count($paymentVendor->media))
+                            <a target="_blank" href="{{ $paymentVendor->media->short_url }}"
+                                style="display: flex; align-items: center;">
+                                <i class="fas fa-file-pdf fa-3x text-primary" aria-hidden="true"></i>
+                                <input type="hidden" name="old_certificate"
+                                    value="{{ $paymentVendor->media->short_url }}">
+                            </a>
+                        @endif
+                    </div> --}}
                 </div>
             </div>
 

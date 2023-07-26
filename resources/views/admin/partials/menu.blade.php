@@ -412,6 +412,24 @@
                 </ul>
             </li>
 
+            {{-- @can('menu_access') --}}
+
+            {{-- <li class="c-sidebar-nav-title">{{ trans('global.menu.title') }}</li> --}}
+
+            @can('viewLog_access')
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ url('admin/log-viewer') }}">
+                        <svg class="c-sidebar-nav-icon">
+                            <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-list') }}"
+                                style="color: yellow">
+                            </use>
+                        </svg>
+                        View Log
+                    </a>
+                </li>
+            @endcan
+
+            {{-- @endcan --}}
+
         @endcan
 
     </ul>

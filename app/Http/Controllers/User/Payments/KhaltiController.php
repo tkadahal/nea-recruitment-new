@@ -4,18 +4,19 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\User\Payments;
 
-use App\Helpers\PaymentHelper;
-use App\Http\Controllers\Controller;
-use App\Models\Application;
-use App\Models\Payment;
-use App\Services\PaymentService;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\URL;
-use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use GuzzleHttp\Client;
+use App\Models\Payment;
+use App\Models\Application;
+use Illuminate\Http\Request;
+use App\Models\PaymentVendor;
+use App\Helpers\PaymentHelper;
+use App\Services\PaymentService;
+use Monolog\Handler\StreamHandler;
+use Illuminate\Support\Facades\URL;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use GuzzleHttp\Exception\GuzzleException;
 
 class KhaltiController extends Controller
 {
@@ -29,15 +30,17 @@ class KhaltiController extends Controller
     {
         $this->paymentService = $paymentService;
 
+        $paymentVendor = PaymentVendor::where('payment_gateway', 'khalti')->first();
+
         $log_path = storage_path() . '/logs/khalti/' . date('Y-m-d') . '.log';
         $this->_logger = new Logger('KHALTI LOG :' . date('Y-d-m H:i:s'));
         $this->_logger->pushHandler(new StreamHandler($log_path, Logger::INFO));
 
-        $this->_api_context_khalti['payment_gateway'] = 'khalti';
-        $this->_api_context_khalti['public_key'] = 'test_public_key_15ecc4b864bc48fa98f8aebf5d358664';
-        $this->_api_context_khalti['secret_key'] = 'd04d0838688047b2bb78f70a1b2951a9';
-        $this->_api_context_khalti['initate_url'] = 'https://a.khalti.com/api/v2/epayment/initiate/';
-        $this->_api_context_khalti['verify_url'] = 'https://a.khalti.com/api/v2/epayment/lookup/';
+        $this->_api_context_khalti['payment_gateway'] = $paymentVendor->payment_gateway;
+        $this->_api_context_khalti['public_key'] = $paymentVendor->public_key;
+        $this->_api_context_khalti['secret_key'] = $paymentVendor->secret_key;
+        $this->_api_context_khalti['initate_url'] = $paymentVendor->token_url;
+        $this->_api_context_khalti['verify_url'] = $paymentVendor->verify_url;
     }
 
     /** Payment Initialization */

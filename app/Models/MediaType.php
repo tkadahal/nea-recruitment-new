@@ -26,6 +26,8 @@ class MediaType extends Model
     const experience = 9;
     const equivalence = 10;
     const council = 11;
+    const paymentVendorImage = 14;
+    const paymentVendorCertificate = 15;
 
     protected $dates = [
         'created_at',

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'NEA _ Tippani Management System'),
+    'name' => env('APP_NAME', 'NEA-Recruitment Panel'),
 
     /*
     |--------------------------------------------------------------------------

@@ -4,18 +4,20 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\User\Payments;
 
-use App\Helpers\PaymentHelper;
-use App\Http\Controllers\Controller;
-use App\Models\Application;
-use App\Models\Payment;
-use App\Services\PaymentService;
 use Carbon\Carbon;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
-use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use GuzzleHttp\Client;
+use App\Models\Payment;
+use App\Models\Application;
+use Illuminate\Http\Request;
+use App\Models\PaymentVendor;
+use App\Helpers\PaymentHelper;
+use App\Services\PaymentService;
+use Monolog\Handler\StreamHandler;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
+use GuzzleHttp\Exception\GuzzleException;
 
 class ConnectIpsController extends Controller
 {
@@ -28,36 +30,40 @@ class ConnectIpsController extends Controller
     public function __construct(PaymentService $paymentService)
     {
         $this->paymentService = $paymentService;
-        $log_path = storage_path().'/logs/connect-ips/'.date('Y-m-d').'.log';
 
-        $this->_logger = new Logger('connectIPS LOG :'.date('Y-d-m H:i:s'));
+        $paymentVendor = PaymentVendor::where('payment_gateway', 'connectips')->first();
+
+        $log_path = storage_path() . '/logs/connect-ips/' . date('Y-m-d') . '.log';
+
+        $this->_logger = new Logger('connectIPS LOG :' . date('Y-d-m H:i:s'));
         $this->_logger->pushHandler(new StreamHandler($log_path, Logger::INFO));
 
-        $this->_api_context_connect_ips['payment_gateway'] = 'connectips';
-        $this->_api_context_connect_ips['MERCHANTID'] = '271';
-        $this->_api_context_connect_ips['APPID'] = 'NEA-271-APP-4';
-        $this->_api_context_connect_ips['APPNAME'] = 'NEA Recruitment Open';
-        $this->_api_context_connect_ips['checkout_url'] = 'https://login.connectips.com/connectipswebgw/loginpage';
-        $this->_api_context_connect_ips['verify_url'] = 'https://login.connectips.com/connectipswebws/api/creditor/validatetxn';
-        $this->_api_context_connect_ips['verify_password'] = 'N3@12#';
-        $this->_api_context_connect_ips['cert_path'] = 'PATH TO CERT';
-        $this->_api_context_connect_ips['cert_password'] = 'N3@12#';
+        $this->_api_context_connect_ips['payment_gateway'] = $paymentVendor->payment_gateway;
+        $this->_api_context_connect_ips['MERCHANTID'] = $paymentVendor->merchant_id;
+        $this->_api_context_connect_ips['APPID'] = $paymentVendor->app_id;
+        $this->_api_context_connect_ips['APPNAME'] = $paymentVendor->app_name;
+        $this->_api_context_connect_ips['checkout_url'] = $paymentVendor->checkout_url;
+        $this->_api_context_connect_ips['verify_url'] = $paymentVendor->verify_url;
+        $this->_api_context_connect_ips['verify_password'] = $paymentVendor->verify_password;
+        $this->_api_context_connect_ips['cert_path'] = Storage::path('1/930c3c6b-6756-47f2-af98-0712b66682f0/CREDITOR.pfx');
+        $this->_api_context_connect_ips['cert_password'] = $paymentVendor->cert_password;
     }
 
     public function initializeIPS($applicationRefID)
     {
+        dd($this->_api_context_connect_ips);
         try {
             $application = Application::where('user_id', auth()->id())
                 ->where('uuid', $applicationRefID)
                 ->first();
 
-            if (! $application) {
+            if (!$application) {
                 return redirect()->back()->withErrors(['error' => 'Invalid application. Please try again.']);
             }
 
             $paymentRecord = $this->paymentService->initiatePayment($application, $this->_api_context_connect_ips['payment_gateway']);
 
-            if (! $paymentRecord) {
+            if (!$paymentRecord) {
                 return redirect()->back()->withErrors(['error' => 'Sorry, we cannot process your request at this moment. Please try again.']);
             }
 
@@ -70,15 +76,17 @@ class ConnectIpsController extends Controller
                 'TXNDATE' => Carbon::now()->format('d-m-Y'),
                 'TXNCRNCY' => 'NPR',
                 'TXNAMT' => $paymentRecord['amount'] * 100, // converting into paisa
-                'REFERENCEID' => 'NEA-'.(auth()->user()->name ?? 'RECRUITMENT'),
+                'REFERENCEID' => 'NEA-' . (auth()->user()->name ?? 'RECRUITMENT'),
                 'REMARKS' => auth()->user()->mobile_number ?? 'NEA-RECRUITMENT',
-                'PARTICULARS' => 'NEA-RECRUITMENT-'.$paymentRecord['amount'],
+                'PARTICULARS' => 'NEA-RECRUITMENT-' . $paymentRecord['amount'],
                 'SUCCESS' => route('connectips.success', ['id' => $paymentRecord['id']]),
                 'FAILURE' => route('connectips.failure', ['id' => $paymentRecord['id']]),
             ];
 
             $hash_response = $this->generateToken($ips_params, 'checkout');
-            if (! $hash_response) {
+
+            // dd($hash_response);
+            if (!$hash_response) {
                 Session::flash('error_message', 'Sorry, we cannot process your request at this moment. Please try again.');
 
                 return redirect()->route('payment');
@@ -99,13 +107,13 @@ class ConnectIpsController extends Controller
 
             /** DUMPING ALL THE RESPONSE */
             $connect_ips_response = $request->all();
-            $this->_logger->info('CHECKOUT RESPONSE LOG : '.json_encode($connect_ips_response));
+            $this->_logger->info('CHECKOUT RESPONSE LOG : ' . json_encode($connect_ips_response));
 
             $TXNID = $request->get('TXNID') ?? null;
 
             $paymentDetails = Payment::with('application')->where('reference_id', $TXNID)->first();
 
-            if (! $paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
+            if (!$paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
                 Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
                 return redirect()->back();
@@ -118,7 +126,7 @@ class ConnectIpsController extends Controller
             $tranx_params['txnAmt'] = $paymentDetails->amount * 100;  // INTO PAISA
 
             $hash_response = $this->generateToken($tranx_params, 'transaction_verification');
-            if (! $hash_response) {
+            if (!$hash_response) {
                 Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please try again.');
 
                 return redirect()->back();
@@ -127,16 +135,16 @@ class ConnectIpsController extends Controller
 
             $payment_status = $this->apiCallConnectIPS($tranx_params, 'transaction_verification');
 
-            if (! isset($payment_status['status']) || $payment_status['status'] != 'SUCCESS') {
+            if (!isset($payment_status['status']) || $payment_status['status'] != 'SUCCESS') {
 
-                $this->_logger->info('DOUBLE VERIFICATION CALL : TXN ID '.$TXNID);
+                $this->_logger->info('DOUBLE VERIFICATION CALL : TXN ID ' . $TXNID);
 
                 // CALLING VERIFICATION ONE MORE TIME AFTER WAITING 3 Secs
                 sleep(3);
 
                 $payment_status = $this->apiCallConnectIPS($tranx_params, 'transaction_verification');
 
-                if (! isset($payment_status['status']) || $payment_status['status'] != 'SUCCESS') {
+                if (!isset($payment_status['status']) || $payment_status['status'] != 'SUCCESS') {
 
                     // verification status not received or returned failure
                     PaymentHelper::updatePayment([
@@ -186,11 +194,11 @@ class ConnectIpsController extends Controller
 
             $TXNID = $request->get('TXNID') ?? null;
 
-            $this->_logger->info('CANCEL/FAILURE RESPONSE, REFERENCE ID : '.$TXNID);
+            $this->_logger->info('CANCEL/FAILURE RESPONSE, REFERENCE ID : ' . $TXNID);
 
             $paymentDetails = Payment::with('application')->where('reference_id', $TXNID)->first();
 
-            if (! $paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
+            if (!$paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
                 Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
                 return redirect()->back();
@@ -224,27 +232,29 @@ class ConnectIpsController extends Controller
 
                 case 'checkout':
                     $token_values = [
-                        'MERCHANTID='.$token_params['MERCHANTID'],
-                        'APPID='.$token_params['APPID'],
-                        'APPNAME='.$token_params['APPNAME'],
-                        'TXNID='.$token_params['TXNID'],
-                        'TXNDATE='.$token_params['TXNDATE'],
-                        'TXNCRNCY='.$token_params['TXNCRNCY'],
-                        'TXNAMT='.$token_params['TXNAMT'],
-                        'REFERENCEID='.$token_params['REFERENCEID'],
-                        'REMARKS='.$token_params['REMARKS'],
-                        'PARTICULARS='.$token_params['PARTICULARS'],
+                        'MERCHANTID=' . $token_params['MERCHANTID'],
+                        'APPID=' . $token_params['APPID'],
+                        'APPNAME=' . $token_params['APPNAME'],
+                        'TXNID=' . $token_params['TXNID'],
+                        'TXNDATE=' . $token_params['TXNDATE'],
+                        'TXNCRNCY=' . $token_params['TXNCRNCY'],
+                        'TXNAMT=' . $token_params['TXNAMT'],
+                        'REFERENCEID=' . $token_params['REFERENCEID'],
+                        'REMARKS=' . $token_params['REMARKS'],
+                        'PARTICULARS=' . $token_params['PARTICULARS'],
                         'TOKEN=TOKEN',
                     ];
+
+                    // dd($token_values);
                     $token_values = implode(',', $token_values);
                     break;
 
                 case 'transaction_verification':
                     $token_values = [
-                        'MERCHANTID='.$token_params['merchantId'],
-                        'APPID='.$token_params['appId'],
-                        'REFERENCEID='.$token_params['referenceId'],
-                        'TXNAMT='.$token_params['txnAmt'],
+                        'MERCHANTID=' . $token_params['merchantId'],
+                        'APPID=' . $token_params['appId'],
+                        'REFERENCEID=' . $token_params['referenceId'],
+                        'TXNAMT=' . $token_params['txnAmt'],
                     ];
                     $token_values = implode(',', $token_values);
                     break;
@@ -254,7 +264,7 @@ class ConnectIpsController extends Controller
             }
 
             // Try to locate certificate file
-            if (! $cert_store = file_get_contents($this->_api_context_connect_ips['cert_path'])) {
+            if (!$cert_store = file_get_contents($this->_api_context_connect_ips['cert_path'])) {
                 return false;
             }
 
@@ -289,7 +299,7 @@ class ConnectIpsController extends Controller
         try {
             $connect_ips_header = [
                 'Content-Type' => 'application/json;charset=utf-8',
-                'Authorization' => 'Basic '.base64_encode($this->_api_context_connect_ips['APPID'].':'.$this->_api_context_connect_ips['verify_password']),
+                'Authorization' => 'Basic ' . base64_encode($this->_api_context_connect_ips['APPID'] . ':' . $this->_api_context_connect_ips['verify_password']),
                 'postman-token' => 'df24adcd-c372-fcd1-65ef-7909a4d30538',
             ];
 
@@ -301,7 +311,7 @@ class ConnectIpsController extends Controller
             $client = new Client();
 
             /** Logger : REQUEST */
-            $this->_logger->info('REQUEST LOG : '.$api_method.' : '.$payload['referenceId']);
+            $this->_logger->info('REQUEST LOG : ' . $api_method . ' : ' . $payload['referenceId']);
             $this->_logger->info(json_encode($payload));
 
             $response = $client->post($api_endpoint, [
@@ -317,7 +327,7 @@ class ConnectIpsController extends Controller
             $api_response = $response->getBody()->getContents();
 
             /** Logger : RESPONSE */
-            $this->_logger->info('RESPONSE LOG : '.$api_method.' : '.$payload['referenceId']);
+            $this->_logger->info('RESPONSE LOG : ' . $api_method . ' : ' . $payload['referenceId']);
             $this->_logger->info($api_response);
 
             if ($response->getStatusCode() === 200) {

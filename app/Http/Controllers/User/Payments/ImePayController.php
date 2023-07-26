@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers\User\Payments;
 
-use App\Helpers\PaymentHelper;
-use App\Http\Controllers\Controller;
-use App\Models\Application;
-use App\Models\Payment;
-use App\Services\PaymentService;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
-use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use GuzzleHttp\Client;
+use App\Models\Payment;
+use App\Models\Application;
+use Illuminate\Http\Request;
+use App\Models\PaymentVendor;
+use App\Helpers\PaymentHelper;
+use App\Services\PaymentService;
+use Monolog\Handler\StreamHandler;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use GuzzleHttp\Exception\RequestException;
 
 class ImePayController extends Controller
 {
@@ -26,19 +27,21 @@ class ImePayController extends Controller
     {
         $this->paymentService = $paymentService;
 
-        $log_path = storage_path().'/logs/imepay/'.date('Y-m-d').'.log';
-        $this->_logger = new Logger('IMEPAY LOG :'.date('Y-d-m H:i:s'));
+        $paymentVendor = PaymentVendor::where('payment_gateway', 'imepay')->first();
+
+        $log_path = storage_path() . '/logs/imepay/' . date('Y-m-d') . '.log';
+        $this->_logger = new Logger('IMEPAY LOG :' . date('Y-d-m H:i:s'));
         $this->_logger->pushHandler(new StreamHandler($log_path, Logger::INFO));
 
-        $this->_api_context_imepay['payment_gateway'] = 'imepay';
-        $this->_api_context_imepay['merchant_code'] = 'NEAVAC';
-        $this->_api_context_imepay['username'] = 'neahumanresources';
-        $this->_api_context_imepay['password'] = 'ime@1234';
-        $this->_api_context_imepay['module'] = 'NEAVAC';
-        $this->_api_context_imepay['token_url'] = 'https://stg.imepay.com.np:7979/api/Web/GetToken';
-        $this->_api_context_imepay['checkout_url'] = 'https://stg.imepay.com.np:7979/WebCheckout/Checkout';
-        $this->_api_context_imepay['confirm_url'] = 'https://stg.imepay.com.np:7979/api/Web/Confirm';
-        $this->_api_context_imepay['recheck_url'] = 'https://stg.imepay.com.np:7979/api/Web/Recheck';
+        $this->_api_context_imepay['payment_gateway'] = $paymentVendor->payment_gateway;
+        $this->_api_context_imepay['merchant_code'] = $paymentVendor->merchant_code;
+        $this->_api_context_imepay['username'] = $paymentVendor->username;
+        $this->_api_context_imepay['password'] = $paymentVendor->verify_password;
+        $this->_api_context_imepay['module'] = $paymentVendor->app_name;
+        $this->_api_context_imepay['token_url'] = $paymentVendor->token_url;
+        $this->_api_context_imepay['checkout_url'] = $paymentVendor->checkout_url;
+        $this->_api_context_imepay['confirm_url'] = $paymentVendor->verify_url;
+        $this->_api_context_imepay['recheck_url'] = $paymentVendor->recheck_url;
     }
 
     public function initializeImePay($applicationRefID = null)
@@ -48,13 +51,13 @@ class ImePayController extends Controller
                 ->where('uuid', $applicationRefID)
                 ->first() ?? null;
 
-            if (! $application) {
+            if (!$application) {
                 return redirect()->back()->withErrors(['error' => 'Invalid application. Please try again.']);
             }
 
             $paymentRecord = $this->paymentService->initiatePayment($application, $this->_api_context_imepay['payment_gateway']);
 
-            if (! $paymentRecord) {
+            if (!$paymentRecord) {
                 return redirect()->back()->withErrors(['error' => 'Sorry we cannot process your request at this moment. Please try again.']);
             }
 
@@ -69,7 +72,7 @@ class ImePayController extends Controller
             // API Call for Token
             $token_status = $this->apiCallIMEPay($ime_payload);
 
-            if (! $token_status) {
+            if (!$token_status) {
                 Session::flash('error_message', 'Payment failed. Please select other payment options.');
 
                 return redirect()->back();
@@ -105,7 +108,7 @@ class ImePayController extends Controller
             $response_data = \explode('|', $decoded_data);
 
             $this->_logger->info('---------------------------------------------------------------------------');
-            $this->_logger->info('WEB CHECKOUT RESPONSE LOG : '.json_encode($response_data));
+            $this->_logger->info('WEB CHECKOUT RESPONSE LOG : ' . json_encode($response_data));
             $this->_logger->info('---------------------------------------------------------------------------');
 
             $ResponseCode = $response_data['0'] ?? null;
@@ -120,7 +123,7 @@ class ImePayController extends Controller
 
             $paymentDetails = Payment::with('application')->where('reference_id', $RefId)->first();
 
-            if (! $paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
+            if (!$paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
                 Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
                 return redirect()->back();
@@ -138,7 +141,7 @@ class ImePayController extends Controller
             ];
 
             $verification_response = $this->apiCallIMEPay($ime_payload);
-            if (! $verification_response || ($verification_response && isset($verification_response['ResponseCode']) && $verification_response['ResponseCode'] != '0')) {
+            if (!$verification_response || ($verification_response && isset($verification_response['ResponseCode']) && $verification_response['ResponseCode'] != '0')) {
                 /**
                  *  RECHECK API : CASE I : IF No response, CASE II : Response but ResponseCode is not 0 ie failed
                  */
@@ -152,7 +155,7 @@ class ImePayController extends Controller
                     'TokenId' => $TokenId,
                 ];
                 $verification_response = $this->apiCallIMEPay($ime_recheck_payload);
-                if (! $verification_response) {
+                if (!$verification_response) {
                     Session::flash('error_message', 'Payment failed. Please select other payment options.');
 
                     return redirect()->route('payment');
@@ -208,7 +211,7 @@ class ImePayController extends Controller
             $response_data = \explode('|', $decoded_data);
 
             $this->_logger->info('---------------------------------------------------------------------------');
-            $this->_logger->info('WEB CHECKOUT CANCEL RESPONSE LOG : '.json_encode($response_data));
+            $this->_logger->info('WEB CHECKOUT CANCEL RESPONSE LOG : ' . json_encode($response_data));
             $this->_logger->info('---------------------------------------------------------------------------');
 
             $ResponseCode = $response_data['0'] ?? null;
@@ -225,7 +228,7 @@ class ImePayController extends Controller
 
             $paymentDetails = Payment::with('application')->where('reference_id', $RefId)->first();
 
-            if (! $paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
+            if (!$paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
                 Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
                 return redirect()->back();
@@ -250,7 +253,7 @@ class ImePayController extends Controller
         try {
             $imepay_header = [
                 'Content-Type' => 'application/json;charset=utf-8',
-                'Authorization' => 'Basic '.base64_encode($this->_api_context_imepay['username'].':'.$this->_api_context_imepay['password']),
+                'Authorization' => 'Basic ' . base64_encode($this->_api_context_imepay['username'] . ':' . $this->_api_context_imepay['password']),
                 'Module' => base64_encode($this->_api_context_imepay['module']),
             ];
 
@@ -295,7 +298,7 @@ class ImePayController extends Controller
 
             // Logger: RESPONSE
             $this->_logger->info('---------------------------------------------------------------------------');
-            $this->_logger->info('RESPONSE LOG: '.$payload['method'].': '.$payload['RefId']);
+            $this->_logger->info('RESPONSE LOG: ' . $payload['method'] . ': ' . $payload['RefId']);
             $this->_logger->info($api_response);
 
             if ($response->getStatusCode() === 200) {
