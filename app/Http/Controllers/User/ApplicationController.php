@@ -138,7 +138,15 @@ class ApplicationController extends Controller
     {
         $user = auth()->user();
 
-        $application = Application::with('advertisement', 'advertisement.level', 'advertisement.category', 'advertisement.group', 'advertisement.subGroup', 'advertisement.qualification')->findorFail($id);
+        $application = Application::with(
+            'advertisement',
+            'advertisement.level',
+            'advertisement.category',
+            'advertisement.group',
+            'advertisement.subGroup',
+            'advertisement.qualification',
+        )->findorFail($id);
+
         $advertisement = $application->advertisement;
 
         $advertisementSamabeshiGroups = $advertisement->samabeshiGroups;

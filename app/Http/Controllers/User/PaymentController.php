@@ -15,7 +15,7 @@ class PaymentController extends Controller
 {
     public function index(): View
     {
-        $applications = Application::with('advertisement', 'latestPayment', 'latestPayment.paymentVerification')
+        $applications = Application::with('advertisement', 'advertisement.level', 'latestPayment', 'latestPayment.paymentVerification')
             ->where('user_id', auth()->id())
             ->get();
 

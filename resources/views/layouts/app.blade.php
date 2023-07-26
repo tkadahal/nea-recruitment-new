@@ -344,11 +344,15 @@
                     <div role="tabpanel">
                         <div class="card">
                             <div class="row">
-                                <div class="col d-flex justify-content-end mb-1">
-                                    नेपालीमा लेख्नु परेमा सहायताको लागि &nbsp;
-                                    <a href="https://www.google.com/inputtools/try/" target="_blank">
-                                        यहाँ थिच्नुहोस्
-                                    </a>
+                                <div class="col d-flex justify-content-end">
+                                    <p class="mb-0">
+                                        <span style="color: #a307eb">
+                                            {{ trans('global.nepaliAssistant') }}&nbsp;
+                                            <a href="https://www.google.com/inputtools/try/" target="_blank">
+                                                {{ trans('global.nepaliAssistnatLink') }}
+                                            </a>
+                                        </span>
+                                    </p>
                                 </div>
                             </div>
                             @yield('content')

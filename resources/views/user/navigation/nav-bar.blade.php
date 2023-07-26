@@ -69,7 +69,9 @@
                 <a href="{{ route('payment.index') }}" data-toggle="tab" aria-controls="step8" role="tab"
                     aria-expanded="{{ request()->routeIs('payment.*') ? 'true' : 'false' }}">
                     <span class="round-tab">8</span>
-                    <i>शुल्क भुक्तानी</i>
+                    <i>
+                        {{ trans('global.payment.title_singular') }}
+                    </i>
                 </a>
             </li>
         </ul>

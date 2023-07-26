@@ -23,13 +23,16 @@
                 <div class="alert alert-success alert-dismissible fade show" role="alert"
                     style="background-color: #47eb07;">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    <p>Payment successful. Please find below the application details.</p>
+                    <p>
+                        {{ trans('global.payment.info.paymentSuccess') }}
+                    </p>
                 </div>
             @else
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    <p>Sorry something went wrong processing your payment. Please verify the payment or select other
-                        payment options.</p>
+                    <p>
+                        {{ trans('global.payment.info.paymentFailure') }}
+                    </p>
                 </div>
             @endif
         @endif
@@ -41,13 +44,13 @@
                             <div class="col">
                                 <div id="payment-container">
                                     @foreach ($applications as $key => $application)
-                                        <div class="payment-block" id="payment-block">
+                                        <div class="payment-block p-4" id="payment-block">
                                             <div class="card-body">
                                                 <div class="row mb-2">
                                                     <div class="col-md-3 col-12">
                                                         <b>
                                                             <u>
-                                                                {{ trans('global.advertisement.fields.advertisement_num') }}
+                                                                {{ trans('global.payment.fields.advertisement_num') }}
                                                             </u>
                                                         </b>
                                                     </div>
@@ -55,7 +58,7 @@
                                                     <div class="col-md-3 col-12">
                                                         <b>
                                                             <u>
-                                                                {{ trans('global.advertisement.fields.level_id') }}
+                                                                {{ trans('global.payment.fields.level_id') }}
                                                             </u>
                                                         </b>
                                                     </div>
@@ -63,7 +66,7 @@
                                                     <div class="col-md-3 col-12">
                                                         <b>
                                                             <u>
-                                                                Amount
+                                                                {{ trans('global.payment.fields.amount') }}
                                                             </u>
                                                         </b>
                                                     </div>
