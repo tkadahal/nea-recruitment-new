@@ -51,7 +51,7 @@ class ConnectIpsController extends Controller
 
     public function initializeIPS($applicationRefID)
     {
-        dd($this->_api_context_connect_ips);
+        // dd($this->_api_context_connect_ips);
         try {
             $application = Application::where('user_id', auth()->id())
                 ->where('uuid', $applicationRefID)
@@ -223,13 +223,11 @@ class ConnectIpsController extends Controller
     private function generateToken($token_params = [], $hash_for = null)
     {
         try {
-
-            if (count($token_params) == 0 || $hash_for == null) {
+            if (count($token_params) === 0 || $hash_for === null) {
                 return false;
             }
 
             switch ($hash_for) {
-
                 case 'checkout':
                     $token_values = [
                         'MERCHANTID=' . $token_params['MERCHANTID'],
@@ -245,7 +243,6 @@ class ConnectIpsController extends Controller
                         'TOKEN=TOKEN',
                     ];
 
-                    // dd($token_values);
                     $token_values = implode(',', $token_values);
                     break;
 
@@ -256,6 +253,7 @@ class ConnectIpsController extends Controller
                         'REFERENCEID=' . $token_params['referenceId'],
                         'TXNAMT=' . $token_params['txnAmt'],
                     ];
+
                     $token_values = implode(',', $token_values);
                     break;
 
@@ -264,9 +262,14 @@ class ConnectIpsController extends Controller
             }
 
             // Try to locate certificate file
-            if (!$cert_store = file_get_contents($this->_api_context_connect_ips['cert_path'])) {
+            if (!Storage::exists($this->_api_context_connect_ips['cert_path'])) {
                 return false;
             }
+
+            // Try to read certificate file
+            $cert_store = Storage::get($this->_api_context_connect_ips['cert_path']);
+
+            dd($cert_store);
 
             // Try to read certificate file
             if (openssl_pkcs12_read($cert_store, $cert_info, $this->_api_context_connect_ips['cert_password'])) {
@@ -279,7 +282,7 @@ class ConnectIpsController extends Controller
 
             if (openssl_sign($token_values, $signature, $private_key, 'sha256WithRSAEncryption')) {
                 $hash = base64_encode($signature);
-                openssl_free_key($private_key);
+                unset($private_key);
 
                 return $hash;
             }

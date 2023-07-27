@@ -5,16 +5,12 @@ declare(strict_types=1);
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\UpdatePasswordRequest;
-use Illuminate\Support\Facades\Gate;
-use Symfony\Component\HttpFoundation\Response;
+use App\Http\Requests\User\UpdatePasswordRequest;
 
 class ChangePasswordController extends Controller
 {
     public function edit()
     {
-        abort_if(Gate::denies('profile_password_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         return view('auth.passwords.edit');
     }
 

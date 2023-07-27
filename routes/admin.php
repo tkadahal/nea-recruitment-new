@@ -260,6 +260,13 @@ Route::middleware(['auth:admin'])->group(function () {
                 controller: AdvertisementController::class
             );
 
+            // Supports
+            Route::delete(
+                uri: 'supports/destroy',
+                action: 'SupportController@massDestroy'
+            )->name(name: 'supports.massDestroy');
+            Route::resource(name: 'support', controller: SupportController::class);
+
             // Applications
             Route::get('application', 'ApplicationController@index')->name('application.index');
             Route::get('application/show/{id}', 'ApplicationController@show')->name('application.show');

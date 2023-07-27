@@ -14,6 +14,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => ''], function () {
         Route::group(['namespace' => 'User'], function () {
 
+            Route::get('support', [App\Http\Controllers\User\SupportController::class, 'index'])->name('support');
+            Route::post('support/store', [App\Http\Controllers\User\SupportController::class, 'store'])->name('support.store');
+
             // Personal Details
             Route::get(uri: '/personal', action: 'PersonalController@index')->name(name: 'personal');
             Route::post(uri: '/personal/store', action: 'PersonalController@store')->name(name: 'personal.store');
@@ -86,4 +89,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-require __DIR__.'/admin.php';
+require __DIR__ . '/admin.php';

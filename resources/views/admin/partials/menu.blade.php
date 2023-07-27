@@ -428,6 +428,19 @@
                 </li>
             @endcan
 
+
+            @can('support_access')
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.support.index') }}">
+                        <svg class="c-sidebar-nav-icon">
+                            <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-list') }}"
+                                style="color: yellow">
+                            </use>
+                        </svg>
+                        {{ trans('global.support.title') }}
+                    </a>
+                </li>
+            @endcan
+
             {{-- @endcan --}}
 
         @endcan

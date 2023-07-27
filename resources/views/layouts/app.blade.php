@@ -181,12 +181,15 @@
             pointer-events: none;
         }
 
-        /* .dropdown-menu-right .show {
-            position: relative;
-            inset: 0px auto auto 0px;
-            margin: 0px;
-            transform: translate(48px, 38px);
-        } */
+        .dropdown-header {
+            background-color: #eeeeee;
+            border-bottom: 1px solid #000000;
+            color: black;
+        }
+
+        .dropdown-menu .dropdown-item {
+            border-bottom: 1px solid #dedcdc;
+        }
     </style>
 </head>
 
@@ -218,9 +221,14 @@
 
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ms-auto">
+                            <li class="nav-item" style="padding-right: 2rem">
+                                <a class="btn btn-info" href="{{ route('support') }}">
+                                    {{ trans('global.support.title_singular') }}
+                                </a>
+                            </li>
 
                             @if (count(config('panel.available_languages', [])) > 1)
-                                <li class="nav-item dropdown">
+                                <li class="nav-item dropdown" style="padding-right: 2rem">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#"
                                         role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false" v-pre>
@@ -229,8 +237,8 @@
                                         @else
                                             <x-flag-country-us style="width: 25px" />
                                         @endif
-                                        &nbsp;
-                                        {{ strtoupper(app()->getLocale()) }}
+                                        {{-- &nbsp;
+                                        {{ strtoupper(app()->getLocale()) }} --}}
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -258,10 +266,17 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-header"><strong>Account</strong></div>
+                                    @if (file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
+                                        <a class="dropdown-item {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'active' : '' }}"
+                                            href="{{ route('profile.password.edit') }}">
+                                            {{ trans('global.change_password') }}
+                                        </a>
+                                    @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ trans('global.logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -340,21 +355,25 @@
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12">
-                    @include('user.navigation.nav-bar')
+                    @if (!request()->is('support') && !request()->is('profile/password'))
+                        @include('user.navigation.nav-bar')
+                    @endif
                     <div role="tabpanel">
                         <div class="card">
-                            <div class="row">
-                                <div class="col d-flex justify-content-end">
-                                    <p class="mb-0">
-                                        <span style="color: #a307eb">
-                                            {{ trans('global.nepaliAssistant') }}&nbsp;
-                                            <a href="https://www.google.com/inputtools/try/" target="_blank">
-                                                {{ trans('global.nepaliAssistnatLink') }}
-                                            </a>
-                                        </span>
-                                    </p>
+                            @if (!request()->is('profile/password'))
+                                <div class="row">
+                                    <div class="col d-flex justify-content-end">
+                                        <p class="mb-0">
+                                            <span style="color: #a307eb">
+                                                {{ trans('global.nepaliAssistant') }}&nbsp;
+                                                <a href="https://www.google.com/inputtools/try/" target="_blank">
+                                                    {{ trans('global.nepaliAssistnatLink') }}
+                                                </a>
+                                            </span>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
                             @yield('content')
                         </div>
                     </div>
