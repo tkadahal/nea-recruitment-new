@@ -18,7 +18,7 @@ class CountriesTableSeeder extends Seeder
             0 => [
                 'id' => 1,
                 'title' => 'Afghanistan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -26,7 +26,7 @@ class CountriesTableSeeder extends Seeder
             1 => [
                 'id' => 2,
                 'title' => 'Albania',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -34,7 +34,7 @@ class CountriesTableSeeder extends Seeder
             2 => [
                 'id' => 3,
                 'title' => 'Algeria',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -42,7 +42,7 @@ class CountriesTableSeeder extends Seeder
             3 => [
                 'id' => 4,
                 'title' => 'Andorra',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -50,7 +50,7 @@ class CountriesTableSeeder extends Seeder
             4 => [
                 'id' => 5,
                 'title' => 'Angola',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -58,7 +58,7 @@ class CountriesTableSeeder extends Seeder
             5 => [
                 'id' => 6,
                 'title' => 'Antigua and Barbuda',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -66,7 +66,7 @@ class CountriesTableSeeder extends Seeder
             6 => [
                 'id' => 7,
                 'title' => 'Argentina',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -74,7 +74,7 @@ class CountriesTableSeeder extends Seeder
             7 => [
                 'id' => 8,
                 'title' => 'Armenia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -82,7 +82,7 @@ class CountriesTableSeeder extends Seeder
             8 => [
                 'id' => 9,
                 'title' => 'Austria',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -90,7 +90,7 @@ class CountriesTableSeeder extends Seeder
             9 => [
                 'id' => 10,
                 'title' => 'Azerbaijan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -98,7 +98,7 @@ class CountriesTableSeeder extends Seeder
             10 => [
                 'id' => 11,
                 'title' => 'Bahrain',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -106,7 +106,7 @@ class CountriesTableSeeder extends Seeder
             11 => [
                 'id' => 12,
                 'title' => 'Bangladesh',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -114,7 +114,7 @@ class CountriesTableSeeder extends Seeder
             12 => [
                 'id' => 13,
                 'title' => 'Barbados',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -122,7 +122,7 @@ class CountriesTableSeeder extends Seeder
             13 => [
                 'id' => 14,
                 'title' => 'Belarus',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -130,7 +130,7 @@ class CountriesTableSeeder extends Seeder
             14 => [
                 'id' => 15,
                 'title' => 'Belgium',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -138,7 +138,7 @@ class CountriesTableSeeder extends Seeder
             15 => [
                 'id' => 16,
                 'title' => 'Belize',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -146,7 +146,7 @@ class CountriesTableSeeder extends Seeder
             16 => [
                 'id' => 17,
                 'title' => 'Benin',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -154,7 +154,7 @@ class CountriesTableSeeder extends Seeder
             17 => [
                 'id' => 18,
                 'title' => 'Bhutan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -162,7 +162,7 @@ class CountriesTableSeeder extends Seeder
             18 => [
                 'id' => 19,
                 'title' => 'Bolivia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -170,7 +170,7 @@ class CountriesTableSeeder extends Seeder
             19 => [
                 'id' => 20,
                 'title' => 'Bosnia and Herzegovina',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -178,7 +178,7 @@ class CountriesTableSeeder extends Seeder
             20 => [
                 'id' => 21,
                 'title' => 'Botswana',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -186,7 +186,7 @@ class CountriesTableSeeder extends Seeder
             21 => [
                 'id' => 22,
                 'title' => 'Brazil',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -194,7 +194,7 @@ class CountriesTableSeeder extends Seeder
             22 => [
                 'id' => 23,
                 'title' => 'Brunei',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -202,7 +202,7 @@ class CountriesTableSeeder extends Seeder
             23 => [
                 'id' => 24,
                 'title' => 'Bulgaria',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -210,7 +210,7 @@ class CountriesTableSeeder extends Seeder
             24 => [
                 'id' => 25,
                 'title' => 'Burkina Faso',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -218,7 +218,7 @@ class CountriesTableSeeder extends Seeder
             25 => [
                 'id' => 26,
                 'title' => 'Burundi',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -226,7 +226,7 @@ class CountriesTableSeeder extends Seeder
             26 => [
                 'id' => 27,
                 'title' => 'Cabo Verde',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -234,7 +234,7 @@ class CountriesTableSeeder extends Seeder
             27 => [
                 'id' => 28,
                 'title' => 'Cambodia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -242,7 +242,7 @@ class CountriesTableSeeder extends Seeder
             28 => [
                 'id' => 29,
                 'title' => 'Cameroon',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -250,7 +250,7 @@ class CountriesTableSeeder extends Seeder
             29 => [
                 'id' => 30,
                 'title' => 'Canada',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -258,7 +258,7 @@ class CountriesTableSeeder extends Seeder
             30 => [
                 'id' => 31,
                 'title' => 'Central African Republic',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -266,7 +266,7 @@ class CountriesTableSeeder extends Seeder
             31 => [
                 'id' => 32,
                 'title' => 'Chad',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -274,7 +274,7 @@ class CountriesTableSeeder extends Seeder
             32 => [
                 'id' => 33,
                 'title' => 'Channel Islands',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -282,7 +282,7 @@ class CountriesTableSeeder extends Seeder
             33 => [
                 'id' => 34,
                 'title' => 'Chile',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -290,7 +290,7 @@ class CountriesTableSeeder extends Seeder
             34 => [
                 'id' => 35,
                 'title' => 'China',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -298,7 +298,7 @@ class CountriesTableSeeder extends Seeder
             35 => [
                 'id' => 36,
                 'title' => 'Colombia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -306,7 +306,7 @@ class CountriesTableSeeder extends Seeder
             36 => [
                 'id' => 37,
                 'title' => 'Comoros',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -314,7 +314,7 @@ class CountriesTableSeeder extends Seeder
             37 => [
                 'id' => 38,
                 'title' => 'Congo',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -322,7 +322,7 @@ class CountriesTableSeeder extends Seeder
             38 => [
                 'id' => 39,
                 'title' => 'Costa Rica',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -330,7 +330,7 @@ class CountriesTableSeeder extends Seeder
             39 => [
                 'id' => 40,
                 'title' => 'Cote d Ivoire',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -338,7 +338,7 @@ class CountriesTableSeeder extends Seeder
             40 => [
                 'id' => 41,
                 'title' => 'Croatia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -346,7 +346,7 @@ class CountriesTableSeeder extends Seeder
             41 => [
                 'id' => 42,
                 'title' => 'Cuba',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -354,7 +354,7 @@ class CountriesTableSeeder extends Seeder
             42 => [
                 'id' => 43,
                 'title' => 'Cyprus',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -362,7 +362,7 @@ class CountriesTableSeeder extends Seeder
             43 => [
                 'id' => 44,
                 'title' => 'Czech Republic',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -370,7 +370,7 @@ class CountriesTableSeeder extends Seeder
             44 => [
                 'id' => 45,
                 'title' => 'Denmark',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -378,7 +378,7 @@ class CountriesTableSeeder extends Seeder
             45 => [
                 'id' => 46,
                 'title' => 'Djibouti',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -386,7 +386,7 @@ class CountriesTableSeeder extends Seeder
             46 => [
                 'id' => 47,
                 'title' => 'Dominica',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -394,7 +394,7 @@ class CountriesTableSeeder extends Seeder
             47 => [
                 'id' => 48,
                 'title' => 'Dominican Republic',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -402,7 +402,7 @@ class CountriesTableSeeder extends Seeder
             48 => [
                 'id' => 49,
                 'title' => 'DR Congo',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -410,7 +410,7 @@ class CountriesTableSeeder extends Seeder
             49 => [
                 'id' => 50,
                 'title' => 'Ecuador',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -418,7 +418,7 @@ class CountriesTableSeeder extends Seeder
             50 => [
                 'id' => 51,
                 'title' => 'Egypt',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -426,7 +426,7 @@ class CountriesTableSeeder extends Seeder
             51 => [
                 'id' => 52,
                 'title' => 'El Salvador',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -434,7 +434,7 @@ class CountriesTableSeeder extends Seeder
             52 => [
                 'id' => 53,
                 'title' => 'Equatorial Guinea',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -442,7 +442,7 @@ class CountriesTableSeeder extends Seeder
             53 => [
                 'id' => 54,
                 'title' => 'Eritrea',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -450,7 +450,7 @@ class CountriesTableSeeder extends Seeder
             54 => [
                 'id' => 55,
                 'title' => 'Estonia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -458,7 +458,7 @@ class CountriesTableSeeder extends Seeder
             55 => [
                 'id' => 56,
                 'title' => 'Eswatini',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -466,7 +466,7 @@ class CountriesTableSeeder extends Seeder
             56 => [
                 'id' => 57,
                 'title' => 'Ethiopia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -474,7 +474,7 @@ class CountriesTableSeeder extends Seeder
             57 => [
                 'id' => 58,
                 'title' => 'Faeroe Islands',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -482,7 +482,7 @@ class CountriesTableSeeder extends Seeder
             58 => [
                 'id' => 59,
                 'title' => 'Finland',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -490,7 +490,7 @@ class CountriesTableSeeder extends Seeder
             59 => [
                 'id' => 60,
                 'title' => 'France',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -498,7 +498,7 @@ class CountriesTableSeeder extends Seeder
             60 => [
                 'id' => 61,
                 'title' => 'French Guiana',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -506,7 +506,7 @@ class CountriesTableSeeder extends Seeder
             61 => [
                 'id' => 62,
                 'title' => 'Gabon',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -514,7 +514,7 @@ class CountriesTableSeeder extends Seeder
             62 => [
                 'id' => 63,
                 'title' => 'Gambia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -522,7 +522,7 @@ class CountriesTableSeeder extends Seeder
             63 => [
                 'id' => 64,
                 'title' => 'Georgia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -530,7 +530,7 @@ class CountriesTableSeeder extends Seeder
             64 => [
                 'id' => 65,
                 'title' => 'Germany',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -538,7 +538,7 @@ class CountriesTableSeeder extends Seeder
             65 => [
                 'id' => 66,
                 'title' => 'Ghana',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -546,7 +546,7 @@ class CountriesTableSeeder extends Seeder
             66 => [
                 'id' => 67,
                 'title' => 'Gibraltar',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -554,7 +554,7 @@ class CountriesTableSeeder extends Seeder
             67 => [
                 'id' => 68,
                 'title' => 'Greece',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -562,7 +562,7 @@ class CountriesTableSeeder extends Seeder
             68 => [
                 'id' => 69,
                 'title' => 'Grenada',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -570,7 +570,7 @@ class CountriesTableSeeder extends Seeder
             69 => [
                 'id' => 70,
                 'title' => 'Guatemala',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -578,7 +578,7 @@ class CountriesTableSeeder extends Seeder
             70 => [
                 'id' => 71,
                 'title' => 'Guinea',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -586,7 +586,7 @@ class CountriesTableSeeder extends Seeder
             71 => [
                 'id' => 72,
                 'title' => 'Guinea-Bissau',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -594,7 +594,7 @@ class CountriesTableSeeder extends Seeder
             72 => [
                 'id' => 73,
                 'title' => 'Guyana',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -602,7 +602,7 @@ class CountriesTableSeeder extends Seeder
             73 => [
                 'id' => 74,
                 'title' => 'Haiti',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -610,7 +610,7 @@ class CountriesTableSeeder extends Seeder
             74 => [
                 'id' => 75,
                 'title' => 'Holy See',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -618,7 +618,7 @@ class CountriesTableSeeder extends Seeder
             75 => [
                 'id' => 76,
                 'title' => 'Honduras',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -626,7 +626,7 @@ class CountriesTableSeeder extends Seeder
             76 => [
                 'id' => 77,
                 'title' => 'Hong Kong',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -634,7 +634,7 @@ class CountriesTableSeeder extends Seeder
             77 => [
                 'id' => 78,
                 'title' => 'Hungary',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -642,7 +642,7 @@ class CountriesTableSeeder extends Seeder
             78 => [
                 'id' => 79,
                 'title' => 'Iceland',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -650,7 +650,7 @@ class CountriesTableSeeder extends Seeder
             79 => [
                 'id' => 80,
                 'title' => 'India',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -658,7 +658,7 @@ class CountriesTableSeeder extends Seeder
             80 => [
                 'id' => 81,
                 'title' => 'Indonesia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -666,7 +666,7 @@ class CountriesTableSeeder extends Seeder
             81 => [
                 'id' => 82,
                 'title' => 'Iran',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -674,7 +674,7 @@ class CountriesTableSeeder extends Seeder
             82 => [
                 'id' => 83,
                 'title' => 'Iraq',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -682,7 +682,7 @@ class CountriesTableSeeder extends Seeder
             83 => [
                 'id' => 84,
                 'title' => 'Ireland',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -690,7 +690,7 @@ class CountriesTableSeeder extends Seeder
             84 => [
                 'id' => 85,
                 'title' => 'Isle of Man',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -698,7 +698,7 @@ class CountriesTableSeeder extends Seeder
             85 => [
                 'id' => 86,
                 'title' => 'Israel',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -706,7 +706,7 @@ class CountriesTableSeeder extends Seeder
             86 => [
                 'id' => 87,
                 'title' => 'Italy',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -714,7 +714,7 @@ class CountriesTableSeeder extends Seeder
             87 => [
                 'id' => 88,
                 'title' => 'Jamaica',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -722,7 +722,7 @@ class CountriesTableSeeder extends Seeder
             88 => [
                 'id' => 89,
                 'title' => 'Japan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -730,7 +730,7 @@ class CountriesTableSeeder extends Seeder
             89 => [
                 'id' => 90,
                 'title' => 'Jordan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -738,7 +738,7 @@ class CountriesTableSeeder extends Seeder
             90 => [
                 'id' => 91,
                 'title' => 'Kazakhstan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -746,7 +746,7 @@ class CountriesTableSeeder extends Seeder
             91 => [
                 'id' => 92,
                 'title' => 'Kenya',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -754,7 +754,7 @@ class CountriesTableSeeder extends Seeder
             92 => [
                 'id' => 93,
                 'title' => 'Kuwait',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -762,7 +762,7 @@ class CountriesTableSeeder extends Seeder
             93 => [
                 'id' => 94,
                 'title' => 'Kyrgyzstan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -770,7 +770,7 @@ class CountriesTableSeeder extends Seeder
             94 => [
                 'id' => 95,
                 'title' => 'Laos',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -778,7 +778,7 @@ class CountriesTableSeeder extends Seeder
             95 => [
                 'id' => 96,
                 'title' => 'Latvia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -786,7 +786,7 @@ class CountriesTableSeeder extends Seeder
             96 => [
                 'id' => 97,
                 'title' => 'Lebanon',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -794,7 +794,7 @@ class CountriesTableSeeder extends Seeder
             97 => [
                 'id' => 98,
                 'title' => 'Lesotho',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -802,7 +802,7 @@ class CountriesTableSeeder extends Seeder
             98 => [
                 'id' => 99,
                 'title' => 'Liberia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -810,7 +810,7 @@ class CountriesTableSeeder extends Seeder
             99 => [
                 'id' => 100,
                 'title' => 'Libya',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -818,7 +818,7 @@ class CountriesTableSeeder extends Seeder
             100 => [
                 'id' => 101,
                 'title' => 'Liechtenstein',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -826,7 +826,7 @@ class CountriesTableSeeder extends Seeder
             101 => [
                 'id' => 102,
                 'title' => 'Lithuania',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -834,7 +834,7 @@ class CountriesTableSeeder extends Seeder
             102 => [
                 'id' => 103,
                 'title' => 'Luxembourg',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -842,7 +842,7 @@ class CountriesTableSeeder extends Seeder
             103 => [
                 'id' => 104,
                 'title' => 'Macao',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -850,7 +850,7 @@ class CountriesTableSeeder extends Seeder
             104 => [
                 'id' => 105,
                 'title' => 'Madagascar',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -858,7 +858,7 @@ class CountriesTableSeeder extends Seeder
             105 => [
                 'id' => 106,
                 'title' => 'Malawi',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -866,7 +866,7 @@ class CountriesTableSeeder extends Seeder
             106 => [
                 'id' => 107,
                 'title' => 'Malaysia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -874,7 +874,7 @@ class CountriesTableSeeder extends Seeder
             107 => [
                 'id' => 108,
                 'title' => 'Maldives',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -882,7 +882,7 @@ class CountriesTableSeeder extends Seeder
             108 => [
                 'id' => 109,
                 'title' => 'Mali',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -890,7 +890,7 @@ class CountriesTableSeeder extends Seeder
             109 => [
                 'id' => 110,
                 'title' => 'Malta',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -898,7 +898,7 @@ class CountriesTableSeeder extends Seeder
             110 => [
                 'id' => 111,
                 'title' => 'Mauritania',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -906,7 +906,7 @@ class CountriesTableSeeder extends Seeder
             111 => [
                 'id' => 112,
                 'title' => 'Mauritius',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -914,7 +914,7 @@ class CountriesTableSeeder extends Seeder
             112 => [
                 'id' => 113,
                 'title' => 'Mayotte',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -922,7 +922,7 @@ class CountriesTableSeeder extends Seeder
             113 => [
                 'id' => 114,
                 'title' => 'Mexico',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -930,7 +930,7 @@ class CountriesTableSeeder extends Seeder
             114 => [
                 'id' => 115,
                 'title' => 'Moldova',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -938,7 +938,7 @@ class CountriesTableSeeder extends Seeder
             115 => [
                 'id' => 116,
                 'title' => 'Monaco',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -946,7 +946,7 @@ class CountriesTableSeeder extends Seeder
             116 => [
                 'id' => 117,
                 'title' => 'Mongolia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -954,7 +954,7 @@ class CountriesTableSeeder extends Seeder
             117 => [
                 'id' => 118,
                 'title' => 'Montenegro',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -962,7 +962,7 @@ class CountriesTableSeeder extends Seeder
             118 => [
                 'id' => 119,
                 'title' => 'Morocco',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -970,7 +970,7 @@ class CountriesTableSeeder extends Seeder
             119 => [
                 'id' => 120,
                 'title' => 'Mozambique',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -978,7 +978,7 @@ class CountriesTableSeeder extends Seeder
             120 => [
                 'id' => 121,
                 'title' => 'Myanmar',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -986,7 +986,7 @@ class CountriesTableSeeder extends Seeder
             121 => [
                 'id' => 122,
                 'title' => 'Namibia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -994,7 +994,7 @@ class CountriesTableSeeder extends Seeder
             122 => [
                 'id' => 123,
                 'title' => 'Nepal',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1002,7 +1002,7 @@ class CountriesTableSeeder extends Seeder
             123 => [
                 'id' => 124,
                 'title' => 'Netherlands',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1010,7 +1010,7 @@ class CountriesTableSeeder extends Seeder
             124 => [
                 'id' => 125,
                 'title' => 'Nicaragua',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1018,7 +1018,7 @@ class CountriesTableSeeder extends Seeder
             125 => [
                 'id' => 126,
                 'title' => 'Niger',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1026,7 +1026,7 @@ class CountriesTableSeeder extends Seeder
             126 => [
                 'id' => 127,
                 'title' => 'Nigeria',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1034,7 +1034,7 @@ class CountriesTableSeeder extends Seeder
             127 => [
                 'id' => 128,
                 'title' => 'North Korea',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1042,7 +1042,7 @@ class CountriesTableSeeder extends Seeder
             128 => [
                 'id' => 129,
                 'title' => 'North Macedonia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1050,7 +1050,7 @@ class CountriesTableSeeder extends Seeder
             129 => [
                 'id' => 130,
                 'title' => 'Norway',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1058,7 +1058,7 @@ class CountriesTableSeeder extends Seeder
             130 => [
                 'id' => 131,
                 'title' => 'Oman',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1066,7 +1066,7 @@ class CountriesTableSeeder extends Seeder
             131 => [
                 'id' => 132,
                 'title' => 'Pakistan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1074,7 +1074,7 @@ class CountriesTableSeeder extends Seeder
             132 => [
                 'id' => 133,
                 'title' => 'Panama',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1082,7 +1082,7 @@ class CountriesTableSeeder extends Seeder
             133 => [
                 'id' => 134,
                 'title' => 'Paraguay',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1090,7 +1090,7 @@ class CountriesTableSeeder extends Seeder
             134 => [
                 'id' => 135,
                 'title' => 'Peru',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1098,7 +1098,7 @@ class CountriesTableSeeder extends Seeder
             135 => [
                 'id' => 136,
                 'title' => 'Philippines',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1106,7 +1106,7 @@ class CountriesTableSeeder extends Seeder
             136 => [
                 'id' => 137,
                 'title' => 'Poland',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1114,7 +1114,7 @@ class CountriesTableSeeder extends Seeder
             137 => [
                 'id' => 138,
                 'title' => 'Portugal',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1122,7 +1122,7 @@ class CountriesTableSeeder extends Seeder
             138 => [
                 'id' => 139,
                 'title' => 'Qatar',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1130,7 +1130,7 @@ class CountriesTableSeeder extends Seeder
             139 => [
                 'id' => 140,
                 'title' => 'Réunion',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1138,7 +1138,7 @@ class CountriesTableSeeder extends Seeder
             140 => [
                 'id' => 141,
                 'title' => 'Romania',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1146,7 +1146,7 @@ class CountriesTableSeeder extends Seeder
             141 => [
                 'id' => 142,
                 'title' => 'Russia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1154,7 +1154,7 @@ class CountriesTableSeeder extends Seeder
             142 => [
                 'id' => 143,
                 'title' => 'Rwanda',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1162,7 +1162,7 @@ class CountriesTableSeeder extends Seeder
             143 => [
                 'id' => 144,
                 'title' => 'Saint Helena',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1170,7 +1170,7 @@ class CountriesTableSeeder extends Seeder
             144 => [
                 'id' => 145,
                 'title' => 'Saint Kitts and Nevis',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1178,7 +1178,7 @@ class CountriesTableSeeder extends Seeder
             145 => [
                 'id' => 146,
                 'title' => 'Saint Lucia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1186,7 +1186,7 @@ class CountriesTableSeeder extends Seeder
             146 => [
                 'id' => 147,
                 'title' => 'Saint Vincent and the Grenadines',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1194,7 +1194,7 @@ class CountriesTableSeeder extends Seeder
             147 => [
                 'id' => 148,
                 'title' => 'San Marino',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1202,7 +1202,7 @@ class CountriesTableSeeder extends Seeder
             148 => [
                 'id' => 149,
                 'title' => 'Sao Tome & Principe',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1210,7 +1210,7 @@ class CountriesTableSeeder extends Seeder
             149 => [
                 'id' => 150,
                 'title' => 'Saudi Arabia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1218,7 +1218,7 @@ class CountriesTableSeeder extends Seeder
             150 => [
                 'id' => 151,
                 'title' => 'Senegal',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1226,7 +1226,7 @@ class CountriesTableSeeder extends Seeder
             151 => [
                 'id' => 152,
                 'title' => 'Serbia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1234,7 +1234,7 @@ class CountriesTableSeeder extends Seeder
             152 => [
                 'id' => 153,
                 'title' => 'Seychelles',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1242,7 +1242,7 @@ class CountriesTableSeeder extends Seeder
             153 => [
                 'id' => 154,
                 'title' => 'Sierra Leone',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1250,7 +1250,7 @@ class CountriesTableSeeder extends Seeder
             154 => [
                 'id' => 155,
                 'title' => 'Singapore',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1258,7 +1258,7 @@ class CountriesTableSeeder extends Seeder
             155 => [
                 'id' => 156,
                 'title' => 'Slovakia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1266,7 +1266,7 @@ class CountriesTableSeeder extends Seeder
             156 => [
                 'id' => 157,
                 'title' => 'Slovenia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1274,7 +1274,7 @@ class CountriesTableSeeder extends Seeder
             157 => [
                 'id' => 158,
                 'title' => 'Somalia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1282,7 +1282,7 @@ class CountriesTableSeeder extends Seeder
             158 => [
                 'id' => 159,
                 'title' => 'South Africa',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1290,7 +1290,7 @@ class CountriesTableSeeder extends Seeder
             159 => [
                 'id' => 160,
                 'title' => 'South Korea',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1298,7 +1298,7 @@ class CountriesTableSeeder extends Seeder
             160 => [
                 'id' => 161,
                 'title' => 'South Sudan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1306,7 +1306,7 @@ class CountriesTableSeeder extends Seeder
             161 => [
                 'id' => 162,
                 'title' => 'Spain',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1314,7 +1314,7 @@ class CountriesTableSeeder extends Seeder
             162 => [
                 'id' => 163,
                 'title' => 'Sri Lanka',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1322,7 +1322,7 @@ class CountriesTableSeeder extends Seeder
             163 => [
                 'id' => 164,
                 'title' => 'State of Palestine',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1330,7 +1330,7 @@ class CountriesTableSeeder extends Seeder
             164 => [
                 'id' => 165,
                 'title' => 'Sudan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1338,7 +1338,7 @@ class CountriesTableSeeder extends Seeder
             165 => [
                 'id' => 166,
                 'title' => 'Suriname',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1346,7 +1346,7 @@ class CountriesTableSeeder extends Seeder
             166 => [
                 'id' => 167,
                 'title' => 'Sweden',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1354,7 +1354,7 @@ class CountriesTableSeeder extends Seeder
             167 => [
                 'id' => 168,
                 'title' => 'Switzerland',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1362,7 +1362,7 @@ class CountriesTableSeeder extends Seeder
             168 => [
                 'id' => 169,
                 'title' => 'Syria',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1370,7 +1370,7 @@ class CountriesTableSeeder extends Seeder
             169 => [
                 'id' => 170,
                 'title' => 'Taiwan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1378,7 +1378,7 @@ class CountriesTableSeeder extends Seeder
             170 => [
                 'id' => 171,
                 'title' => 'Tajikistan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1386,7 +1386,7 @@ class CountriesTableSeeder extends Seeder
             171 => [
                 'id' => 172,
                 'title' => 'Tanzania',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1394,7 +1394,7 @@ class CountriesTableSeeder extends Seeder
             172 => [
                 'id' => 173,
                 'title' => 'Thailand',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1402,7 +1402,7 @@ class CountriesTableSeeder extends Seeder
             173 => [
                 'id' => 174,
                 'title' => 'The Bahamas',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1410,7 +1410,7 @@ class CountriesTableSeeder extends Seeder
             174 => [
                 'id' => 175,
                 'title' => 'Timor-Leste',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1418,7 +1418,7 @@ class CountriesTableSeeder extends Seeder
             175 => [
                 'id' => 176,
                 'title' => 'Togo',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1426,7 +1426,7 @@ class CountriesTableSeeder extends Seeder
             176 => [
                 'id' => 177,
                 'title' => 'Trinidad and Tobago',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1434,7 +1434,7 @@ class CountriesTableSeeder extends Seeder
             177 => [
                 'id' => 178,
                 'title' => 'Tunisia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1442,7 +1442,7 @@ class CountriesTableSeeder extends Seeder
             178 => [
                 'id' => 179,
                 'title' => 'Turkey',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1450,7 +1450,7 @@ class CountriesTableSeeder extends Seeder
             179 => [
                 'id' => 180,
                 'title' => 'Turkmenistan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1458,7 +1458,7 @@ class CountriesTableSeeder extends Seeder
             180 => [
                 'id' => 181,
                 'title' => 'Uganda',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1466,7 +1466,7 @@ class CountriesTableSeeder extends Seeder
             181 => [
                 'id' => 182,
                 'title' => 'Ukraine',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1474,7 +1474,7 @@ class CountriesTableSeeder extends Seeder
             182 => [
                 'id' => 183,
                 'title' => 'United Arab Emirates',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1482,7 +1482,7 @@ class CountriesTableSeeder extends Seeder
             183 => [
                 'id' => 184,
                 'title' => 'United Kingdom',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1490,7 +1490,7 @@ class CountriesTableSeeder extends Seeder
             184 => [
                 'id' => 185,
                 'title' => 'United States',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1498,7 +1498,7 @@ class CountriesTableSeeder extends Seeder
             185 => [
                 'id' => 186,
                 'title' => 'Uruguay',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1506,7 +1506,7 @@ class CountriesTableSeeder extends Seeder
             186 => [
                 'id' => 187,
                 'title' => 'Uzbekistan',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1514,7 +1514,7 @@ class CountriesTableSeeder extends Seeder
             187 => [
                 'id' => 188,
                 'title' => 'Venezuela',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1522,7 +1522,7 @@ class CountriesTableSeeder extends Seeder
             188 => [
                 'id' => 189,
                 'title' => 'Vietnam',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1530,7 +1530,7 @@ class CountriesTableSeeder extends Seeder
             189 => [
                 'id' => 190,
                 'title' => 'Western Sahara',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1538,7 +1538,7 @@ class CountriesTableSeeder extends Seeder
             190 => [
                 'id' => 191,
                 'title' => 'Yemen',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1546,7 +1546,7 @@ class CountriesTableSeeder extends Seeder
             191 => [
                 'id' => 192,
                 'title' => 'Zambia',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,
@@ -1554,7 +1554,7 @@ class CountriesTableSeeder extends Seeder
             192 => [
                 'id' => 193,
                 'title' => 'Zimbabwe',
-                'active' => 1,
+
                 'created_at' => '2023-05-07 18:31:03',
                 'updated_at' => '2023-05-07 18:31:03',
                 'deleted_at' => null,

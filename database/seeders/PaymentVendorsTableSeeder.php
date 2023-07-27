@@ -32,7 +32,7 @@ class PaymentVendorsTableSeeder extends Seeder
                 'cert_password' => null,
                 'public_key' => null,
                 'secret_key' => null,
-                'active' => 1,
+
                 'created_at' => '2023-07-20 13:02:28',
                 'updated_at' => '2023-07-20 13:08:04',
                 'deleted_at' => null,
@@ -54,7 +54,7 @@ class PaymentVendorsTableSeeder extends Seeder
                 'cert_password' => null,
                 'public_key' => 'test_public_key_15ecc4b864bc48fa98f8aebf5d358664',
                 'secret_key' => 'd04d0838688047b2bb78f70a1b2951a9',
-                'active' => 1,
+
                 'created_at' => '2023-07-20 13:03:43',
                 'updated_at' => '2023-07-20 13:08:06',
                 'deleted_at' => null,
@@ -76,7 +76,7 @@ class PaymentVendorsTableSeeder extends Seeder
                 'cert_password' => 'N3@12#',
                 'public_key' => null,
                 'secret_key' => null,
-                'active' => 1,
+
                 'created_at' => '2023-07-20 13:05:45',
                 'updated_at' => '2023-07-20 13:08:08',
                 'deleted_at' => null,
@@ -98,7 +98,7 @@ class PaymentVendorsTableSeeder extends Seeder
                 'cert_password' => null,
                 'public_key' => null,
                 'secret_key' => null,
-                'active' => 1,
+
                 'created_at' => '2023-07-20 13:07:56',
                 'updated_at' => '2023-07-20 13:08:07',
                 'deleted_at' => null,

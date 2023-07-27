@@ -19,7 +19,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 1,
                 'district_id' => 1,
                 'title' => 'Arun Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:53:20',
                 'updated_at' => '2023-05-08 15:53:20',
                 'deleted_at' => null,
@@ -28,7 +28,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 2,
                 'district_id' => 1,
                 'title' => 'Aamchowk Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:53:30',
                 'updated_at' => '2023-05-08 15:53:30',
                 'deleted_at' => null,
@@ -37,7 +37,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 3,
                 'district_id' => 1,
                 'title' => 'Hatuwagadhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:53:39',
                 'updated_at' => '2023-05-08 15:53:39',
                 'deleted_at' => null,
@@ -46,7 +46,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 4,
                 'district_id' => 1,
                 'title' => 'Pauwadungma Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:53:48',
                 'updated_at' => '2023-05-08 15:53:48',
                 'deleted_at' => null,
@@ -55,7 +55,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 5,
                 'district_id' => 1,
                 'title' => 'Temkemaiyung Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:53:58',
                 'updated_at' => '2023-05-08 15:53:58',
                 'deleted_at' => null,
@@ -64,7 +64,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 6,
                 'district_id' => 1,
                 'title' => 'Salpasilichho Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:54:06',
                 'updated_at' => '2023-05-08 15:54:06',
                 'deleted_at' => null,
@@ -73,7 +73,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 7,
                 'district_id' => 1,
                 'title' => 'Ramprasad Rai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:54:14',
                 'updated_at' => '2023-05-08 15:54:14',
                 'deleted_at' => null,
@@ -82,7 +82,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 8,
                 'district_id' => 1,
                 'title' => 'Shadananda Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:54:23',
                 'updated_at' => '2023-05-08 15:54:23',
                 'deleted_at' => null,
@@ -91,7 +91,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 9,
                 'district_id' => 1,
                 'title' => 'Bhojpur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:54:31',
                 'updated_at' => '2023-05-08 15:54:31',
                 'deleted_at' => null,
@@ -100,7 +100,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 10,
                 'district_id' => 2,
                 'title' => 'Chaubise Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:54:58',
                 'updated_at' => '2023-05-08 15:54:58',
                 'deleted_at' => null,
@@ -109,7 +109,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 11,
                 'district_id' => 2,
                 'title' => 'Shahidbhumi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:55:08',
                 'updated_at' => '2023-05-08 15:55:08',
                 'deleted_at' => null,
@@ -118,7 +118,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 12,
                 'district_id' => 2,
                 'title' => 'Sangurigadhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:55:16',
                 'updated_at' => '2023-05-08 15:55:16',
                 'deleted_at' => null,
@@ -127,7 +127,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 13,
                 'district_id' => 2,
                 'title' => 'Chhathar Jorpati Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:55:27',
                 'updated_at' => '2023-05-08 15:55:27',
                 'deleted_at' => null,
@@ -136,7 +136,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 14,
                 'district_id' => 2,
                 'title' => 'Pakhribas Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:55:36',
                 'updated_at' => '2023-05-08 15:55:36',
                 'deleted_at' => null,
@@ -145,7 +145,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 15,
                 'district_id' => 2,
                 'title' => 'Mahalaxmi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:55:44',
                 'updated_at' => '2023-05-08 15:55:44',
                 'deleted_at' => null,
@@ -154,7 +154,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 16,
                 'district_id' => 2,
                 'title' => 'Dhankuta Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:55:54',
                 'updated_at' => '2023-05-08 15:55:54',
                 'deleted_at' => null,
@@ -163,7 +163,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 17,
                 'district_id' => 3,
                 'title' => 'Rong Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:56:09',
                 'updated_at' => '2023-05-08 15:56:09',
                 'deleted_at' => null,
@@ -172,7 +172,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 18,
                 'district_id' => 3,
                 'title' => 'Mangsebung Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:56:17',
                 'updated_at' => '2023-05-08 15:56:17',
                 'deleted_at' => null,
@@ -181,7 +181,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 19,
                 'district_id' => 3,
                 'title' => 'Chulachuli Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:56:26',
                 'updated_at' => '2023-05-08 15:56:26',
                 'deleted_at' => null,
@@ -190,7 +190,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 20,
                 'district_id' => 3,
                 'title' => 'Sandakpur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:56:36',
                 'updated_at' => '2023-05-08 15:56:36',
                 'deleted_at' => null,
@@ -199,7 +199,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 21,
                 'district_id' => 3,
                 'title' => 'Fakphokthum Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:56:46',
                 'updated_at' => '2023-05-08 15:56:46',
                 'deleted_at' => null,
@@ -208,7 +208,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 22,
                 'district_id' => 3,
                 'title' => 'Maijogmai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:56:57',
                 'updated_at' => '2023-05-08 15:56:57',
                 'deleted_at' => null,
@@ -217,7 +217,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 23,
                 'district_id' => 3,
                 'title' => 'Illam Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:57:09',
                 'updated_at' => '2023-05-08 15:57:09',
                 'deleted_at' => null,
@@ -226,7 +226,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 24,
                 'district_id' => 3,
                 'title' => 'Mai Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:57:19',
                 'updated_at' => '2023-05-08 15:57:19',
                 'deleted_at' => null,
@@ -235,7 +235,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 25,
                 'district_id' => 3,
                 'title' => 'Deumai Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:57:29',
                 'updated_at' => '2023-05-08 15:57:29',
                 'deleted_at' => null,
@@ -244,7 +244,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 26,
                 'district_id' => 3,
                 'title' => 'Suryodaya Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:57:38',
                 'updated_at' => '2023-05-08 15:57:38',
                 'deleted_at' => null,
@@ -253,7 +253,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 27,
                 'district_id' => 4,
                 'title' => 'Kamal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:58:01',
                 'updated_at' => '2023-05-08 15:58:01',
                 'deleted_at' => null,
@@ -262,7 +262,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 28,
                 'district_id' => 4,
                 'title' => 'Jhapa Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:58:11',
                 'updated_at' => '2023-05-08 15:58:11',
                 'deleted_at' => null,
@@ -271,7 +271,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 29,
                 'district_id' => 4,
                 'title' => 'Kachankawal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:58:19',
                 'updated_at' => '2023-05-08 15:58:19',
                 'deleted_at' => null,
@@ -280,7 +280,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 30,
                 'district_id' => 4,
                 'title' => 'Gauriganj Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:58:30',
                 'updated_at' => '2023-05-08 15:58:30',
                 'deleted_at' => null,
@@ -289,7 +289,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 31,
                 'district_id' => 4,
                 'title' => 'Barhadashi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:58:39',
                 'updated_at' => '2023-05-08 15:58:39',
                 'deleted_at' => null,
@@ -298,7 +298,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 32,
                 'district_id' => 4,
                 'title' => 'Haldibari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:58:49',
                 'updated_at' => '2023-05-08 15:58:49',
                 'deleted_at' => null,
@@ -307,7 +307,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 33,
                 'district_id' => 4,
                 'title' => 'Buddhashanti Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:58:59',
                 'updated_at' => '2023-05-08 15:58:59',
                 'deleted_at' => null,
@@ -316,7 +316,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 34,
                 'district_id' => 4,
                 'title' => 'Shivasataxi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:59:08',
                 'updated_at' => '2023-05-08 15:59:08',
                 'deleted_at' => null,
@@ -325,7 +325,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 35,
                 'district_id' => 4,
                 'title' => 'Bhadrapur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:59:17',
                 'updated_at' => '2023-05-08 15:59:17',
                 'deleted_at' => null,
@@ -334,7 +334,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 36,
                 'district_id' => 4,
                 'title' => 'Kankai Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:59:25',
                 'updated_at' => '2023-05-08 15:59:25',
                 'deleted_at' => null,
@@ -343,7 +343,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 37,
                 'district_id' => 4,
                 'title' => 'Birtamod Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:59:35',
                 'updated_at' => '2023-05-08 15:59:35',
                 'deleted_at' => null,
@@ -352,7 +352,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 38,
                 'district_id' => 4,
                 'title' => 'Mechinagar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:59:43',
                 'updated_at' => '2023-05-08 15:59:43',
                 'deleted_at' => null,
@@ -361,7 +361,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 39,
                 'district_id' => 4,
                 'title' => 'Damak Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 15:59:52',
                 'updated_at' => '2023-05-08 15:59:52',
                 'deleted_at' => null,
@@ -370,7 +370,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 40,
                 'district_id' => 4,
                 'title' => 'Arjundhara Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:00:02',
                 'updated_at' => '2023-05-08 16:00:02',
                 'deleted_at' => null,
@@ -379,7 +379,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 41,
                 'district_id' => 4,
                 'title' => 'Gauradhaha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:00:11',
                 'updated_at' => '2023-05-08 16:00:11',
                 'deleted_at' => null,
@@ -388,7 +388,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 42,
                 'district_id' => 5,
                 'title' => 'Sakela Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:00:43',
                 'updated_at' => '2023-05-08 16:00:43',
                 'deleted_at' => null,
@@ -397,7 +397,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 43,
                 'district_id' => 5,
                 'title' => 'Khotehang Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:00:54',
                 'updated_at' => '2023-05-08 16:00:54',
                 'deleted_at' => null,
@@ -406,7 +406,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 44,
                 'district_id' => 5,
                 'title' => 'Barahapokhari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:01:02',
                 'updated_at' => '2023-05-08 16:01:02',
                 'deleted_at' => null,
@@ -415,7 +415,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 45,
                 'district_id' => 5,
                 'title' => 'Ainselukhark Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:01:11',
                 'updated_at' => '2023-05-08 16:01:11',
                 'deleted_at' => null,
@@ -424,7 +424,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 46,
                 'district_id' => 5,
                 'title' => 'Rawa Besi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:01:21',
                 'updated_at' => '2023-05-08 16:01:21',
                 'deleted_at' => null,
@@ -433,7 +433,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 47,
                 'district_id' => 5,
                 'title' => 'Kepilasagadhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:01:31',
                 'updated_at' => '2023-05-08 16:01:31',
                 'deleted_at' => null,
@@ -442,7 +442,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 48,
                 'district_id' => 5,
                 'title' => 'Jantedhunga Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:01:39',
                 'updated_at' => '2023-05-08 16:01:39',
                 'deleted_at' => null,
@@ -451,7 +451,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 49,
                 'district_id' => 5,
                 'title' => 'Diprung Chuichumma Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:01:47',
                 'updated_at' => '2023-05-08 16:01:47',
                 'deleted_at' => null,
@@ -460,7 +460,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 50,
                 'district_id' => 5,
                 'title' => 'Halesi Tuwachung Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:01:55',
                 'updated_at' => '2023-05-08 16:01:55',
                 'deleted_at' => null,
@@ -469,7 +469,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 51,
                 'district_id' => 5,
                 'title' => 'Diktel Rupakot Majhuwagadhi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:02:06',
                 'updated_at' => '2023-05-08 16:02:06',
                 'deleted_at' => null,
@@ -478,7 +478,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 52,
                 'district_id' => 6,
                 'title' => 'Jahada Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:02:32',
                 'updated_at' => '2023-05-08 16:02:32',
                 'deleted_at' => null,
@@ -487,7 +487,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 53,
                 'district_id' => 6,
                 'title' => 'Katahari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:02:44',
                 'updated_at' => '2023-05-08 16:02:44',
                 'deleted_at' => null,
@@ -496,7 +496,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 54,
                 'district_id' => 6,
                 'title' => 'Gramthan Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:02:55',
                 'updated_at' => '2023-05-08 16:02:55',
                 'deleted_at' => null,
@@ -505,7 +505,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 55,
                 'district_id' => 6,
                 'title' => 'Dhanpalthan Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:03:08',
                 'updated_at' => '2023-05-08 16:03:08',
                 'deleted_at' => null,
@@ -514,7 +514,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 56,
                 'district_id' => 6,
                 'title' => 'Kerabari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:03:19',
                 'updated_at' => '2023-05-08 16:03:19',
                 'deleted_at' => null,
@@ -523,7 +523,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 57,
                 'district_id' => 6,
                 'title' => 'Budhiganga Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:03:30',
                 'updated_at' => '2023-05-08 16:03:30',
                 'deleted_at' => null,
@@ -532,7 +532,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 58,
                 'district_id' => 6,
                 'title' => 'Kanepokhari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:03:40',
                 'updated_at' => '2023-05-08 16:03:40',
                 'deleted_at' => null,
@@ -541,7 +541,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 59,
                 'district_id' => 6,
                 'title' => 'Miklajung Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:03:52',
                 'updated_at' => '2023-05-08 16:03:52',
                 'deleted_at' => null,
@@ -550,7 +550,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 60,
                 'district_id' => 6,
                 'title' => 'Letang Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:04:03',
                 'updated_at' => '2023-05-08 16:04:03',
                 'deleted_at' => null,
@@ -559,7 +559,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 61,
                 'district_id' => 6,
                 'title' => 'Sunwarshi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:04:13',
                 'updated_at' => '2023-05-08 16:04:13',
                 'deleted_at' => null,
@@ -568,7 +568,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 62,
                 'district_id' => 6,
                 'title' => 'Rangeli Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:04:24',
                 'updated_at' => '2023-05-08 16:04:24',
                 'deleted_at' => null,
@@ -577,7 +577,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 63,
                 'district_id' => 6,
                 'title' => 'Patahrishanishchare Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:04:36',
                 'updated_at' => '2023-05-08 16:04:36',
                 'deleted_at' => null,
@@ -586,7 +586,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 64,
                 'district_id' => 6,
                 'title' => 'Biratnagar Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:04:46',
                 'updated_at' => '2023-05-08 16:04:46',
                 'deleted_at' => null,
@@ -595,7 +595,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 65,
                 'district_id' => 6,
                 'title' => 'Uralabari Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:04:56',
                 'updated_at' => '2023-05-08 16:04:56',
                 'deleted_at' => null,
@@ -604,7 +604,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 66,
                 'district_id' => 6,
                 'title' => 'Belbari Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:05:06',
                 'updated_at' => '2023-05-08 16:05:06',
                 'deleted_at' => null,
@@ -613,7 +613,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 67,
                 'district_id' => 6,
                 'title' => 'Sundarharaicha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:05:15',
                 'updated_at' => '2023-05-08 16:05:15',
                 'deleted_at' => null,
@@ -622,7 +622,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 68,
                 'district_id' => 6,
                 'title' => 'Ratuwamai Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:05:25',
                 'updated_at' => '2023-05-08 16:05:25',
                 'deleted_at' => null,
@@ -631,7 +631,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 69,
                 'district_id' => 7,
                 'title' => 'Likhu Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:05:52',
                 'updated_at' => '2023-05-08 16:05:52',
                 'deleted_at' => null,
@@ -640,7 +640,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 70,
                 'district_id' => 7,
                 'title' => 'Molung Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:06:05',
                 'updated_at' => '2023-05-08 16:06:05',
                 'deleted_at' => null,
@@ -649,7 +649,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 71,
                 'district_id' => 7,
                 'title' => 'Sunkoshi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:06:16',
                 'updated_at' => '2023-05-08 16:06:16',
                 'deleted_at' => null,
@@ -658,7 +658,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 72,
                 'district_id' => 7,
                 'title' => 'Champadevi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:06:27',
                 'updated_at' => '2023-05-08 16:06:27',
                 'deleted_at' => null,
@@ -667,7 +667,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 73,
                 'district_id' => 7,
                 'title' => 'Chisankhugadhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:06:37',
                 'updated_at' => '2023-05-08 16:06:37',
                 'deleted_at' => null,
@@ -676,7 +676,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 74,
                 'district_id' => 7,
                 'title' => 'Khijidemba Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:06:47',
                 'updated_at' => '2023-05-08 16:06:47',
                 'deleted_at' => null,
@@ -685,7 +685,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 75,
                 'district_id' => 7,
                 'title' => 'Manebhanjyang Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:06:58',
                 'updated_at' => '2023-05-08 16:06:58',
                 'deleted_at' => null,
@@ -694,7 +694,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 76,
                 'district_id' => 7,
                 'title' => 'Siddhicharan Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:07:08',
                 'updated_at' => '2023-05-08 16:07:08',
                 'deleted_at' => null,
@@ -703,7 +703,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 77,
                 'district_id' => 8,
                 'title' => 'Yangwarak Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:07:34',
                 'updated_at' => '2023-05-08 16:07:34',
                 'deleted_at' => null,
@@ -712,7 +712,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 78,
                 'district_id' => 8,
                 'title' => 'Hilihang Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:07:46',
                 'updated_at' => '2023-05-08 16:07:46',
                 'deleted_at' => null,
@@ -721,7 +721,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 79,
                 'district_id' => 8,
                 'title' => 'Falelung Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:07:57',
                 'updated_at' => '2023-05-08 16:07:57',
                 'deleted_at' => null,
@@ -730,7 +730,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 80,
                 'district_id' => 8,
                 'title' => 'Tumbewa Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:08:09',
                 'updated_at' => '2023-05-08 16:08:09',
                 'deleted_at' => null,
@@ -739,7 +739,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 81,
                 'district_id' => 8,
                 'title' => 'Kummayak Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:08:20',
                 'updated_at' => '2023-05-08 16:08:20',
                 'deleted_at' => null,
@@ -748,7 +748,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 82,
                 'district_id' => 8,
                 'title' => 'Miklajung Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:08:32',
                 'updated_at' => '2023-05-08 16:08:32',
                 'deleted_at' => null,
@@ -757,7 +757,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 83,
                 'district_id' => 8,
                 'title' => 'Falgunanda Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:08:42',
                 'updated_at' => '2023-05-08 16:08:42',
                 'deleted_at' => null,
@@ -766,7 +766,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 84,
                 'district_id' => 8,
                 'title' => 'Phidim Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:08:55',
                 'updated_at' => '2023-05-08 16:08:55',
                 'deleted_at' => null,
@@ -775,7 +775,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 85,
                 'district_id' => 9,
                 'title' => 'Makalu Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:09:30',
                 'updated_at' => '2023-05-08 16:09:30',
                 'deleted_at' => null,
@@ -784,7 +784,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 86,
                 'district_id' => 9,
                 'title' => 'Chichila Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:09:41',
                 'updated_at' => '2023-05-08 16:09:41',
                 'deleted_at' => null,
@@ -793,7 +793,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 87,
                 'district_id' => 9,
                 'title' => 'Silichong Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:09:52',
                 'updated_at' => '2023-05-08 16:09:52',
                 'deleted_at' => null,
@@ -802,7 +802,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 88,
                 'district_id' => 9,
                 'title' => 'Bhotkhola Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:10:02',
                 'updated_at' => '2023-05-08 16:10:02',
                 'deleted_at' => null,
@@ -811,7 +811,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 89,
                 'district_id' => 9,
                 'title' => 'Sabhapokhari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:10:11',
                 'updated_at' => '2023-05-08 16:10:11',
                 'deleted_at' => null,
@@ -820,7 +820,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 90,
                 'district_id' => 9,
                 'title' => 'Dharmadevi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:10:21',
                 'updated_at' => '2023-05-08 16:10:21',
                 'deleted_at' => null,
@@ -829,7 +829,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 91,
                 'district_id' => 9,
                 'title' => 'Madi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:10:30',
                 'updated_at' => '2023-05-08 16:10:30',
                 'deleted_at' => null,
@@ -838,7 +838,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 92,
                 'district_id' => 9,
                 'title' => 'Panchakhapan Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:10:39',
                 'updated_at' => '2023-05-08 16:10:39',
                 'deleted_at' => null,
@@ -847,7 +847,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 93,
                 'district_id' => 9,
                 'title' => 'Chainpur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:10:48',
                 'updated_at' => '2023-05-08 16:10:48',
                 'deleted_at' => null,
@@ -856,7 +856,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 94,
                 'district_id' => 9,
                 'title' => 'Khandbari Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:10:59',
                 'updated_at' => '2023-05-08 16:10:59',
                 'deleted_at' => null,
@@ -865,7 +865,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 95,
                 'district_id' => 10,
                 'title' => 'Sotang Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:13:19',
                 'updated_at' => '2023-05-08 16:13:19',
                 'deleted_at' => null,
@@ -874,7 +874,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 96,
                 'district_id' => 10,
                 'title' => 'Mahakulung Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:13:31',
                 'updated_at' => '2023-05-08 16:13:31',
                 'deleted_at' => null,
@@ -883,7 +883,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 97,
                 'district_id' => 10,
                 'title' => 'Likhupike Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:13:47',
                 'updated_at' => '2023-05-08 16:13:47',
                 'deleted_at' => null,
@@ -892,7 +892,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 98,
                 'district_id' => 10,
                 'title' => 'Nechasalyan Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:14:01',
                 'updated_at' => '2023-05-08 16:14:01',
                 'deleted_at' => null,
@@ -901,7 +901,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 99,
                 'district_id' => 10,
                 'title' => 'Thulung Dudhkoshi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:14:13',
                 'updated_at' => '2023-05-08 16:14:13',
                 'deleted_at' => null,
@@ -910,7 +910,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 100,
                 'district_id' => 10,
                 'title' => 'Maapya Dudhkoshi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:14:25',
                 'updated_at' => '2023-05-08 16:14:25',
                 'deleted_at' => null,
@@ -919,7 +919,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 101,
                 'district_id' => 10,
                 'title' => 'Khumbupasanglahmu Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:14:38',
                 'updated_at' => '2023-05-08 16:14:38',
                 'deleted_at' => null,
@@ -928,7 +928,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 102,
                 'district_id' => 10,
                 'title' => 'Solududhakunda Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:14:49',
                 'updated_at' => '2023-05-08 16:14:49',
                 'deleted_at' => null,
@@ -937,7 +937,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 103,
                 'district_id' => 11,
                 'title' => 'Gadhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:15:19',
                 'updated_at' => '2023-05-08 16:15:19',
                 'deleted_at' => null,
@@ -946,7 +946,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 104,
                 'district_id' => 11,
                 'title' => 'Koshi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:15:31',
                 'updated_at' => '2023-05-08 16:15:31',
                 'deleted_at' => null,
@@ -955,7 +955,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 105,
                 'district_id' => 11,
                 'title' => 'Barju Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:15:45',
                 'updated_at' => '2023-05-08 16:15:45',
                 'deleted_at' => null,
@@ -964,7 +964,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 106,
                 'district_id' => 11,
                 'title' => 'Harinagar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:15:58',
                 'updated_at' => '2023-05-08 16:15:58',
                 'deleted_at' => null,
@@ -973,7 +973,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 107,
                 'district_id' => 11,
                 'title' => 'Dewanganj Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:16:09',
                 'updated_at' => '2023-05-08 16:16:09',
                 'deleted_at' => null,
@@ -982,7 +982,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 108,
                 'district_id' => 11,
                 'title' => 'Bhokraha Narsing Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:16:21',
                 'updated_at' => '2023-05-08 16:16:21',
                 'deleted_at' => null,
@@ -991,7 +991,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 109,
                 'district_id' => 11,
                 'title' => 'Ramdhuni Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:16:31',
                 'updated_at' => '2023-05-08 16:16:31',
                 'deleted_at' => null,
@@ -1000,7 +1000,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 110,
                 'district_id' => 11,
                 'title' => 'Barahchhetra Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:16:45',
                 'updated_at' => '2023-05-08 16:16:45',
                 'deleted_at' => null,
@@ -1009,7 +1009,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 111,
                 'district_id' => 11,
                 'title' => 'Duhabi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:16:55',
                 'updated_at' => '2023-05-08 16:16:55',
                 'deleted_at' => null,
@@ -1018,7 +1018,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 112,
                 'district_id' => 11,
                 'title' => 'Inaruwa Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:17:11',
                 'updated_at' => '2023-05-08 16:17:11',
                 'deleted_at' => null,
@@ -1027,7 +1027,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 113,
                 'district_id' => 11,
                 'title' => 'Dharan Sub-Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:17:22',
                 'updated_at' => '2023-05-08 16:17:22',
                 'deleted_at' => null,
@@ -1036,7 +1036,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 114,
                 'district_id' => 11,
                 'title' => 'Itahari Sub-Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:17:35',
                 'updated_at' => '2023-05-08 16:17:35',
                 'deleted_at' => null,
@@ -1045,7 +1045,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 115,
                 'district_id' => 12,
                 'title' => 'Sidingba Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:19:34',
                 'updated_at' => '2023-05-08 16:19:34',
                 'deleted_at' => null,
@@ -1054,7 +1054,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 116,
                 'district_id' => 12,
                 'title' => 'Meringden Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:19:48',
                 'updated_at' => '2023-05-08 16:19:48',
                 'deleted_at' => null,
@@ -1063,7 +1063,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 117,
                 'district_id' => 12,
                 'title' => 'Maiwakhola Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:20:00',
                 'updated_at' => '2023-05-08 16:20:00',
                 'deleted_at' => null,
@@ -1072,7 +1072,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 118,
                 'district_id' => 12,
                 'title' => 'Phaktanglung Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:20:11',
                 'updated_at' => '2023-05-08 16:20:11',
                 'deleted_at' => null,
@@ -1081,7 +1081,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 119,
                 'district_id' => 12,
                 'title' => 'Sirijangha Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:20:22',
                 'updated_at' => '2023-05-08 16:20:22',
                 'deleted_at' => null,
@@ -1090,7 +1090,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 120,
                 'district_id' => 12,
                 'title' => 'Mikwakhola Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:20:32',
                 'updated_at' => '2023-05-08 16:20:32',
                 'deleted_at' => null,
@@ -1099,7 +1099,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 121,
                 'district_id' => 12,
                 'title' => 'Aathrai Tribeni Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:20:44',
                 'updated_at' => '2023-05-08 16:20:44',
                 'deleted_at' => null,
@@ -1108,7 +1108,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 122,
                 'district_id' => 12,
                 'title' => 'Pathivara Yangwarak Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:20:56',
                 'updated_at' => '2023-05-08 16:20:56',
                 'deleted_at' => null,
@@ -1117,7 +1117,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 123,
                 'district_id' => 12,
                 'title' => 'Phungling Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:21:06',
                 'updated_at' => '2023-05-08 16:21:06',
                 'deleted_at' => null,
@@ -1126,7 +1126,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 124,
                 'district_id' => 13,
                 'title' => 'Chhathar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:21:51',
                 'updated_at' => '2023-05-08 16:21:51',
                 'deleted_at' => null,
@@ -1135,7 +1135,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 125,
                 'district_id' => 13,
                 'title' => 'Phedap Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:28:24',
                 'updated_at' => '2023-05-08 16:28:24',
                 'deleted_at' => null,
@@ -1144,7 +1144,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 126,
                 'district_id' => 13,
                 'title' => 'Aathrai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:28:38',
                 'updated_at' => '2023-05-08 16:28:38',
                 'deleted_at' => null,
@@ -1153,7 +1153,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 127,
                 'district_id' => 13,
                 'title' => 'Menchayam Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:28:49',
                 'updated_at' => '2023-05-08 16:28:49',
                 'deleted_at' => null,
@@ -1162,7 +1162,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 128,
                 'district_id' => 13,
                 'title' => 'Laligurans Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:29:00',
                 'updated_at' => '2023-05-08 16:29:00',
                 'deleted_at' => null,
@@ -1171,7 +1171,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 129,
                 'district_id' => 13,
                 'title' => 'Myanglung Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:29:11',
                 'updated_at' => '2023-05-08 16:29:11',
                 'deleted_at' => null,
@@ -1180,7 +1180,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 130,
                 'district_id' => 14,
                 'title' => 'Tapli Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:29:39',
                 'updated_at' => '2023-05-08 16:29:39',
                 'deleted_at' => null,
@@ -1189,7 +1189,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 131,
                 'district_id' => 14,
                 'title' => 'Rautamai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:29:50',
                 'updated_at' => '2023-05-08 16:29:50',
                 'deleted_at' => null,
@@ -1198,7 +1198,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 132,
                 'district_id' => 14,
                 'title' => 'Udayapurgadhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:30:00',
                 'updated_at' => '2023-05-08 16:30:00',
                 'deleted_at' => null,
@@ -1207,7 +1207,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 133,
                 'district_id' => 14,
                 'title' => 'Limchungbung Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:30:10',
                 'updated_at' => '2023-05-08 16:30:10',
                 'deleted_at' => null,
@@ -1216,7 +1216,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 134,
                 'district_id' => 14,
                 'title' => 'Chaudandigadhi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:30:22',
                 'updated_at' => '2023-05-08 16:30:22',
                 'deleted_at' => null,
@@ -1225,7 +1225,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 135,
                 'district_id' => 14,
                 'title' => 'Triyuga Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:30:34',
                 'updated_at' => '2023-05-08 16:30:34',
                 'deleted_at' => null,
@@ -1234,7 +1234,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 136,
                 'district_id' => 14,
                 'title' => 'Katari Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:30:46',
                 'updated_at' => '2023-05-08 16:30:46',
                 'deleted_at' => null,
@@ -1243,7 +1243,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 137,
                 'district_id' => 14,
                 'title' => 'Belaka Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:30:58',
                 'updated_at' => '2023-05-08 16:30:58',
                 'deleted_at' => null,
@@ -1252,7 +1252,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 138,
                 'district_id' => 22,
                 'title' => 'Rajgadh Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:32:05',
                 'updated_at' => '2023-05-08 16:32:05',
                 'deleted_at' => null,
@@ -1261,7 +1261,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 139,
                 'district_id' => 22,
                 'title' => 'Rupani Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:32:16',
                 'updated_at' => '2023-05-08 16:32:16',
                 'deleted_at' => null,
@@ -1270,7 +1270,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 140,
                 'district_id' => 22,
                 'title' => 'Tirahut Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:32:27',
                 'updated_at' => '2023-05-08 16:32:27',
                 'deleted_at' => null,
@@ -1279,7 +1279,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 141,
                 'district_id' => 22,
                 'title' => 'Mahadeva Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:32:37',
                 'updated_at' => '2023-05-08 16:32:37',
                 'deleted_at' => null,
@@ -1288,7 +1288,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 142,
                 'district_id' => 22,
                 'title' => 'Bishnupur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:32:49',
                 'updated_at' => '2023-05-08 16:32:49',
                 'deleted_at' => null,
@@ -1297,7 +1297,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 143,
                 'district_id' => 22,
                 'title' => 'Chhinnamasta Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:33:01',
                 'updated_at' => '2023-05-08 16:33:01',
                 'deleted_at' => null,
@@ -1306,7 +1306,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 144,
                 'district_id' => 22,
                 'title' => 'Balan Bihul Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:33:13',
                 'updated_at' => '2023-05-08 16:33:13',
                 'deleted_at' => null,
@@ -1315,7 +1315,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 145,
                 'district_id' => 22,
                 'title' => 'Tilathi Koiladi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:33:23',
                 'updated_at' => '2023-05-08 16:33:23',
                 'deleted_at' => null,
@@ -1324,7 +1324,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 146,
                 'district_id' => 22,
                 'title' => 'Agnisair Krishna Savaran Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:33:35',
                 'updated_at' => '2023-05-08 16:33:35',
                 'deleted_at' => null,
@@ -1333,7 +1333,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 147,
                 'district_id' => 22,
                 'title' => 'Hanumannagar Kankalini Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:33:47',
                 'updated_at' => '2023-05-08 16:33:47',
                 'deleted_at' => null,
@@ -1342,7 +1342,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 148,
                 'district_id' => 22,
                 'title' => 'Kanchanrup Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:33:56',
                 'updated_at' => '2023-05-08 16:33:56',
                 'deleted_at' => null,
@@ -1351,7 +1351,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 149,
                 'district_id' => 22,
                 'title' => 'Rajbiraj Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:34:06',
                 'updated_at' => '2023-05-08 16:34:06',
                 'deleted_at' => null,
@@ -1360,7 +1360,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 150,
                 'district_id' => 22,
                 'title' => 'Khadak Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:34:17',
                 'updated_at' => '2023-05-08 16:34:17',
                 'deleted_at' => null,
@@ -1369,7 +1369,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 151,
                 'district_id' => 22,
                 'title' => 'Dakneshwori Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:34:27',
                 'updated_at' => '2023-05-08 16:34:27',
                 'deleted_at' => null,
@@ -1378,7 +1378,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 152,
                 'district_id' => 22,
                 'title' => 'Saptakoshi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:34:37',
                 'updated_at' => '2023-05-08 16:34:37',
                 'deleted_at' => null,
@@ -1387,7 +1387,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 153,
                 'district_id' => 22,
                 'title' => 'Surunga Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:34:47',
                 'updated_at' => '2023-05-08 16:34:47',
                 'deleted_at' => null,
@@ -1396,7 +1396,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 154,
                 'district_id' => 22,
                 'title' => 'Shambhunath Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:34:56',
                 'updated_at' => '2023-05-08 16:34:56',
                 'deleted_at' => null,
@@ -1405,7 +1405,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 155,
                 'district_id' => 22,
                 'title' => 'Bode Barsain Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:35:05',
                 'updated_at' => '2023-05-08 16:35:05',
                 'deleted_at' => null,
@@ -1414,7 +1414,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 156,
                 'district_id' => 20,
                 'title' => 'Aurahi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:35:41',
                 'updated_at' => '2023-05-08 16:35:41',
                 'deleted_at' => null,
@@ -1423,7 +1423,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 157,
                 'district_id' => 20,
                 'title' => 'Naraha Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:35:52',
                 'updated_at' => '2023-05-08 16:35:52',
                 'deleted_at' => null,
@@ -1432,7 +1432,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 158,
                 'district_id' => 20,
                 'title' => 'Arnama Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:36:03',
                 'updated_at' => '2023-05-08 16:36:37',
                 'deleted_at' => null,
@@ -1441,7 +1441,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 159,
                 'district_id' => 20,
                 'title' => 'Bhagawanpur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:36:14',
                 'updated_at' => '2023-05-08 16:36:14',
                 'deleted_at' => null,
@@ -1450,7 +1450,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 160,
                 'district_id' => 20,
                 'title' => 'Nawarajpur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:37:01',
                 'updated_at' => '2023-05-08 16:37:01',
                 'deleted_at' => null,
@@ -1459,7 +1459,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 161,
                 'district_id' => 20,
                 'title' => 'Bishnupur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:37:12',
                 'updated_at' => '2023-05-08 16:37:12',
                 'deleted_at' => null,
@@ -1468,7 +1468,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 162,
                 'district_id' => 20,
                 'title' => 'Bariyarpatti Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:37:23',
                 'updated_at' => '2023-05-08 16:37:23',
                 'deleted_at' => null,
@@ -1477,7 +1477,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 163,
                 'district_id' => 20,
                 'title' => 'Laxmipur Patari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:37:34',
                 'updated_at' => '2023-05-08 16:37:34',
                 'deleted_at' => null,
@@ -1486,7 +1486,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 164,
                 'district_id' => 20,
                 'title' => 'Sakhuwanankarkatti Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:37:49',
                 'updated_at' => '2023-05-08 16:37:49',
                 'deleted_at' => null,
@@ -1495,7 +1495,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 165,
                 'district_id' => 20,
                 'title' => 'Mirchaiya Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:38:00',
                 'updated_at' => '2023-05-08 16:38:00',
                 'deleted_at' => null,
@@ -1504,7 +1504,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 166,
                 'district_id' => 20,
                 'title' => 'Lahan Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:38:11',
                 'updated_at' => '2023-05-08 16:38:11',
                 'deleted_at' => null,
@@ -1513,7 +1513,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 167,
                 'district_id' => 20,
                 'title' => 'Siraha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:38:26',
                 'updated_at' => '2023-05-08 16:38:26',
                 'deleted_at' => null,
@@ -1522,7 +1522,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 168,
                 'district_id' => 20,
                 'title' => 'Dhangadhimai Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:38:36',
                 'updated_at' => '2023-05-08 16:38:36',
                 'deleted_at' => null,
@@ -1531,7 +1531,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 169,
                 'district_id' => 20,
                 'title' => 'Kalyanpur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:38:48',
                 'updated_at' => '2023-05-08 16:38:48',
                 'deleted_at' => null,
@@ -1540,7 +1540,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 170,
                 'district_id' => 20,
                 'title' => 'Karjanha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:39:00',
                 'updated_at' => '2023-05-08 16:39:00',
                 'deleted_at' => null,
@@ -1549,7 +1549,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 171,
                 'district_id' => 20,
                 'title' => 'Golbazar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:39:10',
                 'updated_at' => '2023-05-08 16:39:10',
                 'deleted_at' => null,
@@ -1558,7 +1558,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 172,
                 'district_id' => 20,
                 'title' => 'Sukhipur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:39:23',
                 'updated_at' => '2023-05-08 16:39:23',
                 'deleted_at' => null,
@@ -1567,7 +1567,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 173,
                 'district_id' => 19,
                 'title' => 'Aaurahi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:40:01',
                 'updated_at' => '2023-05-08 16:40:01',
                 'deleted_at' => null,
@@ -1576,7 +1576,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 174,
                 'district_id' => 19,
                 'title' => 'Dhanauji Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:40:18',
                 'updated_at' => '2023-05-08 16:40:18',
                 'deleted_at' => null,
@@ -1585,7 +1585,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 175,
                 'district_id' => 19,
                 'title' => 'Bateshwor Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:40:33',
                 'updated_at' => '2023-05-08 16:40:33',
                 'deleted_at' => null,
@@ -1594,7 +1594,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 176,
                 'district_id' => 19,
                 'title' => 'Janaknandani Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:40:46',
                 'updated_at' => '2023-05-08 16:40:46',
                 'deleted_at' => null,
@@ -1603,7 +1603,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 177,
                 'district_id' => 19,
                 'title' => 'Lakshminiya Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:40:59',
                 'updated_at' => '2023-05-08 16:40:59',
                 'deleted_at' => null,
@@ -1612,7 +1612,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 178,
                 'district_id' => 19,
                 'title' => 'Mukhiyapatti Musarmiya Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:41:11',
                 'updated_at' => '2023-05-08 16:41:11',
                 'deleted_at' => null,
@@ -1621,7 +1621,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 179,
                 'district_id' => 19,
                 'title' => 'Mithila Bihari Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:41:22',
                 'updated_at' => '2023-05-08 16:41:22',
                 'deleted_at' => null,
@@ -1630,7 +1630,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 180,
                 'district_id' => 19,
                 'title' => 'Kamala Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:41:34',
                 'updated_at' => '2023-05-08 16:41:34',
                 'deleted_at' => null,
@@ -1639,7 +1639,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 181,
                 'district_id' => 19,
                 'title' => 'Nagarain Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:41:43',
                 'updated_at' => '2023-05-08 16:41:43',
                 'deleted_at' => null,
@@ -1648,7 +1648,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 182,
                 'district_id' => 19,
                 'title' => 'Ganeshman Charnath Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:41:55',
                 'updated_at' => '2023-05-08 16:41:55',
                 'deleted_at' => null,
@@ -1657,7 +1657,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 183,
                 'district_id' => 19,
                 'title' => 'Mithila Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:42:05',
                 'updated_at' => '2023-05-08 16:42:05',
                 'deleted_at' => null,
@@ -1666,7 +1666,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 184,
                 'district_id' => 19,
                 'title' => 'Dhanusadham Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:42:15',
                 'updated_at' => '2023-05-08 16:42:15',
                 'deleted_at' => null,
@@ -1675,7 +1675,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 185,
                 'district_id' => 19,
                 'title' => 'Bideha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:42:26',
                 'updated_at' => '2023-05-08 16:42:26',
                 'deleted_at' => null,
@@ -1684,7 +1684,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 186,
                 'district_id' => 19,
                 'title' => 'Sabaila Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:42:37',
                 'updated_at' => '2023-05-08 16:42:37',
                 'deleted_at' => null,
@@ -1693,7 +1693,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 187,
                 'district_id' => 19,
                 'title' => 'Hansapur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:42:47',
                 'updated_at' => '2023-05-08 16:42:47',
                 'deleted_at' => null,
@@ -1702,7 +1702,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 188,
                 'district_id' => 19,
                 'title' => 'Janakpurdham Sub-Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:42:59',
                 'updated_at' => '2023-05-08 16:42:59',
                 'deleted_at' => null,
@@ -1711,7 +1711,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 189,
                 'district_id' => 19,
                 'title' => 'Sahidnagar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:43:10',
                 'updated_at' => '2023-05-08 16:43:10',
                 'deleted_at' => null,
@@ -1720,7 +1720,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 190,
                 'district_id' => 19,
                 'title' => 'Chhireshwornath Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 16:43:24',
                 'updated_at' => '2023-05-08 16:43:24',
                 'deleted_at' => null,
@@ -1729,7 +1729,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 191,
                 'district_id' => 21,
                 'title' => 'Pipra Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:39:57',
                 'updated_at' => '2023-05-08 17:39:57',
                 'deleted_at' => null,
@@ -1738,7 +1738,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 192,
                 'district_id' => 21,
                 'title' => 'Sonama Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:40:13',
                 'updated_at' => '2023-05-08 17:40:13',
                 'deleted_at' => null,
@@ -1747,7 +1747,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 193,
                 'district_id' => 21,
                 'title' => 'Samsi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:40:26',
                 'updated_at' => '2023-05-08 17:40:26',
                 'deleted_at' => null,
@@ -1756,7 +1756,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 194,
                 'district_id' => 21,
                 'title' => 'Ekdanra Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:40:37',
                 'updated_at' => '2023-05-08 17:40:37',
                 'deleted_at' => null,
@@ -1765,7 +1765,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 195,
                 'district_id' => 21,
                 'title' => 'Mahottari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:40:49',
                 'updated_at' => '2023-05-08 17:40:49',
                 'deleted_at' => null,
@@ -1774,7 +1774,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 196,
                 'district_id' => 21,
                 'title' => 'Gaushala Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:41:04',
                 'updated_at' => '2023-05-08 17:41:04',
                 'deleted_at' => null,
@@ -1783,7 +1783,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 197,
                 'district_id' => 21,
                 'title' => 'Ramgopalpur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:41:16',
                 'updated_at' => '2023-05-08 17:41:16',
                 'deleted_at' => null,
@@ -1792,7 +1792,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 198,
                 'district_id' => 21,
                 'title' => 'Aurahi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:41:28',
                 'updated_at' => '2023-05-08 17:41:28',
                 'deleted_at' => null,
@@ -1801,7 +1801,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 199,
                 'district_id' => 21,
                 'title' => 'Bardibas Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:41:39',
                 'updated_at' => '2023-05-08 17:41:39',
                 'deleted_at' => null,
@@ -1810,7 +1810,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 200,
                 'district_id' => 21,
                 'title' => 'Bhangaha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:41:50',
                 'updated_at' => '2023-05-08 17:41:50',
                 'deleted_at' => null,
@@ -1819,7 +1819,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 201,
                 'district_id' => 21,
                 'title' => 'Jaleswor Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:42:00',
                 'updated_at' => '2023-05-08 17:42:00',
                 'deleted_at' => null,
@@ -1828,7 +1828,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 202,
                 'district_id' => 21,
                 'title' => 'Balwa Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:42:10',
                 'updated_at' => '2023-05-08 17:42:10',
                 'deleted_at' => null,
@@ -1837,7 +1837,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 203,
                 'district_id' => 21,
                 'title' => 'Manra Siswa Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:42:22',
                 'updated_at' => '2023-05-08 17:42:22',
                 'deleted_at' => null,
@@ -1846,7 +1846,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 204,
                 'district_id' => 21,
                 'title' => 'Matihani Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:42:31',
                 'updated_at' => '2023-05-08 17:42:31',
                 'deleted_at' => null,
@@ -1855,7 +1855,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 205,
                 'district_id' => 21,
                 'title' => 'Loharpatti Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:42:42',
                 'updated_at' => '2023-05-08 17:42:42',
                 'deleted_at' => null,
@@ -1864,7 +1864,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 206,
                 'district_id' => 18,
                 'title' => 'Dhankaul Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:43:25',
                 'updated_at' => '2023-05-08 17:44:15',
                 'deleted_at' => null,
@@ -1873,7 +1873,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 207,
                 'district_id' => 18,
                 'title' => 'Parsa Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:43:36',
                 'updated_at' => '2023-05-08 17:44:04',
                 'deleted_at' => null,
@@ -1882,7 +1882,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 208,
                 'district_id' => 18,
                 'title' => 'Bishnu Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:43:53',
                 'updated_at' => '2023-05-08 17:43:53',
                 'deleted_at' => null,
@@ -1891,7 +1891,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 209,
                 'district_id' => 18,
                 'title' => 'Ramnagar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:44:28',
                 'updated_at' => '2023-05-08 17:44:28',
                 'deleted_at' => null,
@@ -1900,7 +1900,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 210,
                 'district_id' => 18,
                 'title' => 'Kaudena Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:44:41',
                 'updated_at' => '2023-05-08 17:44:41',
                 'deleted_at' => null,
@@ -1909,7 +1909,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 211,
                 'district_id' => 18,
                 'title' => 'Basbariya Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:44:52',
                 'updated_at' => '2023-05-08 17:44:52',
                 'deleted_at' => null,
@@ -1918,7 +1918,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 212,
                 'district_id' => 18,
                 'title' => 'Chandranagar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:45:01',
                 'updated_at' => '2023-05-08 17:45:01',
                 'deleted_at' => null,
@@ -1927,7 +1927,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 213,
                 'district_id' => 18,
                 'title' => 'Chakraghatta Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:45:10',
                 'updated_at' => '2023-05-08 17:45:10',
                 'deleted_at' => null,
@@ -1936,7 +1936,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 214,
                 'district_id' => 18,
                 'title' => 'Bramhapuri Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:45:19',
                 'updated_at' => '2023-05-08 17:45:19',
                 'deleted_at' => null,
@@ -1945,7 +1945,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 215,
                 'district_id' => 18,
                 'title' => 'Barahathawa Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:45:29',
                 'updated_at' => '2023-05-08 17:45:29',
                 'deleted_at' => null,
@@ -1954,7 +1954,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 216,
                 'district_id' => 18,
                 'title' => 'Haripur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:45:38',
                 'updated_at' => '2023-05-08 17:45:38',
                 'deleted_at' => null,
@@ -1963,7 +1963,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 217,
                 'district_id' => 18,
                 'title' => 'Ishworpur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:45:47',
                 'updated_at' => '2023-05-08 17:45:47',
                 'deleted_at' => null,
@@ -1972,7 +1972,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 218,
                 'district_id' => 18,
                 'title' => 'Lalbandi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:45:58',
                 'updated_at' => '2023-05-08 17:45:58',
                 'deleted_at' => null,
@@ -1981,7 +1981,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 219,
                 'district_id' => 18,
                 'title' => 'Malangawa Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:46:06',
                 'updated_at' => '2023-05-08 17:46:06',
                 'deleted_at' => null,
@@ -1990,7 +1990,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 220,
                 'district_id' => 18,
                 'title' => 'Kabilasi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:46:16',
                 'updated_at' => '2023-05-08 17:46:16',
                 'deleted_at' => null,
@@ -1999,7 +1999,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 221,
                 'district_id' => 18,
                 'title' => 'Bagmati Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 17:46:27',
                 'updated_at' => '2023-05-08 17:46:27',
                 'deleted_at' => null,
@@ -2008,7 +2008,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 222,
                 'district_id' => 18,
                 'title' => 'Hariwan Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:05:20',
                 'updated_at' => '2023-05-08 18:05:20',
                 'deleted_at' => null,
@@ -2017,7 +2017,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 223,
                 'district_id' => 18,
                 'title' => 'Balara Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:05:31',
                 'updated_at' => '2023-05-08 18:05:31',
                 'deleted_at' => null,
@@ -2026,7 +2026,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 224,
                 'district_id' => 18,
                 'title' => 'Haripurwa Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:05:42',
                 'updated_at' => '2023-05-08 18:05:42',
                 'deleted_at' => null,
@@ -2035,7 +2035,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 225,
                 'district_id' => 18,
                 'title' => 'Godaita Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:05:53',
                 'updated_at' => '2023-05-08 18:05:53',
                 'deleted_at' => null,
@@ -2044,7 +2044,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 226,
                 'district_id' => 17,
                 'title' => 'Yemunamai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:06:38',
                 'updated_at' => '2023-05-08 18:06:38',
                 'deleted_at' => null,
@@ -2053,7 +2053,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 227,
                 'district_id' => 17,
                 'title' => 'Durga Bhagwati Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:06:49',
                 'updated_at' => '2023-05-08 18:06:49',
                 'deleted_at' => null,
@@ -2062,7 +2062,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 228,
                 'district_id' => 17,
                 'title' => 'Katahariya Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:07:01',
                 'updated_at' => '2023-05-08 18:07:01',
                 'deleted_at' => null,
@@ -2071,7 +2071,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 229,
                 'district_id' => 17,
                 'title' => 'Maulapur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:07:12',
                 'updated_at' => '2023-05-08 18:07:12',
                 'deleted_at' => null,
@@ -2080,7 +2080,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 230,
                 'district_id' => 17,
                 'title' => 'Madhav Narayan Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:07:23',
                 'updated_at' => '2023-05-08 18:07:23',
                 'deleted_at' => null,
@@ -2089,7 +2089,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 231,
                 'district_id' => 17,
                 'title' => 'Gaur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:07:32',
                 'updated_at' => '2023-05-08 18:07:32',
                 'deleted_at' => null,
@@ -2098,7 +2098,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 232,
                 'district_id' => 17,
                 'title' => 'Gujara Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:07:46',
                 'updated_at' => '2023-05-08 18:07:46',
                 'deleted_at' => null,
@@ -2107,7 +2107,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 233,
                 'district_id' => 17,
                 'title' => 'Garuda Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:07:57',
                 'updated_at' => '2023-05-08 18:07:57',
                 'deleted_at' => null,
@@ -2116,7 +2116,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 234,
                 'district_id' => 17,
                 'title' => 'Ishanath Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:08:08',
                 'updated_at' => '2023-05-08 18:08:08',
                 'deleted_at' => null,
@@ -2125,7 +2125,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 235,
                 'district_id' => 17,
                 'title' => 'Chandrapur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:08:18',
                 'updated_at' => '2023-05-08 18:08:18',
                 'deleted_at' => null,
@@ -2134,7 +2134,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 236,
                 'district_id' => 17,
                 'title' => 'Dewahhi Gonahi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:08:29',
                 'updated_at' => '2023-05-08 18:08:29',
                 'deleted_at' => null,
@@ -2143,7 +2143,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 237,
                 'district_id' => 17,
                 'title' => 'Brindaban Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:08:39',
                 'updated_at' => '2023-05-08 18:08:39',
                 'deleted_at' => null,
@@ -2152,7 +2152,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 238,
                 'district_id' => 17,
                 'title' => 'Rajpur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:08:51',
                 'updated_at' => '2023-05-08 18:08:51',
                 'deleted_at' => null,
@@ -2161,7 +2161,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 239,
                 'district_id' => 17,
                 'title' => 'Rajdevi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:09:02',
                 'updated_at' => '2023-05-08 18:09:02',
                 'deleted_at' => null,
@@ -2170,7 +2170,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 240,
                 'district_id' => 17,
                 'title' => 'Gadhimai Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:09:11',
                 'updated_at' => '2023-05-08 18:09:11',
                 'deleted_at' => null,
@@ -2179,7 +2179,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 241,
                 'district_id' => 17,
                 'title' => 'Phatuwa Bijayapur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:09:20',
                 'updated_at' => '2023-05-08 18:09:20',
                 'deleted_at' => null,
@@ -2188,7 +2188,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 242,
                 'district_id' => 17,
                 'title' => 'Baudhimai Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:09:31',
                 'updated_at' => '2023-05-08 18:09:31',
                 'deleted_at' => null,
@@ -2197,7 +2197,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 243,
                 'district_id' => 17,
                 'title' => 'Paroha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:09:42',
                 'updated_at' => '2023-05-08 18:09:42',
                 'deleted_at' => null,
@@ -2206,7 +2206,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 244,
                 'district_id' => 16,
                 'title' => 'Pheta Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:14:52',
                 'updated_at' => '2023-05-08 18:14:52',
                 'deleted_at' => null,
@@ -2215,7 +2215,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 245,
                 'district_id' => 16,
                 'title' => 'Devtal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:15:02',
                 'updated_at' => '2023-05-08 18:15:02',
                 'deleted_at' => null,
@@ -2224,7 +2224,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 246,
                 'district_id' => 16,
                 'title' => 'Prasauni Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:15:14',
                 'updated_at' => '2023-05-08 18:15:14',
                 'deleted_at' => null,
@@ -2233,7 +2233,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 247,
                 'district_id' => 16,
                 'title' => 'Suwarna Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:15:24',
                 'updated_at' => '2023-05-08 18:15:24',
                 'deleted_at' => null,
@@ -2242,7 +2242,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 248,
                 'district_id' => 16,
                 'title' => 'Baragadhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:15:35',
                 'updated_at' => '2023-05-08 18:15:35',
                 'deleted_at' => null,
@@ -2251,7 +2251,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 249,
                 'district_id' => 16,
                 'title' => 'Karaiyamai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:15:48',
                 'updated_at' => '2023-05-08 18:15:48',
                 'deleted_at' => null,
@@ -2260,7 +2260,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 250,
                 'district_id' => 16,
                 'title' => 'Parwanipur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:15:59',
                 'updated_at' => '2023-05-08 18:15:59',
                 'deleted_at' => null,
@@ -2269,7 +2269,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 251,
                 'district_id' => 16,
                 'title' => 'Bishrampur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:16:09',
                 'updated_at' => '2023-05-08 18:16:09',
                 'deleted_at' => null,
@@ -2278,7 +2278,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 252,
                 'district_id' => 16,
                 'title' => 'Adarshkotwal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:16:21',
                 'updated_at' => '2023-05-08 18:16:21',
                 'deleted_at' => null,
@@ -2287,7 +2287,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 253,
                 'district_id' => 16,
                 'title' => 'Jitpur Simara Sub-Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:16:31',
                 'updated_at' => '2023-05-08 18:16:31',
                 'deleted_at' => null,
@@ -2296,7 +2296,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 254,
                 'district_id' => 16,
                 'title' => 'Kalaiya Sub-Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:16:42',
                 'updated_at' => '2023-05-08 18:16:42',
                 'deleted_at' => null,
@@ -2305,7 +2305,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 255,
                 'district_id' => 16,
                 'title' => 'Pacharauta Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:16:55',
                 'updated_at' => '2023-05-08 18:16:55',
                 'deleted_at' => null,
@@ -2314,7 +2314,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 256,
                 'district_id' => 16,
                 'title' => 'Nijgadh Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:17:06',
                 'updated_at' => '2023-05-08 18:17:06',
                 'deleted_at' => null,
@@ -2323,7 +2323,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 257,
                 'district_id' => 16,
                 'title' => 'Simraungadh Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:17:17',
                 'updated_at' => '2023-05-08 18:17:17',
                 'deleted_at' => null,
@@ -2332,7 +2332,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 258,
                 'district_id' => 16,
                 'title' => 'Mahagadhimai Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:17:26',
                 'updated_at' => '2023-05-08 18:17:26',
                 'deleted_at' => null,
@@ -2341,7 +2341,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 259,
                 'district_id' => 16,
                 'title' => 'Kolhabi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:17:39',
                 'updated_at' => '2023-05-08 18:17:39',
                 'deleted_at' => null,
@@ -2350,7 +2350,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 260,
                 'district_id' => 15,
                 'title' => 'Thori Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:19:00',
                 'updated_at' => '2023-05-08 18:19:00',
                 'deleted_at' => null,
@@ -2359,7 +2359,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 261,
                 'district_id' => 15,
                 'title' => 'Dhobini Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:19:15',
                 'updated_at' => '2023-05-08 18:19:15',
                 'deleted_at' => null,
@@ -2368,7 +2368,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 262,
                 'district_id' => 15,
                 'title' => 'Chhipaharmai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:19:26',
                 'updated_at' => '2023-05-08 18:19:26',
                 'deleted_at' => null,
@@ -2377,7 +2377,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 263,
                 'district_id' => 15,
                 'title' => 'Jirabhawani Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:19:37',
                 'updated_at' => '2023-05-08 18:19:37',
                 'deleted_at' => null,
@@ -2386,7 +2386,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 264,
                 'district_id' => 15,
                 'title' => 'Jagarnathpur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:19:48',
                 'updated_at' => '2023-05-08 18:19:48',
                 'deleted_at' => null,
@@ -2395,7 +2395,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 265,
                 'district_id' => 15,
                 'title' => 'Kalikamai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:19:59',
                 'updated_at' => '2023-05-08 18:19:59',
                 'deleted_at' => null,
@@ -2404,7 +2404,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 266,
                 'district_id' => 15,
                 'title' => 'Bindabasini Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:20:10',
                 'updated_at' => '2023-05-08 18:20:10',
                 'deleted_at' => null,
@@ -2413,7 +2413,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 267,
                 'district_id' => 15,
                 'title' => 'Pakahamainpur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:20:20',
                 'updated_at' => '2023-05-08 18:20:20',
                 'deleted_at' => null,
@@ -2422,7 +2422,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 268,
                 'district_id' => 15,
                 'title' => 'SakhuwaPrasauni Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:20:31',
                 'updated_at' => '2023-05-08 18:20:31',
                 'deleted_at' => null,
@@ -2431,7 +2431,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 269,
                 'district_id' => 15,
                 'title' => 'Paterwasugauli Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:20:41',
                 'updated_at' => '2023-05-08 18:20:41',
                 'deleted_at' => null,
@@ -2440,7 +2440,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 270,
                 'district_id' => 15,
                 'title' => 'Birgunj Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:20:52',
                 'updated_at' => '2023-05-08 18:20:52',
                 'deleted_at' => null,
@@ -2449,7 +2449,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 271,
                 'district_id' => 15,
                 'title' => 'Bahudaramai Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:21:03',
                 'updated_at' => '2023-05-08 18:21:03',
                 'deleted_at' => null,
@@ -2458,7 +2458,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 272,
                 'district_id' => 15,
                 'title' => 'Pokhariya Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:21:13',
                 'updated_at' => '2023-05-08 18:21:13',
                 'deleted_at' => null,
@@ -2467,7 +2467,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 273,
                 'district_id' => 15,
                 'title' => 'Parsagadhi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:21:24',
                 'updated_at' => '2023-05-08 18:21:24',
                 'deleted_at' => null,
@@ -2476,7 +2476,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 274,
                 'district_id' => 25,
                 'title' => 'Bigu Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:22:31',
                 'updated_at' => '2023-05-08 18:22:31',
                 'deleted_at' => null,
@@ -2485,7 +2485,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 275,
                 'district_id' => 25,
                 'title' => 'Sailung Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:22:42',
                 'updated_at' => '2023-05-08 18:22:42',
                 'deleted_at' => null,
@@ -2494,7 +2494,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 276,
                 'district_id' => 25,
                 'title' => 'Melung Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:22:52',
                 'updated_at' => '2023-05-08 18:22:52',
                 'deleted_at' => null,
@@ -2503,7 +2503,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 277,
                 'district_id' => 25,
                 'title' => 'Baiteshwor Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:23:04',
                 'updated_at' => '2023-05-08 18:23:04',
                 'deleted_at' => null,
@@ -2512,7 +2512,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 278,
                 'district_id' => 25,
                 'title' => 'Tamakoshi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:23:14',
                 'updated_at' => '2023-05-08 18:23:14',
                 'deleted_at' => null,
@@ -2521,7 +2521,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 279,
                 'district_id' => 25,
                 'title' => 'Gaurishankar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:23:25',
                 'updated_at' => '2023-05-08 18:23:25',
                 'deleted_at' => null,
@@ -2530,7 +2530,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 280,
                 'district_id' => 25,
                 'title' => 'Kalinchok Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:23:36',
                 'updated_at' => '2023-05-08 18:23:36',
                 'deleted_at' => null,
@@ -2539,7 +2539,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 281,
                 'district_id' => 25,
                 'title' => 'Jiri Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:23:48',
                 'updated_at' => '2023-05-08 18:23:48',
                 'deleted_at' => null,
@@ -2548,7 +2548,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 282,
                 'district_id' => 25,
                 'title' => 'Bhimeshwor Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:24:09',
                 'updated_at' => '2023-05-08 18:24:09',
                 'deleted_at' => null,
@@ -2557,7 +2557,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 283,
                 'district_id' => 33,
                 'title' => 'Jugal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:56:33',
                 'updated_at' => '2023-05-08 18:56:33',
                 'deleted_at' => null,
@@ -2566,7 +2566,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 284,
                 'district_id' => 33,
                 'title' => 'Balefi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:56:44',
                 'updated_at' => '2023-05-08 18:56:44',
                 'deleted_at' => null,
@@ -2575,7 +2575,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 285,
                 'district_id' => 33,
                 'title' => 'Sunkoshi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:56:54',
                 'updated_at' => '2023-05-08 18:56:54',
                 'deleted_at' => null,
@@ -2584,7 +2584,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 286,
                 'district_id' => 33,
                 'title' => 'Helambu Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:57:06',
                 'updated_at' => '2023-05-08 18:57:06',
                 'deleted_at' => null,
@@ -2593,7 +2593,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 287,
                 'district_id' => 33,
                 'title' => 'Bhotekoshi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:57:16',
                 'updated_at' => '2023-05-08 18:57:16',
                 'deleted_at' => null,
@@ -2602,7 +2602,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 288,
                 'district_id' => 33,
                 'title' => 'Lisangkhu Pakhar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:57:26',
                 'updated_at' => '2023-05-08 18:57:26',
                 'deleted_at' => null,
@@ -2611,7 +2611,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 289,
                 'district_id' => 33,
                 'title' => 'Indrawati Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:57:36',
                 'updated_at' => '2023-05-08 18:57:36',
                 'deleted_at' => null,
@@ -2620,7 +2620,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 290,
                 'district_id' => 33,
                 'title' => 'Tripurasundari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:57:46',
                 'updated_at' => '2023-05-08 18:57:46',
                 'deleted_at' => null,
@@ -2629,7 +2629,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 291,
                 'district_id' => 33,
                 'title' => 'Panchpokhari Thangpal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:57:56',
                 'updated_at' => '2023-05-08 18:57:56',
                 'deleted_at' => null,
@@ -2638,7 +2638,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 292,
                 'district_id' => 33,
                 'title' => 'Chautara SangachokGadhi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:58:09',
                 'updated_at' => '2023-05-08 18:58:09',
                 'deleted_at' => null,
@@ -2647,7 +2647,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 293,
                 'district_id' => 33,
                 'title' => 'Barhabise Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:58:20',
                 'updated_at' => '2023-05-08 18:58:20',
                 'deleted_at' => null,
@@ -2656,7 +2656,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 294,
                 'district_id' => 33,
                 'title' => 'Melamchi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-08 18:58:32',
                 'updated_at' => '2023-05-08 18:58:32',
                 'deleted_at' => null,
@@ -2665,7 +2665,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 295,
                 'district_id' => 32,
                 'title' => 'Kalika Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:56:26',
                 'updated_at' => '2023-05-09 08:56:26',
                 'deleted_at' => null,
@@ -2674,7 +2674,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 296,
                 'district_id' => 32,
                 'title' => 'Naukunda Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:56:38',
                 'updated_at' => '2023-05-09 08:56:38',
                 'deleted_at' => null,
@@ -2683,7 +2683,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 297,
                 'district_id' => 32,
                 'title' => 'Uttargaya Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:56:47',
                 'updated_at' => '2023-05-09 08:56:47',
                 'deleted_at' => null,
@@ -2692,7 +2692,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 298,
                 'district_id' => 32,
                 'title' => 'Gosaikunda Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:56:56',
                 'updated_at' => '2023-05-09 08:56:56',
                 'deleted_at' => null,
@@ -2701,7 +2701,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 299,
                 'district_id' => 32,
                 'title' => 'Amachodingmo Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:57:06',
                 'updated_at' => '2023-05-09 08:57:06',
                 'deleted_at' => null,
@@ -2710,7 +2710,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 300,
                 'district_id' => 27,
                 'title' => 'Gajuri Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:57:35',
                 'updated_at' => '2023-05-09 08:57:35',
                 'deleted_at' => null,
@@ -2719,7 +2719,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 301,
                 'district_id' => 27,
                 'title' => 'Galchi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:57:48',
                 'updated_at' => '2023-05-09 08:57:48',
                 'deleted_at' => null,
@@ -2728,7 +2728,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 302,
                 'district_id' => 27,
                 'title' => 'Thakre Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:57:59',
                 'updated_at' => '2023-05-09 08:57:59',
                 'deleted_at' => null,
@@ -2737,7 +2737,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 303,
                 'district_id' => 27,
                 'title' => 'Siddhalek Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:58:11',
                 'updated_at' => '2023-05-09 08:58:11',
                 'deleted_at' => null,
@@ -2746,7 +2746,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 304,
                 'district_id' => 27,
                 'title' => 'Khaniyabash Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:58:20',
                 'updated_at' => '2023-05-09 08:58:20',
                 'deleted_at' => null,
@@ -2755,7 +2755,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 305,
                 'district_id' => 27,
                 'title' => 'Jwalamukhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:58:30',
                 'updated_at' => '2023-05-09 08:58:30',
                 'deleted_at' => null,
@@ -2764,7 +2764,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 306,
                 'district_id' => 27,
                 'title' => 'Gangajamuna Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:58:41',
                 'updated_at' => '2023-05-09 08:58:41',
                 'deleted_at' => null,
@@ -2773,7 +2773,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 307,
                 'district_id' => 27,
                 'title' => 'Rubi Valley Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:58:51',
                 'updated_at' => '2023-05-09 08:58:51',
                 'deleted_at' => null,
@@ -2782,7 +2782,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 308,
                 'district_id' => 27,
                 'title' => 'Tripura Sundari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:59:00',
                 'updated_at' => '2023-05-09 08:59:00',
                 'deleted_at' => null,
@@ -2791,7 +2791,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 309,
                 'district_id' => 27,
                 'title' => 'Netrawati Dabjong Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:59:10',
                 'updated_at' => '2023-05-09 08:59:10',
                 'deleted_at' => null,
@@ -2800,7 +2800,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 310,
                 'district_id' => 27,
                 'title' => 'Benighat Rorang Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:59:20',
                 'updated_at' => '2023-05-09 08:59:20',
                 'deleted_at' => null,
@@ -2809,7 +2809,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 311,
                 'district_id' => 27,
                 'title' => 'Nilakantha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:59:30',
                 'updated_at' => '2023-05-09 08:59:30',
                 'deleted_at' => null,
@@ -2818,7 +2818,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 312,
                 'district_id' => 27,
                 'title' => 'Dhunibesi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 08:59:40',
                 'updated_at' => '2023-05-09 08:59:40',
                 'deleted_at' => null,
@@ -2827,7 +2827,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 313,
                 'district_id' => 31,
                 'title' => 'Kakani Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:00:06',
                 'updated_at' => '2023-05-09 09:00:06',
                 'deleted_at' => null,
@@ -2836,7 +2836,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 314,
                 'district_id' => 31,
                 'title' => 'Tadi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:00:16',
                 'updated_at' => '2023-05-09 09:00:16',
                 'deleted_at' => null,
@@ -2845,7 +2845,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 315,
                 'district_id' => 31,
                 'title' => 'Likhu Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:00:26',
                 'updated_at' => '2023-05-09 09:00:26',
                 'deleted_at' => null,
@@ -2854,7 +2854,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 316,
                 'district_id' => 31,
                 'title' => 'Myagang Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:00:38',
                 'updated_at' => '2023-05-09 09:00:38',
                 'deleted_at' => null,
@@ -2863,7 +2863,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 317,
                 'district_id' => 31,
                 'title' => 'Shivapuri Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:00:49',
                 'updated_at' => '2023-05-09 09:00:49',
                 'deleted_at' => null,
@@ -2872,7 +2872,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 318,
                 'district_id' => 31,
                 'title' => 'Kispang Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:01:01',
                 'updated_at' => '2023-05-09 09:01:01',
                 'deleted_at' => null,
@@ -2881,7 +2881,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 319,
                 'district_id' => 31,
                 'title' => 'Suryagadhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:01:13',
                 'updated_at' => '2023-05-09 09:01:13',
                 'deleted_at' => null,
@@ -2890,7 +2890,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 320,
                 'district_id' => 31,
                 'title' => 'Tarkeshwar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:01:22',
                 'updated_at' => '2023-05-09 09:01:22',
                 'deleted_at' => null,
@@ -2899,7 +2899,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 321,
                 'district_id' => 31,
                 'title' => 'Panchakanya Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:01:32',
                 'updated_at' => '2023-05-09 09:01:32',
                 'deleted_at' => null,
@@ -2908,7 +2908,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 322,
                 'district_id' => 31,
                 'title' => 'Dupcheshwar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:01:42',
                 'updated_at' => '2023-05-09 09:01:42',
                 'deleted_at' => null,
@@ -2917,7 +2917,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 323,
                 'district_id' => 31,
                 'title' => 'Belkotgadhi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:01:53',
                 'updated_at' => '2023-05-09 09:01:53',
                 'deleted_at' => null,
@@ -2926,7 +2926,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 324,
                 'district_id' => 31,
                 'title' => 'Bidur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:02:04',
                 'updated_at' => '2023-05-09 09:02:04',
                 'deleted_at' => null,
@@ -2935,7 +2935,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 325,
                 'district_id' => 28,
                 'title' => 'Kirtipur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:02:37',
                 'updated_at' => '2023-05-09 09:02:37',
                 'deleted_at' => null,
@@ -2944,7 +2944,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 326,
                 'district_id' => 28,
                 'title' => 'Shankharapur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:02:47',
                 'updated_at' => '2023-05-09 09:02:47',
                 'deleted_at' => null,
@@ -2953,7 +2953,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 327,
                 'district_id' => 28,
                 'title' => 'Nagarjun Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:02:59',
                 'updated_at' => '2023-05-09 09:02:59',
                 'deleted_at' => null,
@@ -2962,7 +2962,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 328,
                 'district_id' => 28,
                 'title' => 'Kageshwori Manahora Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:03:10',
                 'updated_at' => '2023-05-09 09:03:10',
                 'deleted_at' => null,
@@ -2971,7 +2971,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 329,
                 'district_id' => 28,
                 'title' => 'Dakshinkali Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:03:20',
                 'updated_at' => '2023-05-09 09:03:20',
                 'deleted_at' => null,
@@ -2980,7 +2980,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 330,
                 'district_id' => 28,
                 'title' => 'Budhanilakantha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:03:30',
                 'updated_at' => '2023-05-09 09:03:30',
                 'deleted_at' => null,
@@ -2989,7 +2989,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 331,
                 'district_id' => 28,
                 'title' => 'Tarakeshwor Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:03:41',
                 'updated_at' => '2023-05-09 09:03:41',
                 'deleted_at' => null,
@@ -2998,7 +2998,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 332,
                 'district_id' => 28,
                 'title' => 'Kathmandu Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:03:51',
                 'updated_at' => '2023-05-09 09:03:51',
                 'deleted_at' => null,
@@ -3007,7 +3007,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 333,
                 'district_id' => 28,
                 'title' => 'Tokha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:04:02',
                 'updated_at' => '2023-05-09 09:04:02',
                 'deleted_at' => null,
@@ -3016,7 +3016,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 334,
                 'district_id' => 28,
                 'title' => 'Chandragiri Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:04:12',
                 'updated_at' => '2023-05-09 09:04:12',
                 'deleted_at' => null,
@@ -3025,7 +3025,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 335,
                 'district_id' => 28,
                 'title' => 'Gokarneshwor Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:04:22',
                 'updated_at' => '2023-05-09 09:04:22',
                 'deleted_at' => null,
@@ -3034,7 +3034,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 336,
                 'district_id' => 26,
                 'title' => 'Changunarayan Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:05:03',
                 'updated_at' => '2023-05-09 09:05:03',
                 'deleted_at' => null,
@@ -3043,7 +3043,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 337,
                 'district_id' => 26,
                 'title' => 'Suryabinayak Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:05:14',
                 'updated_at' => '2023-05-09 09:05:14',
                 'deleted_at' => null,
@@ -3052,7 +3052,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 338,
                 'district_id' => 26,
                 'title' => 'Bhaktapur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:05:24',
                 'updated_at' => '2023-05-09 09:05:24',
                 'deleted_at' => null,
@@ -3061,7 +3061,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 339,
                 'district_id' => 26,
                 'title' => 'Madhyapur Thimi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:05:34',
                 'updated_at' => '2023-05-09 09:05:34',
                 'deleted_at' => null,
@@ -3070,7 +3070,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 340,
                 'district_id' => 30,
                 'title' => 'Bagmati Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:05:59',
                 'updated_at' => '2023-05-09 09:05:59',
                 'deleted_at' => null,
@@ -3079,7 +3079,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 341,
                 'district_id' => 30,
                 'title' => 'Mahankal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:06:11',
                 'updated_at' => '2023-05-09 09:06:11',
                 'deleted_at' => null,
@@ -3088,7 +3088,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 342,
                 'district_id' => 30,
                 'title' => 'Konjyosom Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:06:21',
                 'updated_at' => '2023-05-09 09:06:21',
                 'deleted_at' => null,
@@ -3097,7 +3097,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 343,
                 'district_id' => 30,
                 'title' => 'Lalitpur Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:06:39',
                 'updated_at' => '2023-05-09 09:06:39',
                 'deleted_at' => null,
@@ -3106,7 +3106,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 344,
                 'district_id' => 30,
                 'title' => 'Mahalaxmi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:06:49',
                 'updated_at' => '2023-05-09 09:06:49',
                 'deleted_at' => null,
@@ -3115,7 +3115,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 345,
                 'district_id' => 30,
                 'title' => 'Godawari Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:07:00',
                 'updated_at' => '2023-05-09 09:07:00',
                 'deleted_at' => null,
@@ -3124,7 +3124,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 346,
                 'district_id' => 29,
                 'title' => 'Roshi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:08:07',
                 'updated_at' => '2023-05-09 09:08:07',
                 'deleted_at' => null,
@@ -3133,7 +3133,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 347,
                 'district_id' => 29,
                 'title' => 'Temal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:08:17',
                 'updated_at' => '2023-05-09 09:08:17',
                 'deleted_at' => null,
@@ -3142,7 +3142,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 348,
                 'district_id' => 29,
                 'title' => 'Bhumlu Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:08:27',
                 'updated_at' => '2023-05-09 09:08:27',
                 'deleted_at' => null,
@@ -3151,7 +3151,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 349,
                 'district_id' => 29,
                 'title' => 'Mahabharat Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:08:36',
                 'updated_at' => '2023-05-09 09:08:36',
                 'deleted_at' => null,
@@ -3160,7 +3160,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 350,
                 'district_id' => 29,
                 'title' => 'Bethanchowk Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:08:46',
                 'updated_at' => '2023-05-09 09:08:46',
                 'deleted_at' => null,
@@ -3169,7 +3169,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 351,
                 'district_id' => 29,
                 'title' => 'Khanikhola Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:08:56',
                 'updated_at' => '2023-05-09 09:08:56',
                 'deleted_at' => null,
@@ -3178,7 +3178,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 352,
                 'district_id' => 29,
                 'title' => 'Chaurideurali Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:09:07',
                 'updated_at' => '2023-05-09 09:09:07',
                 'deleted_at' => null,
@@ -3187,7 +3187,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 353,
                 'district_id' => 29,
                 'title' => 'Banepa Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:09:19',
                 'updated_at' => '2023-05-09 09:09:19',
                 'deleted_at' => null,
@@ -3196,7 +3196,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 354,
                 'district_id' => 29,
                 'title' => 'Mandandeupur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:09:33',
                 'updated_at' => '2023-05-09 09:09:33',
                 'deleted_at' => null,
@@ -3205,7 +3205,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 355,
                 'district_id' => 29,
                 'title' => 'Dhulikhel Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:09:43',
                 'updated_at' => '2023-05-09 09:09:43',
                 'deleted_at' => null,
@@ -3214,7 +3214,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 356,
                 'district_id' => 29,
                 'title' => 'Panauti Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:09:53',
                 'updated_at' => '2023-05-09 09:09:53',
                 'deleted_at' => null,
@@ -3223,7 +3223,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 357,
                 'district_id' => 29,
                 'title' => 'Namobuddha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:10:04',
                 'updated_at' => '2023-05-09 09:10:04',
                 'deleted_at' => null,
@@ -3232,7 +3232,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 358,
                 'district_id' => 29,
                 'title' => 'Panchkhal Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:10:14',
                 'updated_at' => '2023-05-09 09:10:14',
                 'deleted_at' => null,
@@ -3241,7 +3241,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 359,
                 'district_id' => 24,
                 'title' => 'Sunapati Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:11:28',
                 'updated_at' => '2023-05-09 09:11:28',
                 'deleted_at' => null,
@@ -3250,7 +3250,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 360,
                 'district_id' => 24,
                 'title' => 'Doramba Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:11:39',
                 'updated_at' => '2023-05-09 09:11:39',
                 'deleted_at' => null,
@@ -3259,7 +3259,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 361,
                 'district_id' => 24,
                 'title' => 'Umakunda Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:11:49',
                 'updated_at' => '2023-05-09 09:11:49',
                 'deleted_at' => null,
@@ -3268,7 +3268,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 362,
                 'district_id' => 24,
                 'title' => 'Khadadevi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:12:01',
                 'updated_at' => '2023-05-09 09:12:01',
                 'deleted_at' => null,
@@ -3277,7 +3277,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 363,
                 'district_id' => 24,
                 'title' => 'Gokulganga Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:12:13',
                 'updated_at' => '2023-05-09 09:12:13',
                 'deleted_at' => null,
@@ -3286,7 +3286,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 364,
                 'district_id' => 24,
                 'title' => 'Likhu Tamakoshi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:12:23',
                 'updated_at' => '2023-05-09 09:12:23',
                 'deleted_at' => null,
@@ -3295,7 +3295,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 365,
                 'district_id' => 24,
                 'title' => 'Manthali Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:12:33',
                 'updated_at' => '2023-05-09 09:12:33',
                 'deleted_at' => null,
@@ -3304,7 +3304,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 366,
                 'district_id' => 24,
                 'title' => 'Ramechhap Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:12:43',
                 'updated_at' => '2023-05-09 09:12:43',
                 'deleted_at' => null,
@@ -3313,7 +3313,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 367,
                 'district_id' => 23,
                 'title' => 'Marin Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:13:22',
                 'updated_at' => '2023-05-09 09:13:22',
                 'deleted_at' => null,
@@ -3322,7 +3322,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 368,
                 'district_id' => 23,
                 'title' => 'Phikkal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:13:32',
                 'updated_at' => '2023-05-09 09:13:32',
                 'deleted_at' => null,
@@ -3331,7 +3331,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 369,
                 'district_id' => 23,
                 'title' => 'Tinpatan Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:13:42',
                 'updated_at' => '2023-05-09 09:13:42',
                 'deleted_at' => null,
@@ -3340,7 +3340,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 370,
                 'district_id' => 23,
                 'title' => 'Sunkoshi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:13:52',
                 'updated_at' => '2023-05-09 09:13:52',
                 'deleted_at' => null,
@@ -3349,7 +3349,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 371,
                 'district_id' => 23,
                 'title' => 'Golanjor Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:14:04',
                 'updated_at' => '2023-05-09 09:14:04',
                 'deleted_at' => null,
@@ -3358,7 +3358,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 372,
                 'district_id' => 23,
                 'title' => 'Ghanglekh Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:14:16',
                 'updated_at' => '2023-05-09 09:14:16',
                 'deleted_at' => null,
@@ -3367,7 +3367,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 373,
                 'district_id' => 23,
                 'title' => 'Hariharpurgadhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:14:26',
                 'updated_at' => '2023-05-09 09:14:26',
                 'deleted_at' => null,
@@ -3376,7 +3376,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 374,
                 'district_id' => 23,
                 'title' => 'Dudhouli Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:14:37',
                 'updated_at' => '2023-05-09 09:14:37',
                 'deleted_at' => null,
@@ -3385,7 +3385,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 375,
                 'district_id' => 23,
                 'title' => 'Kamalamai Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:14:49',
                 'updated_at' => '2023-05-09 09:14:49',
                 'deleted_at' => null,
@@ -3394,7 +3394,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 376,
                 'district_id' => 35,
                 'title' => 'Bakaiya Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:15:31',
                 'updated_at' => '2023-05-09 09:15:31',
                 'deleted_at' => null,
@@ -3403,7 +3403,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 377,
                 'district_id' => 35,
                 'title' => 'Kailash Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:15:41',
                 'updated_at' => '2023-05-09 09:15:41',
                 'deleted_at' => null,
@@ -3412,7 +3412,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 378,
                 'district_id' => 35,
                 'title' => 'Manahari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:15:50',
                 'updated_at' => '2023-05-09 09:15:50',
                 'deleted_at' => null,
@@ -3421,7 +3421,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 379,
                 'district_id' => 35,
                 'title' => 'Bhimphedi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:16:00',
                 'updated_at' => '2023-05-09 09:16:00',
                 'deleted_at' => null,
@@ -3430,7 +3430,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 380,
                 'district_id' => 35,
                 'title' => 'Bagmati Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:16:09',
                 'updated_at' => '2023-05-09 09:16:09',
                 'deleted_at' => null,
@@ -3439,7 +3439,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 381,
                 'district_id' => 35,
                 'title' => 'Raksirang Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:16:23',
                 'updated_at' => '2023-05-09 09:16:23',
                 'deleted_at' => null,
@@ -3448,7 +3448,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 382,
                 'district_id' => 35,
                 'title' => 'Makawanpurgadhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:16:34',
                 'updated_at' => '2023-05-09 09:16:34',
                 'deleted_at' => null,
@@ -3457,7 +3457,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 383,
                 'district_id' => 35,
                 'title' => 'Indrasarowar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:16:44',
                 'updated_at' => '2023-05-09 09:16:44',
                 'deleted_at' => null,
@@ -3466,7 +3466,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 384,
                 'district_id' => 35,
                 'title' => 'Hetauda Sub-Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:16:57',
                 'updated_at' => '2023-05-09 09:16:57',
                 'deleted_at' => null,
@@ -3475,7 +3475,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 385,
                 'district_id' => 35,
                 'title' => 'Thaha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:17:07',
                 'updated_at' => '2023-05-09 09:17:07',
                 'deleted_at' => null,
@@ -3484,7 +3484,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 386,
                 'district_id' => 34,
                 'title' => 'Ichchhyakamana Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:17:29',
                 'updated_at' => '2023-05-09 09:17:29',
                 'deleted_at' => null,
@@ -3493,7 +3493,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 387,
                 'district_id' => 34,
                 'title' => 'Bharatpur Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:19:40',
                 'updated_at' => '2023-05-09 09:19:40',
                 'deleted_at' => null,
@@ -3502,7 +3502,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 388,
                 'district_id' => 34,
                 'title' => 'Kalika Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:19:54',
                 'updated_at' => '2023-05-09 09:19:54',
                 'deleted_at' => null,
@@ -3511,7 +3511,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 389,
                 'district_id' => 34,
                 'title' => 'Khairahani Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:20:06',
                 'updated_at' => '2023-05-09 09:20:06',
                 'deleted_at' => null,
@@ -3520,7 +3520,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 390,
                 'district_id' => 34,
                 'title' => 'Madi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:20:18',
                 'updated_at' => '2023-05-09 09:20:18',
                 'deleted_at' => null,
@@ -3529,7 +3529,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 391,
                 'district_id' => 34,
                 'title' => 'Rapti Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:20:27',
                 'updated_at' => '2023-05-09 09:20:27',
                 'deleted_at' => null,
@@ -3538,7 +3538,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 392,
                 'district_id' => 34,
                 'title' => 'Ratnanagar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:20:38',
                 'updated_at' => '2023-05-09 09:20:38',
                 'deleted_at' => null,
@@ -3547,7 +3547,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 393,
                 'district_id' => 37,
                 'title' => 'Gandaki Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:22:06',
                 'updated_at' => '2023-05-09 09:22:06',
                 'deleted_at' => null,
@@ -3556,7 +3556,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 394,
                 'district_id' => 37,
                 'title' => 'Dharche Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:22:16',
                 'updated_at' => '2023-05-09 09:22:16',
                 'deleted_at' => null,
@@ -3565,7 +3565,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 395,
                 'district_id' => 37,
                 'title' => 'Aarughat Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:22:26',
                 'updated_at' => '2023-05-09 09:22:26',
                 'deleted_at' => null,
@@ -3574,7 +3574,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 396,
                 'district_id' => 37,
                 'title' => 'Ajirkot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:22:36',
                 'updated_at' => '2023-05-09 09:22:36',
                 'deleted_at' => null,
@@ -3583,7 +3583,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 397,
                 'district_id' => 37,
                 'title' => 'Sahid Lakhan Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:22:46',
                 'updated_at' => '2023-05-09 09:22:46',
                 'deleted_at' => null,
@@ -3592,7 +3592,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 398,
                 'district_id' => 37,
                 'title' => 'Siranchok Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:22:57',
                 'updated_at' => '2023-05-09 09:22:57',
                 'deleted_at' => null,
@@ -3601,7 +3601,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 399,
                 'district_id' => 37,
                 'title' => 'Bhimsenthapa Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:23:08',
                 'updated_at' => '2023-05-09 09:23:08',
                 'deleted_at' => null,
@@ -3610,7 +3610,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 400,
                 'district_id' => 37,
                 'title' => 'Chum Nubri Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:23:17',
                 'updated_at' => '2023-05-09 09:23:17',
                 'deleted_at' => null,
@@ -3619,7 +3619,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 401,
                 'district_id' => 37,
                 'title' => 'Barpak Sulikot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:23:27',
                 'updated_at' => '2023-05-09 09:23:27',
                 'deleted_at' => null,
@@ -3628,7 +3628,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 402,
                 'district_id' => 37,
                 'title' => 'Palungtar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:23:36',
                 'updated_at' => '2023-05-09 09:23:36',
                 'deleted_at' => null,
@@ -3637,7 +3637,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 403,
                 'district_id' => 37,
                 'title' => 'Gorkha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:23:47',
                 'updated_at' => '2023-05-09 09:23:47',
                 'deleted_at' => null,
@@ -3646,7 +3646,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 404,
                 'district_id' => 40,
                 'title' => 'Chame Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:24:40',
                 'updated_at' => '2023-05-09 09:24:40',
                 'deleted_at' => null,
@@ -3655,7 +3655,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 405,
                 'district_id' => 40,
                 'title' => 'Narshon Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:24:50',
                 'updated_at' => '2023-05-09 09:24:50',
                 'deleted_at' => null,
@@ -3664,7 +3664,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 406,
                 'district_id' => 40,
                 'title' => 'Narpa Bhumi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:25:02',
                 'updated_at' => '2023-05-09 09:25:02',
                 'deleted_at' => null,
@@ -3673,7 +3673,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 407,
                 'district_id' => 40,
                 'title' => 'Manang Ingshyang Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:25:13',
                 'updated_at' => '2023-05-09 09:25:13',
                 'deleted_at' => null,
@@ -3682,7 +3682,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 408,
                 'district_id' => 41,
                 'title' => 'Thasang Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:27:35',
                 'updated_at' => '2023-05-09 09:27:35',
                 'deleted_at' => null,
@@ -3691,7 +3691,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 409,
                 'district_id' => 41,
                 'title' => 'Gharapjhong Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:27:45',
                 'updated_at' => '2023-05-09 09:27:45',
                 'deleted_at' => null,
@@ -3700,7 +3700,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 410,
                 'district_id' => 41,
                 'title' => 'Lomanthang Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:27:55',
                 'updated_at' => '2023-05-09 09:27:55',
                 'deleted_at' => null,
@@ -3709,7 +3709,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 411,
                 'district_id' => 41,
                 'title' => 'Lo-Ghekar Damodarkunda Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:28:04',
                 'updated_at' => '2023-05-09 09:28:04',
                 'deleted_at' => null,
@@ -3718,7 +3718,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 412,
                 'district_id' => 41,
                 'title' => 'Waragung Muktikhsetra Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:28:15',
                 'updated_at' => '2023-05-09 09:28:15',
                 'deleted_at' => null,
@@ -3727,7 +3727,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 413,
                 'district_id' => 42,
                 'title' => 'Mangala Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:29:15',
                 'updated_at' => '2023-05-09 09:29:15',
                 'deleted_at' => null,
@@ -3736,7 +3736,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 414,
                 'district_id' => 42,
                 'title' => 'Malika Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:29:25',
                 'updated_at' => '2023-05-09 09:29:25',
                 'deleted_at' => null,
@@ -3745,7 +3745,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 415,
                 'district_id' => 42,
                 'title' => 'Raghuganga Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:29:36',
                 'updated_at' => '2023-05-09 09:29:36',
                 'deleted_at' => null,
@@ -3754,7 +3754,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 416,
                 'district_id' => 42,
                 'title' => 'Dhaulagiri Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:29:46',
                 'updated_at' => '2023-05-09 09:29:46',
                 'deleted_at' => null,
@@ -3763,7 +3763,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 417,
                 'district_id' => 42,
                 'title' => 'Annapurna Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:29:56',
                 'updated_at' => '2023-05-09 09:29:56',
                 'deleted_at' => null,
@@ -3772,7 +3772,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 418,
                 'district_id' => 42,
                 'title' => 'Beni Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:30:06',
                 'updated_at' => '2023-05-09 09:30:06',
                 'deleted_at' => null,
@@ -3781,7 +3781,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 419,
                 'district_id' => 38,
                 'title' => 'Rupa Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:30:38',
                 'updated_at' => '2023-05-09 09:30:38',
                 'deleted_at' => null,
@@ -3790,7 +3790,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 420,
                 'district_id' => 38,
                 'title' => 'Madi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:30:48',
                 'updated_at' => '2023-05-09 09:30:48',
                 'deleted_at' => null,
@@ -3799,7 +3799,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 421,
                 'district_id' => 38,
                 'title' => 'Annapurna Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:30:58',
                 'updated_at' => '2023-05-09 09:30:58',
                 'deleted_at' => null,
@@ -3808,7 +3808,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 422,
                 'district_id' => 38,
                 'title' => 'Machhapuchchhre Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:31:09',
                 'updated_at' => '2023-05-09 09:31:09',
                 'deleted_at' => null,
@@ -3817,7 +3817,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 423,
                 'district_id' => 38,
                 'title' => 'Pokhara Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:31:20',
                 'updated_at' => '2023-05-09 09:31:20',
                 'deleted_at' => null,
@@ -3826,7 +3826,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 424,
                 'district_id' => 39,
                 'title' => 'Dordi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:31:45',
                 'updated_at' => '2023-05-09 09:31:45',
                 'deleted_at' => null,
@@ -3835,7 +3835,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 425,
                 'district_id' => 39,
                 'title' => 'Dudhpokhari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:31:56',
                 'updated_at' => '2023-05-09 09:31:56',
                 'deleted_at' => null,
@@ -3844,7 +3844,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 426,
                 'district_id' => 39,
                 'title' => 'Marsyangdi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:32:05',
                 'updated_at' => '2023-05-09 09:32:05',
                 'deleted_at' => null,
@@ -3853,7 +3853,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 427,
                 'district_id' => 39,
                 'title' => 'Kwholasothar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:32:16',
                 'updated_at' => '2023-05-09 09:32:16',
                 'deleted_at' => null,
@@ -3862,7 +3862,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 428,
                 'district_id' => 39,
                 'title' => 'Sundarbazar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:32:26',
                 'updated_at' => '2023-05-09 09:32:26',
                 'deleted_at' => null,
@@ -3871,7 +3871,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 429,
                 'district_id' => 39,
                 'title' => 'Besishahar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:32:37',
                 'updated_at' => '2023-05-09 09:32:37',
                 'deleted_at' => null,
@@ -3880,7 +3880,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 430,
                 'district_id' => 39,
                 'title' => 'Rainas Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:32:48',
                 'updated_at' => '2023-05-09 09:32:48',
                 'deleted_at' => null,
@@ -3889,7 +3889,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 431,
                 'district_id' => 39,
                 'title' => 'MadhyaNepal Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:32:59',
                 'updated_at' => '2023-05-09 09:32:59',
                 'deleted_at' => null,
@@ -3898,7 +3898,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 432,
                 'district_id' => 46,
                 'title' => 'Ghiring Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:33:37',
                 'updated_at' => '2023-05-09 09:33:37',
                 'deleted_at' => null,
@@ -3907,7 +3907,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 433,
                 'district_id' => 46,
                 'title' => 'Devghat Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:33:49',
                 'updated_at' => '2023-05-09 09:33:49',
                 'deleted_at' => null,
@@ -3916,7 +3916,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 434,
                 'district_id' => 46,
                 'title' => 'Rhishing Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:34:01',
                 'updated_at' => '2023-05-09 09:34:01',
                 'deleted_at' => null,
@@ -3925,7 +3925,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 435,
                 'district_id' => 46,
                 'title' => 'Myagde Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:34:12',
                 'updated_at' => '2023-05-09 09:34:12',
                 'deleted_at' => null,
@@ -3934,7 +3934,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 436,
                 'district_id' => 46,
                 'title' => 'Bandipur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:34:23',
                 'updated_at' => '2023-05-09 09:34:23',
                 'deleted_at' => null,
@@ -3943,7 +3943,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 437,
                 'district_id' => 46,
                 'title' => 'Anbukhaireni Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:34:34',
                 'updated_at' => '2023-05-09 09:34:34',
                 'deleted_at' => null,
@@ -3952,7 +3952,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 438,
                 'district_id' => 46,
                 'title' => 'Byas Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:34:46',
                 'updated_at' => '2023-05-09 09:34:46',
                 'deleted_at' => null,
@@ -3961,7 +3961,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 439,
                 'district_id' => 46,
                 'title' => 'Shuklagandaki Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:34:58',
                 'updated_at' => '2023-05-09 09:34:58',
                 'deleted_at' => null,
@@ -3970,7 +3970,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 440,
                 'district_id' => 46,
                 'title' => 'Bhimad Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:35:08',
                 'updated_at' => '2023-05-09 09:35:08',
                 'deleted_at' => null,
@@ -3979,7 +3979,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 441,
                 'district_id' => 46,
                 'title' => 'Bhanu Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:35:18',
                 'updated_at' => '2023-05-09 09:35:18',
                 'deleted_at' => null,
@@ -3988,7 +3988,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 442,
                 'district_id' => 43,
                 'title' => 'Baudeekali Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:36:28',
                 'updated_at' => '2023-05-09 09:36:28',
                 'deleted_at' => null,
@@ -3997,7 +3997,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 443,
                 'district_id' => 43,
                 'title' => 'Bulingtar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:36:44',
                 'updated_at' => '2023-05-09 09:36:44',
                 'deleted_at' => null,
@@ -4006,7 +4006,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 444,
                 'district_id' => 43,
                 'title' => 'Hupsekot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:36:55',
                 'updated_at' => '2023-05-09 09:36:55',
                 'deleted_at' => null,
@@ -4015,7 +4015,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 445,
                 'district_id' => 43,
                 'title' => 'Binayee Tribeni Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:37:08',
                 'updated_at' => '2023-05-09 09:37:08',
                 'deleted_at' => null,
@@ -4024,7 +4024,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 446,
                 'district_id' => 43,
                 'title' => 'Madhyabindu Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:37:19',
                 'updated_at' => '2023-05-09 09:37:19',
                 'deleted_at' => null,
@@ -4033,7 +4033,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 447,
                 'district_id' => 43,
                 'title' => 'Devchuli Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:37:30',
                 'updated_at' => '2023-05-09 09:37:30',
                 'deleted_at' => null,
@@ -4042,7 +4042,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 448,
                 'district_id' => 43,
                 'title' => 'Gaidakot Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:37:40',
                 'updated_at' => '2023-05-09 09:37:40',
                 'deleted_at' => null,
@@ -4051,7 +4051,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 449,
                 'district_id' => 43,
                 'title' => 'Kawasoti Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:37:51',
                 'updated_at' => '2023-05-09 09:37:51',
                 'deleted_at' => null,
@@ -4060,7 +4060,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 450,
                 'district_id' => 45,
                 'title' => 'Harinas Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:38:32',
                 'updated_at' => '2023-05-09 09:38:32',
                 'deleted_at' => null,
@@ -4069,7 +4069,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 451,
                 'district_id' => 45,
                 'title' => 'Biruwa Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:38:42',
                 'updated_at' => '2023-05-09 09:38:42',
                 'deleted_at' => null,
@@ -4078,7 +4078,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 452,
                 'district_id' => 45,
                 'title' => 'Aandhikhola Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:38:52',
                 'updated_at' => '2023-05-09 09:38:52',
                 'deleted_at' => null,
@@ -4087,7 +4087,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 453,
                 'district_id' => 45,
                 'title' => 'Phedikhola Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:39:03',
                 'updated_at' => '2023-05-09 09:39:03',
                 'deleted_at' => null,
@@ -4096,7 +4096,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 454,
                 'district_id' => 45,
                 'title' => 'Kaligandagi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:39:14',
                 'updated_at' => '2023-05-09 09:39:14',
                 'deleted_at' => null,
@@ -4105,7 +4105,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 455,
                 'district_id' => 45,
                 'title' => 'Arjunchaupari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:39:24',
                 'updated_at' => '2023-05-09 09:39:24',
                 'deleted_at' => null,
@@ -4114,7 +4114,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 456,
                 'district_id' => 45,
                 'title' => 'Putalibazar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:39:34',
                 'updated_at' => '2023-05-09 09:39:34',
                 'deleted_at' => null,
@@ -4123,7 +4123,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 457,
                 'district_id' => 45,
                 'title' => 'Bhirkot Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:39:43',
                 'updated_at' => '2023-05-09 09:39:43',
                 'deleted_at' => null,
@@ -4132,7 +4132,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 458,
                 'district_id' => 45,
                 'title' => 'Galyang Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:39:52',
                 'updated_at' => '2023-05-09 09:39:52',
                 'deleted_at' => null,
@@ -4141,7 +4141,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 459,
                 'district_id' => 45,
                 'title' => 'Chapakot Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:40:06',
                 'updated_at' => '2023-05-09 09:40:06',
                 'deleted_at' => null,
@@ -4150,7 +4150,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 460,
                 'district_id' => 45,
                 'title' => 'Waling Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:40:17',
                 'updated_at' => '2023-05-09 09:40:17',
                 'deleted_at' => null,
@@ -4159,7 +4159,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 461,
                 'district_id' => 44,
                 'title' => 'Modi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:41:05',
                 'updated_at' => '2023-05-09 09:41:05',
                 'deleted_at' => null,
@@ -4168,7 +4168,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 462,
                 'district_id' => 44,
                 'title' => 'Painyu Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:41:15',
                 'updated_at' => '2023-05-09 09:41:15',
                 'deleted_at' => null,
@@ -4177,7 +4177,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 463,
                 'district_id' => 44,
                 'title' => 'Jaljala Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:41:27',
                 'updated_at' => '2023-05-09 09:41:27',
                 'deleted_at' => null,
@@ -4186,7 +4186,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 464,
                 'district_id' => 44,
                 'title' => 'Bihadi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:41:38',
                 'updated_at' => '2023-05-09 09:41:38',
                 'deleted_at' => null,
@@ -4195,7 +4195,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 465,
                 'district_id' => 44,
                 'title' => 'Mahashila Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:41:49',
                 'updated_at' => '2023-05-09 09:41:49',
                 'deleted_at' => null,
@@ -4204,7 +4204,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 466,
                 'district_id' => 44,
                 'title' => 'Kushma Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:42:04',
                 'updated_at' => '2023-05-09 09:42:04',
                 'deleted_at' => null,
@@ -4213,7 +4213,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 467,
                 'district_id' => 44,
                 'title' => 'Phalebas Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:42:16',
                 'updated_at' => '2023-05-09 09:42:16',
                 'deleted_at' => null,
@@ -4222,7 +4222,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 468,
                 'district_id' => 36,
                 'title' => 'Bareng Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:42:45',
                 'updated_at' => '2023-05-09 09:42:45',
                 'deleted_at' => null,
@@ -4231,7 +4231,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 469,
                 'district_id' => 36,
                 'title' => 'Badigad Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:42:54',
                 'updated_at' => '2023-05-09 09:42:54',
                 'deleted_at' => null,
@@ -4240,7 +4240,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 470,
                 'district_id' => 36,
                 'title' => 'Nisikhola Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:43:05',
                 'updated_at' => '2023-05-09 09:43:05',
                 'deleted_at' => null,
@@ -4249,7 +4249,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 471,
                 'district_id' => 36,
                 'title' => 'Kanthekhola Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:43:15',
                 'updated_at' => '2023-05-09 09:43:15',
                 'deleted_at' => null,
@@ -4258,7 +4258,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 472,
                 'district_id' => 36,
                 'title' => 'Tara Khola Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:43:25',
                 'updated_at' => '2023-05-09 09:43:25',
                 'deleted_at' => null,
@@ -4267,7 +4267,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 473,
                 'district_id' => 36,
                 'title' => 'Taman Khola Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:43:35',
                 'updated_at' => '2023-05-09 09:43:35',
                 'deleted_at' => null,
@@ -4276,7 +4276,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 474,
                 'district_id' => 36,
                 'title' => 'Jaimuni Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:43:45',
                 'updated_at' => '2023-05-09 09:43:45',
                 'deleted_at' => null,
@@ -4285,7 +4285,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 475,
                 'district_id' => 36,
                 'title' => 'Baglung Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:43:57',
                 'updated_at' => '2023-05-09 09:43:57',
                 'deleted_at' => null,
@@ -4294,7 +4294,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 476,
                 'district_id' => 36,
                 'title' => 'Galkot Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:44:09',
                 'updated_at' => '2023-05-09 09:44:09',
                 'deleted_at' => null,
@@ -4303,7 +4303,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 477,
                 'district_id' => 36,
                 'title' => 'Dhorpatan Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:44:23',
                 'updated_at' => '2023-05-09 09:44:23',
                 'deleted_at' => null,
@@ -4312,7 +4312,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 478,
                 'district_id' => 56,
                 'title' => 'Bhume Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:46:43',
                 'updated_at' => '2023-05-09 09:46:43',
                 'deleted_at' => null,
@@ -4321,7 +4321,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 479,
                 'district_id' => 56,
                 'title' => 'Sisne Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:46:54',
                 'updated_at' => '2023-05-09 09:46:54',
                 'deleted_at' => null,
@@ -4330,7 +4330,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 480,
                 'district_id' => 56,
                 'title' => 'Putha Uttarganga Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:47:05',
                 'updated_at' => '2023-05-09 09:47:05',
                 'deleted_at' => null,
@@ -4339,7 +4339,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 481,
                 'district_id' => 55,
                 'title' => 'Madi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:47:41',
                 'updated_at' => '2023-05-09 09:47:41',
                 'deleted_at' => null,
@@ -4348,7 +4348,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 482,
                 'district_id' => 55,
                 'title' => 'Thawang Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:47:51',
                 'updated_at' => '2023-05-09 09:47:51',
                 'deleted_at' => null,
@@ -4357,7 +4357,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 483,
                 'district_id' => 55,
                 'title' => 'Sunchhahari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:48:02',
                 'updated_at' => '2023-05-09 09:48:02',
                 'deleted_at' => null,
@@ -4366,7 +4366,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 484,
                 'district_id' => 55,
                 'title' => 'Lungri Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:48:13',
                 'updated_at' => '2023-05-09 09:48:13',
                 'deleted_at' => null,
@@ -4375,7 +4375,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 485,
                 'district_id' => 55,
                 'title' => 'Gangadev Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:48:25',
                 'updated_at' => '2023-05-09 09:48:25',
                 'deleted_at' => null,
@@ -4384,7 +4384,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 486,
                 'district_id' => 55,
                 'title' => 'Tribeni Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:48:44',
                 'updated_at' => '2023-05-09 09:48:44',
                 'deleted_at' => null,
@@ -4393,7 +4393,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 487,
                 'district_id' => 55,
                 'title' => 'Pariwartan Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:49:00',
                 'updated_at' => '2023-05-09 09:49:00',
                 'deleted_at' => null,
@@ -4402,7 +4402,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 488,
                 'district_id' => 55,
                 'title' => 'Runtigadi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:49:12',
                 'updated_at' => '2023-05-09 09:49:12',
                 'deleted_at' => null,
@@ -4411,7 +4411,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 489,
                 'district_id' => 55,
                 'title' => 'Sunil Smriti Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:49:23',
                 'updated_at' => '2023-05-09 09:49:23',
                 'deleted_at' => null,
@@ -4420,7 +4420,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 490,
                 'district_id' => 55,
                 'title' => 'Rolpa Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:49:33',
                 'updated_at' => '2023-05-09 09:49:33',
                 'deleted_at' => null,
@@ -4429,7 +4429,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 491,
                 'district_id' => 54,
                 'title' => 'Ayirabati Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:50:09',
                 'updated_at' => '2023-05-09 09:50:09',
                 'deleted_at' => null,
@@ -4438,7 +4438,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 492,
                 'district_id' => 54,
                 'title' => 'Gaumukhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:50:20',
                 'updated_at' => '2023-05-09 09:50:20',
                 'deleted_at' => null,
@@ -4447,7 +4447,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 493,
                 'district_id' => 54,
                 'title' => 'Jhimruk Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:50:29',
                 'updated_at' => '2023-05-09 09:50:29',
                 'deleted_at' => null,
@@ -4456,7 +4456,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 494,
                 'district_id' => 54,
                 'title' => 'Naubahini Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:50:41',
                 'updated_at' => '2023-05-09 09:50:41',
                 'deleted_at' => null,
@@ -4465,7 +4465,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 495,
                 'district_id' => 54,
                 'title' => 'Mandavi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:50:53',
                 'updated_at' => '2023-05-09 09:50:53',
                 'deleted_at' => null,
@@ -4474,7 +4474,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 496,
                 'district_id' => 54,
                 'title' => 'Mallarani Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:51:05',
                 'updated_at' => '2023-05-09 09:51:05',
                 'deleted_at' => null,
@@ -4483,7 +4483,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 497,
                 'district_id' => 54,
                 'title' => 'Sarumarani Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:51:15',
                 'updated_at' => '2023-05-09 09:51:15',
                 'deleted_at' => null,
@@ -4492,7 +4492,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 498,
                 'district_id' => 54,
                 'title' => 'Pyuthan Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:51:25',
                 'updated_at' => '2023-05-09 09:51:25',
                 'deleted_at' => null,
@@ -4501,7 +4501,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 499,
                 'district_id' => 54,
                 'title' => 'Sworgadwary Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:51:36',
                 'updated_at' => '2023-05-09 09:51:36',
                 'deleted_at' => null,
@@ -4510,7 +4510,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 500,
                 'district_id' => 51,
                 'title' => 'Ruru Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:52:34',
                 'updated_at' => '2023-05-09 09:52:34',
                 'deleted_at' => null,
@@ -4521,7 +4521,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 501,
                 'district_id' => 51,
                 'title' => 'Isma Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:52:44',
                 'updated_at' => '2023-05-09 09:52:44',
                 'deleted_at' => null,
@@ -4530,7 +4530,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 502,
                 'district_id' => 51,
                 'title' => 'Madane Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:52:57',
                 'updated_at' => '2023-05-09 09:52:57',
                 'deleted_at' => null,
@@ -4539,7 +4539,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 503,
                 'district_id' => 51,
                 'title' => 'Malika Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:53:08',
                 'updated_at' => '2023-05-09 09:53:08',
                 'deleted_at' => null,
@@ -4548,7 +4548,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 504,
                 'district_id' => 51,
                 'title' => 'Chatrakot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:53:20',
                 'updated_at' => '2023-05-09 09:53:20',
                 'deleted_at' => null,
@@ -4557,7 +4557,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 505,
                 'district_id' => 51,
                 'title' => 'Dhurkot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:53:30',
                 'updated_at' => '2023-05-09 09:53:30',
                 'deleted_at' => null,
@@ -4566,7 +4566,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 506,
                 'district_id' => 51,
                 'title' => 'Satyawati Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:53:40',
                 'updated_at' => '2023-05-09 09:53:40',
                 'deleted_at' => null,
@@ -4575,7 +4575,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 507,
                 'district_id' => 51,
                 'title' => 'Chandrakot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:53:50',
                 'updated_at' => '2023-05-09 09:53:50',
                 'deleted_at' => null,
@@ -4584,7 +4584,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 508,
                 'district_id' => 51,
                 'title' => 'Kaligandaki Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:54:01',
                 'updated_at' => '2023-05-09 09:54:01',
                 'deleted_at' => null,
@@ -4593,7 +4593,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 509,
                 'district_id' => 51,
                 'title' => 'Gulmidarbar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:54:11',
                 'updated_at' => '2023-05-09 09:54:11',
                 'deleted_at' => null,
@@ -4602,7 +4602,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 510,
                 'district_id' => 51,
                 'title' => 'Resunga Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:54:21',
                 'updated_at' => '2023-05-09 09:54:21',
                 'deleted_at' => null,
@@ -4611,7 +4611,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 511,
                 'district_id' => 51,
                 'title' => 'Musikot Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:54:31',
                 'updated_at' => '2023-05-09 09:54:31',
                 'deleted_at' => null,
@@ -4620,7 +4620,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 512,
                 'district_id' => 50,
                 'title' => 'Panini Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:55:03',
                 'updated_at' => '2023-05-09 09:55:03',
                 'deleted_at' => null,
@@ -4629,7 +4629,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 513,
                 'district_id' => 50,
                 'title' => 'Chhatradev Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:55:12',
                 'updated_at' => '2023-05-09 09:55:12',
                 'deleted_at' => null,
@@ -4638,7 +4638,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 514,
                 'district_id' => 50,
                 'title' => 'Malarani Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:55:21',
                 'updated_at' => '2023-05-09 09:55:21',
                 'deleted_at' => null,
@@ -4647,7 +4647,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 515,
                 'district_id' => 50,
                 'title' => 'Bhumekasthan Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:55:31',
                 'updated_at' => '2023-05-09 09:55:31',
                 'deleted_at' => null,
@@ -4656,7 +4656,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 516,
                 'district_id' => 50,
                 'title' => 'Sitganga Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:55:42',
                 'updated_at' => '2023-05-09 09:55:42',
                 'deleted_at' => null,
@@ -4665,7 +4665,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 517,
                 'district_id' => 50,
                 'title' => 'Sandhikharka Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:55:52',
                 'updated_at' => '2023-05-09 09:55:52',
                 'deleted_at' => null,
@@ -4674,7 +4674,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 518,
                 'district_id' => 52,
                 'title' => 'Rambha Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:56:36',
                 'updated_at' => '2023-05-09 09:56:36',
                 'deleted_at' => null,
@@ -4683,7 +4683,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 519,
                 'district_id' => 52,
                 'title' => 'Tinau Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:56:46',
                 'updated_at' => '2023-05-09 09:56:46',
                 'deleted_at' => null,
@@ -4692,7 +4692,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 520,
                 'district_id' => 52,
                 'title' => 'Nisdi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:56:56',
                 'updated_at' => '2023-05-09 09:56:56',
                 'deleted_at' => null,
@@ -4701,7 +4701,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 521,
                 'district_id' => 52,
                 'title' => 'Mathagadhi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:57:07',
                 'updated_at' => '2023-05-09 09:57:07',
                 'deleted_at' => null,
@@ -4710,7 +4710,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 522,
                 'district_id' => 52,
                 'title' => 'Ribdikot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:57:18',
                 'updated_at' => '2023-05-09 09:57:18',
                 'deleted_at' => null,
@@ -4719,7 +4719,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 523,
                 'district_id' => 52,
                 'title' => 'Purbakhola Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:57:28',
                 'updated_at' => '2023-05-09 09:57:28',
                 'deleted_at' => null,
@@ -4728,7 +4728,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 524,
                 'district_id' => 52,
                 'title' => 'Bagnaskali Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:57:39',
                 'updated_at' => '2023-05-09 09:57:39',
                 'deleted_at' => null,
@@ -4737,7 +4737,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 525,
                 'district_id' => 52,
                 'title' => 'Rainadevi Chhahara Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:57:50',
                 'updated_at' => '2023-05-09 09:57:50',
                 'deleted_at' => null,
@@ -4746,7 +4746,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 526,
                 'district_id' => 52,
                 'title' => 'Tansen Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:58:02',
                 'updated_at' => '2023-05-09 09:58:02',
                 'deleted_at' => null,
@@ -4755,7 +4755,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 527,
                 'district_id' => 52,
                 'title' => 'Rampur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 09:58:13',
                 'updated_at' => '2023-05-09 09:58:13',
                 'deleted_at' => null,
@@ -4764,7 +4764,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 528,
                 'district_id' => 48,
                 'title' => 'Sarawal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:01:50',
                 'updated_at' => '2023-05-09 10:01:50',
                 'deleted_at' => null,
@@ -4773,7 +4773,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 529,
                 'district_id' => 48,
                 'title' => 'Susta Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:02:01',
                 'updated_at' => '2023-05-09 10:02:01',
                 'deleted_at' => null,
@@ -4782,7 +4782,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 530,
                 'district_id' => 48,
                 'title' => 'Pratappur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:02:12',
                 'updated_at' => '2023-05-09 10:02:12',
                 'deleted_at' => null,
@@ -4791,7 +4791,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 531,
                 'district_id' => 48,
                 'title' => 'Palhi Nandan Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:02:22',
                 'updated_at' => '2023-05-09 10:02:22',
                 'deleted_at' => null,
@@ -4800,7 +4800,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 532,
                 'district_id' => 48,
                 'title' => 'Bardaghat Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:02:35',
                 'updated_at' => '2023-05-09 10:02:35',
                 'deleted_at' => null,
@@ -4809,7 +4809,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 533,
                 'district_id' => 48,
                 'title' => 'Sunwal Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:02:45',
                 'updated_at' => '2023-05-09 10:02:45',
                 'deleted_at' => null,
@@ -4818,7 +4818,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 534,
                 'district_id' => 48,
                 'title' => 'Ramgram Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:02:56',
                 'updated_at' => '2023-05-09 10:02:56',
                 'deleted_at' => null,
@@ -4827,7 +4827,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 535,
                 'district_id' => 49,
                 'title' => 'Kanchan Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:03:34',
                 'updated_at' => '2023-05-09 10:03:34',
                 'deleted_at' => null,
@@ -4836,7 +4836,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 536,
                 'district_id' => 49,
                 'title' => 'Siyari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:03:45',
                 'updated_at' => '2023-05-09 10:03:45',
                 'deleted_at' => null,
@@ -4845,7 +4845,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 537,
                 'district_id' => 49,
                 'title' => 'Rohini Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:03:57',
                 'updated_at' => '2023-05-09 10:03:57',
                 'deleted_at' => null,
@@ -4854,7 +4854,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 538,
                 'district_id' => 49,
                 'title' => 'Gaidahawa Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:04:07',
                 'updated_at' => '2023-05-09 10:04:07',
                 'deleted_at' => null,
@@ -4863,7 +4863,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 539,
                 'district_id' => 49,
                 'title' => 'Omsatiya Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:04:37',
                 'updated_at' => '2023-05-09 10:04:37',
                 'deleted_at' => null,
@@ -4872,7 +4872,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 540,
                 'district_id' => 49,
                 'title' => 'Sudhdhodhan Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:04:49',
                 'updated_at' => '2023-05-09 10:04:49',
                 'deleted_at' => null,
@@ -4881,7 +4881,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 541,
                 'district_id' => 49,
                 'title' => 'Mayadevi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:05:00',
                 'updated_at' => '2023-05-09 10:05:00',
                 'deleted_at' => null,
@@ -4890,7 +4890,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 542,
                 'district_id' => 49,
                 'title' => 'Marchawari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:05:12',
                 'updated_at' => '2023-05-09 10:05:12',
                 'deleted_at' => null,
@@ -4899,7 +4899,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 543,
                 'district_id' => 49,
                 'title' => 'Kotahimai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:05:23',
                 'updated_at' => '2023-05-09 10:05:23',
                 'deleted_at' => null,
@@ -4908,7 +4908,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 544,
                 'district_id' => 49,
                 'title' => 'Sammarimai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:05:35',
                 'updated_at' => '2023-05-09 10:05:35',
                 'deleted_at' => null,
@@ -4917,7 +4917,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 545,
                 'district_id' => 49,
                 'title' => 'Butwal Sub-Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:05:46',
                 'updated_at' => '2023-05-09 10:05:46',
                 'deleted_at' => null,
@@ -4926,7 +4926,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 546,
                 'district_id' => 49,
                 'title' => 'Lumbini Sanskritik Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:05:57',
                 'updated_at' => '2023-05-09 10:05:57',
                 'deleted_at' => null,
@@ -4935,7 +4935,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 547,
                 'district_id' => 49,
                 'title' => 'Devdaha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:06:07',
                 'updated_at' => '2023-05-09 10:06:07',
                 'deleted_at' => null,
@@ -4944,7 +4944,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 548,
                 'district_id' => 49,
                 'title' => 'Sainamaina Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:06:18',
                 'updated_at' => '2023-05-09 10:06:18',
                 'deleted_at' => null,
@@ -4953,7 +4953,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 549,
                 'district_id' => 49,
                 'title' => 'Siddharthanagar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:06:28',
                 'updated_at' => '2023-05-09 10:06:28',
                 'deleted_at' => null,
@@ -4962,7 +4962,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 550,
                 'district_id' => 49,
                 'title' => 'Tillotama Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:06:38',
                 'updated_at' => '2023-05-09 10:06:38',
                 'deleted_at' => null,
@@ -4971,7 +4971,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 551,
                 'district_id' => 47,
                 'title' => 'Yashodhara Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:09:48',
                 'updated_at' => '2023-05-09 10:09:48',
                 'deleted_at' => null,
@@ -4980,7 +4980,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 552,
                 'district_id' => 47,
                 'title' => 'Bijayanagar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:10:02',
                 'updated_at' => '2023-05-09 10:10:02',
                 'deleted_at' => null,
@@ -4989,7 +4989,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 553,
                 'district_id' => 47,
                 'title' => 'Mayadevi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:10:13',
                 'updated_at' => '2023-05-09 10:10:13',
                 'deleted_at' => null,
@@ -4998,7 +4998,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 554,
                 'district_id' => 47,
                 'title' => 'Suddhodhan Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:10:23',
                 'updated_at' => '2023-05-09 10:10:23',
                 'deleted_at' => null,
@@ -5007,7 +5007,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 555,
                 'district_id' => 47,
                 'title' => 'Shivaraj Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:10:36',
                 'updated_at' => '2023-05-09 10:10:36',
                 'deleted_at' => null,
@@ -5016,7 +5016,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 556,
                 'district_id' => 47,
                 'title' => 'Kapilbastu Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:10:46',
                 'updated_at' => '2023-05-09 10:10:46',
                 'deleted_at' => null,
@@ -5025,7 +5025,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 557,
                 'district_id' => 47,
                 'title' => 'Buddhabhumi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:10:57',
                 'updated_at' => '2023-05-09 10:10:57',
                 'deleted_at' => null,
@@ -5034,7 +5034,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 558,
                 'district_id' => 47,
                 'title' => 'Maharajgunj Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:11:08',
                 'updated_at' => '2023-05-09 10:11:08',
                 'deleted_at' => null,
@@ -5043,7 +5043,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 559,
                 'district_id' => 47,
                 'title' => 'Banganga Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:11:19',
                 'updated_at' => '2023-05-09 10:11:19',
                 'deleted_at' => null,
@@ -5052,7 +5052,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 560,
                 'district_id' => 47,
                 'title' => 'Krishnanagar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:11:30',
                 'updated_at' => '2023-05-09 10:11:30',
                 'deleted_at' => null,
@@ -5061,7 +5061,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 561,
                 'district_id' => 53,
                 'title' => 'Babai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:12:14',
                 'updated_at' => '2023-05-09 10:12:14',
                 'deleted_at' => null,
@@ -5070,7 +5070,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 562,
                 'district_id' => 53,
                 'title' => 'Gadhawa Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:12:24',
                 'updated_at' => '2023-05-09 10:12:24',
                 'deleted_at' => null,
@@ -5079,7 +5079,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 563,
                 'district_id' => 53,
                 'title' => 'Rapti Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:12:35',
                 'updated_at' => '2023-05-09 10:12:35',
                 'deleted_at' => null,
@@ -5088,7 +5088,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 564,
                 'district_id' => 53,
                 'title' => 'Rajpur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:12:46',
                 'updated_at' => '2023-05-09 10:12:46',
                 'deleted_at' => null,
@@ -5097,7 +5097,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 565,
                 'district_id' => 53,
                 'title' => 'Dangisharan Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:12:58',
                 'updated_at' => '2023-05-09 10:12:58',
                 'deleted_at' => null,
@@ -5106,7 +5106,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 566,
                 'district_id' => 53,
                 'title' => 'Shantinagar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:13:08',
                 'updated_at' => '2023-05-09 10:13:08',
                 'deleted_at' => null,
@@ -5115,7 +5115,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 567,
                 'district_id' => 53,
                 'title' => 'Banglachuli Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:13:17',
                 'updated_at' => '2023-05-09 10:13:17',
                 'deleted_at' => null,
@@ -5124,7 +5124,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 568,
                 'district_id' => 53,
                 'title' => 'Tulsipur Sub-Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:13:28',
                 'updated_at' => '2023-05-09 10:13:28',
                 'deleted_at' => null,
@@ -5133,7 +5133,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 569,
                 'district_id' => 53,
                 'title' => 'Ghorahi Sub-Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:13:38',
                 'updated_at' => '2023-05-09 10:13:38',
                 'deleted_at' => null,
@@ -5142,7 +5142,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 570,
                 'district_id' => 53,
                 'title' => 'Lamahi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:13:49',
                 'updated_at' => '2023-05-09 10:13:49',
                 'deleted_at' => null,
@@ -5151,7 +5151,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 571,
                 'district_id' => 57,
                 'title' => 'Khajura Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:14:28',
                 'updated_at' => '2023-05-09 10:14:28',
                 'deleted_at' => null,
@@ -5160,7 +5160,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 572,
                 'district_id' => 57,
                 'title' => 'Janki Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:14:39',
                 'updated_at' => '2023-05-09 10:14:39',
                 'deleted_at' => null,
@@ -5169,7 +5169,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 573,
                 'district_id' => 57,
                 'title' => 'Baijanath Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:14:51',
                 'updated_at' => '2023-05-09 10:14:51',
                 'deleted_at' => null,
@@ -5178,7 +5178,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 574,
                 'district_id' => 57,
                 'title' => 'Duduwa Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:15:02',
                 'updated_at' => '2023-05-09 10:15:02',
                 'deleted_at' => null,
@@ -5187,7 +5187,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 575,
                 'district_id' => 57,
                 'title' => 'Narainapur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:15:13',
                 'updated_at' => '2023-05-09 10:15:13',
                 'deleted_at' => null,
@@ -5196,7 +5196,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 576,
                 'district_id' => 57,
                 'title' => 'Rapti Sonari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:15:24',
                 'updated_at' => '2023-05-09 10:15:24',
                 'deleted_at' => null,
@@ -5205,7 +5205,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 577,
                 'district_id' => 57,
                 'title' => 'Kohalpur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:15:37',
                 'updated_at' => '2023-05-09 10:15:37',
                 'deleted_at' => null,
@@ -5214,7 +5214,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 578,
                 'district_id' => 57,
                 'title' => 'Nepalgunj Sub-Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:15:48',
                 'updated_at' => '2023-05-09 10:15:48',
                 'deleted_at' => null,
@@ -5223,7 +5223,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 579,
                 'district_id' => 58,
                 'title' => 'Geruwa Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:16:14',
                 'updated_at' => '2023-05-09 10:16:14',
                 'deleted_at' => null,
@@ -5232,7 +5232,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 580,
                 'district_id' => 58,
                 'title' => 'Badhaiyatal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:16:26',
                 'updated_at' => '2023-05-09 10:16:26',
                 'deleted_at' => null,
@@ -5241,7 +5241,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 581,
                 'district_id' => 58,
                 'title' => 'Thakurbaba Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:16:38',
                 'updated_at' => '2023-05-09 10:16:38',
                 'deleted_at' => null,
@@ -5250,7 +5250,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 582,
                 'district_id' => 58,
                 'title' => 'Bansagadhi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:16:51',
                 'updated_at' => '2023-05-09 10:16:51',
                 'deleted_at' => null,
@@ -5259,7 +5259,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 583,
                 'district_id' => 58,
                 'title' => 'Barbardiya Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:17:03',
                 'updated_at' => '2023-05-09 10:17:03',
                 'deleted_at' => null,
@@ -5268,7 +5268,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 584,
                 'district_id' => 58,
                 'title' => 'Rajapur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:17:16',
                 'updated_at' => '2023-05-09 10:17:16',
                 'deleted_at' => null,
@@ -5277,7 +5277,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 585,
                 'district_id' => 58,
                 'title' => 'Madhuwan Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:17:27',
                 'updated_at' => '2023-05-09 10:17:27',
                 'deleted_at' => null,
@@ -5286,7 +5286,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 586,
                 'district_id' => 58,
                 'title' => 'Gulariya Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:17:39',
                 'updated_at' => '2023-05-09 10:17:39',
                 'deleted_at' => null,
@@ -5295,7 +5295,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 587,
                 'district_id' => 68,
                 'title' => 'Kuse Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:23:23',
                 'updated_at' => '2023-05-09 10:23:23',
                 'deleted_at' => null,
@@ -5304,7 +5304,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 588,
                 'district_id' => 68,
                 'title' => 'Shiwalaya Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:23:34',
                 'updated_at' => '2023-05-09 10:23:34',
                 'deleted_at' => null,
@@ -5313,7 +5313,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 589,
                 'district_id' => 68,
                 'title' => 'Barekot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:23:45',
                 'updated_at' => '2023-05-09 10:23:45',
                 'deleted_at' => null,
@@ -5322,7 +5322,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 590,
                 'district_id' => 68,
                 'title' => 'Junichande Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:23:57',
                 'updated_at' => '2023-05-09 10:23:57',
                 'deleted_at' => null,
@@ -5331,7 +5331,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 591,
                 'district_id' => 68,
                 'title' => 'Nalagad Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:24:08',
                 'updated_at' => '2023-05-09 10:24:08',
                 'deleted_at' => null,
@@ -5340,7 +5340,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 592,
                 'district_id' => 68,
                 'title' => 'Bheri Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:24:20',
                 'updated_at' => '2023-05-09 10:24:20',
                 'deleted_at' => null,
@@ -5349,7 +5349,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 593,
                 'district_id' => 68,
                 'title' => 'Chhedagad Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:24:31',
                 'updated_at' => '2023-05-09 10:24:31',
                 'deleted_at' => null,
@@ -5358,7 +5358,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 594,
                 'district_id' => 61,
                 'title' => 'Kaike Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:25:11',
                 'updated_at' => '2023-05-09 10:25:11',
                 'deleted_at' => null,
@@ -5367,7 +5367,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 595,
                 'district_id' => 61,
                 'title' => 'Jagadulla Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:25:23',
                 'updated_at' => '2023-05-09 10:25:23',
                 'deleted_at' => null,
@@ -5376,7 +5376,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 596,
                 'district_id' => 61,
                 'title' => 'Mudkechula Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:25:35',
                 'updated_at' => '2023-05-09 10:25:35',
                 'deleted_at' => null,
@@ -5385,7 +5385,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 597,
                 'district_id' => 61,
                 'title' => 'Dolpo Buddha Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:25:46',
                 'updated_at' => '2023-05-09 10:25:46',
                 'deleted_at' => null,
@@ -5394,7 +5394,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 598,
                 'district_id' => 61,
                 'title' => 'Shey Phoksundo Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:25:57',
                 'updated_at' => '2023-05-09 10:25:57',
                 'deleted_at' => null,
@@ -5403,7 +5403,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 599,
                 'district_id' => 61,
                 'title' => 'Chharka Tangsong Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:26:08',
                 'updated_at' => '2023-05-09 10:26:08',
                 'deleted_at' => null,
@@ -5412,7 +5412,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 600,
                 'district_id' => 61,
                 'title' => 'Tripurasundari Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:26:19',
                 'updated_at' => '2023-05-09 10:26:19',
                 'deleted_at' => null,
@@ -5421,7 +5421,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 601,
                 'district_id' => 61,
                 'title' => 'Thuli Bheri Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:26:31',
                 'updated_at' => '2023-05-09 10:26:31',
                 'deleted_at' => null,
@@ -5430,7 +5430,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 602,
                 'district_id' => 65,
                 'title' => 'Soru Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:27:04',
                 'updated_at' => '2023-05-09 10:27:04',
                 'deleted_at' => null,
@@ -5439,7 +5439,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 603,
                 'district_id' => 65,
                 'title' => 'Khatyad Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:27:16',
                 'updated_at' => '2023-05-09 10:27:16',
                 'deleted_at' => null,
@@ -5448,7 +5448,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 604,
                 'district_id' => 65,
                 'title' => 'Mugum Karmarong Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:27:27',
                 'updated_at' => '2023-05-09 10:27:27',
                 'deleted_at' => null,
@@ -5457,7 +5457,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 605,
                 'district_id' => 65,
                 'title' => 'Chhayanath Rara Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:27:41',
                 'updated_at' => '2023-05-09 10:27:41',
                 'deleted_at' => null,
@@ -5466,7 +5466,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 606,
                 'district_id' => 62,
                 'title' => 'Simkot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:28:13',
                 'updated_at' => '2023-05-09 10:28:13',
                 'deleted_at' => null,
@@ -5475,7 +5475,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 607,
                 'district_id' => 62,
                 'title' => 'Namkha Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:28:24',
                 'updated_at' => '2023-05-09 10:28:24',
                 'deleted_at' => null,
@@ -5484,7 +5484,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 608,
                 'district_id' => 62,
                 'title' => 'Chankheli Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:28:35',
                 'updated_at' => '2023-05-09 10:28:35',
                 'deleted_at' => null,
@@ -5493,7 +5493,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 609,
                 'district_id' => 62,
                 'title' => 'Tanjakot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:28:47',
                 'updated_at' => '2023-05-09 10:28:47',
                 'deleted_at' => null,
@@ -5502,7 +5502,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 610,
                 'district_id' => 62,
                 'title' => 'Sarkegad Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:28:58',
                 'updated_at' => '2023-05-09 10:28:58',
                 'deleted_at' => null,
@@ -5511,7 +5511,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 611,
                 'district_id' => 62,
                 'title' => 'Adanchuli Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:29:10',
                 'updated_at' => '2023-05-09 10:29:10',
                 'deleted_at' => null,
@@ -5520,7 +5520,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 612,
                 'district_id' => 62,
                 'title' => 'Kharpunath Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:29:22',
                 'updated_at' => '2023-05-09 10:29:22',
                 'deleted_at' => null,
@@ -5529,7 +5529,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 613,
                 'district_id' => 63,
                 'title' => 'Hima Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:29:53',
                 'updated_at' => '2023-05-09 10:29:53',
                 'deleted_at' => null,
@@ -5538,7 +5538,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 614,
                 'district_id' => 63,
                 'title' => 'Tila Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:30:06',
                 'updated_at' => '2023-05-09 10:30:06',
                 'deleted_at' => null,
@@ -5547,7 +5547,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 615,
                 'district_id' => 63,
                 'title' => 'Sinja Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:30:18',
                 'updated_at' => '2023-05-09 10:30:18',
                 'deleted_at' => null,
@@ -5556,7 +5556,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 616,
                 'district_id' => 63,
                 'title' => 'Guthichaur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:30:29',
                 'updated_at' => '2023-05-09 10:30:29',
                 'deleted_at' => null,
@@ -5565,7 +5565,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 617,
                 'district_id' => 63,
                 'title' => 'Tatopani Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:30:42',
                 'updated_at' => '2023-05-09 10:30:42',
                 'deleted_at' => null,
@@ -5574,7 +5574,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 618,
                 'district_id' => 63,
                 'title' => 'Patrasi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:30:53',
                 'updated_at' => '2023-05-09 10:30:53',
                 'deleted_at' => null,
@@ -5583,7 +5583,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 619,
                 'district_id' => 63,
                 'title' => 'Kanakasundari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:31:04',
                 'updated_at' => '2023-05-09 10:31:04',
                 'deleted_at' => null,
@@ -5592,7 +5592,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 620,
                 'district_id' => 63,
                 'title' => 'Chandannath Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:31:16',
                 'updated_at' => '2023-05-09 10:31:16',
                 'deleted_at' => null,
@@ -5601,7 +5601,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 621,
                 'district_id' => 64,
                 'title' => 'Mahawai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:31:56',
                 'updated_at' => '2023-05-09 10:31:56',
                 'deleted_at' => null,
@@ -5610,7 +5610,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 622,
                 'district_id' => 64,
                 'title' => 'Palata Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:32:07',
                 'updated_at' => '2023-05-09 10:32:07',
                 'deleted_at' => null,
@@ -5619,7 +5619,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 623,
                 'district_id' => 64,
                 'title' => 'Naraharinath Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:32:19',
                 'updated_at' => '2023-05-09 10:32:19',
                 'deleted_at' => null,
@@ -5628,7 +5628,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 624,
                 'district_id' => 64,
                 'title' => 'Pachaljharana Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:32:30',
                 'updated_at' => '2023-05-09 10:32:30',
                 'deleted_at' => null,
@@ -5637,7 +5637,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 625,
                 'district_id' => 64,
                 'title' => 'Subha Kalika Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:32:41',
                 'updated_at' => '2023-05-09 10:32:41',
                 'deleted_at' => null,
@@ -5646,7 +5646,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 626,
                 'district_id' => 64,
                 'title' => 'Sanni Tribeni Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:32:53',
                 'updated_at' => '2023-05-09 10:32:53',
                 'deleted_at' => null,
@@ -5655,7 +5655,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 627,
                 'district_id' => 64,
                 'title' => 'Khandachakra Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:33:05',
                 'updated_at' => '2023-05-09 10:33:05',
                 'deleted_at' => null,
@@ -5664,7 +5664,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 628,
                 'district_id' => 64,
                 'title' => 'Raskot Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:33:16',
                 'updated_at' => '2023-05-09 10:33:16',
                 'deleted_at' => null,
@@ -5673,7 +5673,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 629,
                 'district_id' => 64,
                 'title' => 'Tilagufa Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 10:33:27',
                 'updated_at' => '2023-05-09 10:33:27',
                 'deleted_at' => null,
@@ -5682,7 +5682,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 630,
                 'district_id' => 67,
                 'title' => 'Bhairabi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:05:39',
                 'updated_at' => '2023-05-09 12:05:39',
                 'deleted_at' => null,
@@ -5691,7 +5691,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 631,
                 'district_id' => 67,
                 'title' => 'Mahabu Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:05:54',
                 'updated_at' => '2023-05-09 12:05:54',
                 'deleted_at' => null,
@@ -5700,7 +5700,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 632,
                 'district_id' => 67,
                 'title' => 'Gurans Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:06:18',
                 'updated_at' => '2023-05-09 12:06:18',
                 'deleted_at' => null,
@@ -5709,7 +5709,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 633,
                 'district_id' => 67,
                 'title' => 'Naumule Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:06:30',
                 'updated_at' => '2023-05-09 12:06:30',
                 'deleted_at' => null,
@@ -5718,7 +5718,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 634,
                 'district_id' => 67,
                 'title' => 'Bhagawatimai Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:06:41',
                 'updated_at' => '2023-05-09 12:06:41',
                 'deleted_at' => null,
@@ -5727,7 +5727,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 635,
                 'district_id' => 67,
                 'title' => 'Thantikandh Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:06:53',
                 'updated_at' => '2023-05-09 12:06:53',
                 'deleted_at' => null,
@@ -5736,7 +5736,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 636,
                 'district_id' => 67,
                 'title' => 'Dungeshwor Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:07:03',
                 'updated_at' => '2023-05-09 12:07:03',
                 'deleted_at' => null,
@@ -5745,7 +5745,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 637,
                 'district_id' => 67,
                 'title' => 'Aathabis Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:07:15',
                 'updated_at' => '2023-05-09 12:07:15',
                 'deleted_at' => null,
@@ -5754,7 +5754,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 638,
                 'district_id' => 67,
                 'title' => 'Dullu Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:07:27',
                 'updated_at' => '2023-05-09 12:07:27',
                 'deleted_at' => null,
@@ -5763,7 +5763,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 639,
                 'district_id' => 67,
                 'title' => 'Chamunda Bindrasaini Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:07:38',
                 'updated_at' => '2023-05-09 12:07:38',
                 'deleted_at' => null,
@@ -5772,7 +5772,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 640,
                 'district_id' => 67,
                 'title' => 'Narayan Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:07:50',
                 'updated_at' => '2023-05-09 12:07:50',
                 'deleted_at' => null,
@@ -5781,7 +5781,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 641,
                 'district_id' => 59,
                 'title' => 'Tribeni Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:08:39',
                 'updated_at' => '2023-05-09 12:08:39',
                 'deleted_at' => null,
@@ -5790,7 +5790,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 642,
                 'district_id' => 59,
                 'title' => 'Sani Bheri Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:08:51',
                 'updated_at' => '2023-05-09 12:08:51',
                 'deleted_at' => null,
@@ -5799,7 +5799,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 643,
                 'district_id' => 59,
                 'title' => 'Banfikot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:09:04',
                 'updated_at' => '2023-05-09 12:09:04',
                 'deleted_at' => null,
@@ -5808,7 +5808,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 644,
                 'district_id' => 59,
                 'title' => 'Aathbiskot Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:09:15',
                 'updated_at' => '2023-05-09 12:09:15',
                 'deleted_at' => null,
@@ -5817,7 +5817,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 645,
                 'district_id' => 59,
                 'title' => 'Chaurjahari Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:09:27',
                 'updated_at' => '2023-05-09 12:09:27',
                 'deleted_at' => null,
@@ -5826,7 +5826,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 646,
                 'district_id' => 59,
                 'title' => 'Musikot Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:09:39',
                 'updated_at' => '2023-05-09 12:09:39',
                 'deleted_at' => null,
@@ -5835,7 +5835,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 647,
                 'district_id' => 60,
                 'title' => 'Kumakh Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:10:15',
                 'updated_at' => '2023-05-09 12:10:15',
                 'deleted_at' => null,
@@ -5844,7 +5844,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 648,
                 'district_id' => 60,
                 'title' => 'Darma Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:10:29',
                 'updated_at' => '2023-05-09 12:10:29',
                 'deleted_at' => null,
@@ -5853,7 +5853,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 649,
                 'district_id' => 60,
                 'title' => 'Kapurkot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:10:40',
                 'updated_at' => '2023-05-09 12:10:40',
                 'deleted_at' => null,
@@ -5862,7 +5862,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 650,
                 'district_id' => 60,
                 'title' => 'Kalimati Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:10:51',
                 'updated_at' => '2023-05-09 12:10:51',
                 'deleted_at' => null,
@@ -5871,7 +5871,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 651,
                 'district_id' => 60,
                 'title' => 'Tribeni Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:11:03',
                 'updated_at' => '2023-05-09 12:11:03',
                 'deleted_at' => null,
@@ -5880,7 +5880,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 652,
                 'district_id' => 60,
                 'title' => 'Chhatreshwori Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:11:14',
                 'updated_at' => '2023-05-09 12:11:14',
                 'deleted_at' => null,
@@ -5889,7 +5889,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 653,
                 'district_id' => 60,
                 'title' => 'Siddha Kumakh Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:11:25',
                 'updated_at' => '2023-05-09 12:11:25',
                 'deleted_at' => null,
@@ -5898,7 +5898,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 654,
                 'district_id' => 60,
                 'title' => 'Sharada Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:11:36',
                 'updated_at' => '2023-05-09 12:11:36',
                 'deleted_at' => null,
@@ -5907,7 +5907,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 655,
                 'district_id' => 60,
                 'title' => 'Bangad Kupinde Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:11:47',
                 'updated_at' => '2023-05-09 12:11:47',
                 'deleted_at' => null,
@@ -5916,7 +5916,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 656,
                 'district_id' => 60,
                 'title' => 'Bagchaur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:11:58',
                 'updated_at' => '2023-05-09 12:11:58',
                 'deleted_at' => null,
@@ -5925,7 +5925,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 657,
                 'district_id' => 66,
                 'title' => 'Chaukune Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:12:21',
                 'updated_at' => '2023-05-09 12:12:21',
                 'deleted_at' => null,
@@ -5934,7 +5934,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 658,
                 'district_id' => 66,
                 'title' => 'Simta Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:12:32',
                 'updated_at' => '2023-05-09 12:12:32',
                 'deleted_at' => null,
@@ -5943,7 +5943,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 659,
                 'district_id' => 66,
                 'title' => 'Chingad Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:12:44',
                 'updated_at' => '2023-05-09 12:12:44',
                 'deleted_at' => null,
@@ -5952,7 +5952,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 660,
                 'district_id' => 66,
                 'title' => 'Barahtal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:12:56',
                 'updated_at' => '2023-05-09 12:12:56',
                 'deleted_at' => null,
@@ -5961,7 +5961,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 661,
                 'district_id' => 66,
                 'title' => 'Gurbhakot Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:13:07',
                 'updated_at' => '2023-05-09 12:13:07',
                 'deleted_at' => null,
@@ -5970,7 +5970,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 662,
                 'district_id' => 66,
                 'title' => 'Panchpuri Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:13:19',
                 'updated_at' => '2023-05-09 12:13:19',
                 'deleted_at' => null,
@@ -5979,7 +5979,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 663,
                 'district_id' => 66,
                 'title' => 'Bheriganga Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:13:31',
                 'updated_at' => '2023-05-09 12:13:31',
                 'deleted_at' => null,
@@ -5988,7 +5988,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 664,
                 'district_id' => 66,
                 'title' => 'Lekbeshi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:13:43',
                 'updated_at' => '2023-05-09 12:13:43',
                 'deleted_at' => null,
@@ -5997,7 +5997,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 665,
                 'district_id' => 66,
                 'title' => 'Birendranagar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:13:54',
                 'updated_at' => '2023-05-09 12:13:54',
                 'deleted_at' => null,
@@ -6006,7 +6006,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 666,
                 'district_id' => 73,
                 'title' => 'Gaumul Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:14:55',
                 'updated_at' => '2023-05-09 12:14:55',
                 'deleted_at' => null,
@@ -6015,7 +6015,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 667,
                 'district_id' => 73,
                 'title' => 'Himali Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:15:06',
                 'updated_at' => '2023-05-09 12:15:06',
                 'deleted_at' => null,
@@ -6024,7 +6024,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 668,
                 'district_id' => 73,
                 'title' => 'Jagannath Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:15:19',
                 'updated_at' => '2023-05-09 12:15:19',
                 'deleted_at' => null,
@@ -6033,7 +6033,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 669,
                 'district_id' => 73,
                 'title' => 'Khaptad Chhededaha Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:15:31',
                 'updated_at' => '2023-05-09 12:15:31',
                 'deleted_at' => null,
@@ -6042,7 +6042,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 670,
                 'district_id' => 73,
                 'title' => 'Swami Kartik Khaapar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:15:47',
                 'updated_at' => '2023-05-09 12:15:47',
                 'deleted_at' => null,
@@ -6051,7 +6051,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 671,
                 'district_id' => 73,
                 'title' => 'Badimalika Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:16:07',
                 'updated_at' => '2023-05-09 12:16:07',
                 'deleted_at' => null,
@@ -6060,7 +6060,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 672,
                 'district_id' => 73,
                 'title' => 'Tribeni Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:16:24',
                 'updated_at' => '2023-05-09 12:16:24',
                 'deleted_at' => null,
@@ -6069,7 +6069,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 673,
                 'district_id' => 73,
                 'title' => 'Budhiganga Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:16:37',
                 'updated_at' => '2023-05-09 12:16:37',
                 'deleted_at' => null,
@@ -6078,7 +6078,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 674,
                 'district_id' => 73,
                 'title' => 'Budhinanda Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:16:50',
                 'updated_at' => '2023-05-09 12:16:50',
                 'deleted_at' => null,
@@ -6087,7 +6087,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 675,
                 'district_id' => 72,
                 'title' => 'Masta Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:17:33',
                 'updated_at' => '2023-05-09 12:17:33',
                 'deleted_at' => null,
@@ -6096,7 +6096,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 676,
                 'district_id' => 72,
                 'title' => 'Thalara Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:17:45',
                 'updated_at' => '2023-05-09 12:17:45',
                 'deleted_at' => null,
@@ -6105,7 +6105,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 677,
                 'district_id' => 72,
                 'title' => 'Talkot Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:17:57',
                 'updated_at' => '2023-05-09 12:17:57',
                 'deleted_at' => null,
@@ -6114,7 +6114,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 678,
                 'district_id' => 72,
                 'title' => 'Surma Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:18:09',
                 'updated_at' => '2023-05-09 12:18:09',
                 'deleted_at' => null,
@@ -6123,7 +6123,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 679,
                 'district_id' => 72,
                 'title' => 'SaiPaal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:18:27',
                 'updated_at' => '2023-05-09 12:18:27',
                 'deleted_at' => null,
@@ -6132,7 +6132,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 680,
                 'district_id' => 72,
                 'title' => 'Durgathali Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:18:41',
                 'updated_at' => '2023-05-09 12:18:41',
                 'deleted_at' => null,
@@ -6141,7 +6141,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 681,
                 'district_id' => 72,
                 'title' => 'Bithadchir Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:18:57',
                 'updated_at' => '2023-05-09 12:18:57',
                 'deleted_at' => null,
@@ -6150,7 +6150,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 682,
                 'district_id' => 72,
                 'title' => 'Kedarseu Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:19:11',
                 'updated_at' => '2023-05-09 12:19:11',
                 'deleted_at' => null,
@@ -6159,7 +6159,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 683,
                 'district_id' => 72,
                 'title' => 'Khaptadchhanna Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:19:22',
                 'updated_at' => '2023-05-09 12:19:22',
                 'deleted_at' => null,
@@ -6168,7 +6168,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 684,
                 'district_id' => 72,
                 'title' => 'Chabispathivera Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:19:34',
                 'updated_at' => '2023-05-09 12:19:34',
                 'deleted_at' => null,
@@ -6177,7 +6177,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 685,
                 'district_id' => 72,
                 'title' => 'JayaPrithivi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:19:46',
                 'updated_at' => '2023-05-09 12:19:46',
                 'deleted_at' => null,
@@ -6186,7 +6186,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 686,
                 'district_id' => 72,
                 'title' => 'Bungal Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:19:59',
                 'updated_at' => '2023-05-09 12:19:59',
                 'deleted_at' => null,
@@ -6195,7 +6195,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 687,
                 'district_id' => 77,
                 'title' => 'Lekam Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:20:37',
                 'updated_at' => '2023-05-09 12:20:37',
                 'deleted_at' => null,
@@ -6204,7 +6204,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 688,
                 'district_id' => 77,
                 'title' => 'Naugad Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:20:49',
                 'updated_at' => '2023-05-09 12:20:49',
                 'deleted_at' => null,
@@ -6213,7 +6213,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 689,
                 'district_id' => 77,
                 'title' => 'Byas Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:21:00',
                 'updated_at' => '2023-05-09 12:21:00',
                 'deleted_at' => null,
@@ -6222,7 +6222,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 690,
                 'district_id' => 77,
                 'title' => 'Dunhu Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:21:11',
                 'updated_at' => '2023-05-09 12:21:11',
                 'deleted_at' => null,
@@ -6231,7 +6231,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 691,
                 'district_id' => 77,
                 'title' => 'Marma Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:21:22',
                 'updated_at' => '2023-05-09 12:21:22',
                 'deleted_at' => null,
@@ -6240,7 +6240,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 692,
                 'district_id' => 77,
                 'title' => 'Apihimal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:21:32',
                 'updated_at' => '2023-05-09 12:21:32',
                 'deleted_at' => null,
@@ -6249,7 +6249,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 693,
                 'district_id' => 77,
                 'title' => 'Malikaarjun Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:21:43',
                 'updated_at' => '2023-05-09 12:21:43',
                 'deleted_at' => null,
@@ -6258,7 +6258,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 694,
                 'district_id' => 77,
                 'title' => 'Mahakali Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:21:54',
                 'updated_at' => '2023-05-09 12:21:54',
                 'deleted_at' => null,
@@ -6267,7 +6267,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 695,
                 'district_id' => 77,
                 'title' => 'Shailyashikhar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:22:06',
                 'updated_at' => '2023-05-09 12:22:06',
                 'deleted_at' => null,
@@ -6276,7 +6276,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 696,
                 'district_id' => 76,
                 'title' => 'Sigas Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:22:47',
                 'updated_at' => '2023-05-09 12:22:47',
                 'deleted_at' => null,
@@ -6285,7 +6285,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 697,
                 'district_id' => 76,
                 'title' => 'Shivanath Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:23:02',
                 'updated_at' => '2023-05-09 12:23:02',
                 'deleted_at' => null,
@@ -6294,7 +6294,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 698,
                 'district_id' => 76,
                 'title' => 'Surnaya Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:26:29',
                 'updated_at' => '2023-05-09 12:26:29',
                 'deleted_at' => null,
@@ -6303,7 +6303,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 699,
                 'district_id' => 76,
                 'title' => 'Dilasaini Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:26:41',
                 'updated_at' => '2023-05-09 12:26:41',
                 'deleted_at' => null,
@@ -6312,7 +6312,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 700,
                 'district_id' => 76,
                 'title' => 'Pancheshwar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:26:54',
                 'updated_at' => '2023-05-09 12:26:54',
                 'deleted_at' => null,
@@ -6321,7 +6321,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 701,
                 'district_id' => 76,
                 'title' => 'Dogadakedar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:27:06',
                 'updated_at' => '2023-05-09 12:27:06',
                 'deleted_at' => null,
@@ -6330,7 +6330,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 702,
                 'district_id' => 76,
                 'title' => 'Melauli Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:27:18',
                 'updated_at' => '2023-05-09 12:27:18',
                 'deleted_at' => null,
@@ -6339,7 +6339,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 703,
                 'district_id' => 76,
                 'title' => 'Dasharathchanda Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:27:30',
                 'updated_at' => '2023-05-09 12:27:30',
                 'deleted_at' => null,
@@ -6348,7 +6348,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 704,
                 'district_id' => 76,
                 'title' => 'Purchaudi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:27:43',
                 'updated_at' => '2023-05-09 12:27:43',
                 'deleted_at' => null,
@@ -6357,7 +6357,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 705,
                 'district_id' => 76,
                 'title' => 'Patan Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:27:55',
                 'updated_at' => '2023-05-09 12:27:55',
                 'deleted_at' => null,
@@ -6366,7 +6366,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 706,
                 'district_id' => 75,
                 'title' => 'Alital Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:28:29',
                 'updated_at' => '2023-05-09 12:28:29',
                 'deleted_at' => null,
@@ -6375,7 +6375,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 707,
                 'district_id' => 75,
                 'title' => 'Ajaymeru Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:28:41',
                 'updated_at' => '2023-05-09 12:28:41',
                 'deleted_at' => null,
@@ -6384,7 +6384,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 708,
                 'district_id' => 75,
                 'title' => 'Bhageshwar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:28:52',
                 'updated_at' => '2023-05-09 12:28:52',
                 'deleted_at' => null,
@@ -6393,7 +6393,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 709,
                 'district_id' => 75,
                 'title' => 'Nawadurga Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:29:02',
                 'updated_at' => '2023-05-09 12:29:02',
                 'deleted_at' => null,
@@ -6402,7 +6402,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 710,
                 'district_id' => 75,
                 'title' => 'Ganayapdhura Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:29:13',
                 'updated_at' => '2023-05-09 12:29:13',
                 'deleted_at' => null,
@@ -6411,7 +6411,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 711,
                 'district_id' => 75,
                 'title' => 'Amargadhi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:29:24',
                 'updated_at' => '2023-05-09 12:29:24',
                 'deleted_at' => null,
@@ -6420,7 +6420,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 712,
                 'district_id' => 75,
                 'title' => 'Parashuram Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:29:36',
                 'updated_at' => '2023-05-09 12:29:36',
                 'deleted_at' => null,
@@ -6429,7 +6429,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 713,
                 'district_id' => 71,
                 'title' => 'Sayal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:30:05',
                 'updated_at' => '2023-05-09 12:30:05',
                 'deleted_at' => null,
@@ -6438,7 +6438,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 714,
                 'district_id' => 71,
                 'title' => 'Adharsha Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:30:18',
                 'updated_at' => '2023-05-09 12:30:18',
                 'deleted_at' => null,
@@ -6447,7 +6447,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 715,
                 'district_id' => 71,
                 'title' => 'Jorayal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:30:33',
                 'updated_at' => '2023-05-09 12:30:33',
                 'deleted_at' => null,
@@ -6456,7 +6456,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 716,
                 'district_id' => 71,
                 'title' => 'Badikedar Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:30:45',
                 'updated_at' => '2023-05-09 12:30:45',
                 'deleted_at' => null,
@@ -6465,7 +6465,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 717,
                 'district_id' => 71,
                 'title' => 'Purbichauki Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:30:57',
                 'updated_at' => '2023-05-09 12:30:57',
                 'deleted_at' => null,
@@ -6474,7 +6474,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 718,
                 'district_id' => 71,
                 'title' => 'K I Singh Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:31:09',
                 'updated_at' => '2023-05-09 12:31:09',
                 'deleted_at' => null,
@@ -6483,7 +6483,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 719,
                 'district_id' => 71,
                 'title' => 'Bogtan Foodsil Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:31:23',
                 'updated_at' => '2023-05-09 12:31:23',
                 'deleted_at' => null,
@@ -6492,7 +6492,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 720,
                 'district_id' => 71,
                 'title' => 'Dipayal Silgadi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:31:35',
                 'updated_at' => '2023-05-09 12:31:35',
                 'deleted_at' => null,
@@ -6501,7 +6501,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 721,
                 'district_id' => 71,
                 'title' => 'Shikhar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:31:47',
                 'updated_at' => '2023-05-09 12:31:47',
                 'deleted_at' => null,
@@ -6510,7 +6510,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 722,
                 'district_id' => 70,
                 'title' => 'Dhakari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:32:19',
                 'updated_at' => '2023-05-09 12:32:19',
                 'deleted_at' => null,
@@ -6519,7 +6519,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 723,
                 'district_id' => 70,
                 'title' => 'Mellekh Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:32:32',
                 'updated_at' => '2023-05-09 12:32:32',
                 'deleted_at' => null,
@@ -6528,7 +6528,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 724,
                 'district_id' => 70,
                 'title' => 'Chaurpati Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:32:45',
                 'updated_at' => '2023-05-09 12:32:45',
                 'deleted_at' => null,
@@ -6537,7 +6537,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 725,
                 'district_id' => 70,
                 'title' => 'Ramaroshan Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:32:57',
                 'updated_at' => '2023-05-09 12:32:57',
                 'deleted_at' => null,
@@ -6546,7 +6546,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 726,
                 'district_id' => 70,
                 'title' => 'Turmakhad Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:33:09',
                 'updated_at' => '2023-05-09 12:33:09',
                 'deleted_at' => null,
@@ -6555,7 +6555,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 727,
                 'district_id' => 70,
                 'title' => 'Bannigadhi Jayagadh Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:33:20',
                 'updated_at' => '2023-05-09 12:33:20',
                 'deleted_at' => null,
@@ -6564,7 +6564,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 728,
                 'district_id' => 70,
                 'title' => 'Sanphebagar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:33:31',
                 'updated_at' => '2023-05-09 12:33:31',
                 'deleted_at' => null,
@@ -6573,7 +6573,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 729,
                 'district_id' => 70,
                 'title' => 'Mangalsen Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:33:42',
                 'updated_at' => '2023-05-09 12:33:42',
                 'deleted_at' => null,
@@ -6582,7 +6582,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 730,
                 'district_id' => 70,
                 'title' => 'Kamalbazar Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:33:54',
                 'updated_at' => '2023-05-09 12:33:54',
                 'deleted_at' => null,
@@ -6591,7 +6591,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 731,
                 'district_id' => 70,
                 'title' => 'Panchadewal Binayak Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:34:06',
                 'updated_at' => '2023-05-09 12:34:06',
                 'deleted_at' => null,
@@ -6600,7 +6600,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 732,
                 'district_id' => 69,
                 'title' => 'Chure Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:34:50',
                 'updated_at' => '2023-05-09 12:34:50',
                 'deleted_at' => null,
@@ -6609,7 +6609,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 733,
                 'district_id' => 69,
                 'title' => 'Janaki Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:35:03',
                 'updated_at' => '2023-05-09 12:35:03',
                 'deleted_at' => null,
@@ -6618,7 +6618,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 734,
                 'district_id' => 69,
                 'title' => 'Kailari Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:35:15',
                 'updated_at' => '2023-05-09 12:35:15',
                 'deleted_at' => null,
@@ -6627,7 +6627,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 735,
                 'district_id' => 69,
                 'title' => 'Joshipur Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:35:28',
                 'updated_at' => '2023-05-09 12:35:28',
                 'deleted_at' => null,
@@ -6636,7 +6636,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 736,
                 'district_id' => 69,
                 'title' => 'Mohanyal Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:35:41',
                 'updated_at' => '2023-05-09 12:35:41',
                 'deleted_at' => null,
@@ -6645,7 +6645,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 737,
                 'district_id' => 69,
                 'title' => 'Bardagoriya Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:35:53',
                 'updated_at' => '2023-05-09 12:35:53',
                 'deleted_at' => null,
@@ -6654,7 +6654,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 738,
                 'district_id' => 69,
                 'title' => 'Tikapur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:36:06',
                 'updated_at' => '2023-05-09 12:36:06',
                 'deleted_at' => null,
@@ -6663,7 +6663,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 739,
                 'district_id' => 69,
                 'title' => 'Ghodaghodi Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:36:19',
                 'updated_at' => '2023-05-09 12:36:19',
                 'deleted_at' => null,
@@ -6672,7 +6672,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 740,
                 'district_id' => 69,
                 'title' => 'Bhajani Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:36:33',
                 'updated_at' => '2023-05-09 12:36:33',
                 'deleted_at' => null,
@@ -6681,7 +6681,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 741,
                 'district_id' => 69,
                 'title' => 'Dhangadhi Sub-Metropolitian City',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:36:48',
                 'updated_at' => '2023-05-09 12:36:48',
                 'deleted_at' => null,
@@ -6690,7 +6690,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 742,
                 'district_id' => 69,
                 'title' => 'Gauriganga Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:37:00',
                 'updated_at' => '2023-05-09 12:37:00',
                 'deleted_at' => null,
@@ -6699,7 +6699,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 743,
                 'district_id' => 69,
                 'title' => 'Godawari Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:37:13',
                 'updated_at' => '2023-05-09 12:37:13',
                 'deleted_at' => null,
@@ -6708,7 +6708,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 744,
                 'district_id' => 69,
                 'title' => 'Lamkichuha Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:37:26',
                 'updated_at' => '2023-05-09 12:37:26',
                 'deleted_at' => null,
@@ -6717,7 +6717,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 745,
                 'district_id' => 74,
                 'title' => 'Beldandi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:38:11',
                 'updated_at' => '2023-05-09 12:38:11',
                 'deleted_at' => null,
@@ -6726,7 +6726,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 746,
                 'district_id' => 74,
                 'title' => 'Laljhadi Rural Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:38:24',
                 'updated_at' => '2023-05-09 12:38:24',
                 'deleted_at' => null,
@@ -6735,7 +6735,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 747,
                 'district_id' => 74,
                 'title' => 'Punarbas Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:38:36',
                 'updated_at' => '2023-05-09 12:38:36',
                 'deleted_at' => null,
@@ -6744,7 +6744,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 748,
                 'district_id' => 74,
                 'title' => 'Krishnapur Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:38:49',
                 'updated_at' => '2023-05-09 12:38:49',
                 'deleted_at' => null,
@@ -6753,7 +6753,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 749,
                 'district_id' => 74,
                 'title' => 'Mahakali Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:39:02',
                 'updated_at' => '2023-05-09 12:39:02',
                 'deleted_at' => null,
@@ -6762,7 +6762,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 750,
                 'district_id' => 74,
                 'title' => 'Bedkot Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:39:18',
                 'updated_at' => '2023-05-09 12:39:18',
                 'deleted_at' => null,
@@ -6771,7 +6771,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 751,
                 'district_id' => 74,
                 'title' => 'Belauri Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:39:31',
                 'updated_at' => '2023-05-09 12:39:31',
                 'deleted_at' => null,
@@ -6780,7 +6780,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 752,
                 'district_id' => 74,
                 'title' => 'Bhimdatta Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:39:43',
                 'updated_at' => '2023-05-09 12:39:43',
                 'deleted_at' => null,
@@ -6789,7 +6789,7 @@ class MunicipalitiesTableSeeder extends Seeder
                 'id' => 753,
                 'district_id' => 74,
                 'title' => 'Shuklaphanta Municipality',
-                'active' => 0,
+
                 'created_at' => '2023-05-09 12:39:57',
                 'updated_at' => '2023-05-09 12:39:57',
                 'deleted_at' => null,
