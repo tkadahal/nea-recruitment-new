@@ -37,11 +37,11 @@ class EducationController extends Controller
 
     public function create(): View
     {
-        $qualifications = Qualification::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $qualifications = Qualification::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $universities = University::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $universities = University::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $divisions = Division::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $divisions = Division::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         return view('user.education.create', compact('qualifications', 'universities', 'divisions'));
     }
@@ -84,11 +84,11 @@ class EducationController extends Controller
     {
         $education->load(['university', 'qualification', 'division', 'media']);
 
-        $qualifications = Qualification::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $qualifications = Qualification::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $universities = University::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $universities = University::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $divisions = Division::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $divisions = Division::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         return view('user.education.edit', compact('education', 'qualifications', 'universities', 'divisions'));
     }

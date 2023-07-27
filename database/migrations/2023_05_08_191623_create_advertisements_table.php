@@ -37,7 +37,7 @@ return new class extends Migration
             $table->string('penalty_end_date_np');
             $table->date('penalty_end_date_en')->index();
 
-            $table->boolean('active')->default(0);
+            $table->boolean('active')->default(1);
 
             $table->timestamps();
             $table->softDeletes();

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('title')->index();
             $table->integer('order')->index();
 
-            $table->boolean('active')->default(0);
+            $table->boolean('active')->default(1);
 
             $table->timestamps();
             $table->softDeletes();

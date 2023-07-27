@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('color')->nullable();
 
-            $table->boolean('active')->default(0);
+            $table->boolean('active')->default(1);
 
             $table->timestamps();
             $table->softDeletes();

@@ -988,6 +988,7 @@ return [
         'title' => 'Payments',
         'title_singular' => 'Payment',
         'info' => [
+            'noPaymentRecords' => 'No payment records found. Please make a new application or check your existing applications for payments status.',
             'paymentSuccess' => 'Payment successful. Please find below the application details.',
             'paymentFailure' => 'Sorry !!! something went wrong processing your payment. Please verify the payment or select other
                         payment options.',

@@ -12,7 +12,8 @@
                         <div class="form-group">
                             <label class="required" for="title">{{ trans('global.user.fields.email') }}</label>
                             <input class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" type="text"
-                                name="email" id="email" value="{{ old('email', auth()->user()->email) }}" required>
+                                name="email" id="email" value="{{ old('email', auth()->user()->email) }}" required
+                                readonly>
                             @if ($errors->has('email'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('email') }}

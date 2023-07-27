@@ -34,9 +34,9 @@ class ContactController extends Controller
             'spouseCountry',
         ])->where('user_id', $user_id)->first();
 
-        $provinces = Province::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
-        $districts = District::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
-        $municipalities = Municipality::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $provinces = Province::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $districts = District::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $municipalities = Municipality::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
         $countries = Country::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         return view('user.contact', compact('contact', 'provinces', 'districts', 'municipalities', 'countries'));

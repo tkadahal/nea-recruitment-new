@@ -76,7 +76,7 @@ class ExperienceController extends Controller
 
     public function create(): View
     {
-        $recruitmentTypes = RecruitmentType::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $recruitmentTypes = RecruitmentType::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         return view('user.experience.create', compact('recruitmentTypes'));
     }
@@ -106,7 +106,7 @@ class ExperienceController extends Controller
 
     public function edit(Experience $experience): View
     {
-        $recruitmentTypes = RecruitmentType::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $recruitmentTypes = RecruitmentType::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $experience->load(['recruitmentType', 'media']);
 

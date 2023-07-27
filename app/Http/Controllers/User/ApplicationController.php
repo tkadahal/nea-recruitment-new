@@ -30,9 +30,10 @@ class ApplicationController extends Controller
         $currentDate = Carbon::now()->toDateString();
         $userId = auth()->id();
 
-        $examCenters = ExamCenter::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $examCenters = ExamCenter::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $advertisements = Advertisement::query()
+            ->active()
             ->with(['category', 'group', 'subGroup', 'qualification', 'level', 'applications'])
             ->whereDate('start_date_en', '<=', $currentDate)
             ->whereDate('penalty_end_date_en', '>=', $currentDate)

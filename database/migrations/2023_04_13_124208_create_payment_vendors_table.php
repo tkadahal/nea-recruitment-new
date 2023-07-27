@@ -29,7 +29,7 @@ return new class extends Migration
             $table->string('public_key')->nullable();
             $table->string('secret_key')->nullable();
 
-            $table->boolean('active')->default(0);
+            $table->boolean('active')->default(1);
 
             $table->timestamps();
             $table->softDeletes();

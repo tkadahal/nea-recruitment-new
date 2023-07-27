@@ -37,91 +37,75 @@
             @endif
         @endif
         <div class="wizard-box">
-            @if (count($applications))
-                <div class="card-section">
-                    <div class="p-3">
-                        <div class="row">
-                            <div class="col">
-                                <div id="payment-container">
-                                    @foreach ($applications as $key => $application)
-                                        <div class="payment-block p-4" id="payment-block">
-                                            <div class="card-body">
-                                                <div class="row mb-2">
-                                                    <div class="col-md-3 col-12">
-                                                        <b>
-                                                            <u>
-                                                                {{ trans('global.payment.fields.advertisement_num') }}
-                                                            </u>
-                                                        </b>
-                                                    </div>
-
-                                                    <div class="col-md-3 col-12">
-                                                        <b>
-                                                            <u>
-                                                                {{ trans('global.payment.fields.level_id') }}
-                                                            </u>
-                                                        </b>
-                                                    </div>
-
-                                                    <div class="col-md-3 col-12">
-                                                        <b>
-                                                            <u>
-                                                                {{ trans('global.payment.fields.amount') }}
-                                                            </u>
-                                                        </b>
-                                                    </div>
-
-                                                    <div class="col-md-3 col-12">
-
-                                                    </div>
+            {{-- @if (count($applications)) --}}
+            <div class="card-section">
+                <div class="p-3">
+                    <div class="row">
+                        <div class="col">
+                            <div id="payment-container">
+                                @forelse ($applications as $key => $application)
+                                    <div class="payment-block p-4" id="payment-block">
+                                        <div class="card-body">
+                                            <div class="row mb-2">
+                                                <div class="col-md-3 col-12">
+                                                    <b>
+                                                        <u>
+                                                            {{ trans('global.payment.fields.advertisement_num') }}
+                                                        </u>
+                                                    </b>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-md-3 col-12">
-                                                        <p>{{ $application->advertisement->advertisement_num ?? '' }}
-                                                        </p>
-                                                    </div>
 
-                                                    <div class="col-md-3 col-12">
-                                                        <p>{{ $application->advertisement->level->title ?? '' }}</p>
-                                                    </div>
+                                                <div class="col-md-3 col-12">
+                                                    <b>
+                                                        <u>
+                                                            {{ trans('global.payment.fields.level_id') }}
+                                                        </u>
+                                                    </b>
+                                                </div>
 
-                                                    <div class="col-md-3 col-12">
-                                                        <p>{{ $application->applicationFee ?? '' }}</p>
-                                                    </div>
+                                                <div class="col-md-3 col-12">
+                                                    <b>
+                                                        <u>
+                                                            {{ trans('global.payment.fields.amount') }}
+                                                        </u>
+                                                    </b>
+                                                </div>
 
-                                                    <div class="col-md-3 col-12 text-center">
-                                                        @if ($application->latestPayment)
-                                                            @if ($application->latestPayment->payment_status == 1)
-                                                                @if ($application->latestPayment->paymentVerification && $application->latestPayment->paymentVerification->is_approved)
-                                                                    <h5>
-                                                                        <span class="badge bg-success">
-                                                                            <i class="fas fa-check"></i>
-                                                                            Application Verified
-                                                                        </span>
-                                                                    </h5>
-                                                                @else
-                                                                    <h5>
-                                                                        <span class="badge bg-warning">
-                                                                            <i class="fas fa-exclamation"></i>
-                                                                            Verification Pending
-                                                                        </span>
-                                                                    </h5>
-                                                                @endif
+                                                <div class="col-md-3 col-12">
+
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3 col-12">
+                                                    <p>{{ $application->advertisement->advertisement_num ?? '' }}
+                                                    </p>
+                                                </div>
+
+                                                <div class="col-md-3 col-12">
+                                                    <p>{{ $application->advertisement->level->title ?? '' }}</p>
+                                                </div>
+
+                                                <div class="col-md-3 col-12">
+                                                    <p>{{ $application->applicationFee ?? '' }}</p>
+                                                </div>
+
+                                                <div class="col-md-3 col-12 text-center">
+                                                    @if ($application->latestPayment)
+                                                        @if ($application->latestPayment->payment_status == 1)
+                                                            @if ($application->latestPayment->paymentVerification && $application->latestPayment->paymentVerification->is_approved)
+                                                                <h5>
+                                                                    <span class="badge bg-success">
+                                                                        <i class="fas fa-check"></i>
+                                                                        Application Verified
+                                                                    </span>
+                                                                </h5>
                                                             @else
-                                                                @if ($application->advertisement->penalty_end_date_en < now())
-                                                                    <h5>
-                                                                        <span class="badge bg-danger">
-                                                                            <i class="fas fa-exclamation"></i>
-                                                                            Application Expired
-                                                                        </span>
-                                                                    </h5>
-                                                                @else
-                                                                    <!-- Display the "Make Payment" button if the latest payment is not successful -->
-                                                                    <a href="{{ route('payment.show', $application->id) }}"
-                                                                        class="btn btn-block btn-outline-success">
-                                                                        Make Payment
-                                                                    </a>
-                                                                @endif
+                                                                <h5>
+                                                                    <span class="badge bg-warning">
+                                                                        <i class="fas fa-exclamation"></i>
+                                                                        Verification Pending
+                                                                    </span>
+                                                                </h5>
                                                             @endif
                                                         @else
                                                             @if ($application->advertisement->penalty_end_date_en < now())
@@ -132,54 +116,55 @@
                                                                     </span>
                                                                 </h5>
                                                             @else
-                                                                <!-- Display the "Make Payment" button if there are no payments -->
+                                                                <!-- Display the "Make Payment" button if the latest payment is not successful -->
                                                                 <a href="{{ route('payment.show', $application->id) }}"
                                                                     class="btn btn-block btn-outline-success">
                                                                     Make Payment
                                                                 </a>
                                                             @endif
                                                         @endif
-                                                    </div>
+                                                    @else
+                                                        @if ($application->advertisement->penalty_end_date_en < now())
+                                                            <h5>
+                                                                <span class="badge bg-danger">
+                                                                    <i class="fas fa-exclamation"></i>
+                                                                    Application Expired
+                                                                </span>
+                                                            </h5>
+                                                        @else
+                                                            <!-- Display the "Make Payment" button if there are no payments -->
+                                                            <a href="{{ route('payment.show', $application->id) }}"
+                                                                class="btn btn-block btn-outline-success">
+                                                                Make Payment
+                                                            </a>
+                                                        @endif
+                                                    @endif
                                                 </div>
                                             </div>
-                                            <hr>
-                                            <div>
-                                                <div class="flex-container">
-                                                    @if ($application->latestPayment)
-                                                        @if ($application->latestPayment->payment_status == 1)
-                                                            @if ($application->latestPayment->paymentVerification && $application->latestPayment->paymentVerification->is_approved)
-                                                                <span class="badge bg-success">
-                                                                    <i class="fas fa-check"></i>
-                                                                    Payment Successful
-                                                                </span>
-                                                                <span class="badge bg-success">
-                                                                    <i class="fas fa-check"></i>
-                                                                    Application Verified
-                                                                </span>
-                                                            @else
-                                                                <span class="badge bg-success">
-                                                                    <i class="fas fa-check"></i>
-                                                                    Payment Successful
-                                                                </span>
-                                                                <span class="badge bg-warning">
-                                                                    <i class="fas fa-exclamation"></i>
-                                                                    Verification Pending
-                                                                </span>
-                                                            @endif
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <div class="flex-container">
+                                                @if ($application->latestPayment)
+                                                    @if ($application->latestPayment->payment_status == 1)
+                                                        @if ($application->latestPayment->paymentVerification && $application->latestPayment->paymentVerification->is_approved)
+                                                            <span class="badge bg-success">
+                                                                <i class="fas fa-check"></i>
+                                                                Payment Successful
+                                                            </span>
+                                                            <span class="badge bg-success">
+                                                                <i class="fas fa-check"></i>
+                                                                Application Verified
+                                                            </span>
                                                         @else
-                                                            @if ($application->advertisement->penalty_end_date_en < now())
-                                                                <h5>
-                                                                    <span class="badge bg-danger">
-                                                                        <i class="fas fa-exclamation"></i>
-                                                                        Application Expired
-                                                                    </span>
-                                                                </h5>
-                                                            @else
-                                                                <span class="badge bg-warning">
-                                                                    <i class="fas fa-exclamation"></i>
-                                                                    Payment Pending
-                                                                </span>
-                                                            @endif
+                                                            <span class="badge bg-success">
+                                                                <i class="fas fa-check"></i>
+                                                                Payment Successful
+                                                            </span>
+                                                            <span class="badge bg-warning">
+                                                                <i class="fas fa-exclamation"></i>
+                                                                Verification Pending
+                                                            </span>
                                                         @endif
                                                     @else
                                                         @if ($application->advertisement->penalty_end_date_en < now())
@@ -196,17 +181,40 @@
                                                             </span>
                                                         @endif
                                                     @endif
-                                                </div>
+                                                @else
+                                                    @if ($application->advertisement->penalty_end_date_en < now())
+                                                        <h5>
+                                                            <span class="badge bg-danger">
+                                                                <i class="fas fa-exclamation"></i>
+                                                                Application Expired
+                                                            </span>
+                                                        </h5>
+                                                    @else
+                                                        <span class="badge bg-warning">
+                                                            <i class="fas fa-exclamation"></i>
+                                                            Payment Pending
+                                                        </span>
+                                                    @endif
+                                                @endif
                                             </div>
                                         </div>
-                                    @endforeach
-                                </div>
-
+                                    </div>
+                                @empty
+                                    <div class="payment-block p-4" id="payment-block">
+                                        <div class="card-body">
+                                            <h5>
+                                                {{ trans('global.payment.info.noPaymentRecords') }}
+                                            </h5>
+                                        </div>
+                                    </div>
+                                @endforelse
                             </div>
+
                         </div>
                     </div>
                 </div>
-            @endif
+            </div>
+            {{-- @endif --}}
         </div>
     </div>
 

@@ -18,9 +18,9 @@ class PersonalController extends Controller
     {
         $user = auth()->user();
 
-        $genders = Gender::all()->pluck('title', 'id');
+        $genders = Gender::active()->get()->pluck('title', 'id');
 
-        $citizenshipDistricts = District::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $citizenshipDistricts = District::active()->get()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $personal = $user->load(['gender', 'citizenshipDistrict']);
 
