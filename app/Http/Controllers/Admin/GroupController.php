@@ -4,14 +4,15 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Group;
+use App\Models\Category;
+use Illuminate\View\View;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\StoreGroupRequest;
 use App\Http\Requests\UpdateGroupRequest;
-use App\Models\Group;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
-use Illuminate\View\View;
 use Symfony\Component\HttpFoundation\Response;
 
 class GroupController extends Controller
@@ -20,7 +21,7 @@ class GroupController extends Controller
     {
         abort_if(Gate::denies('group_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $groups = Group::all();
+        $groups = Group::with('category')->get();
 
         return view('admin.groups.index', compact('groups'));
     }
@@ -29,7 +30,9 @@ class GroupController extends Controller
     {
         abort_if(Gate::denies('group_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.groups.create');
+        $categories = Category::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        return view('admin.groups.create', compact('categories'));
     }
 
     public function store(StoreGroupRequest $request): RedirectResponse
@@ -46,6 +49,8 @@ class GroupController extends Controller
     {
         abort_if(Gate::denies('group_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
+        $group->load('category');
+
         return view('admin.groups.show', compact('group'));
     }
 
@@ -53,7 +58,11 @@ class GroupController extends Controller
     {
         abort_if(Gate::denies('group_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.groups.edit', compact('group'));
+        $categories = Category::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        $group->load('category');
+
+        return view('admin.groups.edit', compact('group', 'categories'));
     }
 
     public function update(UpdateGroupRequest $request, group $group): RedirectResponse

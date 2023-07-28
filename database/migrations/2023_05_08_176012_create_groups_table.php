@@ -12,6 +12,7 @@ return new class extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->index()->constrained();
 
             $table->string('title');
 

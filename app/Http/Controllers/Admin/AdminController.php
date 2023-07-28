@@ -34,7 +34,7 @@ class AdminController extends Controller
 
         $examCenters = ExamCenter::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $advertisements = Advertisement::all()->pluck('advertisement_num', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $advertisements = Advertisement::all()->pluck('advertisement_num', 'id');
 
         return view('admin.admins.create', compact(['roles', 'advertisements', 'examCenters']));
     }
@@ -63,7 +63,7 @@ class AdminController extends Controller
 
         $examCenters = ExamCenter::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $advertisements = Advertisement::all()->pluck('advertisement_num', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $advertisements = Advertisement::all()->pluck('advertisement_num', 'id');
 
         return view('admin.admins.edit', compact(['admin', 'roles', 'examCenters', 'advertisements']));
     }

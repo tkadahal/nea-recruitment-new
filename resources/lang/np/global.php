@@ -406,6 +406,8 @@ return [
         'fields' => [
             'id' => 'क्र.स.',
             'id_helper' => '',
+            'category_id' => 'सेवा',
+            'category_id_helper' => '',
             'title' => 'शीर्षक',
             'title_helper' => '',
             'created_at' => 'सिर्जना गरियो',

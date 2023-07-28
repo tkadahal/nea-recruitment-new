@@ -412,6 +412,8 @@ return [
         'fields' => [
             'id' => 'ID',
             'id_helper' => '',
+            'category_id' => 'Category',
+            'category_id_helper' => '',
             'title' => 'Title',
             'title_helper' => '',
             'created_at' => 'Created at',

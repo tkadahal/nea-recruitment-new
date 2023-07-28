@@ -26,6 +26,9 @@
                                 {{ trans('global.group.fields.id') }}
                             </th>
                             <th>
+                                {{ trans('global.group.fields.category_id') }}
+                            </th>
+                            <th>
                                 {{ trans('global.group.fields.title') }}
                             </th>
                             <th>
@@ -44,6 +47,9 @@
                                 </td>
                                 <td>
                                     {{ $group->id ?? '' }}
+                                </td>
+                                <td>
+                                    {{ $group->category->title ?? '' }}
                                 </td>
                                 <td>
                                     {{ $group->title ?? '' }}

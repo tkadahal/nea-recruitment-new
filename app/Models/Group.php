@@ -5,10 +5,11 @@ declare(strict_types=1);
 namespace App\Models;
 
 use App\Models\Builders\ModelBuilder;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Group extends Model
 {
@@ -22,11 +23,17 @@ class Group extends Model
     ];
 
     protected $fillable = [
+        'category_id',
         'title',
         'created_at',
         'updated_at',
         'deleted_at',
     ];
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
+    }
 
     public function subGroups(): HasMany
     {

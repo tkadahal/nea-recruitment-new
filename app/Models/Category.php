@@ -37,9 +37,9 @@ class Category extends Model
         return $this->hasMany(Application::class);
     }
 
-    public function positions(): HasMany
+    public function groups(): HasMany
     {
-        return $this->hasMany(Position::class);
+        return $this->hasMany(Group::class);
     }
 
     public function newEloquentBuilder($query): ModelBuilder

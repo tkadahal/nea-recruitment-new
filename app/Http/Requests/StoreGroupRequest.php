@@ -20,6 +20,11 @@ class StoreGroupRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'category_id' => [
+                'required',
+                'integer',
+                'not_in:0',
+            ],
             'title' => [
                 'required',
                 'string',
