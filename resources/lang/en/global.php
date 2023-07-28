@@ -58,6 +58,7 @@ return [
     'existing_documents' => 'Existing Document(s)',
     'nepaliAssistant' => '***For Nepali Language',
     'nepaliAssistnatLink' => 'Click Here',
+    'updateOrReplace' => 'Update Or Replace',
     'datatables' => [
         'copy' => 'Copy',
         'csv' => 'CSV',
@@ -674,7 +675,9 @@ return [
         'info' => [
             'sanketInfo' => '(Only for NEA Staffs)',
             'photoInfo' => '***Please Upload Clear Passport size photo',
+            'uploadMaxInfo' => '***Allowed image size is 1MB or below ( JPG/JPEG )',
             'samabeshiInfo' => '***Except Ladies it is required for other Samabeshi Groups',
+            'samabeshiMaxInfo' => '***Allowed file size is 5MB or below ( JPG/JPEG or PDF ).',
         ],
         'fields' => [
             'id' => 'ID',
@@ -734,6 +737,7 @@ return [
         ],
         'info' => [
             'permanentInfo' => '***Please Fill Data accroding to current Local Level Structure',
+            'contactPersonInfo' => '***Please insert nearest contact person detail',
             'spouseInfo' => '(Only for married)',
         ],
         'fields' => [
@@ -798,6 +802,7 @@ return [
         'title_singular' => 'Education',
         'category' => [
             'info' => [
+                'documentInfo' => '***Allowed file size is 5MB or below ( PDF ).',
                 'equivalenceInfo' => '(Required For Foreign Universities)',
                 'councilInfo' => '(Required For Engineering)',
             ],
@@ -842,6 +847,11 @@ return [
     'training' => [
         'title' => 'Training',
         'title_singular' => 'Training',
+        'category' => [
+            'info' => [
+                'documentInfo' => '***Allowed file size is 5MB or below ( PDF ).',
+            ],
+        ],
         'fields' => [
             'id' => 'ID',
             'id_helper' => '',
@@ -878,6 +888,11 @@ return [
     'experience' => [
         'title' => 'Experience',
         'title_singular' => 'Experience',
+        'category' => [
+            'info' => [
+                'documentInfo' => '***Allowed file size is 5MB or below ( PDF ).',
+            ],
+        ],
         'fields' => [
             'id' => 'ID',
             'id_helper' => '',

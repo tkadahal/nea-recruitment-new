@@ -58,6 +58,7 @@ return [
     'existing_documents' => 'मौजूदा दस्तावेज(हरू)',
     'nepaliAssistant' => '***नेपालीमा लेख्नु परेमा सहायताको लागि',
     'nepaliAssistnatLink' => 'यहाँ थिच्नुहोस्',
+    'updateOrReplace' => 'अपडेट वा बदल्नुहोस्',
     'datatables' => [
         'copy' => 'Copy',
         'csv' => 'CSV',
@@ -664,7 +665,9 @@ return [
         'info' => [
             'sanketInfo' => '(ने. वि. प्रा. मा  कार्यरत कर्मचारीलाई मात्र)',
             'photoInfo' => '***स्पष्ट देखिने पासपोर्ट फोटो राख्नुहोला',
+            'uploadMaxInfo' => '***अधिकतम आकार 1MB रहेको छ ( JPG/JPEG )',
             'samabeshiInfo' => '***महिला बाहेक अन्य समाबेशी समूहलाई अनिवार्य',
+            'samabeshiMaxInfo' => '*** फाइलको लागि अधिकतम आकार 5MB रहेको छ ( JPG/JPEG वा PDF )',
         ],
         'fields' => [
             'id' => 'क्र.स.',
@@ -724,6 +727,7 @@ return [
         ],
         'info' => [
             'permanentInfo' => '***हालको स्थानीय तह संरचना अनुसार भर्नुहोस्',
+            'contactPersonInfo' => '***कृपया निकटतम सम्पर्क व्यक्ति विवरण सम्मिलित गर्नुहोस्',
             'spouseInfo' => '(विवाहितहरूको लागि मात्र)',
         ],
         'fields' => [
@@ -788,6 +792,7 @@ return [
         'title_singular' => 'शैक्षिक विवरण',
         'category' => [
             'info' => [
+                'documentInfo' => '***फाइलको लागि अधिकतम आकार 5MB रहेको छ ( PDF )',
                 'equivalenceInfo' => '(नेपाल बाहिर अध्ययन गरेकाहरुलाई अनिवार्य)',
                 'councilInfo' => '(इन्जिनियरिङ्गको लागि अनिवार्य)',
             ],
@@ -832,6 +837,11 @@ return [
     'training' => [
         'title' => 'तालिम विवरण',
         'title_singular' => 'तालिम विवरण',
+        'category' => [
+            'info' => [
+                'documentInfo' => '***फाइलको लागि अधिकतम आकार 5MB रहेको छ ( PDF )',
+            ],
+        ],
         'fields' => [
             'id' => 'क्र.स.',
             'id_helper' => '',
@@ -868,6 +878,11 @@ return [
     'experience' => [
         'title' => 'कार्यानुभव विवरण',
         'title_singular' => 'कार्यानुभव विवरण',
+        'category' => [
+            'info' => [
+                'documentInfo' => '***फाइलको लागि अधिकतम आकार 5MB रहेको छ ( PDF )',
+            ],
+        ],
         'fields' => [
             'id' => 'क्र.स.',
             'id_helper' => '',

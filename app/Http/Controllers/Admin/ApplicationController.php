@@ -135,9 +135,17 @@ class ApplicationController extends Controller
                 'application.user.contact.permaMunicipality',
                 'application.user.contact.tempMunicipality',
                 'application.user.contact.fatherCountry',
+                'application.user.educations',
+                'application.user.educations.media',
+                'application.user.educations.media.mediaType',
                 'application.user.trainings',
+                'application.user.trainings.media',
+                'application.user.trainings.media.mediaType',
                 'application.user.experiences',
+                'application.user.experiences.media',
+                'application.user.experiences.media.mediaType',
                 'application.user.media',
+                'application.user.media.mediaType',
                 'application.samabeshiGroups',
             ])
             ->findOrFail($id);

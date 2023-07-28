@@ -21,7 +21,7 @@ class SubGroupController extends Controller
     {
         abort_if(Gate::denies('subGroup_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $subGroups = SubGroup::all();
+        $subGroups = SubGroup::with('group')->get();
 
         return view('admin.subGroups.index', compact('subGroups'));
     }

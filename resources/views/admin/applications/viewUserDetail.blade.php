@@ -80,39 +80,39 @@
                 <li role="presentation" class="active">
                     <a class="nav-link active" href="#step1" data-toggle="tab" aria-controls="step1" role="tab"
                         aria-expanded="true">
-                        आवेदन बिवरण
+                        {{ trans('global.application.title_singular') }}
                     </a>
                 </li>
                 <li role="presentation" class="disabled">
                     <a class="nav-link" href="#step2" data-toggle="tab" aria-controls="step2" role="tab"
                         aria-expanded="true">
-                        ब्यतिगत बिवरण
+                        {{ trans('global.personal.title_singular') }}
                     </a>
                 </li>
                 <li role="presentation" class="disabled">
                     <a class="nav-link" href="#step3" data-toggle="tab" aria-controls="step3" role="tab"
                         aria-expanded="false">
-                        सम्पर्क बिवरण
+                        {{ trans('global.contact.title_singular') }}
                     </a>
                 </li>
                 <li role="presentation" class="disabled">
                     <a class="nav-link" href="#step4" data-toggle="tab" aria-controls="step4" role="tab">
-                        शैक्षिक विवरण
+                        {{ trans('global.education.title_singular') }}
                     </a>
                 </li>
                 <li role="presentation" class="disabled">
                     <a class="nav-link" href="#step5" data-toggle="tab" aria-controls="step5" role="tab">
-                        तालिम विवरण
+                        {{ trans('global.training.title_singular') }}
                     </a>
                 </li>
                 <li role="presentation" class="disabled">
                     <a class="nav-link" href="#step6" data-toggle="tab" aria-controls="step6" role="tab">
-                        अनुभव विवरण
+                        {{ trans('global.experience.title_singular') }}
                     </a>
                 </li>
                 <li role="presentation" class="disabled">
                     <a class="nav-link" href="#step7" data-toggle="tab" aria-controls="step7" role="tab">
-                        कागजातहरु
+                        {{ trans('global.personal.category.fields.uploads') }}
                     </a>
                 </li>
             </ul>
@@ -141,7 +141,7 @@
                                             आवेदन मिति :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $application->created_at ?? '' }}">
+                                            value="{{ $application->created_at ?? '' }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -150,7 +150,7 @@
                                             आवेदन शुल्क :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $payment->amount ?? '' }}">
+                                            value="{{ $payment->amount ?? '' }}" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +174,7 @@
                                             भुक्तानी मिति :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $payment->updated_at ?? '' }}">
+                                            value="{{ $payment->updated_at ?? '' }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -183,7 +183,7 @@
                                             भुक्तानी शुल्क :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $payment->paid_amount ?? '' }}">
+                                            value="{{ $payment->paid_amount ?? '' }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -192,7 +192,7 @@
                                             Reference Id :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $payment->reference_id ?? '' }}">
+                                            value="{{ $payment->reference_id ?? '' }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -201,7 +201,7 @@
                                             Transaction Id :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $payment->transaction_id ?? '' }}">
+                                            value="{{ $payment->transaction_id ?? '' }}" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -213,73 +213,84 @@
                         <div class="card-section">
                             <h3>{{ trans('global.personal.category.fields.personalDetails') }}</h3>
                             <div class="row g-3 m-3">
-                                {{-- <div class="col-12">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        @foreach ($user->media->where('media_type_id', 1) as $mediaItem)
-                                        {!! $mediaItem !!}
-                                        @endforeach
-                                    </div>
-                                    <div>
-                                        @foreach ($user->media->where('media_type_id', 2) as $mediaItem)
-                                        {!! $mediaItem !!}
-                                        @endforeach
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class=" badge badge-info custom-badge-lg">
+                                            {{ $user->gender->title ?? '' }}
+                                        </span>
                                     </div>
                                 </div>
-                            </div> --}}
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="" for="sanket_num">
+                                            {{ trans('global.personal.fields.sanket_num') }} :
+                                        </label>
+                                        <input type="text" id="sanket_num" name="sanket_num" class="form-control"
+                                            value="{{ $user->sanket_num ?? '' }}">
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Applicant Name (EN):
+                                            {{ trans('global.personal.fields.name') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $user->name ?? '' }}" disabled>
+                                            value="{{ $user->name ?? '' }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Applicant Name (NP):
+                                            {{ trans('global.personal.fields.name_np') }} :
                                         </label>
                                         <input type="text" id="name_np" name="name_np" class="form-control"
-                                            value="{{ $user->name_np ?? '' }}" disabled>
+                                            value="{{ $user->name_np ?? '' }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Email:
+                                            {{ trans('global.personal.fields.email') }} :
                                         </label>
                                         <input type="text" id="email" name="email" class="form-control"
-                                            value="{{ $user->email ?? '' }}" disabled>
+                                            value="{{ $user->email ?? '' }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Mobile Number:
+                                            {{ trans('global.personal.fields.mobile_number') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $user->mobile_number ?? '' }}" disabled>
+                                            value="{{ $user->mobile_number ?? '' }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Date of Birth (NP):
+                                            {{ trans('global.personal.fields.dob_np') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $user->dob_np ?? '' }}" disabled>
+                                            value="{{ $user->dob_np ?? '' }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Date of Birth (EN):
+                                            {{ trans('global.personal.fields.dob_en') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $user->dob_en ?? '' }}" disabled>
+                                            value="{{ $user->dob_en ?? '' }}">
                                     </div>
+                                </div>
+                                <div class="col-md-6 form-check">
+                                    <input type="hidden" name="is_handicapped" value="0">
+                                    <input class="form-check-input" type="checkbox" value="1" id="is_handicapped"
+                                        name="is_handicapped" style="border: var(--bs-border-width) solid #0d0d0d;"
+                                        {{ old('is_handicapped', isset($user) ? $user->is_handicapped : null) ? 'checked' : '' }}>
+                                    <label class="form-check-label" for="is_handicapped">
+                                        {{ trans('global.personal.fields.is_handicapped') }}
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -291,7 +302,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Citizenship Number:
+                                            {{ trans('global.personal.fields.citizenship_number') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
                                             value="{{ $user->citizenship_number ?? '' }}">
@@ -300,7 +311,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Citizenship Issued Date :
+                                            {{ trans('global.personal.fields.citizenship_issued_date') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
                                             value="{{ $user->citizenship_issued_date ?? '' }}">
@@ -309,7 +320,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Citizenship Issued District :
+                                            {{ trans('global.personal.fields.citizenship_district_id') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
                                             value="{{ $user->citizenshipDistrict->title ?? '' }}">
@@ -323,60 +334,128 @@
                 <div class="tab-pane" role="tabpanel" id="step3">
                     <div class="p-2">
                         <div class="card-section">
-                            <h3> {{ trans('global.contact.category.fields.AddressDetails') }}</h3>
+                            <h3> {{ trans('global.contact.category.fields.permanent') }}</h3>
                             <div class="row g-3 mt-3">
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Province:
+                                            {{ trans('global.contact.fields.perma_province') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $user->contact->province->title ?? '' }}">
+                                            value="{{ $user->contact->permaProvince->title ?? '' }}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            District:
+                                            {{ trans('global.contact.fields.perma_district') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $user->contact->district->title ?? '' }}">
+                                            value="{{ $user->contact->permaDistrict->title ?? '' }}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Municipality:
+                                            {{ trans('global.contact.fields.perma_municipality') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $user->contact->municipality->title ?? '' }}">
+                                            value="{{ $user->contact->permaMunicipality->title ?? '' }}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Ward Number:
+                                            {{ trans('global.contact.fields.perma_ward_number') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $user->contact->ward_number ?? '' }}">
+                                            value="{{ $user->contact->perma_ward_number ?? '' }}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Tol:
+                                            {{ trans('global.contact.fields.perma_tol') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $user->contact->tol ?? '' }}">
+                                            value="{{ $user->contact->perma_tol ?? '' }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="card-section">
+                            <h3> {{ trans('global.contact.category.fields.temporary') }}</h3>
+                            <div class="row g-3 mt-3">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="" for="name">
+                                            {{ trans('global.contact.fields.temp_province') }} :
+                                        </label>
+                                        <input type="text" id="name_en" name="name_en" class="form-control"
+                                            value="{{ $user->contact->tempProvince->title ?? '' }}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Phone Number:
+                                            {{ trans('global.contact.fields.temp_district') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
-                                            value="{{ $user->contact->phone_number ?? '' }}">
+                                            value="{{ $user->contact->tempDistrict->title ?? '' }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="" for="name">
+                                            {{ trans('global.contact.fields.temp_municipality') }} :
+                                        </label>
+                                        <input type="text" id="name_en" name="name_en" class="form-control"
+                                            value="{{ $user->contact->tempMunicipality->title ?? '' }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="" for="name">
+                                            {{ trans('global.contact.fields.temp_ward_number') }} :
+                                        </label>
+                                        <input type="text" id="name_en" name="name_en" class="form-control"
+                                            value="{{ $user->contact->temp_ward_number ?? '' }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="" for="name">
+                                            {{ trans('global.contact.fields.temp_tol') }} :
+                                        </label>
+                                        <input type="text" id="name_en" name="name_en" class="form-control"
+                                            value="{{ $user->contact->temp_tol ?? '' }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="card-section">
+                            <h3> {{ trans('global.contact.category.fields.contactPersonDetails') }}</h3>
+                            <div class="row g-3 mt-3">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="" for="name">
+                                            {{ trans('global.contact.fields.contact_person_name') }} :
+                                        </label>
+                                        <input type="text" id="name_en" name="name_en" class="form-control"
+                                            value="{{ $user->contact->contact_person_name ?? '' }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="" for="name">
+                                            {{ trans('global.contact.fields.contact_person_number') }} :
+                                        </label>
+                                        <input type="text" id="name_en" name="name_en" class="form-control"
+                                            value="{{ $user->contact->contact_person_number ?? '' }}">
                                     </div>
                                 </div>
                             </div>
@@ -389,7 +468,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Father's Name:
+                                            {{ trans('global.contact.fields.father_name') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
                                             value="{{ $user->contact->father_name ?? '' }}">
@@ -398,7 +477,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Father's Citizenship:
+                                            {{ trans('global.contact.fields.father_country_id') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
                                             value="{{ $user->contact->fatherCountry->title ?? '' }}">
@@ -407,7 +486,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Mother's Name:
+                                            {{ trans('global.contact.fields.mother_name') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
                                             value="{{ $user->contact->mother_name ?? '' }}">
@@ -416,7 +495,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Mother's Citizenship:
+                                            {{ trans('global.contact.fields.mother_country_id') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
                                             value="{{ $user->contact->motherCountry->title ?? '' }}">
@@ -425,7 +504,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Grand Father's Name:
+                                            {{ trans('global.contact.fields.grandfather_name') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
                                             value="{{ $user->contact->grandfather_name ?? '' }}">
@@ -434,7 +513,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Grand Father's Citizenship:
+                                            {{ trans('global.contact.fields.grandfather_country_id') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
                                             value="{{ $user->contact->grandfatherCountry->title ?? '' }}">
@@ -443,7 +522,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Spouse Name:
+                                            {{ trans('global.contact.fields.spouse_name') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
                                             value="{{ $user->contact->spouse_name ?? '' }}">
@@ -452,7 +531,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="" for="name">
-                                            Father's Citizenship:
+                                            {{ trans('global.contact.fields.spouse_country_id') }} :
                                         </label>
                                         <input type="text" id="name_en" name="name_en" class="form-control"
                                             value="{{ $user->contact->spouseCountry->title ?? '' }}">
@@ -556,20 +635,12 @@
                                             </div>
                                         @endif
                                         <div class="row">
-                                            <div class="col-6">
+                                            <div class="col-12">
                                                 <h6 class="text-danger">
                                                     <b>
                                                         {{ $training->subject }}
                                                     </b>
                                                 </h6>
-                                            </div>
-                                            <div class="col-6 d-flex justify-content-end">
-                                                <div class="btn-group" role="group" aria-label="training Functions">
-                                                    <a href="{{ route('training.edit', $training->id) }}"
-                                                        class="btn btn-info btn-sm">
-                                                        {{ trans('global.edit') }}
-                                                    </a>
-                                                </div>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -635,20 +706,12 @@
                                 @foreach ($user->experiences as $experience)
                                     <div class="col-12 custom-block">
                                         <div class="row">
-                                            <div class="col-6">
+                                            <div class="col-12">
                                                 <h6 class="text-danger">
                                                     <b>
                                                         {{ $experience->post }}
                                                     </b>
                                                 </h6>
-                                            </div>
-                                            <div class="col-6 d-flex justify-content-end">
-                                                <div class="btn-group" role="group" aria-label="experience Functions">
-                                                    <a href="{{ route('experience.edit', $experience->id) }}"
-                                                        class="btn btn-info btn-sm">
-                                                        {{ trans('global.edit') }}
-                                                    </a>
-                                                </div>
                                             </div>
                                         </div>
                                         <div class="row">

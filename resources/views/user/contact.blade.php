@@ -546,6 +546,13 @@
 
                 <div class="p3">
                     <div class="row g-2 m-3">
+                        <div class="row mt-1">
+                            <p class="mb-0">
+                                <span style="color: #a307eb">
+                                    {{ trans('global.contact.info.contactPersonInfo') }}
+                                </span>
+                            </p>
+                        </div>
 
                         <div class="col-md-6">
                             <div class="form-group {{ $errors->has('contact_person_name') ? 'has-error' : '' }}">

@@ -170,13 +170,18 @@
                                     </label>
                                     <span class="text-primary">
                                         <em class="text-decoration-italic">
-                                            (Update or Replace)
+                                            ({{ trans('global.updateOrReplace') }})
                                         </em>
                                     </span>
                                     <input type="file" class="form-control" id="experience_certificate"
                                         name="experience_certificate"
                                         value="{{ old('experience_certificate', isset($experience) ? $experience->experience_certificate : '') }}"
                                         style="display: block; border-color:#ccc">
+                                    <p>
+                                        <span style="color: #b60bef;">
+                                            {{ trans('global.experience.category.info.documentInfo') }}
+                                        </span>
+                                    </p>
                                     @if ($errors->has('experience_certificate'))
                                         <p class="help-block">
                                             {{ $errors->first('experience_certificate') }}

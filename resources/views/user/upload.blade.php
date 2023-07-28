@@ -11,22 +11,26 @@
 
                 <div class="p3">
                     <div class="row g-0 m-3">
-
                         <div class="upload-block">
                             <div class="col-md-6 form-group">
+                                <p class="pb-1">
+                                    <span class="text-danger">
+                                        <b>{{ trans('global.personal.info.photoInfo') }}</b>
+                                    </span>
+                                </p>
                                 <label class="required" for="photo">
                                     {{ trans('global.personal.fields.photo') }}
                                     <i class="text-primary">
-                                        (Allowed image size is 1MB or below.)
+                                        ({{ trans('global.updateOrReplace') }})
                                     </i>
                                 </label>
                                 <div class="input-group">
                                     <input type="file" class="form-control" id="photo" name="photo"
                                         style="display: block; border-color:#ccc">
                                 </div>
-                                <p class="pt-3">
+                                <p>
                                     <span style="color: #b60bef">
-                                        {{ trans('global.personal.info.photoInfo') }}
+                                        {{ trans('global.personal.info.uploadMaxInfo') }}
                                     </span>
                                 </p>
                                 @if ($errors->has('photo'))
@@ -57,13 +61,18 @@
                                 <label class="required" for="sign">
                                     {{ trans('global.personal.fields.sign') }}
                                     <i class="text-primary">
-                                        (Allowed image size is 1MB or below.)
+                                        ({{ trans('global.updateOrReplace') }})
                                     </i>
                                 </label>
                                 <div class="input-group">
                                     <input type="file" class="form-control" id="sign" name="sign"
                                         style="display: block; border-color:#ccc">
                                 </div>
+                                <p>
+                                    <span style="color: #b60bef">
+                                        {{ trans('global.personal.info.uploadMaxInfo') }}
+                                    </span>
+                                </p>
                                 @if ($errors->has('sign'))
                                     <p class="help-block">
                                         {{ $errors->first('sign') }}
@@ -92,13 +101,18 @@
                                 <label class="required" for="citizenship_front">
                                     {{ trans('global.personal.fields.citizenship_front') }}
                                     <i class="text-primary">
-                                        (Allowed image size is 1MB or below.)
+                                        ({{ trans('global.updateOrReplace') }})
                                     </i>
                                 </label>
                                 <div class="input-group">
                                     <input type="file" class="form-control" id="citizenship_front"
                                         name="citizenship_front" style="display: block; border-color:#ccc">
                                 </div>
+                                <p>
+                                    <span style="color: #b60bef">
+                                        {{ trans('global.personal.info.uploadMaxInfo') }}
+                                    </span>
+                                </p>
                                 @if ($errors->has('citizenship_front'))
                                     <p class="help-block">
                                         {{ $errors->first('citizenship_front') }}
@@ -129,13 +143,18 @@
                                 <label class="required" for="citizenship_back">
                                     {{ trans('global.personal.fields.citizenship_back') }}
                                     <i class="text-primary">
-                                        (Allowed image size is 1MB or below.)
+                                        ({{ trans('global.updateOrReplace') }})
                                     </i>
                                 </label>
                                 <div class="input-group">
                                     <input type="file" class="form-control" id="citizenship_back" name="citizenship_back"
                                         style="display: block; border-color:#ccc">
                                 </div>
+                                <p>
+                                    <span style="color: #b60bef">
+                                        {{ trans('global.personal.info.uploadMaxInfo') }}
+                                    </span>
+                                </p>
                                 @if ($errors->has('citizenship_back'))
                                     <p class="help-block">
                                         {{ $errors->first('citizenship_back') }}
@@ -154,7 +173,8 @@
                                             readonly>
                                         {!! $user->media->where('media_type_id', 4)->first() !!}
                                     @else
-                                        <img id="citBack-upload" style="max-width:100%; max-height:150px; margin-top:10px;">
+                                        <img id="citBack-upload"
+                                            style="max-width:100%; max-height:150px; margin-top:10px;">
                                     @endif
                                 </div>
                             </div>
@@ -162,19 +182,24 @@
 
                         <div class="upload-block">
                             <div class="col-md-6 form-group">
+                                <p class="pb-1">
+                                    <span class="text-danger">
+                                        <b>{{ trans('global.personal.info.samabeshiInfo') }}</b>
+                                    </span>
+                                </p>
                                 <label class="" for="samabeshi">
                                     {{ trans('global.personal.fields.samabeshi') }}
                                     <i class="text-primary">
-                                        (Allowed file size is 5MB or below.)
+                                        ({{ trans('global.updateOrReplace') }})
                                     </i>
                                 </label>
                                 <div class="input-group">
                                     <input type="file" class="form-control" id="samabeshi" name="samabeshi"
                                         style="display: block; border-color:#ccc">
                                 </div>
-                                <p class="pt-3">
+                                <p>
                                     <span style="color: #b60bef">
-                                        {{ trans('global.personal.info.samabeshiInfo') }}
+                                        {{ trans('global.personal.info.samabeshiMaxInfo') }}
                                     </span>
                                 </p>
                                 @if ($errors->has('samabeshi'))
