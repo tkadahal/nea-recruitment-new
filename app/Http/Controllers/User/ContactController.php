@@ -46,7 +46,7 @@ class ContactController extends Controller
     {
         Contact::updateOrCreate(['user_id' => auth()->id()], $request->validated());
 
-        return redirect()->route('education.index');
+        return redirect()->route('education.index')->with('message', 'Data Updated Successfully');
     }
 
     public function getDistricts($provinceId): JsonResponse

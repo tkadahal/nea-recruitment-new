@@ -98,7 +98,7 @@ class TrainingController extends Controller
             $training->media()->create($path);
         }
 
-        return redirect()->route('training.index');
+        return redirect()->route('training.index')->with('message', 'Training Created Successfully');;
     }
 
     public function edit(Training $training): View

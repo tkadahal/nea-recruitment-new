@@ -31,6 +31,6 @@ class PersonalController extends Controller
     {
         User::updateOrCreate(['id' => auth()->id()], $request->validated());
 
-        return redirect()->route('contact');
+        return redirect()->route('contact')->with('message', 'Data Updated Successfully');
     }
 }

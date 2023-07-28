@@ -226,7 +226,7 @@ class ApplicationController extends Controller
 
         $application->samabeshiGroups()->sync($selectedGroups);
 
-        return redirect()->route('application.index');
+        return redirect()->route('application.index')->with('message', 'Application Applied Successfully');
     }
 
     public function payment($id): View

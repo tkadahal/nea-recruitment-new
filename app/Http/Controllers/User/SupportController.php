@@ -31,6 +31,6 @@ class SupportController extends Controller
     {
         Support::create($request->validated());
 
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Query Successfully Posted');
     }
 }

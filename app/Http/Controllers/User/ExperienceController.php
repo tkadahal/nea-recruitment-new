@@ -101,7 +101,7 @@ class ExperienceController extends Controller
             $experience->media()->create($path);
         }
 
-        return redirect()->route('experience.index');
+        return redirect()->route('experience.index')->with('message', 'Experience Created Successfully');
     }
 
     public function edit(Experience $experience): View
