@@ -16,7 +16,7 @@ class PaymentVendorsTableSeeder extends Seeder
 
         DB::table('payment_vendors')->insert([
             0 => [
-                'id' => 1,
+                
                 'name' => 'E-Sewa',
                 'payment_gateway' => 'esewa',
                 'merchant_id' => null,
@@ -38,7 +38,7 @@ class PaymentVendorsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             1 => [
-                'id' => 2,
+                
                 'name' => 'Khalti',
                 'payment_gateway' => 'khalti',
                 'merchant_id' => null,
@@ -60,7 +60,7 @@ class PaymentVendorsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             2 => [
-                'id' => 3,
+                
                 'name' => 'Connect IPS',
                 'payment_gateway' => 'connectips',
                 'merchant_id' => '271',
@@ -82,7 +82,7 @@ class PaymentVendorsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             3 => [
-                'id' => 4,
+                
                 'name' => 'IME Pay',
                 'payment_gateway' => 'imepay',
                 'merchant_id' => null,

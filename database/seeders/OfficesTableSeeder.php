@@ -13,7 +13,7 @@ class OfficesTableSeeder extends Seeder
     {
         $offices = [
             [
-                'ID' => 1,
+                
                 'OFFICE_CD' => 0,
                 'OFFICE_DESC' => 'NEPAL ELECTRICITY AUTHORITY',
                 'UPPER_OFFICE_CD' => null,
@@ -27,7 +27,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 2,
+                
                 'OFFICE_CD' => 110000,
                 'OFFICE_DESC' => 'CENTRAL OFFICE',
                 'UPPER_OFFICE_CD' => 0,
@@ -41,7 +41,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 3,
+                
                 'OFFICE_CD' => 111100,
                 'OFFICE_DESC' => 'MD SECRETARIATE',
                 'UPPER_OFFICE_CD' => 110000,
@@ -55,7 +55,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 4,
+                
                 'OFFICE_CD' => 111111,
                 'OFFICE_DESC' => 'MD SECRETARIATE (SELF)',
                 'UPPER_OFFICE_CD' => 111100,
@@ -69,7 +69,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 5,
+                
                 'OFFICE_CD' => 111112,
                 'OFFICE_DESC' => 'DMD FINANCE & ADMINISTRATION',
                 'UPPER_OFFICE_CD' => 111100,
@@ -83,7 +83,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 6,
+                
                 'OFFICE_CD' => 111113,
                 'OFFICE_DESC' => 'DMD PLANNING & MONITORING',
                 'UPPER_OFFICE_CD' => 111100,
@@ -97,7 +97,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 7,
+                
                 'OFFICE_CD' => 111114,
                 'OFFICE_DESC' => 'DMD MIS & SECRETARIATE',
                 'UPPER_OFFICE_CD' => 111100,
@@ -111,7 +111,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 8,
+                
                 'OFFICE_CD' => 111200,
                 'OFFICE_DESC' => 'MIS DEPARTMENT',
                 'UPPER_OFFICE_CD' => 110000,
@@ -125,7 +125,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 9,
+                
                 'OFFICE_CD' => 111211,
                 'OFFICE_DESC' => 'MIS DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 111200,
@@ -139,7 +139,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 10,
+                
                 'OFFICE_CD' => 111400,
                 'OFFICE_DESC' => 'INTERNAL AUDIT DEPARTMENT',
                 'UPPER_OFFICE_CD' => 110000,
@@ -153,7 +153,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 11,
+                
                 'OFFICE_CD' => 111411,
                 'OFFICE_DESC' => 'INTERNAL AUDIT DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 111400,
@@ -167,7 +167,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 12,
+                
                 'OFFICE_CD' => 111600,
                 'OFFICE_DESC' => 'FINANCE & ACCOUNT DEPARTMENT',
                 'UPPER_OFFICE_CD' => 110000,
@@ -181,7 +181,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 13,
+                
                 'OFFICE_CD' => 111611,
                 'OFFICE_DESC' => 'FINANCE & ACCOUNT DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 111600,
@@ -195,7 +195,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 14,
+                
                 'OFFICE_CD' => 111612,
                 'OFFICE_DESC' => 'CENTRAL ACCOUNTS DIVISION',
                 'UPPER_OFFICE_CD' => 111600,
@@ -209,7 +209,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 15,
+                
                 'OFFICE_CD' => 111613,
                 'OFFICE_DESC' => 'PROJECT ACCOUNT DIVISION',
                 'UPPER_OFFICE_CD' => 111600,
@@ -223,7 +223,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 16,
+                
                 'OFFICE_CD' => 111614,
                 'OFFICE_DESC' => 'CENTRAL PAYMENT SECTION',
                 'UPPER_OFFICE_CD' => 111600,
@@ -237,7 +237,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 17,
+                
                 'OFFICE_CD' => 111615,
                 'OFFICE_DESC' => 'PROPERTY ACCOUNT SECTION',
                 'UPPER_OFFICE_CD' => 111600,
@@ -251,7 +251,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 18,
+                
                 'OFFICE_CD' => 111800,
                 'OFFICE_DESC' => 'CORPORATE  FINANCIAL MANAGEMENT DEPARTMENT',
                 'UPPER_OFFICE_CD' => 110000,
@@ -265,7 +265,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 19,
+                
                 'OFFICE_CD' => 111811,
                 'OFFICE_DESC' => 'CORPORATE  FINANCIAL MANAGEMENT DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 111800,
@@ -279,7 +279,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 20,
+                
                 'OFFICE_CD' => 111812,
                 'OFFICE_DESC' => 'BUDGET DIVISION',
                 'UPPER_OFFICE_CD' => 111800,
@@ -293,7 +293,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 21,
+                
                 'OFFICE_CD' => 111813,
                 'OFFICE_DESC' => 'FUNDS SECTION',
                 'UPPER_OFFICE_CD' => 111800,
@@ -307,7 +307,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 22,
+                
                 'OFFICE_CD' => 111814,
                 'OFFICE_DESC' => 'REVENUE SECTION',
                 'UPPER_OFFICE_CD' => 111800,
@@ -321,7 +321,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 23,
+                
                 'OFFICE_CD' => 111815,
                 'OFFICE_DESC' => 'FINANCIAL ANALYSIS DIVISION',
                 'UPPER_OFFICE_CD' => 111800,
@@ -335,7 +335,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 24,
+                
                 'OFFICE_CD' => 111816,
                 'OFFICE_DESC' => 'FINANCIAL PLANNING AND INVESTMENT DIVISION',
                 'UPPER_OFFICE_CD' => 111800,
@@ -349,7 +349,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 25,
+                
                 'OFFICE_CD' => 112100,
                 'OFFICE_DESC' => 'HUMAN RESORCES DEPARTMENT',
                 'UPPER_OFFICE_CD' => 110000,
@@ -363,7 +363,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 26,
+                
                 'OFFICE_CD' => 112111,
                 'OFFICE_DESC' => 'HUMAN RESOURCE DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 112100,
@@ -377,7 +377,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 27,
+                
                 'OFFICE_CD' => 112112,
                 'OFFICE_DESC' => 'PERSONNEL DIVISION',
                 'UPPER_OFFICE_CD' => 112100,
@@ -391,7 +391,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 28,
+                
                 'OFFICE_CD' => 112113,
                 'OFFICE_DESC' => 'EMPLOYEE WELFARE SECTION',
                 'UPPER_OFFICE_CD' => 112100,
@@ -405,7 +405,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 29,
+                
                 'OFFICE_CD' => 112114,
                 'OFFICE_DESC' => 'RECRUITMENT DIVISION',
                 'UPPER_OFFICE_CD' => 112100,
@@ -419,7 +419,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 30,
+                
                 'OFFICE_CD' => 112115,
                 'OFFICE_DESC' => 'MANPOWER PLANNING AND DEVELOPMENT SECTION',
                 'UPPER_OFFICE_CD' => 112100,
@@ -433,7 +433,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 31,
+                
                 'OFFICE_CD' => 112116,
                 'OFFICE_DESC' => 'GRATUITY FUND MANAGEMENT SECTION',
                 'UPPER_OFFICE_CD' => 112100,
@@ -447,7 +447,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 32,
+                
                 'OFFICE_CD' => 112200,
                 'OFFICE_DESC' => 'GENERAL SERVICE DEPARTMENT',
                 'UPPER_OFFICE_CD' => 110000,
@@ -461,7 +461,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 33,
+                
                 'OFFICE_CD' => 112211,
                 'OFFICE_DESC' => 'GENERAL SERVICE DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 112200,
@@ -475,7 +475,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 34,
+                
                 'OFFICE_CD' => 112212,
                 'OFFICE_DESC' => 'LEGAL AND MEDIATION DIVISION',
                 'UPPER_OFFICE_CD' => 112200,
@@ -489,7 +489,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 35,
+                
                 'OFFICE_CD' => 112213,
                 'OFFICE_DESC' => 'GENERAL SERVICE DIVISIOIN',
                 'UPPER_OFFICE_CD' => 112200,
@@ -503,7 +503,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 36,
+                
                 'OFFICE_CD' => 112214,
                 'OFFICE_DESC' => 'ASSETS MANAGEMENT DIVISION',
                 'UPPER_OFFICE_CD' => 112200,
@@ -517,7 +517,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 37,
+                
                 'OFFICE_CD' => 112215,
                 'OFFICE_DESC' => 'NORMS AND SPECIFICATION DIVISION',
                 'UPPER_OFFICE_CD' => 112200,
@@ -531,7 +531,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 38,
+                
                 'OFFICE_CD' => 112216,
                 'OFFICE_DESC' => 'MATERIAL MANAGEMENT DIVISION',
                 'UPPER_OFFICE_CD' => 112200,
@@ -545,7 +545,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 39,
+                
                 'OFFICE_CD' => 112217,
                 'OFFICE_DESC' => 'PROCUREMENT DIVISION',
                 'UPPER_OFFICE_CD' => 112200,
@@ -559,7 +559,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 40,
+                
                 'OFFICE_CD' => 112400,
                 'OFFICE_DESC' => 'CORPORATE PLANNING DEPARTMENT',
                 'UPPER_OFFICE_CD' => 110000,
@@ -573,7 +573,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 41,
+                
                 'OFFICE_CD' => 112411,
                 'OFFICE_DESC' => 'CORPORATE PLANNING DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 112400,
@@ -587,7 +587,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 42,
+                
                 'OFFICE_CD' => 112600,
                 'OFFICE_DESC' => 'SYSTEM PLANNING DEPARTMENT',
                 'UPPER_OFFICE_CD' => 110000,
@@ -601,7 +601,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 43,
+                
                 'OFFICE_CD' => 112611,
                 'OFFICE_DESC' => 'SYSTEM PLANNING DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 112600,
@@ -615,7 +615,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 44,
+                
                 'OFFICE_CD' => 112800,
                 'OFFICE_DESC' => 'MONITORING AND EVALUATION DEPARTMENT',
                 'UPPER_OFFICE_CD' => 110000,
@@ -629,7 +629,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 45,
+                
                 'OFFICE_CD' => 112811,
                 'OFFICE_DESC' => 'MONITORING AND EVALUATION DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 112800,
@@ -643,7 +643,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 46,
+                
                 'OFFICE_CD' => 113100,
                 'OFFICE_DESC' => 'POWER PURCHASE DEPARTMENT',
                 'UPPER_OFFICE_CD' => 110000,
@@ -657,7 +657,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 47,
+                
                 'OFFICE_CD' => 113111,
                 'OFFICE_DESC' => 'POWER PURCHASE DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 113100,
@@ -671,7 +671,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 48,
+                
                 'OFFICE_CD' => 113200,
                 'OFFICE_DESC' => 'LOSS REDUCTION DEPARTMENT',
                 'UPPER_OFFICE_CD' => 110000,
@@ -685,7 +685,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 49,
+                
                 'OFFICE_CD' => 113211,
                 'OFFICE_DESC' => 'LOSS REDUCTION DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 113200,
@@ -699,7 +699,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 50,
+                
                 'OFFICE_CD' => 113300,
                 'OFFICE_DESC' => 'DMD PLANNING MONITORING AND INFORMATION TECHNOLOGY',
                 'UPPER_OFFICE_CD' => 110000,
@@ -713,7 +713,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 51,
+                
                 'OFFICE_CD' => 113311,
                 'OFFICE_DESC' => 'OFFICE OF DMD PLANNING MONITORING AND IT (SELF)',
                 'UPPER_OFFICE_CD' => 113300,
@@ -727,7 +727,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 52,
+                
                 'OFFICE_CD' => 113312,
                 'OFFICE_DESC' => 'POWER TRADE DEPARTMENT',
                 'UPPER_OFFICE_CD' => 113300,
@@ -741,7 +741,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 53,
+                
                 'OFFICE_CD' => 113313,
                 'OFFICE_DESC' => 'INFORMATION TECHNOLOGY DEPARTMENT',
                 'UPPER_OFFICE_CD' => 113300,
@@ -755,7 +755,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 54,
+                
                 'OFFICE_CD' => 113314,
                 'OFFICE_DESC' => 'SYSTEM PLANNING DEPARTMENT',
                 'UPPER_OFFICE_CD' => 113300,
@@ -769,7 +769,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 55,
+                
                 'OFFICE_CD' => 113315,
                 'OFFICE_DESC' => 'CORPORATE PLANNING AND MONITORING DEPARTMENT',
                 'UPPER_OFFICE_CD' => 113300,
@@ -783,7 +783,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 56,
+                
                 'OFFICE_CD' => 113316,
                 'OFFICE_DESC' => 'ECONOMIC ANALYSIS DEPARTMENT',
                 'UPPER_OFFICE_CD' => 113300,
@@ -797,7 +797,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 57,
+                
                 'OFFICE_CD' => 114200,
                 'OFFICE_DESC' => 'TRAINING CENTER',
                 'UPPER_OFFICE_CD' => 110000,
@@ -811,7 +811,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 58,
+                
                 'OFFICE_CD' => 114211,
                 'OFFICE_DESC' => 'TRAINING CENTER',
                 'UPPER_OFFICE_CD' => 114200,
@@ -825,7 +825,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 59,
+                
                 'OFFICE_CD' => 119900,
                 'OFFICE_DESC' => 'ADJUSTMENT BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 110000,
@@ -839,7 +839,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 60,
+                
                 'OFFICE_CD' => 119998,
                 'OFFICE_DESC' => 'HEAD OFFICE OLD BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 119900,
@@ -853,7 +853,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 61,
+                
                 'OFFICE_CD' => 119999,
                 'OFFICE_DESC' => 'HEAD OFFICE NEW BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 119900,
@@ -867,7 +867,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 62,
+                
                 'OFFICE_CD' => 150000,
                 'OFFICE_DESC' => 'DMD GENERATION',
                 'UPPER_OFFICE_CD' => 0,
@@ -881,7 +881,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 63,
+                
                 'OFFICE_CD' => 151100,
                 'OFFICE_DESC' => 'OFFICE OF DMD, GENERATION',
                 'UPPER_OFFICE_CD' => 150000,
@@ -895,7 +895,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 64,
+                
                 'OFFICE_CD' => 151111,
                 'OFFICE_DESC' => 'OFFICE OF DMD, GENERATION (SELF)',
                 'UPPER_OFFICE_CD' => 151100,
@@ -909,7 +909,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 65,
+                
                 'OFFICE_CD' => 151112,
                 'OFFICE_DESC' => 'TECHNICAL SERVICE DIVISION',
                 'UPPER_OFFICE_CD' => 151100,
@@ -923,7 +923,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 66,
+                
                 'OFFICE_CD' => 151200,
                 'OFFICE_DESC' => 'LARGE HYDROELECTRIC GENERATION DEPARTMENT',
                 'UPPER_OFFICE_CD' => 150000,
@@ -937,7 +937,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 67,
+                
                 'OFFICE_CD' => 151211,
                 'OFFICE_DESC' => 'LARGE HYDROELECTRIC GENERATION DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 151200,
@@ -951,7 +951,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 68,
+                
                 'OFFICE_CD' => 151212,
                 'OFFICE_DESC' => 'KALIGANDIKI (A) DEPARTMENT',
                 'UPPER_OFFICE_CD' => 151200,
@@ -965,7 +965,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 69,
+                
                 'OFFICE_CD' => 151213,
                 'OFFICE_DESC' => 'MARSYAGDI DIVISION',
                 'UPPER_OFFICE_CD' => 151200,
@@ -979,7 +979,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 70,
+                
                 'OFFICE_CD' => 151214,
                 'OFFICE_DESC' => 'KULEKHANI (I) DIVISION',
                 'UPPER_OFFICE_CD' => 151200,
@@ -993,7 +993,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 71,
+                
                 'OFFICE_CD' => 151215,
                 'OFFICE_DESC' => 'KULEKHANI (II) HYDEL PLANT',
                 'UPPER_OFFICE_CD' => 151200,
@@ -1007,7 +1007,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 72,
+                
                 'OFFICE_CD' => 151216,
                 'OFFICE_DESC' => 'MIDDLE MARSYANGDI HYDEL PLANT',
                 'UPPER_OFFICE_CD' => 151200,
@@ -1021,7 +1021,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 73,
+                
                 'OFFICE_CD' => 151217,
                 'OFFICE_DESC' => 'CHAMELIYA HYDROELECTRIC CENTRE',
                 'UPPER_OFFICE_CD' => 151200,
@@ -1035,7 +1035,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 74,
+                
                 'OFFICE_CD' => 151218,
                 'OFFICE_DESC' => 'UPPER TRISHULI 3A HYDEL PLANT',
                 'UPPER_OFFICE_CD' => 151200,
@@ -1049,7 +1049,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 75,
+                
                 'OFFICE_CD' => 151400,
                 'OFFICE_DESC' => 'MEDIUM HYDROELECTRIC GENERATION DEPARTMENT',
                 'UPPER_OFFICE_CD' => 150000,
@@ -1063,7 +1063,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 76,
+                
                 'OFFICE_CD' => 151411,
                 'OFFICE_DESC' => 'MEDIUM HYDROELECTRIC GENERATION DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 151400,
@@ -1077,7 +1077,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 77,
+                
                 'OFFICE_CD' => 151412,
                 'OFFICE_DESC' => 'TRISHULI HYDEL PLANT',
                 'UPPER_OFFICE_CD' => 151400,
@@ -1091,7 +1091,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 78,
+                
                 'OFFICE_CD' => 151413,
                 'OFFICE_DESC' => 'DEVIGHAT HYDEL PLANT',
                 'UPPER_OFFICE_CD' => 151400,
@@ -1105,7 +1105,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 79,
+                
                 'OFFICE_CD' => 151414,
                 'OFFICE_DESC' => 'SUNKOSHI HYDEL PLANT',
                 'UPPER_OFFICE_CD' => 151400,
@@ -1119,7 +1119,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 80,
+                
                 'OFFICE_CD' => 151415,
                 'OFFICE_DESC' => 'GANDAK HYDEL PLANT',
                 'UPPER_OFFICE_CD' => 151400,
@@ -1133,7 +1133,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 81,
+                
                 'OFFICE_CD' => 151416,
                 'OFFICE_DESC' => 'FEWA SETI HYDEL PLANT',
                 'UPPER_OFFICE_CD' => 151400,
@@ -1147,7 +1147,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 82,
+                
                 'OFFICE_CD' => 151417,
                 'OFFICE_DESC' => 'CHATARA HYDEL PLANT',
                 'UPPER_OFFICE_CD' => 151400,
@@ -1161,7 +1161,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 83,
+                
                 'OFFICE_CD' => 151418,
                 'OFFICE_DESC' => 'MODIKHOLA HYDEL PLANT',
                 'UPPER_OFFICE_CD' => 151400,
@@ -1175,7 +1175,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 84,
+                
                 'OFFICE_CD' => 151419,
                 'OFFICE_DESC' => 'PUWAKHOLA HYDEL PLANT, ILAM',
                 'UPPER_OFFICE_CD' => 151400,
@@ -1189,7 +1189,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 85,
+                
                 'OFFICE_CD' => 151421,
                 'OFFICE_DESC' => 'PANAUTI HYDEL PLANT',
                 'UPPER_OFFICE_CD' => 151400,
@@ -1203,7 +1203,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 86,
+                
                 'OFFICE_CD' => 151422,
                 'OFFICE_DESC' => 'KULEKHANI III HYDEL PLANT',
                 'UPPER_OFFICE_CD' => 151400,
@@ -1217,7 +1217,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 87,
+                
                 'OFFICE_CD' => 151600,
                 'OFFICE_DESC' => 'THERMAL GENERATION DEPARTMENT',
                 'UPPER_OFFICE_CD' => 150000,
@@ -1231,7 +1231,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 88,
+                
                 'OFFICE_CD' => 151611,
                 'OFFICE_DESC' => 'THERMAL GENERATION DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 151600,
@@ -1245,7 +1245,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 89,
+                
                 'OFFICE_CD' => 151612,
                 'OFFICE_DESC' => 'MULTIFUEL POWER PLANT',
                 'UPPER_OFFICE_CD' => 151600,
@@ -1259,7 +1259,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 90,
+                
                 'OFFICE_CD' => 151613,
                 'OFFICE_DESC' => 'HETAUDA DIESEL PLANT',
                 'UPPER_OFFICE_CD' => 151600,
@@ -1273,7 +1273,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 91,
+                
                 'OFFICE_CD' => 151614,
                 'OFFICE_DESC' => 'MARSYANGDI DIESEL PLANT',
                 'UPPER_OFFICE_CD' => 151600,
@@ -1287,7 +1287,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 92,
+                
                 'OFFICE_CD' => 159900,
                 'OFFICE_DESC' => 'ADJUSTMENT BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 150000,
@@ -1301,7 +1301,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 93,
+                
                 'OFFICE_CD' => 159998,
                 'OFFICE_DESC' => 'GENERATION OLD BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 159900,
@@ -1315,7 +1315,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 94,
+                
                 'OFFICE_CD' => 159999,
                 'OFFICE_DESC' => 'GENERATION NEW BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 159900,
@@ -1329,7 +1329,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 95,
+                
                 'OFFICE_CD' => 160000,
                 'OFFICE_DESC' => 'GENERAL MANAGER GENERATION CONSTRUCTION',
                 'UPPER_OFFICE_CD' => 0,
@@ -1343,7 +1343,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 96,
+                
                 'OFFICE_CD' => 161100,
                 'OFFICE_DESC' => 'OFFICE OF GENERAL MANAGER, GENERATION CONSTRUCTION',
                 'UPPER_OFFICE_CD' => 160000,
@@ -1357,7 +1357,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 97,
+                
                 'OFFICE_CD' => 161111,
                 'OFFICE_DESC' => 'OFFICE OF GENERAL MANAGER, GENERATION CONSTRUCTION (SELF)',
                 'UPPER_OFFICE_CD' => 161100,
@@ -1371,7 +1371,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 98,
+                
                 'OFFICE_CD' => 161200,
                 'OFFICE_DESC' => 'Generation Cons. Projects',
                 'UPPER_OFFICE_CD' => 160000,
@@ -1385,7 +1385,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 99,
+                
                 'OFFICE_CD' => 210000,
                 'OFFICE_DESC' => 'DMD TRANSMISSION',
                 'UPPER_OFFICE_CD' => 0,
@@ -1399,7 +1399,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 100,
+                
                 'OFFICE_CD' => 211100,
                 'OFFICE_DESC' => 'OFFICE OF DMD, TRANSMISSION',
                 'UPPER_OFFICE_CD' => 210000,
@@ -1413,7 +1413,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 101,
+                
                 'OFFICE_CD' => 211111,
                 'OFFICE_DESC' => 'OFFICE OF DMD, TRANSMISSION (SELF)',
                 'UPPER_OFFICE_CD' => 211100,
@@ -1427,7 +1427,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 102,
+                
                 'OFFICE_CD' => 211200,
                 'OFFICE_DESC' => 'SYSTEM OPERATION DEPARTMENT',
                 'UPPER_OFFICE_CD' => 210000,
@@ -1441,7 +1441,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 103,
+                
                 'OFFICE_CD' => 211211,
                 'OFFICE_DESC' => 'SYSTEM OPERATION DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 211200,
@@ -1455,7 +1455,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 104,
+                
                 'OFFICE_CD' => 211212,
                 'OFFICE_DESC' => 'LOAD DISPATCH CENTER',
                 'UPPER_OFFICE_CD' => 211200,
@@ -1469,7 +1469,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 105,
+                
                 'OFFICE_CD' => 211400,
                 'OFFICE_DESC' => 'GRID OPERATION DEPARTMENT',
                 'UPPER_OFFICE_CD' => 210000,
@@ -1483,7 +1483,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 106,
+                
                 'OFFICE_CD' => 211411,
                 'OFFICE_DESC' => 'GRID OPERATION DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 211400,
@@ -1497,7 +1497,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 107,
+                
                 'OFFICE_CD' => 211412,
                 'OFFICE_DESC' => 'TRANSMISSION GRID EAST BRANCH, DUHABI',
                 'UPPER_OFFICE_CD' => 211400,
@@ -1511,7 +1511,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 108,
+                
                 'OFFICE_CD' => 211413,
                 'OFFICE_DESC' => 'TRANSMISSION GRID MID DIVISION, HEDAUDA',
                 'UPPER_OFFICE_CD' => 211400,
@@ -1525,7 +1525,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 109,
+                
                 'OFFICE_CD' => 211414,
                 'OFFICE_DESC' => 'BAGMATI TRANSMISSION GRID DIVISION, KATHMANDU',
                 'UPPER_OFFICE_CD' => 211400,
@@ -1539,7 +1539,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 110,
+                
                 'OFFICE_CD' => 211415,
                 'OFFICE_DESC' => 'TRANSMISSION GRID WEST DIVISION, BUTWAL',
                 'UPPER_OFFICE_CD' => 211400,
@@ -1553,7 +1553,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 111,
+                
                 'OFFICE_CD' => 211416,
                 'OFFICE_DESC' => 'TRANSMISSION GRID MID-WEST AND FAR WESTERN BRANCH,ATTARIA',
                 'UPPER_OFFICE_CD' => 211400,
@@ -1567,7 +1567,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 112,
+                
                 'OFFICE_CD' => 211417,
                 'OFFICE_DESC' => 'TRANSMISSION GRID NORTH- WEST BRANCH, POKHARA',
                 'UPPER_OFFICE_CD' => 211400,
@@ -1581,7 +1581,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 113,
+                
                 'OFFICE_CD' => 211418,
                 'OFFICE_DESC' => 'BAGMATI TRANSMISSION GRID EAST BRANCH',
                 'UPPER_OFFICE_CD' => 211400,
@@ -1595,7 +1595,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 114,
+                
                 'OFFICE_CD' => 211419,
                 'OFFICE_DESC' => 'Dhalkebar Grid Branch',
                 'UPPER_OFFICE_CD' => 211400,
@@ -1609,7 +1609,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 115,
+                
                 'OFFICE_CD' => 219900,
                 'OFFICE_DESC' => 'ADJUSTMENT BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 210000,
@@ -1623,7 +1623,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 116,
+                
                 'OFFICE_CD' => 219998,
                 'OFFICE_DESC' => 'TRANSMISSION OLD BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 219900,
@@ -1637,7 +1637,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 117,
+                
                 'OFFICE_CD' => 219999,
                 'OFFICE_DESC' => 'TRANSMISSION NEW BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 219900,
@@ -1651,7 +1651,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 118,
+                
                 'OFFICE_CD' => 220000,
                 'OFFICE_DESC' => 'DMD GRID DEVELOPMENT',
                 'UPPER_OFFICE_CD' => 0,
@@ -1665,7 +1665,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 119,
+                
                 'OFFICE_CD' => 221100,
                 'OFFICE_DESC' => 'DMD GRID DEVELOPMENT',
                 'UPPER_OFFICE_CD' => 220000,
@@ -1679,7 +1679,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 120,
+                
                 'OFFICE_CD' => 221111,
                 'OFFICE_DESC' => 'OFFICE OF THE DMD, GRID DEVELOPMENT (SELF)',
                 'UPPER_OFFICE_CD' => 221100,
@@ -1693,7 +1693,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 121,
+                
                 'OFFICE_CD' => 250000,
                 'OFFICE_DESC' => 'DMD DISTRIBUTION AND CONSUMER SERVICES',
                 'UPPER_OFFICE_CD' => 0,
@@ -1707,7 +1707,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 122,
+                
                 'OFFICE_CD' => 251100,
                 'OFFICE_DESC' => 'OFFICE OF THE DMD, DCS',
                 'UPPER_OFFICE_CD' => 250000,
@@ -1721,7 +1721,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 123,
+                
                 'OFFICE_CD' => 251111,
                 'OFFICE_DESC' => 'OFFICE OF THE DMD DCS (SELF)',
                 'UPPER_OFFICE_CD' => 251100,
@@ -1735,7 +1735,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 124,
+                
                 'OFFICE_CD' => 251119,
                 'OFFICE_DESC' => 'MANAGEMENT SUPPORT CELL, EAST',
                 'UPPER_OFFICE_CD' => 259900,
@@ -1749,7 +1749,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 125,
+                
                 'OFFICE_CD' => 251156,
                 'OFFICE_DESC' => 'CENTRAL STORES, KATHMANDU',
                 'UPPER_OFFICE_CD' => 251100,
@@ -1763,7 +1763,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 126,
+                
                 'OFFICE_CD' => 251157,
                 'OFFICE_DESC' => 'CENTRAL STORES, HETAUDA',
                 'UPPER_OFFICE_CD' => 251100,
@@ -1777,7 +1777,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 127,
+                
                 'OFFICE_CD' => 251200,
                 'OFFICE_DESC' => 'PRADESH  NO 1, PRADESHIK KARLAYA, BIRATNAGAR',
                 'UPPER_OFFICE_CD' => 250000,
@@ -1791,7 +1791,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 128,
+                
                 'OFFICE_CD' => 251211,
                 'OFFICE_DESC' => 'PRADESH  NO 1, PRADESHIK KARLAYA, BIRATNAGAR (SELF)',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1805,7 +1805,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 129,
+                
                 'OFFICE_CD' => 251212,
                 'OFFICE_DESC' => 'ILLAM DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1819,7 +1819,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 130,
+                
                 'OFFICE_CD' => 251213,
                 'OFFICE_DESC' => 'BHADRAPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1833,7 +1833,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 131,
+                
                 'OFFICE_CD' => 251214,
                 'OFFICE_DESC' => 'DAMAK DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1847,7 +1847,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 132,
+                
                 'OFFICE_CD' => 251215,
                 'OFFICE_DESC' => 'DHANKUTA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1861,7 +1861,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 133,
+                
                 'OFFICE_CD' => 251216,
                 'OFFICE_DESC' => 'DHARAN DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1875,7 +1875,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 134,
+                
                 'OFFICE_CD' => 251217,
                 'OFFICE_DESC' => 'BIRATNAGAR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1889,7 +1889,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 135,
+                
                 'OFFICE_CD' => 251218,
                 'OFFICE_DESC' => 'DUHABI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1903,7 +1903,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 136,
+                
                 'OFFICE_CD' => 251219,
                 'OFFICE_DESC' => 'ITAHARI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1917,7 +1917,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 137,
+                
                 'OFFICE_CD' => 251228,
                 'OFFICE_DESC' => 'BELBARI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1931,7 +1931,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 138,
+                
                 'OFFICE_CD' => 251229,
                 'OFFICE_DESC' => 'ANARMANI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1945,7 +1945,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 139,
+                
                 'OFFICE_CD' => 251231,
                 'OFFICE_DESC' => 'RANGELI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1959,7 +1959,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 140,
+                
                 'OFFICE_CD' => 251232,
                 'OFFICE_DESC' => 'BHOJPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1973,7 +1973,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 141,
+                
                 'OFFICE_CD' => 251233,
                 'OFFICE_DESC' => 'KHANDBARI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -1987,7 +1987,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 142,
+                
                 'OFFICE_CD' => 251234,
                 'OFFICE_DESC' => 'TERAHTHUM DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -2001,7 +2001,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 143,
+                
                 'OFFICE_CD' => 251235,
                 'OFFICE_DESC' => 'TAPLEJUNG DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -2015,7 +2015,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 144,
+                
                 'OFFICE_CD' => 251236,
                 'OFFICE_DESC' => 'PHIDIM DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -2029,7 +2029,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 145,
+                
                 'OFFICE_CD' => 251237,
                 'OFFICE_DESC' => 'INARUWA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -2043,7 +2043,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 146,
+                
                 'OFFICE_CD' => 251238,
                 'OFFICE_DESC' => 'URLABARI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -2057,7 +2057,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 147,
+                
                 'OFFICE_CD' => 251239,
                 'OFFICE_DESC' => 'PANCHTHAR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -2071,7 +2071,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 148,
+                
                 'OFFICE_CD' => 251241,
                 'OFFICE_DESC' => 'GAURADAHA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -2085,7 +2085,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 149,
+                
                 'OFFICE_CD' => 251242,
                 'OFFICE_DESC' => 'DHULABARI DISTRIBUTION CENTRE',
                 'UPPER_OFFICE_CD' => 251200,
@@ -2099,7 +2099,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 150,
+                
                 'OFFICE_CD' => 251300,
                 'OFFICE_DESC' => 'PRADESH  NO 2, PRADESHIK KARLAYA, JANAKPUR',
                 'UPPER_OFFICE_CD' => 250000,
@@ -2113,7 +2113,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 151,
+                
                 'OFFICE_CD' => 251311,
                 'OFFICE_DESC' => 'PRADESH  NO 2, PRADESHIK KARLAYA, JANAKPUR (SELF)',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2127,7 +2127,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 152,
+                
                 'OFFICE_CD' => 251312,
                 'OFFICE_DESC' => 'JANAKPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2141,7 +2141,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 153,
+                
                 'OFFICE_CD' => 251313,
                 'OFFICE_DESC' => 'JALESHOR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2155,7 +2155,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 154,
+                
                 'OFFICE_CD' => 251314,
                 'OFFICE_DESC' => 'SINDHULI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251400,
@@ -2169,7 +2169,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 155,
+                
                 'OFFICE_CD' => 251315,
                 'OFFICE_DESC' => 'MALANGAHAWA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2183,7 +2183,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 156,
+                
                 'OFFICE_CD' => 251316,
                 'OFFICE_DESC' => 'RAJBIRAJ DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2197,7 +2197,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 157,
+                
                 'OFFICE_CD' => 251317,
                 'OFFICE_DESC' => 'DIKTEL DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -2211,7 +2211,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 158,
+                
                 'OFFICE_CD' => 251318,
                 'OFFICE_DESC' => 'SIRAHA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2225,7 +2225,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 159,
+                
                 'OFFICE_CD' => 251319,
                 'OFFICE_DESC' => 'UDAYAPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -2239,7 +2239,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 160,
+                
                 'OFFICE_CD' => 251321,
                 'OFFICE_DESC' => 'LAHAN DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2253,7 +2253,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 161,
+                
                 'OFFICE_CD' => 251322,
                 'OFFICE_DESC' => 'SAKHUWA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2267,7 +2267,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 162,
+                
                 'OFFICE_CD' => 251323,
                 'OFFICE_DESC' => 'OKHALDHUNGA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -2281,7 +2281,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 163,
+                
                 'OFFICE_CD' => 251324,
                 'OFFICE_DESC' => 'LALBANDI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2295,7 +2295,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 164,
+                
                 'OFFICE_CD' => 251325,
                 'OFFICE_DESC' => 'MIRCHAIYA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2309,7 +2309,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 165,
+                
                 'OFFICE_CD' => 251326,
                 'OFFICE_DESC' => 'GAUSHALA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2323,7 +2323,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 166,
+                
                 'OFFICE_CD' => 251327,
                 'OFFICE_DESC' => 'KANCHANPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2337,7 +2337,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 167,
+                
                 'OFFICE_CD' => 251328,
                 'OFFICE_DESC' => 'YADUKUHA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2351,7 +2351,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 168,
+                
                 'OFFICE_CD' => 251329,
                 'OFFICE_DESC' => 'SOLUKHUMBU DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251200,
@@ -2365,7 +2365,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 169,
+                
                 'OFFICE_CD' => 251331,
                 'OFFICE_DESC' => 'BODEBARSAIEN DISTRIBUSTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2379,7 +2379,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 170,
+                
                 'OFFICE_CD' => 251332,
                 'OFFICE_DESC' => 'DHANUSHADHAM DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2393,7 +2393,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 171,
+                
                 'OFFICE_CD' => 251333,
                 'OFFICE_DESC' => 'BARAHATHAWA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2407,7 +2407,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 172,
+                
                 'OFFICE_CD' => 251334,
                 'OFFICE_DESC' => 'SIMROUNGADH DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2421,7 +2421,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 173,
+                
                 'OFFICE_CD' => 251335,
                 'OFFICE_DESC' => 'MAULAPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2435,7 +2435,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 174,
+                
                 'OFFICE_CD' => 251400,
                 'OFFICE_DESC' => 'BAGMATI PRADESH, PRADESH DIVISION KARLAYA, HETAUDA',
                 'UPPER_OFFICE_CD' => 250000,
@@ -2449,7 +2449,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 175,
+                
                 'OFFICE_CD' => 251411,
                 'OFFICE_DESC' => 'BAGMATI PRADESH, PRADESH DIVISION KARLAYA, HETAUDA (SELF)',
                 'UPPER_OFFICE_CD' => 251400,
@@ -2463,7 +2463,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 176,
+                
                 'OFFICE_CD' => 251412,
                 'OFFICE_DESC' => 'BIRGUNJ DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2477,7 +2477,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 177,
+                
                 'OFFICE_CD' => 251416,
                 'OFFICE_DESC' => 'GAUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2491,7 +2491,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 178,
+                
                 'OFFICE_CD' => 251417,
                 'OFFICE_DESC' => 'KALAIYA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2505,7 +2505,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 179,
+                
                 'OFFICE_CD' => 251418,
                 'OFFICE_DESC' => 'SIMARA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2519,7 +2519,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 180,
+                
                 'OFFICE_CD' => 251421,
                 'OFFICE_DESC' => 'PALUNG DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251400,
@@ -2533,7 +2533,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 181,
+                
                 'OFFICE_CD' => 251422,
                 'OFFICE_DESC' => 'HETAUDA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251400,
@@ -2547,7 +2547,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 182,
+                
                 'OFFICE_CD' => 251423,
                 'OFFICE_DESC' => 'BHARATPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251400,
@@ -2561,7 +2561,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 183,
+                
                 'OFFICE_CD' => 251424,
                 'OFFICE_DESC' => 'TANDI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251400,
@@ -2575,7 +2575,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 184,
+                
                 'OFFICE_CD' => 251425,
                 'OFFICE_DESC' => 'CHADRANIGAHAPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2589,7 +2589,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 185,
+                
                 'OFFICE_CD' => 251426,
                 'OFFICE_DESC' => 'POKHARIYA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251300,
@@ -2603,7 +2603,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 186,
+                
                 'OFFICE_CD' => 251427,
                 'OFFICE_DESC' => 'CHANAULI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251400,
@@ -2617,7 +2617,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 187,
+                
                 'OFFICE_CD' => 251600,
                 'OFFICE_DESC' => 'BAGMATI PRADESH, PRADESHIK KARLAYA, KATHMANDU',
                 'UPPER_OFFICE_CD' => 250000,
@@ -2631,7 +2631,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 188,
+                
                 'OFFICE_CD' => 251611,
                 'OFFICE_DESC' => 'BAGMATI PRADESH, PRADESHIK KARLAYA, KATHMANDU (SELF)',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2645,7 +2645,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 189,
+                
                 'OFFICE_CD' => 251612,
                 'OFFICE_DESC' => 'SINDHUPALCHOK DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2659,7 +2659,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 190,
+                
                 'OFFICE_CD' => 251613,
                 'OFFICE_DESC' => 'DOLAKHA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2673,7 +2673,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 191,
+                
                 'OFFICE_CD' => 251614,
                 'OFFICE_DESC' => 'KAVRE DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2687,7 +2687,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 192,
+                
                 'OFFICE_CD' => 251615,
                 'OFFICE_DESC' => 'KIRTIPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2701,7 +2701,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 193,
+                
                 'OFFICE_CD' => 251616,
                 'OFFICE_DESC' => 'NUWAKOT DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2715,7 +2715,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 194,
+                
                 'OFFICE_CD' => 251617,
                 'OFFICE_DESC' => 'DHADING DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2729,7 +2729,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 195,
+                
                 'OFFICE_CD' => 251622,
                 'OFFICE_DESC' => 'THIMI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2743,7 +2743,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 196,
+                
                 'OFFICE_CD' => 251623,
                 'OFFICE_DESC' => 'BHAKTAPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2757,7 +2757,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 197,
+                
                 'OFFICE_CD' => 251624,
                 'OFFICE_DESC' => 'BANESHOR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2771,7 +2771,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 198,
+                
                 'OFFICE_CD' => 251625,
                 'OFFICE_DESC' => 'MAHARAJGUNJ DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2785,7 +2785,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 199,
+                
                 'OFFICE_CD' => 251626,
                 'OFFICE_DESC' => 'RATNAPARK DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2799,7 +2799,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 200,
+                
                 'OFFICE_CD' => 251627,
                 'OFFICE_DESC' => 'KULESHOR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2813,7 +2813,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 201,
+                
                 'OFFICE_CD' => 251628,
                 'OFFICE_DESC' => 'PULCHOK DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2827,7 +2827,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 202,
+                
                 'OFFICE_CD' => 251629,
                 'OFFICE_DESC' => 'LAGANKHEL DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2841,7 +2841,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 203,
+                
                 'OFFICE_CD' => 251631,
                 'OFFICE_DESC' => 'JORPATI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2855,7 +2855,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 204,
+                
                 'OFFICE_CD' => 251632,
                 'OFFICE_DESC' => 'OFFICE OF GENERAL MANAGER, DCS WEST',
                 'UPPER_OFFICE_CD' => 261100,
@@ -2869,7 +2869,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 205,
+                
                 'OFFICE_CD' => 251641,
                 'OFFICE_DESC' => 'RAMECHHAP DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2883,7 +2883,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 206,
+                
                 'OFFICE_CD' => 251642,
                 'OFFICE_DESC' => 'MELAMCHI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2897,7 +2897,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 207,
+                
                 'OFFICE_CD' => 251643,
                 'OFFICE_DESC' => 'DHUNCHE DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2911,7 +2911,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 208,
+                
                 'OFFICE_CD' => 251651,
                 'OFFICE_DESC' => 'TRANSFORMER WORKSHOP BRANCH, LAINCHOUR',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2925,7 +2925,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 209,
+                
                 'OFFICE_CD' => 251652,
                 'OFFICE_DESC' => 'BALAJU DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2939,7 +2939,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 210,
+                
                 'OFFICE_CD' => 251653,
                 'OFFICE_DESC' => 'PANCHKHAL DISTRIBUTION CENTRE',
                 'UPPER_OFFICE_CD' => 251600,
@@ -2953,7 +2953,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 211,
+                
                 'OFFICE_CD' => 251800,
                 'OFFICE_DESC' => 'GANDAKI PRADESH, PRADESHIK KARLAYA, POKHARA',
                 'UPPER_OFFICE_CD' => 260000,
@@ -2967,7 +2967,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 212,
+                
                 'OFFICE_CD' => 251811,
                 'OFFICE_DESC' => 'GANDAKI PRADESH, PRADESHIK KARLAYA, POKHARA (SELF)',
                 'UPPER_OFFICE_CD' => 251800,
@@ -2981,7 +2981,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 213,
+                
                 'OFFICE_CD' => 251812,
                 'OFFICE_DESC' => 'POKHARA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -2995,7 +2995,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 214,
+                
                 'OFFICE_CD' => 251813,
                 'OFFICE_DESC' => 'LEKHNATH DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3009,7 +3009,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 215,
+                
                 'OFFICE_CD' => 251814,
                 'OFFICE_DESC' => 'TANAHU DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3023,7 +3023,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 216,
+                
                 'OFFICE_CD' => 251815,
                 'OFFICE_DESC' => 'GORKHA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3037,7 +3037,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 217,
+                
                 'OFFICE_CD' => 251816,
                 'OFFICE_DESC' => 'SYANGJA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3051,7 +3051,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 218,
+                
                 'OFFICE_CD' => 251817,
                 'OFFICE_DESC' => 'PARBAT DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3065,7 +3065,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 219,
+                
                 'OFFICE_CD' => 251818,
                 'OFFICE_DESC' => 'ARUGHAT DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3079,7 +3079,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 220,
+                
                 'OFFICE_CD' => 251819,
                 'OFFICE_DESC' => 'TATOPANI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3093,7 +3093,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 221,
+                
                 'OFFICE_CD' => 251821,
                 'OFFICE_DESC' => 'MYAGDI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3107,7 +3107,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 222,
+                
                 'OFFICE_CD' => 251822,
                 'OFFICE_DESC' => 'BAGLUNG DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3121,7 +3121,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 223,
+                
                 'OFFICE_CD' => 251823,
                 'OFFICE_DESC' => 'LAMJUNG DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3135,7 +3135,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 224,
+                
                 'OFFICE_CD' => 251824,
                 'OFFICE_DESC' => 'MANANG DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3149,7 +3149,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 225,
+                
                 'OFFICE_CD' => 252100,
                 'OFFICE_DESC' => 'PRADESH  NO 5, PRADESHIK KARLAYA, BUTWAL',
                 'UPPER_OFFICE_CD' => 260000,
@@ -3163,7 +3163,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 226,
+                
                 'OFFICE_CD' => 252111,
                 'OFFICE_DESC' => 'PRADESH  NO 5, PRADESHIK KARLAYA, BUTWAL (SELF)',
                 'UPPER_OFFICE_CD' => 252100,
@@ -3177,7 +3177,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 227,
+                
                 'OFFICE_CD' => 252112,
                 'OFFICE_DESC' => 'KAWASOTI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3191,7 +3191,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 228,
+                
                 'OFFICE_CD' => 252113,
                 'OFFICE_DESC' => 'PARASI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252100,
@@ -3205,7 +3205,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 229,
+                
                 'OFFICE_CD' => 252114,
                 'OFFICE_DESC' => 'BUTWAL DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252100,
@@ -3219,7 +3219,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 230,
+                
                 'OFFICE_CD' => 252115,
                 'OFFICE_DESC' => 'BHAIRAHAWA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252100,
@@ -3233,7 +3233,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 231,
+                
                 'OFFICE_CD' => 252116,
                 'OFFICE_DESC' => 'KRISHNANAGAR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252100,
@@ -3247,7 +3247,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 232,
+                
                 'OFFICE_CD' => 252117,
                 'OFFICE_DESC' => 'TAULIHAWA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252100,
@@ -3261,7 +3261,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 233,
+                
                 'OFFICE_CD' => 252118,
                 'OFFICE_DESC' => 'PALPA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252100,
@@ -3275,7 +3275,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 234,
+                
                 'OFFICE_CD' => 252119,
                 'OFFICE_DESC' => 'SYANGJA BRANCH',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3289,7 +3289,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 235,
+                
                 'OFFICE_CD' => 252121,
                 'OFFICE_DESC' => 'ARGHAKHANCHI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252100,
@@ -3303,7 +3303,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 236,
+                
                 'OFFICE_CD' => 252122,
                 'OFFICE_DESC' => 'PARBAT BRANCH',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3317,7 +3317,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 237,
+                
                 'OFFICE_CD' => 252123,
                 'OFFICE_DESC' => 'GULMI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252100,
@@ -3331,7 +3331,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 238,
+                
                 'OFFICE_CD' => 252124,
                 'OFFICE_DESC' => 'NAYA MIL DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252100,
@@ -3345,7 +3345,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 239,
+                
                 'OFFICE_CD' => 252125,
                 'OFFICE_DESC' => 'GAGANGAUDA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3359,7 +3359,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 240,
+                
                 'OFFICE_CD' => 252126,
                 'OFFICE_DESC' => 'TANAHU DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3373,7 +3373,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 241,
+                
                 'OFFICE_CD' => 252127,
                 'OFFICE_DESC' => 'GORKHA BRANCH',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3387,7 +3387,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 242,
+                
                 'OFFICE_CD' => 252128,
                 'OFFICE_DESC' => 'AMUWA DISTRIBUTION CENTRE',
                 'UPPER_OFFICE_CD' => 252100,
@@ -3401,7 +3401,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 243,
+                
                 'OFFICE_CD' => 252129,
                 'OFFICE_DESC' => 'BARDAGHAT DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252100,
@@ -3415,7 +3415,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 244,
+                
                 'OFFICE_CD' => 252200,
                 'OFFICE_DESC' => 'PRADESH  NO 5, PRADESH DIVISION KARLAYA, NEPALGUNJ',
                 'UPPER_OFFICE_CD' => 260000,
@@ -3429,7 +3429,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 245,
+                
                 'OFFICE_CD' => 252211,
                 'OFFICE_DESC' => 'PRADESH  NO 5, PRADESH DIVISION KARLAYA, NEPALGUNJ (SELF)',
                 'UPPER_OFFICE_CD' => 252200,
@@ -3443,7 +3443,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 246,
+                
                 'OFFICE_CD' => 252212,
                 'OFFICE_DESC' => 'GHORAHI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252200,
@@ -3457,7 +3457,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 247,
+                
                 'OFFICE_CD' => 252213,
                 'OFFICE_DESC' => 'SALYAN DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252700,
@@ -3471,7 +3471,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 248,
+                
                 'OFFICE_CD' => 252215,
                 'OFFICE_DESC' => 'SURKHET DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252700,
@@ -3485,7 +3485,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 249,
+                
                 'OFFICE_CD' => 252216,
                 'OFFICE_DESC' => 'GULARIYA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252200,
@@ -3499,7 +3499,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 250,
+                
                 'OFFICE_CD' => 252221,
                 'OFFICE_DESC' => 'PYUTHAN DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252200,
@@ -3513,7 +3513,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 251,
+                
                 'OFFICE_CD' => 252222,
                 'OFFICE_DESC' => 'ROLPA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252200,
@@ -3527,7 +3527,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 252,
+                
                 'OFFICE_CD' => 252223,
                 'OFFICE_DESC' => 'DAILEKH DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252700,
@@ -3541,7 +3541,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 253,
+                
                 'OFFICE_CD' => 252225,
                 'OFFICE_DESC' => 'TULSIPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252200,
@@ -3555,7 +3555,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 254,
+                
                 'OFFICE_CD' => 252226,
                 'OFFICE_DESC' => 'NEPALGUNJ DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252200,
@@ -3569,7 +3569,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 255,
+                
                 'OFFICE_CD' => 252227,
                 'OFFICE_DESC' => 'GAMGADH DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252700,
@@ -3583,7 +3583,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 256,
+                
                 'OFFICE_CD' => 252228,
                 'OFFICE_DESC' => 'KALIKOT DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252700,
@@ -3597,7 +3597,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 257,
+                
                 'OFFICE_CD' => 252229,
                 'OFFICE_DESC' => 'SIMIKOT DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252700,
@@ -3611,7 +3611,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 258,
+                
                 'OFFICE_CD' => 252231,
                 'OFFICE_DESC' => 'DOLPA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252700,
@@ -3625,7 +3625,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 259,
+                
                 'OFFICE_CD' => 252232,
                 'OFFICE_DESC' => 'RUKUM WEST DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252700,
@@ -3639,7 +3639,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 260,
+                
                 'OFFICE_CD' => 252233,
                 'OFFICE_DESC' => 'KOHALPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252200,
@@ -3653,7 +3653,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 261,
+                
                 'OFFICE_CD' => 252234,
                 'OFFICE_DESC' => 'JAJARKOT DISTRIBUTION CENTRE',
                 'UPPER_OFFICE_CD' => 252700,
@@ -3667,7 +3667,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 262,
+                
                 'OFFICE_CD' => 252235,
                 'OFFICE_DESC' => 'LAMAHI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252200,
@@ -3681,7 +3681,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 263,
+                
                 'OFFICE_CD' => 252236,
                 'OFFICE_DESC' => 'RAJAPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252200,
@@ -3695,7 +3695,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 264,
+                
                 'OFFICE_CD' => 252237,
                 'OFFICE_DESC' => 'RUKUM EAST DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252200,
@@ -3709,7 +3709,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 265,
+                
                 'OFFICE_CD' => 252300,
                 'OFFICE_DESC' => 'SUDURPASCHIM PRADESH, PRADESHIK KARLAYA, ATTARIYA',
                 'UPPER_OFFICE_CD' => 260000,
@@ -3723,7 +3723,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 266,
+                
                 'OFFICE_CD' => 252311,
                 'OFFICE_DESC' => 'SUDURPASCHIM PRADESH, PRADESHIK KARLAYA, ATTARIYA (SELF)',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3737,7 +3737,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 267,
+                
                 'OFFICE_CD' => 252312,
                 'OFFICE_DESC' => 'DHANGADI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3751,7 +3751,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 268,
+                
                 'OFFICE_CD' => 252313,
                 'OFFICE_DESC' => 'MAHENDRANAGAR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3765,7 +3765,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 269,
+                
                 'OFFICE_CD' => 252314,
                 'OFFICE_DESC' => 'DADELDHURA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3779,7 +3779,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 270,
+                
                 'OFFICE_CD' => 252315,
                 'OFFICE_DESC' => 'TIKAPUR DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3793,7 +3793,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 271,
+                
                 'OFFICE_CD' => 252316,
                 'OFFICE_DESC' => 'ACHHAM DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3807,7 +3807,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 272,
+                
                 'OFFICE_CD' => 252317,
                 'OFFICE_DESC' => 'DOTI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3821,7 +3821,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 273,
+                
                 'OFFICE_CD' => 252318,
                 'OFFICE_DESC' => 'BAITADI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3835,7 +3835,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 274,
+                
                 'OFFICE_CD' => 252319,
                 'OFFICE_DESC' => 'DARCHULA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3849,7 +3849,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 275,
+                
                 'OFFICE_CD' => 252321,
                 'OFFICE_DESC' => 'BELAURI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3863,7 +3863,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 276,
+                
                 'OFFICE_CD' => 252322,
                 'OFFICE_DESC' => 'BHAJANI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3877,7 +3877,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 277,
+                
                 'OFFICE_CD' => 252323,
                 'OFFICE_DESC' => 'BAJURA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3891,7 +3891,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 278,
+                
                 'OFFICE_CD' => 252324,
                 'OFFICE_DESC' => 'BAJHANG DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252300,
@@ -3905,7 +3905,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 279,
+                
                 'OFFICE_CD' => 252500,
                 'OFFICE_DESC' => 'DISTRIBUTION CENTER MONITORING DEPARTMENT',
                 'UPPER_OFFICE_CD' => 260000,
@@ -3919,7 +3919,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 280,
+                
                 'OFFICE_CD' => 252511,
                 'OFFICE_DESC' => 'DISTRIBUTION CENTER MONITORING DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 252500,
@@ -3933,7 +3933,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 281,
+                
                 'OFFICE_CD' => 252512,
                 'OFFICE_DESC' => 'POKHARA REGIONAL OFFICE',
                 'UPPER_OFFICE_CD' => 251800,
@@ -3947,7 +3947,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 282,
+                
                 'OFFICE_CD' => 252700,
                 'OFFICE_DESC' => 'KARNALI PRADESH, PRADESHIK KARLAYA, SURKHET',
                 'UPPER_OFFICE_CD' => 250000,
@@ -3961,7 +3961,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 283,
+                
                 'OFFICE_CD' => 252711,
                 'OFFICE_DESC' => 'KARNALI PRADESH, PRADESHIK KARLAYA, SURKHET (SELF)',
                 'UPPER_OFFICE_CD' => 252700,
@@ -3975,7 +3975,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 284,
+                
                 'OFFICE_CD' => 252712,
                 'OFFICE_DESC' => 'JUMLA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 252700,
@@ -3989,7 +3989,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 285,
+                
                 'OFFICE_CD' => 253000,
                 'OFFICE_DESC' => 'COMMUNITY - DISTRIBUTION',
                 'UPPER_OFFICE_CD' => 0,
@@ -4003,7 +4003,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 286,
+                
                 'OFFICE_CD' => 253500,
                 'OFFICE_DESC' => 'COMMUNITY RURAL ELECTRIFICATION',
                 'UPPER_OFFICE_CD' => 250000,
@@ -4017,7 +4017,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 287,
+                
                 'OFFICE_CD' => 253511,
                 'OFFICE_DESC' => 'COMMUNITY RURAL ELECTRIFICATION DEPARTMENT',
                 'UPPER_OFFICE_CD' => 253500,
@@ -4031,7 +4031,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 288,
+                
                 'OFFICE_CD' => 253512,
                 'OFFICE_DESC' => 'CRED BIRATNAGAR',
                 'UPPER_OFFICE_CD' => 253500,
@@ -4045,7 +4045,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 289,
+                
                 'OFFICE_CD' => 253513,
                 'OFFICE_DESC' => 'CRED JANAKPUR',
                 'UPPER_OFFICE_CD' => 253500,
@@ -4059,7 +4059,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 290,
+                
                 'OFFICE_CD' => 253514,
                 'OFFICE_DESC' => 'CRED HETAUDA',
                 'UPPER_OFFICE_CD' => 253500,
@@ -4073,7 +4073,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 291,
+                
                 'OFFICE_CD' => 253515,
                 'OFFICE_DESC' => 'CRED KATHMANDU',
                 'UPPER_OFFICE_CD' => 253500,
@@ -4087,7 +4087,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 292,
+                
                 'OFFICE_CD' => 253516,
                 'OFFICE_DESC' => 'CRED BUTWAL',
                 'UPPER_OFFICE_CD' => 253500,
@@ -4101,7 +4101,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 293,
+                
                 'OFFICE_CD' => 253517,
                 'OFFICE_DESC' => 'CRED POKHARA',
                 'UPPER_OFFICE_CD' => 253500,
@@ -4115,7 +4115,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 294,
+                
                 'OFFICE_CD' => 253518,
                 'OFFICE_DESC' => 'CRED NEPALGUNJ',
                 'UPPER_OFFICE_CD' => 253500,
@@ -4129,7 +4129,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 295,
+                
                 'OFFICE_CD' => 253519,
                 'OFFICE_DESC' => 'CRED ATTARIYA',
                 'UPPER_OFFICE_CD' => 253500,
@@ -4143,7 +4143,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 296,
+                
                 'OFFICE_CD' => 259900,
                 'OFFICE_DESC' => 'ADJUSTMENT BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 250000,
@@ -4157,7 +4157,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 297,
+                
                 'OFFICE_CD' => 259998,
                 'OFFICE_DESC' => 'DCS OLD BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 259900,
@@ -4171,7 +4171,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 298,
+                
                 'OFFICE_CD' => 259999,
                 'OFFICE_DESC' => 'DCS NEW BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 259900,
@@ -4185,7 +4185,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 299,
+                
                 'OFFICE_CD' => 260000,
                 'OFFICE_DESC' => 'DMD DISTRIBUTION AND CONSUMER SERVICE, WEST',
                 'UPPER_OFFICE_CD' => 0,
@@ -4199,7 +4199,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 300,
+                
                 'OFFICE_CD' => 261100,
                 'OFFICE_DESC' => 'OFFICE OF GENERAL MANAGER, DCS WEST',
                 'UPPER_OFFICE_CD' => 260000,
@@ -4213,7 +4213,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 301,
+                
                 'OFFICE_CD' => 261111,
                 'OFFICE_DESC' => 'OFFICE OF DMD, DCS WEST',
                 'UPPER_OFFICE_CD' => 261100,
@@ -4227,7 +4227,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 302,
+                
                 'OFFICE_CD' => 261119,
                 'OFFICE_DESC' => 'MANAGEMENT SUPPORT CELL, WEST',
                 'UPPER_OFFICE_CD' => 269900,
@@ -4241,7 +4241,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 303,
+                
                 'OFFICE_CD' => 269900,
                 'OFFICE_DESC' => 'ADJUSTMENT BUDGET CENTRE DCS WEST',
                 'UPPER_OFFICE_CD' => 260000,
@@ -4255,7 +4255,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 304,
+                
                 'OFFICE_CD' => 270000,
                 'OFFICE_DESC' => 'GM ELECTRIFICATION',
                 'UPPER_OFFICE_CD' => 0,
@@ -4269,7 +4269,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 305,
+                
                 'OFFICE_CD' => 271100,
                 'OFFICE_DESC' => 'GM OFFICE ELECTRIFICATION',
                 'UPPER_OFFICE_CD' => 270000,
@@ -4283,7 +4283,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 306,
+                
                 'OFFICE_CD' => 271111,
                 'OFFICE_DESC' => 'GM OFFICE ELECTRIFICATION (SELF)',
                 'UPPER_OFFICE_CD' => 251100,
@@ -4297,7 +4297,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 307,
+                
                 'OFFICE_CD' => 271200,
                 'OFFICE_DESC' => 'RURAL ELECTRIFICATION AND SHP DEPARTMENT',
                 'UPPER_OFFICE_CD' => 270000,
@@ -4311,7 +4311,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 308,
+                
                 'OFFICE_CD' => 271211,
                 'OFFICE_DESC' => 'RURAL ELECTRIFICATION AND SHP DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 261100,
@@ -4325,7 +4325,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 309,
+                
                 'OFFICE_CD' => 271212,
                 'OFFICE_DESC' => 'TAPLEJUNG SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4339,7 +4339,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 310,
+                
                 'OFFICE_CD' => 271213,
                 'OFFICE_DESC' => 'PHIDIM SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4353,7 +4353,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 311,
+                
                 'OFFICE_CD' => 271214,
                 'OFFICE_DESC' => 'GORKHE DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4367,7 +4367,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 312,
+                
                 'OFFICE_CD' => 271215,
                 'OFFICE_DESC' => 'TERAHTHUM SHP',
                 'UPPER_OFFICE_CD' => 251200,
@@ -4381,7 +4381,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 313,
+                
                 'OFFICE_CD' => 271216,
                 'OFFICE_DESC' => 'OKHALDHUNGA SHP',
                 'UPPER_OFFICE_CD' => 251300,
@@ -4395,7 +4395,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 314,
+                
                 'OFFICE_CD' => 271217,
                 'OFFICE_DESC' => 'RAMECHHAP SHP',
                 'UPPER_OFFICE_CD' => 251600,
@@ -4409,7 +4409,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 315,
+                
                 'OFFICE_CD' => 271218,
                 'OFFICE_DESC' => 'HELAMBU SHP',
                 'UPPER_OFFICE_CD' => 251600,
@@ -4423,7 +4423,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 316,
+                
                 'OFFICE_CD' => 271219,
                 'OFFICE_DESC' => 'ARUGHAT SHP',
                 'UPPER_OFFICE_CD' => 251800,
@@ -4437,7 +4437,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 317,
+                
                 'OFFICE_CD' => 271221,
                 'OFFICE_DESC' => 'MANANG SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4451,7 +4451,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 318,
+                
                 'OFFICE_CD' => 271222,
                 'OFFICE_DESC' => 'TATOPANI MYAGDI SHP',
                 'UPPER_OFFICE_CD' => 251800,
@@ -4465,7 +4465,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 319,
+                
                 'OFFICE_CD' => 271223,
                 'OFFICE_DESC' => 'BAGLUNG SHP',
                 'UPPER_OFFICE_CD' => 251800,
@@ -4479,7 +4479,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 320,
+                
                 'OFFICE_CD' => 271224,
                 'OFFICE_DESC' => 'SYARPUDAHA SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4493,7 +4493,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 321,
+                
                 'OFFICE_CD' => 271225,
                 'OFFICE_DESC' => 'CHAURJAHARI SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4507,7 +4507,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 322,
+                
                 'OFFICE_CD' => 271226,
                 'OFFICE_DESC' => 'JUMLA SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4521,7 +4521,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 323,
+                
                 'OFFICE_CD' => 271227,
                 'OFFICE_DESC' => 'GAMGADI SHP',
                 'UPPER_OFFICE_CD' => 252200,
@@ -4535,7 +4535,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 324,
+                
                 'OFFICE_CD' => 271228,
                 'OFFICE_DESC' => 'KALIKOT SHP',
                 'UPPER_OFFICE_CD' => 252200,
@@ -4549,7 +4549,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 325,
+                
                 'OFFICE_CD' => 271229,
                 'OFFICE_DESC' => 'SIMIKOT SHP',
                 'UPPER_OFFICE_CD' => 252200,
@@ -4563,7 +4563,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 326,
+                
                 'OFFICE_CD' => 271231,
                 'OFFICE_DESC' => 'ACHHAM SHP',
                 'UPPER_OFFICE_CD' => 252300,
@@ -4577,7 +4577,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 327,
+                
                 'OFFICE_CD' => 271232,
                 'OFFICE_DESC' => 'DOTI SHP',
                 'UPPER_OFFICE_CD' => 252300,
@@ -4591,7 +4591,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 328,
+                
                 'OFFICE_CD' => 271233,
                 'OFFICE_DESC' => 'SURNAIYAGAD SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4605,7 +4605,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 329,
+                
                 'OFFICE_CD' => 271234,
                 'OFFICE_DESC' => 'RUPALGAD SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4619,7 +4619,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 330,
+                
                 'OFFICE_CD' => 271235,
                 'OFFICE_DESC' => 'CHAME SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4633,7 +4633,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 331,
+                
                 'OFFICE_CD' => 271236,
                 'OFFICE_DESC' => 'BAJURA SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4647,7 +4647,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 332,
+                
                 'OFFICE_CD' => 271237,
                 'OFFICE_DESC' => 'BAITADI SHP',
                 'UPPER_OFFICE_CD' => 252300,
@@ -4661,7 +4661,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 333,
+                
                 'OFFICE_CD' => 271238,
                 'OFFICE_DESC' => 'DOLPA SHP',
                 'UPPER_OFFICE_CD' => 252200,
@@ -4675,7 +4675,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 334,
+                
                 'OFFICE_CD' => 271239,
                 'OFFICE_DESC' => 'KHANDBARI SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4689,7 +4689,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 335,
+                
                 'OFFICE_CD' => 271241,
                 'OFFICE_DESC' => 'MYAGDI BRANCH',
                 'UPPER_OFFICE_CD' => 251800,
@@ -4703,7 +4703,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 336,
+                
                 'OFFICE_CD' => 271242,
                 'OFFICE_DESC' => 'MANAGEMENT SUPPORT CELL',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4717,7 +4717,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 337,
+                
                 'OFFICE_CD' => 271243,
                 'OFFICE_DESC' => 'TERAHTHUM SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4731,7 +4731,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 338,
+                
                 'OFFICE_CD' => 271244,
                 'OFFICE_DESC' => 'JOMSHONG SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4745,7 +4745,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 339,
+                
                 'OFFICE_CD' => 271245,
                 'OFFICE_DESC' => 'BAJANG SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4759,7 +4759,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 340,
+                
                 'OFFICE_CD' => 271246,
                 'OFFICE_DESC' => 'DARCHULA SHP',
                 'UPPER_OFFICE_CD' => 252300,
@@ -4773,7 +4773,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 341,
+                
                 'OFFICE_CD' => 271247,
                 'OFFICE_DESC' => 'BHOJPUR SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4787,7 +4787,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 342,
+                
                 'OFFICE_CD' => 271248,
                 'OFFICE_DESC' => 'KHANDBARI SHP',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4801,7 +4801,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 343,
+                
                 'OFFICE_CD' => 271249,
                 'OFFICE_DESC' => 'BAITADI DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4815,7 +4815,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 344,
+                
                 'OFFICE_CD' => 271251,
                 'OFFICE_DESC' => 'BHOJPUR BRANCH',
                 'UPPER_OFFICE_CD' => 251200,
@@ -4829,7 +4829,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 345,
+                
                 'OFFICE_CD' => 271252,
                 'OFFICE_DESC' => 'DARCHULA DISTRIBUTION CENTER',
                 'UPPER_OFFICE_CD' => 271200,
@@ -4843,7 +4843,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 346,
+                
                 'OFFICE_CD' => 271400,
                 'OFFICE_DESC' => 'COMMUNITY RURAL ELECTRIFICATION DEPARTMENT',
                 'UPPER_OFFICE_CD' => 270000,
@@ -4857,7 +4857,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 347,
+                
                 'OFFICE_CD' => 271411,
                 'OFFICE_DESC' => 'COMMUNITY ELECTRIFICATION DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 251100,
@@ -4871,7 +4871,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 348,
+                
                 'OFFICE_CD' => 279900,
                 'OFFICE_DESC' => 'ADJUSTMENT BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 270000,
@@ -4885,7 +4885,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 349,
+                
                 'OFFICE_CD' => 279998,
                 'OFFICE_DESC' => 'ELECTRIFICATION OLD BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 279900,
@@ -4899,7 +4899,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 350,
+                
                 'OFFICE_CD' => 279999,
                 'OFFICE_DESC' => 'ELECTRIFICATION NEW BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 279900,
@@ -4913,7 +4913,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 351,
+                
                 'OFFICE_CD' => 280000,
                 'OFFICE_DESC' => 'Management Support Cell',
                 'UPPER_OFFICE_CD' => 250000,
@@ -4927,7 +4927,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 352,
+                
                 'OFFICE_CD' => 281100,
                 'OFFICE_DESC' => 'Management Support Cell',
                 'UPPER_OFFICE_CD' => 250000,
@@ -4941,7 +4941,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 353,
+                
                 'OFFICE_CD' => 281211,
                 'OFFICE_DESC' => 'Taplejung Upavokta Samiti',
                 'UPPER_OFFICE_CD' => 280000,
@@ -4955,7 +4955,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 354,
+                
                 'OFFICE_CD' => 281212,
                 'OFFICE_DESC' => 'Samudayik Shiksha Bikash Samiti Khadbari',
                 'UPPER_OFFICE_CD' => 280000,
@@ -4969,7 +4969,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 355,
+                
                 'OFFICE_CD' => 281213,
                 'OFFICE_DESC' => 'Singh Bahini Vithyut Pra.Li Therathum',
                 'UPPER_OFFICE_CD' => 280000,
@@ -4983,7 +4983,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 356,
+                
                 'OFFICE_CD' => 281214,
                 'OFFICE_DESC' => 'Bhojpur Bidhyut Upakota Samiti Bhojpur',
                 'UPPER_OFFICE_CD' => 280000,
@@ -4997,7 +4997,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 357,
+                
                 'OFFICE_CD' => 281215,
                 'OFFICE_DESC' => 'Phidim Bidhyut Upakota Samiti',
                 'UPPER_OFFICE_CD' => 280000,
@@ -5011,7 +5011,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 358,
+                
                 'OFFICE_CD' => 281811,
                 'OFFICE_DESC' => 'Jomsom',
                 'UPPER_OFFICE_CD' => 280000,
@@ -5025,7 +5025,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 359,
+                
                 'OFFICE_CD' => 281812,
                 'OFFICE_DESC' => 'Manang Youth',
                 'UPPER_OFFICE_CD' => 280000,
@@ -5039,7 +5039,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 360,
+                
                 'OFFICE_CD' => 281813,
                 'OFFICE_DESC' => 'Shyalku Chame',
                 'UPPER_OFFICE_CD' => 280000,
@@ -5053,7 +5053,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 361,
+                
                 'OFFICE_CD' => 282311,
                 'OFFICE_DESC' => 'Bajhang',
                 'UPPER_OFFICE_CD' => 280000,
@@ -5067,7 +5067,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 362,
+                
                 'OFFICE_CD' => 282312,
                 'OFFICE_DESC' => 'Bajura',
                 'UPPER_OFFICE_CD' => 280000,
@@ -5081,7 +5081,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 363,
+                
                 'OFFICE_CD' => 310000,
                 'OFFICE_DESC' => 'DMD ENGINEERING SERVICES',
                 'UPPER_OFFICE_CD' => 0,
@@ -5095,7 +5095,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 364,
+                
                 'OFFICE_CD' => 311100,
                 'OFFICE_DESC' => 'OFFICE OF DMD, ENGINEERING',
                 'UPPER_OFFICE_CD' => 310000,
@@ -5109,7 +5109,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 365,
+                
                 'OFFICE_CD' => 311111,
                 'OFFICE_DESC' => 'OFFICE OF DMD, ENGINEERING (SELF)',
                 'UPPER_OFFICE_CD' => 311100,
@@ -5123,7 +5123,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 366,
+                
                 'OFFICE_CD' => 311112,
                 'OFFICE_DESC' => 'CENTRAL WORKSHOP, HETAUDA',
                 'UPPER_OFFICE_CD' => 311100,
@@ -5137,7 +5137,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 367,
+                
                 'OFFICE_CD' => 311113,
                 'OFFICE_DESC' => 'CONCRETE POLE PLANT, AMLEKHGUNJ',
                 'UPPER_OFFICE_CD' => 311100,
@@ -5151,7 +5151,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 368,
+                
                 'OFFICE_CD' => 311114,
                 'OFFICE_DESC' => 'KOTRE POLE PLANT, POKHARA',
                 'UPPER_OFFICE_CD' => 311100,
@@ -5165,7 +5165,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 369,
+                
                 'OFFICE_CD' => 311115,
                 'OFFICE_DESC' => 'CONCRETE POLE PLANT, TANKISINUWARI',
                 'UPPER_OFFICE_CD' => 311100,
@@ -5179,7 +5179,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 370,
+                
                 'OFFICE_CD' => 311116,
                 'OFFICE_DESC' => 'CONCRETE POLE PLANT, LAMKI',
                 'UPPER_OFFICE_CD' => 311100,
@@ -5193,7 +5193,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 371,
+                
                 'OFFICE_CD' => 311200,
                 'OFFICE_DESC' => 'PROJECT DEVELOPMENT DEPARTMENT',
                 'UPPER_OFFICE_CD' => 310000,
@@ -5207,7 +5207,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 372,
+                
                 'OFFICE_CD' => 311211,
                 'OFFICE_DESC' => 'PROJECT DEVELOPMENT DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 311200,
@@ -5221,7 +5221,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 373,
+                
                 'OFFICE_CD' => 311400,
                 'OFFICE_DESC' => 'SOIL ROCK CONCRETE LAB DEPARTMENT',
                 'UPPER_OFFICE_CD' => 310000,
@@ -5235,7 +5235,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 374,
+                
                 'OFFICE_CD' => 311411,
                 'OFFICE_DESC' => 'SOIL ROCK CONCRETE LAB DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 311400,
@@ -5249,7 +5249,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 375,
+                
                 'OFFICE_CD' => 311600,
                 'OFFICE_DESC' => 'ENVIRONMENT AND SOCIAL STUDY DEPARTMENT',
                 'UPPER_OFFICE_CD' => 310000,
@@ -5263,7 +5263,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 376,
+                
                 'OFFICE_CD' => 311611,
                 'OFFICE_DESC' => 'ENVIRONMENT AND SOCIAL STUDY DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 311600,
@@ -5277,7 +5277,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 377,
+                
                 'OFFICE_CD' => 311800,
                 'OFFICE_DESC' => 'TRAINING CENTER DEPARTMENT',
                 'UPPER_OFFICE_CD' => 310000,
@@ -5291,7 +5291,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 378,
+                
                 'OFFICE_CD' => 311811,
                 'OFFICE_DESC' => 'TRAINING CENTER DEPARTMENT (SELF)',
                 'UPPER_OFFICE_CD' => 311800,
@@ -5305,7 +5305,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 379,
+                
                 'OFFICE_CD' => 312100,
                 'OFFICE_DESC' => 'BUILDING AND PHYSICAL INFRASTRUCTURE CONSTRUCTION',
                 'UPPER_OFFICE_CD' => 310000,
@@ -5319,7 +5319,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 380,
+                
                 'OFFICE_CD' => 312111,
                 'OFFICE_DESC' => 'BUILDING AND PHYSICAL INFRASTRUCTURE CONSTRUCTION PROJECT',
                 'UPPER_OFFICE_CD' => 312100,
@@ -5333,7 +5333,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 381,
+                
                 'OFFICE_CD' => 319900,
                 'OFFICE_DESC' => 'ADJUSTMENT BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 310000,
@@ -5347,7 +5347,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 382,
+                
                 'OFFICE_CD' => 319997,
                 'OFFICE_DESC' => 'OTHER STUDY PROJECTS',
                 'UPPER_OFFICE_CD' => 319900,
@@ -5361,7 +5361,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 383,
+                
                 'OFFICE_CD' => 319998,
                 'OFFICE_DESC' => 'ENGINEERING OLD BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 319900,
@@ -5375,7 +5375,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 384,
+                
                 'OFFICE_CD' => 319999,
                 'OFFICE_DESC' => 'ENGINEERING NEW BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 319900,
@@ -5389,7 +5389,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 385,
+                
                 'OFFICE_CD' => 350000,
                 'OFFICE_DESC' => 'NEA PROJECTS',
                 'UPPER_OFFICE_CD' => 0,
@@ -5403,7 +5403,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 386,
+                
                 'OFFICE_CD' => 351100,
                 'OFFICE_DESC' => 'GENERATION PROJECTS',
                 'UPPER_OFFICE_CD' => 350000,
@@ -5417,7 +5417,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 387,
+                
                 'OFFICE_CD' => 351111,
                 'OFFICE_DESC' => 'KALIGANDAKI (A) HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5431,7 +5431,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 388,
+                
                 'OFFICE_CD' => 351112,
                 'OFFICE_DESC' => 'MIDDLE MARSYANGDI HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5445,7 +5445,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 389,
+                
                 'OFFICE_CD' => 351113,
                 'OFFICE_DESC' => 'MODI KHOLA HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5459,7 +5459,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 390,
+                
                 'OFFICE_CD' => 351114,
                 'OFFICE_DESC' => 'HELDUNG SMALL HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5473,7 +5473,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 391,
+                
                 'OFFICE_CD' => 351115,
                 'OFFICE_DESC' => 'UPPER KARNALI HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5487,7 +5487,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 392,
+                
                 'OFFICE_CD' => 351116,
                 'OFFICE_DESC' => 'CHAMELIYAGAD HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5501,7 +5501,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 393,
+                
                 'OFFICE_CD' => 351117,
                 'OFFICE_DESC' => 'KULEKHANI (III) HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5515,7 +5515,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 394,
+                
                 'OFFICE_CD' => 351118,
                 'OFFICE_DESC' => 'GAMGAD SMALL HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5529,7 +5529,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 395,
+                
                 'OFFICE_CD' => 351119,
                 'OFFICE_DESC' => 'IDENTIFICATION AND FEASIBILITY STUDY OF STORAGE PROJECTS',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5543,7 +5543,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 396,
+                
                 'OFFICE_CD' => 351121,
                 'OFFICE_DESC' => 'KANKAI MULTIPURPOSE PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5557,7 +5557,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 397,
+                
                 'OFFICE_CD' => 351122,
                 'OFFICE_DESC' => 'SHP STUDY PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5571,7 +5571,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 398,
+                
                 'OFFICE_CD' => 351123,
                 'OFFICE_DESC' => 'SHP MASTER PLAN PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5585,7 +5585,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 399,
+                
                 'OFFICE_CD' => 351124,
                 'OFFICE_DESC' => 'KULEKHANI DISASTER PREVENTION PROJECT (II)',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5599,7 +5599,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 400,
+                
                 'OFFICE_CD' => 351125,
                 'OFFICE_DESC' => 'UPPER TAMAKOSHI HYDEL PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5613,7 +5613,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 401,
+                
                 'OFFICE_CD' => 351126,
                 'OFFICE_DESC' => 'SETI-TRISULI HYDEL PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5627,7 +5627,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 402,
+                
                 'OFFICE_CD' => 351127,
                 'OFFICE_DESC' => 'UPPER SETI HYDEL PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5641,7 +5641,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 403,
+                
                 'OFFICE_CD' => 351128,
                 'OFFICE_DESC' => 'UPPER MODI HYDEL PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5655,7 +5655,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 404,
+                
                 'OFFICE_CD' => 351129,
                 'OFFICE_DESC' => 'UPPER TRISULI 3A HYDEL PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5669,7 +5669,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 405,
+                
                 'OFFICE_CD' => 351131,
                 'OFFICE_DESC' => 'UPPER HEWA HYDEL PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5683,7 +5683,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 406,
+                
                 'OFFICE_CD' => 351132,
                 'OFFICE_DESC' => 'THULIGAD HYDEL PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5697,7 +5697,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 407,
+                
                 'OFFICE_CD' => 351133,
                 'OFFICE_DESC' => "TAMOR\/MEWA HYDEL PROJECT",
                 'UPPER_OFFICE_CD' => 351100,
@@ -5711,7 +5711,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 408,
+                
                 'OFFICE_CD' => 351134,
                 'OFFICE_DESC' => 'RAHUGHAT HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5725,7 +5725,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 409,
+                
                 'OFFICE_CD' => 351135,
                 'OFFICE_DESC' => 'KALIGANDAKI A HYDEL POWER CENTER REHAB WORKS',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5739,7 +5739,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 410,
+                
                 'OFFICE_CD' => 351136,
                 'OFFICE_DESC' => 'MULTIFUEL POWER PLANT REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5753,7 +5753,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 411,
+                
                 'OFFICE_CD' => 351137,
                 'OFFICE_DESC' => 'HETAUDA DIESEL PLANT REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5767,7 +5767,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 412,
+                
                 'OFFICE_CD' => 351138,
                 'OFFICE_DESC' => 'MARSYANGDI REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5781,7 +5781,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 413,
+                
                 'OFFICE_CD' => 351139,
                 'OFFICE_DESC' => 'BUDHIGANDAKI HYDROPOWER PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5795,7 +5795,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 414,
+                
                 'OFFICE_CD' => 351141,
                 'OFFICE_DESC' => 'TINAU, SUNDARIJAL REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5809,7 +5809,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 415,
+                
                 'OFFICE_CD' => 351142,
                 'OFFICE_DESC' => 'GANDAK HEP TRASH RACK REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5823,7 +5823,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 416,
+                
                 'OFFICE_CD' => 351143,
                 'OFFICE_DESC' => 'MID MARSYANGDI HEP REINFORCEMENT PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5837,7 +5837,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 417,
+                
                 'OFFICE_CD' => 351144,
                 'OFFICE_DESC' => 'DUDHKOSHI STORAGE HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 353540,
@@ -5851,7 +5851,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 418,
+                
                 'OFFICE_CD' => 351145,
                 'OFFICE_DESC' => 'DEVIGHAT REHABILITATION PROJECT II',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5865,7 +5865,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 419,
+                
                 'OFFICE_CD' => 351146,
                 'OFFICE_DESC' => 'SETI FEWA REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5879,7 +5879,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 420,
+                
                 'OFFICE_CD' => 351147,
                 'OFFICE_DESC' => 'TINAU HYDEL CENTRE REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 353530,
@@ -5893,7 +5893,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 421,
+                
                 'OFFICE_CD' => 351148,
                 'OFFICE_DESC' => 'SUNDARIJAL HYDEL CENTRE REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 353530,
@@ -5907,7 +5907,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 422,
+                
                 'OFFICE_CD' => 351151,
                 'OFFICE_DESC' => 'KULEKHANI (I) REHAB PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5921,7 +5921,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 423,
+                
                 'OFFICE_CD' => 351152,
                 'OFFICE_DESC' => 'TRISHULI SETI MODI PANAUTI REHAB PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5935,7 +5935,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 424,
+                
                 'OFFICE_CD' => 351153,
                 'OFFICE_DESC' => 'TATOPANI HYDELPLANT REHAB PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5949,7 +5949,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 425,
+                
                 'OFFICE_CD' => 351154,
                 'OFFICE_DESC' => 'DUHABI MULTIFUEL REHAB PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5963,7 +5963,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 426,
+                
                 'OFFICE_CD' => 351155,
                 'OFFICE_DESC' => 'KALIGANDAKI (A) HEP REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -5977,7 +5977,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 427,
+                
                 'OFFICE_CD' => 351156,
                 'OFFICE_DESC' => 'PROJECT PREPARATORY FACILITY FOR ENERGY (PPFE)',
                 'UPPER_OFFICE_CD' => 353540,
@@ -5991,7 +5991,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 428,
+                
                 'OFFICE_CD' => 351157,
                 'OFFICE_DESC' => 'DUDHKOSHI STORAGE HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -6005,7 +6005,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 429,
+                
                 'OFFICE_CD' => 351158,
                 'OFFICE_DESC' => 'MARSYANGDI EXCITATION REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 353520,
@@ -6019,7 +6019,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 430,
+                
                 'OFFICE_CD' => 351159,
                 'OFFICE_DESC' => 'GRID SOLAR AND ENERGY EFFICIENCY PROJECT',
                 'UPPER_OFFICE_CD' => 351100,
@@ -6033,7 +6033,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 431,
+                
                 'OFFICE_CD' => 351200,
                 'OFFICE_DESC' => 'TRANSMISSION AND SUB STATION PROJECT',
                 'UPPER_OFFICE_CD' => 350000,
@@ -6047,7 +6047,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 432,
+                
                 'OFFICE_CD' => 351211,
                 'OFFICE_DESC' => 'LOAD DISPATCH CENTER EXTENSION PROJECTS',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6061,7 +6061,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 433,
+                
                 'OFFICE_CD' => 351212,
                 'OFFICE_DESC' => 'THANKOT CHAPAGAUN BHAKTAPUR 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6075,7 +6075,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 434,
+                
                 'OFFICE_CD' => 351213,
                 'OFFICE_DESC' => 'HETAUDA BARDAGHAT 220 KV TRANSMISSION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6089,7 +6089,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 435,
+                
                 'OFFICE_CD' => 351214,
                 'OFFICE_DESC' => 'BUTWAL SUNAULI 132 KV TRANSMISSION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6103,7 +6103,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 436,
+                
                 'OFFICE_CD' => 351215,
                 'OFFICE_DESC' => 'DHALKEBAR BHITTAMODE 132 KV TRANSMISSION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6117,7 +6117,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 437,
+                
                 'OFFICE_CD' => 351216,
                 'OFFICE_DESC' => 'PARWANIPUR BIRGUNJ 132 KV TRANSMISSION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6131,7 +6131,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 438,
+                
                 'OFFICE_CD' => 351217,
                 'OFFICE_DESC' => 'SIDHUWA KHANDBARI 33 KV TRANSMISSION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6145,7 +6145,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 439,
+                
                 'OFFICE_CD' => 351218,
                 'OFFICE_DESC' => 'BANEPA PANCHKHAN SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6159,7 +6159,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 440,
+                
                 'OFFICE_CD' => 351219,
                 'OFFICE_DESC' => 'OTHER 33 KV LINE AND SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6173,7 +6173,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 441,
+                
                 'OFFICE_CD' => 351221,
                 'OFFICE_DESC' => 'ILAM PHIDIM TAPLEJUNG 33 KV TRANSMISSION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6187,7 +6187,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 442,
+                
                 'OFFICE_CD' => 351222,
                 'OFFICE_DESC' => 'SITALPATI MUSIKOT 33 KV TRANSMISSION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6201,7 +6201,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 443,
+                
                 'OFFICE_CD' => 351223,
                 'OFFICE_DESC' => 'CHHINCHU RAKUM JAJARKOT 33 KV TRANSMISSION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6215,7 +6215,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 444,
+                
                 'OFFICE_CD' => 351224,
                 'OFFICE_DESC' => 'TATOPANI-LARJUNG MUKTINATH 33 KV TRAN. LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6229,7 +6229,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 445,
+                
                 'OFFICE_CD' => 351225,
                 'OFFICE_DESC' => 'BUINPA OKHALDUUNGA 33 KV TRANSMISSION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6243,7 +6243,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 446,
+                
                 'OFFICE_CD' => 351226,
                 'OFFICE_DESC' => 'BUDER SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6257,7 +6257,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 447,
+                
                 'OFFICE_CD' => 351227,
                 'OFFICE_DESC' => 'GHORAHI-HOLLERI-ROLPA 33 KV TRANS. LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6271,7 +6271,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 448,
+                
                 'OFFICE_CD' => 351228,
                 'OFFICE_DESC' => 'UDIPUR-BESI SHAHAR-MANANG 33 KV TRANS. LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6285,7 +6285,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 449,
+                
                 'OFFICE_CD' => 351229,
                 'OFFICE_DESC' => 'JIRIKHIMTI SUBSTATION PROJECT, TEHRATHUM',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6299,7 +6299,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 450,
+                
                 'OFFICE_CD' => 351231,
                 'OFFICE_DESC' => 'RASUWAGHAT KHOTANG 33 KV TRANS. LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6313,7 +6313,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 451,
+                
                 'OFFICE_CD' => 351232,
                 'OFFICE_DESC' => 'DADELDHURA-BAITADI 33 KV TRANS. LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6327,7 +6327,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 452,
+                
                 'OFFICE_CD' => 351233,
                 'OFFICE_DESC' => 'CHILIME TRISULI DEVIGHAT 66 KV TL PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6341,7 +6341,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 453,
+                
                 'OFFICE_CD' => 351234,
                 'OFFICE_DESC' => 'KHIMTI DHALKEBAR 220 KV TL PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6355,7 +6355,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 454,
+                
                 'OFFICE_CD' => 351235,
                 'OFFICE_DESC' => 'HETAUDA DHALKEBAR BUTWAL BARDAGHAT 132 KV TL PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6369,7 +6369,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 455,
+                
                 'OFFICE_CD' => 351236,
                 'OFFICE_DESC' => 'K3 SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6383,7 +6383,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 456,
+                
                 'OFFICE_CD' => 351237,
                 'OFFICE_DESC' => 'BIRGUNJ CORIDOR PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6397,7 +6397,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 457,
+                
                 'OFFICE_CD' => 351238,
                 'OFFICE_DESC' => 'CHANDRANIGAHAPUR SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6411,7 +6411,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 458,
+                
                 'OFFICE_CD' => 351239,
                 'OFFICE_DESC' => 'KAWASOTI SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6425,7 +6425,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 459,
+                
                 'OFFICE_CD' => 351241,
                 'OFFICE_DESC' => 'DUMRE DAMAULI 132 KV TL PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6439,7 +6439,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 460,
+                
                 'OFFICE_CD' => 351242,
                 'OFFICE_DESC' => 'GRID REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6453,7 +6453,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 461,
+                
                 'OFFICE_CD' => 351243,
                 'OFFICE_DESC' => 'MODIKHOLA SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6467,7 +6467,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 462,
+                
                 'OFFICE_CD' => 351244,
                 'OFFICE_DESC' => 'PILUWA BHOJPUR 33 KV TL PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6481,7 +6481,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 463,
+                
                 'OFFICE_CD' => 351245,
                 'OFFICE_DESC' => 'KABELI CORRIDOR 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6495,7 +6495,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 464,
+                
                 'OFFICE_CD' => 351246,
                 'OFFICE_DESC' => 'MARSYANGDI KATHMANDU 220 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6509,7 +6509,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 465,
+                
                 'OFFICE_CD' => 351247,
                 'OFFICE_DESC' => 'SINGATI LAMOSANGHU CORRIDOR PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6523,7 +6523,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 466,
+                
                 'OFFICE_CD' => 351248,
                 'OFFICE_DESC' => 'DUHABI JOGBANI 400 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6537,7 +6537,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 467,
+                
                 'OFFICE_CD' => 351249,
                 'OFFICE_DESC' => 'BUTWAL KOHALPUR 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6551,7 +6551,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 468,
+                
                 'OFFICE_CD' => 351251,
                 'OFFICE_DESC' => 'MARSYANGDI DUMBRE DAMAULI 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6565,7 +6565,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 469,
+                
                 'OFFICE_CD' => 351252,
                 'OFFICE_DESC' => 'KOHALPUR SURKHET 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6579,7 +6579,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 470,
+                
                 'OFFICE_CD' => 351253,
                 'OFFICE_DESC' => 'KALIGANDAKI TRANSMISSION CORRIDOR PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6593,7 +6593,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 471,
+                
                 'OFFICE_CD' => 351254,
                 'OFFICE_DESC' => 'DHANKUTA TIRTIRE TRANSMISSION CORRIDOR PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6607,7 +6607,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 472,
+                
                 'OFFICE_CD' => 351255,
                 'OFFICE_DESC' => 'SUNKOSHI DOLAKHA TRANSMISSION CORRIDOR PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6621,7 +6621,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 473,
+                
                 'OFFICE_CD' => 351256,
                 'OFFICE_DESC' => 'KUSUM HAPURE 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6635,7 +6635,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 474,
+                
                 'OFFICE_CD' => 351257,
                 'OFFICE_DESC' => 'HETAUDA 132 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6649,7 +6649,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 475,
+                
                 'OFFICE_CD' => 351258,
                 'OFFICE_DESC' => 'MIRCHAIYA KATARI 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6663,7 +6663,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 476,
+                
                 'OFFICE_CD' => 351259,
                 'OFFICE_DESC' => 'AABUKHAIRENI 132 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6677,7 +6677,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 477,
+                
                 'OFFICE_CD' => 351261,
                 'OFFICE_DESC' => 'PATHALAIYA 132 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6691,7 +6691,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 478,
+                
                 'OFFICE_CD' => 351262,
                 'OFFICE_DESC' => 'SYANGJA 132 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6705,7 +6705,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 479,
+                
                 'OFFICE_CD' => 351263,
                 'OFFICE_DESC' => 'MATATIRTHA SUBSTATION EXTENSION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6719,7 +6719,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 480,
+                
                 'OFFICE_CD' => 351264,
                 'OFFICE_DESC' => 'DAMAK 132 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6733,7 +6733,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 481,
+                
                 'OFFICE_CD' => 351265,
                 'OFFICE_DESC' => 'CHAPALI 132 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6747,7 +6747,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 482,
+                
                 'OFFICE_CD' => 351266,
                 'OFFICE_DESC' => 'BHARATPUR BARDHAGHAT 220 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6761,7 +6761,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 483,
+                
                 'OFFICE_CD' => 351267,
                 'OFFICE_DESC' => 'NEPAL INDIA ELECTRICITY TRANSMISSION AND TRADE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6775,7 +6775,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 484,
+                
                 'OFFICE_CD' => 351268,
                 'OFFICE_DESC' => 'HETAUDA BHARATPUR 220 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6789,7 +6789,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 485,
+                
                 'OFFICE_CD' => 351269,
                 'OFFICE_DESC' => 'BHARATPUR BARDHAGHAT 220 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6803,7 +6803,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 486,
+                
                 'OFFICE_CD' => 351271,
                 'OFFICE_DESC' => 'KOHALPUR MAHENDRANAGAR 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6817,7 +6817,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 487,
+                
                 'OFFICE_CD' => 351272,
                 'OFFICE_DESC' => 'POWER FACTOR IMPROVEMENT PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6831,7 +6831,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 488,
+                
                 'OFFICE_CD' => 351273,
                 'OFFICE_DESC' => 'ENERGY ACCESS AND EFFICIENCY IMPROVEMENT PROJECT, COORDINATOR',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6845,7 +6845,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 489,
+                
                 'OFFICE_CD' => 351274,
                 'OFFICE_DESC' => 'TAMAKOSHI KATHMANDU 220 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6859,7 +6859,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 490,
+                
                 'OFFICE_CD' => 351275,
                 'OFFICE_DESC' => 'SOLU CORRIDOR 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6873,7 +6873,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 491,
+                
                 'OFFICE_CD' => 351276,
                 'OFFICE_DESC' => 'LAMAHI GHORAHI 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6887,7 +6887,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 492,
+                
                 'OFFICE_CD' => 351277,
                 'OFFICE_DESC' => 'HETAUDA KULEKHANI SYUCHATAR SECOND CIRCUIT PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6901,7 +6901,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 493,
+                
                 'OFFICE_CD' => 351278,
                 'OFFICE_DESC' => 'DHALKEBAR BHITTAMOD 400 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6915,7 +6915,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 494,
+                
                 'OFFICE_CD' => 351279,
                 'OFFICE_DESC' => 'MANTHALI SANGHUTAR 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6929,7 +6929,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 495,
+                
                 'OFFICE_CD' => 351281,
                 'OFFICE_DESC' => 'CHAPALI 132 KV SUBSTATION EXTENSION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6943,7 +6943,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 496,
+                
                 'OFFICE_CD' => 351282,
                 'OFFICE_DESC' => 'ELECTRICITY TRANSMISSION EXPANSION AND SUPPLY IMPROVEMENT PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6957,7 +6957,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 497,
+                
                 'OFFICE_CD' => 351283,
                 'OFFICE_DESC' => 'TAMAKOSHI KATHMANDU 400 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6971,7 +6971,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 498,
+                
                 'OFFICE_CD' => 351284,
                 'OFFICE_DESC' => 'KOSHI CORRIDOR TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -6985,7 +6985,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 499,
+                
                 'OFFICE_CD' => 351285,
                 'OFFICE_DESC' => "SUNAWOL 132\/33 KV SUBSTATION PROJECT",
                 'UPPER_OFFICE_CD' => 351200,
@@ -6999,7 +6999,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 500,
+                
                 'OFFICE_CD' => 351291,
                 'OFFICE_DESC' => 'BHARATPUR BERDAGHAT 220 KV TL PROJECT (NIETTP)',
                 'UPPER_OFFICE_CD' => 351200,
@@ -7013,7 +7013,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 501,
+                
                 'OFFICE_CD' => 351292,
                 'OFFICE_DESC' => 'HETAUDA BERDAGHAT 220 KV TL PROJECT (NIETTP)',
                 'UPPER_OFFICE_CD' => 351200,
@@ -7027,7 +7027,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 502,
+                
                 'OFFICE_CD' => 351293,
                 'OFFICE_DESC' => 'PROJECT MANAGEMENT DIRECTORATE-ADB',
                 'UPPER_OFFICE_CD' => 411100,
@@ -7041,7 +7041,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 503,
+                
                 'OFFICE_CD' => 351294,
                 'OFFICE_DESC' => 'MARSYANGDI TRANSMISSION CORRIDOR PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -7055,7 +7055,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 504,
+                
                 'OFFICE_CD' => 351295,
                 'OFFICE_DESC' => 'SAMUNDRATAR TRISHULI 3B HUB 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 353510,
@@ -7069,7 +7069,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 505,
+                
                 'OFFICE_CD' => 351296,
                 'OFFICE_DESC' => 'GRID SUBSTATION CAPACITY EXPANSION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -7083,7 +7083,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 506,
+                
                 'OFFICE_CD' => 351297,
                 'OFFICE_DESC' => 'BERDGHAT GORAKHPUR 400 KV SECOND CROSS BORDER TL PROJECT',
                 'UPPER_OFFICE_CD' => 353540,
@@ -7097,7 +7097,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 507,
+                
                 'OFFICE_CD' => 351298,
                 'OFFICE_DESC' => 'BHULBHULLE MID MARSYANGDI 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -7111,7 +7111,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 508,
+                
                 'OFFICE_CD' => 351299,
                 'OFFICE_DESC' => 'NEW BUTWOL BARDHAGHAT 220 KV TRANSMISSION LINE AND SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351200,
@@ -7125,7 +7125,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 509,
+                
                 'OFFICE_CD' => 351300,
                 'OFFICE_DESC' => 'OTHER MEDIUM SCALE TRANSMISSION LINE AND SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 350000,
@@ -7139,7 +7139,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 510,
+                
                 'OFFICE_CD' => 351311,
                 'OFFICE_DESC' => 'GRID SUBSTATION CAPACITY REINFORCEMENT PROJECT',
                 'UPPER_OFFICE_CD' => 353520,
@@ -7153,7 +7153,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 511,
+                
                 'OFFICE_CD' => 351312,
                 'OFFICE_DESC' => 'KUSMA LOWER MODI 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351300,
@@ -7167,7 +7167,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 512,
+                
                 'OFFICE_CD' => 351313,
                 'OFFICE_DESC' => 'HETAUDA BIRGUNJ 66 KV TL CAPACITY UPGRADE PROJECT',
                 'UPPER_OFFICE_CD' => 351300,
@@ -7181,7 +7181,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 513,
+                
                 'OFFICE_CD' => 351314,
                 'OFFICE_DESC' => 'LEKHNATH DAMAULI 220 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351300,
@@ -7195,7 +7195,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 514,
+                
                 'OFFICE_CD' => 351315,
                 'OFFICE_DESC' => 'BHERI CORRIDOR 400 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351300,
@@ -7209,7 +7209,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 515,
+                
                 'OFFICE_CD' => 351316,
                 'OFFICE_DESC' => 'EAST CHITAWAN 132 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351300,
@@ -7223,7 +7223,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 516,
+                
                 'OFFICE_CD' => 351317,
                 'OFFICE_DESC' => 'BALEFI CORRIDOR 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351300,
@@ -7237,7 +7237,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 517,
+                
                 'OFFICE_CD' => 351318,
                 'OFFICE_DESC' => 'KUSHAHA KATAIYA 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351300,
@@ -7251,7 +7251,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 518,
+                
                 'OFFICE_CD' => 351319,
                 'OFFICE_DESC' => 'BARDAGHAT SARADI 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351300,
@@ -7265,7 +7265,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 519,
+                
                 'OFFICE_CD' => 351321,
                 'OFFICE_DESC' => 'DHALKEBAR LOHARPATTI 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351300,
@@ -7279,7 +7279,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 520,
+                
                 'OFFICE_CD' => 351400,
                 'OFFICE_DESC' => 'DISTRIBUTION LINE AND SUB STATION PROJECTS',
                 'UPPER_OFFICE_CD' => 350000,
@@ -7293,7 +7293,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 521,
+                
                 'OFFICE_CD' => 351411,
                 'OFFICE_DESC' => 'RURAL ELECTRIFICATION AND REINFORCEMENT PROJECT (8TH POWER)',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7307,7 +7307,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 522,
+                
                 'OFFICE_CD' => 351412,
                 'OFFICE_DESC' => 'RURAL ELECTRIFICATION AND REINFORCEMENT PROJECT (8TH POWER) CO-ORDINATOR',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7321,7 +7321,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 523,
+                
                 'OFFICE_CD' => 351413,
                 'OFFICE_DESC' => 'SINDHU DOLAKHA DISTRIBUTION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7335,7 +7335,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 524,
+                
                 'OFFICE_CD' => 351414,
                 'OFFICE_DESC' => 'KAILALI  KANCHANPUR  RURAL ELETRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7349,7 +7349,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 525,
+                
                 'OFFICE_CD' => 351415,
                 'OFFICE_DESC' => 'DISTRIBUTION SYSTEM DEVELOPMENT PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7363,7 +7363,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 526,
+                
                 'OFFICE_CD' => 351416,
                 'OFFICE_DESC' => 'POWERHOUSE AREA ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7377,7 +7377,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 527,
+                
                 'OFFICE_CD' => 351417,
                 'OFFICE_DESC' => 'MIDDLE MARSYANGDI NEIGHBORING AID PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7391,7 +7391,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 528,
+                
                 'OFFICE_CD' => 351418,
                 'OFFICE_DESC' => 'DISTRIBUTION AND RURAL ELECTRIFICATION PROJECT - PDF',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7405,7 +7405,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 529,
+                
                 'OFFICE_CD' => 351419,
                 'OFFICE_DESC' => 'DISTRIBUTION SYSTEM REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7419,7 +7419,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 530,
+                
                 'OFFICE_CD' => 351421,
                 'OFFICE_DESC' => 'KATHMANDU VALLEY DISTRIBUTION SYSTEM STRENGTHENING PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7433,7 +7433,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 531,
+                
                 'OFFICE_CD' => 351422,
                 'OFFICE_DESC' => 'BHARATPUR MADI 33 KV TRANSMISSION LINE AND RURAL ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -7447,7 +7447,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 532,
+                
                 'OFFICE_CD' => 351423,
                 'OFFICE_DESC' => 'RAMGHAT DHULABARI RIDI PYUTHAN 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7461,7 +7461,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 533,
+                
                 'OFFICE_CD' => 351424,
                 'OFFICE_DESC' => 'KATHMANDU BIRGUNJ SIMARA CORRIDOR DIST SYS REHAB AND LOSS CONTROL PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -7475,7 +7475,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 534,
+                
                 'OFFICE_CD' => 351425,
                 'OFFICE_DESC' => 'DISTRIBUTION SYS REHABILITATION - PACKAGE B1',
                 'UPPER_OFFICE_CD' => 351900,
@@ -7489,7 +7489,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 535,
+                
                 'OFFICE_CD' => 351426,
                 'OFFICE_DESC' => 'DISTRIBUTION SYS REHABILITATION - PACKAGE B2',
                 'UPPER_OFFICE_CD' => 351900,
@@ -7503,7 +7503,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 536,
+                
                 'OFFICE_CD' => 351427,
                 'OFFICE_DESC' => 'KATHMANDU VALLEY DIST SYS REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7517,7 +7517,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 537,
+                
                 'OFFICE_CD' => 351428,
                 'OFFICE_DESC' => 'STREET LIGHT EXTENSION AND DEDICATED FEEDER CONSTRUCTION PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7531,7 +7531,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 538,
+                
                 'OFFICE_CD' => 351429,
                 'OFFICE_DESC' => 'EXPANDED ELECTRICITY DISTRIBUTION PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7545,7 +7545,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 539,
+                
                 'OFFICE_CD' => 351431,
                 'OFFICE_DESC' => 'DISTRIBUTION SYSTEM AUGMENTATION AND EXPANSION PROJECT',
                 'UPPER_OFFICE_CD' => 353510,
@@ -7559,7 +7559,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 540,
+                
                 'OFFICE_CD' => 351432,
                 'OFFICE_DESC' => 'DISTRIBUTION SYSTEM MASTER PLAN PROJECT',
                 'UPPER_OFFICE_CD' => 353510,
@@ -7573,7 +7573,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 541,
+                
                 'OFFICE_CD' => 351433,
                 'OFFICE_DESC' => 'RASUWA NUWAKOT DIST. SYSTEM RECON. AND REHAB PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7587,7 +7587,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 542,
+                
                 'OFFICE_CD' => 351434,
                 'OFFICE_DESC' => 'GINWAG PAKHAPANI ELECTRIFICATION EXPANSION PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7601,7 +7601,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 543,
+                
                 'OFFICE_CD' => 351435,
                 'OFFICE_DESC' => 'CHIGAD SURKHET 2 ELECTRIFICATION EXPANSION PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7615,7 +7615,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 544,
+                
                 'OFFICE_CD' => 351436,
                 'OFFICE_DESC' => 'DAMAK DHARAMPUR ELECTRIFICATIO EXPANSION PROJECT',
                 'UPPER_OFFICE_CD' => 351400,
@@ -7629,7 +7629,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 545,
+                
                 'OFFICE_CD' => 351600,
                 'OFFICE_DESC' => 'RURAL ELECTRIFICATION PROJECTS',
                 'UPPER_OFFICE_CD' => 350000,
@@ -7643,7 +7643,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 546,
+                
                 'OFFICE_CD' => 351611,
                 'OFFICE_DESC' => 'OTHER VILLAGE ELECTRIFICATION PROJECTS',
                 'UPPER_OFFICE_CD' => 351600,
@@ -7657,7 +7657,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 547,
+                
                 'OFFICE_CD' => 351612,
                 'OFFICE_DESC' => 'HILE BHOJPUR ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 351600,
@@ -7671,7 +7671,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 548,
+                
                 'OFFICE_CD' => 351613,
                 'OFFICE_DESC' => 'RAMECHHAP SINDHULI ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 351600,
@@ -7685,7 +7685,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 549,
+                
                 'OFFICE_CD' => 351800,
                 'OFFICE_DESC' => 'OTHER PROJECTS',
                 'UPPER_OFFICE_CD' => 350000,
@@ -7699,7 +7699,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 550,
+                
                 'OFFICE_CD' => 351811,
                 'OFFICE_DESC' => 'TRAINING FACILITIES ESTABLISHMENT PROJECT',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7713,7 +7713,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 551,
+                
                 'OFFICE_CD' => 351812,
                 'OFFICE_DESC' => 'COMPUTERIZED BILLING PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -7727,7 +7727,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 552,
+                
                 'OFFICE_CD' => 351813,
                 'OFFICE_DESC' => 'DISTRIBUTION PROFIT CENTER PROJECT',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7741,7 +7741,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 553,
+                
                 'OFFICE_CD' => 351814,
                 'OFFICE_DESC' => 'JOINT VENTURE INVESTMENT PROJECT',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7755,7 +7755,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 554,
+                
                 'OFFICE_CD' => 351815,
                 'OFFICE_DESC' => 'FIXED ASSETS REVALUATION PROJECT',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7769,7 +7769,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 555,
+                
                 'OFFICE_CD' => 351816,
                 'OFFICE_DESC' => 'POWER DEVELOPMENT PROJECT PART-C, T AND D COMPONENT',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7783,7 +7783,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 556,
+                
                 'OFFICE_CD' => 351817,
                 'OFFICE_DESC' => 'INSTITUTIONAL STRENGETHENING PROJECT',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7797,7 +7797,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 557,
+                
                 'OFFICE_CD' => 351818,
                 'OFFICE_DESC' => 'STREET LIGHT REHABILITATION PROGRAMME',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7811,7 +7811,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 558,
+                
                 'OFFICE_CD' => 351821,
                 'OFFICE_DESC' => 'INSTITUTIONAL STRENGTHENING PROJECT -1',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7825,7 +7825,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 559,
+                
                 'OFFICE_CD' => 351822,
                 'OFFICE_DESC' => 'INSTITUTIONAL STRENGTHENING PROJECT - 2',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7839,7 +7839,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 560,
+                
                 'OFFICE_CD' => 351823,
                 'OFFICE_DESC' => 'PROJECT SUPERVISION CONSULTANT PROJECT',
                 'UPPER_OFFICE_CD' => 353510,
@@ -7853,7 +7853,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 561,
+                
                 'OFFICE_CD' => 351824,
                 'OFFICE_DESC' => 'ASSETS VERIFICATION AND VALUATION PROJECT',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7867,7 +7867,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 562,
+                
                 'OFFICE_CD' => 351825,
                 'OFFICE_DESC' => 'TRANSFORMER TESTING LAB CONSTRUCTION PROJECT',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7881,7 +7881,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 563,
+                
                 'OFFICE_CD' => 351826,
                 'OFFICE_DESC' => 'GIS SMART GRID PROJECT',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7895,7 +7895,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 564,
+                
                 'OFFICE_CD' => 351827,
                 'OFFICE_DESC' => 'NATIONAL STREETLIGNT PROMOTION PROJECT',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7909,7 +7909,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 565,
+                
                 'OFFICE_CD' => 351834,
                 'OFFICE_DESC' => 'UTILITY SCALE GRID TIED SOLAR PROJECT (VGF)',
                 'UPPER_OFFICE_CD' => 351800,
@@ -7923,7 +7923,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 566,
+                
                 'OFFICE_CD' => 351900,
                 'OFFICE_DESC' => 'DMD DCS SMALL PROJECTS',
                 'UPPER_OFFICE_CD' => 350000,
@@ -7937,7 +7937,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 567,
+                
                 'OFFICE_CD' => 351913,
                 'OFFICE_DESC' => '33 K.V. SUBSTATION AND TL STUDY PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -7951,7 +7951,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 568,
+                
                 'OFFICE_CD' => 351914,
                 'OFFICE_DESC' => 'RE MASTER PLAN STUDY PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -7965,7 +7965,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 569,
+                
                 'OFFICE_CD' => 351915,
                 'OFFICE_DESC' => 'L.V. CAPACITOR INSTALLATION PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -7979,7 +7979,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 570,
+                
                 'OFFICE_CD' => 351916,
                 'OFFICE_DESC' => "33\/11 KV SS CAPACITOR INSTALLATION PROJECT",
                 'UPPER_OFFICE_CD' => 351900,
@@ -7993,7 +7993,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 571,
+                
                 'OFFICE_CD' => 351917,
                 'OFFICE_DESC' => 'MATATIRTHA - MALTA 33 K.V. SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8007,7 +8007,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 572,
+                
                 'OFFICE_CD' => 351918,
                 'OFFICE_DESC' => 'SURUNGA JHAPA 33 K.V. SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8021,7 +8021,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 573,
+                
                 'OFFICE_CD' => 351919,
                 'OFFICE_DESC' => 'CHAUTARA SINDHUPALCHOK 33 K.V SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8035,7 +8035,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 574,
+                
                 'OFFICE_CD' => 351921,
                 'OFFICE_DESC' => 'PANCHTHAR (GANESH CHOK) SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8049,7 +8049,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 575,
+                
                 'OFFICE_CD' => 351922,
                 'OFFICE_DESC' => 'NAUBISE DHADING 33 K.V. TL AND SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8063,7 +8063,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 576,
+                
                 'OFFICE_CD' => 351923,
                 'OFFICE_DESC' => 'BISANPUR , SAPTARI 33 K.V SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8077,7 +8077,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 577,
+                
                 'OFFICE_CD' => 351924,
                 'OFFICE_DESC' => 'BHAGWANPUR 33 K.V SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8091,7 +8091,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 578,
+                
                 'OFFICE_CD' => 351925,
                 'OFFICE_DESC' => 'CHAINPUR BANESHWORE (SANKUWASHAVA) 33 K.V. TL',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8105,7 +8105,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 579,
+                
                 'OFFICE_CD' => 351926,
                 'OFFICE_DESC' => 'SANKUWASHAVA SITALPATI ) 33 K.V. SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8119,7 +8119,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 580,
+                
                 'OFFICE_CD' => 351927,
                 'OFFICE_DESC' => "BHEDETAR 33\/11 K.V. SS PROJECT",
                 'UPPER_OFFICE_CD' => 351900,
@@ -8133,7 +8133,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 581,
+                
                 'OFFICE_CD' => 351928,
                 'OFFICE_DESC' => 'HARIPUR BASANTPUR 33 K.V. SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8147,7 +8147,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 582,
+                
                 'OFFICE_CD' => 351929,
                 'OFFICE_DESC' => 'PARSA 33 K.V. SS PROJECT (BETWEEN BIRJUNG AND POKHARIYA)',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8161,7 +8161,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 583,
+                
                 'OFFICE_CD' => 351931,
                 'OFFICE_DESC' => 'RIDI 33 K.V. SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8175,7 +8175,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 584,
+                
                 'OFFICE_CD' => 351932,
                 'OFFICE_DESC' => 'RAMGHAT SURKHET 33 K.V. SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8189,7 +8189,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 585,
+                
                 'OFFICE_CD' => 351933,
                 'OFFICE_DESC' => 'PYUTHAN 33 K.V. SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8203,7 +8203,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 586,
+                
                 'OFFICE_CD' => 351934,
                 'OFFICE_DESC' => 'DHULABARI JHAPA 33 K.V. SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8217,7 +8217,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 587,
+                
                 'OFFICE_CD' => 351935,
                 'OFFICE_DESC' => 'MATATIRTHA MARKHU 33 K.V. SS PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8231,7 +8231,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 588,
+                
                 'OFFICE_CD' => 351936,
                 'OFFICE_DESC' => "DHADE SINDHUPALCHOK 33\/11 K.V. SS PROJECT",
                 'UPPER_OFFICE_CD' => 351900,
@@ -8245,7 +8245,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 589,
+                
                 'OFFICE_CD' => 351937,
                 'OFFICE_DESC' => 'AUGMENTATION OF DISTRIBUTION SERVICES (WEST)',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8259,7 +8259,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 590,
+                
                 'OFFICE_CD' => 351938,
                 'OFFICE_DESC' => 'UPGRADATION OF DISTRIBUTION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8273,7 +8273,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 591,
+                
                 'OFFICE_CD' => 351941,
                 'OFFICE_DESC' => 'CHAMELIYA ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 352290,
@@ -8287,7 +8287,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 592,
+                
                 'OFFICE_CD' => 351950,
                 'OFFICE_DESC' => 'DCS DIRECTORATE',
                 'UPPER_OFFICE_CD' => 352200,
@@ -8301,7 +8301,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 593,
+                
                 'OFFICE_CD' => 351951,
                 'OFFICE_DESC' => 'C.F.L. PROGRAM',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8315,7 +8315,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 594,
+                
                 'OFFICE_CD' => 351952,
                 'OFFICE_DESC' => 'A.D.B. LOAN NO.2587 (ELECTRICITY',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8329,7 +8329,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 595,
+                
                 'OFFICE_CD' => 351953,
                 'OFFICE_DESC' => 'SOLAR POWER STREET LIGHT PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8343,7 +8343,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 596,
+                
                 'OFFICE_CD' => 351954,
                 'OFFICE_DESC' => 'DISTRIBUTION SYSTEM CONSULTANT SERVICES',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8357,7 +8357,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 597,
+                
                 'OFFICE_CD' => 351961,
                 'OFFICE_DESC' => 'ELECTRICITY DISTRIBUTION EXPANDED PROJECT',
                 'UPPER_OFFICE_CD' => 353530,
@@ -8371,7 +8371,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 598,
+                
                 'OFFICE_CD' => 351962,
                 'OFFICE_DESC' => 'Solar Street Light Grid TIED PROJECT',
                 'UPPER_OFFICE_CD' => 351950,
@@ -8385,7 +8385,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 599,
+                
                 'OFFICE_CD' => 351963,
                 'OFFICE_DESC' => 'Public Awareness Programme',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8399,7 +8399,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 600,
+                
                 'OFFICE_CD' => 351964,
                 'OFFICE_DESC' => 'AAHALE DADHIPURKOT DISTRIBUTION LINE EXPANDED PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8413,7 +8413,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 601,
+                
                 'OFFICE_CD' => 351971,
                 'OFFICE_DESC' => "Ilam 33\/11 KV S\/S",
                 'UPPER_OFFICE_CD' => 351900,
@@ -8427,7 +8427,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 602,
+                
                 'OFFICE_CD' => 351972,
                 'OFFICE_DESC' => "DHANKUTA 33\/11 KV S\/S",
                 'UPPER_OFFICE_CD' => 351900,
@@ -8441,7 +8441,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 603,
+                
                 'OFFICE_CD' => 351973,
                 'OFFICE_DESC' => 'RANKE RABI CHISAPANI DASHAMI 33KV',
                 'UPPER_OFFICE_CD' => 352250,
@@ -8455,7 +8455,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 604,
+                
                 'OFFICE_CD' => 351974,
                 'OFFICE_DESC' => "UPGRADATION OF 11KV S\/S TRISHULI",
                 'UPPER_OFFICE_CD' => 351900,
@@ -8469,7 +8469,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 605,
+                
                 'OFFICE_CD' => 351975,
                 'OFFICE_DESC' => 'BALAJU INDUSTRIAL 11KV FEEDER',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8483,7 +8483,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 606,
+                
                 'OFFICE_CD' => 351976,
                 'OFFICE_DESC' => 'MADANKUMARI MAKAIRIBARI SINGATI 33KV',
                 'UPPER_OFFICE_CD' => 352240,
@@ -8497,7 +8497,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 607,
+                
                 'OFFICE_CD' => 351977,
                 'OFFICE_DESC' => "33\/0.4 SYSTEM SHIFT TO 11\/0.4 KV",
                 'UPPER_OFFICE_CD' => 351900,
@@ -8511,7 +8511,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 608,
+                
                 'OFFICE_CD' => 351978,
                 'OFFICE_DESC' => 'DISTRIBUTION SYSTEM REHAB DCS',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8525,7 +8525,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 609,
+                
                 'OFFICE_CD' => 351979,
                 'OFFICE_DESC' => 'MANTHALI SANGHUTAR 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8539,7 +8539,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 610,
+                
                 'OFFICE_CD' => 351981,
                 'OFFICE_DESC' => 'LAMAHI BHALUWANG 33KV TL SS P',
                 'UPPER_OFFICE_CD' => 352280,
@@ -8553,7 +8553,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 611,
+                
                 'OFFICE_CD' => 351982,
                 'OFFICE_DESC' => 'GHORAHI HOLERI 33KV TLP',
                 'UPPER_OFFICE_CD' => 352280,
@@ -8567,7 +8567,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 612,
+                
                 'OFFICE_CD' => 351984,
                 'OFFICE_DESC' => "RAJAPUR 33KV TL\/SSP",
                 'UPPER_OFFICE_CD' => 352280,
@@ -8581,7 +8581,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 613,
+                
                 'OFFICE_CD' => 351985,
                 'OFFICE_DESC' => "SURKHET BIJAURA 33KV TL\/SSP",
                 'UPPER_OFFICE_CD' => 352280,
@@ -8595,7 +8595,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 614,
+                
                 'OFFICE_CD' => 351986,
                 'OFFICE_DESC' => 'DAILEKH 33KV SSP',
                 'UPPER_OFFICE_CD' => 352280,
@@ -8609,7 +8609,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 615,
+                
                 'OFFICE_CD' => 351987,
                 'OFFICE_DESC' => 'ROLPA SULICHAUR 33KV TLP',
                 'UPPER_OFFICE_CD' => 352280,
@@ -8623,7 +8623,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 616,
+                
                 'OFFICE_CD' => 351988,
                 'OFFICE_DESC' => 'SURKHET GANGATE MATELA 33KV TLP',
                 'UPPER_OFFICE_CD' => 352280,
@@ -8637,7 +8637,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 617,
+                
                 'OFFICE_CD' => 351989,
                 'OFFICE_DESC' => 'LAMAHI BUTWAL DANG 33KV TLP',
                 'UPPER_OFFICE_CD' => 351900,
@@ -8651,7 +8651,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 618,
+                
                 'OFFICE_CD' => 351991,
                 'OFFICE_DESC' => 'BIJUWAR BADIKOT DISTRIBUTION SYS. REHAB. PROJECT PYUTHAN',
                 'UPPER_OFFICE_CD' => 352290,
@@ -8665,7 +8665,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 619,
+                
                 'OFFICE_CD' => 351992,
                 'OFFICE_DESC' => 'DOTI MAUWA 33KV SS TLP',
                 'UPPER_OFFICE_CD' => 352290,
@@ -8679,7 +8679,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 620,
+                
                 'OFFICE_CD' => 351993,
                 'OFFICE_DESC' => 'DADELDHURA - BAITADI 33KV TLP',
                 'UPPER_OFFICE_CD' => 352290,
@@ -8693,7 +8693,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 621,
+                
                 'OFFICE_CD' => 351994,
                 'OFFICE_DESC' => 'ACHHAM SHP REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 352290,
@@ -8707,7 +8707,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 622,
+                
                 'OFFICE_CD' => 351995,
                 'OFFICE_DESC' => 'DHANGADHI - ATTARIA DISTRIBUTION SYSTEM REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 352290,
@@ -8721,7 +8721,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 623,
+                
                 'OFFICE_CD' => 351996,
                 'OFFICE_DESC' => 'TIKAPUR-LAMKI BAZAR DISTRIBUTION SYSTEM REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 352290,
@@ -8735,7 +8735,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 624,
+                
                 'OFFICE_CD' => 351997,
                 'OFFICE_DESC' => 'MAHENDRANAGAR DISTRIBUTION SYSTEM REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 352290,
@@ -8749,7 +8749,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 625,
+                
                 'OFFICE_CD' => 352100,
                 'OFFICE_DESC' => 'DMD TRANSMISSION PROJECTS',
                 'UPPER_OFFICE_CD' => 350000,
@@ -8763,7 +8763,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 626,
+                
                 'OFFICE_CD' => 352111,
                 'OFFICE_DESC' => 'DHALKEBAR-BHITTAMOD 400 KV  CROSS BOARDER TRANSMISSION LINE PROJECT.',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8777,7 +8777,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 627,
+                
                 'OFFICE_CD' => 352112,
                 'OFFICE_DESC' => 'TULSIPUR-KAPURKOT 132 KV TRANSMISSION LINE PROJECT.',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8791,7 +8791,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 628,
+                
                 'OFFICE_CD' => 352113,
                 'OFFICE_DESC' => 'KALI GANDAKI 220KV TRANSMISSION CORRIDOR (GHASA-KUSMA-BUTWAL) 150KM',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8805,7 +8805,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 629,
+                
                 'OFFICE_CD' => 352114,
                 'OFFICE_DESC' => 'MARSYANGDI CORRIDOR 132KV TRANSMISSION LINE (45 KM)',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8819,7 +8819,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 630,
+                
                 'OFFICE_CD' => 352115,
                 'OFFICE_DESC' => 'MIDDLE-MARSYANGDI-MANANG 132 KV TRANSMISSION LINE 60 KM',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8833,7 +8833,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 631,
+                
                 'OFFICE_CD' => 352116,
                 'OFFICE_DESC' => 'KASKI-BHURJUNG -PARBAT-KUSHMA 132 KV TRANSMISSION LINE 65 KM',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8847,7 +8847,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 632,
+                
                 'OFFICE_CD' => 352117,
                 'OFFICE_DESC' => 'HAPURE-TULSIPUR 132KV TRANSMISSION LINE 20 KM',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8861,7 +8861,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 633,
+                
                 'OFFICE_CD' => 352118,
                 'OFFICE_DESC' => 'SAMUDRATAR-NAUBISE -CHAPALI132KV TRANSMISSION LINE PROJECT, 50 KM',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8875,7 +8875,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 634,
+                
                 'OFFICE_CD' => 352119,
                 'OFFICE_DESC' => 'RAMECHHAP-GARLYANG-KHIMTI 132KV TRANSMISSION LINE PROJECT, 50 KM',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8889,7 +8889,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 635,
+                
                 'OFFICE_CD' => 352121,
                 'OFFICE_DESC' => 'KOSHI 220KV CORRIDOR (BASANTPUR-KUSAHA) TRANSMISSION LINE 90 KM',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8903,7 +8903,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 636,
+                
                 'OFFICE_CD' => 352122,
                 'OFFICE_DESC' => 'TAMAKOSHI-KATHMANDU 220KV TRANSMISSION LINE PROJECT ,100 KM',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8917,7 +8917,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 637,
+                
                 'OFFICE_CD' => 352123,
                 'OFFICE_DESC' => 'SUNKOSHI-DOLKHA CORRIDOR 132KV TRANSMISSION LINE 25 KM',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8931,7 +8931,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 638,
+                
                 'OFFICE_CD' => 352124,
                 'OFFICE_DESC' => 'SOLU CORRIDOR 132KV TRANSMISSION LINE PROJECT 70 KM',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8945,7 +8945,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 639,
+                
                 'OFFICE_CD' => 352125,
                 'OFFICE_DESC' => 'CHILIME-TRISHULI 132KV TRANSMISSION LINE 60 KM',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8959,7 +8959,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 640,
+                
                 'OFFICE_CD' => 352126,
                 'OFFICE_DESC' => 'MIRCHAIYA - KATARI 132KV TRANSMISSION LINE',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8973,7 +8973,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 641,
+                
                 'OFFICE_CD' => 352127,
                 'OFFICE_DESC' => 'LAMAHI-GHORAHI 132KV TRANSMISSION LINE',
                 'UPPER_OFFICE_CD' => 352100,
@@ -8987,7 +8987,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 642,
+                
                 'OFFICE_CD' => 352128,
                 'OFFICE_DESC' => 'HETAUDA-KULEKHANI 2-SYUCHATAR 132 KV .2ND CIRCUIT',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9001,7 +9001,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 643,
+                
                 'OFFICE_CD' => 352129,
                 'OFFICE_DESC' => 'DORDI CORIDOR( KITRIPUR-UDIPUR-MARSYANGDI) T.L. PROJECT',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9015,7 +9015,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 644,
+                
                 'OFFICE_CD' => 352131,
                 'OFFICE_DESC' => 'KUSHAHA-KATAIYA  132 KV  CROSS BORDER TLP.',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9029,7 +9029,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 645,
+                
                 'OFFICE_CD' => 352132,
                 'OFFICE_DESC' => 'LEKHNATH- UPPERSETI-DAMAULI220KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9043,7 +9043,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 646,
+                
                 'OFFICE_CD' => 352133,
                 'OFFICE_DESC' => 'RAXOUL PARWANIPUR 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9057,7 +9057,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 647,
+                
                 'OFFICE_CD' => 352134,
                 'OFFICE_DESC' => 'KATAIYA-KUSHAHA 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9071,7 +9071,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 648,
+                
                 'OFFICE_CD' => 352135,
                 'OFFICE_DESC' => 'GULMI - ARGHAKHACHI - GORUSINGHE  132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9085,7 +9085,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 649,
+                
                 'OFFICE_CD' => 352136,
                 'OFFICE_DESC' => 'MADI - LEKHNATH 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9099,7 +9099,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 650,
+                
                 'OFFICE_CD' => 352137,
                 'OFFICE_DESC' => 'BUTWAL - SUNOULI 400KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9113,7 +9113,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 651,
+                
                 'OFFICE_CD' => 352138,
                 'OFFICE_DESC' => 'DHALEBAR - DUHABI 400KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9127,7 +9127,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 652,
+                
                 'OFFICE_CD' => 352139,
                 'OFFICE_DESC' => 'HETAUDA - BUTWAL 400KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9141,7 +9141,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 653,
+                
                 'OFFICE_CD' => 352141,
                 'OFFICE_DESC' => 'BUTWAL - LAMKI 400KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9155,7 +9155,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 654,
+                
                 'OFFICE_CD' => 352142,
                 'OFFICE_DESC' => 'LAMKI - MAHENDRANAGAR 400KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9169,7 +9169,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 655,
+                
                 'OFFICE_CD' => 352143,
                 'OFFICE_DESC' => 'DUHABI - ANARMANI 400KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9183,7 +9183,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 656,
+                
                 'OFFICE_CD' => 352144,
                 'OFFICE_DESC' => 'DUHABI JOGBANI 400KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9197,7 +9197,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 657,
+                
                 'OFFICE_CD' => 352145,
                 'OFFICE_DESC' => 'KHIMTI - KATHMANDU 220KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9211,7 +9211,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 658,
+                
                 'OFFICE_CD' => 352146,
                 'OFFICE_DESC' => 'LAMKI - UPPER KARNALI 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9225,7 +9225,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 659,
+                
                 'OFFICE_CD' => 352147,
                 'OFFICE_DESC' => 'BJHANG - DIPAYAL - ATTARIYA 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9239,7 +9239,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 660,
+                
                 'OFFICE_CD' => 352148,
                 'OFFICE_DESC' => 'SURKHET - DAILEKH - JUMLA 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9253,7 +9253,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 661,
+                
                 'OFFICE_CD' => 352149,
                 'OFFICE_DESC' => 'KATARI-OKHANDHUNGA-SULU 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9267,7 +9267,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 662,
+                
                 'OFFICE_CD' => 352151,
                 'OFFICE_DESC' => 'KALIGANDAKI - JHIMRUK 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9281,7 +9281,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 663,
+                
                 'OFFICE_CD' => 352152,
                 'OFFICE_DESC' => 'DUHABI  - DHARAN - DHANKUTA-TIRTIRE 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9295,7 +9295,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 664,
+                
                 'OFFICE_CD' => 352153,
                 'OFFICE_DESC' => 'NEW MODI - LEKHNATH 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9309,7 +9309,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 665,
+                
                 'OFFICE_CD' => 352154,
                 'OFFICE_DESC' => 'TRANSFORMER UPGRADING PROJECT',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9323,7 +9323,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 666,
+                
                 'OFFICE_CD' => 352155,
                 'OFFICE_DESC' => 'UNITED CEMENT PVT. LTD. TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9337,7 +9337,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 667,
+                
                 'OFFICE_CD' => 352156,
                 'OFFICE_DESC' => 'GHORAHI AND SONAPUR CEMENT MERGE WITH LAMAHI-GHORAHI 132KV TLP.',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9351,7 +9351,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 668,
+                
                 'OFFICE_CD' => 352157,
                 'OFFICE_DESC' => 'MARUTI CEMENT  MERGE WITH MIRCHAIYA-KATARI 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9365,7 +9365,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 669,
+                
                 'OFFICE_CD' => 352158,
                 'OFFICE_DESC' => 'MATATIRTHA-MALTA 33 KV TLP(LAXMI CEMENT)',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9379,7 +9379,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 670,
+                
                 'OFFICE_CD' => 352159,
                 'OFFICE_DESC' => 'TULASIPUR-KAPURKOT 33 KV TLP(ROLPA CEMENT)',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9393,7 +9393,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 671,
+                
                 'OFFICE_CD' => 352161,
                 'OFFICE_DESC' => 'SURKHET CEMENT  MERGE WITH KOHALPUR-SURKHET 132 KV TLP.',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9407,7 +9407,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 672,
+                
                 'OFFICE_CD' => 352162,
                 'OFFICE_DESC' => 'DHALKEBAR - LOHARPATI 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9421,7 +9421,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 673,
+                
                 'OFFICE_CD' => 352163,
                 'OFFICE_DESC' => 'BUTWAL LUMBINI 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9435,7 +9435,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 674,
+                
                 'OFFICE_CD' => 352164,
                 'OFFICE_DESC' => 'DHALKEBAR- VITTAMOD  400KV CROSSBOARDER TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9449,7 +9449,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 675,
+                
                 'OFFICE_CD' => 352165,
                 'OFFICE_DESC' => 'NEW KHIMTI-BARABISHE 400 KV TLP.',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9463,7 +9463,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 676,
+                
                 'OFFICE_CD' => 352166,
                 'OFFICE_DESC' => 'KOHALPUR - MAHENDRANAGAR 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9477,7 +9477,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 677,
+                
                 'OFFICE_CD' => 352167,
                 'OFFICE_DESC' => 'TRISHULI 3B SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9491,7 +9491,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 678,
+                
                 'OFFICE_CD' => 352168,
                 'OFFICE_DESC' => 'BANESHWOR - BHAKTAPUR 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9505,7 +9505,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 679,
+                
                 'OFFICE_CD' => 352169,
                 'OFFICE_DESC' => 'BUDHIGANGA - UMEDI - PAHALWANPUR 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9519,7 +9519,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 680,
+                
                 'OFFICE_CD' => 352171,
                 'OFFICE_DESC' => "BARDIYA - BHURIGAON 132KV S\/S PROJECT",
                 'UPPER_OFFICE_CD' => 352100,
@@ -9533,7 +9533,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 681,
+                
                 'OFFICE_CD' => 352172,
                 'OFFICE_DESC' => 'BALEFI - BAHRABISE CORRIDOR 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9547,7 +9547,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 682,
+                
                 'OFFICE_CD' => 352173,
                 'OFFICE_DESC' => "RUPANI 132KV S\/S PROJECT",
                 'UPPER_OFFICE_CD' => 352100,
@@ -9561,7 +9561,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 683,
+                
                 'OFFICE_CD' => 352174,
                 'OFFICE_DESC' => 'GULMI - ARGHAKHANCHI - CHANAUTA 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9575,7 +9575,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 684,
+                
                 'OFFICE_CD' => 352175,
                 'OFFICE_DESC' => "SUNKOSHI 132KV S\/S TL PROJECT",
                 'UPPER_OFFICE_CD' => 352100,
@@ -9589,7 +9589,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 685,
+                
                 'OFFICE_CD' => 352176,
                 'OFFICE_DESC' => 'CHIMILE TRISHULI 220KV TL PROJECT',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9603,7 +9603,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 686,
+                
                 'OFFICE_CD' => 352181,
                 'OFFICE_DESC' => 'Samundratar Trishuli 3B Hub Substation 132 kv TL',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9617,7 +9617,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 687,
+                
                 'OFFICE_CD' => 352182,
                 'OFFICE_DESC' => 'Chandranigahapur Ele. Sys. Rein.',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9631,7 +9631,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 688,
+                
                 'OFFICE_CD' => 352183,
                 'OFFICE_DESC' => 'Khimti Bhaktapur Balaju 132 kv',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9645,7 +9645,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 689,
+                
                 'OFFICE_CD' => 352184,
                 'OFFICE_DESC' => 'Kushaha Dhalkebar 132 kv',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9659,7 +9659,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 690,
+                
                 'OFFICE_CD' => 352185,
                 'OFFICE_DESC' => 'Bardhghat Gorakhpur 400KV Cross-Boarder TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9673,7 +9673,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 691,
+                
                 'OFFICE_CD' => 352186,
                 'OFFICE_DESC' => "Syaule(Dadeldhura) 132KV S\/S STUDY",
                 'UPPER_OFFICE_CD' => 352100,
@@ -9687,7 +9687,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 692,
+                
                 'OFFICE_CD' => 352187,
                 'OFFICE_DESC' => 'KUSAHA BIRATNAGAR 132 KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9701,7 +9701,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 693,
+                
                 'OFFICE_CD' => 352188,
                 'OFFICE_DESC' => 'MIDDLE MARSHYANGDI BHULBHULE 132KV TLP',
                 'UPPER_OFFICE_CD' => 352100,
@@ -9715,7 +9715,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 694,
+                
                 'OFFICE_CD' => 352200,
                 'OFFICE_DESC' => 'DMD DCS SMALL PROJECTS 2',
                 'UPPER_OFFICE_CD' => 350000,
@@ -9729,7 +9729,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 695,
+                
                 'OFFICE_CD' => 352201,
                 'OFFICE_DESC' => 'Bhojpur-Ilam-Jhapa-Morang-Sunsari-Sankhuwasava Dist. Sys. Rehab. Project',
                 'UPPER_OFFICE_CD' => 352250,
@@ -9743,7 +9743,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 696,
+                
                 'OFFICE_CD' => 352210,
                 'OFFICE_DESC' => 'Projects Janakpur RO',
                 'UPPER_OFFICE_CD' => 352200,
@@ -9757,7 +9757,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 697,
+                
                 'OFFICE_CD' => 352211,
                 'OFFICE_DESC' => 'Okhaldhunga Salleri ( Solukhumbu ) 33kv TLP',
                 'UPPER_OFFICE_CD' => 352210,
@@ -9771,7 +9771,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 698,
+                
                 'OFFICE_CD' => 352212,
                 'OFFICE_DESC' => 'Sanghutar ( Ramechap ) Okhaldhunga 33kv TLP',
                 'UPPER_OFFICE_CD' => 352210,
@@ -9785,7 +9785,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 699,
+                
                 'OFFICE_CD' => 352213,
                 'OFFICE_DESC' => 'Khurkot Nepalthok 33kv TLP',
                 'UPPER_OFFICE_CD' => 352210,
@@ -9799,7 +9799,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 700,
+                
                 'OFFICE_CD' => 352214,
                 'OFFICE_DESC' => "WAKSILA 33\/11KV SUBSTATION PROJECT",
                 'UPPER_OFFICE_CD' => 352210,
@@ -9813,7 +9813,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 701,
+                
                 'OFFICE_CD' => 352215,
                 'OFFICE_DESC' => "DUMRIYA 33\/11 KV SUBSTATION PROJECT",
                 'UPPER_OFFICE_CD' => 352210,
@@ -9827,7 +9827,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 702,
+                
                 'OFFICE_CD' => 352216,
                 'OFFICE_DESC' => "BASANTAPUR-HARPURWA 33\/11KV SUBSTATION PROJECT",
                 'UPPER_OFFICE_CD' => 352210,
@@ -9841,7 +9841,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 703,
+                
                 'OFFICE_CD' => 352217,
                 'OFFICE_DESC' => 'RASUWAGHAT KHOTANG SUBSTATION & RURAL ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 352210,
@@ -9855,7 +9855,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 704,
+                
                 'OFFICE_CD' => 352218,
                 'OFFICE_DESC' => 'NIRMALIDANDA ELECTRICITY DISTRIBUTION PROJECT',
                 'UPPER_OFFICE_CD' => 352210,
@@ -9869,7 +9869,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 705,
+                
                 'OFFICE_CD' => 352219,
                 'OFFICE_DESC' => 'DEDICATED FEEDER G.N.SINGH INDUSTRIAL AREA, RAJBIRAJ',
                 'UPPER_OFFICE_CD' => 352210,
@@ -9883,7 +9883,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 706,
+                
                 'OFFICE_CD' => 352220,
                 'OFFICE_DESC' => 'Projects Butwal RO',
                 'UPPER_OFFICE_CD' => 352200,
@@ -9897,7 +9897,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 707,
+                
                 'OFFICE_CD' => 352221,
                 'OFFICE_DESC' => 'Bojhapokhari Nawalparasi 33KV TLP',
                 'UPPER_OFFICE_CD' => 352220,
@@ -9911,7 +9911,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 708,
+                
                 'OFFICE_CD' => 352222,
                 'OFFICE_DESC' => 'Chandrauta Maharajgunj (Kapibastu) 33KV TLP',
                 'UPPER_OFFICE_CD' => 352220,
@@ -9925,7 +9925,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 709,
+                
                 'OFFICE_CD' => 352223,
                 'OFFICE_DESC' => 'Thada 33KV Sub-Station Project',
                 'UPPER_OFFICE_CD' => 352220,
@@ -9939,7 +9939,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 710,
+                
                 'OFFICE_CD' => 352224,
                 'OFFICE_DESC' => 'Gulmi Majuwa 33KV Sub-Station Project',
                 'UPPER_OFFICE_CD' => 352220,
@@ -9953,7 +9953,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 711,
+                
                 'OFFICE_CD' => 352225,
                 'OFFICE_DESC' => 'Ridi 33KV Sub-Station Project',
                 'UPPER_OFFICE_CD' => 352220,
@@ -9967,7 +9967,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 712,
+                
                 'OFFICE_CD' => 352226,
                 'OFFICE_DESC' => 'Purkot daha, Mehalpokhari, Bajhkateri Electrification Project, Gulmi',
                 'UPPER_OFFICE_CD' => 352220,
@@ -9981,7 +9981,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 713,
+                
                 'OFFICE_CD' => 352227,
                 'OFFICE_DESC' => 'Amrai Dohali Wangla, Aglung Electrification Project',
                 'UPPER_OFFICE_CD' => 352220,
@@ -9995,7 +9995,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 714,
+                
                 'OFFICE_CD' => 352228,
                 'OFFICE_DESC' => 'Hansapur(Arghakhachi) 33KV Substation Project',
                 'UPPER_OFFICE_CD' => 352220,
@@ -10009,7 +10009,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 715,
+                
                 'OFFICE_CD' => 352229,
                 'OFFICE_DESC' => 'Ramnagar (Nabalparasi) 33KV Sub-Station Project',
                 'UPPER_OFFICE_CD' => 352220,
@@ -10023,7 +10023,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 716,
+                
                 'OFFICE_CD' => 352230,
                 'OFFICE_DESC' => 'Projects Hetauda RO',
                 'UPPER_OFFICE_CD' => 352200,
@@ -10037,7 +10037,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 717,
+                
                 'OFFICE_CD' => 352231,
                 'OFFICE_DESC' => 'Taulihawa Gorusinge 33KV Dedicated Feeder',
                 'UPPER_OFFICE_CD' => 352220,
@@ -10051,7 +10051,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 718,
+                
                 'OFFICE_CD' => 352232,
                 'OFFICE_DESC' => 'Chandrauta Krishnanagar 33KV Dedicated Feeder',
                 'UPPER_OFFICE_CD' => 352220,
@@ -10065,7 +10065,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 719,
+                
                 'OFFICE_CD' => 352235,
                 'OFFICE_DESC' => "CHATIBAN 33\/11KV SUBSTAION PROJECT",
                 'UPPER_OFFICE_CD' => 352230,
@@ -10079,7 +10079,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 720,
+                
                 'OFFICE_CD' => 352240,
                 'OFFICE_DESC' => 'Projects Kathmandu RO',
                 'UPPER_OFFICE_CD' => 352200,
@@ -10093,7 +10093,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 721,
+                
                 'OFFICE_CD' => 352241,
                 'OFFICE_DESC' => 'KHIMTI MANTHALI 33KV TLP',
                 'UPPER_OFFICE_CD' => 352240,
@@ -10107,7 +10107,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 722,
+                
                 'OFFICE_CD' => 352242,
                 'OFFICE_DESC' => 'MANTHALI-SANGHUTAR 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 352240,
@@ -10121,7 +10121,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 723,
+                
                 'OFFICE_CD' => 352243,
                 'OFFICE_DESC' => 'BELKOT - KUMARI - CHAUTHE ELECTRIFICATION',
                 'UPPER_OFFICE_CD' => 352240,
@@ -10135,7 +10135,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 724,
+                
                 'OFFICE_CD' => 352244,
                 'OFFICE_DESC' => 'BHADRUTAR - TALAKHU ELECTRIFICATION',
                 'UPPER_OFFICE_CD' => 352240,
@@ -10149,7 +10149,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 725,
+                
                 'OFFICE_CD' => 352246,
                 'OFFICE_DESC' => 'CHAINPUR-SITALPATI (MANEBHANGYANG) SHANKHUWASABHA 33KV TLP',
                 'UPPER_OFFICE_CD' => 352250,
@@ -10163,7 +10163,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 726,
+                
                 'OFFICE_CD' => 352247,
                 'OFFICE_DESC' => 'KATARI 33KV SS TLP',
                 'UPPER_OFFICE_CD' => 352250,
@@ -10177,7 +10177,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 727,
+                
                 'OFFICE_CD' => 352248,
                 'OFFICE_DESC' => 'BHOJPUR RURAL ELECTRIFICATION, (ADHURO) OTHER PROJECTS',
                 'UPPER_OFFICE_CD' => 352250,
@@ -10191,7 +10191,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 728,
+                
                 'OFFICE_CD' => 352249,
                 'OFFICE_DESC' => 'ILAM - PHIDIM - TAPLEJUNG 33KV TLP',
                 'UPPER_OFFICE_CD' => 352250,
@@ -10205,7 +10205,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 729,
+                
                 'OFFICE_CD' => 352250,
                 'OFFICE_DESC' => 'Projects Biratnagar RO',
                 'UPPER_OFFICE_CD' => 352200,
@@ -10219,7 +10219,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 730,
+                
                 'OFFICE_CD' => 352251,
                 'OFFICE_DESC' => 'BHOJPUR, RANIBAS - BALARDAHA 33KV TLP',
                 'UPPER_OFFICE_CD' => 352250,
@@ -10233,7 +10233,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 731,
+                
                 'OFFICE_CD' => 352252,
                 'OFFICE_DESC' => 'BOKHIM-LEKHARK ELECTRIFICATION PROJECT, BHOJPUR',
                 'UPPER_OFFICE_CD' => 352250,
@@ -10247,7 +10247,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 732,
+                
                 'OFFICE_CD' => 352253,
                 'OFFICE_DESC' => 'DHANAKUTA-HILE-LEGUWA-BHOJPUR 33 KV TLP',
                 'UPPER_OFFICE_CD' => 352250,
@@ -10261,7 +10261,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 733,
+                
                 'OFFICE_CD' => 352254,
                 'OFFICE_DESC' => 'DHANAKUTA-HILE-RANIBAS, BHOJPUR 33 KV TLP',
                 'UPPER_OFFICE_CD' => 352250,
@@ -10275,7 +10275,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 734,
+                
                 'OFFICE_CD' => 352255,
                 'OFFICE_DESC' => 'MUGA-GHODETAR, BHOJPUR 11 KV TLP',
                 'UPPER_OFFICE_CD' => 352250,
@@ -10289,7 +10289,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 735,
+                
                 'OFFICE_CD' => 352256,
                 'OFFICE_DESC' => 'PANCHTHAR DISTRIBUTION SUB-STATION PROJECT',
                 'UPPER_OFFICE_CD' => 352250,
@@ -10303,7 +10303,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 736,
+                
                 'OFFICE_CD' => 352257,
                 'OFFICE_DESC' => 'PILUWA SABSTATION UPGRADING PROJECT',
                 'UPPER_OFFICE_CD' => 352250,
@@ -10317,7 +10317,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 737,
+                
                 'OFFICE_CD' => 352258,
                 'OFFICE_DESC' => "AATHRAI GABISA-SANKRANTI BAZAR 33\/11KV SS PROJECT",
                 'UPPER_OFFICE_CD' => 352250,
@@ -10331,7 +10331,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 738,
+                
                 'OFFICE_CD' => 352259,
                 'OFFICE_DESC' => 'TUMLINGTAR-DINGLA, BHOJPUR 33KV TLP',
                 'UPPER_OFFICE_CD' => 352250,
@@ -10345,7 +10345,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 739,
+                
                 'OFFICE_CD' => 352260,
                 'OFFICE_DESC' => 'Projects Pokhara RO',
                 'UPPER_OFFICE_CD' => 352200,
@@ -10359,7 +10359,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 740,
+                
                 'OFFICE_CD' => 352261,
                 'OFFICE_DESC' => 'BENI DARBANG MYAGDI 33KV TLP',
                 'UPPER_OFFICE_CD' => 352260,
@@ -10373,7 +10373,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 741,
+                
                 'OFFICE_CD' => 352262,
                 'OFFICE_DESC' => 'RIGHA KHARBANG 33KV TLP',
                 'UPPER_OFFICE_CD' => 352260,
@@ -10387,7 +10387,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 742,
+                
                 'OFFICE_CD' => 352263,
                 'OFFICE_DESC' => 'SINDHUBESI LAMJUNG LEKHNATH 33KV TLP',
                 'UPPER_OFFICE_CD' => 352260,
@@ -10401,7 +10401,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 743,
+                
                 'OFFICE_CD' => 352264,
                 'OFFICE_DESC' => 'JOMSOM LOMANGTHAN UPPALOW MUSTANG 33KV TLP',
                 'UPPER_OFFICE_CD' => 352260,
@@ -10415,7 +10415,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 744,
+                
                 'OFFICE_CD' => 352265,
                 'OFFICE_DESC' => 'UDIPUR BESISAHAR MANANG 33KV TLP',
                 'UPPER_OFFICE_CD' => 352260,
@@ -10429,7 +10429,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 745,
+                
                 'OFFICE_CD' => 352266,
                 'OFFICE_DESC' => "LIGLIGKOT 33KV S\/S PROJECT",
                 'UPPER_OFFICE_CD' => 352260,
@@ -10443,7 +10443,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 746,
+                
                 'OFFICE_CD' => 352267,
                 'OFFICE_DESC' => 'GALKOT SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 352260,
@@ -10457,7 +10457,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 747,
+                
                 'OFFICE_CD' => 352268,
                 'OFFICE_DESC' => 'KHAIRENITAR 33KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 352260,
@@ -10471,7 +10471,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 748,
+                
                 'OFFICE_CD' => 352269,
                 'OFFICE_DESC' => "GYAMPESHAL 33\/11KV S\/S PROJECT",
                 'UPPER_OFFICE_CD' => 352260,
@@ -10485,7 +10485,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 749,
+                
                 'OFFICE_CD' => 352271,
                 'OFFICE_DESC' => 'SIRANDANDA BHACHHEK LINE DISTRIBUTION PROJECT',
                 'UPPER_OFFICE_CD' => 352260,
@@ -10499,7 +10499,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 750,
+                
                 'OFFICE_CD' => 352272,
                 'OFFICE_DESC' => 'BHORLETAR SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 352260,
@@ -10513,7 +10513,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 751,
+                
                 'OFFICE_CD' => 352273,
                 'OFFICE_DESC' => 'LEKHNATH DISTRIBUTION SYSTEM REINFORCEMENT PROJECT',
                 'UPPER_OFFICE_CD' => 352260,
@@ -10527,7 +10527,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 752,
+                
                 'OFFICE_CD' => 352274,
                 'OFFICE_DESC' => "ALAMDEVI-DIRGHA CHANDIBHANJYANG 11\/422 PROJECT",
                 'UPPER_OFFICE_CD' => 352260,
@@ -10541,7 +10541,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 753,
+                
                 'OFFICE_CD' => 352275,
                 'OFFICE_DESC' => 'TATOPANI POWER HOUSE REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 352260,
@@ -10555,7 +10555,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 754,
+                
                 'OFFICE_CD' => 352280,
                 'OFFICE_DESC' => 'Project Nepalgunj RO',
                 'UPPER_OFFICE_CD' => 352200,
@@ -10569,7 +10569,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 755,
+                
                 'OFFICE_CD' => 352281,
                 'OFFICE_DESC' => 'DANK BHALUWANG 33KB TLP',
                 'UPPER_OFFICE_CD' => 352280,
@@ -10583,7 +10583,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 756,
+                
                 'OFFICE_CD' => 352282,
                 'OFFICE_DESC' => 'TULSIPUR KAPOORKOT 33KV TLP',
                 'UPPER_OFFICE_CD' => 352280,
@@ -10597,7 +10597,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 757,
+                
                 'OFFICE_CD' => 352283,
                 'OFFICE_DESC' => 'KAPURKOT KOILACHOR 33KV TLP',
                 'UPPER_OFFICE_CD' => 352280,
@@ -10611,7 +10611,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 758,
+                
                 'OFFICE_CD' => 352284,
                 'OFFICE_DESC' => 'KALIKOT SHP REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 352280,
@@ -10625,7 +10625,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 759,
+                
                 'OFFICE_CD' => 352285,
                 'OFFICE_DESC' => "PYUTHAN 33KV TRANSMISSION LINE AND S\/S PROJECT",
                 'UPPER_OFFICE_CD' => 352280,
@@ -10639,7 +10639,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 760,
+                
                 'OFFICE_CD' => 352286,
                 'OFFICE_DESC' => 'BIJUWAR BADIKOT TRANSMISSION LINE STRENGHTENING PROJECT',
                 'UPPER_OFFICE_CD' => 352280,
@@ -10653,7 +10653,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 761,
+                
                 'OFFICE_CD' => 352287,
                 'OFFICE_DESC' => 'SERI DAILEKH TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 352280,
@@ -10667,7 +10667,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 762,
+                
                 'OFFICE_CD' => 352290,
                 'OFFICE_DESC' => 'Project Attaria RO',
                 'UPPER_OFFICE_CD' => 352200,
@@ -10681,7 +10681,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 763,
+                
                 'OFFICE_CD' => 352291,
                 'OFFICE_DESC' => 'DIPAYAL-SANFEBAGAR-MANM-JUMLA 33KV TLP',
                 'UPPER_OFFICE_CD' => 352290,
@@ -10695,7 +10695,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 764,
+                
                 'OFFICE_CD' => 352292,
                 'OFFICE_DESC' => 'KHORPE-BAITADA-CHAINPUR 33KV TLP',
                 'UPPER_OFFICE_CD' => 352290,
@@ -10709,7 +10709,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 765,
+                
                 'OFFICE_CD' => 352293,
                 'OFFICE_DESC' => 'SANFEBAGAR, ACHHAM - MARTADI, BAITADI 33KV TLP',
                 'UPPER_OFFICE_CD' => 352290,
@@ -10723,7 +10723,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 766,
+                
                 'OFFICE_CD' => 352294,
                 'OFFICE_DESC' => 'SANFEBAGAR, DIPAYAL -CHAMARA CHAUTARA 33KV TLP',
                 'UPPER_OFFICE_CD' => 352290,
@@ -10737,7 +10737,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 767,
+                
                 'OFFICE_CD' => 352295,
                 'OFFICE_DESC' => 'MARTADI (BAJURA) - GAMGADI (MUGU) 33KV TLP',
                 'UPPER_OFFICE_CD' => 352290,
@@ -10751,7 +10751,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 768,
+                
                 'OFFICE_CD' => 352296,
                 'OFFICE_DESC' => 'BALANCH (GOKULESHWOR)-KHALANGA(DARCHULA 33KV TLP',
                 'UPPER_OFFICE_CD' => 352290,
@@ -10765,7 +10765,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 769,
+                
                 'OFFICE_CD' => 352297,
                 'OFFICE_DESC' => 'CHAUMALA, JHALARI BELAURI JOSHIPUR SS PROJECT',
                 'UPPER_OFFICE_CD' => 352290,
@@ -10779,7 +10779,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 770,
+                
                 'OFFICE_CD' => 352298,
                 'OFFICE_DESC' => 'CHANDANI SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 352290,
@@ -10793,7 +10793,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 771,
+                
                 'OFFICE_CD' => 352299,
                 'OFFICE_DESC' => "PAHALMANPUR-KAILALI (UDASIPUR) 33KV SS \/ TLP",
                 'UPPER_OFFICE_CD' => 352290,
@@ -10807,7 +10807,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 772,
+                
                 'OFFICE_CD' => 352300,
                 'OFFICE_DESC' => 'DMD GENERATION SMALL PROJECTS',
                 'UPPER_OFFICE_CD' => 350000,
@@ -10821,7 +10821,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 773,
+                
                 'OFFICE_CD' => 352311,
                 'OFFICE_DESC' => 'HETAUDA DIESEL PLANT REHAB RPOJECT',
                 'UPPER_OFFICE_CD' => 352300,
@@ -10835,7 +10835,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 774,
+                
                 'OFFICE_CD' => 352500,
                 'OFFICE_DESC' => 'DMD ENGINEERING SMALL PROJECTS',
                 'UPPER_OFFICE_CD' => 350000,
@@ -10849,7 +10849,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 775,
+                
                 'OFFICE_CD' => 352521,
                 'OFFICE_DESC' => 'UPPER SETI STORAGE HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -10863,7 +10863,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 776,
+                
                 'OFFICE_CD' => 352522,
                 'OFFICE_DESC' => 'NALSHYAUGAD STORAGE HYDROELEC PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -10877,7 +10877,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 777,
+                
                 'OFFICE_CD' => 352523,
                 'OFFICE_DESC' => 'TAMORE STORAGE HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -10891,7 +10891,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 778,
+                
                 'OFFICE_CD' => 352524,
                 'OFFICE_DESC' => 'STORAGE PROJECTS MASTER PLAN',
                 'UPPER_OFFICE_CD' => 352500,
@@ -10905,7 +10905,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 779,
+                
                 'OFFICE_CD' => 352525,
                 'OFFICE_DESC' => 'UPPER TRISHULI 3B HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -10919,7 +10919,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 780,
+                
                 'OFFICE_CD' => 352526,
                 'OFFICE_DESC' => 'TAMAKOSHI V HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -10933,7 +10933,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 781,
+                
                 'OFFICE_CD' => 352527,
                 'OFFICE_DESC' => 'BUDHIGANDAKI STORAGE HYDROELECTRICT PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -10947,7 +10947,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 782,
+                
                 'OFFICE_CD' => 352528,
                 'OFFICE_DESC' => 'MEDIUM HYDROELECTRIC STUDY PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -10961,7 +10961,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 783,
+                
                 'OFFICE_CD' => 352529,
                 'OFFICE_DESC' => 'Aadhikhola Storage Hydroelectric Project',
                 'UPPER_OFFICE_CD' => 352500,
@@ -10975,7 +10975,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 784,
+                
                 'OFFICE_CD' => 352531,
                 'OFFICE_DESC' => 'Bagmati-Kulekhani-Pharping Pump Storage Project',
                 'UPPER_OFFICE_CD' => 352500,
@@ -10989,7 +10989,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 785,
+                
                 'OFFICE_CD' => 352532,
                 'OFFICE_DESC' => 'Upper Arun Hydroelectric Study Project',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11003,7 +11003,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 786,
+                
                 'OFFICE_CD' => 352533,
                 'OFFICE_DESC' => 'Kaligandaki Model Test Project',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11017,7 +11017,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 787,
+                
                 'OFFICE_CD' => 352541,
                 'OFFICE_DESC' => 'BAGMATI STORAGE PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11031,7 +11031,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 788,
+                
                 'OFFICE_CD' => 352542,
                 'OFFICE_DESC' => 'DUDHKOSHI STORAGE PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11045,7 +11045,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 789,
+                
                 'OFFICE_CD' => 352543,
                 'OFFICE_DESC' => 'KALIGANDAKI STORAGE PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11059,7 +11059,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 790,
+                
                 'OFFICE_CD' => 352544,
                 'OFFICE_DESC' => 'INDRAWATI STORAGE PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11073,7 +11073,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 791,
+                
                 'OFFICE_CD' => 352545,
                 'OFFICE_DESC' => 'NISTI-PANAHA STORAGE PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11087,7 +11087,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 792,
+                
                 'OFFICE_CD' => 352546,
                 'OFFICE_DESC' => 'GAUDIKHOLA KHADGAKOT STORAGE PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11101,7 +11101,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 793,
+                
                 'OFFICE_CD' => 352547,
                 'OFFICE_DESC' => 'UPPER MODI HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11115,7 +11115,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 794,
+                
                 'OFFICE_CD' => 352548,
                 'OFFICE_DESC' => 'UTTAR GANGA STORAGE PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11129,7 +11129,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 795,
+                
                 'OFFICE_CD' => 352551,
                 'OFFICE_DESC' => 'Babai Drilling Project',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11143,7 +11143,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 796,
+                
                 'OFFICE_CD' => 352552,
                 'OFFICE_DESC' => 'Andhikhola Water Storage Old',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11157,7 +11157,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 797,
+                
                 'OFFICE_CD' => 352553,
                 'OFFICE_DESC' => 'Tamakoshi III',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11171,7 +11171,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 798,
+                
                 'OFFICE_CD' => 352554,
                 'OFFICE_DESC' => 'Wind Power',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11185,7 +11185,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 799,
+                
                 'OFFICE_CD' => 352555,
                 'OFFICE_DESC' => 'Upper Bheri Hydroelectric Project',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11199,7 +11199,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 800,
+                
                 'OFFICE_CD' => 352556,
                 'OFFICE_DESC' => 'Chainpur Seti Hydroelectric Project',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11213,7 +11213,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 801,
+                
                 'OFFICE_CD' => 352557,
                 'OFFICE_DESC' => 'POWER SECTOR REFORM AND SUSTAINABLE HYDROPOWER DEVELOPMENT PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11227,7 +11227,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 802,
+                
                 'OFFICE_CD' => 352558,
                 'OFFICE_DESC' => 'BEGNAS RUPA STORAGE HYDROELECTRIC PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11241,7 +11241,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 803,
+                
                 'OFFICE_CD' => 352559,
                 'OFFICE_DESC' => 'HYDROELECTRICITY STUDY PROJECT',
                 'UPPER_OFFICE_CD' => 352500,
@@ -11255,7 +11255,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 804,
+                
                 'OFFICE_CD' => 352700,
                 'OFFICE_DESC' => 'DMD PLANNING AND INFOTECH SMALL PROJECTS',
                 'UPPER_OFFICE_CD' => 350000,
@@ -11269,7 +11269,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 805,
+                
                 'OFFICE_CD' => 353500,
                 'OFFICE_DESC' => 'PROJECT MANAGEMENT DIRECTORATE',
                 'UPPER_OFFICE_CD' => 350000,
@@ -11283,7 +11283,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 806,
+                
                 'OFFICE_CD' => 353510,
                 'OFFICE_DESC' => 'PROJECT MANAGEMENT DIRECTORATE ADB 1',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11297,7 +11297,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 807,
+                
                 'OFFICE_CD' => 353511,
                 'OFFICE_DESC' => 'Community Rural Electrification',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11311,7 +11311,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 808,
+                
                 'OFFICE_CD' => 353512,
                 'OFFICE_DESC' => 'KATHMANDU VALLEY TRANSMISSION CAPACITY REINFORCEMENT PROJECT',
                 'UPPER_OFFICE_CD' => 353540,
@@ -11325,7 +11325,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 809,
+                
                 'OFFICE_CD' => 353513,
                 'OFFICE_DESC' => 'LAPSI PHEDI AND CHANGHUNARAYAN SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 353540,
@@ -11339,7 +11339,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 810,
+                
                 'OFFICE_CD' => 353514,
                 'OFFICE_DESC' => 'KATHMANDU VALLEY EAST & SOUTH DISTRIBUTION SYSTEM ENHANCEMENT PROJECT',
                 'UPPER_OFFICE_CD' => 353540,
@@ -11353,7 +11353,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 811,
+                
                 'OFFICE_CD' => 353515,
                 'OFFICE_DESC' => 'KATHMANDU VALLEY SMART METERING PROJECT',
                 'UPPER_OFFICE_CD' => 353540,
@@ -11367,7 +11367,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 812,
+                
                 'OFFICE_CD' => 353516,
                 'OFFICE_DESC' => 'TRANSMISSION & DISTRIBUTION SUPERVISION CONSULTANT PROJECT',
                 'UPPER_OFFICE_CD' => 353540,
@@ -11381,7 +11381,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 813,
+                
                 'OFFICE_CD' => 353517,
                 'OFFICE_DESC' => 'TANAHU ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 353510,
@@ -11395,7 +11395,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 814,
+                
                 'OFFICE_CD' => 353518,
                 'OFFICE_DESC' => 'DISTRIBUTION TRANSFORMER PROCUREMENT PROJECT',
                 'UPPER_OFFICE_CD' => 353511,
@@ -11409,7 +11409,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 815,
+                
                 'OFFICE_CD' => 353519,
                 'OFFICE_DESC' => 'KHIMTI BARABISE LAPSIPHEDI 400 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11423,7 +11423,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 816,
+                
                 'OFFICE_CD' => 353520,
                 'OFFICE_DESC' => 'ENERGY ACCESS AND EFFICIENCY IMPROVEMENT PROJECT',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11437,7 +11437,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 817,
+                
                 'OFFICE_CD' => 353521,
                 'OFFICE_DESC' => 'ARUNPUL TINGLA HUB NEW KHIMTI TAMAKOSHI3 SUNKOSHI HUB DHALKABAR 400KV TLP',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11451,7 +11451,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 818,
+                
                 'OFFICE_CD' => 353522,
                 'OFFICE_DESC' => 'KATHMANDU VALLEY SUBSTATION AUTOMATION PROJECT',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11465,7 +11465,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 819,
+                
                 'OFFICE_CD' => 353523,
                 'OFFICE_DESC' => 'PROVENCE-2 RURAL ELECTRIFICATION & DISTRIBUTION SYSTEM AUGMENTATION PROJECT',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11479,7 +11479,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 820,
+                
                 'OFFICE_CD' => 353524,
                 'OFFICE_DESC' => 'DISTRIBUTION SYSTEM CONTROL AND DATA CENTER PROJECT',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11493,7 +11493,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 821,
+                
                 'OFFICE_CD' => 353525,
                 'OFFICE_DESC' => 'Lalitpur Bhaktapur Distribution System Reinforcement Project',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11507,7 +11507,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 822,
+                
                 'OFFICE_CD' => 353526,
                 'OFFICE_DESC' => 'HETAUDA-PARWANIPUR-POKHARIYA 132 KV TLP',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11521,7 +11521,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 823,
+                
                 'OFFICE_CD' => 353527,
                 'OFFICE_DESC' => 'Pokhara Bharatpur Distribution System Reinforcement Project',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11535,7 +11535,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 824,
+                
                 'OFFICE_CD' => 353528,
                 'OFFICE_DESC' => 'KATHMANDU VALLEY WEST DISTRIBUTION SYSTEM REINFORCEMENT PROJECT',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11549,7 +11549,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 825,
+                
                 'OFFICE_CD' => 353529,
                 'OFFICE_DESC' => 'SOCIAL SAFEGUARD AND ENVIRONMENTAL MANAGEMENT DEPT',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11563,7 +11563,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 826,
+                
                 'OFFICE_CD' => 353530,
                 'OFFICE_DESC' => 'Electricity Transmission Expansion and Supply Improvement Project',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11577,7 +11577,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 827,
+                
                 'OFFICE_CD' => 353531,
                 'OFFICE_DESC' => 'ELECTRIC VEHICLE CHARGING STATION INFRASTRUCTURE DEVELOPEMENT PROJECT',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11591,7 +11591,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 828,
+                
                 'OFFICE_CD' => 353532,
                 'OFFICE_DESC' => "ARUNKHOLA DUMKIBAS 132\/33 KV SUB-STATION PROJECT",
                 'UPPER_OFFICE_CD' => 353500,
@@ -11605,7 +11605,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 829,
+                
                 'OFFICE_CD' => 353533,
                 'OFFICE_DESC' => 'TRANSMISSION & DISTRIBUTION SYSTEM STRENGTHINING SUPERVISION CONSULTANCY PROJECT',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11619,7 +11619,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 830,
+                
                 'OFFICE_CD' => 353534,
                 'OFFICE_DESC' => 'GRID SUBSTATION AUTOMATION PROJECT - PHASE 2',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11633,7 +11633,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 831,
+                
                 'OFFICE_CD' => 353535,
                 'OFFICE_DESC' => 'Kohalpur-Nepalganja 132kV Transmission Line Project',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11647,7 +11647,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 832,
+                
                 'OFFICE_CD' => 353540,
                 'OFFICE_DESC' => 'PROJECT PREPARATION FACILITY PROJECT',
                 'UPPER_OFFICE_CD' => 353500,
@@ -11661,7 +11661,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 833,
+                
                 'OFFICE_CD' => 354100,
                 'OFFICE_DESC' => 'DMD DCS SMALL PROJECTS 3',
                 'UPPER_OFFICE_CD' => 350000,
@@ -11675,7 +11675,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 834,
+                
                 'OFFICE_CD' => 354111,
                 'OFFICE_DESC' => 'SITALPATI MUSIKOT 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11689,7 +11689,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 835,
+                
                 'OFFICE_CD' => 354112,
                 'OFFICE_DESC' => 'CHHINCHU RAKAM JAJARKOT 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11703,7 +11703,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 836,
+                
                 'OFFICE_CD' => 354113,
                 'OFFICE_DESC' => 'DADELDHURA BAITADI 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11717,7 +11717,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 837,
+                
                 'OFFICE_CD' => 354114,
                 'OFFICE_DESC' => 'GHORAHI HOLLERI 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11731,7 +11731,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 838,
+                
                 'OFFICE_CD' => 354115,
                 'OFFICE_DESC' => 'UDIPUR BESISAHAR MANANG 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11745,7 +11745,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 839,
+                
                 'OFFICE_CD' => 354116,
                 'OFFICE_DESC' => 'DIPAYAL SANPHEBAGAR MANMA JUMLA 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11759,7 +11759,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 840,
+                
                 'OFFICE_CD' => 354117,
                 'OFFICE_DESC' => 'KAPURKOT KOLACHAUR 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11773,7 +11773,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 841,
+                
                 'OFFICE_CD' => 354118,
                 'OFFICE_DESC' => 'SANPHEBAGAR MARTADI 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11787,7 +11787,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 842,
+                
                 'OFFICE_CD' => 354119,
                 'OFFICE_DESC' => 'MARTADI GAMGADI 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11801,7 +11801,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 843,
+                
                 'OFFICE_CD' => 354121,
                 'OFFICE_DESC' => 'KHORPE CHAINPUR 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11815,7 +11815,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 844,
+                
                 'OFFICE_CD' => 354122,
                 'OFFICE_DESC' => 'RAJAPUR 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11829,7 +11829,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 845,
+                
                 'OFFICE_CD' => 354123,
                 'OFFICE_DESC' => 'BOJHAPOKHARI NAWALPARASI 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11843,7 +11843,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 846,
+                
                 'OFFICE_CD' => 354124,
                 'OFFICE_DESC' => 'DANG BHALUWANG 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11857,7 +11857,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 847,
+                
                 'OFFICE_CD' => 354125,
                 'OFFICE_DESC' => 'DAILEKH SUBSTATION AND RE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11871,7 +11871,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 848,
+                
                 'OFFICE_CD' => 354126,
                 'OFFICE_DESC' => 'GALKOT 33 KV SUBSTATION PROJECT BAGLUNG',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11885,7 +11885,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 849,
+                
                 'OFFICE_CD' => 354127,
                 'OFFICE_DESC' => 'SURKHET BAJURA 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11899,7 +11899,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 850,
+                
                 'OFFICE_CD' => 354128,
                 'OFFICE_DESC' => 'KHAIRENITAR 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11913,7 +11913,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 851,
+                
                 'OFFICE_CD' => 354129,
                 'OFFICE_DESC' => 'THADA 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11927,7 +11927,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 852,
+                
                 'OFFICE_CD' => 354131,
                 'OFFICE_DESC' => 'UDIPUR SUBSTATION UPGRADE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11941,7 +11941,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 853,
+                
                 'OFFICE_CD' => 354132,
                 'OFFICE_DESC' => 'TATOPANI SHP REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11955,7 +11955,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 854,
+                
                 'OFFICE_CD' => 354133,
                 'OFFICE_DESC' => 'TINAHU SHP REHABILITATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11969,7 +11969,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 855,
+                
                 'OFFICE_CD' => 354134,
                 'OFFICE_DESC' => 'HELDUNG SHP PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11983,7 +11983,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 856,
+                
                 'OFFICE_CD' => 354135,
                 'OFFICE_DESC' => '33 KV TRANSMISSION LINE STUDY PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -11997,7 +11997,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 857,
+                
                 'OFFICE_CD' => 354136,
                 'OFFICE_DESC' => 'GALWAGHATI SHP PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12011,7 +12011,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 858,
+                
                 'OFFICE_CD' => 354137,
                 'OFFICE_DESC' => 'SHP MASTER PLAN PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12025,7 +12025,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 859,
+                
                 'OFFICE_CD' => 354138,
                 'OFFICE_DESC' => 'JIRIKHIMTI TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12039,7 +12039,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 860,
+                
                 'OFFICE_CD' => 354139,
                 'OFFICE_DESC' => 'TULSIPUR KAPURKOT 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12053,7 +12053,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 861,
+                
                 'OFFICE_CD' => 354141,
                 'OFFICE_DESC' => 'MARKHU SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12067,7 +12067,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 862,
+                
                 'OFFICE_CD' => 354142,
                 'OFFICE_DESC' => 'NAUBISE 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12081,7 +12081,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 863,
+                
                 'OFFICE_CD' => 354143,
                 'OFFICE_DESC' => 'MATATIRTHA MALTA SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12095,7 +12095,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 864,
+                
                 'OFFICE_CD' => 354144,
                 'OFFICE_DESC' => 'RAMGHAT SURKHET 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12109,7 +12109,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 865,
+                
                 'OFFICE_CD' => 354145,
                 'OFFICE_DESC' => 'DHULABARI JHAPA SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12123,7 +12123,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 866,
+                
                 'OFFICE_CD' => 354146,
                 'OFFICE_DESC' => 'RIDI 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12137,7 +12137,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 867,
+                
                 'OFFICE_CD' => 354147,
                 'OFFICE_DESC' => 'PYUTHAN 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12151,7 +12151,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 868,
+                
                 'OFFICE_CD' => 354148,
                 'OFFICE_DESC' => 'SURUNGA JHAPA ILAM PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12165,7 +12165,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 869,
+                
                 'OFFICE_CD' => 354149,
                 'OFFICE_DESC' => 'SOLAR STREETLIGHT PROJECT DHANGADI',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12179,7 +12179,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 870,
+                
                 'OFFICE_CD' => 354151,
                 'OFFICE_DESC' => 'KATAHARI 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12193,7 +12193,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 871,
+                
                 'OFFICE_CD' => 354152,
                 'OFFICE_DESC' => 'BHAGAWANPUR SIRAHA 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12207,7 +12207,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 872,
+                
                 'OFFICE_CD' => 354153,
                 'OFFICE_DESC' => 'PARSA MADI 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12221,7 +12221,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 873,
+                
                 'OFFICE_CD' => 354154,
                 'OFFICE_DESC' => 'TRISHULI SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12235,7 +12235,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 874,
+                
                 'OFFICE_CD' => 354155,
                 'OFFICE_DESC' => 'BISANPUR 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12249,7 +12249,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 875,
+                
                 'OFFICE_CD' => 354156,
                 'OFFICE_DESC' => 'WAKSILA 33 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12263,7 +12263,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 876,
+                
                 'OFFICE_CD' => 354157,
                 'OFFICE_DESC' => 'CHAUTARA SINDHUPALCHOK SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12277,7 +12277,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 877,
+                
                 'OFFICE_CD' => 354158,
                 'OFFICE_DESC' => 'BHARATPUR MADI 33 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12291,7 +12291,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 878,
+                
                 'OFFICE_CD' => 354159,
                 'OFFICE_DESC' => 'MADANKUDARI MAKAIBARI SINGATI PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12305,7 +12305,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 879,
+                
                 'OFFICE_CD' => 354161,
                 'OFFICE_DESC' => 'HAPURE TULSIPUR DUDRAKSA 33 TL AND SS PROJECT (UDHYOG)',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12319,7 +12319,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 880,
+                
                 'OFFICE_CD' => 354162,
                 'OFFICE_DESC' => 'KAPURKOT 33 KV TL AND SS PROJECT -AGNI CEMENT (UDHYOG)',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12333,7 +12333,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 881,
+                
                 'OFFICE_CD' => 354163,
                 'OFFICE_DESC' => 'TULSIPUR KAPURKOT 33 KV TL PROJECT (UDHYOG)',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12347,7 +12347,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 882,
+                
                 'OFFICE_CD' => 354164,
                 'OFFICE_DESC' => "LAMAHI S\/S SAMRAT CEMENT 33 KV TL PROJECT",
                 'UPPER_OFFICE_CD' => 354100,
@@ -12361,7 +12361,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 883,
+                
                 'OFFICE_CD' => 354165,
                 'OFFICE_DESC' => 'DISTRIBUTION SYSTEM REHABILITATION PROJECT (URJA SANKAT)',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12375,7 +12375,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 884,
+                
                 'OFFICE_CD' => 354166,
                 'OFFICE_DESC' => 'SMART METERING SMART GRID PROJECT',
                 'UPPER_OFFICE_CD' => 354100,
@@ -12389,7 +12389,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 885,
+                
                 'OFFICE_CD' => 354167,
                 'OFFICE_DESC' => "33\/11 KV SUBSTATION REHABILIATION PROJECT",
                 'UPPER_OFFICE_CD' => 354100,
@@ -12403,7 +12403,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 886,
+                
                 'OFFICE_CD' => 354168,
                 'OFFICE_DESC' => "NIJGADH KHOKANA 33\/11 KV SUB-STATION CONSTRUCTION PROJECT",
                 'UPPER_OFFICE_CD' => 354100,
@@ -12417,7 +12417,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 887,
+                
                 'OFFICE_CD' => 354200,
                 'OFFICE_DESC' => 'DMD TRANSMISSION PROJECTS - 2',
                 'UPPER_OFFICE_CD' => 350000,
@@ -12431,7 +12431,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 888,
+                
                 'OFFICE_CD' => 354210,
                 'OFFICE_DESC' => 'DMD TRANSMISSION PROJECTS - 2',
                 'UPPER_OFFICE_CD' => 353500,
@@ -12445,7 +12445,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 889,
+                
                 'OFFICE_CD' => 354211,
                 'OFFICE_DESC' => 'TRISHULI DEVIGHAT TL REINFORCEMENT PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12459,7 +12459,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 890,
+                
                 'OFFICE_CD' => 354212,
                 'OFFICE_DESC' => 'DADAKHET (MYAGDI) RAHUGHAT 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12473,7 +12473,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 891,
+                
                 'OFFICE_CD' => 354213,
                 'OFFICE_DESC' => 'Kohalpur Surkhet Dailekh Kalikot Jumla 132 KV TLP',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12487,7 +12487,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 892,
+                
                 'OFFICE_CD' => 354214,
                 'OFFICE_DESC' => 'GHORAHI MADICHAUR 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12501,7 +12501,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 893,
+                
                 'OFFICE_CD' => 354215,
                 'OFFICE_DESC' => 'NAWALPUR (LALBANDI) 132 KV SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12515,7 +12515,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 894,
+                
                 'OFFICE_CD' => 354216,
                 'OFFICE_DESC' => 'TRANSMISSION ERS SYSTEM PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12529,7 +12529,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 895,
+                
                 'OFFICE_CD' => 354217,
                 'OFFICE_DESC' => 'BHAKTAPUR BANESHOR PATAN 66 KV  CONDUCTOR UPGRADING PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12543,7 +12543,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 896,
+                
                 'OFFICE_CD' => 354218,
                 'OFFICE_DESC' => "LOHARPATTI 132\/33 KV SUBSTATION PROJECT",
                 'UPPER_OFFICE_CD' => 354210,
@@ -12557,7 +12557,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 897,
+                
                 'OFFICE_CD' => 354219,
                 'OFFICE_DESC' => 'TRISHULI 3B JHARLANG MALEKHU 220 KV  TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12571,7 +12571,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 898,
+                
                 'OFFICE_CD' => 354221,
                 'OFFICE_DESC' => 'CHILIME HUB KERUNG 400 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12585,7 +12585,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 899,
+                
                 'OFFICE_CD' => 354222,
                 'OFFICE_DESC' => 'RUPAGADH WEST SETI PAHALWANPUR 400 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12599,7 +12599,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 900,
+                
                 'OFFICE_CD' => 354223,
                 'OFFICE_DESC' => 'POWER EFFICIENCY PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12613,7 +12613,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 901,
+                
                 'OFFICE_CD' => 354224,
                 'OFFICE_DESC' => 'KATHMANDU VALLEY CENTRAL & NORTHERN DISTRIBUTION SYSTEM ENHANCEMENT PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12627,7 +12627,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 902,
+                
                 'OFFICE_CD' => 354226,
                 'OFFICE_DESC' => 'CHAMELIYA SYAULE ATTARIYA 132 KV SECOND CIRCUIT TLP',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12641,7 +12641,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 903,
+                
                 'OFFICE_CD' => 354227,
                 'OFFICE_DESC' => 'GHORAHI MADICHAUR 132 KV TL PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12655,7 +12655,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 904,
+                
                 'OFFICE_CD' => 354228,
                 'OFFICE_DESC' => "NAWALPUR 132\/33 KV SUBSTATION PROJECT",
                 'UPPER_OFFICE_CD' => 354210,
@@ -12669,7 +12669,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 905,
+                
                 'OFFICE_CD' => 354229,
                 'OFFICE_DESC' => "DANDAKHET RAHUGHAT 132 KV T\/L PROJECT",
                 'UPPER_OFFICE_CD' => 354210,
@@ -12683,7 +12683,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 906,
+                
                 'OFFICE_CD' => 354232,
                 'OFFICE_DESC' => ' BORANG NAUBISE (RATAMATE) 220 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12697,7 +12697,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 907,
+                
                 'OFFICE_CD' => 354233,
                 'OFFICE_DESC' => 'TRISHULI 3B RATAMATE 220 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12711,7 +12711,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 908,
+                
                 'OFFICE_CD' => 354234,
                 'OFFICE_DESC' => 'TUMLINGTAR SITALPATI 220 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12725,7 +12725,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 909,
+                
                 'OFFICE_CD' => 354235,
                 'OFFICE_DESC' => 'LDC UPGRADE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12739,7 +12739,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 910,
+                
                 'OFFICE_CD' => 354236,
                 'OFFICE_DESC' => 'ARUN INARUWA TINGLA MIRCHAIYA 400 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12753,7 +12753,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 911,
+                
                 'OFFICE_CD' => 354237,
                 'OFFICE_DESC' => 'TINGLA- MIRCHAIYA 400 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12767,7 +12767,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 912,
+                
                 'OFFICE_CD' => 354238,
                 'OFFICE_DESC' => "KERON (MORANG) 132\/33 KV SUBSTATION PROJECT",
                 'UPPER_OFFICE_CD' => 354210,
@@ -12781,7 +12781,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 913,
+                
                 'OFFICE_CD' => 354239,
                 'OFFICE_DESC' => 'AMARPUR DHUNGESANGHU 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12795,7 +12795,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 914,
+                
                 'OFFICE_CD' => 354241,
                 'OFFICE_DESC' => 'DHALKEBAR BALGANGA 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12809,7 +12809,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 915,
+                
                 'OFFICE_CD' => 354242,
                 'OFFICE_DESC' => 'LALBANDI NAWALPUR SALIMPUR 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12823,7 +12823,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 916,
+                
                 'OFFICE_CD' => 354243,
                 'OFFICE_DESC' => 'TRANSMISSION LINE STUDY PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12837,7 +12837,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 917,
+                
                 'OFFICE_CD' => 354244,
                 'OFFICE_DESC' => 'KALIGANDAKI RIDI 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12851,7 +12851,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 918,
+                
                 'OFFICE_CD' => 354245,
                 'OFFICE_DESC' => 'RUPANI BODEBARSAIN 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12865,7 +12865,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 919,
+                
                 'OFFICE_CD' => 354246,
                 'OFFICE_DESC' => 'LAHAN SUKHIPUR 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12879,7 +12879,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 920,
+                
                 'OFFICE_CD' => 354247,
                 'OFFICE_DESC' => 'MAINAHIYA SAMPATIYA 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12893,7 +12893,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 921,
+                
                 'OFFICE_CD' => 354248,
                 'OFFICE_DESC' => 'LAMAHI GHORAHI SUBSTATION EXPANDATION PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12907,7 +12907,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 922,
+                
                 'OFFICE_CD' => 354249,
                 'OFFICE_DESC' => 'BHUMAHI HAKUI 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12921,7 +12921,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 923,
+                
                 'OFFICE_CD' => 354251,
                 'OFFICE_DESC' => "DHARAN 200\/33 KV SUBSTATION PROJECT",
                 'UPPER_OFFICE_CD' => 354210,
@@ -12935,7 +12935,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 924,
+                
                 'OFFICE_CD' => 354252,
                 'OFFICE_DESC' => 'GODAK-ANARMANI 132KV TLP',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12949,7 +12949,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 925,
+                
                 'OFFICE_CD' => 354253,
                 'OFFICE_DESC' => 'GODAK-SOYAK 132 KV TLP',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12963,7 +12963,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 926,
+                
                 'OFFICE_CD' => 354254,
                 'OFFICE_DESC' => "SURKHET 132\/33 KV SUB-STATION PROJECT",
                 'UPPER_OFFICE_CD' => 354210,
@@ -12977,7 +12977,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 927,
+                
                 'OFFICE_CD' => 354255,
                 'OFFICE_DESC' => 'BAFIKOT-KHUNGRI 132 KV TRANSMISSION LINE PROJECT',
                 'UPPER_OFFICE_CD' => 354210,
@@ -12991,7 +12991,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 928,
+                
                 'OFFICE_CD' => 354500,
                 'OFFICE_DESC' => 'DMD DCS PROJECTS - 4',
                 'UPPER_OFFICE_CD' => 350000,
@@ -13005,7 +13005,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 929,
+                
                 'OFFICE_CD' => 354510,
                 'OFFICE_DESC' => 'DMD DCS PROJECTS - 4',
                 'UPPER_OFFICE_CD' => 353500,
@@ -13019,7 +13019,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 930,
+                
                 'OFFICE_CD' => 354511,
                 'OFFICE_DESC' => 'SEVENTH POWER PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13033,7 +13033,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 931,
+                
                 'OFFICE_CD' => 354512,
                 'OFFICE_DESC' => 'LOSS CONTROL PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13047,7 +13047,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 932,
+                
                 'OFFICE_CD' => 354513,
                 'OFFICE_DESC' => 'DUMBRE BESISAHAR RE PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13061,7 +13061,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 933,
+                
                 'OFFICE_CD' => 354514,
                 'OFFICE_DESC' => 'DHADING PRITHVI RAJMARG 33 KV TL PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13075,7 +13075,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 934,
+                
                 'OFFICE_CD' => 354515,
                 'OFFICE_DESC' => 'SINDHULI RAMECHHAP 33 KV TL PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13089,7 +13089,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 935,
+                
                 'OFFICE_CD' => 354516,
                 'OFFICE_DESC' => 'GAIGHAT DIKTEL 33 KV TL PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13103,7 +13103,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 936,
+                
                 'OFFICE_CD' => 354517,
                 'OFFICE_DESC' => 'SAIPU VILLAGE MA VI ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13117,7 +13117,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 937,
+                
                 'OFFICE_CD' => 354518,
                 'OFFICE_DESC' => 'KATHJOR VILLAGE ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13131,7 +13131,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 938,
+                
                 'OFFICE_CD' => 354519,
                 'OFFICE_DESC' => 'BIJULIKOT NAGDAHA ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13145,7 +13145,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 939,
+                
                 'OFFICE_CD' => 354521,
                 'OFFICE_DESC' => 'SANO KIMTANG ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13159,7 +13159,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 940,
+                
                 'OFFICE_CD' => 354522,
                 'OFFICE_DESC' => 'KUMARI DUIPIPAL SUNKHANI TALAKHU GHYANGFEDI ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13173,7 +13173,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 941,
+                
                 'OFFICE_CD' => 354523,
                 'OFFICE_DESC' => 'KHERE MARBU ELECTRIFICATION PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13187,7 +13187,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 942,
+                
                 'OFFICE_CD' => 354524,
                 'OFFICE_DESC' => 'SINGHDEVI RANIBAN ELECTRICITY EXTENTION PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13201,7 +13201,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 943,
+                
                 'OFFICE_CD' => 354525,
                 'OFFICE_DESC' => 'KHURKOT GHURMI 33 KV TL  & SUBSTATION PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13215,7 +13215,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 944,
+                
                 'OFFICE_CD' => 354526,
                 'OFFICE_DESC' => 'RURAL ELECTRIFICATION PROJECT GORKHA',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13229,7 +13229,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 945,
+                
                 'OFFICE_CD' => 354527,
                 'OFFICE_DESC' => 'RURAL ELECTRIFICATION PROJECT RUKUM',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13243,7 +13243,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 946,
+                
                 'OFFICE_CD' => 354528,
                 'OFFICE_DESC' => 'DISTRIBUTION SYSTEM UPGRADE & EXPANSION PROJECT',
                 'UPPER_OFFICE_CD' => 354510,
@@ -13257,7 +13257,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 947,
+                
                 'OFFICE_CD' => 354600,
                 'OFFICE_DESC' => 'HIGH VOLTAGE TRANSMISSION PROJECTS',
                 'UPPER_OFFICE_CD' => 350000,
@@ -13271,7 +13271,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 948,
+                
                 'OFFICE_CD' => 354612,
                 'OFFICE_DESC' => 'HETAUDA DHALKEBAR INARUWA 400 KV SUBSTATION EXTENSION PROJECT',
                 'UPPER_OFFICE_CD' => 354600,
@@ -13285,7 +13285,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 949,
+                
                 'OFFICE_CD' => 359900,
                 'OFFICE_DESC' => 'ADJUSTMENT BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 350000,
@@ -13299,7 +13299,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 950,
+                
                 'OFFICE_CD' => 359998,
                 'OFFICE_DESC' => 'PROJECT OLD BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 359900,
@@ -13313,7 +13313,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 951,
+                
                 'OFFICE_CD' => 359999,
                 'OFFICE_DESC' => 'PROJECT NEW BUDGET CENTERS',
                 'UPPER_OFFICE_CD' => 359900,
@@ -13327,7 +13327,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 952,
+                
                 'OFFICE_CD' => 410000,
                 'OFFICE_DESC' => 'PROJECT MANAGEMENT DIRECTORATE',
                 'UPPER_OFFICE_CD' => 0,
@@ -13341,7 +13341,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 953,
+                
                 'OFFICE_CD' => 411100,
                 'OFFICE_DESC' => 'PROJECT MANAGEMENT DIRECTORATE',
                 'UPPER_OFFICE_CD' => 410000,
@@ -13355,7 +13355,7 @@ class OfficesTableSeeder extends Seeder
                 'DELETED_AT' => null,
             ],
             [
-                'ID' => 954,
+                
                 'OFFICE_CD' => 810000,
                 'OFFICE_DESC' => 'Lease Hold',
                 'UPPER_OFFICE_CD' => 281100,

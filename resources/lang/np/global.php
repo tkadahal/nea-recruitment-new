@@ -424,6 +424,8 @@ return [
         'fields' => [
             'id' => 'क्र.स.',
             'id_helper' => '',
+            'category_id' => 'सेवा',
+            'category_id_helper' => '',
             'group_id' => 'समूह',
             'group_id_helper' => '',
             'title' => 'शीर्षक',
@@ -565,6 +567,9 @@ return [
     'advertisement' => [
         'title' => 'बिज्ञापनहरु',
         'title_singular' => 'बिज्ञापन',
+        'info' => [
+            'examCenterInfo' => 'अधिकृत स्तर को लागी परीक्षा केन्द्र चयन गर्न आवश्यक छैन',
+        ],
         'fields' => [
             'id' => 'क्र.स.',
             'id_helper' => '',

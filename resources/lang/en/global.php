@@ -430,6 +430,8 @@ return [
         'fields' => [
             'id' => 'ID',
             'id_helper' => '',
+            'category_id' => 'Category',
+            'category_id_helper' => '',
             'group_id' => 'Group',
             'group_id_helper' => '',
             'title' => 'Title',
@@ -571,6 +573,9 @@ return [
     'advertisement' => [
         'title' => 'Advertisements',
         'title_singular' => 'Advertisement',
+        'info' => [
+            'examCenterInfo' => 'For Officer Level No need to Select Exam Center',
+        ],
         'fields' => [
             'id' => 'ID',
             'id_helper' => '',

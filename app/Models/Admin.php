@@ -93,4 +93,14 @@ class Admin extends Authenticatable
     {
         return $this->belongsTo(ExamCenter::class);
     }
+
+    public function getIsApproverAttribute()
+    {
+        return $this->roles->contains('4');
+    }
+
+    public function getIsCheckerAttribute()
+    {
+        return $this->roles->contains('3');
+    }
 }

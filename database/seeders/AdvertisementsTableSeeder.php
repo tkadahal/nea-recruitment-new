@@ -16,7 +16,7 @@ class AdvertisementsTableSeeder extends Seeder
 
         DB::table('advertisements')->insert([
             0 => [
-                'id' => 1,
+
                 'category_id' => 2,
                 'group_id' => 6,
                 'sub_group_id' => 14,
@@ -42,7 +42,7 @@ class AdvertisementsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             1 => [
-                'id' => 2,
+
                 'category_id' => 1,
                 'group_id' => 2,
                 'sub_group_id' => 4,
@@ -68,7 +68,7 @@ class AdvertisementsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             2 => [
-                'id' => 3,
+
                 'category_id' => 1,
                 'group_id' => 3,
                 'sub_group_id' => 6,

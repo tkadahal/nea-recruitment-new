@@ -27,9 +27,10 @@
 
         @can('adminMenu_access')
 
-            <li class="c-sidebar-nav-title">{{ trans('global.adminMenu.title') }}</li>
-
             @can('user_management_access')
+
+                <li class="c-sidebar-nav-title">{{ trans('global.adminMenu.title') }}</li>
+
                 <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
                     <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
                         <svg class="c-sidebar-nav-icon">
@@ -321,17 +322,17 @@
                             </svg> {{ trans('global.advertisement.title') }}</a></li>
                 @endcan
 
-                @can('application_access')
-                    <li class="c-sidebar-nav-title">{{ trans('global.applicationMenu.title') }}</li>
+            @endcan
 
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.application.index') }}">
-                            <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-list') }}"
-                                    style="color: yellow">
-                                </use>
-                            </svg> {{ trans('global.application.title') }}</a></li>
-                @endcan
+            @can('application_access')
+                <li class="c-sidebar-nav-title">{{ trans('global.applicationMenu.title') }}</li>
 
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.application.index') }}">
+                        <svg class="c-sidebar-nav-icon">
+                            <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-list') }}"
+                                style="color: yellow">
+                            </use>
+                        </svg> {{ trans('global.application.title') }}</a></li>
             @endcan
 
         @endcan

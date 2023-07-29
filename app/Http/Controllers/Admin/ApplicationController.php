@@ -4,32 +4,34 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Models\Advertisement;
-use App\Models\FiscalYear;
 use App\Models\Payment;
 use Illuminate\View\View;
+use App\Models\FiscalYear;
+use App\Models\Advertisement;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
+use Symfony\Component\HttpFoundation\Response;
 
 class ApplicationController extends Controller
 {
     public function index(): View
     {
+        abort_if(Gate::denies('application_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
         $applications = FiscalYear::has('advertisements')->withCount('advertisements')->get();
-        // $applications = FiscalYear::has('advertisements.applications.payments.paymentVerification')
-        //     ->with(['advertisements' => function ($query) {
-        //         $query->withCount(['applications', 'applications.payments.paymentVerification as is_checked_count' => function ($query) {
-        //             $query->where('is_checked', 1);
-        //         }]);
-        //     }])
-        //     ->withCount('advertisements')
-        //     ->get();
 
         return view('admin.applications.index', compact('applications'));
     }
 
     public function show($id): View
     {
+        $adminId = auth('admin')->id();
+
         $advertisements = Advertisement::query()
+            ->where('fiscal_year_id', $id)
+            ->whereHas('admins', function ($query) use ($adminId) {
+                $query->where('admins.id', $adminId);
+            })
             ->withCount(['applications as total_payments' => function ($query) {
                 $query->whereHas('payments', function ($query) {
                     $query->where('payment_status', '1');
@@ -50,7 +52,6 @@ class ApplicationController extends Controller
                     $query->where('is_rejected', true);
                 });
             }])
-            ->where('fiscal_year_id', $id)
             ->get();
 
         return view('admin.applications.show', compact('advertisements'));

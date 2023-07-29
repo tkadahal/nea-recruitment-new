@@ -13,7 +13,7 @@ class AdminsTableSeeder extends Seeder
     {
         $admins = [
             [
-                'id' => 1,
+
                 'name' => 'IT Department',
                 'email' => 'itd@nea.org.np',
                 'email_verified_at' => null,

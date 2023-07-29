@@ -13,7 +13,7 @@ class UsersTableSeeder extends Seeder
     {
         $users = [
             [
-                'id' => 1,
+
                 'applicant_id' => 100001,
                 'gender_id' => null,
                 'name' => 'Tika Dahal',
@@ -32,7 +32,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2019-09-13 19:21:30',
             ],
             [
-                'id' => 2,
+
                 'applicant_id' => 100002,
                 'gender_id' => null,
                 'name' => 'Arbinda Kumar Thakur',
@@ -51,7 +51,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2019-09-13 19:21:30',
             ],
             [
-                'id' => 3,
+
                 'applicant_id' => 100003,
                 'gender_id' => null,
                 'name' => 'Kashiram Pokhrel',
@@ -70,7 +70,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2019-09-13 19:21:30',
             ],
             [
-                'id' => 4,
+
                 'applicant_id' => 100004,
                 'gender_id' => null,
                 'name' => 'Chandra Kant Adhikari',
@@ -89,7 +89,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2019-09-13 19:21:30',
             ],
             [
-                'id' => 5,
+
                 'applicant_id' => 100005,
                 'gender_id' => null,
                 'name' => 'Shova Bhusal',

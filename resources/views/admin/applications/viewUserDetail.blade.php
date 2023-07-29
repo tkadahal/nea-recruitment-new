@@ -8,33 +8,19 @@
 
 
         <div class="d-flex align-items-center">
-            @if (
-                !$payment->paymentVerification ||
-                    ($payment->paymentVerification->is_checked == false && $payment->paymentVerification->is_rejected == false))
-                <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
-                    @csrf
-                    <input type="hidden" name="action" value="verify">
-                    <input type="hidden" name="payment_id" value="{{ $payment->id }}">
-                    <button type="submit" class="btn btn-success ml-2">
-                        Verify and Send to Approver
-                    </button>
-                </form>
-            @endif
-
-            @if (
-                // Approve condition
-                $payment->paymentVerification &&
-                    $payment->paymentVerification->is_checked == true &&
-                    $payment->paymentVerification->is_approved == false &&
-                    $payment->paymentVerification->is_rejected == false)
-                <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
-                    @csrf
-                    <input type="hidden" name="action" value="approve">
-                    <input type="hidden" name="payment_id" value="{{ $payment->id }}">
-                    <button type="submit" class="btn btn-success ml-2">
-                        Approve
-                    </button>
-                </form>
+            @if (auth('admin')->user()->is_checker)
+                @if (
+                    !$payment->paymentVerification ||
+                        ($payment->paymentVerification->is_checked == false && $payment->paymentVerification->is_rejected == false))
+                    <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
+                        @csrf
+                        <input type="hidden" name="action" value="verify">
+                        <input type="hidden" name="payment_id" value="{{ $payment->id }}">
+                        <button type="submit" class="btn btn-success ml-2">
+                            Verify and Send to Approver
+                        </button>
+                    </form>
+                @endif
             @endif
 
             @if (
@@ -50,20 +36,38 @@
                 </form>
             @endif
 
-            @if (
-                // Send Back to Checker condition
-                $payment->paymentVerification &&
-                    $payment->paymentVerification->is_checked == true &&
-                    $payment->paymentVerification->is_approved == false &&
-                    $payment->paymentVerification->is_rejected == false)
-                <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
-                    @csrf
-                    <input type="hidden" name="action" value="back">
-                    <input type="hidden" name="payment_id" value="{{ $payment->id }}">
-                    <button type="submit" class="btn btn-warning ml-2">
-                        Send Back to Checker
-                    </button>
-                </form>
+            @if (auth('admin')->user()->is_approver)
+                @if (
+                    // Approve condition
+                    $payment->paymentVerification &&
+                        $payment->paymentVerification->is_checked == true &&
+                        $payment->paymentVerification->is_approved == false &&
+                        $payment->paymentVerification->is_rejected == false)
+                    <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
+                        @csrf
+                        <input type="hidden" name="action" value="approve">
+                        <input type="hidden" name="payment_id" value="{{ $payment->id }}">
+                        <button type="submit" class="btn btn-success ml-2">
+                            Approve
+                        </button>
+                    </form>
+                @endif
+
+                @if (
+                    // Send Back to Checker condition
+                    $payment->paymentVerification &&
+                        $payment->paymentVerification->is_checked == true &&
+                        $payment->paymentVerification->is_approved == false &&
+                        $payment->paymentVerification->is_rejected == false)
+                    <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
+                        @csrf
+                        <input type="hidden" name="action" value="back">
+                        <input type="hidden" name="payment_id" value="{{ $payment->id }}">
+                        <button type="submit" class="btn btn-warning ml-2">
+                            Send Back to Checker
+                        </button>
+                    </form>
+                @endif
             @endif
         </div>
 

@@ -4,22 +4,24 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Role;
+use App\Models\Admin;
+use Illuminate\View\View;
+use App\Models\ExamCenter;
+use App\Models\Advertisement;
+use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
-use App\Models\Admin;
-use App\Models\Advertisement;
-use App\Models\ExamCenter;
-use App\Models\Role;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\View\View;
+use Symfony\Component\HttpFoundation\Response;
 
 class AdminController extends Controller
 {
     public function index(): View
     {
-        $this->authorize(ability: 'index', arguments: Admin::class);
+        abort_if(Gate::denies('admin_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $admins = Admin::with(['roles'])->get();
 
@@ -28,7 +30,7 @@ class AdminController extends Controller
 
     public function create(): View
     {
-        $this->authorize(ability: 'create', arguments: Admin::class);
+        abort_if(Gate::denies('admin_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $roles = Role::all()->pluck('title', 'id');
 
@@ -41,7 +43,7 @@ class AdminController extends Controller
 
     public function store(StoreUserRequest $request): RedirectResponse
     {
-        $this->authorize(ability: 'create', arguments: Admin::class);
+        abort_if(Gate::denies('admin_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $admin = Admin::create($request->all());
 
@@ -55,7 +57,7 @@ class AdminController extends Controller
 
     public function edit(Admin $admin): View
     {
-        $this->authorize(ability: 'edit', arguments: Admin::class);
+        abort_if(Gate::denies('admin_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $roles = Role::all()->pluck('title', 'id');
 
@@ -70,7 +72,7 @@ class AdminController extends Controller
 
     public function update(UpdateUserRequest $request, Admin $admin): RedirectResponse
     {
-        $this->authorize(ability: 'edit', arguments: Admin::class);
+        abort_if(Gate::denies('admin_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $admin->update($request->all());
 
@@ -84,7 +86,7 @@ class AdminController extends Controller
 
     public function show(Admin $admin): View
     {
-        $this->authorize(ability: 'view', arguments: Admin::class);
+        abort_if(Gate::denies('admin_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $admin->load(['roles', 'examCenter', 'advertisements']);
 
@@ -93,7 +95,7 @@ class AdminController extends Controller
 
     public function destroy(Admin $admin): RedirectResponse
     {
-        $this->authorize(ability: 'delete', arguments: User::class);
+        abort_if(Gate::denies('admin_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $admin->delete();
 

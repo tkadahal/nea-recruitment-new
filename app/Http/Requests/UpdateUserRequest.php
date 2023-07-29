@@ -21,9 +21,8 @@ class UpdateUserRequest extends FormRequest
     {
         return [
             'exam_center_id' => [
-                'required',
+                'nullable',
                 'integer',
-                'not_in:0',
             ],
             'name' => [
                 'required',

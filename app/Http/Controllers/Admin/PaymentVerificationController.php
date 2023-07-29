@@ -35,7 +35,7 @@ class PaymentVerificationController extends Controller
 
     public function store(StorePaymentVerificationRequest $request): RedirectResponse
     {
-        abort_if(Gate::denies('paymentVerification_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // abort_if(Gate::denies('paymentVerification_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $action = $request->action;
 

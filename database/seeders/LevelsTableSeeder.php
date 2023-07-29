@@ -13,7 +13,7 @@ class LevelsTableSeeder extends Seeder
     {
         $levels = [
             [
-                'id' => 1,
+
                 'group_id' => 1,
                 'title' => 10,
                 'order' => 1,
@@ -22,7 +22,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 2,
+
                 'group_id' => 1,
                 'title' => 9,
                 'order' => 2,
@@ -31,7 +31,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 3,
+
                 'group_id' => 1,
                 'title' => 8,
                 'order' => 3,
@@ -40,7 +40,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 4,
+
                 'group_id' => 1,
                 'title' => 7,
                 'order' => 4,
@@ -49,7 +49,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 5,
+
                 'group_id' => 1,
                 'title' => 5,
                 'order' => 5,
@@ -58,7 +58,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 6,
+
                 'group_id' => 1,
                 'title' => 4,
                 'order' => 6,
@@ -67,7 +67,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 7,
+
                 'group_id' => 1,
                 'title' => 3,
                 'order' => 7,
@@ -76,7 +76,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 8,
+
                 'group_id' => 2,
                 'title' => 10,
                 'order' => 1,
@@ -85,7 +85,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 9,
+
                 'group_id' => 2,
                 'title' => 9,
                 'order' => 2,
@@ -94,7 +94,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 10,
+
                 'group_id' => 2,
                 'title' => 8,
                 'order' => 3,
@@ -103,7 +103,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 11,
+
                 'group_id' => 2,
                 'title' => 7,
                 'order' => 4,
@@ -112,7 +112,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 12,
+
                 'group_id' => 2,
                 'title' => 5,
                 'order' => 5,
@@ -121,7 +121,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 13,
+
                 'group_id' => 2,
                 'title' => 4,
                 'order' => 6,
@@ -130,7 +130,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 14,
+
                 'group_id' => 2,
                 'title' => 3,
                 'order' => 7,
@@ -139,7 +139,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 15,
+
                 'group_id' => 3,
                 'title' => 9,
                 'order' => 1,
@@ -148,7 +148,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 16,
+
                 'group_id' => 3,
                 'title' => 8,
                 'order' => 2,
@@ -157,7 +157,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 17,
+
                 'group_id' => 3,
                 'title' => 7,
                 'order' => 3,
@@ -166,7 +166,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 18,
+
                 'group_id' => 3,
                 'title' => 5,
                 'order' => 4,
@@ -175,7 +175,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 19,
+
                 'group_id' => 3,
                 'title' => 4,
                 'order' => 5,
@@ -184,7 +184,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 20,
+
                 'group_id' => 4,
                 'title' => 10,
                 'order' => 1,
@@ -193,7 +193,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 21,
+
                 'group_id' => 4,
                 'title' => 8,
                 'order' => 2,
@@ -202,7 +202,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 22,
+
                 'group_id' => 4,
                 'title' => 7,
                 'order' => 3,
@@ -211,7 +211,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 23,
+
                 'group_id' => 4,
                 'title' => 5,
                 'order' => 4,
@@ -220,7 +220,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 24,
+
                 'group_id' => 4,
                 'title' => 4,
                 'order' => 5,
@@ -229,7 +229,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 25,
+
                 'group_id' => 5,
                 'title' => 10,
                 'order' => 1,
@@ -238,7 +238,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 26,
+
                 'group_id' => 5,
                 'title' => 9,
                 'order' => 2,
@@ -247,7 +247,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 27,
+
                 'group_id' => 5,
                 'title' => 7,
                 'order' => 3,
@@ -256,7 +256,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 28,
+
                 'group_id' => 5,
                 'title' => 5,
                 'order' => 4,
@@ -265,7 +265,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 29,
+
                 'group_id' => 5,
                 'title' => 4,
                 'order' => 5,
@@ -274,7 +274,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 30,
+
                 'group_id' => 5,
                 'title' => 3,
                 'order' => 6,
@@ -283,7 +283,7 @@ class LevelsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 31,
+
                 'group_id' => 6,
                 'title' => 7,
                 'order' => 1,

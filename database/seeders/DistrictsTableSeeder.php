@@ -15,7 +15,7 @@ class DistrictsTableSeeder extends Seeder
 
         DB::table('districts')->insert([
             0 => [
-                'id' => 1,
+
                 'province_id' => 1,
                 'title' => 'Bhojpur District',
 
@@ -24,7 +24,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             1 => [
-                'id' => 2,
+
                 'province_id' => 1,
                 'title' => 'Dhankuta District',
 
@@ -33,7 +33,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             2 => [
-                'id' => 3,
+
                 'province_id' => 1,
                 'title' => 'Ilam District',
 
@@ -42,7 +42,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             3 => [
-                'id' => 4,
+
                 'province_id' => 1,
                 'title' => 'Jhapa District',
 
@@ -51,7 +51,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             4 => [
-                'id' => 5,
+
                 'province_id' => 1,
                 'title' => 'Khotang District',
 
@@ -60,7 +60,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             5 => [
-                'id' => 6,
+
                 'province_id' => 1,
                 'title' => 'Morang District',
 
@@ -69,7 +69,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             6 => [
-                'id' => 7,
+
                 'province_id' => 1,
                 'title' => 'Okhaldhunga District',
 
@@ -78,7 +78,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             7 => [
-                'id' => 8,
+
                 'province_id' => 1,
                 'title' => 'Panchthar District',
 
@@ -87,7 +87,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             8 => [
-                'id' => 9,
+
                 'province_id' => 1,
                 'title' => 'Sankhuwasabha District',
 
@@ -96,7 +96,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             9 => [
-                'id' => 10,
+
                 'province_id' => 1,
                 'title' => 'Solukhumbu District',
 
@@ -105,7 +105,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             10 => [
-                'id' => 11,
+
                 'province_id' => 1,
                 'title' => 'Sunsari District',
 
@@ -114,7 +114,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             11 => [
-                'id' => 12,
+
                 'province_id' => 1,
                 'title' => 'Taplejung District',
 
@@ -123,7 +123,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             12 => [
-                'id' => 13,
+
                 'province_id' => 1,
                 'title' => 'Tehrathum District',
 
@@ -132,7 +132,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             13 => [
-                'id' => 14,
+
                 'province_id' => 1,
                 'title' => 'Udayapur District',
 
@@ -141,7 +141,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             14 => [
-                'id' => 15,
+
                 'province_id' => 2,
                 'title' => 'Parsa District',
 
@@ -150,7 +150,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             15 => [
-                'id' => 16,
+
                 'province_id' => 2,
                 'title' => 'Bara District',
 
@@ -159,7 +159,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             16 => [
-                'id' => 17,
+
                 'province_id' => 2,
                 'title' => 'Rautahat District',
 
@@ -168,7 +168,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             17 => [
-                'id' => 18,
+
                 'province_id' => 2,
                 'title' => 'Sarlahi District',
 
@@ -177,7 +177,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             18 => [
-                'id' => 19,
+
                 'province_id' => 2,
                 'title' => 'Dhanusha District',
 
@@ -186,7 +186,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             19 => [
-                'id' => 20,
+
                 'province_id' => 2,
                 'title' => 'Siraha District',
 
@@ -195,7 +195,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             20 => [
-                'id' => 21,
+
                 'province_id' => 2,
                 'title' => 'Mahottari District',
 
@@ -204,7 +204,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             21 => [
-                'id' => 22,
+
                 'province_id' => 2,
                 'title' => 'Saptari District',
 
@@ -213,7 +213,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             22 => [
-                'id' => 23,
+
                 'province_id' => 3,
                 'title' => 'Sindhuli District',
 
@@ -222,7 +222,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             23 => [
-                'id' => 24,
+
                 'province_id' => 3,
                 'title' => 'Ramechhap District',
 
@@ -231,7 +231,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             24 => [
-                'id' => 25,
+
                 'province_id' => 3,
                 'title' => 'Dolakha District',
 
@@ -240,7 +240,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             25 => [
-                'id' => 26,
+
                 'province_id' => 3,
                 'title' => 'Bhaktapur District',
 
@@ -249,7 +249,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             26 => [
-                'id' => 27,
+
                 'province_id' => 3,
                 'title' => 'Dhading District',
 
@@ -258,7 +258,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             27 => [
-                'id' => 28,
+
                 'province_id' => 3,
                 'title' => 'Kathmandu District',
 
@@ -267,7 +267,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             28 => [
-                'id' => 29,
+
                 'province_id' => 3,
                 'title' => 'Kavrepalanchok District',
 
@@ -276,7 +276,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             29 => [
-                'id' => 30,
+
                 'province_id' => 3,
                 'title' => 'Lalitpur District',
 
@@ -285,7 +285,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             30 => [
-                'id' => 31,
+
                 'province_id' => 3,
                 'title' => 'Nuwakot District',
 
@@ -294,7 +294,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             31 => [
-                'id' => 32,
+
                 'province_id' => 3,
                 'title' => 'Rasuwa District',
 
@@ -303,7 +303,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             32 => [
-                'id' => 33,
+
                 'province_id' => 3,
                 'title' => 'Sindhupalchok District',
 
@@ -312,7 +312,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             33 => [
-                'id' => 34,
+
                 'province_id' => 3,
                 'title' => 'Chitwan District',
 
@@ -321,7 +321,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             34 => [
-                'id' => 35,
+
                 'province_id' => 3,
                 'title' => 'Makwanpur District',
 
@@ -330,7 +330,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             35 => [
-                'id' => 36,
+
                 'province_id' => 4,
                 'title' => 'Baglung District',
 
@@ -339,7 +339,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             36 => [
-                'id' => 37,
+
                 'province_id' => 4,
                 'title' => 'Gorkha District',
 
@@ -348,7 +348,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             37 => [
-                'id' => 38,
+
                 'province_id' => 4,
                 'title' => 'Kaski District',
 
@@ -357,7 +357,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             38 => [
-                'id' => 39,
+
                 'province_id' => 4,
                 'title' => 'Lamjung District',
 
@@ -366,7 +366,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             39 => [
-                'id' => 40,
+
                 'province_id' => 4,
                 'title' => 'Manang District',
 
@@ -375,7 +375,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             40 => [
-                'id' => 41,
+
                 'province_id' => 4,
                 'title' => 'Mustang District',
 
@@ -384,7 +384,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             41 => [
-                'id' => 42,
+
                 'province_id' => 4,
                 'title' => 'Myagdi District',
 
@@ -393,7 +393,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             42 => [
-                'id' => 43,
+
                 'province_id' => 4,
                 'title' => 'Nawalparasi (East of Bardaghat Susta) District',
 
@@ -402,7 +402,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             43 => [
-                'id' => 44,
+
                 'province_id' => 4,
                 'title' => 'Parbat District',
 
@@ -411,7 +411,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             44 => [
-                'id' => 45,
+
                 'province_id' => 4,
                 'title' => 'Syangja District',
 
@@ -420,7 +420,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             45 => [
-                'id' => 46,
+
                 'province_id' => 4,
                 'title' => 'Tanahun District',
 
@@ -429,7 +429,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             46 => [
-                'id' => 47,
+
                 'province_id' => 5,
                 'title' => 'Kapilvastu District',
 
@@ -438,7 +438,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             47 => [
-                'id' => 48,
+
                 'province_id' => 5,
                 'title' => 'Nawalparasi (West of Bardaghat Susta) District',
 
@@ -447,7 +447,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             48 => [
-                'id' => 49,
+
                 'province_id' => 5,
                 'title' => 'Rupandehi District',
 
@@ -456,7 +456,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             49 => [
-                'id' => 50,
+
                 'province_id' => 5,
                 'title' => 'Arghakhanchi District',
 
@@ -465,7 +465,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             50 => [
-                'id' => 51,
+
                 'province_id' => 5,
                 'title' => 'Gulmi District',
 
@@ -474,7 +474,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             51 => [
-                'id' => 52,
+
                 'province_id' => 5,
                 'title' => 'Palpa District',
 
@@ -483,7 +483,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             52 => [
-                'id' => 53,
+
                 'province_id' => 5,
                 'title' => 'Dang District',
 
@@ -492,7 +492,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             53 => [
-                'id' => 54,
+
                 'province_id' => 5,
                 'title' => 'Pyuthan District',
 
@@ -501,7 +501,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             54 => [
-                'id' => 55,
+
                 'province_id' => 5,
                 'title' => 'Rolpa District',
 
@@ -510,7 +510,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             55 => [
-                'id' => 56,
+
                 'province_id' => 5,
                 'title' => 'Eastern Rukum',
 
@@ -519,7 +519,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             56 => [
-                'id' => 57,
+
                 'province_id' => 5,
                 'title' => 'Banke District',
 
@@ -528,7 +528,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             57 => [
-                'id' => 58,
+
                 'province_id' => 5,
                 'title' => 'Bardiya District',
 
@@ -537,7 +537,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             58 => [
-                'id' => 59,
+
                 'province_id' => 6,
                 'title' => 'Western Rukum District',
 
@@ -546,7 +546,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             59 => [
-                'id' => 60,
+
                 'province_id' => 6,
                 'title' => 'Salyan District',
 
@@ -555,7 +555,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             60 => [
-                'id' => 61,
+
                 'province_id' => 6,
                 'title' => 'Dolpa District',
 
@@ -564,7 +564,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             61 => [
-                'id' => 62,
+
                 'province_id' => 6,
                 'title' => 'Humla District',
 
@@ -573,7 +573,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             62 => [
-                'id' => 63,
+
                 'province_id' => 6,
                 'title' => 'Jumla District',
 
@@ -582,7 +582,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             63 => [
-                'id' => 64,
+
                 'province_id' => 6,
                 'title' => 'Kalikot District',
 
@@ -591,7 +591,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             64 => [
-                'id' => 65,
+
                 'province_id' => 6,
                 'title' => 'Mugu District',
 
@@ -600,7 +600,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             65 => [
-                'id' => 66,
+
                 'province_id' => 6,
                 'title' => 'Surkhet District',
 
@@ -609,7 +609,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             66 => [
-                'id' => 67,
+
                 'province_id' => 6,
                 'title' => 'Dailekh District',
 
@@ -618,7 +618,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             67 => [
-                'id' => 68,
+
                 'province_id' => 6,
                 'title' => 'Jajarkot District',
 
@@ -627,7 +627,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             68 => [
-                'id' => 69,
+
                 'province_id' => 7,
                 'title' => 'Kailali District',
 
@@ -636,7 +636,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             69 => [
-                'id' => 70,
+
                 'province_id' => 7,
                 'title' => 'Achham District',
 
@@ -645,7 +645,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             70 => [
-                'id' => 71,
+
                 'province_id' => 7,
                 'title' => 'Doti District',
 
@@ -654,7 +654,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             71 => [
-                'id' => 72,
+
                 'province_id' => 7,
                 'title' => 'Bajhang District',
 
@@ -663,7 +663,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             72 => [
-                'id' => 73,
+
                 'province_id' => 7,
                 'title' => 'Bajura District',
 
@@ -672,7 +672,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             73 => [
-                'id' => 74,
+
                 'province_id' => 7,
                 'title' => 'Kanchanpur District',
 
@@ -681,7 +681,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             74 => [
-                'id' => 75,
+
                 'province_id' => 7,
                 'title' => 'Dadeldhura District',
 
@@ -690,7 +690,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             75 => [
-                'id' => 76,
+
                 'province_id' => 7,
                 'title' => 'Baitadi District',
 
@@ -699,7 +699,7 @@ class DistrictsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             76 => [
-                'id' => 77,
+
                 'province_id' => 7,
                 'title' => 'Darchula District',
 

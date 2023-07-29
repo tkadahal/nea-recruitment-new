@@ -13,7 +13,7 @@ class StatusTableSeeder extends Seeder
     {
         $statuses = [
             [
-                'id' => 1,
+
                 'title' => 'Pending',
                 'color' => '#441ce6',
                 'active' => 1,
@@ -22,7 +22,7 @@ class StatusTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 2,
+
                 'title' => 'Send For Approval',
                 'color' => '#1a9ee8',
                 'active' => 1,
@@ -31,7 +31,7 @@ class StatusTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 3,
+
                 'title' => 'Send For Modification',
                 'color' => '#f0b00c',
                 'active' => 1,
@@ -40,7 +40,7 @@ class StatusTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 4,
+
                 'title' => 'Approve',
                 'color' => '#1ce63c',
                 'active' => 1,
@@ -49,7 +49,7 @@ class StatusTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 5,
+
                 'title' => 'Reject',
                 'color' => '#f70522',
                 'active' => 1,

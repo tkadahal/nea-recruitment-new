@@ -26,6 +26,9 @@
                                 {{ trans('global.subGroup.fields.id') }}
                             </th>
                             <th>
+                                {{ trans('global.subGroup.fields.category_id') }}
+                            </th>
+                            <th>
                                 {{ trans('global.subGroup.fields.group_id') }}
                             </th>
                             <th>
@@ -47,6 +50,9 @@
                                 </td>
                                 <td>
                                     {{ $subGroup->id ?? '' }}
+                                </td>
+                                <td>
+                                    {{ $subGroup->group->category->title ?? '' }}
                                 </td>
                                 <td>
                                     {{ $subGroup->group->title ?? '' }}

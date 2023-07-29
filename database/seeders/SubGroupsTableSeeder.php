@@ -13,63 +13,47 @@ class SubGroupsTableSeeder extends Seeder
     {
         $subGroups = [
             [
-                'id' => 1,
+
                 'group_id' => 1,
-                'title' => 'Electrical',
+                'title' => 'इलेक्ट्रिकल',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 2,
+
                 'group_id' => 1,
-                'title' => 'Electronics',
+                'title' => 'इलेक्ट्रोनिक्स',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 3,
-                'group_id' => 1,
-                'title' => 'Electronics',
-                'created_at' => '2022-01-24 18:00:13',
-                'updated_at' => '2022-01-24 18:00:13',
-                'deleted_at' => null,
-            ],
-            [
-                'id' => 4,
+
                 'group_id' => 2,
-                'title' => 'Civil',
+                'title' => '-',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 5,
-                'group_id' => 2,
-                'title' => 'Survey',
-                'created_at' => '2022-01-24 18:00:13',
-                'updated_at' => '2022-01-24 18:00:13',
-                'deleted_at' => null,
-            ],
-            [
-                'id' => 6,
+
                 'group_id' => 3,
-                'title' => 'Administration',
+                'title' => 'सिभिल',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 7,
+
                 'group_id' => 3,
-                'title' => 'Law',
+                'title' => 'सर्भे',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 8,
+
                 'group_id' => 4,
                 'title' => '-',
                 'created_at' => '2022-01-24 18:00:13',
@@ -77,73 +61,129 @@ class SubGroupsTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 9,
-                'group_id' => 4,
-                'title' => 'Charted Accountancy',
-                'created_at' => '2022-01-24 18:00:13',
-                'updated_at' => '2022-01-24 18:00:13',
-                'deleted_at' => null,
-            ],
-            [
-                'id' => 10,
+
                 'group_id' => 5,
-                'title' => '-',
+                'title' => 'वातावरण',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 11,
-                'group_id' => 1,
-                'title' => 'Electrical',
+
+                'group_id' => 5,
+                'title' => 'जियोलजी',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 12,
+
+                'group_id' => 5,
+                'title' => 'सवारी चालक',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
+            ],
+            [
+
+                'group_id' => 5,
+                'title' => 'स्वास्थ्य',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
+            ],
+            [
+
+                'group_id' => 5,
+                'title' => 'प्लम्बिङ्ग',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
+            ],
+            [
+
+                'group_id' => 5,
+                'title' => 'डाइभिङ्ग',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
+            ],
+            [
+
                 'group_id' => 6,
-                'title' => 'Statistics',
+                'title' => 'प्रशासन',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 13,
+
                 'group_id' => 6,
-                'title' => 'Sociology',
+                'title' => 'कानून',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 14,
+
                 'group_id' => 6,
-                'title' => 'Economics',
+                'title' => 'कम्प्यूटर अप्रेशन',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 15,
-                'group_id' => 6,
-                'title' => 'Computer Engineering',
+
+                'group_id' => 7,
+                'title' => 'लेखा',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 16,
-                'group_id' => 6,
-                'title' => 'Geology',
+
+                'group_id' => 7,
+                'title' => 'चाटर्ड एकाउन्टेन्सी',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 17,
-                'group_id' => 6,
-                'title' => 'Environment',
+
+                'group_id' => 8,
+                'title' => 'अर्थशास्त्र',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
+            ],
+            [
+
+                'group_id' => 8,
+                'title' => 'समाजशास्त्र',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
+            ],
+            [
+
+                'group_id' => 8,
+                'title' => 'तथ्याङ्कशास्त्र',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
+            ],
+            [
+
+                'group_id' => 8,
+                'title' => 'सुरक्षा',
+                'created_at' => '2022-01-24 18:00:13',
+                'updated_at' => '2022-01-24 18:00:13',
+                'deleted_at' => null,
+            ],
+            [
+
+                'group_id' => 8,
+                'title' => 'कुक',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,

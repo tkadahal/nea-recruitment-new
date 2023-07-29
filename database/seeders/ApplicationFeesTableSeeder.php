@@ -13,7 +13,7 @@ class ApplicationFeesTableSeeder extends Seeder
     {
         $applicationFees = [
             [
-                'id' => 1,
+
                 'title' => 'Officer 10',
                 'open' => 2000,
                 'female' => 500,
@@ -27,7 +27,7 @@ class ApplicationFeesTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 2,
+
                 'title' => 'Officer 9',
                 'open' => 1600,
                 'female' => 500,
@@ -41,7 +41,7 @@ class ApplicationFeesTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 3,
+
                 'title' => 'Officer 8',
                 'open' => 1400,
                 'female' => 500,
@@ -55,7 +55,7 @@ class ApplicationFeesTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 4,
+
                 'title' => 'Officer 7',
                 'open' => 1200,
                 'female' => 400,
@@ -69,7 +69,7 @@ class ApplicationFeesTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 5,
+
                 'title' => 'Assistant 5',
                 'open' => 800,
                 'female' => 300,
@@ -83,7 +83,7 @@ class ApplicationFeesTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 6,
+
                 'title' => 'Assistant 4',
                 'open' => 700,
                 'female' => 200,
@@ -97,7 +97,7 @@ class ApplicationFeesTableSeeder extends Seeder
                 'deleted_at' => null,
             ],
             [
-                'id' => 7,
+
                 'title' => 'Assistant 3',
                 'open' => 600,
                 'female' => 200,

@@ -13,28 +13,28 @@ class DivisionsTableSeeder extends Seeder
     {
         $divisions = [
             [
-                'id' => 1,
+
                 'title' => 'Distinction',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 2,
+
                 'title' => 'First Division',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 3,
+
                 'title' => 'Second Division',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 4,
+
                 'title' => 'Pass',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',

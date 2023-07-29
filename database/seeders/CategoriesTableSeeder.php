@@ -13,14 +13,14 @@ class CategoriesTableSeeder extends Seeder
     {
         $categories = [
             [
-                'id' => 1,
+                
                 'title' => 'प्राविधिक',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
                 'deleted_at' => null,
             ],
             [
-                'id' => 2,
+                
                 'title' => 'प्रशासन',
                 'created_at' => '2022-01-24 18:00:13',
                 'updated_at' => '2022-01-24 18:00:13',
