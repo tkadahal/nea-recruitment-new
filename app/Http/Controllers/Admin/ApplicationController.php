@@ -26,11 +26,14 @@ class ApplicationController extends Controller
     public function show($id): View
     {
         $adminId = auth('admin')->id();
+        $isAdmin = auth('admin')->user()->hasRole('SuperAdmin') || auth('admin')->user()->hasRole('Admin');
 
         $advertisements = Advertisement::query()
             ->where('fiscal_year_id', $id)
-            ->whereHas('admins', function ($query) use ($adminId) {
-                $query->where('admins.id', $adminId);
+            ->when(!$isAdmin, function ($query) use ($adminId) {
+                return $query->whereHas('admins', function ($query) use ($adminId) {
+                    $query->where('admins.id', $adminId);
+                });
             })
             ->withCount(['applications as total_payments' => function ($query) {
                 $query->whereHas('payments', function ($query) {
