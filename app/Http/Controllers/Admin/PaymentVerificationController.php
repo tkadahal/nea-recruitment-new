@@ -41,6 +41,8 @@ class PaymentVerificationController extends Controller
 
         $paymentVerifications = [];
 
+        $fiscalYear = Payment::find($request->payment_id)?->application?->advertisement?->fiscal_year_id ?? null;
+
         switch ($action) {
             case 'verify':
                 $paymentVerifications['is_checked'] = true;
@@ -73,7 +75,7 @@ class PaymentVerificationController extends Controller
             $paymentVerifications
         );
 
-        return redirect()->route(route: 'admin.application.index')
+        return redirect()->route('admin.application.show', ['id' => $fiscalYear])
             ->with('message', 'Application Verified successfully.');
     }
 
@@ -122,7 +124,7 @@ class PaymentVerificationController extends Controller
     public function generateCardForExamCenter(Request $request, $advertisementId)
     {
         $payments = Payment::query()
-            ->with(['application.user'])
+            ->with('application.user', 'application.user.media', 'application.advertisement')
             ->whereHas('application', function ($query) use ($advertisementId) {
                 $query->where('advertisement_id', $advertisementId);
             })
@@ -130,7 +132,7 @@ class PaymentVerificationController extends Controller
             ->whereHas('paymentVerification', function ($query) {
                 $query->where('is_approved', true);
             })
-            ->paginate(1);
+            ->paginate(10);
 
         return view('admin.applications.examCenterCards', compact('payments', 'advertisementId'));
     }
