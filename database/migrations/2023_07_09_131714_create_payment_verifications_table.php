@@ -14,6 +14,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('payment_id')->index()->constrained();
 
+            $table->integer('rollno')->default(0);
+
             $table->boolean('is_checked')->default(false);
             $table->boolean('is_approved')->default(false);
             $table->boolean('is_rejected')->default(false);

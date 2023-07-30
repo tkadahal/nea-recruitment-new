@@ -64,14 +64,6 @@
                                     {{ trans('global.login') }}
                                 </button>
                             </div>
-                            {{-- <div class="col-6 text-right">
-                                <a class="btn btn-link px-0" href="{{ route('password.request') }}">
-                                    {{ trans('nea.forgot_password') }}
-                                </a>
-                                <br><a class="btn btn-link px-0" href="{{ route('register') }}">
-                                    {{ trans('nea.register') }}
-                                </a>
-                            </div> --}}
                         </div>
                     </form>
                 </div>

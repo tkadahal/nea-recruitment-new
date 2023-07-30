@@ -6,13 +6,8 @@
         {{ trans('global.back_to_list') }}
     </a>
     @if(auth('admin')->user()->is_approver && \Illuminate\Support\Str::afterLast(request()->url(), '/') === '_approved')
-    {{-- @if(auth('admin')->user()->is_approver)
-    @php
-    $action = \Illuminate\Support\Str::afterLast(request()->url(), '/');
-    @endphp
-    @if ($action === '_approved') --}}
     <div class="d-flex align-items-center">
-        <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
+        <form method="get" action="{{ route('admin.generateRollNo', $advertisementId) }}" class="d-inline-block">
             @csrf
             <input type="hidden" name="action" value="reject">
             <button type="submit" class="btn btn-danger ml-2">
@@ -35,7 +30,6 @@
             </button>
         </form>
     </div>
-    {{-- @endif --}}
     @endif
 </div>
 

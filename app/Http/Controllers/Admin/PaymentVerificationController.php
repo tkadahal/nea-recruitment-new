@@ -136,4 +136,24 @@ class PaymentVerificationController extends Controller
 
         return view('admin.applications.examCenterCards', compact('payments', 'advertisementId'));
     }
+
+    public function generateRollNo($advertisementId)
+    {
+        $payments = Payment::query()
+            ->with('application.user')
+            ->whereHas('application', function ($query) use ($advertisementId) {
+                $query->where('advertisement_id', $advertisementId);
+            })
+            ->where('payment_status', '1')
+            ->whereHas('paymentVerification', function ($query) {
+                $query->where('is_approved', true);
+            })
+            ->get();
+
+        $users = $payments->pluck('application.user')->unique();
+
+        $sortedUsers = $users->sortBy('name_np');
+
+        dd($sortedUsers);
+    }
 }
