@@ -43,23 +43,23 @@ class PaymentVerificationController extends Controller
 
         switch ($action) {
             case 'verify':
-                $paymentVerifications['is_checked'] = 1;
+                $paymentVerifications['is_checked'] = true;
                 $paymentVerifications['checker'] = auth('admin')->id();
                 $paymentVerifications['checked_at'] = Carbon::now();
                 break;
             case 'approve':
-                $paymentVerifications['is_approved'] = 1;
+                $paymentVerifications['is_approved'] = true;
                 $paymentVerifications['approver'] = auth('admin')->id();
                 $paymentVerifications['approved_at'] = Carbon::now();
                 break;
             case 'reject':
-                $paymentVerifications['is_rejected'] = 1;
+                $paymentVerifications['is_rejected'] = true;
                 $paymentVerifications['rejector'] = auth('admin')->id();
                 $paymentVerifications['rejected_at'] = Carbon::now();
                 break;
             case 'back':
-                $paymentVerifications['is_approved'] = 0;
-                $paymentVerifications['is_checked'] = 0;
+                $paymentVerifications['is_approved'] = false;
+                $paymentVerifications['is_checked'] = false;
                 $paymentVerifications['approver'] = null;
                 $paymentVerifications['checker'] = null;
                 break;

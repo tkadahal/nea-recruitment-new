@@ -20,7 +20,8 @@
         "opcodesio/log-viewer": "^2.1.0",
         "orangehill/iseed": "^3.0",
         "outhebox/blade-flags": "^1.2.0",
-        "phpoffice/phpword": "^1.0"
+        "phpoffice/phpword": "^1.0",
+        "spatie/laravel-activitylog": "^4.7"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8.1",

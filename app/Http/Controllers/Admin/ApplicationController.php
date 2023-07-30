@@ -26,7 +26,7 @@ class ApplicationController extends Controller
     public function show($id): View
     {
         $adminId = auth('admin')->id();
-        $isAdmin = auth('admin')->user()->hasRole('SuperAdmin') || auth('admin')->user()->hasRole('Admin');
+        $isAdmin = auth('admin')->user()->hasRole('Super_Admin') || auth('admin')->user()->hasRole('Admin');
 
         $advertisements = Advertisement::query()
             ->where('fiscal_year_id', $id)
