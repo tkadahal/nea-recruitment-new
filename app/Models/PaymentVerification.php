@@ -20,6 +20,7 @@ class PaymentVerification extends Model
     ];
 
     protected $fillable = [
+        'rollno',
         'payment_id',
         'is_checked',
         'is_approved',

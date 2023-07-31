@@ -6,7 +6,29 @@
         {{ trans('global.back_to_list') }}
     </a>
     @if(auth('admin')->user()->is_approver && \Illuminate\Support\Str::afterLast(request()->url(), '/') === '_approved')
+
+    @php
+    $hasRollNumber = !$applications->isEmpty() && $applications[0]['rollno'] !== 0;
+    @endphp
+
     <div class="d-flex align-items-center">
+        @if($hasRollNumber)
+        {{-- <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
+            @csrf
+            <input type="hidden" name="action" value="verify">
+            <button type="submit" class="btn btn-success ml-2">
+                Generate CV
+            </button>
+        </form> --}}
+
+        <form method="get" action="{{ route('admin.generateCardForExamCenter', $advertisementId) }}"
+            class="d-inline-block">
+            <button type="submit" class="btn btn-dark ml-2">
+                Generate Card For Exam Center
+            </button>
+        </form>
+
+        @else
         <form method="get" action="{{ route('admin.generateRollNo', $advertisementId) }}" class="d-inline-block">
             @csrf
             <input type="hidden" name="action" value="reject">
@@ -14,21 +36,9 @@
                 Generate Roll No
             </button>
         </form>
+        @endif
 
-        <form method="POST" action="{{ route('admin.paymentVerification.store') }}" class="d-inline-block">
-            @csrf
-            <input type="hidden" name="action" value="verify">
-            <button type="submit" class="btn btn-success ml-2">
-                Generate CV
-            </button>
-        </form>
 
-        <form method="get" action="{{ route('admin.generateCardForExamCenter', $advertisementId) }}"
-            class="d-inline-block">
-            <button type="submit" class="btn btn-success ml-2">
-                Generate Card For Exam Center
-            </button>
-        </form>
     </div>
     @endif
 </div>
@@ -48,6 +58,11 @@
                         <th width="10">
 
                         </th>
+                        @if (!$applications->isEmpty() && $applications[0]['rollno'] != '0')
+                        <th>
+                            Roll Number
+                        </th>
+                        @endif
                         <th>
                             Applicant Name
                         </th>
@@ -69,6 +84,11 @@
                     @foreach ($applications as $key => $application)
                     <tr data-entry-id="{{ $application['id'] }}">
                         <td></td>
+                        @if ($application['rollno'] != '0')
+                        <td>
+                            {{ $application['rollno'] }}
+                        </td>
+                        @endif
                         <td>
                             {{ $application['name'] ?? '' }}
                         </td>

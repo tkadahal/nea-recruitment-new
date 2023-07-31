@@ -139,21 +139,68 @@ class PaymentVerificationController extends Controller
 
     public function generateRollNo($advertisementId)
     {
-        $payments = Payment::query()
-            ->with('application.user')
-            ->whereHas('application', function ($query) use ($advertisementId) {
+        $paymentVerifications = PaymentVerification::whereHas('payment', function ($query) {
+            $query->where('payment_status', '1');
+        })
+            ->whereHas('payment.application', function ($query) use ($advertisementId) {
                 $query->where('advertisement_id', $advertisementId);
             })
-            ->where('payment_status', '1')
-            ->whereHas('paymentVerification', function ($query) {
-                $query->where('is_approved', true);
-            })
+            ->with(['payment.application.user'])
             ->get();
 
-        $users = $payments->pluck('application.user')->unique();
+        // Sort the users based on 'name_np'
+        $sortedUsers = $paymentVerifications->pluck('payment.application.user')->sortBy('name_np');
 
-        $sortedUsers = $users->sortBy('name_np');
+        $advertisementRollNumbers = [];
+        $rollNumber = 1;
 
-        dd($sortedUsers);
+        foreach ($sortedUsers as $user) {
+            $userId = $user->id;
+
+            // Get the advertisement ID associated with the user
+            $advertisementIdFromPayment = $paymentVerifications
+                ->where('payment.application.user.id', $userId)
+                ->first()
+                ->payment
+                ->application
+                ->advertisement_id;
+
+            // Check if we already have an entry for this advertisement
+            if (!isset($advertisementRollNumbers[$advertisementIdFromPayment])) {
+                $advertisementRollNumbers[$advertisementIdFromPayment] = [];
+            }
+
+            // Generate a unique roll number for the user within the advertisement
+            if (!isset($advertisementRollNumbers[$advertisementIdFromPayment][$userId])) {
+                $advertisementRollNumbers[$advertisementIdFromPayment][$userId] = $rollNumber;
+                $rollNumber++;
+            }
+
+            // Assign the generated roll number to the PaymentVerification record
+            $paymentVerification = $paymentVerifications
+                ->where('payment.application.user.id', $userId)
+                ->first();
+
+            $paymentVerification->update(['rollno' => $advertisementRollNumbers[$advertisementIdFromPayment][$userId]]);
+        }
+
+
+        return redirect()->back()->with('message', 'Roll Number Generated Successfully');
+        // $payments = Payment::query()
+        //     ->with('application.user')
+        //     ->whereHas('application', function ($query) use ($advertisementId) {
+        //         $query->where('advertisement_id', $advertisementId);
+        //     })
+        //     ->where('payment_status', '1')
+        //     ->whereHas('paymentVerification', function ($query) {
+        //         $query->where('is_approved', true);
+        //     })
+        //     ->get();
+
+        // $users = $payments->pluck('application.user')->unique();
+
+        // $sortedUsers = $users->sortBy('name_np');
+
+        // dd($sortedUsers);
     }
 }

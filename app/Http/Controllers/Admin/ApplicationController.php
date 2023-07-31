@@ -64,7 +64,7 @@ class ApplicationController extends Controller
     {
         $advertisementNum = Advertisement::query()->where('id', $advertisementId)->value('advertisement_num');
 
-        $paymentQuery = Payment::query()->with(['application.user'])
+        $paymentQuery = Payment::query()->with('application.user', 'paymentVerification')
             ->whereHas('application', function ($query) use ($advertisementId) {
                 $query->where('advertisement_id', $advertisementId);
             })->where('payment_status', '1');
@@ -96,7 +96,6 @@ class ApplicationController extends Controller
                 });
                 break;
             default:
-                // Handle unknown action or error
                 abort(404, 'Invalid action');
                 break;
         }
@@ -107,19 +106,25 @@ class ApplicationController extends Controller
 
         foreach ($paymentDetails as $paymentDetail) {
             $id = $paymentDetail->id;
-            $name = $paymentDetail->application->user->name;
-            $payment_gateway = $paymentDetail->payment_gateway;
-            $payable_amount = $paymentDetail->amount;
-            $paid_amount = $paymentDetail->paid_amount;
+            $name = $paymentDetail->application->user->name ?? '';
+            $payment_gateway = $paymentDetail->payment_gateway ?? '';
+            $payable_amount = $paymentDetail->amount ?? '';
+            $paid_amount = $paymentDetail->paid_amount ?? '';
+            $rollno = $paymentDetail->paymentVerification->rollno ?? '0';
 
             $applications[] = [
                 'id' => $id,
+                'rollno' => $rollno,
                 'name' => $name,
                 'payment_gateway' => $payment_gateway,
                 'payable_amount' => $payable_amount,
                 'paid_amount' => $paid_amount,
             ];
         }
+
+        $applications = collect($applications);
+
+        // dd($applications);
 
         return view('admin.applications.viewApplications', compact('applications', 'advertisementNum', 'advertisementId'));
     }
