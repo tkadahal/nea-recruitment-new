@@ -29,6 +29,7 @@ class Advertisement extends Model
         'sub_group_id',
         'category_id',
         'level_id',
+        'position_id',
         'designation_id',
         'open_fee',
         'samabeshi_fee',
@@ -66,6 +67,11 @@ class Advertisement extends Model
     public function level(): BelongsTo
     {
         return $this->belongsTo(Level::class);
+    }
+
+    public function position(): BelongsTo
+    {
+        return $this->belongsTo(Position::class);
     }
 
     public function fiscalYear(): BelongsTo

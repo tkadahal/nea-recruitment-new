@@ -49,6 +49,11 @@ class UpdateAdvertisementRequest extends FormRequest
                 'integer',
                 'not_in:0',
             ],
+            'position_id' => [
+                'required',
+                'integer',
+                'not_in:0',
+            ],
             'designation_id' => [
                 'required',
                 'integer',

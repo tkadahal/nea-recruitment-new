@@ -46,6 +46,11 @@ class Position extends Model
         return $this->belongsTo(Level::class);
     }
 
+    public function advertisements(): BelongsTo
+    {
+        return $this->belongsTo(Advertisement::class);
+    }
+
     public function newEloquentBuilder($query): ModelBuilder
     {
         return new ModelBuilder(

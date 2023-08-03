@@ -32,14 +32,12 @@ class AdvertisementController extends Controller
 
         $advertisements = Advertisement::with(
             [
+                'fiscalYear',
                 'category',
                 'group',
                 'subGroup',
                 'level',
-                'examCenter',
-                'designation',
-                'qualification',
-                'fiscalYear',
+                'position',
             ]
         )->get();
 
@@ -89,7 +87,7 @@ class AdvertisementController extends Controller
     {
         abort_if(Gate::denies('advertisement_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $advertisement->load(['group', 'subGroup', 'category', 'designation', 'applicationFee', 'qualification', 'fiscalYear']);
+        $advertisement->load(['group', 'subGroup', 'category', 'designation', 'level', 'position', 'qualification', 'fiscalYear']);
 
         return view('admin.advertisements.show', compact('advertisement'));
     }
@@ -107,6 +105,8 @@ class AdvertisementController extends Controller
         $categories = Category::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $levels = Level::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        $positions = Position::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $designations = Designation::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
@@ -126,6 +126,7 @@ class AdvertisementController extends Controller
                 'qualification',
                 'samabeshiGroups',
                 'level',
+                'position',
                 'fiscalYear',
             ]
         );
@@ -138,7 +139,7 @@ class AdvertisementController extends Controller
             return $samabeshiGroup;
         });
 
-        return view('admin.advertisements.edit', compact('advertisement', 'examCenters', 'groups', 'subGroups', 'categories', 'levels', 'designations', 'qualifications', 'samabeshiGroups', 'selectedSamabeshiGroups', 'fiscalYears'));
+        return view('admin.advertisements.edit', compact('advertisement', 'examCenters', 'groups', 'subGroups', 'categories', 'levels', 'positions', 'designations', 'qualifications', 'samabeshiGroups', 'selectedSamabeshiGroups', 'fiscalYears'));
     }
 
     public function update(UpdateAdvertisementRequest $request, Advertisement $advertisement): RedirectResponse
@@ -202,7 +203,9 @@ class AdvertisementController extends Controller
 
     public function getPositions($subGroupId, $levelId)
     {
-        $positions = Position::where('sub_group_id', $subGroupId)->where('level_id', $levelId)->pluck('title', 'id');
+        $positions = Position::where('sub_group_id', $subGroupId)
+            ->where('level_id', $levelId)
+            ->pluck('title', 'id');
 
         return response()->json($positions);
     }

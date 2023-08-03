@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('group_id')->index()->constrained();
             $table->foreignId('sub_group_id')->index()->constrained();
             $table->foreignId('level_id')->index()->constrained();
+            $table->foreignId('position_id')->index()->constrained();
 
             $table->foreignId('designation_id')->index()->constrained();
             $table->foreignId('qualification_id')->index()->constrained();
