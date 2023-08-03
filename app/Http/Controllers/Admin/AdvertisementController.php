@@ -4,24 +4,25 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreAdvertisementRequest;
-use App\Http\Requests\UpdateAdvertisementRequest;
-use App\Models\Advertisement;
-use App\Models\Category;
-use App\Models\Designation;
-use App\Models\ExamCenter;
-use App\Models\FiscalYear;
 use App\Models\Group;
 use App\Models\Level;
+use App\Models\Category;
+use App\Models\Position;
+use App\Models\SubGroup;
+use Illuminate\View\View;
+use App\Models\ExamCenter;
+use App\Models\FiscalYear;
+use App\Models\Designation;
+use Illuminate\Http\Request;
+use App\Models\Advertisement;
 use App\Models\Qualification;
 use App\Models\SamabeshiGroup;
-use App\Models\SubGroup;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Gate;
-use Illuminate\View\View;
+use Illuminate\Http\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
+use App\Http\Requests\StoreAdvertisementRequest;
+use App\Http\Requests\UpdateAdvertisementRequest;
 
 class AdvertisementController extends Controller
 {
@@ -59,6 +60,8 @@ class AdvertisementController extends Controller
 
         $levels = Level::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
+        $positions = Position::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+
         $designations = Designation::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $qualifications = Qualification::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
@@ -67,7 +70,7 @@ class AdvertisementController extends Controller
 
         $samabeshiGroups = SamabeshiGroup::all()->pluck('title', 'id');
 
-        return view('admin.advertisements.create', compact('examCenters', 'groups', 'subGroups', 'categories', 'levels', 'designations', 'qualifications', 'samabeshiGroups', 'fiscalYears'));
+        return view('admin.advertisements.create', compact('examCenters', 'groups', 'subGroups', 'categories', 'levels', 'positions', 'designations', 'qualifications', 'samabeshiGroups', 'fiscalYears'));
     }
 
     public function store(StoreAdvertisementRequest $request): RedirectResponse
@@ -103,7 +106,7 @@ class AdvertisementController extends Controller
 
         $categories = Category::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $levels = Level::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $levels = Level::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $designations = Designation::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
@@ -168,6 +171,13 @@ class AdvertisementController extends Controller
         return response(null, Response::HTTP_NO_CONTENT);
     }
 
+    public function getGroups($categoryId)
+    {
+        $groups = Group::where('category_id', $categoryId)->pluck('title', 'id');
+
+        return response()->json($groups);
+    }
+
     public function getSubGroups($groupId)
     {
         $subGroups = SubGroup::where('group_id', $groupId)->pluck('title', 'id');
@@ -175,10 +185,25 @@ class AdvertisementController extends Controller
         return response()->json($subGroups);
     }
 
-    public function getLevels($groupId)
+    public function getLevels($groupId, $subGroupId)
     {
-        $levels = Level::where('group_id', $groupId)->pluck('title', 'id');
+        $levels = Level::where('group_id', $groupId)
+            ->whereIn('id', function ($query) use ($groupId, $subGroupId) {
+                $query->select('level_id')
+                    ->from('positions')
+                    ->where('group_id', $groupId)
+                    ->where('sub_group_id', $subGroupId);
+            })
+            ->pluck('title', 'id');
 
         return response()->json($levels);
+    }
+
+
+    public function getPositions($subGroupId, $levelId)
+    {
+        $positions = Position::where('sub_group_id', $subGroupId)->where('level_id', $levelId)->pluck('title', 'id');
+
+        return response()->json($positions);
     }
 }

@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
             GroupsTableSeeder::class,
             SubGroupsTableSeeder::class,
             LevelsTableSeeder::class,
+            PositionsTableSeeder::class,
             DesignationsTableSeeder::class,
             ApplicationFeesTableSeeder::class,
             ExamCentersTableSeeder::class,
@@ -44,6 +45,5 @@ class DatabaseSeeder extends Seeder
             // ApplicationsTableSeeder::class,
             // PaymentsTableSeeder::class,
         ]);
-        $this->call(LevelsTableSeeder::class);
     }
 }

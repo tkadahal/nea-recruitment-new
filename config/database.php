@@ -90,7 +90,7 @@ return [
             'port' => '5432',
             'database' => 'recruitment',
             'username' => 'tka',
-            'password' => 'nea@123',
+            'password' => 'nea123',
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,

@@ -13,7 +13,7 @@
             <div class="card-body">
                 <div class="card-section">
                     <h3>
-                        बिज्ञापन विवरण
+                        {{ trans('global.advertisement.title_singular') }}
                     </h3>
                     <div class="p-2">
                         <div class="row g-3">
@@ -261,29 +261,30 @@
                             </div>
 
 
-                            {{-- <div class="col-md-4 form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
-                            <label class="required" for="category_id">
-                                {{ trans('global.advertisement.fields.category_id') }}
-                            </label>
-                            <select name="category_id" id="category_id" class="form-control select2">
-                                @foreach ($categories as $id => $category)
-                                <option value="{{ $id }}" {{ (isset($advertisement) && $advertisement->category ?
-                                    $advertisement->category->id : old('category_id')) == $id
-                                    ? 'selected'
-                                    : '' }}>
-                                    {{ $category }}
-                                </option>
-                                @endforeach
-                            </select>
-                            @if ($errors->has('category_id'))
-                            <p class="help-block">
-                                {{ $errors->first('category_id') }}
-                            </p>
-                            @endif
-                            <p class="helper-block">
-                                {{ trans('global.advertisement.fields.category_id_helper') }}
-                            </p>
-                        </div> --}}
+                            <div class="col-md-4 form-group {{ $errors->has('position_id') ? 'has-error' : '' }}">
+                                <label class="required" for="position_id">
+                                    {{ trans('global.advertisement.fields.position_id') }}
+                                </label>
+                                <select name="position_id" id="position_id" class="form-control select2">
+                                    @foreach ($positions as $id => $position)
+                                        <option value="{{ $id }}"
+                                            {{ (isset($advertisement) && $advertisement->position ? $advertisement->position->id : old('position_id')) ==
+                                            $id
+                                                ? 'selected'
+                                                : '' }}>
+                                            {{ $position }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                @if ($errors->has('position_id'))
+                                    <p class="help-block">
+                                        {{ $errors->first('position_id') }}
+                                    </p>
+                                @endif
+                                <p class="helper-block">
+                                    {{ trans('global.advertisement.fields.position_id_helper') }}
+                                </p>
+                            </div>
 
                         </div>
                     </div>
@@ -429,22 +430,20 @@
                 </div>
 
                 <div class="row">
-                    <div class="col">
-                        <div class="col-md-4">
-                            <label class="required" for="samabeshi_group_id">
-                                समाबेशी समूह
-                            </label>
-                            @foreach ($samabeshiGroups as $id => $samabeshiGroup)
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="{{ $id }}"
-                                        id="{{ $id }}" name="samabeshi_groups[]"
-                                        @if (old('samabeshi_groups') && in_array($id, old('samabeshi_groups'))) checked @endif>
-                                    <label class="form-check-label" for="{{ $id }}">
-                                        {{ $samabeshiGroup }}
-                                    </label>
-                                </div>
-                            @endforeach
-                        </div>
+                    <div class="col-md-4 {{ $errors->has('samabeshi_groups') ? 'has-error' : '' }}">
+                        <label class="required" for="samabeshi_groups">
+                            {{ trans('global.advertisement.fields.samabeshi_groups') }}
+                        </label>
+                        @foreach ($samabeshiGroups as $id => $samabeshiGroup)
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="{{ $id }}"
+                                    id="{{ $id }}" name="samabeshi_groups[]"
+                                    @if (old('samabeshi_groups') && in_array($id, old('samabeshi_groups'))) checked @endif>
+                                <label class="form-check-label" for="{{ $id }}">
+                                    {{ $samabeshiGroup }}
+                                </label>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
 
@@ -530,6 +529,41 @@
                 $('#penalty_end_date_en').val(equivalentAD);
             }
 
+            $('#category_id').on('change', function() {
+                var categoryId = $(this).val();
+                if (categoryId) {
+                    $.ajax({
+                        url: '/admin/get-groups/' + categoryId,
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function(data) {
+                            $('#group_id').empty().append('<option value="">' +
+                                "{{ trans('global.pleaseSelect') }}" + '</option>');
+                            $.each(data, function(key, value) {
+                                $('#group_id').append('<option value="' + key +
+                                    '">' + value + '</option>');
+                            });
+
+                            $('#sub_group_id').empty().append('<option value="">' +
+                                "{{ trans('global.pleaseSelect') }}" + '</option>');
+                            $('#level_id').empty().append('<option value="">' +
+                                "{{ trans('global.pleaseSelect') }}" + '</option>');
+                            $('#position_id').empty().append('<option value="">' +
+                                "{{ trans('global.pleaseSelect') }}" + '</option>');
+                        }
+                    });
+                } else {
+                    $('#group_id').empty().append('<option value="">' +
+                        "{{ trans('global.pleaseSelect') }}" + '</option>');
+                    $('#sub_group_id').empty().append('<option value="">' +
+                        "{{ trans('global.pleaseSelect') }}" + '</option>');
+                    $('#level_id').empty().append('<option value="">' +
+                        "{{ trans('global.pleaseSelect') }}" + '</option>');
+                    $('#position_id').empty().append('<option value="">' +
+                        "{{ trans('global.pleaseSelect') }}" + '</option>');
+                }
+            });
+
             $('#group_id').on('change', function() {
                 var groupId = $(this).val();
                 if (groupId) {
@@ -546,9 +580,22 @@
                             });
                         }
                     });
+                } else {
+                    $('#sub_group_id').empty().append('<option value="">' +
+                        "{{ trans('global.pleaseSelect') }}" + '</option>');
+                    $('#level_id').empty().append('<option value="">' +
+                        "{{ trans('global.pleaseSelect') }}" + '</option>');
+                    $('#position_id').empty().append('<option value="">' +
+                        "{{ trans('global.pleaseSelect') }}" + '</option>');
+                }
+            });
 
+            $('#sub_group_id').on('change', function() {
+                var groupId = $('#group_id').val();
+                var subGroupId = $(this).val();
+                if (groupId && subGroupId) {
                     $.ajax({
-                        url: '/admin/get-levels/' + groupId,
+                        url: '/admin/get-levels/' + groupId + '/' + subGroupId,
                         type: 'GET',
                         dataType: 'json',
                         success: function(data) {
@@ -558,12 +605,41 @@
                                 $('#level_id').append('<option value="' + key + '">' +
                                     value + '</option>');
                             });
+
+                            $('#position_id').empty().append('<option value="">' +
+                                "{{ trans('global.pleaseSelect') }}" + '</option>');
                         }
                     });
                 } else {
-                    $('#sub_group_id').empty().append('<option value="">' +
-                        "{{ trans('global.pleaseSelect') }}" + '</option>');
                     $('#level_id').empty().append('<option value="">' +
+                        "{{ trans('global.pleaseSelect') }}" + '</option>');
+                    $('#position_id').empty().append('<option value="">' +
+                        "{{ trans('global.pleaseSelect') }}" + '</option>');
+                }
+            });
+
+            $('#level_id').on('change', function() {
+                var subGroupId = $('#sub_group_id').val();
+                var levelId = $(this).val();
+
+                if (subGroupId && levelId) {
+                    $.ajax({
+                        url: '/admin/get-positions/' + subGroupId + '/' + levelId,
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function(data) {
+                            console.log(data);
+                            $('#position_id').empty().append('<option value="">' +
+                                "{{ trans('global.pleaseSelect') }}" + '</option>');
+                            $.each(data, function(key, value) {
+                                $('#position_id').append('<option value="' + key +
+                                    '">' +
+                                    value + '</option>');
+                            });
+                        }
+                    });
+                } else {
+                    $('#position_id').empty().append('<option value="">' +
                         "{{ trans('global.pleaseSelect') }}" + '</option>');
                 }
             });

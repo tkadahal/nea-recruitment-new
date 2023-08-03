@@ -36,7 +36,7 @@ class PositionController extends Controller
 
         $subGroups = SubGroup::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $levels = Level::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $levels = Level::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         return view('admin.positions.create', compact('groups', 'subGroups', 'levels'));
     }
@@ -68,7 +68,7 @@ class PositionController extends Controller
 
         $subGroups = SubGroup::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $levels = Level::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $levels = Level::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $position->load(['group', 'subGroup', 'level']);
 

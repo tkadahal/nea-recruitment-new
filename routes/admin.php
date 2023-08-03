@@ -116,8 +116,10 @@ Route::middleware(['auth:admin'])->group(function () {
             Route::resource(name: 'examCenter', controller: ExamCenterController::class);
 
             // Advertisements
+            Route::get('/get-groups/{categoryId}', 'AdvertisementController@getGroups');
             Route::get('/get-subgroups/{groupId}', 'AdvertisementController@getSubGroups');
-            Route::get('/get-levels/{groupId}', 'AdvertisementController@getLevels');
+            Route::get('/get-levels/{groupId}/{subGroupId}', 'AdvertisementController@getLevels');
+            Route::get('/get-positions/{subGroupId}/{levelId}', 'AdvertisementController@getPositions');
             Route::delete(uri: 'advertisements/destroy', action: 'AdvertisementController@massDestroy')->name(name: 'advertisements.massDestroy');
             Route::resource(name: 'advertisement', controller: AdvertisementController::class);
 
