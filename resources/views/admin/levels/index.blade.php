@@ -1,116 +1,110 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="card">
+<div class="card">
 
-        <div class="card-header"><i class="fa fa-align-justify"></i>
-            <strong>{{ trans('global.level.title') }} </strong> {{ trans('global.list') }}
+    <div class="card-header"><i class="fa fa-align-justify"></i>
+        <strong>{{ trans('global.level.title') }} </strong> {{ trans('global.list') }}
 
-            @can('level_create')
-                <a href="{{ route('admin.level.create') }}" class="btn btn-outline-success d-inline-block float-right">
-                    {{ trans('global.add') }} {{ trans('global.level.title_singular') }}
-                </a>
-            @endcan
+        @can('level_create')
+        <a href="{{ route('admin.level.create') }}" class="btn btn-outline-success d-inline-block float-right">
+            {{ trans('global.add') }} {{ trans('global.level.title_singular') }}
+        </a>
+        @endcan
 
-        </div>
+    </div>
 
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped table-hover datatable datatable-level">
-                    <thead>
-                        <tr>
-                            <th width="10">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover datatable datatable-level">
+                <thead>
+                    <tr>
+                        <th width="10">
 
-                            </th>
-                            <th>
-                                {{ trans('global.level.fields.id') }}
-                            </th>
-                            <th>
-                                {{ trans('global.level.fields.group_id') }}
-                            </th>
-                            <th>
-                                {{ trans('global.level.fields.title') }}
-                            </th>
-                            <th>
-                                {{ trans('global.level.fields.order') }}
-                            </th>
-                            <th>
-                                {{ trans('global.published') }}
-                            </th>
-                            <th>
-                                &nbsp;
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($levels as $key => $level)
-                            <tr data-entry-id="{{ $level->id }}">
-                                <td>
+                        </th>
+                        <th>
+                            {{ trans('global.level.fields.id') }}
+                        </th>
+                        <th>
+                            {{ trans('global.level.fields.group_id') }}
+                        </th>
+                        <th>
+                            {{ trans('global.level.fields.title') }}
+                        </th>
+                        <th>
+                            {{ trans('global.published') }}
+                        </th>
+                        <th>
+                            &nbsp;
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($levels as $key => $level)
+                    <tr data-entry-id="{{ $level->id }}">
+                        <td>
 
-                                </td>
-                                <td>
-                                    {{ $level->id ?? '' }}
-                                </td>
-                                <td>
-                                    {{ $level->group->title ?? '' }}
-                                </td>
-                                <td>
-                                    {{ $level->title ?? '' }}
-                                </td>
-                                <td>
-                                    {{ $level->order ?? '' }}
-                                </td>
-                                <td>
-                                    @livewire(
-                                        'toggle-button',
-                                        [
-                                            'model' => $level,
-                                            'field' => 'active',
-                                        ],
-                                        key($level->id)
-                                    )
-                                </td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="level Functions">
+                        </td>
+                        <td>
+                            {{ $level->id ?? '' }}
+                        </td>
+                        <td>
+                            {{ $level->group->title ?? '' }}
+                        </td>
+                        <td>
+                            {{ $level->title ?? '' }}
+                        </td>
+                        <td>
+                            @livewire(
+                            'toggle-button',
+                            [
+                            'model' => $level,
+                            'field' => 'active',
+                            ],
+                            key($level->id)
+                            )
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="level Functions">
 
-                                        @can('level_show')
-                                            <a href="{{ route('admin.level.show', $level) }}" class="btn btn-primary btn-sm">
-                                                {{ trans('global.show') }}
-                                            </a>
-                                        @endcan
+                                @can('level_show')
+                                <a href="{{ route('admin.level.show', $level) }}" class="btn btn-primary btn-sm">
+                                    {{ trans('global.show') }}
+                                </a>
+                                @endcan
 
-                                        @can('level_edit')
-                                            <a href="{{ route('admin.level.edit', $level) }}" class="btn btn-info btn-sm">
-                                                {{ trans('global.edit') }}
-                                            </a>
-                                        @endcan
+                                @can('level_edit')
+                                <a href="{{ route('admin.level.edit', $level) }}" class="btn btn-info btn-sm">
+                                    {{ trans('global.edit') }}
+                                </a>
+                                @endcan
 
-                                        @can('level_delete')
-                                            <form action="{{ route('admin.level.destroy', $level) }}" method="POST"
-                                                style="display: inline-block">
-                                                @csrf
-                                                @method('delete')
-                                                <button type="submit" class="btn btn-danger btn-sm">
-                                                    {{ trans('global.delete') }}
-                                                </button>
-                                            </form>
-                                        @endcan
+                                @can('level_delete')
+                                <form action="{{ route('admin.level.destroy', $level) }}" method="POST"
+                                    style="display: inline-block">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-danger btn-sm">
+                                        {{ trans('global.delete') }}
+                                    </button>
+                                </form>
+                                @endcan
 
-                                    </div>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
+                            </div>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 @endsection
 
 @section('scripts')
-    @parent
-    <script>
-        $(function() {
+@parent
+<script>
+    $(function() {
             let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
             @can('level_delete')
                 let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
@@ -162,5 +156,5 @@
                     .columns.adjust();
             });
         })
-    </script>
+</script>
 @endsection

@@ -35,6 +35,11 @@ class SubGroup extends Model
         return $this->belongsTo(Group::class);
     }
 
+    public function positions(): HasMany
+    {
+        return $this->hasMany(Position::class);
+    }
+
     public function applications(): HasMany
     {
         return $this->hasMany(Application::class);

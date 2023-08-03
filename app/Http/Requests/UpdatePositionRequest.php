@@ -20,12 +20,12 @@ class UpdatePositionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'category_id' => [
+            'group_id' => [
                 'required',
                 'integer',
                 'not_in:0',
             ],
-            'group_id' => [
+            'sub_group_id' => [
                 'required',
                 'integer',
                 'not_in:0',

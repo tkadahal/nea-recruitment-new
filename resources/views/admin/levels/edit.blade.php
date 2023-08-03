@@ -55,22 +55,6 @@
                 </p>
             </div>
 
-            <div class="form-group {{ $errors->has('order') ? 'has-error' : '' }}">
-                <label class="required" for="order">
-                    {{ trans('global.level.fields.order') }}
-                </label>
-                <input type="number" id="order" name="order" class="form-control"
-                    value="{{ old('order', isset($level) ? $level->order : '') }}">
-                @if($errors->has('order'))
-                <p class="help-block">
-                    {{ $errors->first('order') }}
-                </p>
-                @endif
-                <p class="helper-block">
-                    {{ trans('global.level.fields.order_helper') }}
-                </p>
-            </div>
-
         </div>
 
         <div class="card-footer">

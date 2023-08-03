@@ -18,18 +18,18 @@
             <tbody>
                 <tr>
                     <th>
-                        {{ trans('global.position.fields.category_id') }}
-                    </th>
-                    <td>
-                        {{ $position->category>title ?? '' }}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
                         {{ trans('global.position.fields.group_id') }}
                     </th>
                     <td>
                         {{ $position->group->title ?? '' }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.position.fields.sub_group_id') }}
+                    </th>
+                    <td>
+                        {{ $position->subGroup->title ?? '' }}
                     </td>
                 </tr>
                 <tr>

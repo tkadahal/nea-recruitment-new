@@ -7,10 +7,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePositionRequest;
 use App\Http\Requests\UpdatePositionRequest;
-use App\Models\Category;
 use App\Models\Group;
 use App\Models\Level;
 use App\Models\Position;
+use App\Models\SubGroup;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
@@ -23,7 +23,7 @@ class PositionController extends Controller
     {
         abort_if(Gate::denies('position_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $positions = Position::all();
+        $positions = Position::with('group', 'subGroup', 'level')->get();
 
         return view('admin.positions.index', compact('positions'));
     }
@@ -32,13 +32,13 @@ class PositionController extends Controller
     {
         abort_if(Gate::denies('position_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $categories = Category::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
-
         $groups = Group::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        $subGroups = SubGroup::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $levels = Level::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        return view('admin.positions.create', compact('categories', 'groups', 'levels'));
+        return view('admin.positions.create', compact('groups', 'subGroups', 'levels'));
     }
 
     public function store(StorePositionRequest $request): RedirectResponse
@@ -55,7 +55,7 @@ class PositionController extends Controller
     {
         abort_if(Gate::denies('position_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $position->load(['category', 'group', 'level']);
+        $position->load(['group', 'subGroup', 'level']);
 
         return view('admin.positions.show', compact('position'));
     }
@@ -64,15 +64,15 @@ class PositionController extends Controller
     {
         abort_if(Gate::denies('position_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $categories = Category::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
-
         $groups = Group::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        $subGroups = SubGroup::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $levels = Level::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $position->load(['category', 'group', 'level']);
+        $position->load(['group', 'subGroup', 'level']);
 
-        return view('admin.positions.edit', compact('position', 'groups', 'categories', 'levels'));
+        return view('admin.positions.edit', compact('position', 'groups', 'subGroups', 'levels'));
     }
 
     public function update(UpdatePositionRequest $request, Position $position): RedirectResponse
@@ -101,5 +101,16 @@ class PositionController extends Controller
         Position::whereIn('id', request('ids'))->delete();
 
         return response(null, Response::HTTP_NO_CONTENT);
+    }
+
+    public function getSubGroupsAndLevels(Request $request, $groupId)
+    {
+        $subGroups = SubGroup::where('group_id', $groupId)->pluck('title', 'id');
+        $levels = Level::where('group_id', $groupId)->pluck('title', 'id');
+
+        return response()->json([
+            'subGroups' => $subGroups,
+            'levels' => $levels,
+        ]);
     }
 }

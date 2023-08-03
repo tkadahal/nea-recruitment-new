@@ -22,8 +22,8 @@ class Position extends Model
     ];
 
     protected $fillable = [
-        'category_id',
         'group_id',
+        'sub_group_id',
         'level_id',
         'title',
         'created_at',
@@ -31,14 +31,14 @@ class Position extends Model
         'deleted_at',
     ];
 
-    public function category(): BelongsTo
-    {
-        return $this->belongsTo(Category::class);
-    }
-
     public function group(): BelongsTo
     {
         return $this->belongsTo(Group::class);
+    }
+
+    public function subGroup(): BelongsTo
+    {
+        return $this->belongsTo(SubGroup::class);
     }
 
     public function level(): BelongsTo

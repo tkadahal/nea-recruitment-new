@@ -38,11 +38,12 @@ class DatabaseSeeder extends Seeder
             ExamCentersTableSeeder::class,
             SamabeshiGroupsTableSeeder::class,
             UsersTableSeeder::class,
-            AdvertisementsTableSeeder::class,
-            AdvertisementSamabeshiGroupTableSeeder::class,
+            // AdvertisementsTableSeeder::class,
+            // AdvertisementSamabeshiGroupTableSeeder::class,
             PaymentVendorsTableSeeder::class,
-            ApplicationsTableSeeder::class,
-            PaymentsTableSeeder::class,
+            // ApplicationsTableSeeder::class,
+            // PaymentsTableSeeder::class,
         ]);
+        $this->call(LevelsTableSeeder::class);
     }
 }

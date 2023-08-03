@@ -2,10 +2,15 @@
 
 declare(strict_types=1);
 
+use App\Models\Advertisement;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::view('test', 'welcome')->name('test');
+Route::get('test', function () {
+    $advertisements = Advertisement::with('category', 'group', 'subGroup', 'level')->get();
+
+    return view('welcome')->with(compact('advertisements'));
+})->name('test');
 
 Route::redirect('/', '/login');
 

@@ -45,14 +45,14 @@ class Group extends Model
         return $this->hasMany(Level::class);
     }
 
-    public function applications(): HasMany
-    {
-        return $this->hasMany(Application::class);
-    }
-
     public function positions(): HasMany
     {
         return $this->hasMany(Position::class);
+    }
+
+    public function applications(): HasMany
+    {
+        return $this->hasMany(Application::class);
     }
 
     public function newEloquentBuilder($query): ModelBuilder

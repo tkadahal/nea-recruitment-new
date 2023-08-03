@@ -12,8 +12,8 @@ return new class extends Migration
     {
         Schema::create('positions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id')->index()->constrained();
             $table->foreignId('group_id')->index()->constrained();
+            $table->foreignId('sub_group_id')->index()->constrained();
             $table->foreignId('level_id')->index()->constrained();
 
             $table->string('title');

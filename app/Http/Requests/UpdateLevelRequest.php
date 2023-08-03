@@ -30,11 +30,6 @@ class UpdateLevelRequest extends FormRequest
                 'integer',
                 'not_in:0',
             ],
-            'order' => [
-                'required',
-                'integer',
-                'not_in:0',
-            ],
         ];
     }
 }

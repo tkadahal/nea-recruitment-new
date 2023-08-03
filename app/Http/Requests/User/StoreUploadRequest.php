@@ -46,6 +46,18 @@ class StoreUploadRequest extends FormRequest
                 'mimetypes:image/jpeg,image/jpg,image/png,application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
+            'appointment' => [
+                'nullable',
+                'file',
+                'mimetypes:image/jpeg,image/jpg,image/png,application/pdf',
+                'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
+            ],
+            'recommendation' => [
+                'nullable',
+                'file',
+                'mimetypes:image/jpeg,image/jpg,image/png,application/pdf',
+                'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
+            ],
         ];
     }
 

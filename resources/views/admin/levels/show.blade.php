@@ -34,14 +34,6 @@
                 </tr>
                 <tr>
                     <th>
-                        {{ trans('global.level.fields.order') }}
-                    </th>
-                    <td>
-                        {{ $level->order ?? '' }}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
                         {{ trans('global.level.fields.created_at') }}
                     </th>
                     <td>

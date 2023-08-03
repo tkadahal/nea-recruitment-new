@@ -14,31 +14,6 @@
         </div>
         <div class="card-body">
 
-            <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
-                <label class="required" for="category_id">
-                    {{ trans('global.position.fields.category_id') }}
-                </label>
-                <select name="category_id" id="category_id" class="form-control select2">
-                    @foreach ($categories as $id => $category)
-                    <option value="{{ $id }}" {{ (isset($position) && $position->category
-                        ? $position->category>id
-                        : old('category_id')) == $id
-                        ? 'selected'
-                        : '' }}>
-                        {{ $category }}
-                    </option>
-                    @endforeach
-                </select>
-                @if ($errors->has('category_id'))
-                <p class="help-block">
-                    {{ $errors->first('category_id') }}
-                </p>
-                @endif
-                <p class="helper-block">
-                    {{ trans('global.position.fields.category_id_helper') }}
-                </p>
-            </div>
-
             <div class="form-group {{ $errors->has('group_id') ? 'has-error' : '' }}">
                 <label class="required" for="group_id">
                     {{ trans('global.position.fields.group_id') }}
@@ -61,6 +36,31 @@
                 @endif
                 <p class="helper-block">
                     {{ trans('global.position.fields.group_id_helper') }}
+                </p>
+            </div>
+
+            <div class="form-group {{ $errors->has('sub_group_id') ? 'has-error' : '' }}">
+                <label class="required" for="sub_group_id">
+                    {{ trans('global.position.fields.sub_group_id') }}
+                </label>
+                <select name="sub_group_id" id="sub_group_id" class="form-control select2">
+                    @foreach ($subGroups as $id => $subGroup)
+                    <option value="{{ $id }}" {{ (isset($position) && $position->subGroup
+                        ? $position->subGroup->id
+                        : old('sub_group_id')) == $id
+                        ? 'selected'
+                        : '' }}>
+                        {{ $subGroup }}
+                    </option>
+                    @endforeach
+                </select>
+                @if ($errors->has('sub_group_id'))
+                <p class="help-block">
+                    {{ $errors->first('sub_group_id') }}
+                </p>
+                @endif
+                <p class="helper-block">
+                    {{ trans('global.position.fields.sub_group_id_helper') }}
                 </p>
             </div>
 
@@ -93,7 +93,7 @@
                 <label class="required" for="title">
                     {{ trans('global.position.fields.title') }}
                 </label>
-                <input type="number" id="title" name="title" class="form-control"
+                <input type="text" id="title" name="title" class="form-control"
                     value="{{ old('title', isset($position) ? $position->title : '') }}">
                 @if($errors->has('title'))
                 <p class="help-block">
@@ -117,26 +117,33 @@
 
 @section('scripts')
 <script>
-    $(document).ready(function() {
-        $('#group_id').on('change', function() {
+    $(document).ready(function () {
+        $('#group_id').on('change', function () {
             var groupId = $(this).val();
-            if (groupId) {
-                $.ajax({
-                    url: '/admin/get-levels/' + groupId
-                    , type: 'GET'
-                    , dataType: 'json'
-                    , success: function(data) {
-                        $('#level_id').empty().append('<option value="">' + "{{ trans('global.pleaseSelect') }}" + '</option>');
-                        $.each(data, function(key, value) {
-                            $('#level_id').append('<option value="' + key + '">' + value + '</option>');
-                        });
-                    }
-                });
-            } else {
-                $('#level_id').empty().append('<option value="">' + "{{ trans('global.pleaseSelect') }}" + '</option>');
-            }
+
+            $.ajax({
+                url: '/admin/getSubGroupsAndLevels/' + groupId,
+                type: 'GET',
+                success: function (data) {
+                    var subGroupSelect = $('#sub_group_id');
+                    subGroupSelect.empty();
+                    $.each(data.subGroups, function (id, subGroup) {
+                        subGroupSelect.append($('<option></option>').attr('value', id).text(subGroup));
+                    });
+
+                    var levelSelect = $('#level_id');
+                    levelSelect.empty();
+                    $.each(data.levels, function (id, level) {
+                        levelSelect.append($('<option></option>').attr('value', id).text(level));
+                    });
+                },
+                error: function (xhr) {
+                    console.log(xhr);
+                    // Handle error if needed
+                }
+            });
         });
     });
-
 </script>
+
 @endsection

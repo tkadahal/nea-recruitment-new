@@ -15,7 +15,7 @@ return new class extends Migration
             $table->foreignId('group_id')->index()->constrained();
 
             $table->integer('title')->index();
-            $table->integer('order')->index();
+            // $table->integer('order')->index();
 
             $table->boolean('active')->default(1);
 

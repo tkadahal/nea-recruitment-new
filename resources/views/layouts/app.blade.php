@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ trans('global.site_title') }}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -200,44 +200,43 @@
     <header>
         <div class="container">
             {{-- <div class="row g-3"> --}}
-            {{-- <div class="col-md-9 text-start">
+                {{-- <div class="col-md-9 text-start">
                     <a href="#"><img src="{{ asset('frontend/img/nea-login.png') }}"></a>
                 </div> --}}
-            <nav class="navbar navbar-expand-md navbar-light">
-                <div class="container">
-                    <a href="#">
-                        <img src="{{ asset('storage/logos/nea-mini.png') }}" width="100" height="100" />
-                    </a>
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <div class="container">
+                        <a href="#">
+                            <img src="{{ asset('storage/logos/nea-mini.png') }}" width="100" height="100" />
+                        </a>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav me-auto">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <!-- Left Side Of Navbar -->
+                            <ul class="navbar-nav me-auto">
 
-                        </ul>
+                            </ul>
 
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item" style="padding-right: 2rem">
-                                <a class="btn btn-info" href="{{ route('support') }}">
-                                    {{ trans('global.support.title_singular') }}
-                                </a>
-                            </li>
+                            <!-- Right Side Of Navbar -->
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item" style="padding-right: 2rem">
+                                    <a class="btn btn-info" href="{{ route('support') }}">
+                                        {{ trans('global.support.title_singular') }}
+                                    </a>
+                                </li>
 
-                            @if (count(config('panel.available_languages', [])) > 1)
+                                @if (count(config('panel.available_languages', [])) > 1)
                                 <li class="nav-item dropdown" style="padding-right: 2rem">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#"
-                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false" v-pre>
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         @if (app()->getLocale() == 'np')
-                                            <x-flag-country-np style="width: 25px" />
+                                        <x-flag-country-np style="width: 25px" />
                                         @else
-                                            <x-flag-country-us style="width: 25px" />
+                                        <x-flag-country-us style="width: 25px" />
                                         @endif
                                         {{-- &nbsp;
                                         {{ strtoupper(app()->getLocale()) }} --}}
@@ -245,55 +244,54 @@
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         @foreach (config('panel.available_languages') as $langLocale => $langName)
-                                            <a class="dropdown-item"
-                                                href="{{ url()->current() }}?change_language={{ $langLocale }}">
-                                                @if ($langLocale == 'np')
-                                                    <x-flag-country-np style="width: 25px" />
-                                                @else
-                                                    <x-flag-country-us style="width: 25px" />
-                                                @endif
-                                                &nbsp;
-                                                {{ strtoupper($langLocale) }} ({{ $langName }})
-                                            </a>
+                                        <a class="dropdown-item"
+                                            href="{{ url()->current() }}?change_language={{ $langLocale }}">
+                                            @if ($langLocale == 'np')
+                                            <x-flag-country-np style="width: 25px" />
+                                            @else
+                                            <x-flag-country-us style="width: 25px" />
+                                            @endif
+                                            &nbsp;
+                                            {{ strtoupper($langLocale) }} ({{ $langName }})
+                                        </a>
                                         @endforeach
                                     </div>
                                 </li>
-                            @endif
+                                @endif
 
-                            <!-- Authentication Links -->
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <b>{{ auth()->user()->name }}<br>
-                                        Applicant Id: {{ auth()->user()->applicant_id }}</b>
-                                </a>
+                                <!-- Authentication Links -->
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        <b>{{ auth()->user()->name }}<br>
+                                            Applicant Id: {{ auth()->user()->applicant_id }}</b>
+                                    </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <div class="dropdown-header"><strong>Account</strong></div>
-                                    @if (file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <div class="dropdown-header"><strong>Account</strong></div>
+                                        @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
                                         <a class="dropdown-item {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'active' : '' }}"
                                             href="{{ route('profile.password.edit') }}">
                                             {{ trans('global.change_password') }}
                                         </a>
-                                    @endif
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
+                                        @endif
+                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                                        {{ trans('global.logout') }}
-                                    </a>
+                                            {{ trans('global.logout') }}
+                                        </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                        class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        </ul>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
 
-            {{-- <div class="col-md-3 justify-content-end">
+                {{-- <div class="col-md-3 justify-content-end">
                     <ul class="navbar-nav ms-auto">
                         @guest
                         @if (Route::has('login'))
@@ -328,7 +326,7 @@
                         @endguest
                     </ul>
                 </div> --}}
-            {{--
+                {{--
             </div> --}}
         </div>
     </header>
@@ -359,23 +357,23 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12">
                     @if (!request()->is('support') && !request()->is('profile/password'))
-                        @include('user.navigation.nav-bar')
+                    @include('user.navigation.nav-bar')
                     @endif
                     <div role="tabpanel">
                         <div class="card">
                             @if (!request()->is('profile/password'))
-                                <div class="row">
-                                    <div class="col d-flex justify-content-end">
-                                        <p class="mb-0">
-                                            <span style="color: #a307eb">
-                                                {{ trans('global.nepaliAssistant') }}&nbsp;
-                                                <a href="https://www.google.com/inputtools/try/" target="_blank">
-                                                    {{ trans('global.nepaliAssistnatLink') }}
-                                                </a>
-                                            </span>
-                                        </p>
-                                    </div>
+                            <div class="row">
+                                <div class="col d-flex justify-content-end">
+                                    <p class="mb-0">
+                                        <span style="color: #a307eb">
+                                            {{ trans('global.nepaliAssistant') }}&nbsp;
+                                            <a href="https://www.google.com/intl/ne/inputtools/try/" target="_blank">
+                                                {{ trans('global.nepaliAssistnatLink') }}
+                                            </a>
+                                        </span>
+                                    </p>
                                 </div>
+                            </div>
                             @endif
                             @yield('content')
                         </div>
@@ -405,7 +403,8 @@
         integrity="sha512-F636MAkMAhtTplahL9F6KmTfxTmYcAcjcCkyu0f0voT3N/6vzAuJ4Num55a0gEJ+hRLHhdz3vDvZpf6kqgEa5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="{{ asset('nepali.datepicker.v4.0/js/nepali.datepicker.v4.0.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('nepali.datepicker.v4.0/js/nepali.datepicker.v4.0.min.js') }}" type="text/javascript">
+    </script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('.select2').select2();
@@ -447,6 +446,7 @@
             toastr.warning("{{ session('warning') }}");
         @endif
     </script>
+
     @yield('scripts')
 
 </body>

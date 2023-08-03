@@ -95,6 +95,7 @@ Route::middleware(['auth:admin'])->group(function () {
             Route::resource(name: 'level', controller: LevelController::class);
 
             // Positions
+            Route::get('/getSubGroupsAndLevels/{groupId}', 'PositionController@getSubGroupsAndLevels')->name('getSubGroupsAndLevels');
             Route::delete(uri: 'positions/destroy', action: 'PositionController@massDestroy')->name(name: 'positions.massDestroy');
             Route::resource(name: 'position', controller: PositionController::class);
 

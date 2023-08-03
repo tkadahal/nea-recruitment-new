@@ -25,7 +25,6 @@ class Level extends Model
     protected $fillable = [
         'group_id',
         'title',
-        'order',
         'created_at',
         'updated_at',
         'deleted_at',
