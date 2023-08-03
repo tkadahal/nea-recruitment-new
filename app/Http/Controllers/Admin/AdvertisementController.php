@@ -106,7 +106,7 @@ class AdvertisementController extends Controller
 
         $levels = Level::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $positions = Position::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $positions = Position::all()->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $designations = Designation::all()->unique('title')->pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 

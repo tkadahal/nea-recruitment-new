@@ -423,22 +423,49 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-4 {{ $errors->has('samabeshi_groups') ? 'has-error' : '' }}">
-                    <label class="required" for="samabeshi_groups">
-                        {{ trans('global.advertisement.fields.samabeshi_groups') }}
-                    </label>
-                    @foreach ($samabeshiGroups as $id => $samabeshiGroup)
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="{{ $id }}" id="{{ $id }}"
-                            name="samabeshi_groups[]"
-                            style="width: 15px; height: 15px; border: var(--bs-border-width) solid #0d0d0d;"
-                            @if(old('samabeshi_groups') && in_array($id, old('samabeshi_groups'))) checked @endif>
-                        <label class="form-check-label" for="{{ $id }}">
-                            {{ $samabeshiGroup }}
-                        </label>
+            <div class="card-section">
+                <h3>
+                    समाबेशी समूह विवरण
+                </h3>
+                <div class="p-2">
+
+                    <div class="row">
+                        <div class="col-md-4 {{ $errors->has('samabeshi_groups') ? 'has-error' : '' }}">
+                            <label class="required" for="samabeshi_groups">
+                                {{ trans('global.advertisement.fields.samabeshi_groups') }}
+                            </label>
+                            @foreach ($samabeshiGroups as $id => $samabeshiGroup)
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="{{ $id }}" id="{{ $id }}"
+                                    name="samabeshi_groups[]"
+                                    style="width: 15px; height: 15px; border: var(--bs-border-width) solid #0d0d0d;"
+                                    @if(old('samabeshi_groups') && in_array($id, old('samabeshi_groups'))) checked
+                                    @endif>
+                                <label class="form-check-label" for="{{ $id }}">
+                                    {{ $samabeshiGroup }}
+                                </label>
+                            </div>
+                            @endforeach
+                        </div>
+
+                        <div class="col-md-4 {{ $errors->has('samabeshi_groups') ? 'has-error' : '' }}">
+                            <label class="required" for="samabeshi_groups">
+                                {{ trans('global.advertisement.fields.samabeshi_groups') }}
+                            </label>
+                            @foreach ($samabeshiGroups as $id => $samabeshiGroup)
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="{{ $id }}" id="{{ $id }}"
+                                    name="samabeshi_groups[]"
+                                    style="width: 15px; height: 15px; border: var(--bs-border-width) solid #0d0d0d;"
+                                    @if(old('samabeshi_groups') && in_array($id, old('samabeshi_groups'))) checked
+                                    @endif>
+                                <label class="form-check-label" for="{{ $id }}">
+                                    {{ $samabeshiGroup }}
+                                </label>
+                            </div>
+                            @endforeach
+                        </div>
                     </div>
-                    @endforeach
                 </div>
             </div>
 
