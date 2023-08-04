@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('level_id')->index()->constrained();
 
             $table->string('title');
+            $table->text('description')->nullable();
 
             $table->boolean('active')->default(1);
 

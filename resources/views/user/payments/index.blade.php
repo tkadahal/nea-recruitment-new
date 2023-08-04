@@ -117,10 +117,17 @@
                                                                 </h5>
                                                             @else
                                                                 <!-- Display the "Make Payment" button if the latest payment is not successful -->
-                                                                <a href="{{ route('payment.show', $application->id) }}"
-                                                                    class="btn btn-block btn-outline-success">
-                                                                    Make Payment
-                                                                </a>
+                                                                @if ($application->payable_amount > 0)
+                                                                    <a href="{{ route('payment.show', $application->id) }}"
+                                                                        class="btn btn-block btn-outline-success">
+                                                                        Make Payment
+                                                                    </a>
+                                                                @else
+                                                                    <button class="btn btn-block btn-outline-success"
+                                                                        disabled>
+                                                                        Make Payment
+                                                                    </button>
+                                                                @endif
                                                             @endif
                                                         @endif
                                                     @else
@@ -133,7 +140,7 @@
                                                             </h5>
                                                         @else
                                                             <!-- Display the "Make Payment" button if there are no payments -->
-                                                            @if ($application->amount > 0)
+                                                            @if ($application->payable_amount > 0)
                                                                 <a href="{{ route('payment.show', $application->id) }}"
                                                                     class="btn btn-block btn-outline-success">
                                                                     Make Payment

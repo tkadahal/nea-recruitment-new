@@ -14,7 +14,7 @@ Route::get('test', function () {
 
 Route::redirect('/', '/login');
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth', 'validate.tab']], function () {
 
     Route::group(['prefix' => ''], function () {
         Route::group(['namespace' => 'User'], function () {

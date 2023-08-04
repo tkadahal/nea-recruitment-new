@@ -71,48 +71,53 @@
                         {{ trans('global.user.title') }}
                     </a>
                 </li> --}}
-                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Settings</a></li>
+                <li class="c-header-nav-item px-3">
+                    <a class="c-header-nav-link" href="#">
+                        {{ trans('global.setting.title') }}
+                    </a>
+                </li>
             </ul>
             <ul class="c-header-nav ml-auto mr-4">
                 @if (count(config('panel.available_languages', [])) > 1)
-                <li class="c-header-nav-item dropdown d-md-down-none mx-2">
-                    <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                        aria-expanded="false">
-                        @if (app()->getLocale() == 'np')
-                        <x-flag-country-np style="width: 25px" />
-                        @else
-                        <x-flag-country-us style="width: 25px" />
-                        @endif
-                        &nbsp;
-                        {{ strtoupper(app()->getLocale()) }}
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right pt-0">
-                        @foreach (config('panel.available_languages') as $langLocale => $langName)
-                        <a class="dropdown-item" href="{{ url()->current() }}?change_language={{ $langLocale }}">
-                            @if ($langLocale == 'np')
-                            <x-flag-country-np style="width: 25px" />
+                    <li class="c-header-nav-item dropdown d-md-down-none mx-2">
+                        <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            @if (app()->getLocale() == 'np')
+                                <x-flag-country-np style="width: 25px" />
                             @else
-                            <x-flag-country-us style="width: 25px" />
+                                <x-flag-country-us style="width: 25px" />
                             @endif
                             &nbsp;
-                            {{ strtoupper($langLocale) }} ({{ $langName }})
+                            {{ strtoupper(app()->getLocale()) }}
                         </a>
-                        @endforeach
-                    </div>
-                </li>
+                        <div class="dropdown-menu dropdown-menu-right pt-0">
+                            @foreach (config('panel.available_languages') as $langLocale => $langName)
+                                <a class="dropdown-item"
+                                    href="{{ url()->current() }}?change_language={{ $langLocale }}">
+                                    @if ($langLocale == 'np')
+                                        <x-flag-country-np style="width: 25px" />
+                                    @else
+                                        <x-flag-country-us style="width: 25px" />
+                                    @endif
+                                    &nbsp;
+                                    {{ strtoupper($langLocale) }} ({{ $langName }})
+                                </a>
+                            @endforeach
+                        </div>
+                    </li>
                 @endif
 
                 <li class="c-header-nav-item dropdown d-md-down-none mx-2">
-                    <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                        aria-expanded="false">
+                    <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">
                         <svg class="c-icon">
                             <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-bell') }}"></use>
                         </svg>
                     </a>
                 </li>
 
-                <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown" href="#"
-                        role="button" aria-haspopup="true" aria-expanded="false">
+                <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown"
+                        href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         {{ Auth::user()->name }} &nbsp;
                         <svg class="c-icon">
                             <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-user') }}"></use>
@@ -121,21 +126,24 @@
                     <div class="dropdown-menu dropdown-menu-right pt-0">
                         <div class="dropdown-header bg-light py-2"><strong>Account</strong></div>
                         @if (file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
-                        @can('profile_password_edit')
-                        <a class="dropdown-item {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'active' : '' }}"
-                            href="{{ route('profile.password.edit') }}">
-                            <svg class="c-icon mr-2">
-                                <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-lock-locked') }}">
-                                </use>
-                            </svg>
-                            {{ trans('global.change_password') }}
-                        </a>
-                        @endcan
+                            @can('profile_password_edit')
+                                <a class="dropdown-item {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'active' : '' }}"
+                                    href="{{ route('profile.password.edit') }}">
+                                    <svg class="c-icon mr-2">
+                                        <use
+                                            xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-lock-locked') }}">
+                                        </use>
+                                    </svg>
+                                    {{ trans('global.change_password') }}
+                                </a>
+                            @endcan
                         @endif
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
                             <svg class="c-icon mr-2">
-                                <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-account-logout') }}">
+                                <use
+                                    xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-account-logout') }}">
                                 </use>
                             </svg>
                             {{ trans('global.logout') }}
@@ -163,13 +171,13 @@
                                 </div>
                                 @endif --}}
                                 @if ($errors->count() > 0)
-                                <div class="alert alert-danger">
-                                    <ul class="list-unstyled">
-                                        @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
+                                    <div class="alert alert-danger">
+                                        <ul class="list-unstyled">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                 @endif
                                 @yield('content')
                             </div>
@@ -218,8 +226,7 @@
         integrity="sha512-F636MAkMAhtTplahL9F6KmTfxTmYcAcjcCkyu0f0voT3N/6vzAuJ4Num55a0gEJ+hRLHhdz3vDvZpf6kqgEa5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="{{ asset('nepali.datepicker.v4.0/js/nepali.datepicker.v4.0.min.js') }}" type="text/javascript">
-    </script>
+    <script src="{{ asset('nepali.datepicker.v4.0/js/nepali.datepicker.v4.0.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <script>
         $(function() {
