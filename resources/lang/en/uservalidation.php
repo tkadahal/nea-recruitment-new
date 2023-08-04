@@ -80,4 +80,10 @@ return [
     'citizenship_back_max' => 'The upload size for Citizenship (Back Side) is max 1MB',
     'samabeshi_mime' => 'Please upload samabeshi document in either jpeg/jpg or pdf format',
     'samabeshi_max' => 'The upload size for samabeshi document is max 5MB',
+    'appointment' => 'Please upload your appointment letter',
+    'appointment_mime' => 'Please upload appointment letter in either jpeg/jpg or pdf format',
+    'appointment_max' => 'The upload size for appointment letter is max 5MB',
+    'recommendation' => 'Please upload your recommendation document',
+    'recommendation_mime' => 'Please upload recommendation document in either jpeg/jpg or pdf format',
+    'recommendation_max' => 'The upload size for recommendation document is max 5MB',
 ];

@@ -40,6 +40,7 @@ class StoreContactRequest extends FormRequest
             'perma_ward_number' => [
                 'required',
                 'integer',
+                'min:0',
             ],
             'sameAsPermanent' => [
                 'nullable',
@@ -68,6 +69,7 @@ class StoreContactRequest extends FormRequest
             'temp_ward_number' => [
                 'required',
                 'integer',
+                'min:0',
             ],
             'contact_person_name' => [
                 'required',

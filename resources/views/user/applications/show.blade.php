@@ -64,6 +64,12 @@
                                 {{ trans('global.application.info.samabeshiGroupSelectionInfo') }}
                             </p>
 
+                            @if ($application->experience_calculation_period)
+                                <i style="color: #a307eb">
+                                    {{ trans('global.application.info.experienceInfo', ['experienceCalculationPeriod' => localizedNumber($application->experience_calculation_period)]) }}
+                                </i>
+                            @endif
+
                             <div id="samabeshiGroupsContainer" data-advertisement-id="{{ $application->id }}">
                                 <div class="row">
                                     <p style="color:#990000" style="font-size: 1.2em;"><i>

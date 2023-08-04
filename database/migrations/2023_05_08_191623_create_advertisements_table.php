@@ -30,6 +30,7 @@ return new class extends Migration
             $table->integer('samabeshi_fee')->nullable();
             $table->integer('training_period')->nullable();
             $table->integer('experience_period')->nullable();
+            $table->integer('experience_calculation_period')->nullable();
 
             $table->string('start_date_np');
             $table->date('start_date_en')->index();

@@ -109,7 +109,7 @@
                                             {{ trans('global.contact.fields.perma_ward_number') }}
                                         </label>
                                         <input type="number" id="perma_ward_number" name="perma_ward_number"
-                                            class="form-control"
+                                            class="form-control" min="0"
                                             value="{{ old('perma_ward_number', isset($contact) ? $contact->perma_ward_number : '') }}">
                                         @if ($errors->has('perma_ward_number'))
                                             <p class="help-block">
@@ -238,8 +238,8 @@
                                             {{ trans('global.contact.fields.temp_ward_number') }}
                                         </label>
                                         <input type="number" id="temp_ward_number" name="temp_ward_number"
-                                            class="form-control"
-                                            value="{{ old('temp_ward_number', isset($contact) ? $contact->temp_ward_number : '') }}">
+                                            class="form-control" min="0"
+                                            min=value="{{ old('temp_ward_number', isset($contact) ? $contact->temp_ward_number : '') }}">
                                         @if ($errors->has('temp_ward_number'))
                                             <p class="help-block">
                                                 {{ $errors->first('temp_ward_number') }}
@@ -271,274 +271,7 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="card-section">
-                        <h3>
-                            {{ trans('global.contact.category.fields.permanent') }}
-                        </h3>
 
-                        <div class="p3">
-                            <div class="row mt-3">
-                                <p>
-                                    <span style="color: #a307eb">
-                                        {{ trans('global.contact.info.permanentInfo') }}
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="row g-3 m-0">
-
-                                <div class="col-md-4">
-                                    <div class="form-group {{ $errors->has('perma_province') ? 'has-error' : '' }}">
-                                        <label class="required" for="perma_province">
-                                            {{ trans('global.contact.fields.perma_province') }}
-                                        </label>
-                                        <select name="perma_province" id="perma_province" class="form-control select2">
-                                            @foreach ($provinces as $id => $permaProvince)
-                                                <option value="{{ $id }}"
-                                                    {{ (isset($contact) && $contact->permaProvince ? $contact->permaProvince->id : old('perma_province')) == $id
-                                                        ? 'selected'
-                                                        : '' }}>
-                                                    {{ $permaProvince }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                        @if ($errors->has('perma_province'))
-                                            <p class="help-block">
-                                                {{ $errors->first('perma_province') }}
-                                            </p>
-                                        @endif
-                                        <p class="helper-block">
-                                            {{ trans('global.contact.fields.perma_province_helper') }}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group {{ $errors->has('perma_district') ? 'has-error' : '' }}">
-                                        <label class="required" for="perma_district">
-                                            {{ trans('global.contact.fields.perma_district') }}
-                                        </label>
-                                        <select name="perma_district" id="perma_district" class="form-control select2">
-                                            @foreach ($districts as $id => $permaDistrict)
-                                                <option value="{{ $id }}"
-                                                    {{ (isset($contact) && $contact->permaDistrict ? $contact->permaDistrict->id : old('perma_district')) == $id
-                                                        ? 'selected'
-                                                        : '' }}>
-                                                    {{ $permaDistrict }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                        @if ($errors->has('perma_district'))
-                                            <p class="help-block">
-                                                {{ $errors->first('perma_district') }}
-                                            </p>
-                                        @endif
-                                        <p class="helper-block">
-                                            {{ trans('global.contact.fields.perma_district_helper') }}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group {{ $errors->has('perma_municipality') ? 'has-error' : '' }}">
-                                        <label class="required" for="perma_municipality">
-                                            {{ trans('global.contact.fields.perma_municipality') }}
-                                        </label>
-                                        <select name="perma_municipality" id="perma_municipality"
-                                            class="form-control select2">
-                                            @foreach ($municipalities as $id => $permaMunicipality)
-                                                <option value="{{ $id }}"
-                                                    {{ (isset($contact) && $contact->permaMunicipality
-                                                        ? $contact->permaMunicipality->id
-                                                        : old('perma_municipality')) == $id
-                                                        ? 'selected'
-                                                        : '' }}>
-                                                    {{ $permaMunicipality }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                        @if ($errors->has('perma_municipality'))
-                                            <p class="help-block">
-                                                {{ $errors->first('perma_municipality') }}
-                                            </p>
-                                        @endif
-                                        <p class="helper-block">
-                                            {{ trans('global.contact.fields.perma_municipality_helper') }}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group {{ $errors->has('perma_ward_number') ? 'has-error' : '' }}">
-                                        <label class="required" for="perma_ward_number">
-                                            {{ trans('global.contact.fields.perma_ward_number') }}
-                                        </label>
-                                        <input type="number" id="perma_ward_number" name="perma_ward_number"
-                                            class="form-control"
-                                            value="{{ old('perma_ward_number', isset($contact) ? $contact->perma_ward_number : '') }}">
-                                        @if ($errors->has('perma_ward_number'))
-                                            <p class="help-block">
-                                                {{ $errors->first('perma_ward_number') }}
-                                            </p>
-                                        @endif
-                                        <p class="helper-block">
-                                            {{ trans('global.contact.fields.perma_ward_number_helper') }}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group {{ $errors->has('perma_tol') ? 'has-error' : '' }}">
-                                        <label class="required" for="perma_tol">
-                                            {{ trans('global.contact.fields.perma_tol') }}
-                                        </label>
-                                        <input type="text" id="perma_tol" name="perma_tol" class="form-control"
-                                            value="{{ old('perma_tol', isset($contact) ? $contact->perma_tol : '') }}">
-                                        @if ($errors->has('perma_tol'))
-                                            <p class="help-block">
-                                                {{ $errors->first('perma_tol') }}
-                                            </p>
-                                        @endif
-                                        <p class="helper-block">
-                                            {{ trans('global.contact.fields.perma_tol_helper') }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="card-section">
-                        <h3>
-                            {{ trans('global.contact.category.fields.temporary') }}
-                        </h3>
-                        <div class="p3">
-                            <div class="row g-3 p-3">
-                                <div class="row mt-3">
-                                    <div class="col">
-                                        <input type="checkbox" id="sameAsPermanent"> Same as Permanent
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group {{ $errors->has('temp_province') ? 'has-error' : '' }}">
-                                        <label class="required" for="temp_province">
-                                            {{ trans('global.contact.fields.temp_province') }}
-                                        </label>
-                                        <select name="temp_province" id="temp_province" class="form-control select2">
-                                            @foreach ($provinces as $id => $tempProvince)
-                                                <option value="{{ $id }}"
-                                                    {{ (isset($contact) && $contact->tempProvince ? $contact->tempProvince->id : old('temp_province')) == $id
-                                                        ? 'selected'
-                                                        : '' }}>
-                                                    {{ $tempProvince }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                        @if ($errors->has('temp_province'))
-                                            <p class="help-block">
-                                                {{ $errors->first('temp_province') }}
-                                            </p>
-                                        @endif
-                                        <p class="helper-block">
-                                            {{ trans('global.contact.fields.temp_province_helper') }}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group {{ $errors->has('temp_district') ? 'has-error' : '' }}">
-                                        <label class="required" for="temp_district">
-                                            {{ trans('global.contact.fields.temp_district') }}
-                                        </label>
-                                        <select name="temp_district" id="temp_district" class="form-control select2">
-                                            @foreach ($districts as $id => $tempDistrict)
-                                                <option value="{{ $id }}"
-                                                    {{ (isset($contact) && $contact->tempDistrict ? $contact->tempDistrict->id : old('temp_district')) == $id
-                                                        ? 'selected'
-                                                        : '' }}>
-                                                    {{ $tempDistrict }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                        @if ($errors->has('temp_district'))
-                                            <p class="help-block">
-                                                {{ $errors->first('temp_district') }}
-                                            </p>
-                                        @endif
-                                        <p class="helper-block">
-                                            {{ trans('global.contact.fields.temp_district_helper') }}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group {{ $errors->has('temp_municipality') ? 'has-error' : '' }}">
-                                        <label class="required" for="temp_municipality">
-                                            {{ trans('global.contact.fields.temp_municipality') }}
-                                        </label>
-                                        <select name="temp_municipality" id="temp_municipality"
-                                            class="form-control select2">
-                                            @foreach ($municipalities as $id => $tempMunicipality)
-                                                <option value="{{ $id }}"
-                                                    {{ (isset($contact) && $contact->tempMunicipality
-                                                        ? $contact->tempMunicipality->id
-                                                        : old('temp_municipality')) == $id
-                                                        ? 'selected'
-                                                        : '' }}>
-                                                    {{ $tempMunicipality }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                        @if ($errors->has('temp_municipality'))
-                                            <p class="help-block">
-                                                {{ $errors->first('temp_municipality') }}
-                                            </p>
-                                        @endif
-                                        <p class="helper-block">
-                                            {{ trans('global.contact.fields.temp_municipality_helper') }}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group {{ $errors->has('temp_ward_number') ? 'has-error' : '' }}">
-                                        <label class="required" for="temp_ward_number">
-                                            {{ trans('global.contact.fields.temp_ward_number') }}
-                                        </label>
-                                        <input type="number" id="temp_ward_number" name="temp_ward_number"
-                                            class="form-control"
-                                            value="{{ old('temp_ward_number', isset($contact) ? $contact->temp_ward_number : '') }}">
-                                        @if ($errors->has('temp_ward_number'))
-                                            <p class="help-block">
-                                                {{ $errors->first('temp_ward_number') }}
-                                            </p>
-                                        @endif
-                                        <p class="helper-block">
-                                            {{ trans('global.contact.fields.temp_ward_number_helper') }}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group {{ $errors->has('temp_tol') ? 'has-error' : '' }}">
-                                        <label class="required" for="temp_tol">
-                                            {{ trans('global.contact.fields.temp_tol') }}
-                                        </label>
-                                        <input type="text" id="temp_tol" name="temp_tol" class="form-control"
-                                            value="{{ old('temp_tol', isset($contact) ? $contact->temp_tol : '') }}">
-                                        @if ($errors->has('temp_tol'))
-                                            <p class="help-block">
-                                                {{ $errors->first('temp_tol') }}
-                                            </p>
-                                        @endif
-                                        <p class="helper-block">
-                                            {{ trans('global.contact.fields.temp_tol_helper') }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div> --}}
             <div class="card-section">
                 <h3>
                     {{ trans('global.contact.category.fields.contactPersonDetails') }}
@@ -579,7 +312,7 @@
                                     {{ trans('global.contact.fields.contact_person_number') }}
                                 </label>
                                 <input type="number" id="contact_person_number" name="contact_person_number"
-                                    class="form-control"
+                                    class="form-control" min="0"
                                     value="{{ old('contact_person_number', isset($contact) ? $contact->contact_person_number : '') }}">
                                 @if ($errors->has('contact_person_number'))
                                     <p class="help-block">

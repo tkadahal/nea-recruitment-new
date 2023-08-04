@@ -13,7 +13,7 @@ class ApplicationService
 {
     public function validateUserAgeAndGender(User $user, Advertisement $advertisement)
     {
-        if (! empty($user->sanket_num)) {
+        if (!empty($user->sanket_num)) {
             return;
         }
 
@@ -25,7 +25,7 @@ class ApplicationService
 
         $birthdate = $user->dob_en;
 
-        if (! $birthdate) {
+        if (!$birthdate) {
             throw new \Exception(trans('global.application.info.missingbirthDateInfo'));
         }
 
@@ -69,7 +69,7 @@ class ApplicationService
 
     public function calculateAge($birthdate, Advertisement $advertisement): float
     {
-        if (! $birthdate) {
+        if (!$birthdate) {
             throw new \Exception(trans('global.application.info.missingbirthDateInfo'));
         }
 
@@ -99,7 +99,7 @@ class ApplicationService
             return $designation->gender_id == $genderId;
         });
 
-        if (! $designation) {
+        if (!$designation) {
             throw new \Exception(trans('global.application.info.desinationNotFoundInfo'));
         }
 
@@ -122,8 +122,35 @@ class ApplicationService
 
         $requiredQualificationId = $advertisement->qualification_id;
 
-        if (! in_array($requiredQualificationId, $userQualifications)) {
+        if (!in_array($requiredQualificationId, $userQualifications)) {
             throw new \Exception(trans('global.application.info.qualificationInfo'));
+        }
+    }
+
+    public function validateTrainingAndExperienceForUser(User $user, Advertisement $advertisement)
+    {
+        $userTrainings = $user->trainings()->pluck('training_period')->toArray();
+        $totalUserTrainingPeriod = array_sum($userTrainings);
+
+        if ($totalUserTrainingPeriod < $advertisement->training_period) {
+            throw new \Exception(trans('global.application.info.trainingPeriodInfo'));
+        }
+
+        $userExperiences = $user->experiences()->pluck('experience_period')->toArray();
+        $experienceCalculationPeriod = $advertisement->experience_calculation_period;
+
+        if ($experienceCalculationPeriod !== null) {
+            $filteredExperiences = array_filter($userExperiences, function ($experience) use ($experienceCalculationPeriod) {
+                return $experience >= $experienceCalculationPeriod;
+            });
+
+            $totalUserExperiencePeriod = array_sum($filteredExperiences);
+        } else {
+            $totalUserExperiencePeriod = array_sum($userExperiences);
+        }
+
+        if ($totalUserExperiencePeriod < $advertisement->experience_period) {
+            throw new \Exception(trans('global.application.info.experiencePeriodInfo'));
         }
     }
 }

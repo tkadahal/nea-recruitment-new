@@ -15,6 +15,9 @@ class StoreUploadRequest extends FormRequest
 
     public function rules(): array
     {
+        $user = auth()->user();
+        $isSanketNumFilled = !empty($user->sanket_num);
+
         return [
             'photo' => [
                 'required_without:old_photo',
@@ -47,13 +50,13 @@ class StoreUploadRequest extends FormRequest
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
             'appointment' => [
-                'nullable',
+                $isSanketNumFilled == 'true' ? 'required' : 'nullable',
                 'file',
                 'mimetypes:image/jpeg,image/jpg,image/png,application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
             'recommendation' => [
-                'nullable',
+                $isSanketNumFilled == 'true' ? 'required' : 'nullable',
                 'file',
                 'mimetypes:image/jpeg,image/jpg,image/png,application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
@@ -78,6 +81,12 @@ class StoreUploadRequest extends FormRequest
             'citizenship_back.max' => trans('uservalidation.citizenship_back_max'),
             'samabeshi.mimetypes' => trans('uservalidation.samabeshi_mime'),
             'samabeshi.max' => trans('uservalidation.samabeshi_max'),
+            'appointment.required' => trans('uservalidation.appointment'),
+            'appointment.mimetypes' => trans('uservalidation.appointment_mime'),
+            'appointment.max' => trans('uservalidation.appointment_max'),
+            'recommendation.required' => trans('uservalidation.recommendation'),
+            'recommendation.mimetypes' => trans('uservalidation.recommendation_mime'),
+            'recommendation.max' => trans('uservalidation.recommendation_max'),
         ];
     }
 }

@@ -40,86 +40,6 @@ class ApplicationController extends Controller
             ->get();
 
         return view('user.applications.index', compact('advertisements', 'examCenters', 'userId'));
-
-        // $currentDate = Carbon::now()->toDateString();
-        // $showApplied = request()->query('show_applied');
-        // $userId = auth()->id();
-
-        // $query = Advertisement::query()
-        //     ->with(['category', 'group', 'subGroup', 'qualification', 'applications.payments'])
-        //     ->whereDate('start_date_en', '<=', $currentDate)
-        //     ->whereDate('penalty_end_date_en', '>=', $currentDate);
-
-        // if ($showApplied) {
-        //     $query->whereHas('applications', function ($query) use ($userId) {
-        //         $query->where('user_id', $userId);
-        //     });
-        // } else {
-        //     $query->whereDoesntHave('applications', function ($query) use ($userId) {
-        //         $query->where('user_id', $userId);
-        //     });
-        // }
-
-        // $advertisements = $query->get();
-
-        // return view('user.applications.index', compact('advertisements'));
-
-        // $currentDate = now()->toDateString();
-
-        // $query = Advertisement::query()
-        //     ->with(['category', 'group', 'subGroup', 'qualification', 'applications' => function ($query) {
-        //         $query->where('active', true);
-        //     }])
-        //     ->whereDate('start_date_en', '<=', $currentDate)
-        //     ->whereDate('penalty_end_date_en', '>=', $currentDate)
-        //     ->has('applications', '>', 0);
-
-        // $applications = $query->get();
-
-        // dd($applications);
-
-        // $query = Advertisement::query()
-        //     ->with(['category', 'group', 'subGroup', 'qualification', 'applications'])
-        //     ->whereDate('start_date_en', '<=', $currentDate)
-        //     ->whereDate('penalty_end_date_en', '>=', $currentDate)
-        //     ->whereDoesntHave('applications');
-        // $applications = $query->get();
-
-        // return view('user.applications.index', compact('applications'));
-
-        // dd(request());
-        // $currentDate = Carbon::now()->toDateString();
-        // $applications = Advertisement::query()
-        //     ->with(['category', 'group', 'subGroup', 'qualification', 'applications'])
-        //     ->whereDate('start_date_en', '<=', $currentDate)
-        //     ->whereDate('penalty_end_date_en', '>=', $currentDate)
-        //     ->when(request()->query('show_applied'), function ($query) {
-        //         $query->whereHas('applications', function ($subQuery) {
-        //             $subQuery->where('user_id', auth()->id());
-        //         });
-        //     })
-        //     ->get();
-        // return view('user.applications.index', compact('applications'));
-
-        // $currentDate = Carbon::now()->toDateString();
-
-        // $applications = Advertisement::query()
-        //     ->with(['category', 'group', 'subGroup', 'qualification', 'applications'])
-        //     ->whereDate('start_date_en', '<=', $currentDate)
-        //     ->whereDate('penalty_end_date_en', '>=', $currentDate)
-        //     ->get();
-
-        // $userApplications = $applications->map(function ($application) {
-        //     $existingApplication = $application->applications
-        //         ->where('user_id', auth()->id())
-        //         ->first();
-
-        //     $application->userApplication = $existingApplication;
-
-        //     return $application;
-        // });
-
-        // return view('user.applications.index', compact('applications'));
     }
 
     public function show(string $id): View
@@ -176,8 +96,6 @@ class ApplicationController extends Controller
         $advertisement = Advertisement::find($id);
         $user = auth()->user();
 
-        // dd($advertisement);
-
         // Already Applied Check
         // if ($user->applications()->where('advertisement_id', $advertisement->id)->exists()) {
         //     return redirect()->back()->withErrors(['error' => trans('global.application.info.alreadAppliedInfo')]);
@@ -196,6 +114,12 @@ class ApplicationController extends Controller
 
         try {
             $this->applicationService->validateQualificationForUser($user, $advertisement);
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        }
+
+        try {
+            $this->applicationService->validateTrainingAndExperienceForUser($user, $advertisement);
         } catch (\Exception $e) {
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }

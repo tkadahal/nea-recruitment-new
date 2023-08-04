@@ -35,6 +35,7 @@ class Advertisement extends Model
         'samabeshi_fee',
         'training_period',
         'experience_period',
+        'experience_calculation_period',
         'qualification_id',
         'exam_center_id',
         'advertisement_num',

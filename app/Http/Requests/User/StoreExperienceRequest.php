@@ -29,7 +29,7 @@ class StoreExperienceRequest extends FormRequest
             'level' => [
                 'required',
                 'integer',
-                'max: 255',
+                'min: 1',
             ],
             'recruitment_type_id' => [
                 'required',

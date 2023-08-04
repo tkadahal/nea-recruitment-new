@@ -62,18 +62,27 @@ class StoreAdvertisementRequest extends FormRequest
             'open_fee' => [
                 'required',
                 'integer',
+                'min:0',
             ],
             'samabeshi_fee' => [
                 'nullable',
                 'integer',
+                'min:0',
             ],
             'training_period' => [
                 'nullable',
                 'integer',
+                'min:0',
             ],
             'experience_period' => [
                 'nullable',
                 'integer',
+                'min:0',
+            ],
+            'experience_calculation_period' => [
+                'nullable',
+                'integer',
+                'min:0',
             ],
             'qualification_id' => [
                 'required',
