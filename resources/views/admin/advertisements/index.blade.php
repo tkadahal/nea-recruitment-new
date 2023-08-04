@@ -40,7 +40,7 @@
                             {{ trans('global.advertisement.fields.position_id') }}
                         </th>
                         <th>
-                            {{ trans('global.advertisement.fields.sub_group_id') }}
+                            {{ trans('global.advertisement.fields.samabeshi_groups') }}
                         </th>
                         <th>
                             {{ trans('global.published') }}
@@ -74,7 +74,16 @@
                             {{ $advertisement->position->title ?? '' }}
                         </td>
                         <td>
-                            {{ $advertisement->subGroup->title ?? '' }}
+                            <table class="table table-bordered">
+                                <tbody>
+                                    @foreach($advertisement->samabeshiGroups as $samabeshiGroup)
+                                    <tr>
+                                        <td>{{ $samabeshiGroup->title }}</td>
+                                        <td>{{ $samabeshiGroup->pivot->number }}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </td>
                         <td>
                             @livewire(

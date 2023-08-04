@@ -430,11 +430,8 @@
                 <div class="p-2">
 
                     <div class="row">
+                        @foreach ($samabeshiGroups as $id => $samabeshiGroup)
                         <div class="col-md-4 {{ $errors->has('samabeshi_groups') ? 'has-error' : '' }}">
-                            <label class="required" for="samabeshi_groups">
-                                {{ trans('global.advertisement.fields.samabeshi_groups') }}
-                            </label>
-                            @foreach ($samabeshiGroups as $id => $samabeshiGroup)
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="{{ $id }}" id="{{ $id }}"
                                     name="samabeshi_groups[]"
@@ -445,27 +442,19 @@
                                     {{ $samabeshiGroup }}
                                 </label>
                             </div>
-                            @endforeach
-                        </div>
 
-                        <div class="col-md-4 {{ $errors->has('samabeshi_groups') ? 'has-error' : '' }}">
-                            <label class="required" for="samabeshi_groups">
-                                {{ trans('global.advertisement.fields.samabeshi_groups') }}
-                            </label>
-                            @foreach ($samabeshiGroups as $id => $samabeshiGroup)
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="{{ $id }}" id="{{ $id }}"
-                                    name="samabeshi_groups[]"
-                                    style="width: 15px; height: 15px; border: var(--bs-border-width) solid #0d0d0d;"
-                                    @if(old('samabeshi_groups') && in_array($id, old('samabeshi_groups'))) checked
-                                    @endif>
-                                <label class="form-check-label" for="{{ $id }}">
-                                    {{ $samabeshiGroup }}
+                            <div class="form-input">
+                                <label for="{{ $id }}">
+                                    <input class="form-input" type="number"
+                                        value="{{ old('samabeshi_groups_input.' . $id, '') }}" id="{{ $id }}"
+                                        name="samabeshi_groups_input[{{ $id }}]" min="0" @if(!old('samabeshi_groups') ||
+                                        !in_array($id, old('samabeshi_groups'))) @endif>
                                 </label>
                             </div>
-                            @endforeach
                         </div>
+                        @endforeach
                     </div>
+
                 </div>
             </div>
 

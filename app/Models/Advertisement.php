@@ -96,7 +96,7 @@ class Advertisement extends Model
 
     public function samabeshiGroups(): BelongsToMany
     {
-        return $this->belongsToMany(SamabeshiGroup::class);
+        return $this->belongsToMany(SamabeshiGroup::class)->withPivot('number');
     }
 
     public function applications(): HasMany

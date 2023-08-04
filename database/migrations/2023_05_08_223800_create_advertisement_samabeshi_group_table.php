@@ -13,6 +13,7 @@ return new class extends Migration
         Schema::create('advertisement_samabeshi_group', function (Blueprint $table) {
             $table->foreignId('advertisement_id')->constrained();
             $table->foreignId('samabeshi_group_id')->constrained();
+            $table->integer('number')->unsigned()->nullable();
         });
     }
 };

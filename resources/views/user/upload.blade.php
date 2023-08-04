@@ -222,6 +222,7 @@
                         </div>
                     </div>
 
+                    @if (!empty($user->sanket_num))
                     <div class="upload-block">
                         <div class="col-md-6 form-group">
                             <p class="pb-1">
@@ -312,6 +313,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
 
                 </div>
             </div>

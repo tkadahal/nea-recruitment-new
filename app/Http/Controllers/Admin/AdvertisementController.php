@@ -38,6 +38,7 @@ class AdvertisementController extends Controller
                 'subGroup',
                 'level',
                 'position',
+                'samabeshiGroups'
             ]
         )->get();
 
@@ -75,9 +76,16 @@ class AdvertisementController extends Controller
     {
         abort_if(Gate::denies('advertisement_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $advertisement = Advertisement::create($request->validated());
+        $validatedData = $request->validated();
 
-        $advertisement->samabeshiGroups()->attach($request->input('samabeshi_groups'));
+        $advertisement = Advertisement::create($validatedData);
+
+        foreach ($validatedData['samabeshi_groups'] as $id) {
+            $number = $validatedData['samabeshi_groups_input'][$id];
+            $advertisement->samabeshiGroups()->attach($id, ['number' => $number]);
+        }
+
+        // $advertisement->samabeshiGroups()->attach($request->input('samabeshi_groups'));
 
         return redirect()->route(route: 'admin.advertisement.index')
             ->with('message', 'advertisement created successfully.');
@@ -124,22 +132,26 @@ class AdvertisementController extends Controller
                 'category',
                 'designation',
                 'qualification',
-                'samabeshiGroups',
                 'level',
                 'position',
                 'fiscalYear',
             ]
         );
 
-        $selectedSamabeshiGroups = $advertisement->samabeshiGroups;
+        $advertisement->load('samabeshiGroups');
 
-        $samabeshiGroups = $samabeshiGroups->map(function ($samabeshiGroup) use ($selectedSamabeshiGroups) {
-            $samabeshiGroup['applied'] = $selectedSamabeshiGroups->contains('id', $samabeshiGroup['id']);
+        $selectedSamabeshiGroupIds = $advertisement->samabeshiGroups->pluck('id')->toArray();
 
+        $samabeshiGroups = $samabeshiGroups->map(function ($samabeshiGroup) use ($advertisement, $selectedSamabeshiGroupIds) {
+            $samabeshiGroup['applied'] = in_array($samabeshiGroup->id, $selectedSamabeshiGroupIds);
+            if ($samabeshiGroup['applied']) {
+                $pivotData = $advertisement->samabeshiGroups->where('id', $samabeshiGroup->id)->first()->pivot;
+                $samabeshiGroup['pivot'] = $pivotData;
+            }
             return $samabeshiGroup;
         });
 
-        return view('admin.advertisements.edit', compact('advertisement', 'examCenters', 'groups', 'subGroups', 'categories', 'levels', 'positions', 'designations', 'qualifications', 'samabeshiGroups', 'selectedSamabeshiGroups', 'fiscalYears'));
+        return view('admin.advertisements.edit', compact('advertisement', 'examCenters', 'groups', 'subGroups', 'categories', 'levels', 'positions', 'designations', 'qualifications', 'samabeshiGroups', 'fiscalYears'));
     }
 
     public function update(UpdateAdvertisementRequest $request, Advertisement $advertisement): RedirectResponse

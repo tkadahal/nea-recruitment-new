@@ -424,23 +424,39 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <label class="required" for="samabeshi_group_id">
-                        समाबेशी समूह
-                    </label>
-                    @foreach ($samabeshiGroups as $id => $samabeshiGroup)
-                    <div class="form-check" style="margin-bottom: 10px;">
-                        <input class="form-check-input" type="checkbox" value="{{ $samabeshiGroup['id'] }}"
-                            id="{{ $samabeshiGroup['id'] }}" name="samabeshi_groups[]"
-                            style="width: 15px; height: 15px; border: var(--bs-border-width) solid #0d0d0d;"
-                            @if($samabeshiGroup['applied']) checked @endif>
-                        <label class="form-check-label" for="{{ $samabeshiGroup['id'] }}"
-                            style="font-size: 1.2em; margin-left: 5px;">
-                            <span>{{ $samabeshiGroup['title'] }}</span>
-                        </label>
+            <div class="card-section">
+                <h3>
+                    समाबेशी समूह विवरण
+                </h3>
+                <div class="p-2">
+                    <div class="row">
+                        @foreach ($samabeshiGroups as $samabeshiGroup)
+                        <div class="col-md-4 {{ $errors->has('samabeshi_groups') ? 'has-error' : '' }}">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="{{ $samabeshiGroup->id }}"
+                                    id="{{ $samabeshiGroup->id }}" name="samabeshi_groups[]"
+                                    style="width: 15px; height: 15px; border: var(--bs-border-width) solid #0d0d0d;"
+                                    @if($samabeshiGroup['applied']) checked @endif>
+                                <label class="form-check-label" for="{{ $samabeshiGroup->id }}">
+                                    {{ $samabeshiGroup->title }}
+                                </label>
+                            </div>
+
+                            <div class="form-input">
+                                @if($samabeshiGroup['applied'])
+                                <label for="number_{{ $samabeshiGroup->id }}"></label>
+                                <input class="form-input" type="number"
+                                    value="{{ $samabeshiGroup['pivot']->number ?? old('samabeshi_groups_input.' . $samabeshiGroup->id) }}"
+                                    id="number_{{ $samabeshiGroup->id }}"
+                                    name="samabeshi_groups_input[{{ $samabeshiGroup->id }}]" min="0">
+                                @else
+                                <input class="form-input" type="number" value="" id="number_{{ $samabeshiGroup->id }}"
+                                    name="samabeshi_groups_input[{{ $samabeshiGroup->id }}]" min="0" disabled>
+                                @endif
+                            </div>
+                        </div>
+                        @endforeach
                     </div>
-                    @endforeach
                 </div>
             </div>
 

@@ -119,6 +119,11 @@ class StoreAdvertisementRequest extends FormRequest
             'samabeshi_groups.*' => [
                 'exists:samabeshi_groups,id',
             ],
+            'samabeshi_groups_input.*' => [
+                'nullable',
+                'integer',
+                'min:0',
+            ]
         ];
     }
 }
