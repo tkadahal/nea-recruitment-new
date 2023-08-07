@@ -3,11 +3,14 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\Auth\LoginController as AdminLoginController;
 
 // Admin Routes
-Route::get('adminLogin', [App\Http\Controllers\Admin\Auth\LoginController::class, 'showLoginForm'])->name('adminLogin');
-Route::post('adminLogin', [App\Http\Controllers\Admin\Auth\LoginController::class, 'login'])->name('adminLogin.post');
-Route::post('adminLogout', [App\Http\Controllers\Admin\Auth\LoginController::class, 'logout'])->name('adminLogout');
+Route::controller(AdminLoginController::class)->group(function () {
+    Route::get('master', 'showLoginForm')->name('master');
+    Route::post('master', 'login')->name('master.post');
+    Route::post('masterLogout', 'logout')->name('masterLogout');
+});
 
 Route::middleware(['auth:admin'])->group(function () {
 

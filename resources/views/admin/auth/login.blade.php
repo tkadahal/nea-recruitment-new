@@ -10,7 +10,7 @@
                         {{ \Session::get('message') }}
                     </p>
                     @endif
-                    <form method="POST" action="{{ route('adminLogin.post') }}">
+                    <form method="POST" action="{{ route('master.post') }}">
                         {{ csrf_field() }}
                         <div class="header" style="text-align:center">
                             <img src="{{ asset('storage/logos/nea-mini.png') }}" width="100" height="100" />
