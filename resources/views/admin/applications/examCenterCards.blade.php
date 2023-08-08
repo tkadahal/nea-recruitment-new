@@ -7,80 +7,92 @@
 
     <div class="card mt-2">
         <div class="card-body" id="print-content">
-            <!-- Add id attribute here -->
+            @php
+                $counter = 1;
+            @endphp
             @foreach ($payments as $payment)
-                <div class="row">
-                    <div class="col-10">
-                        <p>
-                            <b>
-                                Applicant ID:
-                            </b>
-                            {{ $payment->application->user->applicant_id }}
-                        </p>
-                        <p>
-                            <b>
-                                Name:
-                            </b>
-                            {{ $payment->application->user->name_np }} ({{ $payment->application->user->name }})
-                        </p>
-                        <p>
-                            <b>
-                                Roll NO:
-                            </b>
-                        </p>
-                        <p>
-                            <b>
-                                Advertisement Number:
-                            </b>
-                            {{ $payment->application->advertisement->advertisement_num }}
-                        </p>
-                        <p>
-                            <b>
-                                Exam Center:
-                            </b>
-                        </p>
-                    </div>
-                    <div class="col-2">
-                        @if ($payment->application->user->media->where('media_type_id', 1)->isNotEmpty())
-                            {!! $payment->application->user->media->where('media_type_id', 1)->first() !!}
-                        @endif
+                <div class="payment-box">
+                    <div class="row">
+                        <div class="col-8">
+                            <p><b>Roll No:</b> {{ $counter }}</p>
+                            <p><b>Applicant ID:</b> {{ $payment->application->user->applicant_id }}</p>
+                            <p><b>Name (NP):</b> {{ $payment->application->user->name_np }}</p>
+                            <p><b>Name (EN):</b> {{ $payment->application->user->name }}</p>
+                            <p><b>Advertisement Number:</b> {{ $payment->application->advertisement->advertisement_num }}
+                            </p>
+                            <p><b>Exam Center:</b> <!-- Add exam center data here --></p>
+                        </div>
+                        <div class="col-4">
+                            <div class="media-container">
+                                @if ($payment->application->user->media->where('media_type_id', 1)->isNotEmpty())
+                                    {!! $payment->application->user->media->where('media_type_id', 1)->first()->generateHtmlWithoutBorder() !!}
+                                @endif
+                                @if ($payment->application->user->media->where('media_type_id', 2)->isNotEmpty())
+                                    {!! $payment->application->user->media->where('media_type_id', 2)->first()->generateHtmlWithoutBorder() !!}
+                                @endif
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <hr style="border-color: black; border-style: solid;">
+                @php
+                    $counter++;
+                @endphp
             @endforeach
         </div>
         {{ $payments->links('pagination::bootstrap-4') }}
     </div>
 @endsection
 
+@section('styles')
+    <style>
+        .card-body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .payment-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: calc(50% - 20px);
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .media-container {
+            max-width: 250px;
+            margin: auto;
+            text-align: right;
+        }
+    </style>
+@endsection
+
 @section('scripts')
     <script>
         function printCardBody() {
-            // Get the card body element
             const cardBody = document.getElementById('print-content');
 
-            // Clone the card body content to a new div element
+            // Clone the cardBody element
             const printContent = cardBody.cloneNode(true);
 
-            // Hide all non-card body elements on the page
-            const otherElements = document.body.children;
+            // Apply print-specific styles
+            printContent.classList.add('print-friendly');
+
+            // Create a new print window
+            const printWindow = window.open('', '_blank');
+            printWindow.document.open();
+
+            // Append the cloned content to the print window's document
+            printWindow.document.write(printContent.innerHTML);
+
+            // Close the print window after printing
+            printWindow.document.addEventListener('DOMContentLoaded', function() {
+                printWindow.print();
+                printWindow.close();
+            });
+
+            // Revert changes made to the main page's body
             for (let i = 0; i < otherElements.length; i++) {
-                if (otherElements[i] !== cardBody) {
-                    otherElements[i].style.display = 'none';
-                }
-            }
-
-            // Append the cloned card body content to the document body
-            document.body.innerHTML = '';
-            document.body.appendChild(printContent);
-
-            // Trigger the browser's print functionality
-            window.print();
-
-            // Restore the original content after printing
-            document.body.innerHTML = '';
-            for (let i = 0; i < otherElements.length; i++) {
-                document.body.appendChild(otherElements[i]);
+                otherElements[i].style.display = '';
             }
         }
     </script>

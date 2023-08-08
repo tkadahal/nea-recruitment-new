@@ -8,16 +8,16 @@ use App\Models\Payment;
 use App\Models\Tippani;
 use Illuminate\Http\Request;
 use App\Models\Advertisement;
-use App\Models\TippaniApproval;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\PaymentVendor;
 use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
 class ReportController extends Controller
 {
     public function getReportByPaymentVendors(Request $request)
     {
-        $advertisementNumber = $request->query('advertisement'); // Retrieve the advertisement parameter from the query string.
+        $advertisementNumber = $request->query('advertisement');
         $advertisements = Advertisement::all();
 
         $query = Payment::select('payment_gateway', DB::raw('COUNT(id) as total'))
@@ -41,7 +41,6 @@ class ReportController extends Controller
             'chart_type' => 'pie',
             'report_type' => 'group_by_string',
             'model' => 'App\Models\Payment',
-            // 'relationship_name' => 'application',
             'group_by_field' => 'payment_gateway',
             'aggregate_function' => 'count',
             'column_class' => 'col-md-12',
@@ -57,16 +56,21 @@ class ReportController extends Controller
         $list_blocks = [
             [
                 'title' => 'Reports By Application Count',
-                'entries' => Payment::with('application.advertisement')
+                'entries' => Payment::with('application.advertisement', 'paymentVerification')
                     ->where('payment_status', '1')
                     ->get()
                     ->groupBy(function ($item) {
                         return $item->application->advertisement->advertisement_num;
                     })
                     ->map(function ($groupedItems) {
+                        $approvedCount = $groupedItems->where('paymentVerification.is_approved', true)->count();
+                        $rejectedCount = $groupedItems->where('paymentVerification.is_rejected', true)->count();
+
                         return [
                             'advertisementNumber' => $groupedItems->first()->application->advertisement->advertisement_num,
                             'total' => $groupedItems->count(),
+                            'approved' => $approvedCount,
+                            'rejected' => $rejectedCount,
                         ];
                     })
                     ->values(),
@@ -74,6 +78,59 @@ class ReportController extends Controller
         ];
 
         return view('admin.reports.reportsByApplicationCount', compact('list_blocks'));
+    }
+
+
+    public function getReportByApplicantsCount(Request $request)
+    {
+        $advertisements = Advertisement::all()->pluck('advertisement_num', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $paymentVendors = PaymentVendor::all()->pluck('payment_gateway', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        $list_blocks = [
+            [
+                'title' => 'Reports By Users Count',
+                'entries' => Payment::with('application.advertisement', 'application.user', 'paymentVerification')
+                    ->when($request->filled('date_from_ad'), function ($query) use ($request) {
+                        return $query->whereDate('created_at', '>=', $request->input('date_from_ad'));
+                    })
+                    ->when($request->filled('date_to_ad'), function ($query) use ($request) {
+                        return $query->whereDate('created_at', '<=', $request->input('date_to_ad'));
+                    })
+                    ->when($request->filled('payment_status'), function ($query) use ($request) {
+                        return $query->where('payment_status', $request->input('payment_status'));
+                    })
+                    ->when($request->filled('verification_status'), function ($query) use ($request) {
+                        if ($request->input('verification_status') === '1') {
+                            return $query->whereHas('paymentVerification', function ($subquery) {
+                                $subquery->where('is_approved', true);
+                            });
+                        } elseif ($request->input('verification_status') === '2') {
+                            return $query->whereHas('paymentVerification', function ($subquery) {
+                                $subquery->where('is_checked', true)->where('is_approved', false);
+                            });
+                        } elseif ($request->input('verification_status') === '3') {
+                            return $query->whereHas('paymentVerification', function ($subquery) {
+                                $subquery->where('is_rejected', true);
+                            });
+                        }
+                    })
+                    ->when($request->filled('verification_status') && $request->input('verification_status') === '2', function ($query) {
+                        return $query->orWhereDoesntHave('paymentVerification');
+                    })
+                    ->when($request->filled('advertisement_id'), function ($query) use ($request) {
+                        return $query->whereHas('application.advertisement', function ($subquery) use ($request) {
+                            $subquery->where('id', $request->input('advertisement_id'));
+                        });
+                    })
+                    ->when($request->filled('payment_vendor_id'), function ($query) use ($request) {
+                        $paymentVendorEnumValue = PaymentVendor::find($request->input('payment_vendor_id'))->payment_gateway;
+                        return $query->where('payment_gateway', $paymentVendorEnumValue);
+                    })
+                    ->get()
+            ],
+        ];
+
+        return view('admin.reports.reportsByApplicants', compact('list_blocks', 'advertisements', 'paymentVendors'));
     }
 
     public function getReportByCategory()
@@ -101,33 +158,6 @@ class ReportController extends Controller
         $tippani_by_category = new LaravelChart($categoryReport_chart_settings);
 
         return view('admin.reports.reportsByCategories', compact('list_blocks', 'tippani_by_category'));
-    }
-
-    public function getReportByStatus()
-    {
-        $title = trans('global.reportByStatus.title');
-        $list_blocks = [
-            [
-                'title' => $title,
-                'entries' => TippaniApproval::with('status')->groupBy('status_id')
-                    ->select('status_id', DB::raw('count(*) as total'))->get(),
-            ],
-        ];
-
-        $statusReport_chart_settings = [
-            'chart_title' => $title,
-            'chart_type' => 'pie',
-            'report_type' => 'group_by_relationship',
-            'model' => 'App\Models\TippaniApproval',
-            'relationship_name' => 'status',
-            'group_by_field' => 'title',
-            'aggregate_function' => 'count',
-            'column_class' => 'col-md-12',
-            'chart_color' => 'rgba({{ rand(0,255) }}, {{ rand(0,255) }}, {{ rand(0,255) }}, 1)',
-        ];
-        $tippani_by_status = new LaravelChart($statusReport_chart_settings);
-
-        return view('admin.reports.reportsByStatuses', compact('list_blocks', 'tippani_by_status'));
     }
 
     public function getReportByUserType()

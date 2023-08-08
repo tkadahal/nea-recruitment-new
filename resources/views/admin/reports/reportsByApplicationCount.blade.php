@@ -20,6 +20,8 @@
                                     <tr>
                                         <th>Advertisement Number</th>
                                         <th>Total</th>
+                                        <th>Approved</th>
+                                        <th>Rejected</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -27,6 +29,8 @@
                                         <tr>
                                             <td>{{ $entry['advertisementNumber'] }}</td>
                                             <td>{{ $entry['total'] }}</td>
+                                            <td>{{ $entry['approved'] }}</td>
+                                            <td>{{ $entry['rejected'] }}</td>
                                         </tr>
                                     @empty
                                         <tr>

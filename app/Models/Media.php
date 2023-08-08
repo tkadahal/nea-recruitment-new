@@ -49,14 +49,29 @@ class Media extends Model
     public function __toString(): string
     {
         $url = $this->short_url;
-        $imageSrc = '<img src="'.$url.'" alt="" class="img-fluid" style="max-width:100%; max-height:150px; margin-top:10px;">';
+        $imageSrc = '<img src="' . $url . '" alt="" class="img-fluid" style="max-width:100%; max-height:150px; margin-top:10px;">';
         $fileNameWithoutExtension = pathinfo($this->attributes['file_name'], PATHINFO_FILENAME);
-        $link = '<a target="_blank" href="'.$url.'">'.$fileNameWithoutExtension.'</a>';
+        $link = '<a target="_blank" href="' . $url . '">' . $fileNameWithoutExtension . '</a>';
         $pdfIcon = '<i class="fa fa-file-pdf-o" aria-hidden="true"></i>';
 
         $html = Str::startsWith($this->attributes['mime_type'], 'image/')
-            ? (request()->is('admin/*') ? '<div class="card">'.$imageSrc.'</div>' : $imageSrc)
-            : $pdfIcon.' '.$link;
+            ? (request()->is('admin/*') ? '<div class="card">' . $imageSrc . '</div>' : $imageSrc)
+            : $pdfIcon . ' ' . $link;
+
+        return $html;
+    }
+
+    public function generateHtmlWithoutBorder(): string
+    {
+        $url = $this->short_url;
+        $imageSrc = '<img src="' . $url . '" alt="" class="img-fluid" style="max-width:100%; max-height:150px; margin-top:10px;">';
+        $fileNameWithoutExtension = pathinfo($this->attributes['file_name'], PATHINFO_FILENAME);
+        $link = '<a target="_blank" href="' . $url . '">' . $fileNameWithoutExtension . '</a>';
+        $pdfIcon = '<i class="fa fa-file-pdf-o" aria-hidden="true"></i>';
+
+        $html = Str::startsWith($this->attributes['mime_type'], 'image/')
+            ? $imageSrc
+            : $pdfIcon . ' ' . $link;
 
         return $html;
     }
@@ -77,7 +92,7 @@ class Media extends Model
             return $this->attributes['file_name'];
         } else {
             // Assuming the media file is stored in the 'public' disk
-            return asset('storage/'.$this->attributes['file_path']);
+            return asset('storage/' . $this->attributes['file_path']);
         }
     }
 }

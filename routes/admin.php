@@ -137,10 +137,6 @@ Route::middleware(['auth:admin'])->group(function () {
                 Route::get('application/viewApplication/{id}/{action}', 'viewApplications')->name('application.viewApplication');
                 Route::get('application/viewUserDetail/{id}', 'viewUserDetail')->name('application.viewUserDetail');
             });
-            // Route::get('application', 'ApplicationController@index')->name('application.index');
-            // Route::get('application/show/{id}', 'ApplicationController@show')->name('application.show');
-            // Route::get('application/viewApplication/{id}/{action}', 'ApplicationController@viewApplications')->name('application.viewApplication');
-            // Route::get('application/viewUserDetail/{id}', 'ApplicationController@viewUserDetail')->name('application.viewUserDetail');
 
             // Application Verification
             Route::get('generateRollNo/{advertisementId}', 'PaymentVerificationController@generateRollNo')->name('generateRollNo');
@@ -149,8 +145,11 @@ Route::middleware(['auth:admin'])->group(function () {
             Route::post('/payment-verification', 'PaymentVerificationController@store')->name('paymentVerification.store');
 
             //Reports
-            Route::get('getReportByPaymentVendors', 'ReportController@getReportByPaymentVendors')->name('getReportByPaymentVendors');
-            Route::get('getReportByApplicationCount', 'ReportController@getReportByApplicationCount')->name('getReportByApplicationCount');
+            Route::controller(ReportController::class)->group(function () {
+                Route::get('getReportByPaymentVendors', 'getReportByPaymentVendors')->name('getReportByPaymentVendors');
+                Route::get('getReportByApplicationCount', 'getReportByApplicationCount')->name('getReportByApplicationCount');
+                Route::get('getReportByApplicantsCount', 'getReportByApplicantsCount')->name('getReportByApplicantsCount');
+            });
         });
     });
 });

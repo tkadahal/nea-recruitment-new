@@ -124,8 +124,6 @@ class ApplicationController extends Controller
 
         $applications = collect($applications);
 
-        // dd($applications);
-
         return view('admin.applications.viewApplications', compact('applications', 'advertisementNum', 'advertisementId'));
     }
 

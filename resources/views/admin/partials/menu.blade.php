@@ -384,6 +384,15 @@
                         </li>
                     @endcan
 
+                    @can('reportByApplicantsCount_access')
+                        <li class="c-sidebar-nav-item">
+                            <a class="c-sidebar-nav-link" href="{{ route('admin.getReportByApplicantsCount') }}">
+                                <span class="c-sidebar-nav-icon"></span>
+                                Applicants
+                            </a>
+                        </li>
+                    @endcan
+
                     {{-- @can('reportByCategory_access')
                         <li class="c-sidebar-nav-item">
                             <a class="c-sidebar-nav-link" href="{{ route('admin.reportByCategory') }}">

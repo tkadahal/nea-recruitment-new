@@ -11,8 +11,10 @@ class PrintFunctionController extends Controller
 {
     public function printExamCards(Request $request, $advertisementId)
     {
+        $perPage = 10;
+
         $payments = Payment::query()
-            ->with(['application.user'])
+            ->with('application.user', 'application.user.media', 'application.advertisement')
             ->whereHas('application', function ($query) use ($advertisementId) {
                 $query->where('advertisement_id', $advertisementId);
             })
@@ -22,7 +24,15 @@ class PrintFunctionController extends Controller
             })
             ->get();
 
-        $content = View::make('admin.pdfTemplates.printableExamCards', compact('payments', 'advertisementId'))->render();
+        $chunks = $payments->chunk($perPage);
+
+        $contentChunks = [];
+        foreach ($chunks as $chunk) {
+            $content = View::make('admin.pdfTemplates.printableExamCards', compact('chunk'))->render();
+            $contentChunks[] = $content;
+        }
+
+        // $content = View::make('admin.pdfTemplates.printableExamCards', compact('payments'))->render();
 
         $javascript = '<script>window.onload = function() { window.print(); }</script>';
 

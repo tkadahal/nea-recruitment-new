@@ -146,6 +146,7 @@ class PaymentVerificationController extends Controller
                 $query->where('advertisement_id', $advertisementId);
             })
             ->with(['payment.application.user'])
+            ->where('is_approved', true)
             ->get();
 
         // Sort the users based on 'name_np'
@@ -186,21 +187,5 @@ class PaymentVerificationController extends Controller
 
 
         return redirect()->back()->with('message', 'Roll Number Generated Successfully');
-        // $payments = Payment::query()
-        //     ->with('application.user')
-        //     ->whereHas('application', function ($query) use ($advertisementId) {
-        //         $query->where('advertisement_id', $advertisementId);
-        //     })
-        //     ->where('payment_status', '1')
-        //     ->whereHas('paymentVerification', function ($query) {
-        //         $query->where('is_approved', true);
-        //     })
-        //     ->get();
-
-        // $users = $payments->pluck('application.user')->unique();
-
-        // $sortedUsers = $users->sortBy('name_np');
-
-        // dd($sortedUsers);
     }
 }
