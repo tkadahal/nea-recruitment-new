@@ -14,7 +14,7 @@ Route::get('test', function () {
 
 Route::redirect('/', '/login');
 
-Route::group(['middleware' => ['auth', 'validate.tab']], function () {
+Route::group(['middleware' => ['auth']], function () {
 
     Route::group(['prefix' => ''], function () {
         Route::group(['namespace' => 'User'], function () {
@@ -44,6 +44,9 @@ Route::group(['middleware' => ['auth', 'validate.tab']], function () {
             // Uploads
             Route::get(uri: 'upload', action: 'UploadController@index')->name(name: 'upload');
             Route::post(uri: '/upload/store', action: 'UploadController@store')->name(name: 'upload.store');
+
+            //preview
+            Route::get('preview', 'PreviewController@index')->name('preview');
 
             Route::post('/update_advAmount', 'ApplicationController@updateAdvAmount');
             Route::get('application/applied', 'ApplicationController@applied')->name('application.applied');
