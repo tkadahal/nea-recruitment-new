@@ -6,6 +6,10 @@ use App\Models\Advertisement;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+Route::get('info', function () {
+    phpinfo();
+});
+
 Route::get('test', function () {
     $advertisements = Advertisement::with('category', 'group', 'subGroup', 'level')->get();
 

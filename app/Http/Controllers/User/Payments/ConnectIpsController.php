@@ -16,7 +16,6 @@ use App\Services\PaymentService;
 use Monolog\Handler\StreamHandler;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Storage;
 use GuzzleHttp\Exception\GuzzleException;
 
 class ConnectIpsController extends Controller
@@ -45,12 +44,13 @@ class ConnectIpsController extends Controller
         $this->_api_context_connect_ips['checkout_url'] = $paymentVendor->checkout_url;
         $this->_api_context_connect_ips['verify_url'] = $paymentVendor->verify_url;
         $this->_api_context_connect_ips['verify_password'] = $paymentVendor->verify_password;
-        $this->_api_context_connect_ips['cert_path'] = Storage::path('1/930c3c6b-6756-47f2-af98-0712b66682f0/CREDITOR.pfx');
+        $this->_api_context_connect_ips['cert_path'] = storage_path() . '/app/public/certificate/CREDITOR.pfx';
         $this->_api_context_connect_ips['cert_password'] = $paymentVendor->cert_password;
     }
 
     public function initializeIPS($applicationRefID)
     {
+        // dd($this->_api_context_connect_ips['cert_path']);
         // dd($this->_api_context_connect_ips);
         try {
             $application = Application::where('user_id', auth()->id())
@@ -83,18 +83,20 @@ class ConnectIpsController extends Controller
                 'FAILURE' => route('connectips.failure', ['id' => $paymentRecord['id']]),
             ];
 
+            // dd($ips_params);
+
             $hash_response = $this->generateToken($ips_params, 'checkout');
 
-            // dd($hash_response);
             if (!$hash_response) {
                 Session::flash('error_message', 'Sorry, we cannot process your request at this moment. Please try again.');
 
-                return redirect()->route('payment');
+                return redirect()->route('payment.index');
             }
             $ips_params['TOKEN'] = $hash_response;
 
             return view('user.applications.gateways.connectIps', ['ips_params' => $ips_params]);
         } catch (\Exception $e) {
+
             Session::flash('error_message', 'Sorry, we cannot process your request at this moment. Please try again.');
 
             return redirect()->back();
@@ -262,14 +264,8 @@ class ConnectIpsController extends Controller
             }
 
             // Try to locate certificate file
-            if (!Storage::exists($this->_api_context_connect_ips['cert_path'])) {
+            if (!$cert_store = file_get_contents($this->_api_context_connect_ips['cert_path']))
                 return false;
-            }
-
-            // Try to read certificate file
-            $cert_store = Storage::get($this->_api_context_connect_ips['cert_path']);
-
-            dd($cert_store);
 
             // Try to read certificate file
             if (openssl_pkcs12_read($cert_store, $cert_info, $this->_api_context_connect_ips['cert_password'])) {
@@ -280,15 +276,16 @@ class ConnectIpsController extends Controller
                 return false;
             }
 
-            if (openssl_sign($token_values, $signature, $private_key, 'sha256WithRSAEncryption')) {
+            if (openssl_sign($token_values, $signature, $private_key, "sha256WithRSAEncryption")) {
                 $hash = base64_encode($signature);
-                unset($private_key);
-
+                openssl_free_key($private_key);
                 return $hash;
             }
 
             return false;
         } catch (\Exception $e) {
+
+            dd($e);
             return false;
         }
     }

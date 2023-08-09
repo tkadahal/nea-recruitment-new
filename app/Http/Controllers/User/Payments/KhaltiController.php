@@ -90,14 +90,8 @@ class KhaltiController extends Controller
             $this->_logger->info('KHALTI CHECKOUT RESPONSE: ' . json_encode($request->all()));
 
             $pidx = $request->get('pidx') ?? false;
-
             $txnId = $request->get('txnId') ?? false;
-            $amount = $request->get('amount') ?? false;
-            $mobile = $request->get('mobile') ?? false;
             $purchase_order_id = $request->get('purchase_order_id') ?? false;
-            $purchase_order_name = $request->get('purchase_order_name') ?? false;
-            $transaction_id = $request->get('transaction_id') ?? false;
-
 
             if (!$pidx || !$txnId || !$purchase_order_id) {
                 return response()->json(['status' => 'error', 'message' => 'Verification Failed.']);
@@ -115,38 +109,24 @@ class KhaltiController extends Controller
 
             $payment_verification_status = $this->KhaltiTransactionVerifyAPICall($khalti_post_params);
 
-            // dd($payment_verification_status);
-
             if (!$payment_verification_status || $payment_verification_status['response']['status'] != 'Completed') {
+                PaymentHelper::updatePayment([
+                    'reference_id' => $purchase_order_id,
+                    'pidx' => $payment_verification_status['response']['pidx'],
+                    'application_id' => $paymentDetails->application->id ?? null,
+                    'payment_status' => '3',
+                    'paid_amount' => $payment_verification_status['response']['total_amount'],
+                    'transaction_id' => $payment_verification_status['response']['transaction_id'],
+                ]);
 
-                /** DOUBLE VERIFICATION */
-                $this->_logger->info('DOUBLE VERIFICATION, REFERENCE ID : ' . $purchase_order_id);
-
-                // CALLING VERIFICATION ONE MORE TIME AFTER WAITING 3 Secs
-                sleep(3);
-                $payment_verification_status = $this->KhaltiTransactionVerifyAPICall($khalti_post_params);
-
-                // verification status not received or returned failure
-                if (!$payment_verification_status || $payment_verification_status['response']['status'] != 'Completed') {
-                    PaymentHelper::updatePayment([
-                        'reference_id' => $purchase_order_id,
-                        // 'pidx' => $payment_verification_status['response']['pidx'],
-                        'application_id' => $paymentDetails->application->id ?? null,
-                        'payment_status' => '3',
-                        'paid_amount' => $payment_verification_status['response']['total_amount'],
-                        'transaction_id' => $payment_verification_status['response']['transaction_id'],
-                    ]);
-
-                    Session::flash('error_message', 'Sorry something went wrong processing your payment. Please verify the payment or select other payment options.');
-
-                    return redirect()->back();
-                }
+                Session::flash('error_message', 'Sorry something went wrong processing your payment. Please verify the payment or select other payment options.');
+                return redirect()->route('payment.index');
             }
 
             // SUCCESSFUL PAYMENT
             PaymentHelper::updatePayment([
                 'reference_id' => $purchase_order_id,
-                // 'pidx' => $payment_verification_status['response']['pidx'],
+                'pidx' => $payment_verification_status['response']['pidx'],
                 'application_id' => $paymentDetails->application->id ?? null,
                 'payment_status' => '1',
                 'paid_amount' => $paymentDetails->amount,
@@ -168,7 +148,6 @@ class KhaltiController extends Controller
             return redirect()->route('payment.index');
         } catch (\Exception $e) {
             Session::flash('error_message', 'Sorry something went wrong processing your payment. Please verify the payment or select other payment options.');
-
             return redirect()->route('payment.index');
         }
     }
@@ -176,7 +155,6 @@ class KhaltiController extends Controller
     /** KHALTI API CALL */
     private function KhaltiTransactionVerifyAPICall($khalti_post_params = [])
     {
-        // dd($khalti_post_params);
         if ($khalti_post_params === null) {
             return false;
         }
@@ -213,7 +191,6 @@ class KhaltiController extends Controller
             /** Logger: VERIFY RESPONSE */
             $this->_logger->info('KHALTI VERIFY RESPONSE: ' . json_encode($responseData));
 
-            // return redirect::($responseData['payment_url']);
             return ['response' => $responseData];
         } catch (GuzzleException $e) {
             return false;

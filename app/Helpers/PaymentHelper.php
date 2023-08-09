@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Helpers;
 
 use App\Models\Payment;
-use Hidehalo\Nanoid\Client as NanoClient;
 
 class PaymentHelper
 {
@@ -35,7 +34,6 @@ class PaymentHelper
 
             return $payment ? $payment->toArray() : [];
         } catch (\Exception $e) {
-            // Handle the database or other exceptions appropriately.
             return [];
         }
     }
@@ -47,6 +45,7 @@ class PaymentHelper
         }
 
         $reference_id = $paymentData['reference_id'] ?? null;
+        $pidx = $paymentData['pidx'] ?? null;
         $application_id = $paymentData['application_id'] ?? null;
         $payment_status = $paymentData['payment_status'] ?? null;
         $paid_amount = $paymentData['paid_amount'] ?? null;
@@ -60,20 +59,13 @@ class PaymentHelper
             return (bool) Payment::where('application_id', $application_id)
                 ->where('reference_id', $reference_id)
                 ->update([
+                    'pidx' => $pidx,
                     'payment_status' => $payment_status,
                     'paid_amount' => $paid_amount,
                     'transaction_id' => $transaction_id,
                 ]);
         } catch (\Exception $e) {
-            // Handle the database or other exceptions appropriately.
             return false;
         }
-    }
-
-    public static function generateKhaltiReference(): string
-    {
-        $nanoClient = new NanoClient();
-
-        return 'KH.' . $nanoClient->formattedId($alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', $size = 12);
     }
 }

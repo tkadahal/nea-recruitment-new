@@ -28,7 +28,7 @@ class PaymentController extends Controller
                 $application->applicationFee = 0;
             }
         }
-
+        
         return view('user.payments.index', compact('applications'));
     }
 
