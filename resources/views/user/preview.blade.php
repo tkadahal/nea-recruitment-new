@@ -18,7 +18,6 @@
                                     <table width="100%" cellpadding="0" class="table-hide"
                                         style="font-size: 18px; margin-top: 15px; vertical-align: top; border: 0px;">
                                         <tr>
-
                                             <td style="float: right; text-align: center;">
                                                 <div
                                                     style="border: 1px solid rgb(0, 0, 0); width: 140px; height: 160px; position: relative; margin-top: -150px;">
@@ -45,8 +44,9 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>१. उम्मेदवारको पुरा नाम, थर :- </td>
-                                                                    <td>
+                                                                    <td style="width: 30%">१. उम्मेदवारको पुरा नाम, थर :-
+                                                                    </td>
+                                                                    <td style="width: 70%">
                                                                         <table width="100%" class="table table-bordered">
                                                                             <tbody style="padding: 0px;">
                                                                                 <tr>
@@ -80,11 +80,11 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>२. जन्म मिति (बि. सं): <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->dob_np ?? '' }}</span>
+                                                                    <td style="width: 50%">२. मोबाइल नम्बर : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ localizedNumber($user->mobile_number) ?? '' }}</span>
                                                                     </td>
-                                                                    <td>(ई.सं): <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->dob_en ?? '' }}</span>
+                                                                    <td style="width: 50%">इमेल : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->email ?? '' }}</span>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -96,11 +96,27 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>३. नागरिकता नं : <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->citizenship_number ?? '' }}</span>
+                                                                    <td style="width: 50%">३. जन्म मिति (बि. सं): <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ localizedNumber($user->dob_np) ?? '' }}</span>
+                                                                    </td>
+                                                                    <td style="width: 50%">(ई.सं): <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ localizedNumber($user->dob_en) ?? '' }}</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-border">
+                                                    <td>
+                                                        <table width="100%">
+                                                            <tbody style="padding: 0px;">
+                                                                <tr>
+                                                                    <td>४. नागरिकता नं : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ localizedNumber($user->citizenship_number) ?? '' }}</span>
                                                                     </td>
                                                                     <td>जारी मिति : <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->citizenship_issued_date ?? '' }}</span>
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ localizedNumber($user->citizenship_issued_date) ?? '' }}</span>
                                                                     </td>
                                                                     <td>जारी जिल्ला : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->citizenshipDistrict->title ?? '' }}</span>
@@ -115,7 +131,7 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>४. स्थायी ठेगाना :
+                                                                    <td>५. स्थायी ठेगाना :
                                                                     </td>
                                                                     <td>प्रदेश : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->permaProvince->title ?? '' }}</span>
@@ -127,7 +143,7 @@
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->permaMunicipality->title ?? '' }}</span>
                                                                     </td>
                                                                     <td>वडा नं : <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->perma_ward_number ?? '' }}</span>
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ localizedNumber($user->contact->perma_ward_number) ?? '' }}</span>
                                                                     </td>
                                                                     <td>टोल : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->perma_tol ?? '' }}</span>
@@ -142,7 +158,7 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>४. हालको ठेगाना :
+                                                                    <td>६. हालको ठेगाना :
                                                                     </td>
                                                                     <td>प्रदेश : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->tempProvince->title ?? '' }}</span>
@@ -154,7 +170,7 @@
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->tempMunicipality->title ?? '' }}</span>
                                                                     </td>
                                                                     <td>वडा नं : <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->temp_ward_number ?? '' }}</span>
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ localizedNumber($user->contact->temp_ward_number) ?? '' }}</span>
                                                                     </td>
                                                                     <td>टोल : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->temp_tol ?? '' }}</span>
@@ -169,11 +185,11 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>३. सम्पर्क व्यक्तिको नाम : <span
+                                                                    <td style="width: 70%">७. सम्पर्क व्यक्तिको नाम : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->contact_person_name ?? '' }}</span>
                                                                     </td>
-                                                                    <td>मोबाइल नं : <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->contact_person_number ?? '' }}</span>
+                                                                    <td style="width: 30%">मोबाइल नं : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ localizedNumber($user->contact->contact_person_number) ?? '' }}</span>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -185,10 +201,10 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>२. बाबुको नाम : <span
+                                                                    <td style="width: 70%">८. बाबुको नाम : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->father_name ?? '' }}</span>
                                                                     </td>
-                                                                    <td>नागरिकता : <span
+                                                                    <td style="width: 30%">नागरिकता : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->fatherCountry->title ?? '' }}</span>
                                                                     </td>
                                                                 </tr>
@@ -201,10 +217,10 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>२. आमाको नाम : <span
+                                                                    <td style="width: 70%">९. आमाको नाम : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->mother_name ?? '' }}</span>
                                                                     </td>
-                                                                    <td>नागरिकता : <span
+                                                                    <td style="width: 30%">नागरिकता : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->motherCountry->title ?? '' }}</span>
                                                                     </td>
                                                                 </tr>
@@ -217,10 +233,10 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>२. हजुरबाबुको नाम : <span
+                                                                    <td style="width: 70%">१०. हजुरबाबुको नाम : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->grandfather_name ?? '' }}</span>
                                                                     </td>
-                                                                    <td>नागरिकता : <span
+                                                                    <td style="width: 30%">नागरिकता : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->grandfatherCountry->title ?? '' }}</span>
                                                                     </td>
                                                                 </tr>
@@ -233,10 +249,10 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>२. पति / पत्नीको नाम : <span
+                                                                    <td style="width: 70%">११. पति / पत्नीको नाम : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->spouse_name ?? '' }}</span>
                                                                     </td>
-                                                                    <td>नागरिकता : <span
+                                                                    <td style="width: 30%">नागरिकता : <span
                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->spouseCountry->title ?? '' }}</span>
                                                                     </td>
                                                                 </tr>
@@ -267,7 +283,7 @@
                                                 @foreach ($user->educations as $education)
                                                     <tr class="table-border">
                                                         <td class="table-border">
-                                                            <p>{{ $loop->iteration }}</p>
+                                                            <p>{{ localizedNumber($loop->iteration) }}</p>
                                                         </td>
                                                         <td class="table-border">
                                                             <p>{{ $education->qualification->title ?? '' }}</p>
@@ -276,7 +292,7 @@
                                                             <p>{{ $education->institution ?? '' }}</p>
                                                         </td>
                                                         <td class="table-border">
-                                                            <p>{{ $education->pass_year ?? '' }}</p>
+                                                            <p>{{ localizedNumber($education->pass_year) ?? '' }}</p>
                                                         </td>
                                                         <td class="table-border">
                                                             <p>{{ $education->division->title ?? '' }}</p>
@@ -308,7 +324,7 @@
                                                 @foreach ($user->trainings as $training)
                                                     <tr class="table-border">
                                                         <td class="table-border">
-                                                            <p>{{ $loop->iteration }}</p>
+                                                            <p>{{ localizedNumber($loop->iteration) }}</p>
                                                         </td>
                                                         <td class="table-border">
                                                             <p>{{ $training->subject ?? '' }}</p>
@@ -320,7 +336,7 @@
                                                             <p>{{ $training->percentage ?? '' }}</p>
                                                         </td>
                                                         <td class="table-border">
-                                                            <p>{{ $training->training_period ?? '' }}</p>
+                                                            <p>{{ localizedNumber($training->training_period) ?? '' }}</p>
                                                         </td>
                                                     </tr>
                                                 @endforeach
@@ -347,7 +363,7 @@
                                                 @foreach ($user->experiences as $experience)
                                                     <tr class="table-border">
                                                         <td class="table-border">
-                                                            <p>{{ $loop->iteration }}</p>
+                                                            <p>{{ localizedNumber($loop->iteration) }}</p>
                                                         </td>
                                                         <td class="table-border">
                                                             <p>{{ $experience->office ?? '' }}</p>
@@ -362,7 +378,8 @@
                                                             <p>{{ $experience->recruitmentType->title ?? '' }}</p>
                                                         </td>
                                                         <td class="table-border">
-                                                            <p>{{ $experience->experience_period ?? '' }}</p>
+                                                            <p>{{ localizedNumber($experience->experience_period) ?? '' }}
+                                                            </p>
                                                         </td>
                                                     </tr>
                                                 @endforeach
