@@ -16,7 +16,7 @@ class PaymentVendorsTableSeeder extends Seeder
 
         DB::table('payment_vendors')->insert([
             0 => [
-                
+
                 'name' => 'E-Sewa',
                 'payment_gateway' => 'esewa',
                 'merchant_id' => null,
@@ -32,13 +32,12 @@ class PaymentVendorsTableSeeder extends Seeder
                 'cert_password' => null,
                 'public_key' => null,
                 'secret_key' => null,
-
                 'created_at' => '2023-07-20 13:02:28',
                 'updated_at' => '2023-07-20 13:08:04',
                 'deleted_at' => null,
             ],
             1 => [
-                
+
                 'name' => 'Khalti',
                 'payment_gateway' => 'khalti',
                 'merchant_id' => null,
@@ -54,35 +53,33 @@ class PaymentVendorsTableSeeder extends Seeder
                 'cert_password' => null,
                 'public_key' => 'test_public_key_15ecc4b864bc48fa98f8aebf5d358664',
                 'secret_key' => 'd04d0838688047b2bb78f70a1b2951a9',
-
                 'created_at' => '2023-07-20 13:03:43',
                 'updated_at' => '2023-07-20 13:08:06',
                 'deleted_at' => null,
             ],
             2 => [
-                
+
                 'name' => 'Connect IPS',
                 'payment_gateway' => 'connectips',
-                'merchant_id' => '271',
+                'merchant_id' => '1051',
                 'merchant_code' => null,
-                'app_id' => 'NEA-271-APP-4',
-                'app_name' => 'NEA Recruitment Open',
+                'app_id' => 'MER-1051-APP-1',
+                'app_name' => 'NEA',
                 'token_url' => null,
-                'checkout_url' => 'https://login.connectips.com/connectipswebgw/loginpage',
-                'verify_url' => 'https://login.connectips.com/connectipswebws/api/creditor/validatetxn',
+                'checkout_url' => 'https://uat.connectips.com/connectipswebgw/loginpage',
+                'verify_url' => 'https://uat.connectips.com/connectipswebws/api/creditor/validatetxn',
                 'recheck_url' => null,
                 'username' => null,
-                'verify_password' => 'N3@12#',
-                'cert_password' => 'N3@12#',
+                'verify_password' => 'Abcd@123',
+                'cert_password' => '123',
                 'public_key' => null,
                 'secret_key' => null,
-
                 'created_at' => '2023-07-20 13:05:45',
                 'updated_at' => '2023-07-20 13:08:08',
                 'deleted_at' => null,
             ],
             3 => [
-                
+
                 'name' => 'IME Pay',
                 'payment_gateway' => 'imepay',
                 'merchant_id' => null,
@@ -98,7 +95,6 @@ class PaymentVendorsTableSeeder extends Seeder
                 'cert_password' => null,
                 'public_key' => null,
                 'secret_key' => null,
-
                 'created_at' => '2023-07-20 13:07:56',
                 'updated_at' => '2023-07-20 13:08:07',
                 'deleted_at' => null,

@@ -83,8 +83,6 @@ class ConnectIpsController extends Controller
                 'FAILURE' => route('connectips.failure', ['id' => $paymentRecord['id']]),
             ];
 
-            // dd($ips_params);
-
             $hash_response = $this->generateToken($ips_params, 'checkout');
 
             if (!$hash_response) {
@@ -284,8 +282,6 @@ class ConnectIpsController extends Controller
 
             return false;
         } catch (\Exception $e) {
-
-            dd($e);
             return false;
         }
     }
