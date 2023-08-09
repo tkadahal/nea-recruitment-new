@@ -661,6 +661,7 @@ return [
                 'personalDetails' => 'व्यक्तिगत विवरण',
                 'citizenshipDetails' => 'नागरिकता विवरण',
                 'uploads' => 'अपलोडहरू',
+                'preview' => 'पूर्वावलोकन',
             ],
         ],
         'info' => [

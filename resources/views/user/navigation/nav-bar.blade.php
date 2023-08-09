@@ -56,10 +56,19 @@
                     </i>
                 </a>
             </li>
+            <li role="presentation" class="{{ request()->routeIs('preview') ? 'active' : 'disabled' }}">
+                <a href="{{ route('preview') }}" data-toggle="tab" aria-controls="step6" role="tab"
+                    aria-expanded="{{ request()->routeIs('preview') ? 'true' : 'false' }}">
+                    <span class="round-tab">{{ localizedNumber(7) }}</span>
+                    <i>
+                        {{ trans('global.personal.category.fields.preview') }}
+                    </i>
+                </a>
+            </li>
             <li role="presentation" class="{{ request()->routeIs('application.*') ? 'active' : 'disabled' }}">
                 <a href="{{ route('application.index') }}" data-toggle="tab" aria-controls="step7" role="tab"
                     aria-expanded="{{ request()->routeIs('application.*') ? 'true' : 'false' }}">
-                    <span class="round-tab">{{ localizedNumber(7) }}</span>
+                    <span class="round-tab">{{ localizedNumber(8) }}</span>
                     <i>
                         {{ trans('global.application.title_singular') }}
                     </i>
@@ -68,7 +77,7 @@
             <li role="presentation" class="{{ request()->routeIs('payment.*') ? 'active' : 'disabled' }}">
                 <a href="{{ route('payment.index') }}" data-toggle="tab" aria-controls="step8" role="tab"
                     aria-expanded="{{ request()->routeIs('payment.*') ? 'true' : 'false' }}">
-                    <span class="round-tab">{{ localizedNumber(8) }}</span>
+                    <span class="round-tab">{{ localizedNumber(9) }}</span>
                     <i>
                         {{ trans('global.payment.title_singular') }}
                     </i>

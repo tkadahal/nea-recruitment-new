@@ -22,16 +22,20 @@
                                             <td style="float: right; text-align: center;">
                                                 <div
                                                     style="border: 1px solid rgb(0, 0, 0); width: 140px; height: 160px; position: relative; margin-top: -150px;">
-                                                    <img src="https://neaapi.inferica.com/uploads/new_connection/64/new-connection-16805967513787.jpeg"
-                                                        alt="Profile Image"
-                                                        style="height: 100%; width: 100%; object-fit: cover;">
+                                                    @if ($user->media->where('media_type_id', 1)->isNotEmpty())
+                                                        {!! $user->media->where('media_type_id', 1)->first() !!}
+                                                    @endif
                                                 </div>
                                             </td>
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="col-md-12 pb-5">
-                                    <strong class="d-block"><u>वैयक्तिक विवरण</u></strong>
+                                    <strong class="d-block">
+                                        <u>
+                                            भाग (क) &nbsp;&nbsp;&nbsp;&nbsp;वैयक्तिक विवरण :
+                                        </u>
+                                    </strong>
                                     <div class="table-responsive">
                                         <table width="100%" cellpadding="2px" class="table table-bordered"
                                             style="font-size: 15px;">
@@ -50,7 +54,7 @@
                                                                                         देवनागरीमा :
                                                                                         <span
                                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">
-                                                                                            {{ $user->name_np }}
+                                                                                            {{ $user->name_np ?? '' }}
                                                                                         </span>
                                                                                     </td>
                                                                                 </tr>
@@ -59,7 +63,7 @@
                                                                                         अंग्रेजीमा :
                                                                                         <span
                                                                                             style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">
-                                                                                            {{ $user->name }}
+                                                                                            {{ $user->name ?? '' }}
                                                                                         </span>
                                                                                     </td>
                                                                                 </tr>
@@ -72,39 +76,15 @@
                                                     </td>
                                                 </tr>
                                                 <tr class="table-border">
-                                                    <td>२. जन्म मिति : <span
-                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">2</span>
-                                                    </td>
-                                                </tr>
-                                                <tr class="table-border">
-                                                    <td>४. बाजे/ससुराको नामः- <span
-                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">3</span>
-                                                    </td>
-                                                </tr>
-                                                <tr class="table-border">
-                                                    <td>५. घरधनीको नामः- <span
-                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">6</span>
-                                                    </td>
-                                                </tr>
-                                                <tr class="table-border">
-                                                    <td>६. बिजुली जडान गरिने स्थानको पूरा ठेगाना :-</td>
-                                                </tr>
-                                                <tr class="table-border">
                                                     <td>
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>घर नं.:- <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">1</span>
+                                                                    <td>२. जन्म मिति (बि. सं): <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->dob_np ?? '' }}</span>
                                                                     </td>
-                                                                    <td>टोल:- <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">2</span>
-                                                                    </td>
-                                                                    <td>वडा नं.:- <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">3</span>
-                                                                    </td>
-                                                                    <td>न.पा./गा.पा. :- <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">4</span>
+                                                                    <td>(ई.सं): <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->dob_en ?? '' }}</span>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -116,29 +96,14 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>जिल्ला:-<span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">5</span>
+                                                                    <td>३. नागरिकता नं : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->citizenship_number ?? '' }}</span>
                                                                     </td>
-                                                                    <td>फोन नं.:- <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">6</span>
+                                                                    <td>जारी मिति : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->citizenship_issued_date ?? '' }}</span>
                                                                     </td>
-                                                                    <td>घर:- </td>
-                                                                    <td>कार्यालय:-</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                <tr class="table-border">
-                                                    <td>
-                                                        <table width="100%">
-                                                            <tbody style="padding: 0px;">
-                                                                <tr>
-                                                                    <td>ईमेल ठेगानाः- <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;"></span>
-                                                                    </td>
-                                                                    <td>मोवाइल नं.:-<span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">9843524512</span>
+                                                                    <td>जारी जिल्ला : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->citizenshipDistrict->title ?? '' }}</span>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -150,10 +115,22 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td width="70%">७. विजुली जडान हुने स्थानको विवरण
-                                                                        (घर,पसल इत्यादी)</td>
-                                                                    <td>तल्ला:- <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">7</span>
+                                                                    <td>४. स्थायी ठेगाना :
+                                                                    </td>
+                                                                    <td>प्रदेश : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->permaProvince->title ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>जिल्ला : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->permaDistrict->title ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>न.पा / गा. प : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->permaMunicipality->title ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>वडा नं : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->perma_ward_number ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>टोल : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->perma_tol ?? '' }}</span>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -165,85 +142,26 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>८. घरको बनोट: </td>
-                                                                    <td>फुस <span class="preview--checkbox"></span></td>
-                                                                    <td>खपडा <span class="preview--checkbox"><span
-                                                                                class="checkmark">✔</span></span></td>
-                                                                    <td>जस्ता <span class="preview--checkbox"></span></td>
-                                                                    <td>पक्का <span class="preview--checkbox"></span></td>
-                                                                    <td>जम्मा कोठा –किचन, बाथरुम छोडेर:- <span
-                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">8</span>
+                                                                    <td>४. हालको ठेगाना :
+                                                                    </td>
+                                                                    <td>प्रदेश : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->tempProvince->title ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>जिल्ला : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->tempDistrict->title ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>न.पा / गा. प : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->tempMunicipality->title ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>वडा नं : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->temp_ward_number ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>टोल : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->temp_tol ?? '' }}</span>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
-                                                    </td>
-                                                </tr>
-                                                <tr class="table-border">
-                                                    <td>९. वायरिङ्ग गर्ने ठेकेदारको नाम र ठेगाना:-<span
-                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">9</span>
-                                                    </td>
-                                                </tr>
-                                                <tr class="table-border">
-                                                    <td>१०. उल्लेखित ठाउमा पहिले देखि नै वत्ती भए सो को विवरण:-</td>
-                                                </tr>
-                                                <tr class="table-border">
-                                                    <td>
-                                                        <table width="100%">
-                                                            <tbody style="padding: 0px;">
-                                                                <tr>
-                                                                    <td>ग्राहक नं.:-</td>
-                                                                    <td>वत्ती जडान भएको सालः-</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                <tr class="table-border">
-                                                    <td>नामः बु/पतिको:- </td>
-                                                </tr>
-                                                <tr class="table-border">
-                                                    <td>नामः- </td>
-                                                </tr>
-                                                <tr class="table-border">
-                                                    <td>
-                                                        <table>
-                                                            <tbody style="padding: 0px;">
-                                                                <tr>
-                                                                    <td>११. माग गरेको विजुलीको उपयोग (कुन किसिमको आवश्यकता
-                                                                        हो तल उल्लेख भएकोमा घेरा लगाउनु होस्)</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                        <table width="100%">
-                                                            <tbody style="padding: 0px;">
-                                                                <tr>
-                                                                    <td>ग्राहस्थ <span class="preview--checkbox"></span>
-                                                                    </td>
-                                                                    <td>औद्योगिक <span class="preview--checkbox"><span
-                                                                                class="checkmark">✔</span></span></td>
-                                                                    <td>व्यापारिक <span class="preview--checkbox"></span>
-                                                                    </td>
-                                                                    <td>गैर व्यापारिक <span
-                                                                            class="preview--checkbox"></span></td>
-                                                                    <td>सिंचाई<span class="preview--checkbox"></span></td>
-                                                                    <td>खानेपानी<span class="preview--checkbox"></span></td>
-                                                                    <td>यातायात<span class="preview--checkbox"></span></td>
-                                                                    <td>मन्दिर<span class="preview--checkbox"></span></td>
-                                                                    <td>सडक वत्ती<span class="preview--checkbox"></span>
-                                                                    </td>
-                                                                    <td>चार्जिङ स्टसन <span
-                                                                            class="preview--checkbox"></span></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                <tr class="table-border">
-                                                    <td>१२. कुन किसिमको आवश्यकता हो घेरा लगाउनुहोस्ः नयाँ विद्युत लाइन <span
-                                                            class="preview--checkbox"><span
-                                                                class="checkmark">✔</span></span> अस्थायी विद्युत लाइन
-                                                        <span class="preview--checkbox"></span>
                                                     </td>
                                                 </tr>
                                                 <tr class="table-border">
@@ -251,192 +169,290 @@
                                                         <table width="100%">
                                                             <tbody style="padding: 0px;">
                                                                 <tr>
-                                                                    <td>१३. आवेदक वा निजको परिवारको नाम वा घरमा जडान भएको
-                                                                        विद्युत लाइनको महसुल वा अन्य बक्यौता रकम भुक्तानी
-                                                                        गर्न बाँकी छ/छैन ।</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                        <table width="100%">
-                                                            <tbody style="padding: 0px;">
-                                                                <tr>
-                                                                    <td>छ भने ग्राहक नं.:- </td>
-                                                                    <td>ग्राहकको नाम:- </td>
-                                                                    <td>ठेगाना:- </td>
+                                                                    <td>३. सम्पर्क व्यक्तिको नाम : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->contact_person_name ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>मोबाइल नं : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->contact_person_number ?? '' }}</span>
+                                                                    </td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
                                                     </td>
                                                 </tr>
                                                 <tr class="table-border">
-                                                    <td>१४(क) घर/उद्योग/व्यापारको लागि </td>
+                                                    <td>
+                                                        <table width="100%">
+                                                            <tbody style="padding: 0px;">
+                                                                <tr>
+                                                                    <td>२. बाबुको नाम : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->father_name ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>नागरिकता : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->fatherCountry->title ?? '' }}</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-border">
+                                                    <td>
+                                                        <table width="100%">
+                                                            <tbody style="padding: 0px;">
+                                                                <tr>
+                                                                    <td>२. आमाको नाम : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->mother_name ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>नागरिकता : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->motherCountry->title ?? '' }}</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-border">
+                                                    <td>
+                                                        <table width="100%">
+                                                            <tbody style="padding: 0px;">
+                                                                <tr>
+                                                                    <td>२. हजुरबाबुको नाम : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->grandfather_name ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>नागरिकता : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->grandfatherCountry->title ?? '' }}</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-border">
+                                                    <td>
+                                                        <table width="100%">
+                                                            <tbody style="padding: 0px;">
+                                                                <tr>
+                                                                    <td>२. पति / पत्नीको नाम : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->spouse_name ?? '' }}</span>
+                                                                    </td>
+                                                                    <td>नागरिकता : <span
+                                                                            style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;">{{ $user->contact->spouseCountry->title ?? '' }}</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <p style="margin-top: 15px;"><strong>जडान विवरण</strong></p>
-                                        <table width="100%" cellpadding="2px" class="table-hide"
-                                            style="font-size: 15px; border: 1px;">
+                                        <strong class="d-block mt-2">
+                                            <u>
+                                                भाग (ख) &nbsp;&nbsp;&nbsp;&nbsp;शैक्षिक योग्यताको विवरण :
+                                            </u>
+                                        </strong>
+                                        <table width="100%" cellpadding="2px" class="table table-bordered"
+                                            style="font-size: 15px;">
                                             <thead>
                                                 <tr class="table-border">
-                                                    <th>किलो वाट</th>
                                                     <th>क्र.सं.</th>
-                                                    <th>जडान हुने सामान</th>
-                                                    <th>वाट</th>
-                                                    <th>संख्या</th>
-                                                    <th>जम्मा वाट</th>
-                                                    <th>द्रष्टव्य</th>
+                                                    <th>प्राप्त शैक्षिक योग्यता</th>
+                                                    <th>अध्ययन गरेको संस्था</th>
+                                                    <th>उत्तीर्ण वर्ष</th>
+                                                    <th>श्रेणी</th>
+                                                    <th>प्रतिशत / ग्रेड</th>
                                                 </tr>
                                             </thead>
                                             <tbody style="padding: 0px;">
+                                                @foreach ($user->educations as $education)
+                                                    <tr class="table-border">
+                                                        <td class="table-border">
+                                                            <p>{{ $loop->iteration }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $education->qualification->title ?? '' }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $education->institution ?? '' }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $education->pass_year ?? '' }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $education->division->title ?? '' }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $education->percentage ?? '' }}</p>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                        <strong class="d-block mt-2">
+                                            <u>
+                                                भाग (ग) &nbsp;&nbsp;&nbsp;&nbsp;तालिमको विवरण :
+                                            </u>
+                                        </strong>
+                                        <table width="100%" cellpadding="2px" class="table table-bordered"
+                                            style="font-size: 15px;">
+                                            <thead>
                                                 <tr class="table-border">
-                                                    <td class="table-border"></td>
-                                                    <td class="table-border">
-                                                        <p>१</p>
-                                                        <p>२</p>
-                                                        <p>३</p>
-                                                        <p>४</p>
-                                                        <p>५</p>
-                                                        <p>६</p>
-                                                        <p>७</p>
-                                                        <p>८</p>
-                                                        <p>९</p>
-                                                    </td>
-                                                    <td class="table-border">
-                                                        <p>बत्ती</p>
-                                                        <p>पंखा</p>
-                                                        <p>पानीको हिटर</p>
-                                                        <p>रूम हिटर</p>
-                                                        <p>राइस कुकर</p>
-                                                        <p>रेफ्रिजेरेटर</p>
-                                                        <p>एयरकन्डीसनर</p>
-                                                        <p>टिभी</p>
-                                                        <p>अन्य</p>
-                                                    </td>
-                                                    <td class="table-border text-center">
-                                                        <p>1.</p>
-                                                        <p>3</p>
-                                                        <p>5</p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                    </td>
-                                                    <td class="table-border  text-center">
-                                                        <p>2</p>
-                                                        <p>4</p>
-                                                        <p>6</p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                    </td>
-                                                    <td class="table-border  text-center">
-                                                        <p>2</p>
-                                                        <p>12</p>
-                                                        <p>30</p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                        <p><span style="font-size: 0px;">.</span></p>
-                                                    </td>
-                                                    <td class="table-border">
-                                                        <p>थ्री फेज सप्लाईको हकमा जडान हुने<br> उपकरणहरुको क्षमता (किलो
-                                                            वाट)<br> निर्माता सिरियल नं. समत उल्लेख गरेको<br> सुची
-                                                            अनिवार्यरुपमा संलग्न गर्नुपर्ने छ ।</p>
-                                                    </td>
+                                                    <th>क्र.सं.</th>
+                                                    <th>तालिमको बिषय</th>
+                                                    <th>तालिम दिने संस्था</th>
+                                                    <th>प्रतिशत / ग्रेड</th>
+                                                    <th>तालिम अवधि (महिनामा)</th>
                                                 </tr>
+                                            </thead>
+                                            <tbody style="padding: 0px;">
+                                                @foreach ($user->trainings as $training)
+                                                    <tr class="table-border">
+                                                        <td class="table-border">
+                                                            <p>{{ $loop->iteration }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $training->subject ?? '' }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $training->training_institute ?? '' }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $training->percentage ?? '' }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $training->training_period ?? '' }}</p>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                        <strong class="d-block mt-2">
+                                            <u>
+                                                भाग (घ) &nbsp;&nbsp;&nbsp;&nbsp;कार्यानुभवको विवरण :
+                                            </u>
+                                        </strong>
+                                        <table width="100%" cellpadding="2px" class="table table-bordered"
+                                            style="font-size: 15px;">
+                                            <thead>
                                                 <tr class="table-border">
-                                                    <td colspan="8">
-                                                        <table width="100%">
-                                                            <tbody style="padding: 0px;">
-                                                                <tr>
-                                                                    <td>किसिम</td>
-                                                                    <td>सिंगल फेज <span class="preview--checkbox"><span
-                                                                                class="checkmark">✔</span></span> </td>
-                                                                    <td>ग्राहस्थ थ्री फेज<span
-                                                                            class="preview--checkbox"></span></td>
-                                                                    <td>संस्थागत थ्री फेज<span
-                                                                            class="preview--checkbox"></span></td>
-                                                                    <td>निजी ट्रान्सफरमर<span
-                                                                            class="preview--checkbox"></span></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
+                                                    <th>क्र.सं.</th>
+                                                    <th>कार्यालय</th>
+                                                    <th>पद</th>
+                                                    <th>तह</th>
+                                                    <th>नियुक्ति प्रकार</th>
+                                                    <th>कार्यानुभव अवधि (महिनामा)</th>
                                                 </tr>
+                                            </thead>
+                                            <tbody style="padding: 0px;">
+                                                @foreach ($user->experiences as $experience)
+                                                    <tr class="table-border">
+                                                        <td class="table-border">
+                                                            <p>{{ $loop->iteration }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $experience->office ?? '' }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $experience->post ?? '' }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $experience->level->title ?? '' }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $experience->recruitmentType->title ?? '' }}</p>
+                                                        </td>
+                                                        <td class="table-border">
+                                                            <p>{{ $experience->experience_period ?? '' }}</p>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                         <table width="100%" cellpadding="2" class="table-hide"
                                             style="font-size: 16px; margin-top: 15px; border: 0px;">
                                             <tr>
-                                                <td width="70%">उपरोक्त विवरणहरु ठीक, साँचो छ, झुट्टा भएमा कानून बमोजिम
-                                                    कारवाहि भएमा म/हामी जिम्मेवार हुने छु/छौं ।<table width="100%">
+                                                <td width="70%">
+                                                    <p style="text-align: justify">
+                                                        मैले यस दरखास्त फारममा खुलाएका विवरणहरु सत्य छन् । प्रचलित कानून
+                                                        बमोजिम
+                                                        सरकारी सेवाको निमित्त अयोग्य ठहरिने गरी सेवाबाट बरखास्त भएको छैन र
+                                                        मेरो
+                                                        नियुक्तिको सम्बन्धमा असर पर्न सक्ने कामको अनुभव, वैयातिक विवरण,
+                                                        शैक्षिक
+                                                        योग्यता आदिका सम्बन्धमा कुनै कुरा ढाँटेको वा लुकाएको छैन । कुनै कुरा
+                                                        ढाँटेको वा लुकाएको ठहरेमा कानून बमोजिम सहने छु, बुझाउने छु । साथै
+                                                        प्राधिकरणको नियुक्ति, बढुवा र सेवा सम्बन्धमा कर्मचारीलाई विभागीय
+                                                        कारवाही
+                                                        गर्दा अपनाउनु पर्ने नेपाल विधुत प्राधिकरण, कर्मचारी सेवा विनियमावली,
+                                                        २०७५ बमोजिम र प्रचलित ऐन नियम र उम्मेदवारले पालना गर्नुपर्ने शर्तहरु
+                                                        विपरित हुने गरी कुनै पनि परीक्षा भवन भित्र कुनै कार्य गरेमा तत्काल
+                                                        परीक्षाबाट निष्काशन गर्ने वा मेरो सम्पूर्ण परीक्षा रद्ध गर्ने वा
+                                                        भविष्यमा प्राधिकरणद्वारा संचालन हुने कुनै पनि परीक्षामा भाग लिन
+                                                        नपाएमा
+                                                        मेरो मन्जुरी छ ।
+                                                    </p>
+                                                    <table width="100%" class="mt-5">
                                                         <tr>
                                                             <td>
-                                                                <p>मिति:-</p>
-                                                                <p>आवेदक/आवेदक संस्था भएमा<br> त्यसको आधिकारिक व्यक्तिको
-                                                                    हस्ताक्षर</p>
-                                                                <p>हस्ताक्षर गर्नेको पुरा नाम:-</p>
-                                                                <p>दर्जा:-</p>
-                                                                <p>संलग्न कागजपत्रहरु:-</p>
-                                                                <p>(१) आवेदकको नागरिकताको प्रमाणपत्रको प्रमाणित प्रतिलिपी
-                                                                    ..................................................................
-                                                                    १ थान</p>
-                                                                <p>(२)</p>
-                                                                <p>(३)</p>
-                                                                <p>(४)</p>
-                                                            </td>
-                                                            <td style="text-align: center;">
-                                                                <div
-                                                                    style="border: 1px solid rgb(0, 0, 0); width: 130px; height: 150px; margin-top: -78px;">
-                                                                </div>
-                                                                <p style="margin-top: 10px;">संस्थाको छाप</p>
+                                                                <p>
+                                                                    उम्मेदवारको दस्तखत :-
+                                                                    @if ($user->media->where('media_type_id', 2)->isNotEmpty())
+                                                                        {!! $user->media->where('media_type_id', 2)->first()->toSmallImageString() !!}
+                                                                    @endif
+                                                                </p>
+                                                                <p>मिति:-
+                                                                    <span id="nepaliDate"
+                                                                        style="color: rgb(24, 24, 24); font-size: 12px; font-weight: bolder;"></span>
+                                                                </p>
+
+                                                                <p>
+                                                                    <b>
+                                                                        <u>
+                                                                            संलग्न कागजपत्रहरु:-
+                                                                        </u>
+                                                                    </b>
+                                                                </p>
+                                                                <p>
+                                                                    (१) नागरिकताको प्रमाणपत्रको प्रमाणित प्रतिलिपी (अगाडीको
+                                                                    भाग)
+                                                                    <span class="preview--checkbox">
+                                                                        <span class="checkmark">
+                                                                            @if ($user->media->where('media_type_id', 3)->isNotEmpty())
+                                                                                ✔
+                                                                            @else
+                                                                                ✘
+                                                                            @endif
+                                                                        </span>
+                                                                    </span>
+                                                                </p>
+                                                                <p>
+                                                                    (२) नागरिकताको प्रमाणपत्रको प्रमाणित प्रतिलिपी (अगाडीको
+                                                                    भाग)
+                                                                    <span class="preview--checkbox">
+                                                                        <span class="checkmark">
+                                                                            @if ($user->media->where('media_type_id', 4)->isNotEmpty())
+                                                                                ✔
+                                                                            @else
+                                                                                ✘
+                                                                            @endif
+                                                                        </span>
+                                                                    </span>
+                                                                </p>
+                                                                <p>
+                                                                    (३) समाबेशीताको प्रमाणपत्रको प्रमाणित प्रतिलिपी
+                                                                    <span class="preview--checkbox">
+                                                                        <span class="checkmark">
+                                                                            @if ($user->media->where('media_type_id', 5)->isNotEmpty())
+                                                                                ✔
+                                                                            @else
+                                                                                ✘
+                                                                            @endif
+                                                                        </span>
+                                                                    </span>
+                                                                </p>
                                                             </td>
                                                         </tr>
                                                     </table>
-                                                </td>
-                                                <td style="vertical-align: top; padding-left: 10px;">
-                                                    <div style="padding-left: 30px; padding-bottom: 20px;">
-                                                        <p>आवेदक नाम :-</p>
-                                                        <p></p>
-                                                    </div>
-                                                    <div style="float: right;">
-                                                        <div
-                                                            style="border: 1px solid rgb(0, 0, 0); width: 280px; height: 30px; text-align: center;">
-                                                            <span>छाप</span>
-                                                        </div>
-                                                        <div style="text-align: right; margin-top: -1px;">
-                                                            <div
-                                                                style="border: 1px solid rgb(0, 0, 0); width: 140px; height: 150px; text-align: center; display: inline-block;">
-                                                                <span
-                                                                    style="padding-top: 65px; display: inline-block;">दा</span>
-                                                            </div>
-                                                            <div
-                                                                style="border: 1px solid rgb(0, 0, 0); width: 140px; height: 150px; text-align: center; display: inline-block;">
-                                                                <span
-                                                                    style="padding-top: 65px; display: inline-block;">बा</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <table width="100%" cellpadding="2" class="table-hide"
-                                            style="font-size: 15px; margin-top: 15px; border-top: 2px solid rgb(0, 0, 0);">
-                                            <tr>
-                                                <td width="70%" style="padding-top: 10px;">
-                                                    <p>नयाँ कायम गरिएको ग्राहक नम्बर:-</p>
-                                                    <p>किसिम:-</p>
-                                                </td>
-                                                <td>
-                                                    <p>मि.रि./मि.रि.सु.भा.का सहि:-</p>
-                                                    <p>नाम:-</p>
                                                 </td>
                                             </tr>
                                         </table>
@@ -448,5 +464,46 @@
                 </div>
             </div>
         </div>
+        <div class="row mt-3">
+            <div class="col-6">
+                <a class="btn btn-secondary" href="{{ route('upload') }}">
+                    Go Back
+                </a>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+                <a class="btn btn-primary" href="{{ route('application.index') }}">
+                    Next
+                </a>
+            </div>
+        </div>
     </div>
+@endsection
+
+@section('styles')
+    <style>
+        .preview--checkbox {
+            border: 1px solid #000;
+            width: 35px;
+            height: 18px;
+            display: inline-block;
+            position: relative;
+            top: 4px;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+@endsection
+
+@section('scripts')
+    <script>
+        $(document).ready(function() {
+            var current_nepali_date = NepaliFunctions.GetCurrentBsDate('YYYY-MM-DD');
+            $("#nepaliDate").text(current_nepali_date);
+        });
+    </script>
 @endsection

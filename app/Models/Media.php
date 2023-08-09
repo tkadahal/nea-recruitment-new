@@ -61,6 +61,14 @@ class Media extends Model
         return $html;
     }
 
+    public function toSmallImageString(): string
+    {
+        $url = $this->short_url;
+        $smallImageSrc = '<img src="' . $url . '" alt="" class="img-fluid" style="max-width:100px; max-height:100px; margin-top:5px;">';
+
+        return $smallImageSrc;
+    }
+
     public function generateHtmlWithoutBorder(): string
     {
         $url = $this->short_url;

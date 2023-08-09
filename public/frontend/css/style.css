@@ -144,13 +144,13 @@ span.round-tab i{
 }
 
 .wizard .nav-tabs > li {
-    width: 12%;
+    width: 10%;
 }
 .connecting-line {
     height: 2px;
     background: #e0e0e0;
     position: absolute;
-    width: 84%;
+    width: 80%;
     margin: 0 auto;
     left: 0;
     right: 0;

@@ -671,6 +671,7 @@ return [
                 'personalDetails' => 'Personal Details',
                 'citizenshipDetails' => 'Citizenship Details',
                 'uploads' => 'Uploads',
+                'preview' => 'Preview',
             ],
         ],
         'info' => [

@@ -44,7 +44,7 @@ class UploadController extends Controller
             }
         }
 
-        return redirect()->route('application.index')->with('message', 'Files Uploaded Successfully');
+        return redirect()->route('preview')->with('message', 'Files Uploaded Successfully');
     }
 
     private function getInputNameByMediaType(int $mediaTypeId): string
