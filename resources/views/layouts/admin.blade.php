@@ -125,10 +125,10 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right pt-0">
                         <div class="dropdown-header bg-light py-2"><strong>Account</strong></div>
-                        @if (file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
+                        @if (file_exists(app_path('Http/Controllers/Admin/Auth/ChangePasswordController.php')))
                             @can('profile_password_edit')
-                                <a class="dropdown-item {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'active' : '' }}"
-                                    href="{{ route('profile.password.edit') }}">
+                                <a class="dropdown-item {{ request()->is('admin/profile/password') || request()->is('admin/profile/password/*') ? 'active' : '' }}"
+                                    href="{{ route('admin.profile.password.edit') }}">
                                     <svg class="c-icon mr-2">
                                         <use
                                             xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-lock-locked') }}">

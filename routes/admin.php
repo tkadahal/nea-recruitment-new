@@ -154,5 +154,9 @@ Route::middleware(['auth:admin'])->group(function () {
     });
 });
 
-// Route::get('/empRegister',  [App\Http\Controllers\Employee\Auth\RegisterController::class, 'showRegistrationForm'])->name('empRegister');
-// Route::post('/empRegister', [App\Http\Controllers\Employee\Auth\RegisterController::class, 'register'])->name('empRegister.post');
+Route::group(['prefix' => 'admin/profile', 'as' => 'admin.profile.', 'namespace' => 'Admin\Auth', 'middleware' => ['auth:admin']], function () {
+    if (file_exists(app_path('Http/Controllers/Admin/Auth/ChangePasswordController.php'))) {
+        Route::get('password', 'ChangePasswordController@edit')->name('password.edit');
+        Route::post('password', 'ChangePasswordController@update')->name('password.update');
+    }
+});
