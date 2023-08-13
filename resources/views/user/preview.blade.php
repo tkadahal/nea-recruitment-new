@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="wizard-box {{ request()->routeIs('education') ? 'active' : '' }}" id="education">
+    <div class="wizard-box {{ request()->routeIs('preview') ? 'active' : '' }}" id="preview">
         <div class="row d-flex justity-content-center">
             <div class="col-md-12">
                 <div class="tab-pane wizard-box" role="tabpanel" style="background: rgb(255, 255, 255);">

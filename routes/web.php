@@ -23,6 +23,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => ''], function () {
         Route::group(['namespace' => 'User'], function () {
 
+            Route::view('admitCard', 'user.admitCard');
+
             Route::get('support', [App\Http\Controllers\User\SupportController::class, 'index'])->name('support');
             Route::post('support/store', [App\Http\Controllers\User\SupportController::class, 'store'])->name('support.store');
 

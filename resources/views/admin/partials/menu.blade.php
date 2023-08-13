@@ -1,12 +1,7 @@
 <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
     <div class="c-sidebar-brand d-lg-down-none">
-
         <img src="{{ asset('storage/logos/nea-full.png') }}" alt="{{ config('app.name') }}"
             class="c-sidebar-brand-full center" width="90%" height="32" />
-
-        {{-- <svg class="c-sidebar-brand-full" width="118" height="46" alt="NEA Logo">
-            <img src="{{ asset('storage/logo/thl-logo.png') }}" alt="{{ config('app.name') }}" class="center" />
-        </svg> --}}
     </div>
     <ul class="c-sidebar-nav ps">
         <li class="c-sidebar-nav-item">
@@ -319,7 +314,10 @@
                                 <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-list') }}"
                                     style="color: yellow">
                                 </use>
-                            </svg> {{ trans('global.advertisement.title') }}</a></li>
+                            </svg>
+                            {{ trans('global.advertisement.title') }}
+                        </a>
+                    </li>
                 @endcan
 
             @endcan
@@ -332,24 +330,13 @@
                             <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-list') }}"
                                 style="color: yellow">
                             </use>
-                        </svg> {{ trans('global.application.title') }}</a></li>
+                        </svg>
+                        {{ trans('global.application.title') }}
+                    </a>
+                </li>
             @endcan
 
         @endcan
-
-        {{-- @can('menu_access')
-
-        <li class="c-sidebar-nav-title">{{ trans('global.menu.title') }}</li>
-
-        @can('tippani_access')
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.tippani.index') }}">
-                <svg class="c-sidebar-nav-icon">
-                    <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-list') }}" style="color: yellow">
-                    </use>
-                </svg> {{ trans('global.tippani.title') }}</a></li>
-        @endcan
-
-        @endcan --}}
 
         @can('report_menu_access')
 
@@ -393,38 +380,17 @@
                         </li>
                     @endcan
 
-                    {{-- @can('reportByCategory_access')
+                    @can('reportByUsers_access')
                         <li class="c-sidebar-nav-item">
-                            <a class="c-sidebar-nav-link" href="{{ route('admin.reportByCategory') }}">
+                            <a class="c-sidebar-nav-link" href="{{ route('admin.getReportByUsers') }}">
                                 <span class="c-sidebar-nav-icon"></span>
-                                {{ trans('global.reportByCategory.title') }}
+                                Users
                             </a>
                         </li>
                     @endcan
 
-                    @can('reportByStatus_access')
-                        <li class="c-sidebar-nav-item">
-                            <a class="c-sidebar-nav-link" href="{{ route('admin.reportByStatus') }}">
-                                <span class="c-sidebar-nav-icon"></span>
-                                {{ trans('global.reportByStatus.title') }}
-                            </a>
-                        </li>
-                    @endcan
-
-                    @can('reportByUserType_access')
-                        <li class="c-sidebar-nav-item">
-                            <a class="c-sidebar-nav-link" href="{{ route('admin.reportByUserType') }}">
-                                <span class="c-sidebar-nav-icon"></span>
-                                {{ trans('global.reportByUserType.title') }}
-                            </a>
-                        </li>
-                    @endcan --}}
                 </ul>
             </li>
-
-            {{-- @can('menu_access') --}}
-
-            {{-- <li class="c-sidebar-nav-title">{{ trans('global.menu.title') }}</li> --}}
 
             @can('viewLog_access')
                 <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ url('admin/log-viewer') }}">
@@ -450,8 +416,6 @@
                     </a>
                 </li>
             @endcan
-
-            {{-- @endcan --}}
 
         @endcan
 

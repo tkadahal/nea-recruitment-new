@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\User;
 use App\Models\Payment;
 use App\Models\Tippani;
 use Illuminate\Http\Request;
 use App\Models\Advertisement;
+use App\Models\PaymentVendor;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use App\Models\PaymentVendor;
 use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
 class ReportController extends Controller
@@ -133,31 +134,16 @@ class ReportController extends Controller
         return view('admin.reports.reportsByApplicants', compact('list_blocks', 'advertisements', 'paymentVendors'));
     }
 
-    public function getReportByCategory()
+    public function getReportByUsers()
     {
-        $title = trans('global.reportByCategory.title');
         $list_blocks = [
             [
-                'title' => $title,
-                'entries' => Tippani::with('category')->groupBy('category_id')
-                    ->select('category_id', DB::raw('count(*) as total'))->get(),
+                'title' => 'Users',
+                'entries' => User::with(['gender', 'media'])->orderBy('applicant_id')->get(),
             ],
         ];
 
-        $categoryReport_chart_settings = [
-            'chart_title' => $title,
-            'chart_type' => 'pie',
-            'report_type' => 'group_by_relationship',
-            'model' => 'App\Models\Tippani',
-            'relationship_name' => 'category',
-            'group_by_field' => 'title',
-            'aggregate_function' => 'count',
-            'column_class' => 'col-md-12',
-            'chart_color' => 'rgba({{ rand(0,255) }}, {{ rand(0,255) }}, {{ rand(0,255) }}, 1)',
-        ];
-        $tippani_by_category = new LaravelChart($categoryReport_chart_settings);
-
-        return view('admin.reports.reportsByCategories', compact('list_blocks', 'tippani_by_category'));
+        return view('admin.reports.reportsByUsers', compact('list_blocks'));
     }
 
     public function getReportByUserType()

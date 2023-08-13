@@ -69,6 +69,14 @@ class Media extends Model
         return $smallImageSrc;
     }
 
+    public function toLargeImageString(): string
+    {
+        $url = $this->short_url;
+        $largeImageSrc = '<img src="' . $url . '" alt="" class="img-fluid" style="width: 90%;">';
+
+        return $largeImageSrc;
+    }
+
     public function generateHtmlWithoutBorder(): string
     {
         $url = $this->short_url;

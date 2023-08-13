@@ -149,6 +149,7 @@ Route::middleware(['auth:admin'])->group(function () {
                 Route::get('getReportByPaymentVendors', 'getReportByPaymentVendors')->name('getReportByPaymentVendors');
                 Route::get('getReportByApplicationCount', 'getReportByApplicationCount')->name('getReportByApplicationCount');
                 Route::get('getReportByApplicantsCount', 'getReportByApplicantsCount')->name('getReportByApplicantsCount');
+                Route::get('getReportByUsers', 'getReportByUsers')->name('getReportByUsers');
             });
         });
     });
