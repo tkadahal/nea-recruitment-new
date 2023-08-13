@@ -802,7 +802,7 @@ return [
         'title_singular' => 'शैक्षिक विवरण',
         'category' => [
             'info' => [
-                'documentInfo' => '***फाइलको लागि अधिकतम आकार 5MB रहेको छ ( PDF )',
+                'documentInfo' => '***फाइलको लागि अधिकतम आकार 5MB रहेको छ ( JPG/JPEG वा PDF )',
                 'equivalenceInfo' => '(नेपाल बाहिर अध्ययन गरेकाहरुलाई अनिवार्य)',
                 'councilInfo' => '(इन्जिनियरिङ्गको लागि अनिवार्य)',
             ],
@@ -849,7 +849,7 @@ return [
         'title_singular' => 'तालिम विवरण',
         'category' => [
             'info' => [
-                'documentInfo' => '***फाइलको लागि अधिकतम आकार 5MB रहेको छ ( PDF )',
+                'documentInfo' => '***फाइलको लागि अधिकतम आकार 5MB रहेको छ ( JPG/JPEG वा PDF )',
             ],
         ],
         'fields' => [
@@ -888,7 +888,7 @@ return [
         'title_singular' => 'कार्यानुभव विवरण',
         'category' => [
             'info' => [
-                'documentInfo' => '***फाइलको लागि अधिकतम आकार 5MB रहेको छ ( PDF )',
+                'documentInfo' => '***फाइलको लागि अधिकतम आकार 5MB रहेको छ ( JPG/JPEG वा PDF )',
             ],
         ],
         'fields' => [

@@ -60,7 +60,7 @@ class StoreExperienceRequest extends FormRequest
             'experience_certificate' => [
                 'required_without:old_experience_certificate',
                 'file',
-                'mimetypes:application/pdf',
+                'mimetypes:image/jpeg,image/jpg,image/png,application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
             'job_description' => [

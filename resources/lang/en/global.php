@@ -812,7 +812,7 @@ return [
         'title_singular' => 'Education',
         'category' => [
             'info' => [
-                'documentInfo' => '***Allowed file size is 5MB or below ( PDF ).',
+                'documentInfo' => '***Allowed file size is 5MB or below ( JPG/JPEG or PDF ).',
                 'equivalenceInfo' => '(Required For Foreign Universities)',
                 'councilInfo' => '(Required For Engineering)',
             ],
@@ -859,7 +859,7 @@ return [
         'title_singular' => 'Training',
         'category' => [
             'info' => [
-                'documentInfo' => '***Allowed file size is 5MB or below ( PDF ).',
+                'documentInfo' => '***Allowed file size is 5MB or below ( JPG/JPEG or PDF ).',
             ],
         ],
         'fields' => [
@@ -898,7 +898,7 @@ return [
         'title_singular' => 'Experience',
         'category' => [
             'info' => [
-                'documentInfo' => '***Allowed file size is 5MB or below ( PDF ).',
+                'documentInfo' => '***Allowed file size is 5MB or below ( JPG/JPEG or PDF ).',
             ],
         ],
         'fields' => [

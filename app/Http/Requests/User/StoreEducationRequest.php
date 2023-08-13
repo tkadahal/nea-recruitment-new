@@ -57,19 +57,19 @@ class StoreEducationRequest extends FormRequest
             'transcript' => [
                 'required_without:old_transcript',
                 'file',
-                'mimetypes:application/pdf',
+                'mimetypes:image/jpeg,image/jpg,image/png,application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
             'character' => [
                 'required_without:old_character',
                 'file',
-                'mimetypes:application/pdf',
+                'mimetypes:image/jpeg,image/jpg,image/png,application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
             'council' => [
                 'nullable',
                 'file',
-                'mimetypes:application/pdf',
+                'mimetypes:image/jpeg,image/jpg,image/png,application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
             'equivalence' => [
@@ -77,7 +77,7 @@ class StoreEducationRequest extends FormRequest
                     ? 'required'
                     : 'nullable',
                 'file',
-                'mimetypes:application/pdf',
+                'mimetypes:image/jpeg,image/jpg,image/png,application/pdf',
                 'max:5242880', // 5 MB in bytes (5 * 1024 * 1024)
             ],
         ];
