@@ -80,15 +80,16 @@ class AdvertisementController extends Controller
 
         $advertisement = Advertisement::create($validatedData);
 
+        $syncData = [];
         foreach ($validatedData['samabeshi_groups'] as $id) {
             $number = $validatedData['samabeshi_groups_input'][$id];
-            $advertisement->samabeshiGroups()->attach($id, ['number' => $number]);
+            $syncData[$id] = ['number' => $number];
         }
 
-        // $advertisement->samabeshiGroups()->attach($request->input('samabeshi_groups'));
+        $advertisement->samabeshiGroups()->sync($syncData);
 
-        return redirect()->route(route: 'admin.advertisement.index')
-            ->with('message', 'advertisement created successfully.');
+        return redirect()->route('admin.advertisement.index')
+            ->with('message', 'Advertisement created successfully.');
     }
 
     public function show(Advertisement $advertisement): View
@@ -158,12 +159,20 @@ class AdvertisementController extends Controller
     {
         abort_if(Gate::denies('advertisement_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $advertisement->update($request->validated());
+        $validatedData = $request->validated();
 
-        $advertisement->samabeshiGroups()->sync($request->input('samabeshi_groups'));
+        $advertisement->update($validatedData);
 
-        return redirect()->route(route: 'admin.advertisement.index')
-            ->with('message', 'advertisement updated successfully.');
+        $syncData = [];
+        foreach ($validatedData['samabeshi_groups'] as $id) {
+            $number = $validatedData['samabeshi_groups_input'][$id];
+            $syncData[$id] = ['number' => $number];
+        }
+
+        $advertisement->samabeshiGroups()->sync($syncData);
+
+        return redirect()->route('admin.advertisement.index')
+            ->with('message', 'Advertisement updated successfully.');
     }
 
     public function destroy(Advertisement $advertisement): RedirectResponse

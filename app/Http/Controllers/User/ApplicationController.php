@@ -136,10 +136,6 @@ class ApplicationController extends Controller
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
 
-        // if ($payableAmount === 0) {
-        //     return redirect()->back()->withErrors(['error' => 'Payable amount cannot be zero.']);
-        // }
-
         $applicationData = $request->except('_token', '_method');
         $applicationData['uuid'] = Str::uuid();
         $applicationData['payable_amount'] = $payableAmount;

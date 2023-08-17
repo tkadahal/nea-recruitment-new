@@ -105,7 +105,8 @@ class UpdateAdvertisementRequest extends FormRequest
             ],
             'end_date_np' => [
                 'required',
-                'date',
+                'string',
+                'max: 255',
             ],
             'end_date_en' => [
                 'required',
@@ -126,8 +127,15 @@ class UpdateAdvertisementRequest extends FormRequest
                 'array',
             ],
             'samabeshi_groups.*' => [
+                'required',
                 'exists:samabeshi_groups,id',
             ],
+            'samabeshi_groups_input.*' => [
+                'required',
+                'nullable',
+                'integer',
+                'min:0',
+            ]
         ];
     }
 }

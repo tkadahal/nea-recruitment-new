@@ -50,8 +50,6 @@ class ConnectIpsController extends Controller
 
     public function initializeIPS($applicationRefID)
     {
-        // dd($this->_api_context_connect_ips['cert_path']);
-        // dd($this->_api_context_connect_ips);
         try {
             $application = Application::where('user_id', auth()->id())
                 ->where('uuid', $applicationRefID)
@@ -97,7 +95,7 @@ class ConnectIpsController extends Controller
 
             Session::flash('error_message', 'Sorry, we cannot process your request at this moment. Please try again.');
 
-            return redirect()->back();
+            return redirect()->route('payment.index');
         }
     }
 
@@ -116,7 +114,7 @@ class ConnectIpsController extends Controller
             if (!$paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
                 Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
-                return redirect()->back();
+                return redirect()->route('payment.index');
             }
 
             $tranx_params = [];
@@ -129,7 +127,7 @@ class ConnectIpsController extends Controller
             if (!$hash_response) {
                 Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please try again.');
 
-                return redirect()->back();
+                return redirect()->route('payment.index');
             }
             $tranx_params['token'] = $hash_response;
 
@@ -157,7 +155,7 @@ class ConnectIpsController extends Controller
 
                     Session::flash('error_message', 'Sorry something went wrong processing your payment. Please verify the payment or select other payment options.');
 
-                    return redirect()->back();
+                    return redirect()->route('payment.index');
                 }
             }
 
@@ -180,11 +178,11 @@ class ConnectIpsController extends Controller
 
             Session::flash('message', 'Payment successfull. Please find below the application details.');
 
-            return redirect('/application?show_applied=1');
+            return redirect()->route('payment.index');
         } catch (\Exception $e) {
             Session::flash('error_message', 'Sorry something went wrong processing your payment. Please verify the payment or select other payment options.');
 
-            return redirect('/application?show_applied=1');
+            return redirect()->route('payment.index');
         }
     }
 
@@ -201,7 +199,7 @@ class ConnectIpsController extends Controller
             if (!$paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
                 Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
-                return redirect()->back();
+                return redirect()->route('payment.index');
             }
 
             PaymentHelper::updatePayment([
@@ -212,11 +210,11 @@ class ConnectIpsController extends Controller
 
             Session::flash('error_message', 'Sorry we cannot process your payment at this moment. Please select other payment options.');
 
-            return redirect()->back();
+            return redirect()->route('payment.index');
         } catch (\Exception $e) {
             Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
-            return redirect()->back();
+            return redirect()->route('payment.index');
         }
     }
 

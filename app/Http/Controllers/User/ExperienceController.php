@@ -83,13 +83,20 @@ class ExperienceController extends Controller
 
     public function store(StoreExperienceRequest $request): RedirectResponse
     {
+        $validated_input = $request->validated();
+
+        $validated_input['ad_experience_from'] = Carbon::parse($validated_input['ad_experience_from']);
+        $validated_input['ad_experience_to'] = Carbon::parse($validated_input['ad_experience_to']);
+
+        if ($validated_input['ad_experience_from']->greaterThanOrEqualTo($validated_input['ad_experience_to'])) {
+            return redirect()->back()->with('error', 'Invalid date range. Start date must be before end date.');
+        }
+
         $path = $this->mediaService->handleMediaFromRequest(
             $request->experience_certificate,
             auth()->user()->applicant_id,
             MediaType::experience
         );
-
-        $validated_input = $request->validated();
 
         $validated_input['experience_period'] = ($validated_input['date_format'] == 'BS')
             ? Carbon::parse($validated_input['ad_experience_from'])->diffInMonths(Carbon::parse($validated_input['ad_experience_to']))
@@ -115,6 +122,15 @@ class ExperienceController extends Controller
 
     public function update(StoreExperienceRequest $request, Experience $experience): RedirectResponse
     {
+        $validated_input = $request->validated();
+
+        $validated_input['ad_experience_from'] = Carbon::parse($validated_input['ad_experience_from']);
+        $validated_input['ad_experience_to'] = Carbon::parse($validated_input['ad_experience_to']);
+
+        if ($validated_input['ad_experience_from']->greaterThanOrEqualTo($validated_input['ad_experience_to'])) {
+            return redirect()->back()->with('error', 'Invalid date range. Start date must be before end date.');
+        }
+
         $existingCertificate = $experience->media()->where(
             'media_type_id',
             MediaType::experience
@@ -126,8 +142,6 @@ class ExperienceController extends Controller
             MediaType::experience,
             $existingCertificate
         );
-
-        $validated_input = $request->validated();
 
         $validated_input['experience_period'] = ($validated_input['date_format'] == 'BS')
             ? Carbon::parse($validated_input['ad_experience_from'])->diffInMonths(Carbon::parse($validated_input['ad_experience_to']))

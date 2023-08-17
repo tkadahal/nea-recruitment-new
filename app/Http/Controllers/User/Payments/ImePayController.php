@@ -75,7 +75,7 @@ class ImePayController extends Controller
             if (!$token_status) {
                 Session::flash('error_message', 'Payment failed. Please select other payment options.');
 
-                return redirect()->back();
+                return redirect()->route('payment.index');
             }
 
             $TokenId = $token_status['TokenId'] ?? null;
@@ -94,7 +94,7 @@ class ImePayController extends Controller
         } catch (\Exception $e) {
             Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
-            return redirect()->back();
+            return redirect()->route('payment.index');
         }
     }
 
@@ -126,7 +126,7 @@ class ImePayController extends Controller
             if (!$paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
                 Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
-                return redirect()->back();
+                return redirect()->route('payment.index');
             }
 
             /**
@@ -158,7 +158,7 @@ class ImePayController extends Controller
                 if (!$verification_response) {
                     Session::flash('error_message', 'Payment failed. Please select other payment options.');
 
-                    return redirect()->route('payment');
+                    return redirect()->route('payment.index');
                 }
             }
 
@@ -190,14 +190,14 @@ class ImePayController extends Controller
 
                 Session::flash('message', 'Payment successfull. Please find below the application details.');
 
-                return redirect()->route('payment');
+                return redirect()->route('payment.index');
             }
 
             Session::flash('error_message', 'Payment failed. Please select other payment options.');
 
-            return redirect('/application?show_applied=1');
+            return redirect()->route('payment.index');
         } catch (\Exception $e) {
-            return redirect('/application?show_applied=1');
+            return redirect()->route('payment.index');
         }
     }
 
@@ -231,14 +231,14 @@ class ImePayController extends Controller
             if (!$paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
                 Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
-                return redirect()->back();
+                return redirect()->route('payment.index');
             }
 
             Session::flash('error_message', 'Payment failed. Please select other payment options.');
 
-            return redirect('/application?show_applied=1');
+            return redirect()->route('payment.index');
         } catch (\Exception $e) {
-            return redirect('/application?show_applied=1');
+            return redirect()->route('payment.index');
         }
     }
 
@@ -310,84 +310,4 @@ class ImePayController extends Controller
             return false;
         }
     }
-
-    // private function apiCallIMEPay($payload = null)
-    // {
-    //     if ($payload == null || count($payload) == 0)
-    //         return false;
-
-    //     try {
-
-    //         $imepay_header = array(
-    //             'Content-Type: application/json;charset=utf-8',
-    //             'Authorization: Basic ' . base64_encode($this->_api_context_imepay['username'] . ":" . $this->_api_context_imepay['password']),
-    //             'Module: ' . base64_encode($this->_api_context_imepay['module'])
-    //         );
-
-    //         $ime_payload = [];
-    //         $ime_payload['MerchantCode'] = $this->_api_context_imepay['merchant_code'];
-
-    //         switch ($payload['method']) {
-
-    //             case 'generate_token':
-    //                 $api_endpont = $this->_api_context_imepay['token_url'];
-    //                 $ime_payload['Amount'] = $payload['Amount'];
-    //                 $ime_payload['RefId'] = $payload['RefId'];
-    //                 break;
-
-    //             case 'confirm_payment':
-    //                 $api_endpont = $this->_api_context_imepay['confirm_url'];
-    //                 $ime_payload['RefId'] = $payload['RefId'];
-    //                 $ime_payload['TokenId'] = $payload['TokenId'];
-    //                 $ime_payload['TransactionId'] = $payload['TransactionId'];
-    //                 $ime_payload['Msisdn'] = $payload['Msisdn'];
-    //                 break;
-
-    //             case 'recheck':
-    //                 $api_endpont = $this->_api_context_imepay['recheck_url'];
-    //                 $ime_payload['TokenId'] = $payload['TokenId'];
-    //                 $ime_payload['RefId'] = $payload['RefId'];
-    //                 break;
-
-    //             default:
-    //                 return false;
-    //         }
-
-    //         $ime_payload = json_encode($ime_payload);
-
-    //         /** Logger : REQUEST */
-    //         $this->_logger->info("---------------------------------------------------------------------------");
-    //         $this->_logger->info("REQUEST LOG : " . $payload['method'] . " : " . $payload['RefId']);
-    //         $this->_logger->info($ime_payload);
-
-    //         $curl_connection = curl_init($api_endpont);
-    //         curl_setopt($curl_connection, CURLOPT_HTTPHEADER, $imepay_header);
-    //         curl_setopt($curl_connection, CURLOPT_HEADER, 1);
-    //         curl_setopt($curl_connection, CURLOPT_POSTFIELDS, $ime_payload);
-    //         curl_setopt($curl_connection, CURLOPT_CONNECTTIMEOUT, 30);
-    //         curl_setopt($curl_connection, CURLOPT_POST, 1);
-    //         curl_setopt($curl_connection, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)");
-    //         curl_setopt($curl_connection, CURLOPT_RETURNTRANSFER, true);
-    //         curl_setopt($curl_connection, CURLOPT_SSL_VERIFYPEER, false);
-    //         curl_setopt($curl_connection, CURLOPT_FOLLOWLOCATION, 1);
-
-    //         $api_response = curl_exec($curl_connection);
-
-    //         /** Logger : RESPONSE */
-    //         $this->_logger->info("---------------------------------------------------------------------------");
-    //         $this->_logger->info("RESPONSE LOG : " . $payload['method'] . " : " . $payload['RefId']);
-    //         $this->_logger->info($api_response);
-
-    //         $header_size = curl_getinfo($curl_connection, CURLINFO_HEADER_SIZE);
-    //         $response_payload = substr($api_response, $header_size);
-    //         curl_close($curl_connection);
-
-    //         if ($api_response === false)
-    //             return false;
-
-    //         return isset($response_payload) && $response_payload ? json_decode($response_payload, true) : false;
-    //     } catch (\Exception $e) {
-    //         return false;
-    //     }
-    // }
 }

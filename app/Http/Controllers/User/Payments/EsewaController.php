@@ -76,7 +76,7 @@ class EsewaController extends Controller
         } catch (\Exception $e) {
             Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
-            return redirect()->back();
+            return redirect()->route('payment.index');
         }
     }
 
@@ -90,7 +90,7 @@ class EsewaController extends Controller
             if (!$paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
                 Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
-                return redirect()->back();
+                return redirect()->route('payment.index');
             }
 
             $oid = $request->get('oid') ?? null;
@@ -129,7 +129,7 @@ class EsewaController extends Controller
 
                     Session::flash('error_message', 'Sorry something went wrong processing your payment. Please verify the payment or select other payment options.');
 
-                    return redirect()->back();
+                    return redirect()->route('payment.index');
                 }
             }
 
@@ -148,6 +148,36 @@ class EsewaController extends Controller
         } catch (\Exception $e) {
             Session::flash('error_message', 'Sorry something went wrong processing your payment. Please verify the payment or select other payment options.');
 
+            return redirect()->route('payment.index');
+        }
+    }
+
+    public function failureEsewa(Request $request, $paymentRefID = null)
+    {
+        try {
+
+            $this->_logger->info("----------------------------------------------------------------------------");
+            $this->_logger->info("CANCEL/FAILURE RESPONSE, REFERENCE ID : " . $paymentRefID);
+            $this->_logger->info(json_encode($request->all()));
+
+            $paymentDetails = Payment::with('application')->where('reference_id', $paymentRefID)->first();
+
+            if (!$paymentDetails || $paymentDetails->application->user->id != auth()->id()) {
+                Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
+
+                return redirect()->route('payment.index');
+            }
+
+            PaymentHelper::updatePayment([
+                'reference_id' => $paymentRefID,
+                'application_id' => $paymentDetails->application->id,
+                'payment_status' => '3'
+            ]);
+
+            Session::flash('error_message', "Sorry we cannot process your payment at this moment. Please select other payment options.");
+            return redirect()->route('payment.index');
+        } catch (\Exception $e) {
+            Session::flash('error_message', "Sorry we cannot process your request at this moment. Please select other payment options.");
             return redirect()->route('payment.index');
         }
     }

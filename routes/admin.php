@@ -151,6 +151,9 @@ Route::middleware(['auth:admin'])->group(function () {
                 Route::get('getReportByApplicantsCount', 'getReportByApplicantsCount')->name('getReportByApplicantsCount');
                 Route::get('getReportByUsers', 'getReportByUsers')->name('getReportByUsers');
             });
+
+            Route::get('language', 'LanguageController@index')->name('language');
+            Route::post('language/update', 'LanguageController@update')->name('language.update');
         });
     });
 });

@@ -40,8 +40,8 @@ class DatabaseSeeder extends Seeder
             PaymentVendorsTableSeeder::class,
             AdvertisementsTableSeeder::class,
             AdvertisementSamabeshiGroupsTableSeeder::class,
-            ApplicationsTableSeeder::class,
-            PaymentsTableSeeder::class,
+            // ApplicationsTableSeeder::class,
+            // PaymentsTableSeeder::class,
         ]);
     }
 }

@@ -80,13 +80,20 @@ class TrainingController extends Controller
 
     public function store(StoreTrainingRequest $request): RedirectResponse
     {
+        $validated_input = $request->validated();
+
+        $validated_input['ad_training_from'] = Carbon::parse($validated_input['ad_training_from']);
+        $validated_input['ad_training_to'] = Carbon::parse($validated_input['ad_training_to']);
+
+        if ($validated_input['ad_training_from']->greaterThanOrEqualTo($validated_input['ad_training_to'])) {
+            return redirect()->back()->with('error', 'Invalid date range. Start date must be before end date.');
+        }
+
         $path = $this->mediaService->handleMediaFromRequest(
             $request->certificate,
             auth()->user()->applicant_id,
             MediaType::training
         );
-
-        $validated_input = $request->validated();
 
         $validated_input['training_period'] = ($validated_input['date_format'] == 'BS')
             ? Carbon::parse($validated_input['ad_training_from'])->diffInMonths(Carbon::parse($validated_input['ad_training_to']))
@@ -110,6 +117,15 @@ class TrainingController extends Controller
 
     public function update(StoreTrainingRequest $request, Training $training): RedirectResponse
     {
+        $validated_input = $request->validated();
+
+        $validated_input['ad_training_from'] = Carbon::parse($validated_input['ad_training_from']);
+        $validated_input['ad_training_to'] = Carbon::parse($validated_input['ad_training_to']);
+
+        if ($validated_input['ad_training_from']->greaterThanOrEqualTo($validated_input['ad_training_to'])) {
+            return redirect()->back()->with('error', 'Invalid date range. Start date must be before end date.');
+        }
+
         $existingCertificate = $training->media()->where(
             'media_type_id',
             MediaType::training
@@ -121,8 +137,6 @@ class TrainingController extends Controller
             MediaType::training,
             $existingCertificate
         );
-
-        $validated_input = $request->validated();
 
         $validated_input['training_period'] = ($validated_input['date_format'] == 'BS')
             ? Carbon::parse($validated_input['ad_training_from'])->diffInMonths(Carbon::parse($validated_input['ad_training_to']))

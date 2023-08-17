@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="card-body {{ request()->routeIs('education') ? 'active' : '' }}" id="education">
-
         <form class="wizard-box" action="{{ route('education.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 

@@ -78,7 +78,7 @@ class KhaltiController extends Controller
         } catch (\Exception $e) {
             Session::flash('error_message', 'Sorry we cannot process your request at this moment. Please select other payment options.');
 
-            return redirect()->back();
+            return redirect()->route('payment.index');
         }
     }
 
